@@ -1,0 +1,15 @@
+---
+output: pdf_document
+---
+
+**Tema de investigación: Finanzas**
+\newline
+**Tema genérico: Valoración de acciones ordinarias.**
+\newline
+**Tema específico: Valoración de acciones ordinarias que oferta el mercado financiero internacional por el método de flujos descontados.**
+\newline
+\newline
+**VALORACION DE ACCIONES ORDINARIAS QUE OFERTA EL MERCADO FINANCIERO NASDAQ POR EL METODO DE FLUJOS DESCONTADOS**
+
+# Antecedentes
+

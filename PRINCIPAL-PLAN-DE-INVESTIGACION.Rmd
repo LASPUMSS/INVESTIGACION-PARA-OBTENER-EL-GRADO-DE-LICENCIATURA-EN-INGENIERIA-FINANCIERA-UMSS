@@ -2,32 +2,97 @@
 output: 
     pdf_document:
         includes:
-            in_header: mystyles.sty
+            in_header: styles001.sty
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-\includepdf[pages=-]{CARATULA-PLANTILLA}
+\includepdf[pages=-]{RECURSOS-PLAN-DE-INVESTIGACION/CARATULA-PLAN-DE-INVESTIGACION}
 
+\tableofcontents
+
+<!--ANTECEDENTES-->
 \newpage
-## R Markdown
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/002-ANTECEDENTES/002-ANTECEDENTES.Rmd"}
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
 ```
 
-## Including Plots
+<!-- PLANTEAMIENTO DEL PROBLEMA -->
+\newpage
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/003-PLANTEAMIENTO-DEL-PROBLEMA/003-PLANTEAMIENTO-DEL-PROBLEMA.Rmd"}
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+<!-- FORMULACION DEL PROBLEMA -->
+\newpage
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/004-FORMULACION-DEL-PROBLEMA-CENTRAL/004-FORMULACION-DEL-PROBLEMA-CENTRAL.Rmd"}
+
+```
+
+<!-- JUSTIFICACION -->
+\newpage
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/005-JUSTIFICACION/005-JUSTIFICACION.Rmd"}
+
+```
+
+<!-- ALCANCE Y DELIMITACION -->
+\newpage
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/006-ALCANCE-Y-DELIMITACION/006-ALCANCE-Y-DELIMITACION.Rmd"}
+
+```
+
+<!-- OBJETIVOS DE LA INVESTIGACION -->
+\newpage
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/007-OBJETIVOS-DE-LA-INVESTIGACION/007-OBJETIVOS-DE-LA-INVESTIGACION.Rmd"}
+
+```
+
+<!-- MARCO TEORICO -->
+\newpage
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/008-MARCO-TEORICO.Rmd"}
+
+```
+
+<!-- HIPOTESIS -->
+\newpage
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/009-HIPOTESIS/009-HIPOTESIS.Rmd"}
+
+```
+
+<!-- MARCO METODICO -->
+\newpage
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/010-MARCO-METODICO/010-MARCO-METODICO.Rmd"}
+
+```
+
+<!-- FUENTES DE INFORMACION -->
+\newpage
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/011-FUENTES-DE-INFORMACION/011-FUENTES-DE-INFORMACION.Rmd"}
+
+```
+
+<!-- ESTRUCTURA CAPITULAR TENTATIVO -->
+\newpage
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/012-ESTRUCTURA-CAPITULAR-TENTATIVO/012-ESTRUCTURA-CAPITULAR-TENTATIVO.Rmd"}
+
+```
+
+<!-- CRONOGRAMA DEL TRABAJO DE INVESTIGACION -->
+\newpage
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/013-CRONOGRAMA-DEL-TRABAJO-DE-INVESTIGACION/013-CRONOGRAMA-DEL-TRABAJO-DE-INVESTIGACION.Rmd"}
+
+```
+
+<!-- BIBLIOGRAFIA A SER CONSULTADA -->
+\newpage
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/014-BIBLIOGRAFIA-A-SER-CONSULTADA/014-BIBLIOGRAFIA-A-SER-CONSULTADA.Rmd"}
+
+```
+
+
+
+
+
+

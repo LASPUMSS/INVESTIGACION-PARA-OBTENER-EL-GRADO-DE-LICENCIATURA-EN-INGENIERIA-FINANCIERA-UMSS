@@ -1,0 +1,6 @@
+---
+output: pdf_document
+---
+
+# Cronograma del trabajo de investigación
+
