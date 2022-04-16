@@ -1,30 +1,36 @@
 ---
-title: "Untitled"
-author: "LASP"
-date: "1/4/2022"
-output: html_document
+output: 
+    pdf_document:
+        includes:
+            in_header: styles002.sty
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+\includepdf[pages=-]{RECURSOS-TESIS/CARATULA-TESIS}
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+<!-- ELEMENTOS PRELIMINARES -->
+\newpage
+```{r, child="RECURSOS-TESIS/000-ELEMENTOS-PRELIMINARES/000-ELEMENTOS-PRELIMINARES.Rmd"}
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
 ```
 
-## Including Plots
+\newpage
+## Índice de contenido
 
-You can also embed plots, for example:
+\tableofcontents
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+<!--ANTECEDENTES-->
+\newpage
+```{r, child="RECURSOS-TESIS/002-ANTECEDENTES/002-ANTECEDENTES.Rmd"}
+
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+
+
+
+

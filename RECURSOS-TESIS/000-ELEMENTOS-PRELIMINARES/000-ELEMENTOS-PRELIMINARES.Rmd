@@ -1,0 +1,21 @@
+---
+output: pdf_document
+---
+\newpage
+## Agredicimiento
+
+
+\newpage
+## Dedicatoria
+
+
+\newpage
+## Resumen
+
+
+\newpage
+## Abstract
+
+
+
+
