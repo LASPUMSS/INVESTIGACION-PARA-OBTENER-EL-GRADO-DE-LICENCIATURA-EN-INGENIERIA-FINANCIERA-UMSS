@@ -3,6 +3,7 @@ output:
     pdf_document:
         includes:
             in_header: styles002.sty
+fontsize: 12pt
 ---
 
 ```{r setup, include=FALSE}
@@ -19,10 +20,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 \newpage
 ## Índice de contenido
-
 \tableofcontents
 
-<!--ANTECEDENTES-->
+<!-- ANTECEDENTES -->
 \newpage
 ```{r, child="RECURSOS-TESIS/002-ANTECEDENTES/002-ANTECEDENTES.Rmd"}
 
