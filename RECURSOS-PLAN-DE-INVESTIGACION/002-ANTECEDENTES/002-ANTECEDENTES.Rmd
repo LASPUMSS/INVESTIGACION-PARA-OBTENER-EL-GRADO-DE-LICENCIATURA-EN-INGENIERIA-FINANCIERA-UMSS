@@ -12,4 +12,5 @@ output: pdf_document
 **VALORACION DE ACCIONES ORDINARIAS QUE OFERTA EL MERCADO FINANCIERO NASDAQ POR EL METODO DE FLUJOS DESCONTADOS**
 
 # Antecedentes
+El campo de la inteligencia artificial es relativamente reciente, y cobra atención en la actualidad por su capacidad de resolver problemas que con anterioridad sus resultados se divisaban lejanos, como el procesamientos de lenguaje natural, generandor de imagenes bajo requerimiento, clasificación de objetos, etc.
 
