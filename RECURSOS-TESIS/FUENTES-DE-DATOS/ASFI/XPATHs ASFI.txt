@@ -1,0 +1,6 @@
+### XPATH DE ESTADOS FINANCIEROS
+Estados Financieros
+	/html/body/table/tbody/tr/td/table/tbody/tr[1]/td/table[1]/tbody/tr/td[2]/table/tbody/tr/td[2]/a[1]
+Estados Financieros por monedas
+	/html/body/table/tbody/tr/td/table/tbody/tr[1]/td/table[1]/tbody/tr/td[2]/table/tbody/tr/td[2]/a[2]
+
