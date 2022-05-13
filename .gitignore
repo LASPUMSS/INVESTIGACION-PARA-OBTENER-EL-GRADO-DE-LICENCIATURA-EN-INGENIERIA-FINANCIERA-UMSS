@@ -2,3 +2,13 @@
 .Rhistory
 .RData
 .Ruserdata
+
+# IGNORAR ARCHIVOS DEL TIPO
+*.zip
+*.xlsx
+*.xlsm
+*.xls
+
+# IGNORAR CARPETAS
+scbm/
+Datos_guardado_por_gestion/
