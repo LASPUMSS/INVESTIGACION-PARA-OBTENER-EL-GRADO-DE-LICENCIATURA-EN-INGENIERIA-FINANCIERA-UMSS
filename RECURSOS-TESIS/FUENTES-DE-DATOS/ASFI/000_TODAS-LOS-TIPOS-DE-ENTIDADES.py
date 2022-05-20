@@ -7,7 +7,8 @@ import time
 import os
 
 mesesGestion = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
-urlEntidades = ["https://www.asfi.gob.bo/index.php/bancos-multiples-boletines.html", "https://www.asfi.gob.bo/index.php/bancos-pyme-boletines.html", "https://www.asfi.gob.bo/index.php/entidades-financieras-de-vivienda.html", "https://www.asfi.gob.bo/index.php/cooperativas-de-ahorro-y-credito-abiertas.html", "https://www.asfi.gob.bo/index.php/instituciones-financieras-de-desarrollo.html", "https://www.asfi.gob.bo/index.php/banco-de-desarrollo-productivo.html"]
+#urlEntidades = ["https://www.asfi.gob.bo/index.php/bancos-multiples-boletines.html", "https://www.asfi.gob.bo/index.php/bancos-pyme-boletines.html", "https://www.asfi.gob.bo/index.php/entidades-financieras-de-vivienda.html", "https://www.asfi.gob.bo/index.php/cooperativas-de-ahorro-y-credito-abiertas.html", "https://www.asfi.gob.bo/index.php/instituciones-financieras-de-desarrollo.html", "https://www.asfi.gob.bo/index.php/banco-de-desarrollo-productivo.html"]
+urlEntidades = ["https://www.asfi.gob.bo/index.php/bancos-pyme-boletines.html", "https://www.asfi.gob.bo/index.php/entidades-financieras-de-vivienda.html", "https://www.asfi.gob.bo/index.php/cooperativas-de-ahorro-y-credito-abiertas.html", "https://www.asfi.gob.bo/index.php/instituciones-financieras-de-desarrollo.html", "https://www.asfi.gob.bo/index.php/banco-de-desarrollo-productivo.html"]
 
 directorio = os.getcwd()
 ubDrive = directorio + "\chromedriver.exe"
@@ -24,9 +25,10 @@ class usando_unittest(unittest.TestCase):
 		})
 		self.driver = webdriver.Chrome(executable_path=r"%s" %ubDrive, chrome_options=chromeOptions)
 
-	def	descagar(self, In, Fn, Stp, Seccion, Gestion, urlEnt):
+	def	descagar(self, In, Fn, Stp, Secciones, Gestion, urlEnt):
 		
 		Fn = Fn + 1
+		Secciones = Secciones+1
 
 		driver = self.driver
 		driver.get(urlEnt)
@@ -50,13 +52,15 @@ class usando_unittest(unittest.TestCase):
 			btnAceptar.click()
 			time.sleep(3)
 
-			for a in range(In,Fn,Stp):
-				try:
-					estFin = driver.find_element_by_xpath("/html/body/table/tbody/tr/td/table/tbody/tr[1]/td/table[" + str(Seccion) + "]/tbody/tr/td[2]/table/tbody/tr/td[2]/a[" + str(a) + "]")
-					estFin.click()
-					time.sleep(5)
-				except exceptions.NoSuchElementException:
-					pass
+			for Seccion in range(1,Secciones,1):
+
+				for a in range(In,Fn,Stp):
+					try:
+						estFin = driver.find_element_by_xpath("/html/body/table/tbody/tr/td/table/tbody/tr[1]/td/table[" + str(Seccion) + "]/tbody/tr/td[2]/table/tbody/tr/td[2]/a[" + str(a) + "]")
+						estFin.click()
+						time.sleep(5)
+					except exceptions.NoSuchElementException:
+						pass
 
 	def test_usando_toggle(self):
 		
@@ -68,26 +72,16 @@ class usando_unittest(unittest.TestCase):
 
 			for j in range(gestionInc, gestionFn, 1):
 
-
 				# DESCARGAR LOS ESTADOS FINANCIEROS POR BANCOS Y POR MONEDAS - SECCION 01
-				self.descagar(In=1, Fn=2, Stp=1, Seccion=1, Gestion=j, urlEnt=urlEnt)
 				# DESCARGAR LOS ESTADOS DE INDEICADORES FINANCIEROS - SECCION 02
-				self.descagar(In=1, Fn=3, Stp=1, Seccion=2, Gestion=j, urlEnt=urlEnt)
 				# DESCARGAR LOS ESTADOS DE CAPTACIONES - SECCION 03
-				self.descagar(In=1, Fn=40, Stp=1, Seccion=3, Gestion=j, urlEnt=urlEnt)
 				# DESCARGAR LOS ESTADOS DE COLOCACIONES - SECCION 04
-				self.descagar(In=1, Fn=40, Stp=1, Seccion=4, Gestion=j, urlEnt=urlEnt)
-
 				# DESCARGAR LOS ESTADOS DE OPERACIONES INTERBANCARIAS (SEMESTRAL) - SECCION 05
-				self.descagar(In=1, Fn=1, Stp=1, Seccion=5, Gestion=j, urlEnt=urlEnt)
 				# DESCARGAR LOS ESTADOS FINANCIEROS EVOLUTIVOS- SECCION 06
-				self.descagar(In=1, Fn=5, Stp=1, Seccion=6, Gestion=j, urlEnt=urlEnt)
 				# DESCARGAR LOS ESTADOS DE INDICADORES EVOLUTIVOS - SECCION 07
-				self.descagar(In=1, Fn=5, Stp=1, Seccion=7, Gestion=j, urlEnt=urlEnt)
 				# DESCARGAR LOS ESTADOS FINANCIEROS DESAGREGADOS - SECCION 08
-				self.descagar(In=1, Fn=5, Stp=1, Seccion=8, Gestion=j, urlEnt=urlEnt)
 				# DESCARGAR LOS ESTADOS DE AGENCIAS, SUCURSALES, NRO. EMPLEADOS - SECCION 09
-				self.descagar(In=1, Fn=5, Stp=1, Seccion=9, Gestion=j, urlEnt=urlEnt)
+				self.descagar(In=1, Fn=40, Stp=1, Secciones=9, Gestion=j, urlEnt=urlEnt)
 							
 	def tearDown(self):
 		self.driver.close()
