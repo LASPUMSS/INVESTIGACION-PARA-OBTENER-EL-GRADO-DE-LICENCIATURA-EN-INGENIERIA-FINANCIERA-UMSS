@@ -11,7 +11,7 @@ urlEntidades = ["https://www.asfi.gob.bo/index.php/bancos-multiples-boletines.ht
 
 directorio = os.getcwd()
 ubDrive = directorio + "\chromedriver.exe"
-ubDatos = directorio + "\DATOS_ENTIDADES_ASFI_2014_2021"
+ubDatos = directorio + "\DATOS\DATOS_ENTIDADES_ASFI_2015"
 print(ubDrive)
 time.sleep(10)
 
@@ -63,8 +63,8 @@ class usando_unittest(unittest.TestCase):
 
 	def test_usando_toggle(self):
 		
-		gestionInc = 2014
-		gestionFn = 2014
+		gestionInc = 2015
+		gestionFn = 2015
 		gestionFn = gestionFn + 1
 
 		for urlEnt in urlEntidades:
