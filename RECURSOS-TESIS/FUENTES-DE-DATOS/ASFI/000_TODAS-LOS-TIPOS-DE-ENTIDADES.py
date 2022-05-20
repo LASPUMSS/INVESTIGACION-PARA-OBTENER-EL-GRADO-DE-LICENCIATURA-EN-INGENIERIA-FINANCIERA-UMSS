@@ -14,6 +14,7 @@ ubDrive = directorio + "\chromedriver.exe"
 ubDatos = directorio + "\DATOS_ENTIDADES_ASFI_2014_2021"
 print(ubDrive)
 time.sleep(10)
+
 class usando_unittest(unittest.TestCase):
 
 	def setUp(self):
@@ -23,7 +24,7 @@ class usando_unittest(unittest.TestCase):
 		})
 		self.driver = webdriver.Chrome(executable_path=r"%s" %ubDrive, chrome_options=chromeOptions)
 
-	def	descagar(self, In, Fn, Stp, Seccion, Mes, Gestion, urlEnt):
+	def	descagar(self, In, Fn, Stp, Seccion, Gestion, urlEnt):
 		
 		Fn = Fn + 1
 
@@ -36,24 +37,26 @@ class usando_unittest(unittest.TestCase):
 		gestion = driver.find_element_by_name("Anio")
 		dropdown01 = Select(gestion)
 		dropdown01.select_by_visible_text(str(Gestion))
-		time.sleep(3)
+		time.sleep(2)
 
-		mes = driver.find_element_by_name("Mes")
-		dropdown02 = Select(mes)
-		dropdown02.select_by_visible_text(Mes)
-		time.sleep(3)
+		for Mes in mesesGestion:
+			
+			mes = driver.find_element_by_name("Mes")
+			dropdown02 = Select(mes)
+			dropdown02.select_by_visible_text(Mes)
+			time.sleep(2)
 
-		btnAceptar = driver.find_element_by_xpath("/html/body/form/p/table/tbody/tr/td[5]/input")
-		btnAceptar.click()
-		time.sleep(3)
+			btnAceptar = driver.find_element_by_xpath("/html/body/form/p/table/tbody/tr/td[5]/input")
+			btnAceptar.click()
+			time.sleep(2)
 
-		for a in range(In,Fn,Stp):
-			try:
-				estFin = driver.find_element_by_xpath("/html/body/table/tbody/tr/td/table/tbody/tr[1]/td/table[" + str(Seccion) + "]/tbody/tr/td[2]/table/tbody/tr/td[2]/a[" + str(a) + "]")
-				estFin.click()
-				time.sleep(5)
-			except exceptions.NoSuchElementException:
-				pass
+			for a in range(In,Fn,Stp):
+				try:
+					estFin = driver.find_element_by_xpath("/html/body/table/tbody/tr/td/table/tbody/tr[1]/td/table[" + str(Seccion) + "]/tbody/tr/td[2]/table/tbody/tr/td[2]/a[" + str(a) + "]")
+					estFin.click()
+					time.sleep(5)
+				except exceptions.NoSuchElementException:
+					pass
 
 	def test_usando_toggle(self):
 		
@@ -65,27 +68,26 @@ class usando_unittest(unittest.TestCase):
 
 			for j in range(gestionInc, gestionFn, 1):
 
-				for i in mesesGestion:
 
-					# DESCARGAR LOS ESTADOS FINANCIEROS POR BANCOS Y POR MONEDAS - SECCION 01
-					self.descagar(In=1, Fn=2, Stp=1, Seccion=1, Mes=i, Gestion=j, urlEnt=urlEnt)
-					# DESCARGAR LOS ESTADOS DE INDEICADORES FINANCIEROS - SECCION 02
-					self.descagar(In=1, Fn=3, Stp=1, Seccion=2, Mes=i, Gestion=j, urlEnt=urlEnt)
-					# DESCARGAR LOS ESTADOS DE CAPTACIONES - SECCION 03
-					self.descagar(In=1, Fn=40, Stp=1, Seccion=3, Mes=i, Gestion=j, urlEnt=urlEnt)
-					# DESCARGAR LOS ESTADOS DE COLOCACIONES - SECCION 04
-					self.descagar(In=1, Fn=40, Stp=1, Seccion=4, Mes=i, Gestion=j, urlEnt=urlEnt)
+				# DESCARGAR LOS ESTADOS FINANCIEROS POR BANCOS Y POR MONEDAS - SECCION 01
+				self.descagar(In=1, Fn=2, Stp=1, Seccion=1, Gestion=j, urlEnt=urlEnt)
+				# DESCARGAR LOS ESTADOS DE INDEICADORES FINANCIEROS - SECCION 02
+				self.descagar(In=1, Fn=3, Stp=1, Seccion=2, Gestion=j, urlEnt=urlEnt)
+				# DESCARGAR LOS ESTADOS DE CAPTACIONES - SECCION 03
+				self.descagar(In=1, Fn=40, Stp=1, Seccion=3, Gestion=j, urlEnt=urlEnt)
+				# DESCARGAR LOS ESTADOS DE COLOCACIONES - SECCION 04
+				self.descagar(In=1, Fn=40, Stp=1, Seccion=4, Gestion=j, urlEnt=urlEnt)
 
-					# DESCARGAR LOS ESTADOS DE OPERACIONES INTERBANCARIAS (SEMESTRAL) - SECCION 05
-					self.descagar(In=1, Fn=1, Stp=1, Seccion=5, Mes=i, Gestion=j, urlEnt=urlEnt)
-					# DESCARGAR LOS ESTADOS FINANCIEROS EVOLUTIVOS- SECCION 06
-					self.descagar(In=1, Fn=5, Stp=1, Seccion=6, Mes=i, Gestion=j, urlEnt=urlEnt)
-					# DESCARGAR LOS ESTADOS DE INDICADORES EVOLUTIVOS - SECCION 07
-					self.descagar(In=1, Fn=5, Stp=1, Seccion=7, Mes=i, Gestion=j, urlEnt=urlEnt)
-					# DESCARGAR LOS ESTADOS FINANCIEROS DESAGREGADOS - SECCION 08
-					self.descagar(In=1, Fn=5, Stp=1, Seccion=8, Mes=i, Gestion=j, urlEnt=urlEnt)
-					# DESCARGAR LOS ESTADOS DE AGENCIAS, SUCURSALES, NRO. EMPLEADOS - SECCION 09
-					self.descagar(In=1, Fn=5, Stp=1, Seccion=9, Mes=i, Gestion=j, urlEnt=urlEnt)
+				# DESCARGAR LOS ESTADOS DE OPERACIONES INTERBANCARIAS (SEMESTRAL) - SECCION 05
+				self.descagar(In=1, Fn=1, Stp=1, Seccion=5, Gestion=j, urlEnt=urlEnt)
+				# DESCARGAR LOS ESTADOS FINANCIEROS EVOLUTIVOS- SECCION 06
+				self.descagar(In=1, Fn=5, Stp=1, Seccion=6, Gestion=j, urlEnt=urlEnt)
+				# DESCARGAR LOS ESTADOS DE INDICADORES EVOLUTIVOS - SECCION 07
+				self.descagar(In=1, Fn=5, Stp=1, Seccion=7, Gestion=j, urlEnt=urlEnt)
+				# DESCARGAR LOS ESTADOS FINANCIEROS DESAGREGADOS - SECCION 08
+				self.descagar(In=1, Fn=5, Stp=1, Seccion=8, Gestion=j, urlEnt=urlEnt)
+				# DESCARGAR LOS ESTADOS DE AGENCIAS, SUCURSALES, NRO. EMPLEADOS - SECCION 09
+				self.descagar(In=1, Fn=5, Stp=1, Seccion=9, Gestion=j, urlEnt=urlEnt)
 							
 	def tearDown(self):
 		self.driver.close()
