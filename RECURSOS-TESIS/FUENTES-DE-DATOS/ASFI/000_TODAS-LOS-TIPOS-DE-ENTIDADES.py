@@ -6,6 +6,9 @@ import unittest
 import time
 import os
 
+gestionInc = 2014
+gestionFn = 2014
+
 mesesGestion = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
 urlEntidades = ["https://www.asfi.gob.bo/index.php/bancos-multiples-boletines.html", "https://www.asfi.gob.bo/index.php/bancos-pyme-boletines.html", "https://www.asfi.gob.bo/index.php/entidades-financieras-de-vivienda.html", "https://www.asfi.gob.bo/index.php/cooperativas-de-ahorro-y-credito-abiertas.html", "https://www.asfi.gob.bo/index.php/instituciones-financieras-de-desarrollo.html", "https://www.asfi.gob.bo/index.php/banco-de-desarrollo-productivo.html"]
 
@@ -56,8 +59,6 @@ class usando_unittest(unittest.TestCase):
 				pass
 
 	def test_usando_toggle(self):
-		gestionInc = 2014
-		gestionFn = 2014
 		
 		gestionFn = gestionFn + 1
 
