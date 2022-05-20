@@ -34,21 +34,21 @@ class usando_unittest(unittest.TestCase):
 		driver.switch_to.frame(driver.find_element_by_xpath("/html/body/div/div/div[2]/main/div[2]/iframe"))
 		time.sleep(3)
 
-		gestion = driver.find_element_by_name("Anio")
-		dropdown01 = Select(gestion)
-		dropdown01.select_by_visible_text(str(Gestion))
-		time.sleep(2)
-
 		for Mes in mesesGestion:
-			
+
+			gestion = driver.find_element_by_name("Anio")
+			dropdown01 = Select(gestion)
+			dropdown01.select_by_visible_text(str(Gestion))
+			time.sleep(3)
+
 			mes = driver.find_element_by_name("Mes")
 			dropdown02 = Select(mes)
 			dropdown02.select_by_visible_text(Mes)
-			time.sleep(2)
+			time.sleep(3)
 
 			btnAceptar = driver.find_element_by_xpath("/html/body/form/p/table/tbody/tr/td[5]/input")
 			btnAceptar.click()
-			time.sleep(2)
+			time.sleep(3)
 
 			for a in range(In,Fn,Stp):
 				try:
