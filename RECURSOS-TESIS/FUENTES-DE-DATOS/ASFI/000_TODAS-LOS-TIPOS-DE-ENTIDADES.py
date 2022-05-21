@@ -13,6 +13,7 @@ gestionDescargar = input()
 directorio = os.getcwd()
 registroEjec = open(f"{directorio}/DATOS/registroEjecucion.txt", "w")
 registroEjec.write("REGISTRO DE EJECUCION")
+print("REGISTRO DE EJECUCION")
 ubDrive = f"{directorio}\chromedriver.exe"
 ubDatos = f"{directorio}\DATOS\DATOS_ENTIDADES_ASFI_{gestionDescargar}"
 print(ubDrive)
@@ -58,10 +59,13 @@ class usando_unittest(unittest.TestCase):
 
 				for a in range(In,Fn,Stp):
 					try:
-						estFin = driver.find_element_by_xpath("/html/body/table/tbody/tr/td/table/tbody/tr[1]/td/table[" + str(Seccion) + "]/tbody/tr/td[2]/table/tbody/tr/td[2]/a[" + str(a) + "]")
+						xpahtDesc = "/html/body/table/tbody/tr/td/table/tbody/tr[1]/td/table[" + str(Seccion) + "]/tbody/tr/td[2]/table/tbody/tr/td[2]/a[" + str(a) + "]"
+						estFin = driver.find_element_by_xpath(xpahtDesc)
 						estFin.click()
 						time.sleep(3)
-						registroEjec.write("\n" + "/html/body/table/tbody/tr/td/table/tbody/tr[1]/td/table[" + str(Seccion) + "]/tbody/tr/td[2]/table/tbody/tr/td[2]/a[" + str(a) + "]")
+						registroEjec.write("\n" + xpahtDesc)
+						print(xpahtDesc)
+					
 					except exceptions.NoSuchElementException:
 						pass
 
@@ -72,7 +76,10 @@ class usando_unittest(unittest.TestCase):
 		gestionFn = gestionFn + 1
 
 		for urlEnt in urlEntidades:
-
+			
+			print("############################################################################################")
+			print(urlEntidades)
+			registroEjec.write("############################################################################################")
 			registroEjec.write("\n" + urlEntidades)
 
 			for j in range(gestionInc, gestionFn, 1):
