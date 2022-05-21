@@ -11,7 +11,7 @@ urlEntidades = ["https://www.asfi.gob.bo/index.php/bancos-multiples-boletines.ht
 
 directorio = os.getcwd()
 ubDrive = directorio + "\chromedriver.exe"
-ubDatos = directorio + "\DATOS\DATOS_ENTIDADES_ASFI_2015"
+ubDatos = directorio + "\DATOS\DATOS_ENTIDADES_ASFI_2015_2016"
 print(ubDrive)
 time.sleep(10)
 
@@ -40,12 +40,12 @@ class usando_unittest(unittest.TestCase):
 			gestion = driver.find_element_by_name("Anio")
 			dropdown01 = Select(gestion)
 			dropdown01.select_by_visible_text(str(Gestion))
-			time.sleep(3)
+			time.sleep(2)
 
 			mes = driver.find_element_by_name("Mes")
 			dropdown02 = Select(mes)
 			dropdown02.select_by_visible_text(Mes)
-			time.sleep(3)
+			time.sleep(2)
 
 			btnAceptar = driver.find_element_by_xpath("/html/body/form/p/table/tbody/tr/td[5]/input")
 			btnAceptar.click()
@@ -57,14 +57,15 @@ class usando_unittest(unittest.TestCase):
 					try:
 						estFin = driver.find_element_by_xpath("/html/body/table/tbody/tr/td/table/tbody/tr[1]/td/table[" + str(Seccion) + "]/tbody/tr/td[2]/table/tbody/tr/td[2]/a[" + str(a) + "]")
 						estFin.click()
-						time.sleep(5)
+						time.sleep(3)
 					except exceptions.NoSuchElementException:
 						pass
 
 	def test_usando_toggle(self):
 		
-		gestionInc = 2015
-		gestionFn = 2015
+		print("¿Que gestion vamos a descargar?")
+		gestionInc = input()
+		gestionFn = gestionInc()
 		gestionFn = gestionFn + 1
 
 		for urlEnt in urlEntidades:
