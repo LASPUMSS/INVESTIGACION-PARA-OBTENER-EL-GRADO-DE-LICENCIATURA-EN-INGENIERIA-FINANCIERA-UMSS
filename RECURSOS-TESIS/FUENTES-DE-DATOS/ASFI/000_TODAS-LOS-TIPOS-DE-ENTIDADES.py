@@ -9,9 +9,11 @@ import os
 mesesGestion = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
 urlEntidades = ["https://www.asfi.gob.bo/index.php/bancos-multiples-boletines.html", "https://www.asfi.gob.bo/index.php/bancos-pyme-boletines.html", "https://www.asfi.gob.bo/index.php/entidades-financieras-de-vivienda.html", "https://www.asfi.gob.bo/index.php/cooperativas-de-ahorro-y-credito-abiertas.html", "https://www.asfi.gob.bo/index.php/instituciones-financieras-de-desarrollo.html", "https://www.asfi.gob.bo/index.php/banco-de-desarrollo-productivo.html"]
 
+print("¿Que gestion vamos a descargar?")
+gestionDescargar = input()
 directorio = os.getcwd()
 ubDrive = directorio + "\chromedriver.exe"
-ubDatos = directorio + "\DATOS\DATOS_ENTIDADES_ASFI_2015_2016"
+ubDatos = directorio + f"\DATOS\DATOS_ENTIDADES_ASFI_{gestionDescargar}"
 print(ubDrive)
 time.sleep(10)
 
@@ -63,9 +65,8 @@ class usando_unittest(unittest.TestCase):
 
 	def test_usando_toggle(self):
 		
-		print("¿Que gestion vamos a descargar?")
-		gestionInc = input()
-		gestionFn = gestionInc()
+		gestionInc = int(gestionDescargar)
+		gestionFn = gestionInc
 		gestionFn = gestionFn + 1
 
 		for urlEnt in urlEntidades:
