@@ -8,12 +8,13 @@ import os
 
 mesesGestion = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
 urlEntidades = ["https://www.asfi.gob.bo/index.php/bancos-multiples-boletines.html", "https://www.asfi.gob.bo/index.php/bancos-pyme-boletines.html", "https://www.asfi.gob.bo/index.php/entidades-financieras-de-vivienda.html", "https://www.asfi.gob.bo/index.php/cooperativas-de-ahorro-y-credito-abiertas.html", "https://www.asfi.gob.bo/index.php/instituciones-financieras-de-desarrollo.html", "https://www.asfi.gob.bo/index.php/banco-de-desarrollo-productivo.html"]
-
 print("¿Que gestion vamos a descargar?")
 gestionDescargar = input()
 directorio = os.getcwd()
-ubDrive = directorio + "\chromedriver.exe"
-ubDatos = directorio + f"\DATOS\DATOS_ENTIDADES_ASFI_{gestionDescargar}"
+registroEjec = open(f"{directorio}/DATOS/registroEjecucion.txt", "w")
+registroEjec.write("REGISTRO DE EJECUCION")
+ubDrive = f"{directorio}\chromedriver.exe"
+ubDatos = f"{directorio}\DATOS\DATOS_ENTIDADES_ASFI_{gestionDescargar}"
 print(ubDrive)
 time.sleep(10)
 
@@ -60,6 +61,7 @@ class usando_unittest(unittest.TestCase):
 						estFin = driver.find_element_by_xpath("/html/body/table/tbody/tr/td/table/tbody/tr[1]/td/table[" + str(Seccion) + "]/tbody/tr/td[2]/table/tbody/tr/td[2]/a[" + str(a) + "]")
 						estFin.click()
 						time.sleep(3)
+						registroEjec.write("\n" + "/html/body/table/tbody/tr/td/table/tbody/tr[1]/td/table[" + str(Seccion) + "]/tbody/tr/td[2]/table/tbody/tr/td[2]/a[" + str(a) + "]")
 					except exceptions.NoSuchElementException:
 						pass
 
@@ -70,6 +72,8 @@ class usando_unittest(unittest.TestCase):
 		gestionFn = gestionFn + 1
 
 		for urlEnt in urlEntidades:
+
+			registroEjec.write("\n" + urlEntidades)
 
 			for j in range(gestionInc, gestionFn, 1):
 
@@ -86,6 +90,7 @@ class usando_unittest(unittest.TestCase):
 							
 	def tearDown(self):
 		self.driver.close()
+		registroEjec.close()
 
 if __name__ == '__main__':
 	unittest.main()
