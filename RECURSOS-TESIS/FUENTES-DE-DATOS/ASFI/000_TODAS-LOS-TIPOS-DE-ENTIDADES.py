@@ -13,6 +13,7 @@ mesesGestion = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", 
 urlEntidades = ["https://www.asfi.gob.bo/index.php/bancos-multiples-boletines.html", "https://www.asfi.gob.bo/index.php/bancos-pyme-boletines.html", "https://www.asfi.gob.bo/index.php/entidades-financieras-de-vivienda.html", "https://www.asfi.gob.bo/index.php/cooperativas-de-ahorro-y-credito-abiertas.html", "https://www.asfi.gob.bo/index.php/instituciones-financieras-de-desarrollo.html", "https://www.asfi.gob.bo/index.php/banco-de-desarrollo-productivo.html"]
 nomEntidades = ["BancosMultiples","BancosPyme","EntidadesFinancierasVivienda","CooperativasDeAhorroAbiertas","InstitucionesFininacierasDesarrollo","BancosDesarrolloProductivo"]
 seccionesDesc = ["EstadosFinancieros","IndicadoresFinancieros","Captaciones","Colocaciones","OperacionesInterbancarias","EstadosFinancierosEvolutivos","IndicadoresEvolutivos","EstadosFinancerosDesagregados","AgenciasSucursalesNumEmpleados"]
+SEPARADOR = "#################################################################################"
 print("¿Que gestion vamos a descargar?")
 gestionDescargar = input()
 directorio = os.getcwd()
@@ -40,11 +41,11 @@ class usando_unittest(unittest.TestCase):
 		return latest_file
 	
 	def renombrarArchivo(self, idxEnt, idxSecDesc, numArchivo, gestion, mes):
+		time.sleep(5)
 		list_of_files = glob.glob(f"{ubDatos}\*.zip")
 		latest_file = max(list_of_files, key=os.path.getctime)
 		file_oldname = latest_file
-		file_newname_newfile = f"{ubDatos}\{gestion}_{mes}_{nomEntidades[idxEnt]}_Seccion_{seccionesDesc[idxSecDesc]}_{numArchivo}.zip"
-		print(idxEnt)
+		file_newname_newfile = f"{ubDatos}\{gestion}_{mesesGestion.index(mes)+1}_{nomEntidades[idxEnt]}_Seccion_{seccionesDesc[idxSecDesc]}_{numArchivo}.zip"
 		os.rename(file_oldname, file_newname_newfile)
 
 	def	descagar(self, In, Fn, Stp, Secciones, Gestion, urlEnt):
@@ -80,9 +81,11 @@ class usando_unittest(unittest.TestCase):
 						xpahtDesc = "/html/body/table/tbody/tr/td/table/tbody/tr[1]/td/table[" + str(Seccion) + "]/tbody/tr/td[2]/table/tbody/tr/td[2]/a[" + str(a) + "]"
 						estFin = driver.find_element_by_xpath(xpahtDesc)
 						estFin.click()
-						time.sleep(3)
+						time.sleep(5)
+
 						idEntidad = int(urlEntidades.index(urlEnt))
 						self.renombrarArchivo(idxEnt=idEntidad, idxSecDesc=Seccion-1, numArchivo=str(a), gestion=str(Gestion), mes=str(Mes))
+						registroEjec.write("\n" + self.ultimoArchivo())
 						print(self.ultimoArchivo())
 					
 					except exceptions.NoSuchElementException:
@@ -94,6 +97,13 @@ class usando_unittest(unittest.TestCase):
 		gestionFn = gestionFn + 1
 
 		for urlEnt in urlEntidades:
+			
+			print(SEPARADOR)
+			print(urlEnt)
+			print(SEPARADOR)
+			registroEjec.write("\n" + SEPARADOR)
+			registroEjec.write("\n" + urlEnt)
+			registroEjec.write("\n" + SEPARADOR)
 
 			for j in range(gestionInc, gestionFn, 1):
 
@@ -106,7 +116,7 @@ class usando_unittest(unittest.TestCase):
 				# DESCARGAR LOS ESTADOS DE INDICADORES EVOLUTIVOS - SECCION 07
 				# DESCARGAR LOS ESTADOS FINANCIEROS DESAGREGADOS - SECCION 08
 				# DESCARGAR LOS ESTADOS DE AGENCIAS, SUCURSALES, NRO. EMPLEADOS - SECCION 09
-				self.descagar(In=1, Fn=40, Stp=9, Secciones=1, Gestion=j, urlEnt=urlEnt)
+				self.descagar(In=1, Fn=40, Stp=1, Secciones=9, Gestion=j, urlEnt=urlEnt)
 							
 	def tearDown(self):
 		self.driver.close()
