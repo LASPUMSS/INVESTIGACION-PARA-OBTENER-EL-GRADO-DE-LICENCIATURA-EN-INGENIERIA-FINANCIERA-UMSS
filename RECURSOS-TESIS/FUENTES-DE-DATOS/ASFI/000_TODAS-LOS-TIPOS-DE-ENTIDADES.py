@@ -4,14 +4,17 @@ from selenium.webdriver.support.select import Select
 from selenium.common import exceptions
 import unittest
 import time
+import glob
 import os
 
 mesesGestion = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
 urlEntidades = ["https://www.asfi.gob.bo/index.php/bancos-multiples-boletines.html", "https://www.asfi.gob.bo/index.php/bancos-pyme-boletines.html", "https://www.asfi.gob.bo/index.php/entidades-financieras-de-vivienda.html", "https://www.asfi.gob.bo/index.php/cooperativas-de-ahorro-y-credito-abiertas.html", "https://www.asfi.gob.bo/index.php/instituciones-financieras-de-desarrollo.html", "https://www.asfi.gob.bo/index.php/banco-de-desarrollo-productivo.html"]
+nomEntidades = ["BancosMultiples","BancosPyme","EntidadesFinancierasVivienda","CooperativasDeAhorroAbiertas","InstitucionesFininacierasDesarrollo","BancosDesarrolloProductivo"]
+secciones = ["EstadosFinancieros","IndicadoresFinancieros","Captaciones","Colocaciones","OperacionesInterbancarias","EstadosFinancierosEvolutivos","IndicadoresEvolutivos","EstadosFinancerosDesagregados","AgenciasSucursalesNumEmpleados"]
 print("¿Que gestion vamos a descargar?")
 gestionDescargar = input()
 directorio = os.getcwd()
-registroEjec = open(f"{directorio}/DATOS/registroEjecucion.txt", "w")
+registroEjec = open(f"{directorio}/DATOS/registroEjecucion{gestionDescargar}.txt", "w")
 registroEjec.write("REGISTRO DE EJECUCION")
 print("REGISTRO DE EJECUCION")
 ubDrive = f"{directorio}\chromedriver.exe"
@@ -27,6 +30,21 @@ class usando_unittest(unittest.TestCase):
    		"download.default_directory" : ubDatos,
 		})
 		self.driver = webdriver.Chrome(executable_path=r"%s" %ubDrive, chrome_options=chromeOptions)
+
+	def ultimoArchivo(self):
+		list_of_files = glob.glob(f"{ubDatos}*.zip") 
+		latest_file = max(list_of_files, key=os.path.getctime)
+		latest_file = latest_file.replace(f"{ubDatos}\\","")
+		return latest_file
+	
+	def renombrarArchivo(self,idxEnt, gestion, mes, seccion, numArchivo):
+		list_of_files = glob.glob(f"{ubDatos}\*.zip")
+		latest_file = max(list_of_files, key=os.path.getctime)
+		latest_file = latest_file.replace(f"{ubDatos}\\","")
+		file_oldname = os.path.join(ubDatos, latest_file)
+		file_newname_newfile = os.path.join(ubDatos, f"{gestion}_{mes}_00{seccion}{nomEntidades(idxEnt)}_{secciones(seccion)}{numArchivo}.zip")
+		os.rename(file_oldname, file_newname_newfile)
+
 
 	def	descagar(self, In, Fn, Stp, Secciones, Gestion, urlEnt):
 		
@@ -63,8 +81,9 @@ class usando_unittest(unittest.TestCase):
 						estFin = driver.find_element_by_xpath(xpahtDesc)
 						estFin.click()
 						time.sleep(3)
-						registroEjec.write("\n" + xpahtDesc)
-						print(xpahtDesc)
+						self.renombrarArchivo(idxEnt=Seccion,gestion=gestion,mes=mes,seccion=str(Seccion),numArchivo=str(a))
+						registroEjec.write("\n" + str(self.ultimoArchivo()))
+						print(self.ultimoArchivo())
 					
 					except exceptions.NoSuchElementException:
 						pass
@@ -77,12 +96,13 @@ class usando_unittest(unittest.TestCase):
 
 		for urlEnt in urlEntidades:
 			
-			print("############################################################################################")
-			print(urlEntidades)
-			registroEjec.write("############################################################################################")
-			registroEjec.write("\n" + urlEntidades)
+			#print("############################################################################################")
+			#print(str(urlEnt))
+			#registroEjec.write("############################################################################################")
+			#registroEjec.write("\n" + str(urlEnt))
+			print(urlEnt.index())
 
-			for j in range(gestionInc, gestionFn, 1):
+			#for j in range(gestionInc, gestionFn, 1):
 
 				# DESCARGAR LOS ESTADOS FINANCIEROS POR BANCOS Y POR MONEDAS - SECCION 01
 				# DESCARGAR LOS ESTADOS DE INDEICADORES FINANCIEROS - SECCION 02
@@ -93,7 +113,8 @@ class usando_unittest(unittest.TestCase):
 				# DESCARGAR LOS ESTADOS DE INDICADORES EVOLUTIVOS - SECCION 07
 				# DESCARGAR LOS ESTADOS FINANCIEROS DESAGREGADOS - SECCION 08
 				# DESCARGAR LOS ESTADOS DE AGENCIAS, SUCURSALES, NRO. EMPLEADOS - SECCION 09
-				self.descagar(In=1, Fn=40, Stp=1, Secciones=9, Gestion=j, urlEnt=urlEnt)
+				#self.descagar(In=1, Fn=40, Stp=1, Secciones=9, Gestion=j, urlEnt=urlEnt)
+				
 							
 	def tearDown(self):
 		self.driver.close()
