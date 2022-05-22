@@ -46,7 +46,7 @@ class usando_unittest(unittest.TestCase):
 		os.rename(file_oldname, file_newname_newfile)
 
 
-	def	descagar(self, In, Fn, Stp, Secciones, Gestion, urlEnt):
+	def	descagar(self, In, Fn, Stp, Secciones, Gestion, urlEnt, idxEnt):
 		
 		Fn = Fn + 1
 		Secciones = Secciones+1
@@ -81,7 +81,7 @@ class usando_unittest(unittest.TestCase):
 						estFin = driver.find_element_by_xpath(xpahtDesc)
 						estFin.click()
 						time.sleep(3)
-						self.renombrarArchivo(idxEnt=Seccion,gestion=gestion,mes=mes,seccion=str(Seccion),numArchivo=str(a))
+						self.renombrarArchivo(idxEnt=idxEnt,gestion=gestion,mes=mes,seccion=str(Seccion),numArchivo=str(a))
 						registroEjec.write("\n" + str(self.ultimoArchivo()))
 						print(self.ultimoArchivo())
 					
@@ -96,13 +96,12 @@ class usando_unittest(unittest.TestCase):
 
 		for urlEnt in urlEntidades:
 			
-			#print("############################################################################################")
-			#print(str(urlEnt))
-			#registroEjec.write("############################################################################################")
-			#registroEjec.write("\n" + str(urlEnt))
-			print(urlEnt.index())
+			print("############################################################################################")
+			print(str(urlEnt))
+			registroEjec.write("############################################################################################")
+			registroEjec.write("\n" + str(urlEnt))
 
-			#for j in range(gestionInc, gestionFn, 1):
+			for j in range(gestionInc, gestionFn, 1):
 
 				# DESCARGAR LOS ESTADOS FINANCIEROS POR BANCOS Y POR MONEDAS - SECCION 01
 				# DESCARGAR LOS ESTADOS DE INDEICADORES FINANCIEROS - SECCION 02
@@ -113,9 +112,9 @@ class usando_unittest(unittest.TestCase):
 				# DESCARGAR LOS ESTADOS DE INDICADORES EVOLUTIVOS - SECCION 07
 				# DESCARGAR LOS ESTADOS FINANCIEROS DESAGREGADOS - SECCION 08
 				# DESCARGAR LOS ESTADOS DE AGENCIAS, SUCURSALES, NRO. EMPLEADOS - SECCION 09
-				#self.descagar(In=1, Fn=40, Stp=1, Secciones=9, Gestion=j, urlEnt=urlEnt)
+				self.descagar(In=1, Fn=40, Stp=1, Secciones=9, Gestion=j, urlEnt=urlEnt, idxEnt=int(urlEntidades.index(urlEnt)))
 				
-							
+										
 	def tearDown(self):
 		self.driver.close()
 		registroEjec.close()
