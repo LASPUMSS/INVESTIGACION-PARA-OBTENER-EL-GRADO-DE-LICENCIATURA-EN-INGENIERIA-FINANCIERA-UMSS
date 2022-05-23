@@ -11,14 +11,10 @@ mesesGestion = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", 
 urlEntidades = ["https://www.asfi.gob.bo/index.php/bancos-multiples-boletines.html", "https://www.asfi.gob.bo/index.php/bancos-pyme-boletines.html", "https://www.asfi.gob.bo/index.php/entidades-financieras-de-vivienda.html", "https://www.asfi.gob.bo/index.php/cooperativas-de-ahorro-y-credito-abiertas.html", "https://www.asfi.gob.bo/index.php/instituciones-financieras-de-desarrollo.html", "https://www.asfi.gob.bo/index.php/banco-de-desarrollo-productivo.html"]
 nomEntidades = ["BancosMultiples","BancosPyme","EntidadesFinancierasVivienda","CooperativasDeAhorroAbiertas","InstitucionesFininacierasDesarrollo","BancosDesarrolloProductivo"]
 seccionesDesc = ["EstadosFinancieros","IndicadoresFinancieros","Captaciones","Colocaciones","OperacionesInterbancarias","EstadosFinancierosEvolutivos","IndicadoresEvolutivos","EstadosFinancerosDesagregados","AgenciasSucursalesNumEmpleados"]
-nombresAnt = []
-nombresNew = []
 SEPARADOR = "#################################################################################"
 print("¿Que gestion vamos a descargar?")
 gestionDescargar = input()
 directorio = os.getcwd()
-registroEjec = open(f"{directorio}/DATOS/REGISTROS_DESCARGAS/registroEjecucion{gestionDescargar}.txt", "w")
-registroEjec.write("REGISTRO DE EJECUCION")
 print("REGISTRO DE EJECUCION")
 ubDrive = f"{directorio}\chromedriver.exe"
 ubDatos = f"{directorio}\DATOS\DATOS_ENTIDADES_ASFI_{gestionDescargar}"
@@ -35,33 +31,6 @@ class usando_unittest(unittest.TestCase):
 		})
 		self.driver = webdriver.Chrome(executable_path=r"%s" %ubDrive, chrome_options=chromeOptions)
 
-	def recolectaNombres(self, idxEnt, idxSecDesc, numArchivo, gestion, mes):
-		list_of_files = glob.glob(rutaDatos)
-		file_oldname = max(list_of_files, key=os.path.getctime)
-		file_oldnameAux = file_oldname.replace(f"{ubDatos}\\","")
-
-		if int(mesesGestion.index(mes)+1)<10:
-			mesAux = f"0{mesesGestion.index(mes)+1}"
-		else:
-			mesAux = f"{mesesGestion.index(mes)+1}"
-		if int(numArchivo)<10:
-			numArchivoAux = f"0{numArchivo}"
-		else:
-			numArchivoAux = f"{numArchivo}"
-		
-		file_newname_newfile = f"{ubDatos}\{gestion}_{str(mesAux)}_{nomEntidades[idxEnt]}_Seccion_{seccionesDesc[idxSecDesc]}_{str(numArchivoAux)}_{file_oldnameAux}"
-		nombresAnt.append(file_oldname)
-		nombresNew.append(file_newname_newfile)
-
-	def renombrarArchivos(self):
-		time.sleep(30)
-		for ind, nombreNuevo in enumerate(nombresNew):
-			os.rename(nombresAnt[int(ind)], nombreNuevo)
-			registroEjec.write("\n" + nombreNuevo)
-			print(nombreNuevo)
-		nombresAnt.clear()
-		nombresNew.clear()
-
 	def	descagar(self, In, Fn, Stp, Secciones, Gestion, urlEnt):
 		Fn = Fn + 1
 		Secciones = Secciones+1
@@ -77,6 +46,7 @@ class usando_unittest(unittest.TestCase):
 			dropdown01 = Select(gestion)
 			dropdown01.select_by_visible_text(str(Gestion))
 			time.sleep(2)
+			print(Mes)
 
 			mes = driver.find_element_by_name("Mes")
 			dropdown02 = Select(mes)
@@ -95,9 +65,8 @@ class usando_unittest(unittest.TestCase):
 						estFin = driver.find_element_by_xpath(xpahtDesc)
 						estFin.click()
 						time.sleep(3)
-						idEntidad = int(urlEntidades.index(urlEnt))
-						self.recolectaNombres(idxEnt=idEntidad, idxSecDesc=Seccion-1, numArchivo=str(a), gestion=str(Gestion), mes=str(Mes))
-					
+						print(xpahtDesc)
+
 					except exceptions.NoSuchElementException:
 						pass
 
@@ -110,9 +79,6 @@ class usando_unittest(unittest.TestCase):
 			print(SEPARADOR)
 			print(urlEnt)
 			print(SEPARADOR)
-			registroEjec.write("\n" + SEPARADOR)
-			registroEjec.write("\n" + urlEnt)
-			registroEjec.write("\n" + SEPARADOR)
 
 			for j in range(gestionInc, gestionFn, 1):
 
@@ -126,11 +92,9 @@ class usando_unittest(unittest.TestCase):
 				# DESCARGAR LOS ESTADOS FINANCIEROS DESAGREGADOS - SECCION 08
 				# DESCARGAR LOS ESTADOS DE AGENCIAS, SUCURSALES, NRO. EMPLEADOS - SECCION 09
 				self.descagar(In=1, Fn=40, Stp=1, Secciones=9, Gestion=j, urlEnt=urlEnt)
-		self.renombrarArchivos()
 							
 	def tearDown(self):
 		self.driver.close()
-		registroEjec.close()
 
 if __name__ == '__main__':
 	unittest.main()
