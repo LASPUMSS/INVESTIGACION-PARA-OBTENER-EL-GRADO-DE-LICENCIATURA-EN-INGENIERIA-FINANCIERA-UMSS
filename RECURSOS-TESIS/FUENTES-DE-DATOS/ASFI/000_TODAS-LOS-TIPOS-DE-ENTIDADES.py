@@ -54,7 +54,7 @@ class usando_unittest(unittest.TestCase):
 		nombresNew.append(file_newname_newfile)
 
 	def renombrarArchivos(self):
-		time.sleep(20)
+		time.sleep(30)
 		for ind, nombreNuevo in enumerate(nombresNew):
 			os.rename(nombresAnt[int(ind)], nombreNuevo)
 			registroEjec.write("\n" + nombreNuevo)
@@ -128,9 +128,9 @@ class usando_unittest(unittest.TestCase):
 				# DESCARGAR LOS ESTADOS FINANCIEROS DESAGREGADOS - SECCION 08
 				# DESCARGAR LOS ESTADOS DE AGENCIAS, SUCURSALES, NRO. EMPLEADOS - SECCION 09
 				self.descagar(In=1, Fn=40, Stp=1, Secciones=9, Gestion=j, urlEnt=urlEnt)
+		self.renombrarArchivos()
 							
 	def tearDown(self):
-		self.renombrarArchivos()
 		self.driver.close()
 		registroEjec.close()
 
