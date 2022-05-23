@@ -38,13 +38,20 @@ class usando_unittest(unittest.TestCase):
 			list_of_files = glob.glob(rutaDatos)
 			file_oldname = max(list_of_files, key=os.path.getctime)
 			file_oldnameAux = file_oldname.replace(f"{ubDatos}\\","")
-			file_newname_newfile = f"{ubDatos}\{gestion}_{mesesGestion.index(mes)+1}_{nomEntidades[idxEnt]}_Seccion_{seccionesDesc[idxSecDesc]}_{file_oldnameAux}_{numArchivo}.zip"		
+
+			if int(mes)<10:
+				mes = f"0{mes}"
+			if int(numArchivo)<10:
+				numArchivo = f"0{numArchivo}"
+
+			file_newname_newfile = f"{ubDatos}\{gestion}_{mesesGestion.index(mes)+1}_{nomEntidades[idxEnt]}_Seccion_{seccionesDesc[idxSecDesc]}_{numArchivo}_{file_oldnameAux}.zip"	
 			os.rename(file_oldname, file_newname_newfile)
 
 			latest_file = file_newname_newfile
 			latest_file = latest_file.replace(f"{ubDatos}\\","")
 			registroEjec.write("\n" + latest_file)
 			print(latest_file)
+			
 		except Exception:
 			time.sleep(5)
 			self.renombrarArchivo(idxEnt=idxEnt, idxSecDesc=idxSecDesc, numArchivo=numArchivo, gestion=gestion, mes=mes)
