@@ -7,10 +7,12 @@ import time
 import glob
 import os
 
-mesesGestion = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
-urlEntidades = ["https://www.asfi.gob.bo/index.php/bancos-multiples-boletines.html", "https://www.asfi.gob.bo/index.php/bancos-pyme-boletines.html", "https://www.asfi.gob.bo/index.php/entidades-financieras-de-vivienda.html", "https://www.asfi.gob.bo/index.php/cooperativas-de-ahorro-y-credito-abiertas.html", "https://www.asfi.gob.bo/index.php/instituciones-financieras-de-desarrollo.html", "https://www.asfi.gob.bo/index.php/banco-de-desarrollo-productivo.html"]
+mesesGestion = ["Enero"]
+urlEntidades = ["https://www.asfi.gob.bo/index.php/bancos-multiples-boletines.html"]
 nomEntidades = ["BancosMultiples","BancosPyme","EntidadesFinancierasVivienda","CooperativasDeAhorroAbiertas","InstitucionesFininacierasDesarrollo","BancosDesarrolloProductivo"]
 seccionesDesc = ["EstadosFinancieros","IndicadoresFinancieros","Captaciones","Colocaciones","OperacionesInterbancarias","EstadosFinancierosEvolutivos","IndicadoresEvolutivos","EstadosFinancerosDesagregados","AgenciasSucursalesNumEmpleados"]
+nombresAnt = []
+nombresNew = []
 SEPARADOR = "#################################################################################"
 print("¿Que gestion vamos a descargar?")
 gestionDescargar = input()
@@ -33,29 +35,32 @@ class usando_unittest(unittest.TestCase):
 		})
 		self.driver = webdriver.Chrome(executable_path=r"%s" %ubDrive, chrome_options=chromeOptions)
 
-	def renombrarArchivo(self, idxEnt, idxSecDesc, numArchivo, gestion, mes):
-		try:
-			list_of_files = glob.glob(rutaDatos)
-			file_oldname = max(list_of_files, key=os.path.getctime)
-			file_oldnameAux = file_oldname.replace(f"{ubDatos}\\","")
+	def recolectaNombres(self, idxEnt, idxSecDesc, numArchivo, gestion, mes):
+		list_of_files = glob.glob(rutaDatos)
+		file_oldname = max(list_of_files, key=os.path.getctime)
+		file_oldnameAux = file_oldname.replace(f"{ubDatos}\\","")
 
-			if int(mes)<10:
-				mes = f"0{mes}"
-			if int(numArchivo)<10:
-				numArchivo = f"0{numArchivo}"
+		if int(mesesGestion.index(mes)+1)<10:
+			mesAux = f"0{mesesGestion.index(mes)+1}"
+		else:
+			mesAux = f"{mesesGestion.index(mes)+1}"
+		if int(numArchivo)<10:
+			numArchivoAux = f"0{numArchivo}"
+		else:
+			numArchivoAux = f"{numArchivo}"
+		
+		file_newname_newfile = f"{ubDatos}\{gestion}_{str(mesAux)}_{nomEntidades[idxEnt]}_Seccion_{seccionesDesc[idxSecDesc]}_{str(numArchivoAux)}_{file_oldnameAux}"
+		nombresAnt.append(file_oldname)
+		nombresNew.append(file_newname_newfile)
 
-			file_newname_newfile = f"{ubDatos}\{gestion}_{mesesGestion.index(mes)+1}_{nomEntidades[idxEnt]}_Seccion_{seccionesDesc[idxSecDesc]}_{numArchivo}_{file_oldnameAux}.zip"	
-			os.rename(file_oldname, file_newname_newfile)
-
-			latest_file = file_newname_newfile
-			latest_file = latest_file.replace(f"{ubDatos}\\","")
-			registroEjec.write("\n" + latest_file)
-			print(latest_file)
-			
-		except Exception:
-			time.sleep(5)
-			self.renombrarArchivo(idxEnt=idxEnt, idxSecDesc=idxSecDesc, numArchivo=numArchivo, gestion=gestion, mes=mes)
-
+	def renombrarArchivos(self):
+		time.sleep(20)
+		for ind, nombreNuevo in enumerate(nombresNew):
+			os.rename(nombresAnt[int(ind)], nombreNuevo)
+			registroEjec.write("\n" + nombreNuevo)
+			print(nombreNuevo)
+		nombresAnt.clear()
+		nombresNew.clear()
 
 	def	descagar(self, In, Fn, Stp, Secciones, Gestion, urlEnt):
 		Fn = Fn + 1
@@ -91,9 +96,8 @@ class usando_unittest(unittest.TestCase):
 						estFin = driver.find_element_by_xpath(xpahtDesc)
 						estFin.click()
 						time.sleep(3)
-
 						idEntidad = int(urlEntidades.index(urlEnt))
-						self.renombrarArchivo(idxEnt=idEntidad, idxSecDesc=Seccion-1, numArchivo=str(a), gestion=str(Gestion), mes=str(Mes))
+						self.recolectaNombres(idxEnt=idEntidad, idxSecDesc=Seccion-1, numArchivo=str(a), gestion=str(Gestion), mes=str(Mes))
 					
 					except exceptions.NoSuchElementException:
 						pass
@@ -126,6 +130,7 @@ class usando_unittest(unittest.TestCase):
 				self.descagar(In=1, Fn=40, Stp=1, Secciones=9, Gestion=j, urlEnt=urlEnt)
 							
 	def tearDown(self):
+		self.renombrarArchivos()
 		self.driver.close()
 		registroEjec.close()
 
