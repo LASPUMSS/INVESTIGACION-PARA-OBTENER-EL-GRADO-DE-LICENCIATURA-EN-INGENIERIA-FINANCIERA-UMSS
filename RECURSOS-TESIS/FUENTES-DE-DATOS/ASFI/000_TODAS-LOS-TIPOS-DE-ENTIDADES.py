@@ -7,8 +7,8 @@ import time
 import glob
 import os
 
-mesesGestion = ["Enero"]
-urlEntidades = ["https://www.asfi.gob.bo/index.php/bancos-multiples-boletines.html"]
+mesesGestion = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+urlEntidades = ["https://www.asfi.gob.bo/index.php/bancos-multiples-boletines.html", "https://www.asfi.gob.bo/index.php/bancos-pyme-boletines.html", "https://www.asfi.gob.bo/index.php/entidades-financieras-de-vivienda.html", "https://www.asfi.gob.bo/index.php/cooperativas-de-ahorro-y-credito-abiertas.html", "https://www.asfi.gob.bo/index.php/instituciones-financieras-de-desarrollo.html", "https://www.asfi.gob.bo/index.php/banco-de-desarrollo-productivo.html"]
 nomEntidades = ["BancosMultiples","BancosPyme","EntidadesFinancierasVivienda","CooperativasDeAhorroAbiertas","InstitucionesFininacierasDesarrollo","BancosDesarrolloProductivo"]
 seccionesDesc = ["EstadosFinancieros","IndicadoresFinancieros","Captaciones","Colocaciones","OperacionesInterbancarias","EstadosFinancierosEvolutivos","IndicadoresEvolutivos","EstadosFinancerosDesagregados","AgenciasSucursalesNumEmpleados"]
 nombresAnt = []
@@ -17,7 +17,7 @@ SEPARADOR = "###################################################################
 print("¿Que gestion vamos a descargar?")
 gestionDescargar = input()
 directorio = os.getcwd()
-registroEjec = open(f"{directorio}/DATOS/registroEjecucion{gestionDescargar}.txt", "w")
+registroEjec = open(f"{directorio}/DATOS/REGISTROS_DESCARGAS/registroEjecucion{gestionDescargar}.txt", "w")
 registroEjec.write("REGISTRO DE EJECUCION")
 print("REGISTRO DE EJECUCION")
 ubDrive = f"{directorio}\chromedriver.exe"
@@ -73,7 +73,6 @@ class usando_unittest(unittest.TestCase):
 		time.sleep(3)
 
 		for Mes in mesesGestion:
-
 			gestion = driver.find_element_by_name("Anio")
 			dropdown01 = Select(gestion)
 			dropdown01.select_by_visible_text(str(Gestion))
@@ -108,7 +107,6 @@ class usando_unittest(unittest.TestCase):
 		gestionFn = gestionFn + 1
 
 		for urlEnt in urlEntidades:
-			
 			print(SEPARADOR)
 			print(urlEnt)
 			print(SEPARADOR)
