@@ -1,5 +1,3 @@
-from re import M
-from xml.dom.minidom import Identified
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.select import Select
@@ -22,6 +20,7 @@ registroEjec.write("REGISTRO DE EJECUCION")
 print("REGISTRO DE EJECUCION")
 ubDrive = f"{directorio}\chromedriver.exe"
 ubDatos = f"{directorio}\DATOS\DATOS_ENTIDADES_ASFI_{gestionDescargar}"
+rutaDatos = f"{ubDatos}\*.zip"
 print(ubDrive)
 time.sleep(10)
 
@@ -34,19 +33,22 @@ class usando_unittest(unittest.TestCase):
 		})
 		self.driver = webdriver.Chrome(executable_path=r"%s" %ubDrive, chrome_options=chromeOptions)
 
-	def ultimoArchivo(self):
-		list_of_files = glob.glob(f"{ubDatos}\*.zip") 
-		latest_file = max(list_of_files, key=os.path.getctime)
-		latest_file = latest_file.replace(f"{ubDatos}\\","")
-		return latest_file
-	
 	def renombrarArchivo(self, idxEnt, idxSecDesc, numArchivo, gestion, mes):
-		time.sleep(5)
-		list_of_files = glob.glob(f"{ubDatos}\*.zip")
-		latest_file = max(list_of_files, key=os.path.getctime)
-		file_oldname = latest_file
-		file_newname_newfile = f"{ubDatos}\{gestion}_{mesesGestion.index(mes)+1}_{nomEntidades[idxEnt]}_Seccion_{seccionesDesc[idxSecDesc]}_{numArchivo}.zip"
-		os.rename(file_oldname, file_newname_newfile)
+		try:
+			list_of_files = glob.glob(rutaDatos)
+			file_oldname = max(list_of_files, key=os.path.getctime)
+			file_oldnameAux = file_oldname.replace(f"{ubDatos}\\","")
+			file_newname_newfile = f"{ubDatos}\{gestion}_{mesesGestion.index(mes)+1}_{nomEntidades[idxEnt]}_Seccion_{seccionesDesc[idxSecDesc]}_{file_oldnameAux}_{numArchivo}.zip"		
+			os.rename(file_oldname, file_newname_newfile)
+
+			latest_file = file_newname_newfile
+			latest_file = latest_file.replace(f"{ubDatos}\\","")
+			registroEjec.write("\n" + latest_file)
+			print(latest_file)
+		except Exception:
+			time.sleep(5)
+			self.renombrarArchivo(idxEnt=idxEnt, idxSecDesc=idxSecDesc, numArchivo=numArchivo, gestion=gestion, mes=mes)
+
 
 	def	descagar(self, In, Fn, Stp, Secciones, Gestion, urlEnt):
 		Fn = Fn + 1
@@ -81,12 +83,10 @@ class usando_unittest(unittest.TestCase):
 						xpahtDesc = "/html/body/table/tbody/tr/td/table/tbody/tr[1]/td/table[" + str(Seccion) + "]/tbody/tr/td[2]/table/tbody/tr/td[2]/a[" + str(a) + "]"
 						estFin = driver.find_element_by_xpath(xpahtDesc)
 						estFin.click()
-						time.sleep(5)
+						time.sleep(3)
 
 						idEntidad = int(urlEntidades.index(urlEnt))
 						self.renombrarArchivo(idxEnt=idEntidad, idxSecDesc=Seccion-1, numArchivo=str(a), gestion=str(Gestion), mes=str(Mes))
-						registroEjec.write("\n" + self.ultimoArchivo())
-						print(self.ultimoArchivo())
 					
 					except exceptions.NoSuchElementException:
 						pass
