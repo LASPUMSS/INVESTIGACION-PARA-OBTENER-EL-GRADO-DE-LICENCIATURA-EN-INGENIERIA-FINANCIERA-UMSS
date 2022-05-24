@@ -7,8 +7,8 @@ import time
 import glob
 import os
 
-mesesGestion = ["Enero"]
-urlEntidades = ["https://www.asfi.gob.bo/index.php/bancos-multiples-boletines.html"]
+mesesGestion = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+urlEntidades = ["https://www.asfi.gob.bo/index.php/bancos-multiples-boletines.html", "https://www.asfi.gob.bo/index.php/bancos-pyme-boletines.html", "https://www.asfi.gob.bo/index.php/entidades-financieras-de-vivienda.html", "https://www.asfi.gob.bo/index.php/cooperativas-de-ahorro-y-credito-abiertas.html", "https://www.asfi.gob.bo/index.php/instituciones-financieras-de-desarrollo.html", "https://www.asfi.gob.bo/index.php/banco-de-desarrollo-productivo.html"]
 nomEntidades = ["BancosMultiples","BancosPyme","EntidadesFinancierasVivienda","CooperativasDeAhorroAbiertas","InstitucionesFininacierasDesarrollo","BancosDesarrolloProductivo"]
 seccionesDesc = ["EstadosFinancieros","IndicadoresFinancieros","Captaciones","Colocaciones","OperacionesInterbancarias","EstadosFinancierosEvolutivos","IndicadoresEvolutivos","EstadosFinancerosDesagregados","AgenciasSucursalesNumEmpleados"]
 SEPARADOR = "#################################################################################"
@@ -78,7 +78,7 @@ class usando_unittest(unittest.TestCase):
 			dropdown01 = Select(gestion)
 			dropdown01.select_by_visible_text(str(Gestion))
 			time.sleep(2)
-			
+
 			registroEjec.write("\n" + Gestion)
 			registroEjec.write("\n" + Mes)
 			print(Gestion)
