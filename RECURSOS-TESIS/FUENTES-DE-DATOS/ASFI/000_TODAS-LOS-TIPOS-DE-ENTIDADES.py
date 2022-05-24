@@ -7,14 +7,16 @@ import time
 import glob
 import os
 
-mesesGestion = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
-urlEntidades = ["https://www.asfi.gob.bo/index.php/bancos-multiples-boletines.html", "https://www.asfi.gob.bo/index.php/bancos-pyme-boletines.html", "https://www.asfi.gob.bo/index.php/entidades-financieras-de-vivienda.html", "https://www.asfi.gob.bo/index.php/cooperativas-de-ahorro-y-credito-abiertas.html", "https://www.asfi.gob.bo/index.php/instituciones-financieras-de-desarrollo.html", "https://www.asfi.gob.bo/index.php/banco-de-desarrollo-productivo.html"]
+mesesGestion = ["Enero"]
+urlEntidades = ["https://www.asfi.gob.bo/index.php/bancos-multiples-boletines.html"]
 nomEntidades = ["BancosMultiples","BancosPyme","EntidadesFinancierasVivienda","CooperativasDeAhorroAbiertas","InstitucionesFininacierasDesarrollo","BancosDesarrolloProductivo"]
 seccionesDesc = ["EstadosFinancieros","IndicadoresFinancieros","Captaciones","Colocaciones","OperacionesInterbancarias","EstadosFinancierosEvolutivos","IndicadoresEvolutivos","EstadosFinancerosDesagregados","AgenciasSucursalesNumEmpleados"]
 SEPARADOR = "#################################################################################"
 print("¿Que gestion vamos a descargar?")
 gestionDescargar = input()
 directorio = os.getcwd()
+registroEjec = open(f"{directorio}/DATOS/REGISTROS_DESCARGAS/registroEjecucion{gestionDescargar}.txt", "w")
+registroEjec.write("REGISTRO DE EJECUCION")
 print("REGISTRO DE EJECUCION")
 ubDrive = f"{directorio}\chromedriver.exe"
 ubDatos = f"{directorio}\DATOS\DATOS_ENTIDADES_ASFI_{gestionDescargar}"
@@ -30,6 +32,36 @@ class usando_unittest(unittest.TestCase):
    		"download.default_directory" : ubDatos,
 		})
 		self.driver = webdriver.Chrome(executable_path=r"%s" %ubDrive, chrome_options=chromeOptions)
+
+	def renombrarArchivo(self, idxEnt, idxSecDesc, numArchivo, gestion, mes):
+		seRenombro = False
+		while not seRenombro:
+			try:
+				list_of_files = glob.glob(rutaDatos)
+				file_oldname = max(list_of_files, key=os.path.getctime)
+				file_oldnameAux = file_oldname.replace(f"{ubDatos}\\","")
+
+				if (int(mesesGestion.index(mes))+1)<10:
+					mesAux = f"0{int(mesesGestion.index(mes))+1}"
+				else:
+					mesAux = f"{int(mesesGestion.index(mes))+1}"
+
+				if int(numArchivo)<10:
+					numArchivoAux = f"0{numArchivo}"
+				else:
+					numArchivoAux = numArchivo
+
+				file_newname_newfile = f"{ubDatos}\{gestion}_{mesAux}_{nomEntidades[idxEnt]}_Seccion_{seccionesDesc[idxSecDesc]}_{numArchivoAux}_{file_oldnameAux}"	
+				os.rename(file_oldname, file_newname_newfile)
+
+				latest_file = file_newname_newfile
+				latest_file = latest_file.replace(f"{ubDatos}\\","")
+				registroEjec.write("\n" + latest_file)
+				print(latest_file)
+				seRenombro = True
+				
+			except IOError:
+				time.sleep(10)
 
 	def	descagar(self, In, Fn, Stp, Secciones, Gestion, urlEnt):
 		Fn = Fn + 1
