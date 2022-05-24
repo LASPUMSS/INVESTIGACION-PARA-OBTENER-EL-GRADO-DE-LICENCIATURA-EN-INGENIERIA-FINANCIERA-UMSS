@@ -78,6 +78,10 @@ class usando_unittest(unittest.TestCase):
 			dropdown01 = Select(gestion)
 			dropdown01.select_by_visible_text(str(Gestion))
 			time.sleep(2)
+			
+			registroEjec.write("\n" + Gestion)
+			registroEjec.write("\n" + Mes)
+			print(Gestion)
 			print(Mes)
 
 			mes = driver.find_element_by_name("Mes")
@@ -97,7 +101,10 @@ class usando_unittest(unittest.TestCase):
 						estFin = driver.find_element_by_xpath(xpahtDesc)
 						estFin.click()
 						time.sleep(3)
+						
+						self.renombrarArchivo(idxEnt=urlEntidades.index(urlEnt), idxSecDesc=Seccion-1, numArchivo= a, gestion=Gestion, mes=Mes)
 						print(xpahtDesc)
+						registroEjec.write("\n" + xpahtDesc)
 
 					except exceptions.NoSuchElementException:
 						pass
@@ -111,7 +118,10 @@ class usando_unittest(unittest.TestCase):
 			print(SEPARADOR)
 			print(urlEnt)
 			print(SEPARADOR)
-
+			registroEjec.write(SEPARADOR)
+			registroEjec.write(urlEnt)
+			registroEjec.write(SEPARADOR)
+			
 			for j in range(gestionInc, gestionFn, 1):
 
 				# DESCARGAR LOS ESTADOS FINANCIEROS POR BANCOS Y POR MONEDAS - SECCION 01
@@ -126,6 +136,7 @@ class usando_unittest(unittest.TestCase):
 				self.descagar(In=1, Fn=40, Stp=1, Secciones=9, Gestion=j, urlEnt=urlEnt)
 							
 	def tearDown(self):
+		registroEjec.close()
 		self.driver.close()
 
 if __name__ == '__main__':
