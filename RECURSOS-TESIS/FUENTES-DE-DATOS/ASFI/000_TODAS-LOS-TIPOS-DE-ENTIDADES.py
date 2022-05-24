@@ -1,3 +1,4 @@
+from fileinput import filename
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.select import Select
@@ -12,14 +13,12 @@ urlEntidades = ["https://www.asfi.gob.bo/index.php/bancos-multiples-boletines.ht
 nomEntidades = ["BancosMultiples","BancosPyme","EntidadesFinancierasVivienda","CooperativasDeAhorroAbiertas","InstitucionesFininacierasDesarrollo","BancosDesarrolloProductivo"]
 seccionesDesc = ["EstadosFinancieros","IndicadoresFinancieros","Captaciones","Colocaciones","OperacionesInterbancarias","EstadosFinancierosEvolutivos","IndicadoresEvolutivos","EstadosFinancerosDesagregados","AgenciasSucursalesNumEmpleados"]
 SEPARADOR = "#################################################################################"
-print("¿Que gestion vamos a descargar?")
-gestionDescargar = input()
 directorio = os.getcwd()
-registroEjec = open(f"{directorio}/DATOS/REGISTROS_DESCARGAS/registroEjecucion{gestionDescargar}.txt", "w")
-registroEjec.write("REGISTRO DE EJECUCION")
+print(SEPARADOR)
 print("REGISTRO DE EJECUCION")
+print(SEPARADOR)
 ubDrive = f"{directorio}\chromedriver.exe"
-ubDatos = f"{directorio}\DATOS\DATOS_ENTIDADES_ASFI_{gestionDescargar}"
+ubDatos = f"{directorio}\DATOS"
 rutaDatos = f"{ubDatos}\*.zip"
 print(ubDrive)
 time.sleep(10)
@@ -33,13 +32,28 @@ class usando_unittest(unittest.TestCase):
 		})
 		self.driver = webdriver.Chrome(executable_path=r"%s" %ubDrive, chrome_options=chromeOptions)
 
-	def renombrarArchivo(self, idxEnt, idxSecDesc, numArchivo, gestion, mes):
+	def verificarArchvioExiste(self, idxEnt, idxSecDesc, numArchivo, gestion, mes, name):
+
+		if (int(mesesGestion.index(mes))+1)<10:
+			mesAux = f"0{int(mesesGestion.index(mes))+1}"
+		else:
+			mesAux = f"{int(mesesGestion.index(mes))+1}"
+
+		if int(numArchivo)<10:
+			numArchivoAux = f"0{numArchivo}"
+		else:
+			numArchivoAux = numArchivo
+
+		file_name = f"{ubDatos}\{str(gestion)}_{mesAux}_{nomEntidades[idxEnt]}_Seccion_{seccionesDesc[idxSecDesc]}_{numArchivoAux}_{name}"	
+		
+		return os.path.exists(file_name)
+
+	def renombrarArchivo(self, idxEnt, idxSecDesc, numArchivo, gestion, mes, name):
 		seRenombro = False
 		while not seRenombro:
 			try:
 				list_of_files = glob.glob(rutaDatos)
 				file_oldname = max(list_of_files, key=os.path.getctime)
-				file_oldnameAux = file_oldname.replace(f"{ubDatos}\\","")
 
 				if (int(mesesGestion.index(mes))+1)<10:
 					mesAux = f"0{int(mesesGestion.index(mes))+1}"
@@ -51,17 +65,16 @@ class usando_unittest(unittest.TestCase):
 				else:
 					numArchivoAux = numArchivo
 
-				file_newname_newfile = f"{ubDatos}\{gestion}_{mesAux}_{nomEntidades[idxEnt]}_Seccion_{seccionesDesc[idxSecDesc]}_{numArchivoAux}_{file_oldnameAux}"	
+				file_newname_newfile = f"{ubDatos}\{str(gestion)}_{mesAux}_{nomEntidades[idxEnt]}_Seccion_{seccionesDesc[idxSecDesc]}_{numArchivoAux}_{name}"	
 				os.rename(file_oldname, file_newname_newfile)
 
 				latest_file = file_newname_newfile
 				latest_file = latest_file.replace(f"{ubDatos}\\","")
-				registroEjec.write("\n" + latest_file)
 				print(latest_file)
 				seRenombro = True
 				
 			except IOError:
-				time.sleep(10)
+				time.sleep(5)
 
 	def	descagar(self, In, Fn, Stp, Secciones, Gestion, urlEnt):
 		Fn = Fn + 1
@@ -79,9 +92,7 @@ class usando_unittest(unittest.TestCase):
 			dropdown01.select_by_visible_text(str(Gestion))
 			time.sleep(2)
 
-			registroEjec.write("\n" + Gestion)
-			registroEjec.write("\n" + Mes)
-			print(Gestion)
+			print(str(Gestion))
 			print(Mes)
 
 			mes = driver.find_element_by_name("Mes")
@@ -93,34 +104,38 @@ class usando_unittest(unittest.TestCase):
 			btnAceptar.click()
 			time.sleep(3)
 
+			if (int(mesesGestion.index(Mes))+1)<10:
+				mesAux = f"0{int(mesesGestion.index(Mes))+1}"
+			else:
+				mesAux = f"{int(mesesGestion.index(Mes))+1}"
+
 			for Seccion in range(1,Secciones,1):
 
 				for a in range(In,Fn,Stp):
 					try:
 						xpahtDesc = "/html/body/table/tbody/tr/td/table/tbody/tr[1]/td/table[" + str(Seccion) + "]/tbody/tr/td[2]/table/tbody/tr/td[2]/a[" + str(a) + "]"
 						estFin = driver.find_element_by_xpath(xpahtDesc)
-						estFin.click()
-						time.sleep(3)
-						
-						self.renombrarArchivo(idxEnt=urlEntidades.index(urlEnt), idxSecDesc=Seccion-1, numArchivo= a, gestion=Gestion, mes=Mes)
-						print(xpahtDesc)
-						registroEjec.write("\n" + xpahtDesc)
+						nombreArchivo = str(estFin.get_attribute("href")).replace("https://appweb.asfi.gob.bo/boletines_if","")
+						nombreArchivo = nombreArchivo.replace(f"/{Gestion}/{mesAux}/","")
+
+						verificarArch = self.verificarArchvioExiste(idxEnt=urlEntidades.index(urlEnt), idxSecDesc=Seccion-1, numArchivo= a, gestion=Gestion, mes=Mes, name=nombreArchivo)
+						if not verificarArch:
+							estFin.click()
+							time.sleep(5)
+							self.renombrarArchivo(idxEnt=urlEntidades.index(urlEnt), idxSecDesc=Seccion-1, numArchivo= a, gestion=Gestion, mes=Mes, name=nombreArchivo)
+							print(xpahtDesc)
 
 					except exceptions.NoSuchElementException:
 						pass
 
 	def test_usando_toggle(self):
-		gestionInc = int(gestionDescargar)
-		gestionFn = gestionInc
-		gestionFn = gestionFn + 1
+		gestionInc = 2014
+		gestionFn = 2020 + 1
 
 		for urlEnt in urlEntidades:
 			print(SEPARADOR)
 			print(urlEnt)
 			print(SEPARADOR)
-			registroEjec.write(SEPARADOR)
-			registroEjec.write(urlEnt)
-			registroEjec.write(SEPARADOR)
 			
 			for j in range(gestionInc, gestionFn, 1):
 
@@ -136,7 +151,6 @@ class usando_unittest(unittest.TestCase):
 				self.descagar(In=1, Fn=40, Stp=1, Secciones=9, Gestion=j, urlEnt=urlEnt)
 							
 	def tearDown(self):
-		registroEjec.close()
 		self.driver.close()
 
 if __name__ == '__main__':
