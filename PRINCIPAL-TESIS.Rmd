@@ -2,7 +2,7 @@
 output: 
     pdf_document:
         includes:
-            in_header: styles002.sty
+            in_header: styles001.sty
 fontsize: 12pt
 ---
 
@@ -19,18 +19,47 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 \newpage
-## Índice de contenido
 \tableofcontents
 
 <!-- ANTECEDENTES -->
 \newpage
-```{r, child="RECURSOS-TESIS/002-ANTECEDENTES/002-ANTECEDENTES.Rmd"}
+```{r, child="RECURSOS-TESIS/001-ANTECEDENTES/001-ANTECEDENTES.Rmd"}
 
 ```
 
+<!-- DIAGNOSTICO -->
+\newpage
+```{r, child="RECURSOS-TESIS/002-DIAGNOSTICO/002-DIAGNOSTICO.Rmd"}
 
+```
 
+<!-- MARCO TEORICO -->
+\newpage
+```{r, child="RECURSOS-TESIS/003-MARCO-TEORICO/003-MARCO-TEORICO.Rmd"}
 
+```
 
+<!-- REDES NEURONALES ARTIFICIALES -->
+\newpage
+```{r, child="RECURSOS-TESIS/004-REDES-NEURONALES/004-REDES-NEURONALES.Rmd"}
 
+```
+
+<!-- SIMULACION -->
+\newpage
+```{r, child="RECURSOS-TESIS/005-SIMULACION/005-SIMULACION.Rmd"}
+
+```
+
+<!-- CONCLUSIONES Y RECOMENDACIONES -->
+\newpage
+```{r, child="RECURSOS-TESIS/006-CONCLUSIONES-RECOMENDACIONES/006-CONCLUSIONES-RECOMENDACIONES.Rmd"}
+
+```
+
+<!-- ELEMENTOS FINALES -->
+\newpage
+```{r, child="RECURSOS-TESIS/999-ELEMENTOS-FINALES/999-ELEMENTOS-FINALES.Rmd"}
+
+```
 
