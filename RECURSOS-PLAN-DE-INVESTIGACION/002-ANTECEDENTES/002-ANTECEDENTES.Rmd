@@ -4,12 +4,12 @@ output: pdf_document
 
 **Tema de investigación: Finanzas**
 \newline
-**Tema genérico: Valoración de acciones ordinarias.**
+**Tema genérico: Proyección de estados financieros.**
 \newline
-**Tema específico: Valoración de acciones ordinarias que oferta el mercado financiero internacional por el método de flujos descontados.**
+**Tema específico: Proyección de estados financieros por el método de redes neuronales artificiales.**
 \newline
 \newline
-**VALORACION DE ACCIONES ORDINARIAS QUE OFERTA EL MERCADO FINANCIERO NASDAQ POR EL METODO DE FLUJOS DESCONTADOS**
+**PROYECCION DE ESTADOS FINANCIEROS POR EL MEDOTO DE REDES NEURONALES**
 
 # Antecedentes
 El campo de la inteligencia artificial es relativamente reciente, y cobra atención en la actualidad por su capacidad de resolver problemas que con anterioridad sus resultados se divisaban lejanos, como el procesamientos de lenguaje natural, generandor de imagenes bajo requerimiento, clasificación de objetos, etc.

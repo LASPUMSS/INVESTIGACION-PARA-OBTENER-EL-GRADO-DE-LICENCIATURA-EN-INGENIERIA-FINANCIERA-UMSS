@@ -5,3 +5,10 @@ output: pdf_document
 # Objetivos de la investigación
 
 
+## General
+
+
+## Especifico
+
+
+

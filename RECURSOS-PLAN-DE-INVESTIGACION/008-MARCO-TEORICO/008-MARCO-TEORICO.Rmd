@@ -4,3 +4,34 @@ output: pdf_document
 
 # Marco teorico
 
+
+## Sistema financiero
+
+
+## Pronosticos
+
+
+## Simulación
+
+
+## Inteligencia artificial
+
+
+### Aprendizaje supervisado
+
+
+### Aprendizaje no supervisado
+
+
+## Aprendizaje automatico
+
+
+## Decenso del gradiente
+
+
+## Arquitectura de la red
+
+
+## Overfitting o sobreajuste
+
+

@@ -10,14 +10,22 @@ output:
 
 cronograma <- data.frame(
   "Actividad" = c("Revisión de fuentes bibliográficas.", 
-                  "Recopilación de la información necesaria de la unidad de observación.", 
+                  "Recopilación de la información necesaria de la unidad de observación.",
                   "Estructuración de la información recopilada para la redacción del informe final.", 
-                  "Aplicación de método de valoración de acciones por flujos descontados."), 
+                  "Aplicación de método de valoración de acciones por flujos descontados.",
+                  "Descripción de los resultados obtenidos como respuesta a los objetivos planteados.",
+                  "Interpretación de las conclusiones y recomendaciones.",
+                  "Presentación, revisión, aprobación, exposición y defensa del informe final."), 
   "Duración" = c("4", 
                  "3", 
                  "5",
-                 "4")
+                 "4",
+                 "3",
+                 "2",
+                 "6")
 )
+
+names(cronograma) <- c("Descripcion de la actividad", "Duración en semanas")
 
 cronograma
 
