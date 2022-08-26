@@ -14,6 +14,12 @@ output: pdf_document
 # Antecedentes
 El campo de la inteligencia artificial es relativamente reciente, y cobra atención en la actualidad por su capacidad de resolver problemas que con anterioridad sus resultados se divisaban lejanos, como el procesamientos de lenguaje natural, generandor de imagenes bajo requerimiento, clasificación de objetos, etc.
 
+La primera piedra angular sobre la se baso lo que hoy se conoce como inteligencia artificial se dio en 1943, de la mano de Warren McCulloch y Walter Pitts, con su presentación del primer modelo matemático de inteligencia artificial, donde por primera vez se dota a un modelo autonomo la capacidad de aprendizaje.
+
+Una de las primera aplicaciones que este modelo dio a este, fue de la mando de Marvin Minsky en 1951 quien pudo modelar con extio el comportamiento de una rata para obtener comidad. 
+
+Pero solo 1957, Frank Rosenblatt puedo generalizar las ideas propuesta por Warren McCulloch y Walter Pitts, a dicho modelo lo denomino PERCEPTRON.
+
 - generación de sistemas inteligentes.
 - que nos hace espciales a los seres humanos.
 - que nos distigue de los otros animales.
@@ -25,3 +31,14 @@ El campo de la inteligencia artificial es relativamente reciente, y cobra atenci
 - Enfoque centrado en la racionalidad.
 - El enfoque de la prueba de Turing.
 - 
+
+
+## La decada de los 40 y 50
+
+
+## La decada de los 60
+
+
+## La decada de los 70 y 80
+
+

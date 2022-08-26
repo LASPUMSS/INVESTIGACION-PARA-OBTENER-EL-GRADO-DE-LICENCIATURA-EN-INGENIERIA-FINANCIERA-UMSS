@@ -17,11 +17,9 @@ output: pdf_document
 ## Inteligencia artificial
 
 
-### Aprendizaje supervisado
-
-
 ### Aprendizaje no supervisado
 
+### Aprendizaje supervisado
 
 ## Aprendizaje automatico
 
@@ -33,5 +31,15 @@ output: pdf_document
 
 
 ## Overfitting o sobreajuste
+
+## Redes neuronales artificiales
+
+### La células McCulloch-Pitts
+
+### Perceptron
+
+### Adeline
+
+### Perceptron multicapa
 
 

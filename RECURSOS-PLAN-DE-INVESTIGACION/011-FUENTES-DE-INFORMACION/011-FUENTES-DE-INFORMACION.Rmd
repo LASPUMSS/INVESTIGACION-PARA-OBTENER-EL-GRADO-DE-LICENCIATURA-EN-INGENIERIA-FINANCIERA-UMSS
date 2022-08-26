@@ -3,13 +3,26 @@ output: pdf_document
 ---
 
 # Fuentes de información
-
+Se recurrira a las fuentes de información siguientes:
 
 ## Fuentes primarias
-
+Se recurrirá a la investigación y recopilación de datos relacionados al tema específico, mediante
+consultas a libros, revistas, textos digitales, apuntes de clases y otras de información histórica.
 
 ## Fuentes secundarias
+Se recurrirá a las fuentes de compilación de información bibliográfica referente al tema, tales como: 
 
+- libros especializados. 
+- leyes. 
+- normas. 
+- resoluciones. 
+- glosarios. 
+- páginas de Internet.
 
 ## Tecnica de recolección de la información
+
+- Recopilación de información basada en fuentes primarias, secundarias y terciarias.
+- Análisis de la información recopilada, con fines de depuración, selección, tabulación y
+adecuación para arquitectura de la red neuronal.
+
 
