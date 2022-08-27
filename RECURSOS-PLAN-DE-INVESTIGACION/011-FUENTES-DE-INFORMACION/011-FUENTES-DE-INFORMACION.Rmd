@@ -22,7 +22,6 @@ Se recurrirá a las fuentes de compilación de información bibliográfica refer
 ## Tecnica de recolección de la información
 
 - Recopilación de información basada en fuentes primarias, secundarias y terciarias.
-- Análisis de la información recopilada, con fines de depuración, selección, tabulación
-mediante lenguajes de programación R y Python orientado al análisis de datos para la adecuación a la arquitectura de la red neuronal.
+- Análisis de la información recopilada, con fines de depuración, selección, tabulación mediante lenguajes de programación R y Python orientado al análisis de datos, adecuando a la arquitectura de la red neuronal.
 
 
