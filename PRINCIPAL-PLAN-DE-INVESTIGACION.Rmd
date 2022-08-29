@@ -4,6 +4,8 @@ output:
         includes:
             in_header: styles001.sty
         df_print: kable
+bibliography: references.bib 
+nocite: '@*'
 fontsize: 12pt
 ---
 

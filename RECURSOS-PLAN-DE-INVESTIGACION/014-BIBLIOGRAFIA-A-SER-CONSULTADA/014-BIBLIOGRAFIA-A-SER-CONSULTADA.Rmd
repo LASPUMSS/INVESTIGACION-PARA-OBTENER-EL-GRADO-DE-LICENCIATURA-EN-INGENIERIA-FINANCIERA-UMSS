@@ -1,5 +1,6 @@
 ---
-output: pdf_document
+output: html_document
+bibliography: references.bib 
 ---
 
 # Bibliografia a ser consultada

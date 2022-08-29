@@ -20,18 +20,6 @@ Una de las primera aplicaciones que este modelo dio a este, fue de la mando de M
 
 Pero solo 1957, Frank Rosenblatt puedo generalizar las ideas propuesta por Warren McCulloch y Walter Pitts, a dicho modelo lo denomino PERCEPTRON.
 
-- generación de sistemas inteligentes.
-- que nos hace espciales a los seres humanos.
-- que nos distigue de los otros animales.
-- Inteligencia artificial simbolica.
-- Inteligencia artificial sub simbolica.
-- Capacidad de resolver problemas no lineales.
-- Que es un comportamiento inteligente.
-- Enfoque centrado en el comportamiento humano.
-- Enfoque centrado en la racionalidad.
-- El enfoque de la prueba de Turing.
-- 
-
 
 ## La decada de los 40 y 50
 
