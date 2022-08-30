@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 \includepdf[pages=-]{RECURSOS-PLAN-DE-INVESTIGACION/CARATULA-PLAN-DE-INVESTIGACION}
 
+\setcounter{tocdepth}{2}
 \tableofcontents
 
 <!--ANTECEDENTES-->

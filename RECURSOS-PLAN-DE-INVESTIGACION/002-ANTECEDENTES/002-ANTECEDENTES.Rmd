@@ -14,19 +14,23 @@ output: pdf_document
 # Antecedentes
 El campo de la inteligencia artificial es relativamente reciente, y cobra atención en la actualidad por su capacidad de resolver problemas que con anterioridad sus resultados se divisaban lejanos, como el procesamientos de lenguaje natural, generandor de imagenes bajo requerimiento, clasificación de objetos, etc.
 
-La primera piedra angular sobre la se baso lo que hoy se conoce como inteligencia artificial se dio en 1943, de la mano de Warren McCulloch y Walter Pitts, con su presentación del primer modelo matemático de inteligencia artificial, donde por primera vez se dota a un modelo autonomo la capacidad de aprendizaje.
+En sus inicios, la primera piedra angular sobre la que se baso lo que hoy se conoce como inteligencia artificial se dio en 1943, de la mano de Warren McCulloch y Walter Pitts, con su presentación del primer modelo matemático de inteligencia artificial, donde por primera vez se dota a un modelo autonomo la capacidad de aprendizaje.
 
 Una de las primera aplicaciones que este modelo dio a este, fue de la mando de Marvin Minsky en 1951 quien pudo modelar con extio el comportamiento de una rata para obtener comidad. 
 
 Pero solo 1957, Frank Rosenblatt puedo generalizar las ideas propuesta por Warren McCulloch y Walter Pitts, a dicho modelo lo denomino PERCEPTRON.
 
+Otro aporte vino de la mano del Dr. Karl W. Steinbuch quien en 1961 presento el metodo de codificación de información en redes neuronales, los cuales se aplicaron para el reconocimiento de escritura a mano.
 
-## La decada de los 40 y 50
-
-
-## La decada de los 60
+En el campo de reconocimiento de imagenes los pioneros en este campo fueron, Jerome Felman y Dana Ballard, con sus modelos de memoria visual.
 
 
-## La decada de los 70 y 80
+
+
+
+
+Y uno de los aportes mas recientes vino por parte de la Universidad de Toronto y la empresa de Google en 2017 con la publicación del articulo tituloado "Atención es todo lo que necesitas", con la presentación de la arquitectura de lo que denorminaron "transformes" que de la mano de las redes neuronales dotan de atencion al modelo de inteligencia artificial.
+
+
 
 
