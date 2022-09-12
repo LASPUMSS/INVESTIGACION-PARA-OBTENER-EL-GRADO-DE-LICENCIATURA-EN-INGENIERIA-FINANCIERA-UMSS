@@ -4,3 +4,12 @@ output: pdf_document
 
 # Hipotesis
 
+Con la determinación y análisis del punto de equilibrio en las fábricas de ladrillos de la ciudad de Cochabamba, se logrará la evaluación de las proyecciones financieras facilitadoras de la toma de decisiones gerenciales acertadas.
+
+## Elementos componentes
+
+- Unidad de observación y análisis: Fábricas de ladrillos de la ciudad de Cochabamba.
+- Variable independiente: Determinación y análisis del punto del equilibrio.
+- Variable dependiente: Evaluación de las proyecciones financieras facilitadoras de la
+toma de decisiones gerenciales acertadas.
+- Enlace lógico: Se logrará.

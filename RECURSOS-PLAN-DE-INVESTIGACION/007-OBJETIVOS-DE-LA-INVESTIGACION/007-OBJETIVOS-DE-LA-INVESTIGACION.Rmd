@@ -3,12 +3,14 @@ output: pdf_document
 ---
 
 # Objetivos de la investigación
-
+Entre los objetivos propuestos para viabilizar el tema de investigación y la realización del informe final, se describen los siguientes:
 
 ## General {-}
-
+Proporcionar la información financiera adecuada y oportuna, para la toma de decisiones gerenciales sobre bases ciertas y debidamente estructuradas, mediante la determinación y el análisis del punto de equilibrio en las fábricas de ladrillos de la ciudad de Cochabamba.
 
 ## Especifico {-}
 
-
+- Definir un modelo óptimo del punto de equilibrio que permita la obtención de información confiable y válida para la toma de decisiones.
+- Realizar el análisis comparativo de los datos y los resultados obtenidos por medio de factores preestablecidos a nivel interno.
+- Determinar el nivel de ventas óptimo requerido por las fábricas en la obtención de la rentabilidad financiera establecida y esperada.
 

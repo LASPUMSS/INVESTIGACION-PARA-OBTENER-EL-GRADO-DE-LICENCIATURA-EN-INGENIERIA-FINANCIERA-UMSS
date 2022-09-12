@@ -3,5 +3,5 @@ output: pdf_document
 ---
 
 # Alcance y delimitación
-
+El presente trabajo de investigación, se circunscribirá al estudio de las fábricas de ladrillos de la ciudadde Cochabamba, con fines de obtener la información que coadyuve a generar la determinación del punto de equilibrio como herramienta importante en la toma de decisiones a nivel gerencial y la evaluación de la situación real de las mismas. Para fines de realización del informe final, se considerarán a las fábricas de ladrillos más relevantes que se constituyan como modelos de análisis y sean las más representativas de ese universo. Para viabilizar la realización del tema de investigación elegido, se tomará como modelo de análisis a la fábrica... por tener acceso a la información homogénea requerida y permita generalizar los resultados obtenidos de los cinco años anteriores a ... y los cinco años proyectados de estas entidades que corresponden al ámbito del Municipio de la Provincia Cercado del departamento de Cochabamba. El tema elegido y propuesto, se realizará en un tiempo no mayor a diez meses, a partir de la aprobación y registro del plan de investigación presentado.
 
