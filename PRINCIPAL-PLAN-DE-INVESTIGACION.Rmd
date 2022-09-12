@@ -55,7 +55,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 <!-- MARCO TEORICO -->
-\newpage
+
 ```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/008-MARCO-TEORICO.Rmd"}
 
 ```

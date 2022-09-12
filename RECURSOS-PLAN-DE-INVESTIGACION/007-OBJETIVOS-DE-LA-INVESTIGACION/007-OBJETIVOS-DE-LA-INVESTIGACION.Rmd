@@ -6,11 +6,11 @@ output: pdf_document
 Entre los objetivos propuestos para viabilizar el tema de investigación y la realización del informe final, se describen los siguientes:
 
 ## General {-}
-Proporcionar la información financiera adecuada y oportuna, para la toma de decisiones gerenciales sobre bases ciertas y debidamente estructuradas, mediante la determinación y el análisis del punto de equilibrio en las fábricas de ladrillos de la ciudad de Cochabamba.
+Proporcionar la información financiera adecuada y oportuna, para la toma de decisiones gerenciales sobre bases ciertas y debidamente estructuradas, mediante la determinación de pronosticos y/o simulación de estados financieros por redes neuronales artificiales.
 
 ## Especifico {-}
 
-- Definir un modelo óptimo del punto de equilibrio que permita la obtención de información confiable y válida para la toma de decisiones.
-- Realizar el análisis comparativo de los datos y los resultados obtenidos por medio de factores preestablecidos a nivel interno.
-- Determinar el nivel de ventas óptimo requerido por las fábricas en la obtención de la rentabilidad financiera establecida y esperada.
+- Definir la aquitectura de un modelo de redes neuronales artificiales para la obtención de información confiable y válida para la toma de decisiones.
+- Realizar el análisis comparativo de los datos y los resultados obtenidos.
+- Determinar las ventajas y desventajas del método redes neuronales artificiales para el análisis financiero de las instituciones finacieras.
 
