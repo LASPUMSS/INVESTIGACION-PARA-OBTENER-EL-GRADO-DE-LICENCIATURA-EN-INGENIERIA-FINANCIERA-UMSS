@@ -54,8 +54,18 @@ La redes neuronales artificiales son modelos no lineales que buscan generalizar 
 ### Arquitectura de la red
 El concepto de arquitectura referida a redes neuronales hace mención no solo al número de capas neuronales o al número de neuronas en cada una de ellas, sino a la conexión entre neuronas o capas, al tipo de neuronas presentes e incluso a la forma en la que son entrenadas.
 
+$$x \longrightarrow w_{11}^{(1)} \longrightarrow a_{1}^{1} \longrightarrow y$$
+$$a_{1}^{1}=w_{11}^{(1)}x$$
+
 ### Perceptron
 Un perceptrón es una neurona artificial, y, por tanto, una unidad de red neuronal. El perceptrón efectúa cálculos para detectar características o tendencias en los datos de entrada. Se trata de un algoritmo para el aprendizaje supervisado de clasificadores binarios.
+
+\input{RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/neuronaEj}
+
+$$ Z = \sum_{i=1}^{n}{x_{i}w_{i}} $$
+$$ A =  f(Z)$$
+
+
 
 ### Perceptron multicapa
 El perceptrón multicapa es una red neuronal artificial formada por múltiples capas, de tal manera que tiene capacidad para resolver problemas que no son linealmente separables, lo cual es la principal limitación del perceptrón. El perceptrón multicapa puede estar totalmente o localmente conectado.
