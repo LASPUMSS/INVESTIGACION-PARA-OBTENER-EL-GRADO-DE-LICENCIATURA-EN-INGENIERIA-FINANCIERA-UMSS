@@ -5,6 +5,7 @@ output:
             in_header: styles001.sty
         df_print: kable
 bibliography: references.bib 
+csl: apa.csl
 nocite: '@*'
 fontsize: 12pt
 ---

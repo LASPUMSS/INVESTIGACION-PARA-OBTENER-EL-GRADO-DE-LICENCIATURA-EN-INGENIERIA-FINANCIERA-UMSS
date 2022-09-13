@@ -4,47 +4,55 @@ output: pdf_document
 
 # Marco teorico
 
-## Redes neuronales artificiales
-Las redes neuronale artificial son un metodo no lineal, deseñado para realizar regresiones o clasificaciones, la principal virtud que posee es de estar dotada de la capacidad de aprendizaje automatico.
+<!-- ESTADOS FINANCIEROS -->
+## Sistema financiero
+El sistema financiero de un país está formado por el conjunto de instituciones, medios y mercados, cuyo fin primordial es canalizar el ahorro que generan los prestamistas hacia los prestatarios, así como facilitar y otorgar seguridad al movimiento de dinero y al sistema de pagos
 
+### Sistema financero boliviano
 
-## Pronosticos
+<!-- ESTADOS FINANCIEROS -->
+## Estados financieros
+
+El la pagina oficial de la Autoridad de Supervisión del Sistema Financiero (ASFI), se define que los estados financieros constituyen una representación estructurada de la situación financiera y de las transacciones llevadas a cabo por la empresa. Su objetivo, con propósitos de información general, es suministrar información acerca de la situación y rendimiento financieros, así como de los flujos de efectivo que sea útil a una amplia variedad de usuarios al tomar sus decisiones económicas. Los estados financieros también muestran los resultados de la gestión que los administradores han efectuado con los recursos que se les han confiado.[@ASFI]
+
+Entoces se puede afirmar, que los estados financieros son un resumen del ejercicio economico de una empresa o institución, entendiendo al ejercicio economico como la suma de todas las actividades vinculadas al giro de la empresa en un intervalo de tiempo, dando información, sobre ingresos, egresos, pasivos, activos, es decir, los estados financieros son una fotografia de la empresa en un punto del tiempo.
+
+### Pronosticos
+
 El pronóstico es el proceso de estimación en situaciones de incertidumbre. El término predicción es similar, pero más general, y usualmente se refiere a la estimación de series temporales o datos instantáneos.
 
-## Simulación
+### Simulación
+
 Puede definirse a la simulación como la experimentación con un modelo que imita ciertos aspectos de la realidad. Esto permite trabajar en condiciones similares a las reales, pero con variables controladas y en un entorno que se asemeja al real pero que está creado o acondicionado artificialmente.
 
+<!-- INTELIGENCIA ARTIFICIAL -->
 ## Inteligencia artificial
+
 La inteligencia artificial es, en ciencias de la computación, la disciplina que intenta replicar y desarrollar la inteligencia y sus procesos implícitos a través de computadoras.
 
+### Aprendizaje automatico
+
+El aprendizaje automático o aprendizaje automatizado o aprendizaje de máquinas es el subcampo de las ciencias de la computación y una rama de la inteligencia artificial, cuyo objetivo es desarrollar técnicas que permitan que las computadoras aprendan.
+
 ### Aprendizaje supervisado
+
 En aprendizaje automático y minería de datos, el aprendizaje supervisado es una técnica para deducir una función a partir de datos de entrenamiento. Los datos de entrenamiento consisten de pares de objetos: una componente del par son los datos de entrada y el otro, los resultados deseados.
 
 ### Aprendizaje no supervisado
+
 Aprendizaje no supervisado es un método de Aprendizaje Automático donde un modelo se ajusta a las observaciones. Se distingue del Aprendizaje supervisado por el hecho de que no hay un conocimiento a priori. En el aprendizaje no supervisado, un conjunto de datos de objetos de entrada es tratado.
 
-## Aprendizaje automatico
-El aprendizaje automático o aprendizaje automatizado o aprendizaje de máquinas es el subcampo de las ciencias de la computación y una rama de la inteligencia artificial, cuyo objetivo es desarrollar técnicas que permitan que las computadoras aprendan.
-
-## Decenso del gradiente
-Lo definiremos más adelante, pero de momento nos quedamos con la siguiente idea: el gradiente es un cálculo que nos permite saber cómo ajustar los parámetros de la red de tal forma que se minimice su desviación a la salida.
-
-## Arquitectura de la red
-El concepto de arquitectura referida a redes neuronales hace mención no solo al número de capas neuronales o al número de neuronas en cada una de ellas, sino a la conexión entre neuronas o capas, al tipo de neuronas presentes e incluso a la forma en la que son entrenadas.
-
-## Overfitting o sobreajuste
-En aprendizaje automático, el sobreajuste es el efecto de sobreentrenar un algoritmo de aprendizaje con unos ciertos datos para los que se conoce el resultado deseado.
-
-## Underfitting o desajuste
-El underfitting ocurre cuando un modelo estadístico o un algoritmo de aprendizaje automático no puede capturar la tendencia subyacente de los datos. Se produciría un desajuste, por ejemplo, al ajustar un modelo lineal a datos no lineales. Un modelo así también tendría un rendimiento predictivo deficiente.
-
+<!-- REDES NEURONALES ARTIFICIALES -->
 ## Redes neuronales artificiales
+
 Una red neuronal es un método de la inteligencia artificial que enseña a las computadoras a procesar datos de una manera que está inspirada en la forma en que lo hace el cerebro humano.
 
-Las redes neuronales artificiales se trata de modelo computacional evolucionado a partir de diversas aportaciones científicas que están registradas en la historia.​ Consiste en un conjunto de unidades, llamadas neuronas artificiales, conectadas entre sí para transmitirse señales.
+Las redes neuronales artificiales se trata de modelo computacional evolucionado a partir de diversas aportaciones científicas que están registradas en la historia. Consiste en un conjunto de unidades, llamadas neuronas artificiales, conectadas entre sí para transmitirse señales.
 
-### La células McCulloch-Pitts
-La neurona de McCulloch-Pitts es una unidad de cálculo que intenta modelar el comportamiento de una neurona "natural", similares a las que constituyen del cerebro humano. Ella es la unidad esencial con la cual se construye una red neuronal artificial. es la suma ponderada. es el valor de la i-ésima entrada (input).
+La redes neuronales artificiales son modelos no lineales que buscan generalizar información extraida de datos ordenados en vectores, que dotan a dicha red neuronal con la capacidad de realizar clasificaciones o regresiones.
+
+### Arquitectura de la red
+El concepto de arquitectura referida a redes neuronales hace mención no solo al número de capas neuronales o al número de neuronas en cada una de ellas, sino a la conexión entre neuronas o capas, al tipo de neuronas presentes e incluso a la forma en la que son entrenadas.
 
 ### Perceptron
 Un perceptrón es una neurona artificial, y, por tanto, una unidad de red neuronal. El perceptrón efectúa cálculos para detectar características o tendencias en los datos de entrada. Se trata de un algoritmo para el aprendizaje supervisado de clasificadores binarios.
@@ -52,7 +60,31 @@ Un perceptrón es una neurona artificial, y, por tanto, una unidad de red neuron
 ### Perceptron multicapa
 El perceptrón multicapa es una red neuronal artificial formada por múltiples capas, de tal manera que tiene capacidad para resolver problemas que no son linealmente separables, lo cual es la principal limitación del perceptrón. El perceptrón multicapa puede estar totalmente o localmente conectado.
 
+### Decenso del gradiente
+Lo definiremos más adelante, pero de momento nos quedamos con la siguiente idea: el gradiente es un cálculo que nos permite saber cómo ajustar los parámetros de la red de tal forma que se minimice su desviación a la salida.
 
+### BackPropagation
+La BackPropagation es un tipo de red de aprendizaje supervisado, que emplea un ciclo propagación – adaptación de dos fases. Una vez que se ha aplicado un patrón a la entrada de la red como estímulo, este se propaga desde la primera capa a través de las capas superiores de la red, hasta generar una salida.
+
+<!-- TRANSFORMERS -->
+## Transformadores
+
+
+### Atencion
+
+
+### Vectores llaves y vectores preguntas
+
+<!-- OVERFITTING  -->
+## Overfitting o sobreajuste
+En aprendizaje automático, el sobreajuste es el efecto de sobreentrenar un algoritmo de aprendizaje con unos ciertos datos para los que se conoce el resultado deseado.
+
+<!-- UNDERFITTING -->
+## Underfitting o desajuste
+El underfitting ocurre cuando un modelo estadístico o un algoritmo de aprendizaje automático no puede capturar la tendencia subyacente de los datos. Se produciría un desajuste, por ejemplo, al ajustar un modelo lineal a datos no lineales. Un modelo así también tendría un rendimiento predictivo deficiente.
+
+<!-- EVALUACIÓN DE PRECISION DE MODELOS -->
+## Evalción de redes neuronales artificiales
 
 
 
