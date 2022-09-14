@@ -27,38 +27,39 @@ Históricos
 **Capítulo II Diagnóstico de las instituciones financieras del sistema financiero**
 \vspace{3.5mm}
 
-Globalización
-\newline Mercados internacionales
-\newline Organización e infraestructura de los mercados financieros
+Sistema financiero nacional
+\newline Organización y administración 
+\newline Sistemas de información y toma de decisiones
+\newline Productos financieros
 \newline Justificación e importancia
-\newline Evaluación de la información económica, financiera
 \newline Obtención de las conclusiones preliminares y sus soluciones
 
 \vspace{3.5mm}
 **Capítulo III Marco teórico**
 \vspace{3.5mm}
 
-Objetivo del sustento teórico
+Objetivos del sustento teórico
 \newline Definición de términos financieros básicos
-\newline Sistema financiero nacional e internacional
 \newline Intermediación financiera y regulación financiera
-\newline Valoración de acciones por método de flujos descontados
-\newline Definición de acción sobrevalorada -subvalorada, y la toma de decisiones.
+\newline Aprendizaje automatico
+\newline Arquitectura de las redes neuronales artificiales
+\newline Funcion de coste
+\newline Funciones de activación
+\newline Definición de sobreajuste y desajuste de las redes neuronales.
 
 \vspace{3.5mm}
-**Capítulo IV Determinación del valor de acciones de compañías por flujos descontados**
+**Capítulo IV Determinación de pronosticos de estados fiancieros por redes neuronales artificiales**
 \vspace{3.5mm}
 
-Diferencia entre capital de deuda y capital patrimonial
-\newline Diferencia en precio y valor
-\newline Valor del dinero en el tiempo
-\newline Criterio de riesgo – rendimiento
-\newline Determinación de flujos futuros
-\newline Valor descontado de flujos de acciones
-\newline Limitaciones de la valoración de acciones por flujos descontados
+Ordenado en vectores de los estados financieros
+\newline Definición de la funcion de coste de la red neuronal
+\newline Determinación de funciones de activación
+\newline Entrenamiento de la red neuronal
+\newline Evaluación de sobreajuste o desajuste de la red neuronal
+\newline Limitaciones de las redes neuronales
 
 \vspace{3.5mm}
-**Capítulo V Simulación de valoración de acciones por flujos descontados**
+**Capítulo V Simulación del tema de investigación**
 \vspace{3.5mm}
 
 Planteamiento de supuestos
