@@ -19,6 +19,10 @@ Entoces se puede afirmar, que los estados financieros son un resumen del ejercic
 
 ### Pronosticos
 
+Los pronosticos
+
+El termino de pronostico de uso común, definido por la Real Academia Española (RAE) como la acción y efecto de pronosticar, la misma RAE define pronostica como predecir algo en el futuro a partir de indicios.
+
 El pronóstico es el proceso de estimación en situaciones de incertidumbre. El término predicción es similar, pero más general, y usualmente se refiere a la estimación de series temporales o datos instantáneos.
 
 ### Simulación

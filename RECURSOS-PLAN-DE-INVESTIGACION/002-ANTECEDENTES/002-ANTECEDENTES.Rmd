@@ -12,24 +12,24 @@ output: pdf_document
 **PROYECCION DE ESTADOS FINANCIEROS POR EL MEDOTO DE REDES NEURONALES**
 
 # Antecedentes
-El campo de la inteligencia artificial es relativamente reciente, y cobra atención en la actualidad por su capacidad de resolver problemas que con anterioridad sus resultados se divisaban lejanos, como el procesamientos de lenguaje natural, generandor de imagenes bajo requerimiento, clasificación de objetos, etc.
+El campo de la inteligencia artificial es relativamente reciente, y cobra atención en la actualidad por su capacidad de resolver problemas que con anterioridad sus resultados se divisaban lejanos, como el pronostico de fenomenos no lineles, procesamientos de lenguaje natural, generandor de imagenes bajo requerimiento, clasificación de objetos, etc.
 
-En sus inicios, la primera piedra angular sobre la que se baso lo que hoy se conoce como inteligencia artificial se dio en 1943, de la mano de Warren McCulloch y Walter Pitts, con su presentación del primer modelo matemático de inteligencia artificial, donde por primera vez se dota a un modelo autonomo la capacidad de aprendizaje.
+En los inicios de la inteligencia articial en 1943 se coloco la primera piedra angular sobre la que se baso lo que hoy se conoce como inteligencia artificial, de la mano de Warren McCulloch y Walter Pitts, con la presentación del primer modelo matemático de aprendizaje, donde por primera vez se dota a un modelo autonomo la capacidad de aprendizaje.
 
-Una de las primera aplicaciones que este modelo dio a este, fue de la mando de Marvin Minsky en 1951 quien pudo modelar con extio el comportamiento de una rata para obtener comidad. 
+En 1949 se dio otro aporte al campo de al redes neuronales por parte de Donald Hebb, quien fue el primero en explicar los procesos del aprendizaje desde una perspectiva del campo psicológico, desarrollando una regla de como el aprendizaje ocurría. La idea general que propuso era que el aprendizaje ocurría cuando ciertos cambios en una neurona eran activados. 
 
-Pero solo 1957, Frank Rosenblatt puedo generalizar las ideas propuesta por Warren McCulloch y Walter Pitts, a dicho modelo lo denomino PERCEPTRON.
+En 1950 Alam Turing presento lo que se denomino como la "Prueba de Turing", donde dio una definición operacional y satisfactoria de inteligencia, que dicha prueba consistia en la incapacidad de diferenciar entre entidades inteligentes indiscutibles y seres humanos.
 
-Otro aporte vino de la mano del Dr. Karl W. Steinbuch quien en 1961 presento el metodo de codificación de información en redes neuronales, los cuales se aplicaron para el reconocimiento de escritura a mano.
+Pero solo 1957, Frank Rosenblatt puedo generalizar las ideas propuesta por Warren McCulloch y Walter Pitts, a dicho modelo lo denomino PERCEPTRON, el cual tiene la capacidad de generalizar problemas lineales por medio de datos de ejemplo, donde reconoce patrones y hace prediciones con datos diferentes con los que habia sido entrenado, es decir esta dotado con la capacidad de generalizar, y 1959 Frank Rosenblatt en su libro "Principios de Neurodinámica" confirmó que, bajo ciertas condiciones, el aprendizaje del Perceptron convergía hacia un estado
+finito que denomino teorema de convergencia del Perceptron.
 
-En el campo de reconocimiento de imagenes los pioneros en este campo fueron, Jerome Felman y Dana Ballard, con sus modelos de memoria visual.
+En 1960 Bernard Widroff y Marcian Hoff, desarrollaron el modelo ADELINE (ADAptative LINear Elements) que fue la primera aplicación comercial de redes neuronales para eliminar ecos en las lienas telefonicas.
 
+En 1969 se produjo un declive en las redes neuronales, en consecuencia de una publicación de Marvin Minsky y Seymour Papert probaron matematicamente que si bien el perceptron eran capaces de resolver con facilidad problemas lineales, pero su rendimiento decaia cuando intentaba modelar problemas no lineales, sobrecargando la capacidad computo.
 
+Pero en 1985 John Hopfield, hizo que la redes neuronales cobraran nuevamente importancia con su libro "Computación neuronal de decisiones en problemas de optimización" donde presenta el algoritmo de retropropagación que reduce cantidad de computo en proceso de aprendizaje de las redes neuronales, dontando a esta la capacidad de resolver probemas no lineales. Tambien 1986 David E. Rumelhart y Geoffrey E. Hinton, mejoraron el algoritmo de aprendizaje de propagación hacia atrás, que permitieron recortar el tiempo aun mas el proceso de aprendizaje con respecto a los modelos anteriores.
 
-
-
-
-Y uno de los aportes mas recientes vino por parte de la Universidad de Toronto y la empresa de Google en 2017 con la publicación del articulo tituloado "Atención es todo lo que necesitas", con la presentación de la arquitectura de lo que denorminaron "transformes" que de la mano de las redes neuronales dotan de atencion al modelo de inteligencia artificial.
+Y uno de los aportes mas recientes vino por parte de la Universidad de Toronto y la empresa de Google en 2017 con la publicación del articulo tituloado "Atención es todo lo que necesitas", con la presentación de la arquitectura denominada "transformes" que de la mano de las redes neuronales dotan de atencion al modelo de inteligencia artificial.
 
 
 
