@@ -43,56 +43,46 @@ Aprendizaje no supervisado es un método de aprendizaje automático donde la red
 <!-- REDES NEURONALES ARTIFICIALES -->
 ## Redes neuronales artificiales
 
-Una red neuronal es un método de la inteligencia artificial que enseña a las computadoras a procesar datos de una manera que está inspirada en la forma en que lo hace el cerebro humano.
+Una red neuronal es un método del aprendizaje automatico que enseña a las computadoras a procesar datos de una manera que está inspirada en la forma en que lo hace el cerebro humano, las redes neuronales artificiales es modelo computacional resultado de diversas aportaciones científicas, consiste en un conjunto de unidades, llamadas neuronas artificiales, inpspiradas en las neuronas del cerebro conectadas entre sí para transmitirse señales.
 
-Las redes neuronales artificiales se trata de modelo computacional evolucionado a partir de diversas aportaciones científicas que están registradas en la historia. Consiste en un conjunto de unidades, llamadas neuronas artificiales, conectadas entre sí para transmitirse señales.
+\begin{figure}
+\centering
+\includegraphics[width=10cm, height=8cm]{RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/neurona-real.jpg}
+\caption{Neurona}
+\end{figure}
 
-La redes neuronales artificiales son modelos no lineales que buscan generalizar información extraida de datos ordenados en vectores, que dotan a dicha red neuronal con la capacidad de realizar clasificaciones o regresiones.
+La redes neuronales artificiales son modelos de aprendizaje de problemas no lineales que buscan generalizar información extraida de datos ordenados en vectores, que dotan a dicha red neuronal con la capacidad de realizar clasificaciones o regresiones.
 
-### Arquitectura de la red
-El concepto de arquitectura referida a redes neuronales hace mención no solo al número de capas neuronales o al número de neuronas en cada una de ellas, sino a la conexión entre neuronas o capas, al tipo de neuronas presentes e incluso a la forma en la que son entrenadas.
+\newpage
+### Elemntos de una red neuronal
 
-$$x \longrightarrow w_{11}^{(1)} \longrightarrow a_{1}^{1} \longrightarrow y$$
-$$a_{1}^{1}=w_{11}^{(1)}x$$
+Los elementos de una red neuronal se resumen en la siguiente figura:
 
-### Perceptron
-Un perceptrón es una neurona artificial, y, por tanto, una unidad de red neuronal. El perceptrón efectúa cálculos para detectar características o tendencias en los datos de entrada. Se trata de un algoritmo para el aprendizaje supervisado de clasificadores binarios.
-
-\input{RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/neuronaEj}
-
-$$ Z = \sum_{i=1}^{n}{x_{i}w_{i}} $$
-$$ A =  f(Z)$$
+\input{RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/red-neuronal}
 
 
-
-### Perceptron multicapa
-El perceptrón multicapa es una red neuronal artificial formada por múltiples capas, de tal manera que tiene capacidad para resolver problemas que no son linealmente separables, lo cual es la principal limitación del perceptrón. El perceptrón multicapa puede estar totalmente o localmente conectado.
-
-### Decenso del gradiente
-Lo definiremos más adelante, pero de momento nos quedamos con la siguiente idea: el gradiente es un cálculo que nos permite saber cómo ajustar los parámetros de la red de tal forma que se minimice su desviación a la salida.
-
-### BackPropagation
-La BackPropagation es un tipo de red de aprendizaje supervisado, que emplea un ciclo propagación – adaptación de dos fases. Una vez que se ha aplicado un patrón a la entrada de la red como estímulo, este se propaga desde la primera capa a través de las capas superiores de la red, hasta generar una salida.
-
-<!-- TRANSFORMERS -->
-## Transformadores
+### Función de entrada
 
 
-### Atencion
+### Función de activación
 
 
-### Vectores llaves y vectores preguntas
+### Función de salida
 
-<!-- OVERFITTING  -->
-## Overfitting o sobreajuste
-En aprendizaje automático, el sobreajuste es el efecto de sobreentrenar un algoritmo de aprendizaje con unos ciertos datos para los que se conoce el resultado deseado.
 
-<!-- UNDERFITTING -->
-## Underfitting o desajuste
-El underfitting ocurre cuando un modelo estadístico o un algoritmo de aprendizaje automático no puede capturar la tendencia subyacente de los datos. Se produciría un desajuste, por ejemplo, al ajustar un modelo lineal a datos no lineales. Un modelo así también tendría un rendimiento predictivo deficiente.
+### Topologia de la red
 
-<!-- EVALUACIÓN DE PRECISION DE MODELOS -->
-## Evalción de redes neuronales artificiales
+
+### Conexión entre neuronas
+
+
+### Propagación hacia atras
+
+
+<!-- OVERFITTING, UNDERFITTING  -->
+## Sobreajuste y desajuste
+
+En aprendizaje automático, el sobreajuste (Underfitting) es el efecto de sobreentrenar un algoritmo de aprendizaje con unos ciertos datos para los que se conoce el resultado deseado. El desajuste (underfitting) ocurre cuando un modelo estadístico o un algoritmo de aprendizaje automático no puede capturar la tendencia subyacente de los datos. Se produciría un desajuste, por ejemplo, al ajustar un modelo lineal a datos no lineales. Un modelo así también tendría un rendimiento predictivo deficiente.
 
 
 
