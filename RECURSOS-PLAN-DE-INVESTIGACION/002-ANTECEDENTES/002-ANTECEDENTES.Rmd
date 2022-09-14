@@ -12,9 +12,8 @@ output: pdf_document
 **PROYECCION DE ESTADOS FINANCIEROS POR EL MEDOTO DE REDES NEURONALES**
 
 # Antecedentes
-El campo de la inteligencia artificial es relativamente reciente, y cobra atención en la actualidad por su capacidad de resolver problemas que con anterioridad sus resultados se divisaban lejanos, como el pronostico de fenomenos no lineles, procesamientos de lenguaje natural, generandor de imagenes bajo requerimiento, clasificación de objetos, etc.
 
-En los inicios de la inteligencia articial en 1943 se coloco la primera piedra angular sobre la que se baso lo que hoy se conoce como inteligencia artificial, de la mano de Warren McCulloch y Walter Pitts, con la presentación del primer modelo matemático de aprendizaje, donde por primera vez se dota a un modelo autonomo la capacidad de aprendizaje.
+Los inicios de la inteligencia articial de manera formal se dio en 1943 cuando se coloco la primera piedra angular sobre la que se baso lo que hoy se conoce como inteligencia artificial, de la mano de Warren McCulloch y Walter Pitts, con la presentación del primer modelo matemático de aprendizaje, donde por primera vez se dota a un modelo autonomo la capacidad de aprendizaje.
 
 En 1949 se dio otro aporte al campo de al redes neuronales por parte de Donald Hebb, quien fue el primero en explicar los procesos del aprendizaje desde una perspectiva del campo psicológico, desarrollando una regla de como el aprendizaje ocurría. La idea general que propuso era que el aprendizaje ocurría cuando ciertos cambios en una neurona eran activados. 
 

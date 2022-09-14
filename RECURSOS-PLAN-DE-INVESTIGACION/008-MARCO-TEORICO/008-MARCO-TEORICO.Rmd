@@ -6,45 +6,39 @@ output: pdf_document
 
 <!-- ESTADOS FINANCIEROS -->
 ## Sistema financiero
-El sistema financiero de un país está formado por el conjunto de instituciones, medios y mercados, cuyo fin primordial es canalizar el ahorro que generan los prestamistas hacia los prestatarios, así como facilitar y otorgar seguridad al movimiento de dinero y al sistema de pagos
+
+El sistema financiero en general está formado por el conjunto de instituciones, constituidas en mercados, cuyo fin principal es canalizar el ahorro que generan los ahorradores hacia los prestatarios, así como facilitar y otorgar seguridad al movimiento de dinero y al sistema de pagos.
 
 ### Sistema financero boliviano
+El sistma financiero boliviano esta constituido por tres sectores que atienden al origen de su capital, el sector financiero privado, el publico y con participación parcial del estado. El estado boliviano mediante la ley 393 es el rector del sistema financiero, mediante la presente ley atravez de 551 articulos definen las limitaciones o restricciones en las actividades de las entidades financieras con ambito de aplicación en todo el territorio de Bolivia ya sea privadas, publicas o las con parcipación parcial del estado.
 
 <!-- ESTADOS FINANCIEROS -->
 ## Estados financieros
 
 El la pagina oficial de la Autoridad de Supervisión del Sistema Financiero (ASFI), se define que los estados financieros constituyen una representación estructurada de la situación financiera y de las transacciones llevadas a cabo por la empresa. Su objetivo, con propósitos de información general, es suministrar información acerca de la situación y rendimiento financieros, así como de los flujos de efectivo que sea útil a una amplia variedad de usuarios al tomar sus decisiones económicas. Los estados financieros también muestran los resultados de la gestión que los administradores han efectuado con los recursos que se les han confiado.[@ASFI]
 
-Entoces se puede afirmar, que los estados financieros son un resumen del ejercicio economico de una empresa o institución, entendiendo al ejercicio economico como la suma de todas las actividades vinculadas al giro de la empresa en un intervalo de tiempo, dando información, sobre ingresos, egresos, pasivos, activos, es decir, los estados financieros son una fotografia de la empresa en un punto del tiempo.
+Entoces se afirma, que los estados financieros son un resumen del ejercicio economico de una empresa o institución, entendiendo al ejercicio economico como la suma de todas las actividades vinculadas al giro de la empresa en un intervalo de tiempo, dando información, sobre ingresos, egresos, pasivos, activos, es decir, los estados financieros son una fotografia de la empresa en un punto del tiempo.
 
 ### Pronosticos
 
-Los pronosticos
-
-El termino de pronostico de uso común, definido por la Real Academia Española (RAE) como la acción y efecto de pronosticar, la misma RAE define pronostica como predecir algo en el futuro a partir de indicios.
-
-El pronóstico es el proceso de estimación en situaciones de incertidumbre. El término predicción es similar, pero más general, y usualmente se refiere a la estimación de series temporales o datos instantáneos.
+El termino de pronostico de uso común, definido por la Real Academia Española (RAE) como la acción y efecto de pronosticar, la misma RAE define pronosticar como predecir algo en el futuro a partir de indicios. El pronóstico es el proceso de estimación en situaciones de incertidumbre, para los propósitos de esta investigación, un pronóstico es un evento asociado a una distribución de probabilidad.
 
 ### Simulación
 
-Puede definirse a la simulación como la experimentación con un modelo que imita ciertos aspectos de la realidad. Esto permite trabajar en condiciones similares a las reales, pero con variables controladas y en un entorno que se asemeja al real pero que está creado o acondicionado artificialmente.
+La simulación se entiende como la experimentación con un modelo que imita ciertos aspectos de la realidad, esto permite trabajar en condiciones similares a las reales, pero con variables controladas y en un entorno semejante al real pero que esta creado o acondicionada artificialmente, para los propocitos de esta investigación la simulacion mediante redes neuronales son los indicios que toma como base para realizar los pronosticos de los estados financeros de entidades del sistema financieros boliviano.
 
 <!-- INTELIGENCIA ARTIFICIAL -->
 ## Inteligencia artificial
 
-La inteligencia artificial es, en ciencias de la computación, la disciplina que intenta replicar y desarrollar la inteligencia y sus procesos implícitos a través de computadoras.
+El campo de la inteligencia artificial es relativamente reciente, y cobra atención en la actualidad por su capacidad de resolver problemas que con anterioridad sus resultados se divisaban lejanos, como el pronostico de fenomenos no lineles, procesamientos de lenguaje natural, generandor de imagenes, clasificación de objetos, etc. La inteligencia artificial esta compuesta de tres sub campos, en un primer nivel se trata en la interpretación de la información como vectores numericos, que es la unica manera en que puede pecibir el mundo las maquinas, en un segundo nivel esta el aprendizaje automatico se centra el los aloritmos que permiten el aprendizaje al automata, y en un nivel mas avanzado se encuentra el aprendizaje porfundo donde se dota de mas independencia a lo modelos de inteligencia artificial similares a la de los humanos.
 
-### Aprendizaje automatico
+### Aprendizaje supervisado con redes neuronales
 
-El aprendizaje automático o aprendizaje automatizado o aprendizaje de máquinas es el subcampo de las ciencias de la computación y una rama de la inteligencia artificial, cuyo objetivo es desarrollar técnicas que permitan que las computadoras aprendan.
+El aprendizaje supervisado una rama del aprendizaje automatico, son algoritmos que permiten aprender a la red neuronal atrabajes de datos dejemplos que estan compuesta por un vector de entrada que son las variables independientes, y otro vector denomina etiquetas, donde la red se encarga de encotrar la relaciones existentes entre las variables independientes, realizando cambios y adaptando el modelo por medio de variaciones sujetas a una función de coste.  
 
-### Aprendizaje supervisado
+### Aprendizaje no supervisado con redes neuronales
 
-En aprendizaje automático y minería de datos, el aprendizaje supervisado es una técnica para deducir una función a partir de datos de entrenamiento. Los datos de entrenamiento consisten de pares de objetos: una componente del par son los datos de entrada y el otro, los resultados deseados.
-
-### Aprendizaje no supervisado
-
-Aprendizaje no supervisado es un método de Aprendizaje Automático donde un modelo se ajusta a las observaciones. Se distingue del Aprendizaje supervisado por el hecho de que no hay un conocimiento a priori. En el aprendizaje no supervisado, un conjunto de datos de objetos de entrada es tratado.
+Aprendizaje no supervisado es un método de aprendizaje automático donde la red neuronal se ajusta a las observaciones. Se distingue del aprendizaje supervisado por el hecho de que no hay un conocimiento a priori es decir etiquetas que sirvan como guia, en el aprendizaje no supervisado solo se cuenta con un conjunto de datos de objetos de entrada.
 
 <!-- REDES NEURONALES ARTIFICIALES -->
 ## Redes neuronales artificiales
