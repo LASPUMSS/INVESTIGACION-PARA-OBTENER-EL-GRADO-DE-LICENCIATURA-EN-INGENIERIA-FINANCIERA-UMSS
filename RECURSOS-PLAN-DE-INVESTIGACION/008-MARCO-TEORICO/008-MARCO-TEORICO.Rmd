@@ -60,29 +60,76 @@ Los elementos de una red neuronal se resumen en la siguiente figura:
 
 \input{RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/red-neuronal}
 
+Y como todo sistema es el resultado de la interacción de elementos simples tabajando conjuntamente, que se presenta a continuación.
 
-### Función de entrada
+### Neurona artificial
+La neurona es la unidad basica de procesamiento de una red neuronal de ahi el nombre, igual que su equivalente biologico una neura artificial recibe estimulos externos y devuelve otro valor, esta es expresada matematicamente como una función, donde la neurona realiza una suma ponderada con los datos de entrada.
+\newline
+Dado:
+$$ X = \left( x_{1},x_{2},x_{3},...,x_{n} \right) $$
+Se tiene:
+$$ Y = f(X) = \sum_{i=1}^{n}{w_{i}x_{i}}  = \sum{WX}  $$
+Donde:
+\newline
+X = Vector de los datos de entrada.
+\newline
+Y = Vector resultado de la suma ponderada.
+\newline
+W = Vector de los pesos las variables independientes.
 
+La arquitectura de la red neuronal corresponde a la manera en que esta ordenas las neuronas, si las neuronas son colocadas de forma verticas, resiven los mismos datos de entrada y sus resultados de salida lo pasan a la siguiente capa, la ultima capa de una red neural se denomian capa de salida y las capas que esten entre la capa de salida y capa de entrada se denominas capas ocultas. Ahora bien al ser cada neurana una suma ponderada esta equivaldria a una sola capa de la red, a esto se denomina colición de la red neuronal, para resolver este problema se planteo los que se conoce como función de activación que es una función no lineal que distoriciona los resultados salientes de cada neurona.
+$$A = f(Y)$$
 
-### Función de activación
+### Funciones de activación
 
+Las funciones de activación distorcionan de forma no lineal las salidas de las neuronas para asi no colapsar la red, dentro las funciones de activación mas conocidas tenemos:
 
-### Función de salida
+#### Funcion escalonada
+Esta función asigna el valor de 1 si la salida de la neura supera cierto umbral y cero si no lo supera.
 
+\begin{figure}
+\centering
+\includegraphics[width=10cm, height=8cm]{RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/funcion-escalonada.png}
+\caption{Funcion de activación escalonada}
+\end{figure}
 
-### Topologia de la red
+#### Función sigmoide
+Esta función genera un en un rango de valores de salida que estan entre cero y uno por lo que la salida es interpretada como una probabilidad. 
 
+$$ f(x) = \frac{1}{1-e^{-x}}$$
+\begin{figure}
+\centering
+\includegraphics[width=10cm, height=8cm]{RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/funcion-sigmoide.png}
+\caption{Funcion de activación sigmoide}
+\end{figure}
 
-### Conexión entre neuronas
+#### Función hiperbolica
+Esta función de activación llamada tangente hiperbólica tiene un rango de valores de salida entre -1 y 1.
+
+$$ f(x) = \frac{2}{1-e^{-2x}} - 1 $$
+\begin{figure}
+\centering
+\includegraphics[width=10cm, height=8cm]{RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/funcion-hiperbolica.png}
+\caption{Funcion de activación hiperbolica}
+\end{figure}
 
 
 ### Propagación hacia atras
 
+El nombre de backpropagation resulta de la forma en que el error es propagado
+hacia atrás a través de la red neuronal, en otras palabras el error se propaga hacia atrás
+desde la capa de salida. Esto permite que los pesos sobre las conexiones de las neuronas
+ubicadas en las capas ocultas cambien durante el entrenamiento.
+El cambio de los pesos en las conexiones de las neuronas además de influir
+sobre la entrada global, influye en la activación y por consiguiente en la salida de una
+neurona. Por lo tanto, es de gran utilidad considerar las variaciones de la función
+activación al modificarse el valor de los pesos. Esto se llama sensibilidad de la función
+activación, de acuerdo al cambio en los pesos.
 
 <!-- OVERFITTING, UNDERFITTING  -->
 ## Sobreajuste y desajuste
 
-En aprendizaje automático, el sobreajuste (Underfitting) es el efecto de sobreentrenar un algoritmo de aprendizaje con unos ciertos datos para los que se conoce el resultado deseado. El desajuste (underfitting) ocurre cuando un modelo estadístico o un algoritmo de aprendizaje automático no puede capturar la tendencia subyacente de los datos. Se produciría un desajuste, por ejemplo, al ajustar un modelo lineal a datos no lineales. Un modelo así también tendría un rendimiento predictivo deficiente.
+En aprendizaje automático, el sobreajuste (overfitting) es el efecto de sobreentrenar un algoritmo de aprendizaje con unos ciertos datos para los que se conoce el resultado deseado. El desajuste (underfitting) ocurre cuando un modelo estadístico o un algoritmo de aprendizaje automático no puede capturar la tendencia subyacente de los datos. Se produciría un desajuste, por ejemplo, al ajustar un modelo lineal a datos no lineales. Un modelo así también tendría un rendimiento predictivo deficiente.
 
 
 
