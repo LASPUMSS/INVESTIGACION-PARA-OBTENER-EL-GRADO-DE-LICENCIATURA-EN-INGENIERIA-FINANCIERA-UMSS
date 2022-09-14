@@ -4,5 +4,5 @@ output: pdf_document
 
 # Marco Metodico
 El tipo de investigación que se aplicará en el informe final será el descriptivo y analítico, para describir y estudiar la realidad presente de los hechos de las unidades de observación y análisis.
-Se identificarán los costos fijos y variables por medio del análisis de la información recopilada de las fábricas de ladrillos seleccionadas para este fin.
-Los procedimientos a ser aplicados en el informe final, estarán orientados a los métodos inductivo, deductivo, analítico y sintético fundamentalmente.
+Se identificara la arquitectura de la red neuronal, que esta compuesta de las funciones de activación, y ajuste de los datos en formato de tablas.
+Los procedimientos a ser aplicados en el informe final, estarán orientados a los métodos inductivo, deductivo, analítico fundamentalmente.
