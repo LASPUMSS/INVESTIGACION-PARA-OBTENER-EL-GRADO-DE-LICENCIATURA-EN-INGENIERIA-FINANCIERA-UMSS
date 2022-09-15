@@ -2,48 +2,49 @@
 output: pdf_document
 ---
 
-# Marco teorico
+# Marco teórico
 
 <!-- ESTADOS FINANCIEROS -->
 ## Sistema financiero
 
 El sistema financiero en general está formado por el conjunto de instituciones, constituidas en mercados, cuyo fin principal es canalizar el ahorro que generan los ahorradores hacia los prestatarios, así como facilitar y otorgar seguridad al movimiento de dinero y al sistema de pagos.
 
-### Sistema financero boliviano
-El sistma financiero boliviano esta constituido por tres sectores que atienden al origen de su capital, el sector financiero privado, el publico y con participación parcial del estado. El estado boliviano mediante la ley 393 es el rector del sistema financiero, mediante la presente ley atravez de 551 articulos definen las limitaciones o restricciones en las actividades de las entidades financieras con ambito de aplicación en todo el territorio de Bolivia ya sea privadas, publicas o las con parcipación parcial del estado.
+### Sistema financiero boliviano
+
+El sistema financiero boliviano está constituido por tres sectores que atienden al origen de su capital, el sector financiero privado, el público y con participación parcial del estado. El estado boliviano mediante la ley 393 es el rector del sistema financiero, mediante la presente ley en su artículo 551 definen las limitaciones o restricciones en las actividades de las entidades financieras con ámbito de aplicación en todo el territorio de Bolivia ya sea privadas, públicas o las con participación parcial del estado.
 
 <!-- ESTADOS FINANCIEROS -->
 ## Estados financieros
 
-El la pagina oficial de la Autoridad de Supervisión del Sistema Financiero (ASFI), se define que los estados financieros constituyen una representación estructurada de la situación financiera y de las transacciones llevadas a cabo por la empresa. Su objetivo, con propósitos de información general, es suministrar información acerca de la situación y rendimiento financieros, así como de los flujos de efectivo que sea útil a una amplia variedad de usuarios al tomar sus decisiones económicas. Los estados financieros también muestran los resultados de la gestión que los administradores han efectuado con los recursos que se les han confiado.[@ASFI]
+En la página oficial de la Autoridad de Supervisión del Sistema Financiero (ASFI), se define que los estados financieros constituyen una representación estructurada de la situación financiera y de las transacciones llevadas a cabo por la empresa. Su objetivo, con propósitos de información general, es suministrar información acerca de la situación y rendimiento financieros, así como de los flujos de efectivo que sea útil a una amplia variedad de usuarios al tomar sus decisiones económicas. Los estados financieros también muestran los resultados de la gestión que los administradores han efectuado con los recursos que se les han confiado. [@ASFI]
+Entonces se afirma, que los estados financieros son un resumen del ejercicio económico de una empresa o institución, entendiendo al ejercicio económico como la suma de todas las actividades vinculadas al giro de la empresa en un intervalo de tiempo, dando información, sobre ingresos, egresos, pasivos, activos, es decir, los estados financieros son una fotografía de la empresa en un punto del tiempo.
 
-Entoces se afirma, que los estados financieros son un resumen del ejercicio economico de una empresa o institución, entendiendo al ejercicio economico como la suma de todas las actividades vinculadas al giro de la empresa en un intervalo de tiempo, dando información, sobre ingresos, egresos, pasivos, activos, es decir, los estados financieros son una fotografia de la empresa en un punto del tiempo.
+### Pronósticos
 
-### Pronosticos
-
-El termino de pronostico de uso común, definido por la Real Academia Española (RAE) como la acción y efecto de pronosticar, la misma RAE define pronosticar como predecir algo en el futuro a partir de indicios. El pronóstico es el proceso de estimación en situaciones de incertidumbre, para los propósitos de esta investigación, un pronóstico es un evento asociado a una distribución de probabilidad.
+El termino de pronóstico de uso común, definido por la Real Academia Española (RAE) como la acción y efecto de pronosticar, la misma RAE define pronosticar como predecir algo en el futuro a partir de indicios. El pronóstico es el proceso de estimación en situaciones de incertidumbre, para los propósitos de esta investigación, un pronóstico es un evento asociado a una distribución de probabilidad.
 
 ### Simulación
 
-La simulación se entiende como la experimentación con un modelo que imita ciertos aspectos de la realidad, esto permite trabajar en condiciones similares a las reales, pero con variables controladas y en un entorno semejante al real pero que esta creado o acondicionada artificialmente, para los propocitos de esta investigación la simulacion mediante redes neuronales son los indicios que toma como base para realizar los pronosticos de los estados financeros de entidades del sistema financieros boliviano.
+La simulación se entiende como la experimentación con un modelo que imita ciertos aspectos de la realidad, esto permite trabajar en condiciones similares a las reales, pero con variables controladas y en un entorno semejante al real pero que esta creado o acondicionada artificialmente, para los propósitos de esta investigación la simulación mediante redes neuronales son los indicios que toma como base para realizar los pronósticos de los estados financieros de entidades del sistema financieros boliviano.
 
 <!-- INTELIGENCIA ARTIFICIAL -->
 ## Inteligencia artificial
 
-El campo de la inteligencia artificial es relativamente reciente, y cobra atención en la actualidad por su capacidad de resolver problemas que con anterioridad sus resultados se divisaban lejanos, como el pronostico de fenomenos no lineles, procesamientos de lenguaje natural, generandor de imagenes, clasificación de objetos, etc. La inteligencia artificial esta compuesta de tres sub campos, en un primer nivel se trata en la interpretación de la información como vectores numericos, que es la unica manera en que puede pecibir el mundo las maquinas, en un segundo nivel esta el aprendizaje automatico se centra el los aloritmos que permiten el aprendizaje al automata, y en un nivel mas avanzado se encuentra el aprendizaje porfundo donde se dota de mas independencia a lo modelos de inteligencia artificial similares a la de los humanos.
+El campo de la inteligencia artificial es relativamente reciente, y cobra atención en la actualidad por su capacidad de resolver problemas que con anterioridad sus resultados se divisaban lejanos, como el pronóstico de fenómenos no lineales, procesamientos de lenguaje natural, generador de imágenes, clasificación de objetos, etc. La inteligencia artificial está compuesta de tres sub campos, en un primer nivel se trata en la interpretación de la información como vectores numéricos, que es la única manera en que puede percibir el mundo las maquinas, en un segundo nivel está el aprendizaje automático se centra en los algoritmos que permiten el aprendizaje al autómata, y en un nivel más avanzado se encuentra el aprendizaje profundo donde se dota de más independencia a los modelos de inteligencia artificial similares a la de los humanos.
 
 ### Aprendizaje supervisado con redes neuronales
 
-El aprendizaje supervisado una rama del aprendizaje automatico, son algoritmos que permiten aprender a la red neuronal atrabajes de datos dejemplos que estan compuesta por un vector de entrada que son las variables independientes, y otro vector denomina etiquetas, donde la red se encarga de encotrar la relaciones existentes entre las variables independientes, realizando cambios y adaptando el modelo por medio de variaciones sujetas a una función de coste.  
+El aprendizaje supervisado una rama del aprendizaje automático, son algoritmos que permiten aprender a la red neuronal mediante datos ejemplos que están compuesta por un vector de entrada que son las variables independientes, y otro vector denomina etiquetas, donde la red se encarga de encontrar las relaciones existentes entre las variables independientes, realizando cambios y adaptando el modelo por medio de variaciones sujetas a una función de coste.  
 
 ### Aprendizaje no supervisado con redes neuronales
 
-Aprendizaje no supervisado es un método de aprendizaje automático donde la red neuronal se ajusta a las observaciones. Se distingue del aprendizaje supervisado por el hecho de que no hay un conocimiento a priori es decir etiquetas que sirvan como guia, en el aprendizaje no supervisado solo se cuenta con un conjunto de datos de objetos de entrada.
+Aprendizaje no supervisado es un método de aprendizaje automático donde la red neuronal se ajusta a las observaciones. Se distingue del aprendizaje supervisado por el hecho de que no hay un conocimiento a priori es decir etiquetas que sirvan como guía, en el aprendizaje no supervisado solo se cuenta con un conjunto de datos de objetos de entrada.
 
 <!-- REDES NEURONALES ARTIFICIALES -->
+
 ## Redes neuronales artificiales
 
-Una red neuronal es un método del aprendizaje automatico que enseña a las computadoras a procesar datos de una manera que está inspirada en la forma en que lo hace el cerebro humano, las redes neuronales artificiales es modelo computacional resultado de diversas aportaciones científicas, consiste en un conjunto de unidades, llamadas neuronas artificiales, inpspiradas en las neuronas del cerebro conectadas entre sí para transmitirse señales.
+Una red neuronal es un método del aprendizaje automático que enseña a las computadoras a procesar datos de una manera que está inspirada en la forma en que lo hace el cerebro humano, las redes neuronales artificiales es modelo computacional resultado de diversas aportaciones científicas, consiste en un conjunto de unidades, llamadas neuronas artificiales, inspiradas en las neuronas del cerebro conectadas entre sí para transmitirse señales.
 
 \begin{figure}
 \centering
@@ -51,21 +52,23 @@ Una red neuronal es un método del aprendizaje automatico que enseña a las comp
 \caption{Neurona}
 \end{figure}
 
-La redes neuronales artificiales son modelos de aprendizaje de problemas no lineales que buscan generalizar información extraida de datos ordenados en vectores, que dotan a dicha red neuronal con la capacidad de realizar clasificaciones o regresiones.
+Las redes neuronales artificiales son modelos de aprendizaje de problemas no lineales que buscan generalizar información extraída de datos ordenados en vectores, que dotan a dicha red neuronal con la capacidad de realizar clasificaciones o regresiones.
 
 \newpage
-### Elemntos de una red neuronal
+### Elementos de una red neuronal
 
 Los elementos de una red neuronal se resumen en la siguiente figura:
 
 \input{RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/red-neuronal}
 
-Y como todo sistema es el resultado de la interacción de elementos simples tabajando conjuntamente, que se presenta a continuación.
+Y como todo sistema es el resultado de la interacción de elementos simples trabajando conjuntamente, que se presenta a continuación.
 
 ### Neurona artificial
-La neurona es la unidad basica de procesamiento de una red neuronal de ahi el nombre, igual que su equivalente biologico una neura artificial recibe estimulos externos y devuelve otro valor, esta es expresada matematicamente como una función, donde la neurona realiza una suma ponderada con los datos de entrada.
-\newline
+
+La neurona es la unidad básica de procesamiento de una red neuronal de ahí el nombre, igual que su equivalente biológico una neura artificial recibe estímulos externos y devuelve otro valor, esta es expresada matemáticamente como una función, donde la neurona realiza una suma ponderada con los datos de entrada.
+
 Dado:
+
 $$ X = \left( x_{1},x_{2},x_{3},...,x_{n} \right) $$
 Se tiene:
 $$ Y = f(X) = \sum_{i=1}^{n}{w_{i}x_{i}}  = \sum{WX}  $$
@@ -77,59 +80,56 @@ Y = Vector resultado de la suma ponderada.
 \newline
 W = Vector de los pesos las variables independientes.
 
-La arquitectura de la red neuronal corresponde a la manera en que esta ordenas las neuronas, si las neuronas son colocadas de forma verticas, resiven los mismos datos de entrada y sus resultados de salida lo pasan a la siguiente capa, la ultima capa de una red neural se denomian capa de salida y las capas que esten entre la capa de salida y capa de entrada se denominas capas ocultas. Ahora bien al ser cada neurana una suma ponderada esta equivaldria a una sola capa de la red, a esto se denomina colición de la red neuronal, para resolver este problema se planteo los que se conoce como función de activación que es una función no lineal que distoriciona los resultados salientes de cada neurona.
+La arquitectura de la red neuronal corresponde a la manera en que esta ordenas las neuronas, si las neuronas son colocadas de forma vertical, reciben los mismos datos de entrada y sus resultados de salida lo pasan a la siguiente capa, la última capa de una red neural se denominan capa de salida y las capas que estén entre la capa de salida y capa de entrada se denominas capas ocultas. Ahora bien, al ser cada neurona una suma ponderada esta equivaldría a una sola capa de la red, a esto se denomina colisión de la red neuronal, para resolver este problema se planteó los que se conoce como función de activación que es una función no lineal que distorsiona los resultados salientes de cada neurona.
+
 $$A = f(Y)$$
 
 ### Funciones de activación
 
-Las funciones de activación distorcionan de forma no lineal las salidas de las neuronas para asi no colapsar la red, dentro las funciones de activación mas conocidas tenemos:
+Las funciones de activación distorsionan de forma no lineal las salidas de las neuronas para asi no colapsar la red, dentro las funciones de activación más conocidas tenemos:
 
-#### Funcion escalonada
+#### Función escalonada
+
 Esta función asigna el valor de 1 si la salida de la neura supera cierto umbral y cero si no lo supera.
 
 \begin{figure}
 \centering
 \includegraphics[width=10cm, height=8cm]{RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/funcion-escalonada.png}
-\caption{Funcion de activación escalonada}
+\caption{Función de activación escalonada}
 \end{figure}
 
 #### Función sigmoide
-Esta función genera un en un rango de valores de salida que estan entre cero y uno por lo que la salida es interpretada como una probabilidad. 
+
+Esta función genera un en un rango de valores de salida que están entre cero y uno por lo que la salida es interpretada como una probabilidad. 
 
 $$ f(x) = \frac{1}{1-e^{-x}}$$
 \begin{figure}
+
 \centering
 \includegraphics[width=10cm, height=8cm]{RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/funcion-sigmoide.png}
-\caption{Funcion de activación sigmoide}
+\caption{Función de activación sigmoide}
+
 \end{figure}
 
-#### Función hiperbolica
+#### Función hiperbólica
+
 Esta función de activación llamada tangente hiperbólica tiene un rango de valores de salida entre -1 y 1.
 
 $$ f(x) = \frac{2}{1-e^{-2x}} - 1 $$
 \begin{figure}
+
 \centering
 \includegraphics[width=10cm, height=8cm]{RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/funcion-hiperbolica.png}
-\caption{Funcion de activación hiperbolica}
+\caption{Función de activación hiperbólica}
+
 \end{figure}
 
+### Propagación hacia atrás
 
-### Propagación hacia atras
-
-El nombre de backpropagation resulta de la forma en que el error es propagado
-hacia atrás a través de la red neuronal, en otras palabras el error se propaga hacia atrás
-desde la capa de salida. Esto permite que los pesos sobre las conexiones de las neuronas
-ubicadas en las capas ocultas cambien durante el entrenamiento.
-El cambio de los pesos en las conexiones de las neuronas además de influir
-sobre la entrada global, influye en la activación y por consiguiente en la salida de una
-neurona. Por lo tanto, es de gran utilidad considerar las variaciones de la función
-activación al modificarse el valor de los pesos. Esto se llama sensibilidad de la función
-activación, de acuerdo al cambio en los pesos.
+El nombre de propagación hacia atrás resulta de la forma en que el error es propagado hacia atrás a través de la red neuronal, en decir, que el error se propaga hacia atrás desde la capa de salida hasta la capa de entrada. Esto permite que los pesos de las conexiones de las neuronas ubicadas en las capas ocultas cambien durante el entrenamiento. El cambio de los pesos en las conexiones de las neuronas además de influir sobre la entrada global, influye en la activación y por consiguiente en la salida de una neurona. Por lo tanto, es de gran utilidad considerar las variaciones de la función activación al modificarse el valor de los pesos. Esto se llama sensibilidad de la función activación, de acuerdo al cambio en los pesos.
 
 <!-- OVERFITTING, UNDERFITTING  -->
 ## Sobreajuste y desajuste
 
 En aprendizaje automático, el sobreajuste (overfitting) es el efecto de sobreentrenar un algoritmo de aprendizaje con unos ciertos datos para los que se conoce el resultado deseado. El desajuste (underfitting) ocurre cuando un modelo estadístico o un algoritmo de aprendizaje automático no puede capturar la tendencia subyacente de los datos. Se produciría un desajuste, por ejemplo, al ajustar un modelo lineal a datos no lineales. Un modelo así también tendría un rendimiento predictivo deficiente.
-
-
 

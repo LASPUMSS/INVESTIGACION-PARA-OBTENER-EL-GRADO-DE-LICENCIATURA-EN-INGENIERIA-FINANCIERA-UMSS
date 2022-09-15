@@ -2,9 +2,9 @@
 output: pdf_document
 ---
 
-# Hipotesis
+# Hipótesis
 
-Con la determinación y análisis de la red neural artificial de estados financieros de entidades financieras de Bolivia se logragra la evaluación de las proyecciones de estados financieros facilitadoras de la toma de decisiones gerenciales acertadas.
+Con la determinación y análisis de la red neural artificial de estados financieros de entidades financieras de Bolivia se lograra la evaluación de las proyecciones de estados financieros facilitadoras de la toma de decisiones gerenciales acertadas.
 
 ## Elementos componentes
 

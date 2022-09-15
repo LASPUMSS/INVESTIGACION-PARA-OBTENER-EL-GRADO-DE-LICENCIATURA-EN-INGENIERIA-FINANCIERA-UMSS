@@ -4,8 +4,3 @@ output: pdf_document
 
 # Planteamiento del problema
 
-En un campo financiero cada vez más complejo,
-
-En un mundo cada vez más globalizado, y siendo el entorno financiero el sector que más ha sido impactado por la integración económica multilateral entre países, que implica la globalización, los agentes económicos de cualquier país pueden acceder en la actualidad a una mayor cantidad de productos y/o servicios financieros, lo que implica una oportunidad de incrementar sus rendimientos, pero sin dejar de lado que el riesgo de operar en estos mercados también se ha incrementado.
-
-Una de las alternativas de inversión que ofrecen los mercados financieros, y que es el objeto de estudio en esta investigación que se propone, son las acciones ordinarias, que si bien proporcionan mayores rendimientos que los productos financieros tradicionales, citando un ejemplo, las cajas de ahorro, dichas acciones ordinarias también están sujetas a mayor riesgo, es por esta razón la necesidad de evaluarlas de manera objetiva, por herramientas que están contenidas en las finanzas, como ser el método de flujos descontados.

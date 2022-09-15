@@ -2,7 +2,8 @@
 output: pdf_document
 ---
 
-# Marco Metodico
+# Marco Metódico
+
 El tipo de investigación que se aplicará en el informe final será el descriptivo y analítico, para describir y estudiar la realidad presente de los hechos de las unidades de observación y análisis.
-Se identificara la arquitectura de la red neuronal, que esta compuesta de las funciones de activación, y ajuste de los datos en formato de tablas.
+Se identificará la arquitectura de la red neuronal, que está compuesta de las funciones de activación, y ajuste de los datos en formato de tablas.
 Los procedimientos a ser aplicados en el informe final, estarán orientados a los métodos inductivo, deductivo, analítico fundamentalmente.

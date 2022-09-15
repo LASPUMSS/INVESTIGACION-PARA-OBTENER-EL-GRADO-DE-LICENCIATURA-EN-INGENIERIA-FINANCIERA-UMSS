@@ -25,9 +25,10 @@ cronograma <- data.frame(
                  "6")
 )
 
-names(cronograma) <- c("Descripcion de la actividad", "Duración en semanas")
+names(cronograma) <- c("Descripción de la actividad", "Duración en semanas")
 
 cronograma
+
 
 ```
 

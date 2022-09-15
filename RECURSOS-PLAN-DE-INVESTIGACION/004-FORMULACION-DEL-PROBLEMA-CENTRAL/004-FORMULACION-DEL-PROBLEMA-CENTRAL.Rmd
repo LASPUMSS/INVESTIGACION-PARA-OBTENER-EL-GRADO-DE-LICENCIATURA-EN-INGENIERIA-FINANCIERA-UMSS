@@ -4,4 +4,4 @@ output: pdf_document
 
 # Formulación del problema central
 
-¿Para qué es importante, realizar proyeccciones de estados financieros por el metodo de redes neuronales?
+¿Para qué es importante, realizar proyecciones de estados financieros por el método de redes neuronales?

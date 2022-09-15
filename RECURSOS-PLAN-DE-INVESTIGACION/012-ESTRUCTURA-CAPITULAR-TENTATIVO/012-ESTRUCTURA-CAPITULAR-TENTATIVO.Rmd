@@ -41,18 +41,18 @@ Sistema financiero nacional
 Objetivos del sustento teórico
 \newline Definición de términos financieros básicos
 \newline Intermediación financiera y regulación financiera
-\newline Aprendizaje automatico
+\newline Aprendizaje automático
 \newline Arquitectura de las redes neuronales artificiales
-\newline Funcion de coste
+\newline Función de coste
 \newline Funciones de activación
 \newline Definición de sobreajuste y desajuste de las redes neuronales.
 
 \vspace{3.5mm}
-**Capítulo IV Determinación de pronosticos de estados fiancieros por redes neuronales artificiales**
+**Capítulo IV Determinación de pronósticos de estados financieros por redes neuronales artificiales**
 \vspace{3.5mm}
 
 Ordenado en vectores de los estados financieros
-\newline Definición de la funcion de coste de la red neuronal
+\newline Definición de la función de coste de la red neuronal
 \newline Determinación de funciones de activación
 \newline Entrenamiento de la red neuronal
 \newline Evaluación de sobreajuste o desajuste de la red neuronal
