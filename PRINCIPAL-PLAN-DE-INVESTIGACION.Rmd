@@ -2,7 +2,7 @@
 output: 
     pdf_document:
         includes:
-            in_header: styles001.sty
+            in_header: styles.sty
         df_print: kable
 bibliography: references.bib 
 csl: apa.csl

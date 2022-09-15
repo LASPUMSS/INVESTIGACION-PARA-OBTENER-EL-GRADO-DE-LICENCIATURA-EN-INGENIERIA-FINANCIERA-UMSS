@@ -1,6 +1,5 @@
 ---
 output: html_document
-bibliography: references.bib 
 ---
 
 # Bibliografia a ser consultada
