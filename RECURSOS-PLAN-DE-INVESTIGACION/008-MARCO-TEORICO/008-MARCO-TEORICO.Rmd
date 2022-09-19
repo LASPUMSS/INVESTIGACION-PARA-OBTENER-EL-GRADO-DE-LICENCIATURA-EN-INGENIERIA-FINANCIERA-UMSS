@@ -59,7 +59,12 @@ Las redes neuronales artificiales son modelos de aprendizaje de problemas no lin
 
 Los elementos de una red neuronal se resumen en la siguiente figura:
 
-\input{RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/red-neuronal}
+\begin{figure}
+\centering
+\includegraphics[width=10cm, height=8cm]{RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/red-neuronal.png}
+\caption{Red Neuronal Artificial}
+\end{figure}
+
 
 Y como todo sistema es el resultado de la interacción de elementos simples trabajando conjuntamente, que se presenta a continuación.
 

@@ -9,7 +9,7 @@ output: pdf_document
 **Tema específico: Proyección de estados financieros por el método de redes neuronales artificiales.**
 \newline
 \newline
-**PROYECCION DE ESTADOS FINANCIEROS POR EL MEDOTO DE REDES NEURONALES**
+**PROYECCION DE ESTADOS FINANCIEROS POR EL MEDOTO DE REDES NEURONALES ARTIFICIALES**
 
 # Antecedentes
 
