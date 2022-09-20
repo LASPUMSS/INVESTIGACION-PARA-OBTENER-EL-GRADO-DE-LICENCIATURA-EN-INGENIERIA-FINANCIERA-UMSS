@@ -46,7 +46,7 @@ Aprendizaje no supervisado es un método de aprendizaje automático donde la red
 
 Una red neuronal es un método del aprendizaje automático que enseña a las computadoras a procesar datos de una manera que está inspirada en la forma en que lo hace el cerebro humano, las redes neuronales artificiales es modelo computacional resultado de diversas aportaciones científicas, consiste en un conjunto de unidades, llamadas neuronas artificiales, inspiradas en las neuronas del cerebro conectadas entre sí para transmitirse señales.
 
-\begin{figure}
+\begin{figure}[htb]
 \centering
 \includegraphics[width=10cm, height=8cm]{RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/neurona-real.jpg}
 \caption{Neurona}
@@ -59,7 +59,7 @@ Las redes neuronales artificiales son modelos de aprendizaje de problemas no lin
 
 Los elementos de una red neuronal se resumen en la siguiente figura:
 
-\begin{figure}
+\begin{figure}[htb]
 \centering
 \includegraphics[width=10cm, height=8cm]{RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/red-neuronal.png}
 \caption{Red Neuronal Artificial}
@@ -97,7 +97,7 @@ Las funciones de activación distorsionan de forma no lineal las salidas de las 
 
 Esta función asigna el valor de 1 si la salida de la neura supera cierto umbral y cero si no lo supera.
 
-\begin{figure}
+\begin{figure}[htb]
 \centering
 \includegraphics[width=10cm, height=8cm]{RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/funcion-escalonada.png}
 \caption{Función de activación escalonada}
@@ -108,7 +108,7 @@ Esta función asigna el valor de 1 si la salida de la neura supera cierto umbral
 Esta función genera un en un rango de valores de salida que están entre cero y uno por lo que la salida es interpretada como una probabilidad. 
 
 $$ f(x) = \frac{1}{1-e^{-x}}$$
-\begin{figure}
+\begin{figure}[htb]
 
 \centering
 \includegraphics[width=10cm, height=8cm]{RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/funcion-sigmoide.png}
@@ -121,7 +121,7 @@ $$ f(x) = \frac{1}{1-e^{-x}}$$
 Esta función de activación llamada tangente hiperbólica tiene un rango de valores de salida entre -1 y 1.
 
 $$ f(x) = \frac{2}{1-e^{-2x}} - 1 $$
-\begin{figure}
+\begin{figure}[htb]
 
 \centering
 \includegraphics[width=10cm, height=8cm]{RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/funcion-hiperbolica.png}

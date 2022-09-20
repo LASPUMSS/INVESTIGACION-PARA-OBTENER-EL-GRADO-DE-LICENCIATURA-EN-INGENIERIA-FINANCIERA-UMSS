@@ -61,12 +61,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```
 
-<!-- HIPOTESIS -->
-
-```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/009-HIPOTESIS/009-HIPOTESIS.Rmd"}
-
-```
-
 <!-- MARCO METODICO -->
 
 ```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/010-MARCO-METODICO/010-MARCO-METODICO.Rmd"}
