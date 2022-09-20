@@ -34,6 +34,6 @@ cronograma
 
 \begin{figure}
 \centering
-\includegraphics[width=15cm,height=10cm]{RECURSOS-PLAN-DE-INVESTIGACION/013-CRONOGRAMA-DEL-TRABAJO-DE-INVESTIGACION/gantt.png}
+\includegraphics[width=10cm,height=8cm]{RECURSOS-PLAN-DE-INVESTIGACION/013-CRONOGRAMA-DEL-TRABAJO-DE-INVESTIGACION/gantt.png}
 \caption{Diagrama de Gantt del cronograma del trabajo de investigación}
 \end{figure}
