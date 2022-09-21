@@ -4,6 +4,19 @@ output: pdf_document
 
 # Marco Metódico
 
-El tipo de investigación que se aplicará en el informe final será el descriptivo y analítico, para describir y estudiar la realidad presente de los hechos de las unidades de observación y análisis.
-Se identificará la arquitectura de la red neuronal, que está compuesta de las funciones de activación, y ajuste de los datos en formato de tablas.
-Los procedimientos a ser aplicados en el informe final, estarán orientados a los métodos inductivo, deductivo, analítico fundamentalmente.
+## Tipo de investigación
+
+El tipo de investigación que se aplicará en el informe final será el descriptivo y analítico, donce se busca describir y estudiar la realidad presente de los hechos de las unidades de observación y análisis.
+
+
+## Método de investigación
+
+Donde se aplicara un enfoque inductivo donde desde hechos particulares se llegara a conclusiones generales, que posteriormente puedan ser aplicadas en otras instituciones financieras de manera exitosa y beneficiar al sistema financiero con nuestra propuesta.
+Tambien cabe especificar que los procedimientos a ser aplicados en el informe final, estarán orientados a los métodos inductivo, deductivo, analítico fundamentalmente.
+
+
+## Tecnicas de investigación
+
+En primera instancia se realizara la identificación del problema de investigación que ya esta establecida en el proyecto de grado, donde se identificará la arquitectura de la red neuronal, que está compuesta de las funciones de activación, y ajuste de los datos en formato de tablas. Posteriormente se realizara la etapa de recolección de datos e información del sistema financiero corespondiente a las fuentes secundarias. Para que en consecuencia con la obtención de la información se realizara el ordenameinto de dicha información recopilada para su procesamiento que permitirá dar un análisis concreto y preciso y a la vez realizar su sistematización para la obtención del diagnóstico.
+
+\input{RECURSOS-PLAN-DE-INVESTIGACION/010-MARCO-METODICO/tabla-marco-metodico}

@@ -4,72 +4,39 @@ output: pdf_document
 
 # Estructura capitular tentativo
 
-Agradecimiento
-\newline Dedicatoria
-\newline Resumen
-\newline Abstract
-\newline Índice de contenido
-\newline Índice de tablas, gráficas, cuadros, etc.
-\newline Introducción
-
 \vspace{3.5mm}
-**Capítulo I Antecedentes**
+**Capítulo 1 Perfil del proyecto**
 \vspace{3.5mm}
 
-Históricos
-\newline Legales
-\newline Organizacionales
-\newline Económicos y financieros
-\newline Intermediación financiera
-\newline Sociales
-
 \vspace{3.5mm}
-**Capítulo II Diagnóstico de las instituciones financieras del sistema financiero**
-\vspace{3.5mm}
-
-Sistema financiero nacional
-\newline Organización y administración 
-\newline Sistemas de información y toma de decisiones
-\newline Productos financieros
-\newline Justificación e importancia
-\newline Obtención de las conclusiones preliminares y sus soluciones
-
-\vspace{3.5mm}
-**Capítulo III Marco teórico**
+**Capítulo 2 Marco teórico**
 \vspace{3.5mm}
 
 Objetivos del sustento teórico
-\newline Definición de términos financieros básicos
-\newline Intermediación financiera y regulación financiera
-\newline Aprendizaje automático
-\newline Arquitectura de las redes neuronales artificiales
-\newline Función de coste
-\newline Funciones de activación
-\newline Definición de sobreajuste y desajuste de las redes neuronales.
+\newline 2.1 Definición de términos financieros básicos
+\newline 2.2 Intermediación financiera y regulación financiera
+\newline 2.3 Aprendizaje automático
+\newline 2.4 Arquitectura de las redes neuronales artificiales
+\newline 2.5 Función de coste
+\newline 2.6 Funciones de activación
+\newline 2.7 Definición de sobreajuste y desajuste de las redes neuronales.
 
 \vspace{3.5mm}
-**Capítulo IV Determinación de pronósticos de estados financieros por redes neuronales artificiales**
+**Capítulo 3 Diagnóstico de las instituciones financieras del sistema financiero**
 \vspace{3.5mm}
 
-Ordenado en vectores de los estados financieros
-\newline Definición de la función de coste de la red neuronal
-\newline Determinación de funciones de activación
-\newline Entrenamiento de la red neuronal
-\newline Evaluación de sobreajuste o desajuste de la red neuronal
-\newline Limitaciones de las redes neuronales
 
 \vspace{3.5mm}
-**Capítulo V Simulación del tema de investigación**
+**Capítulo 4 Determinación de pronósticos de estados financieros por redes neuronales artificiales**
 \vspace{3.5mm}
 
-Planteamiento de supuestos
 
 \vspace{3.5mm}
-**Capítulo VI Conclusiones y recomendaciones**
+**Capítulo 5 Conclusiones y recomendaciones**
 \vspace{3.5mm}
 
-Conclusiones
-\newline Recomendaciones
+5.1 Conclusiones
+\newline 5.2 Recomendaciones
 
 \vspace{3.5mm}
 **Bibliografía consultada**

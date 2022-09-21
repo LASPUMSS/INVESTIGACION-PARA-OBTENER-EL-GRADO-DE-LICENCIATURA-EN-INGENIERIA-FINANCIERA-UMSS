@@ -3,34 +3,12 @@ output:
     pdf_document:
         df_print: kable
 ---
-
+\newpage
 # Cronograma del trabajo de investigación
 
-```{r, echo=FALSE}
 
-cronograma <- data.frame(
-  "Actividad" = c("Revisión de fuentes bibliográficas.", 
-                  "Recopilación de la información necesaria de la unidad de observación.",
-                  "Estructuración de la información recopilada para la redacción del informe final.", 
-                  "Aplicación de método de redes neuronales para la proyección de estados financieros.",
-                  "Descripción de los resultados obtenidos como respuesta a los objetivos planteados.",
-                  "Interpretación de las conclusiones y recomendaciones.",
-                  "Presentación, revisión, aprobación, exposición y defensa del informe final."), 
-  "Duración" = c("8", 
-                 "4", 
-                 "9",
-                 "5",
-                 "4",
-                 "4",
-                 "6")
-)
+\input{RECURSOS-PLAN-DE-INVESTIGACION/013-CRONOGRAMA-DEL-TRABAJO-DE-INVESTIGACION/cronograma}
 
-names(cronograma) <- c("Descripción de la actividad", "Duración en semanas")
-
-cronograma
-
-
-```
 
 \begin{figure}
 \centering

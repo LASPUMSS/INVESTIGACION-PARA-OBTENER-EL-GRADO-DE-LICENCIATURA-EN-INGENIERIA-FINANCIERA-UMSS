@@ -19,6 +19,8 @@ knitr::opts_chunk$set(echo = TRUE)
 \setcounter{tocdepth}{2}
 \tableofcontents
 \listoffigures
+\listoftables
+
 <!--ANTECEDENTES-->
 \newpage
 ```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/002-ANTECEDENTES/002-ANTECEDENTES.Rmd"}
