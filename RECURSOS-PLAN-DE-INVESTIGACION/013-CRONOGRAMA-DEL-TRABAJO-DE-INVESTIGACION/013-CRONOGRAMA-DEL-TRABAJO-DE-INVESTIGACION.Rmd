@@ -5,7 +5,7 @@ output:
 ---
 \newpage
 # Cronograma del trabajo de investigación
-
+El trabajo de investigación se sunscribira a las actividades definidas en la siguiente tabla.
 
 \input{RECURSOS-PLAN-DE-INVESTIGACION/013-CRONOGRAMA-DEL-TRABAJO-DE-INVESTIGACION/cronograma}
 
