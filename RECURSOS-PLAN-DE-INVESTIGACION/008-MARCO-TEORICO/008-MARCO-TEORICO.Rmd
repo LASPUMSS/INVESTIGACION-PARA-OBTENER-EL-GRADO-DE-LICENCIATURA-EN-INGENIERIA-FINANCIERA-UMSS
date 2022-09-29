@@ -6,12 +6,9 @@ output: pdf_document
 
 <!-- ESTADOS FINANCIEROS -->
 ## Sistema financiero
+El sistema financiero, consiste en diversas instituciones y mercados que sirven a las empresas de negocios, los individuos y los gobiernos.[@FAF]
 
-El sistema financiero en general está formado por el conjunto de instituciones, constituidas en mercados, cuyo fin principal es canalizar el ahorro que generan los ahorradores hacia los prestatarios, así como facilitar y otorgar seguridad al movimiento de dinero y al sistema de pagos.
-
-### Sistema financiero boliviano
-
-El sistema financiero boliviano está constituido por tres sectores que atienden al origen de su capital, el sector financiero privado, el público y con participación parcial del estado. El estado boliviano mediante la ley 393 es el rector del sistema financiero, mediante la presente ley en su artículo 551 definen las limitaciones o restricciones en las actividades de las entidades financieras con ámbito de aplicación en todo el territorio de Bolivia ya sea privadas, públicas o las con participación parcial del estado.
+Entonces se afirma que el sistema financiero en general está formado por el conjunto de instituciones, constituidas en mercados, cuyo fin principal es canalizar el ahorro que generan los ahorradores hacia los prestatarios, así como facilitar y otorgar seguridad al movimiento de dinero y al sistema de pagos.En consecuenecia al alacance y limitaciones del estudio de esta investigacion se define al sistema financiero boliviano que está constituido por tres sectores que atienden al origen de su capital, el sector financiero privado, el público y con participación parcial del estado.
 
 <!-- ESTADOS FINANCIEROS -->
 ## Estados financieros
@@ -23,21 +20,29 @@ Entonces se afirma, que los estados financieros son un resumen del ejercicio eco
 ### Pronósticos
 
 El termino de pronóstico de uso común, definido por la Real Academia Española (RAE) como la acción y efecto de pronosticar, la misma RAE define pronosticar como predecir algo en el futuro a partir de indicios. El pronóstico es el proceso de estimación en situaciones de incertidumbre, para los propósitos de esta investigación, un pronóstico es un evento asociado a una distribución de probabilidad.
-
+<!-- 
 ### Simulación
+La simulación es una herramienta flexible para realizar un análisis de riesgo de procesos financieros mediante la imitación repetida de la evolución de las transacciones necesarias para generar un perfi l de los resultados posibles.[@IIOF]
 
-La simulación se entiende como la experimentación con un modelo que imita ciertos aspectos de la realidad, esto permite trabajar en condiciones similares a las reales, pero con variables controladas y en un entorno semejante al real pero que esta creado o acondicionada artificialmente, para los propósitos de esta investigación la simulación mediante redes neuronales son los indicios que toma como base para realizar los pronósticos de los estados financieros de entidades del sistema financieros boliviano.
+Con lo anterior apartado, la simulación se entiende como la experimentación donde un modelo imita ciertos aspectos de la realidad, esto permite trabajar en condiciones similares a las reales, pero con variables controladas y en un entorno semejante al real pero que esta creado o acondicionado artificialmente, para los propósitos de esta investigación la simulación mediante redes neuronales son los indicios que toma como base para realizar los pronósticos de los estados financieros de entidades del sistema financieros boliviano.
+-->
 
 <!-- INTELIGENCIA ARTIFICIAL -->
 ## Inteligencia artificial
 
-El campo de la inteligencia artificial es relativamente reciente, y cobra atención en la actualidad por su capacidad de resolver problemas que con anterioridad sus resultados se divisaban lejanos, como el pronóstico de fenómenos no lineales, procesamientos de lenguaje natural, generador de imágenes, clasificación de objetos, etc. La inteligencia artificial está compuesta de tres sub campos, en un primer nivel se trata en la interpretación de la información como vectores numéricos, que es la única manera en que puede percibir el mundo las maquinas, en un segundo nivel está el aprendizaje automático se centra en los algoritmos que permiten el aprendizaje al autómata, y en un nivel más avanzado se encuentra el aprendizaje profundo donde se dota de más independencia a los modelos de inteligencia artificial similares a la de los humanos.
+En la literatura referente a la inteligencia artificial no existe consenso sobre lo que se entiende como inteligencia artificial, pero estas diferencias se englobal en dos ideas, donde la inteligencia artificial se refieren a procesos mentales y al razonamiento.[@IAUEM]
+
+Ahora bien el campo de la inteligencia artificial es relativamente reciente, y cobra atención en la actualidad por su capacidad de resolver problemas que con anterioridad sus resultados se divisaban lejanos, como el pronóstico de fenómenos no lineales, procesamientos de lenguaje natural, generador de imágenes, clasificación de objetos, etc. 
 
 ### Aprendizaje supervisado con redes neuronales
+
+El aprendizaje supervisado corresponde a la situación en que se tiene una variable de salida, ya sea cuantitativa o cualitativa, que se desea predecir basándose en un conjunto de características.[@IALAT]
 
 El aprendizaje supervisado una rama del aprendizaje automático, son algoritmos que permiten aprender a la red neuronal mediante datos ejemplos que están compuesta por un vector de entrada que son las variables independientes, y otro vector denomina etiquetas, donde la red se encarga de encontrar las relaciones existentes entre las variables independientes, realizando cambios y adaptando el modelo por medio de variaciones sujetas a una función de coste.  
 
 ### Aprendizaje no supervisado con redes neuronales
+
+El aprendizaje no supervisado corresponde a la situación en que existe un conjunto de datos que contienen diversas características de determinados individuos, sin que ninguna de ellas se considere una variable de salida que se desee predecir.[@IALAT]
 
 Aprendizaje no supervisado es un método de aprendizaje automático donde la red neuronal se ajusta a las observaciones. Se distingue del aprendizaje supervisado por el hecho de que no hay un conocimiento a priori es decir etiquetas que sirvan como guía, en el aprendizaje no supervisado solo se cuenta con un conjunto de datos de objetos de entrada.
 
@@ -45,13 +50,9 @@ Aprendizaje no supervisado es un método de aprendizaje automático donde la red
 
 ## Redes neuronales artificiales
 
-Una red neuronal es un método del aprendizaje automático que enseña a las computadoras a procesar datos de una manera que está inspirada en la forma en que lo hace el cerebro humano, las redes neuronales artificiales es modelo computacional resultado de diversas aportaciones científicas, consiste en un conjunto de unidades, llamadas neuronas artificiales, inspiradas en las neuronas del cerebro conectadas entre sí para transmitirse señales.
+Las Redes Neuronales son un paradigma de aprendizaje y procesamiento automático inspirado en la forma en que funciona el cerebro para realizar las tareas de pensar y tomar decisiones (sistema nervioso).[@IALAT]
 
-\begin{figure}
-\centering
-\includegraphics[width=10cm, height=8cm]{RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/neurona-real.jpg}
-\caption{Neurona}
-\end{figure}
+Una red neuronal es un método del aprendizaje automático que enseña a las computadoras a procesar datos de una manera que está inspirada en la forma en que lo hace el cerebro humano, las redes neuronales artificiales es modelo computacional resultado de diversas aportaciones científicas, consiste en un conjunto de unidades, llamadas neuronas artificiales, inspiradas en las neuronas del cerebro conectadas entre sí para transmitirse señales.
 
 Las redes neuronales artificiales son modelos de aprendizaje de problemas no lineales que buscan generalizar información extraída de datos ordenados en vectores, que dotan a dicha red neuronal con la capacidad de realizar clasificaciones o regresiones.
 
@@ -98,44 +99,28 @@ Las funciones de activación distorsionan de forma no lineal las salidas de las 
 
 Esta función asigna el valor de 1 si la salida de la neura supera cierto umbral y cero si no lo supera.
 
-\begin{figure}
-\centering
-\includegraphics[width=10cm, height=8cm]{RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/funcion-escalonada.png}
-\caption{Función de activación escalonada}
-\end{figure}
-
 #### Función sigmoide
 
 Esta función genera un en un rango de valores de salida que están entre cero y uno por lo que la salida es interpretada como una probabilidad. 
 
 $$ f(x) = \frac{1}{1-e^{-x}}$$
-\begin{figure}
-
-\centering
-\includegraphics[width=10cm, height=8cm]{RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/funcion-sigmoide.png}
-\caption{Función de activación sigmoide}
-
-\end{figure}
 
 #### Función hiperbólica
 
 Esta función de activación llamada tangente hiperbólica tiene un rango de valores de salida entre -1 y 1.
 
 $$ f(x) = \frac{2}{1-e^{-2x}} - 1 $$
-\begin{figure}
-
-\centering
-\includegraphics[width=10cm, height=8cm]{RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/funcion-hiperbolica.png}
-\caption{Función de activación hiperbólica}
-
-\end{figure}
-
+<!-- 
 ### Propagación hacia atrás
+
+El algoritmo de propagación hacia atrás (back-propagation) implementa un descenso del gradiente en el espacio de parámetros para minimizar el error de la salida.[@IAUEM]
 
 El nombre de propagación hacia atrás resulta de la forma en que el error es propagado hacia atrás a través de la red neuronal, en decir, que el error se propaga hacia atrás desde la capa de salida hasta la capa de entrada. Esto permite que los pesos de las conexiones de las neuronas ubicadas en las capas ocultas cambien durante el entrenamiento. El cambio de los pesos en las conexiones de las neuronas además de influir sobre la entrada global, influye en la activación y por consiguiente en la salida de una neurona. Por lo tanto, es de gran utilidad considerar las variaciones de la función activación al modificarse el valor de los pesos. Esto se llama sensibilidad de la función activación, de acuerdo al cambio en los pesos.
 
-<!-- OVERFITTING, UNDERFITTING  -->
+OVERFITTING, UNDERFITTING 
 ## Sobreajuste y desajuste
 
-En aprendizaje automático, el sobreajuste (overfitting) es el efecto de sobreentrenar un algoritmo de aprendizaje con unos ciertos datos para los que se conoce el resultado deseado. El desajuste (underfitting) ocurre cuando un modelo estadístico o un algoritmo de aprendizaje automático no puede capturar la tendencia subyacente de los datos. Se produciría un desajuste, por ejemplo, al ajustar un modelo lineal a datos no lineales. Un modelo así también tendría un rendimiento predictivo deficiente.
+En aprendizaje automático, el sobreajuste (overfitting) es el efecto de sobreentrenar un algoritmo de aprendizaje con unos ciertos datos para los que se conoce el resultado deseado. El desajuste (underfitting) ocurre cuando un modelo estadístico o un algoritmo de aprendizaje automático no puede capturar la tendencia subyacente de los datos. Se produciría un desajuste, por ejemplo, al ajustar un modelo lineal a datos no lineales. Un modelo así también tendría un rendimiento predictivo deficiente.  -->
+
+
 

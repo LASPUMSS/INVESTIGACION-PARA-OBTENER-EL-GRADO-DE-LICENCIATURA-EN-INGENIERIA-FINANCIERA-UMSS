@@ -9,11 +9,10 @@ output: pdf_document
 **Tema específico: Proyección de estados financieros por el método de redes neuronales artificiales.**
 \newline
 \newline
-**PROYECCION DE ESTADOS FINANCIEROS POR EL MEDOTO DE REDES NEURONALES ARTIFICIALES**
+**PROYECCION DE ESTADOS FINANCIEROS POR EL MEDOTO DE REDES NEURONALES ARTIFICIALES EN BOLIVIA**
 
 # Antecedentes
-
-Los inicios de la inteligencia artificial de manera formal se dieron en el año 1943 cuando se colocó la primera piedra angular sobre la que se basó lo que hoy se conoce como inteligencia artificial, de la mano de Warren McCulloch y Walter Pitts, con la presentación del primer modelo matemático de aprendizaje, donde por primera vez se dota a un modelo autónomo la capacidad de aprendizaje.
+Como antecedentes generales muestran que los inicios de la inteligencia artificial de manera formal se dieron en el año 1943 cuando se colocó la primera piedra angular sobre la que se basó lo que hoy se conoce como inteligencia artificial, de la mano de Warren McCulloch y Walter Pitts, con la presentación del primer modelo matemático de aprendizaje, donde por primera vez se dota a un modelo autónomo la capacidad de aprendizaje.
 
 En 1949 se dio otro aporte al campo de las redes neuronales por parte de Donald Hebb, quien fue el primero en explicar los procesos del aprendizaje desde una perspectiva del campo psicológico, desarrollando una regla de como el aprendizaje ocurría. La idea general que propuso era que el aprendizaje ocurría cuando ciertos cambios en una neurona eran activados. 
 
@@ -28,6 +27,6 @@ Pero en 1985 John Hopfield, hizo que las redes neuronales cobraran nuevamente im
 
 Uno de los aportes más recientes vino por parte de la Universidad de Toronto y la empresa de Google en 2017 con la publicación del articulo titulado "Atención es todo lo que necesitas", con la presentación de la arquitectura denominada "transformes" que de la mano de las redes neuronales dotan de atención al modelo de inteligencia artificial.
 
-
+Ahora bien como antecedentes especificos Bólivia no es un pais que lleve adelante de investigacion o desarrollos significativos sobre inteligencia artificial como un dato relevante según el reporte Government AI Readiness Index 2020 (Oxford Insights), Bolivia ocupa el puesto 122 de 172 países, y el 22 de 32 en la región de Latinoamérica y el Caribe.
 
 
