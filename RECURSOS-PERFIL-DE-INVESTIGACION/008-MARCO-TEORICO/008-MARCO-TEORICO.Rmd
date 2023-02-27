@@ -63,7 +63,7 @@ Los elementos de una red neuronal se resumen en la siguiente figura:
 
 \begin{figure}
 \centering
-\includegraphics[width=10cm, height=8cm]{RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/red-neuronal.png}
+\includegraphics[width=10cm, height=8cm]{RECURSOS-PERFIL-DE-INVESTIGACION/008-MARCO-TEORICO/red-neuronal.png}
 \caption{Red Neuronal Artificial}
 \end{figure}
 

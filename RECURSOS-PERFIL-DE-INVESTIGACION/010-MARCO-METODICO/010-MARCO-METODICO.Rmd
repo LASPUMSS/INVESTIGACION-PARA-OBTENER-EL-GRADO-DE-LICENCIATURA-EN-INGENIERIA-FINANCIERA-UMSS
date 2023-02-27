@@ -19,4 +19,4 @@ Tambien cabe especificar que los procedimientos a ser aplicados en el informe fi
 
 En primera instancia se realizara la identificación del problema de investigación que ya esta establecida en el proyecto de grado, donde se identificará la arquitectura de la red neuronal, que está compuesta de las funciones de activación, y ajuste de los datos en formato de tablas. Posteriormente se realizara la etapa de recolección de datos e información del sistema financiero corespondiente a las fuentes secundarias. Para que en consecuencia con la obtención de la información se realizara el ordenameinto de dicha información recopilada para su procesamiento que permitirá dar un análisis concreto y preciso y a la vez realizar su sistematización para la obtención del diagnóstico.
 
-\input{RECURSOS-PLAN-DE-INVESTIGACION/010-MARCO-METODICO/tabla-marco-metodico}
+\input{RECURSOS-PERFIL-DE-INVESTIGACION/010-MARCO-METODICO/tabla-marco-metodico}
