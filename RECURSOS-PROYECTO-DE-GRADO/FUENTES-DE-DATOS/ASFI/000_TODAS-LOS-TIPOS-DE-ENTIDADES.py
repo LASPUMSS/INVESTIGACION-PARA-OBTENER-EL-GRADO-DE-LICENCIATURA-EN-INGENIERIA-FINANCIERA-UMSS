@@ -49,8 +49,10 @@ class usando_unittest(unittest.TestCase):
 
 	def renombrarArchivo(self, idxEnt, idxSecDesc, numArchivo, gestion, mes, name):
 		seRenombro = False
+		contadorErrores = 0
 		while not seRenombro:
 			try:
+				contadorErrores = contadorErrores + 1
 				list_of_files = glob.glob(rutaDatos)
 				file_oldname = max(list_of_files, key=os.path.getctime)
 
@@ -73,7 +75,10 @@ class usando_unittest(unittest.TestCase):
 				seRenombro = True
 				
 			except IOError:
+				print('wait...',contadorErrores)
 				time.sleep(5)
+				if contadorErrores>10:
+					seRenombro = True
 
 	def	descagar(self, In, Fn, Stp, Secciones, Gestion, urlEnt):
 		Fn = Fn + 1
@@ -128,8 +133,8 @@ class usando_unittest(unittest.TestCase):
 						pass
 
 	def test_usando_toggle(self):
-		gestionInc = 2014
-		gestionFn = 2021 + 1
+		gestionInc = 2022
+		gestionFn = 2022 + 1
 
 		for urlEnt in urlEntidades:
 			print(SEPARADOR)
