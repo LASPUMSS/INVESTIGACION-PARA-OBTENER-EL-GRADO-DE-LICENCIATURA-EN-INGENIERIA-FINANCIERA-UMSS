@@ -2,10 +2,10 @@
 output: 
     pdf_document:
         includes:
-            in_header: styles.sty
+            in_header: assets/csl-bib-sty/styles.sty
         df_print: kable
-bibliography: references.bib 
-csl: apa.csl
+bibliography: assets/csl-bib-sty/references.bib 
+csl: assets/csl-bib-sty/apa.csl
 nocite: '@*'
 fontsize: 12pt
 ---

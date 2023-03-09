@@ -8,7 +8,7 @@
 
 # IGNORAR CARPETAS
 scbm/
-ASFI/DATOS/
+ASFI/00-DATOS/
 
 ########################################################################################################
 ## Ignore Visual Studio temporary files, build results, and
