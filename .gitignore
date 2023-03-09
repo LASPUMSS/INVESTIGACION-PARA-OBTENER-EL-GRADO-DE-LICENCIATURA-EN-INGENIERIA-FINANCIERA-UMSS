@@ -8,7 +8,9 @@
 
 # IGNORAR CARPETAS
 scbm/
-RECURSOS-PROYECTO-DE-GRADO/FUENTES-DE-DATOS/ASFI/00-DATOS/
+RECURSOS-PROYECTO-DE-GRADO/FUENTES-DE-DATOS/ASFI/00-DATOS/scbm/
+RECURSOS-PROYECTO-DE-GRADO/FUENTES-DE-DATOS/ASFI/00-DATOS/aa-scbm-copia-base/
+RECURSOS-PROYECTO-DE-GRADO/FUENTES-DE-DATOS/ASFI/00-DATOS/scbmModificado/
 
 ########################################################################################################
 ## Ignore Visual Studio temporary files, build results, and
