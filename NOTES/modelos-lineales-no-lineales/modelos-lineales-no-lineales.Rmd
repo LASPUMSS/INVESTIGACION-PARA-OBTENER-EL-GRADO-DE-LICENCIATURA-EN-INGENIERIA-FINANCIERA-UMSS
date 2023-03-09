@@ -1,0 +1,72 @@
+---
+output: pdf_document
+---
+
+```{r setup, include=FALSE, results='hide'}
+knitr::opts_chunk$set(echo = TRUE, 
+                      results = 'hide',
+                      out.width = '50%',
+                      out.height = '50%', 
+                      warning = FALSE,
+                      message=FALSE)
+
+
+# LIBRERIAS 
+library(dplyr)
+library(ggplot2)
+
+```
+
+# Modelos lineales - Modelos no lineales
+
+Primero generamos datos no lineales de la siguiente función:
+
+
+El correspondiente código  para simular esta función es la siguiente:
+
+```{r}
+noLinealData <- function(x) {
+    
+    if (x>=(-Inf) && x<(-2)) {
+        resultado <- -2.186*x-12.864
+        return(resultado)
+    }
+    
+    if (x>=(-2) && x<0) {
+        resultado <- -4.246*x
+        return(resultado)
+    }
+    
+    if (x>=0 && x<Inf) {
+        resultado <- (10*exp(-0.05*x-0.5)) * sin((0.03*x+0.7)*x)
+        return(resultado)
+    }
+}
+
+```
+
+Los datos para la simulación es la siguiente:
+
+```{r}
+x <- -10:10
+data <- data.frame(x=x, y=as.numeric(lapply(x, noLinealData)))
+
+data %>% 
+    ggplot(aes(x=x,y=y)) + 
+    geom_line() +
+    ggtitle('Datos No Lineales')
+```
+
+
+## Modelo lineal
+
+El método de MCO intenta generalizar los datos de la función no lineal es minimizando los errores, y la función estimada es la siguiente.
+
+```{r}
+data %>% 
+    ggplot(aes(x=x,y=y)) + 
+    geom_line() + 
+    geom_smooth(method = 'lm', formula = data$y~data$y ) +
+    ggtitle('Datos No Lineales')
+```
+
