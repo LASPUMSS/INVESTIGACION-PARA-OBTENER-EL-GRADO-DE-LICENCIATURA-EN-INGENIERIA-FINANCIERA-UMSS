@@ -1,5 +1,3 @@
-library(dplyr)
-library(ggplot2)
 
 noLinealData <- function(x) {
     
@@ -19,12 +17,4 @@ noLinealData <- function(x) {
     }
 }
 
-x <- -10:10
-data <- data.frame(x=x, y=as.numeric(lapply(x, noLinealData)))
-
-# Modelo Lineal
-data %>% 
-    ggplot(aes(x=x,y=y)) + 
-    geom_line() + 
-    geom_smooth(method = 'lm', formula = data$y~data$y )
 
