@@ -1,5 +1,6 @@
 import tensorflow as tf
 import numpy as np
+import matplotlib.pyplot as plt
 
 x_train = np.array(r.data["x"])
 y_train = np.array(r.data["y"])
@@ -19,6 +20,15 @@ model.compile(loss='mse',optimizer=optimizer,metrics=['mae', 'mse'])
 
 model.fit(x_train, y_train, epochs=1000)
 
-y_train
-model.predict(x_train)
+y_predic = model.predict(x_train)
+
+plt.clf()
+plt.plot(x_train, y_train, label ='y')
+plt.plot(x_train, y_predic, '-.', label ='y_predic')
+
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.legend()
+plt.title('Datos No Lineales')
+plt.show()
 
