@@ -1,5 +1,5 @@
 ---
-output: pdf_document
+output: html_document
 ---
 
 ```{r setup, include=FALSE, results='hide'}
@@ -14,8 +14,16 @@ knitr::opts_chunk$set(echo = TRUE,
 # LIBRERIAS 
 library(dplyr)
 library(ggplot2)
+library(reticulate)
 
 ```
+
+```{python, results='hide'}
+import tensorflow as tf
+import numpy as np
+import matplotlib.pyplot as plt
+```
+
 
 # Modelos lineales - Modelos no lineales
 
@@ -55,18 +63,193 @@ data %>%
     ggplot(aes(x=x,y=y)) + 
     geom_line() +
     ggtitle('Datos No Lineales')
+
 ```
 
 
-## Modelo lineal
+## Pocos datos
+
+```{r}
+x <- -10:20
+porceTrain <- 0.7
+dataTrain <- data.frame(x_train = x[1:round(length(x)*porceTrain)], 
+                        y_train = as.numeric(lapply(x[1:round(length(x)*porceTrain)], noLinealData)))
+dataTest <- data.frame(x_test=x[(round(length(x)*porceTrain)+1):length(x)], 
+                       y_test=as.numeric(lapply(x[(round(length(x)*porceTrain)+1):length(x)], noLinealData)))
+rm(x)
+```
+
+
+### Modelo lineal
 
 El método de MCO intenta generalizar los datos de la función no lineal es minimizando los errores, y la función estimada es la siguiente.
 
 ```{r}
-data %>% 
-    ggplot(aes(x=x,y=y)) + 
-    geom_line() + 
-    geom_smooth(method = 'lm', formula = data$y~data$y ) +
-    ggtitle('Datos No Lineales')
+
+fit <- lm(y_train~x_train, data = dataTrain)
+# MODELO LINEAL
+colors <- c("Observaciones" = "darkred", 
+            "Modelo Ajustado" = "black", 
+            "Observaciones Nuevas" = "darkred",
+            "Prediciones" ="blue")
+
+# GRAFICO
+dataTrain %>% 
+    ggplot(aes(x=x_train)) + 
+    geom_line(aes(y=y_train, color = 'Observaciones')) + 
+    geom_line(aes(y=predict(fit), color='Modelo Ajustado')) +
+    geom_line(aes(x=x_test,y=y_test, color='Observaciones Nuevas'), data = dataTest) +
+    geom_line(aes(x=x_test,y=predict(fit, data.frame(x_train=x_test)), color='Prediciones'), data = dataTest) +
+    ggtitle('Datos No Lineales - MCO') +
+    labs(x = "X",
+         y = "Y",
+         color = "Legend") +
+    scale_color_manual(values = colors)
+```
+
+
+### Red neuronal
+
+```{python, results='hide'}
+
+x_train = np.array(r.dataTrain["x_train"])
+y_train = np.array(r.dataTrain["y_train"])
+
+x_test = np.array(r.dataTest["x_test"])
+y_test = np.array(r.dataTest["y_test"])
+
+model = tf.keras.Sequential([
+    tf.keras.layers.Dense(50, activation='relu', input_shape=(1,)),
+    tf.keras.layers.Dense(100, activation='relu'),
+    tf.keras.layers.Dense(100, activation='relu'),
+    tf.keras.layers.Dense(50, activation='relu'),
+    tf.keras.layers.Dense(1)
+    ])
+
+optimizer = tf.keras.optimizers.RMSprop(0.001)
+
+model.compile(loss='mse',optimizer=optimizer,metrics=['mae', 'mse'])
+
+model.fit(x_train, y_train, epochs=1000)
+
+y_adj = model.predict(x_train)
+y_adj = y_adj.reshape(-1)
+y_predict = model.predict(x_test)
+y_predict = y_predict.reshape(-1)
+
+
+# GRAFICO
+plt.clf()
+plt.plot(x_train, y_train, label ='Observaciones')
+plt.plot(x_train, y_adj, '-', label ='Modelo Ajustado')
+plt.plot(x_test, y_test, label ='Observaciones Nuevas')
+plt.plot(x_test, y_predict, label ='Prediciones')
+
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.legend()
+plt.title('Datos No Lineales - Redes Neuronales')
+plt.show()
+
+```
+
+
+## Muchos datos
+
+```{r}
+x <- -100:100
+porceTrain <- 0.7
+dataTrain <- data.frame(x_train = x[1:round(length(x)*porceTrain)], 
+                        y_train = as.numeric(lapply(x[1:round(length(x)*porceTrain)], noLinealData)))
+dataTest <- data.frame(x_test=x[(round(length(x)*porceTrain)+1):length(x)], 
+                       y_test=as.numeric(lapply(x[(round(length(x)*porceTrain)+1):length(x)], noLinealData)))
+rm(x)
+```
+
+
+### Modelo lineal
+
+El método de MCO intenta generalizar los datos de la función no lineal es minimizando los errores, y la función estimada es la siguiente.
+
+```{r}
+fit <- lm(y_train~x_train, data = dataTrain)
+# MODELO LINEAL
+colors <- c("Observaciones" = "darkred", 
+            "Modelo Ajustado" = "black", 
+            "Observaciones Nuevas" = "darkred",
+            "Prediciones" ="blue")
+
+# GRAFICO
+dataTrain %>% 
+    ggplot(aes(x=x_train)) + 
+    geom_line(aes(y=y_train, color = 'Observaciones')) + 
+    geom_line(aes(y=predict(fit), color='Modelo Ajustado')) +
+    geom_line(aes(x=x_test,y=y_test, color='Observaciones Nuevas'), data = dataTest) +
+    geom_line(aes(x=x_test,y=predict(fit, data.frame(x_train=x_test)), color='Prediciones'), data = dataTest) +
+    ggtitle('Datos No Lineales - MCO') +
+    labs(x = "X",
+         y = "Y",
+         color = "Legend") +
+    scale_color_manual(values = colors)
+```
+
+
+### Red neuronal
+
+```{python, results='hide'}
+
+x_train = np.array(r.dataTrain["x_train"])
+y_train = np.array(r.dataTrain["y_train"])
+
+x_test = np.array(r.dataTest["x_test"])
+y_test = np.array(r.dataTest["y_test"])
+
+model = tf.keras.Sequential([
+    tf.keras.layers.Dense(50, activation='relu', input_shape=(1,)),
+    tf.keras.layers.Dense(100, activation='relu'),
+    tf.keras.layers.Dense(100, activation='relu'),
+    tf.keras.layers.Dense(50, activation='relu'),
+    tf.keras.layers.Dense(1)
+    ])
+
+optimizer = tf.keras.optimizers.RMSprop(0.001)
+
+model.compile(loss='mse',optimizer=optimizer,metrics=['mae', 'mse'])
+
+model.fit(x_train, y_train, epochs=1000)
+
+y_adj = model.predict(x_train)
+y_adj = y_adj.reshape(-1)
+y_predict = model.predict(x_test)
+y_predict = y_predict.reshape(-1)
+
+
+# GRAFICO
+plt.clf()
+plt.plot(x_train, y_train, label ='Observaciones')
+plt.plot(x_train, y_adj, '-', label ='Modelo Ajustado')
+plt.plot(x_test, y_test, label ='Observaciones Nuevas')
+plt.plot(x_test, y_predict, label ='Prediciones')
+
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.legend()
+plt.title('Datos No Lineales - Redes Neuronales')
+plt.show()
+
+```
+
+
+```{python, results='hide'}
+# GRAFICO
+plt.clf()
+plt.plot(x_test, y_test, label ='Observaciones Nuevas')
+plt.plot(x_test, y_predict, label ='Prediciones')
+
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.legend()
+plt.title('Datos No Lineales - Redes Neuronales')
+plt.show()
 ```
 
