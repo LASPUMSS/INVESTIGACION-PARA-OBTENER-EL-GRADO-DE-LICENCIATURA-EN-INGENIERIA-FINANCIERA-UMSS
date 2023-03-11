@@ -1,21 +1,26 @@
 ---
-output: html_document
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE, results='hide'}
 knitr::opts_chunk$set(echo = TRUE, 
                       results = 'hide',
                       out.width = '50%',
-                      out.height = '50%', 
+                      out.height = '50%',
+                      fig.align = 'center',
                       warning = FALSE,
                       message=FALSE)
 
+```
 
-# LIBRERIAS 
+# Modelos lineales - Modelos no lineales
+
+## Librerias necesarias
+
+```{r, results='hide'}
 library(dplyr)
 library(ggplot2)
 library(reticulate)
-
 ```
 
 ```{python, results='hide'}
@@ -24,11 +29,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 ```
 
-
-# Modelos lineales - Modelos no lineales
+## Datos no lineales
 
 Primero generamos datos no lineales de la siguiente función:
-
 
 El correspondiente código  para simular esta función es la siguiente:
 
@@ -66,6 +69,7 @@ data %>%
 
 ```
 
+\newpage
 
 ## Pocos datos
 
@@ -154,6 +158,9 @@ plt.show()
 ```
 
 
+
+\newpage
+
 ## Muchos datos
 
 ```{r}
@@ -241,7 +248,7 @@ plt.show()
 
 
 ```{python, results='hide'}
-# GRAFICO
+# GRAFICO PROYECTADO
 plt.clf()
 plt.plot(x_test, y_test, label ='Observaciones Nuevas')
 plt.plot(x_test, y_predict, label ='Prediciones')
