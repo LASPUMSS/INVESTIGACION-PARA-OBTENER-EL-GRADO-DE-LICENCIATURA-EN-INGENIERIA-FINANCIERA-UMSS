@@ -21,6 +21,7 @@ Module CC_ProcedimientosPatrones
         Dim i As Integer
         Dim tipoEntidad(5) As String
         Dim tipoEntidad2(5) As String
+        Dim ExcelWkBook As Excel.Workbook = Nothing
 
         Dim rutaHojaEnum As String
         Dim strEnmVrf As String
@@ -100,14 +101,24 @@ Module CC_ProcedimientosPatrones
                         Try
                             If mes > 9 Then
 
-                                ruta = currentDirectory & "\DATOS\scbm\" & CStr(gestion) & "\" & CStr(mes) & "\" & tipoEntidad(i) & CStr(mes) & CStr(gestion - 2000) & "\" & CStr(gestion) & CStr(mes) & tipoEntidad2(i) & Replace(categoriaHojas, " ", "") & ".xls"
+                                ruta = currentDirectory & "\DATOS\sNOcbm\" & CStr(gestion) & "\" & CStr(mes) & "\" & tipoEntidad(i) & CStr(mes) & CStr(gestion - 2000) & "\" & CStr(gestion) & CStr(mes) & tipoEntidad2(i) & Replace(categoriaHojas, " ", "") & ".xls"
 
                                 If My.Computer.FileSystem.FileExists(ruta) Then
 
                                     If Not unirHojas And Not enumerar And Not igualarCampos Then
+
                                         registroEjecucion000_00($"El directorio a trabajar: {currentDirectory}")
                                         registroEjecucion000_00($"El directorio excel a trabajar: {ruta}")
-                                        cargarProcedimientoEdcion(ExcelApp.Workbooks.Open(ruta), gestion, mes, i, categoriaHojas)
+                                        registroEjecucion000_00($"Fecha EEFF: {gestion} / {mes}")
+
+                                        registroEjecucion000_00("LLEGO AQUI 1")
+                                        ExcelWkBook = ExcelApp.Workbooks.Open(ruta)
+                                        ExcelWkBook.Activate()
+                                        ExcelApp.ActiveWorkbook.ChangeFileAccess(Microsoft.Office.Interop.Excel.XlFileAccess.xlReadWrite)
+
+                                        registroEjecucion000_00("LLEGO AQUI 2")
+
+                                        cargarProcedimientoEdcion(ExcelWkBook, gestion, mes, i, categoriaHojas)
 
                                     End If
 
@@ -115,20 +126,27 @@ Module CC_ProcedimientosPatrones
 
                                         registroEjecucion000_00($"El directorio a trabajar: {currentDirectory}")
                                         registroEjecucion000_00($"El directorio excel a trabajar: {ruta}")
+                                        registroEjecucion000_00($"Fecha EEFF: {gestion} / {mes}")
                                         copiarDatosEntreHojas(ExcelApp.Workbooks.Open(ruta), ExcelWkSheetUnir)
 
                                     End If
 
                                     If enumerar And Not unirHojas And Not igualarCampos Then
+
                                         registroEjecucion000_00($"El directorio a trabajar: {currentDirectory}")
                                         registroEjecucion000_00($"El directorio excel a trabajar: {ruta}")
+                                        registroEjecucion000_00($"Fecha EEFF: {gestion} / {mes}")
                                         enumerarFilasDelEstado(ExcelApp.Workbooks.Open(ruta), ExcelWkSheetEnum, gestion, mes, categoriaHojas, tipoEntidad(i), strEnm)
+
                                     End If
 
                                     If igualarCampos And Not enumerar And Not unirHojas Then
+
                                         registroEjecucion000_00($"El directorio a trabajar: {currentDirectory}")
                                         registroEjecucion000_00($"El directorio excel a trabajar: {ruta}")
+                                        registroEjecucion000_00($"Fecha EEFF: {gestion} / {mes}")
                                         igualarCamposEstados(ExcelApp.Workbooks.Open(ruta), categoriaHojas)
+
                                     End If
 
                                 End If
@@ -144,7 +162,14 @@ Module CC_ProcedimientosPatrones
                                     If Not unirHojas And Not enumerar And Not igualarCampos Then
                                         registroEjecucion000_00($"El directorio a trabajar: {currentDirectory}")
                                         registroEjecucion000_00($"El directorio excel a trabajar: {ruta}")
-                                        cargarProcedimientoEdcion(ExcelApp.Workbooks.Open(ruta), gestion, mes, i, categoriaHojas)
+                                        registroEjecucion000_00($"Fecha EEFF: {gestion} / {mes}")
+
+                                        registroEjecucion000_00("LLEGO AQUI 1")
+                                        ExcelWkBook = ExcelApp.Workbooks.Open(ruta)
+
+                                        registroEjecucion000_00("LLEGO AQUI 2")
+
+                                        cargarProcedimientoEdcion(ExcelWkBook, gestion, mes, i, categoriaHojas)
 
                                     End If
 
@@ -152,6 +177,7 @@ Module CC_ProcedimientosPatrones
 
                                         registroEjecucion000_00($"El directorio a trabajar: {currentDirectory}")
                                         registroEjecucion000_00($"El directorio excel a trabajar: {ruta}")
+                                        registroEjecucion000_00($"Fecha EEFF: {gestion} / {mes}")
                                         copiarDatosEntreHojas(ExcelApp.Workbooks.Open(ruta), ExcelWkSheetUnir)
 
                                     End If
@@ -159,12 +185,14 @@ Module CC_ProcedimientosPatrones
                                     If enumerar And Not unirHojas And Not igualarCampos Then
                                         registroEjecucion000_00($"El directorio a trabajar: {currentDirectory}")
                                         registroEjecucion000_00($"El directorio excel a trabajar: {ruta}")
+                                        registroEjecucion000_00($"Fecha EEFF: {gestion} / {mes}")
                                         enumerarFilasDelEstado(ExcelApp.Workbooks.Open(ruta), ExcelWkSheetEnum, gestion, mes, categoriaHojas, tipoEntidad(i), strEnm)
                                     End If
 
                                     If igualarCampos And Not enumerar And Not unirHojas Then
                                         registroEjecucion000_00($"El directorio a trabajar: {currentDirectory}")
                                         registroEjecucion000_00($"El directorio excel a trabajar: {ruta}")
+                                        registroEjecucion000_00($"Fecha EEFF: {gestion} / {mes}")
                                         igualarCamposEstados(ExcelApp.Workbooks.Open(ruta), categoriaHojas)
                                     End If
 
@@ -175,7 +203,19 @@ Module CC_ProcedimientosPatrones
 
                         Catch ex As Exception
 
+                            'If (ex.GetType == "System.Runtime.InteropServices.COMException") Then
+
+                            'End If
                             registroEjecucion000_00($"ERROR: {ex.GetType}")
+                            registroEjecucion000_00($"DESCRIPCION: {ex.Message}")
+                            registroEjecucion000_00($"INNER_EXCEPTION: {ex.InnerException}")
+                            registroEjecucion000_00($"STACK_TRACE: {ex.StackTrace}")
+                            registroEjecucion000_00($"HELP_LINK: {ex.HelpLink}")
+                            historialEjecucion.Flush()
+                            historialEjecucion.Close()
+                            ExcelApp.Quit()
+                            Stop
+
                             Continue For
 
                         End Try

@@ -427,6 +427,7 @@ Module ZZ_ProcedimientosExtras
     Public Sub cargarProcedimientoEdcion(ByVal ExcelWkBook As Excel.Workbook, ByVal gestion As Long, ByVal mes As Integer, ByVal tipoEndidadInd As Integer, ByVal categoriaHojas As String)
 
         '   SECCION: ESTADOS FINANCIEROS
+
         If Replace(categoriaHojas, " ", "") = "EstadosFinancieros" Then
             Editar_Estados_Financieros(ExcelWkBook, gestion, mes, tipoEndidadInd)
         ElseIf Replace(categoriaHojas, " ", "") = "EstadosFinancierosMoneda" Then

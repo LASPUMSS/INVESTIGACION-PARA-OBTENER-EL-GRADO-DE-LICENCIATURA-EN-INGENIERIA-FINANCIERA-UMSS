@@ -16,6 +16,8 @@ Module AA_PRINCIPAL
         '####################################################################################
         '##############  PROCEDIMIENTOS PRELEMINARES
         '####################################################################################
+
+
         ExcelApp = New Excel.Application
         ExcelApp.DisplayAlerts = False
 
