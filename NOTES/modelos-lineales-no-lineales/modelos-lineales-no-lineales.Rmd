@@ -18,6 +18,7 @@ knitr::opts_chunk$set(echo = TRUE,
 ## Librerias necesarias
 
 ```{r, results='hide'}
+library(fpp2)
 library(dplyr)
 library(ggplot2)
 library(reticulate)
@@ -259,4 +260,30 @@ plt.legend()
 plt.title('Datos No Lineales - Redes Neuronales')
 plt.show()
 ```
+
+
+## Otro Ejemplo
+
+### Lineal
+
+```{r}
+fitLn <- tslm(sunspotarea~trend)
+
+autoplot(sunspotarea) + 
+    autolayer(fitted(fitLn), series = 'Datos Ajustados') +
+    autolayer(forecast(fitLn, h = 20), series = 'Proyeciones', PI = T)
+```
+
+
+### Red Neuronal
+
+```{r}
+fitNnear <- nnetar(sunspotarea, lambda=0)
+
+autoplot(sunspotarea) + 
+    autolayer(fitted(fitNnear), series = 'Datos Ajustados') +
+    autolayer(forecast(fitNnear, h = 20), series = 'Proyeciones', PI = T)
+```
+
+
 
