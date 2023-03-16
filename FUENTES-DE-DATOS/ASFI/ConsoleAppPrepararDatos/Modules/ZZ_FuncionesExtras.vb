@@ -48,6 +48,11 @@ Module ZZ_FuncionesExtras
         Dim done As Boolean
         Dim ExcelWkSheet As Excel.Worksheet = Nothing
 
+        Dim rowIn As Integer = 1
+        Dim rowFn As Long = 5000
+        Dim colIn As Integer = 1
+        Dim colFn As Long = 50
+
         'VERIFICAR SI LA BBDD EXISTE Y CREAR OTRA NUEVA
         Try
             ExcelWkBook.Sheets("BBDD").Delete()
@@ -67,10 +72,13 @@ Module ZZ_FuncionesExtras
         'ENCONTRAR Y COPIAR LA HOJA DE DATOS
         For i = 1 To ExcelWkBook.Sheets.Count
             If TypeName(ExcelWkBook.Sheets(i)) = "Worksheet" Then
-                For Each celda As Excel.Range In ExcelWkBook.Sheets(i).Cells
+                ExcelWkSheet = ExcelWkBook.Sheets(i)
+
+                For Each celda As Excel.Range In ExcelWkBook.Sheets(i).Range(ExcelWkSheet.Cells(rowIn, colIn),
+                                                                             ExcelWkSheet.Cells(rowFn, colFn))
+
                     strEval = If(CStr(celda.Value) <> "", QuitarEspAcen(CStr(celda.Value)), "")
                     If strEval = txt Then
-                        ExcelWkSheet = ExcelWkBook.Sheets(i)
                         nombreHojaDatos = ExcelWkSheet.Name
                         ExcelWkSheet.Select()
                         ExcelWkSheet.Copy(Before:=ExcelWkBook.Sheets(1))
@@ -85,11 +93,15 @@ Module ZZ_FuncionesExtras
         'ENCONTRAR LA COPIA DE LA HOJA DE DATOS
         For i = 1 To ExcelWkBook.Sheets.Count
             If TypeName(ExcelWkBook.Sheets(i)) = "Worksheet" And ExcelWkBook.Sheets(i).Name <> nombreHojaDatos Then
-                For Each celda As Excel.Range In ExcelWkBook.Sheets(i).Cells
+
+                ExcelWkSheet = ExcelWkBook.Sheets(i)
+
+                For Each celda As Excel.Range In ExcelWkBook.Sheets(i).Range(ExcelWkSheet.Cells(rowIn, colIn),
+                                                                             ExcelWkSheet.Cells(rowFn, colFn))
+
                     strEval = If(CStr(celda.Value) <> "", QuitarEspAcen(CStr(celda.Value)), "")
                     If strEval = txt Then
                         registroEjecucion000_00($"La hoja con los datos es: {ExcelWkBook.Sheets(i).Name}")
-                        ExcelWkSheet = ExcelWkBook.Sheets(i)
                         ExcelWkSheet.Name = "BBDD"
                         done = True
                         Exit For
@@ -111,8 +123,14 @@ Module ZZ_FuncionesExtras
         Dim celReferencia As Excel.Range = ExcelWkSheet.Cells(ExcelWkSheet.Rows.Count, 1)
         Dim CelResultado As Excel.Range = ExcelWkSheet.Cells(ExcelWkSheet.Rows.Count, 1)
 
+        Dim rowIn As Integer = 1
+        Dim rowFn As Long = 5000
+        Dim colIn As Integer = 1
+        Dim colFn As Long = 50
+
         'ENCONTRAR CELDA DE REFERENCIA
-        For Each celda As Excel.Range In ExcelWkSheet.Cells
+        For Each celda As Excel.Range In ExcelWkSheet.Range(ExcelWkSheet.Cells(rowIn, colIn),
+                                                            ExcelWkSheet.Cells(rowFn, colFn))
             strEval = If(CStr(celda.Value) <> "", QuitarEspAcen(CStr(celda.Value)), "")
             If strEval = txt Then
                 celReferencia = celda

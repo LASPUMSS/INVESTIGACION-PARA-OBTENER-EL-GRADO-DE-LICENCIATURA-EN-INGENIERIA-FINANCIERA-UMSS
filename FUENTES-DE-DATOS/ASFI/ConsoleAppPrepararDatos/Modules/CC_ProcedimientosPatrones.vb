@@ -21,7 +21,6 @@ Module CC_ProcedimientosPatrones
         Dim i As Integer
         Dim tipoEntidad(5) As String
         Dim tipoEntidad2(5) As String
-        Dim ExcelWkBook As Excel.Workbook = Nothing
 
         Dim rutaHojaEnum As String
         Dim strEnmVrf As String
@@ -101,7 +100,7 @@ Module CC_ProcedimientosPatrones
                         Try
                             If mes > 9 Then
 
-                                ruta = currentDirectory & "\DATOS\sNOcbm\" & CStr(gestion) & "\" & CStr(mes) & "\" & tipoEntidad(i) & CStr(mes) & CStr(gestion - 2000) & "\" & CStr(gestion) & CStr(mes) & tipoEntidad2(i) & Replace(categoriaHojas, " ", "") & ".xls"
+                                ruta = currentDirectory & "\DATOS\sNOcbm\" & CStr(gestion) & "\" & CStr(mes) & "\" & tipoEntidad(i) & CStr(mes) & CStr(gestion - 2000) & "\" & CStr(gestion) & CStr(mes) & tipoEntidad2(i) & Replace(categoriaHojas, " ", "") & ".xlsx"
 
                                 If My.Computer.FileSystem.FileExists(ruta) Then
 
@@ -111,14 +110,7 @@ Module CC_ProcedimientosPatrones
                                         registroEjecucion000_00($"El directorio excel a trabajar: {ruta}")
                                         registroEjecucion000_00($"Fecha EEFF: {gestion} / {mes}")
 
-                                        registroEjecucion000_00("LLEGO AQUI 1")
-                                        ExcelWkBook = ExcelApp.Workbooks.Open(ruta)
-                                        ExcelWkBook.Activate()
-                                        ExcelApp.ActiveWorkbook.ChangeFileAccess(Microsoft.Office.Interop.Excel.XlFileAccess.xlReadWrite)
-
-                                        registroEjecucion000_00("LLEGO AQUI 2")
-
-                                        cargarProcedimientoEdcion(ExcelWkBook, gestion, mes, i, categoriaHojas)
+                                        cargarProcedimientoEdcion(ExcelApp.Workbooks.Open(ruta), gestion, mes, i, categoriaHojas)
 
                                     End If
 
@@ -154,7 +146,7 @@ Module CC_ProcedimientosPatrones
                             Else
 
 
-                                ruta = currentDirectory & "\DATOS\scbm\" & CStr(gestion) & "\0" & CStr(mes) & "\" & tipoEntidad(i) & "0" & CStr(mes) & CStr(gestion - 2000) & "\" & CStr(gestion) & "0" & CStr(mes) & tipoEntidad2(i) & Replace(categoriaHojas, " ", "") & ".xls"
+                                ruta = currentDirectory & "\DATOS\scbm\" & CStr(gestion) & "\0" & CStr(mes) & "\" & tipoEntidad(i) & "0" & CStr(mes) & CStr(gestion - 2000) & "\" & CStr(gestion) & "0" & CStr(mes) & tipoEntidad2(i) & Replace(categoriaHojas, " ", "") & ".xlsx"
 
 
                                 If My.Computer.FileSystem.FileExists(ruta) Then
@@ -164,12 +156,7 @@ Module CC_ProcedimientosPatrones
                                         registroEjecucion000_00($"El directorio excel a trabajar: {ruta}")
                                         registroEjecucion000_00($"Fecha EEFF: {gestion} / {mes}")
 
-                                        registroEjecucion000_00("LLEGO AQUI 1")
-                                        ExcelWkBook = ExcelApp.Workbooks.Open(ruta)
-
-                                        registroEjecucion000_00("LLEGO AQUI 2")
-
-                                        cargarProcedimientoEdcion(ExcelWkBook, gestion, mes, i, categoriaHojas)
+                                        cargarProcedimientoEdcion(ExcelApp.Workbooks.Open(ruta), gestion, mes, i, categoriaHojas)
 
                                     End If
 
@@ -203,18 +190,14 @@ Module CC_ProcedimientosPatrones
 
                         Catch ex As Exception
 
-                            'If (ex.GetType == "System.Runtime.InteropServices.COMException") Then
-
-                            'End If
-                            registroEjecucion000_00($"ERROR: {ex.GetType}")
+                            registroEjecucion000_00("###############################################################################")
+                            registroEjecucion000_00("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+                            registroEjecucion000_00($"ERROR ENCONTRADO: {ex.GetType}")
                             registroEjecucion000_00($"DESCRIPCION: {ex.Message}")
-                            registroEjecucion000_00($"INNER_EXCEPTION: {ex.InnerException}")
                             registroEjecucion000_00($"STACK_TRACE: {ex.StackTrace}")
-                            registroEjecucion000_00($"HELP_LINK: {ex.HelpLink}")
-                            historialEjecucion.Flush()
-                            historialEjecucion.Close()
-                            ExcelApp.Quit()
-                            Stop
+                            registroEjecucion000_00("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+                            registroEjecucion000_00("###############################################################################")
+                            registroEjecucion000_00("-------------------------------------------")
 
                             Continue For
 
