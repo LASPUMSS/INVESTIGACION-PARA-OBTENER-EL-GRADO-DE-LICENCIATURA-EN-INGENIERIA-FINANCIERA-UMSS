@@ -17,7 +17,7 @@ Module CC_ProcedimientosPatrones
     Public Sub editarArchivosPorPatron01(ExcelApp As Excel.Application, gestionIn As Long, gestionFn As Long, categoriaHojas As String, unirHojas As Boolean, enumerar As Boolean, igualarCampos As Boolean)
         Dim mes As Integer
         Dim gestion As Long
-        Dim ruta As String
+        Dim ruta As String = ""
         Dim i As Integer
         Dim tipoEntidad(5) As String
         Dim tipoEntidad2(5) As String
@@ -192,6 +192,8 @@ Module CC_ProcedimientosPatrones
 
                             registroEjecucion000_00("###############################################################################")
                             registroEjecucion000_00("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+                            registroEjecucion000_00($"RUTA ERROR: {ruta}")
+                            registroEjecucion000_00($"Fecha EEFF: {gestion} / {mes}")
                             registroEjecucion000_00($"ERROR ENCONTRADO: {ex.GetType}")
                             registroEjecucion000_00($"DESCRIPCION: {ex.Message}")
                             registroEjecucion000_00($"STACK_TRACE: {ex.StackTrace}")
