@@ -100,7 +100,7 @@ Module CC_ProcedimientosPatrones
                         Try
                             If mes > 9 Then
 
-                                ruta = currentDirectory & "\DATOS\sNOcbm\" & CStr(gestion) & "\" & CStr(mes) & "\" & tipoEntidad(i) & CStr(mes) & CStr(gestion - 2000) & "\" & CStr(gestion) & CStr(mes) & tipoEntidad2(i) & Replace(categoriaHojas, " ", "") & ".xlsx"
+                                ruta = currentDirectory & "\DATOS\scbm\" & CStr(gestion) & "\" & CStr(mes) & "\" & tipoEntidad(i) & CStr(mes) & CStr(gestion - 2000) & "\" & CStr(gestion) & CStr(mes) & tipoEntidad2(i) & Replace(categoriaHojas, " ", "") & ".xlsx"
 
                                 If My.Computer.FileSystem.FileExists(ruta) Then
 
@@ -146,7 +146,7 @@ Module CC_ProcedimientosPatrones
                             Else
 
 
-                                ruta = currentDirectory & "\DATOS\scbm\" & CStr(gestion) & "\0" & CStr(mes) & "\" & tipoEntidad(i) & "0" & CStr(mes) & CStr(gestion - 2000) & "\" & CStr(gestion) & "0" & CStr(mes) & tipoEntidad2(i) & Replace(categoriaHojas, " ", "") & ".xlsx"
+                                ruta = currentDirectory & "\DoATOS\scbm\" & CStr(gestion) & "\0" & CStr(mes) & "\" & tipoEntidad(i) & "0" & CStr(mes) & CStr(gestion - 2000) & "\" & CStr(gestion) & "0" & CStr(mes) & tipoEntidad2(i) & Replace(categoriaHojas, " ", "") & ".xlsx"
 
 
                                 If My.Computer.FileSystem.FileExists(ruta) Then

@@ -1,0 +1,1425 @@
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+¿DESEA EJECUTAR LA EDICION DE LAS HOJAS?
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+¿Deseas ejecutar la seccion de estados financieros?
+####################################################################################
+SE EJECUTARA LA SECCION: ESTADOS FINANCIEROS
+####################################################################################
+¿Deseas ejecutar la seccion de estados financieros - estados financieros?
+###############################################################################
+Hola que tal, empecemos con las hojas de calculo de E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug...
+Directorio raiz: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+###############################################################################
+¿Deseas ejecutar la gestion 2014 de Estados Financieros?
+¿Deseas ejecutar la gestion 2015 de Estados Financieros?
+¿Deseas ejecutar la gestion 2016 de Estados Financieros?
+¿Deseas ejecutar la gestion 2017 de Estados Financieros?
+¿Deseas ejecutar la gestion 2018 de Estados Financieros?
+¿Deseas ejecutar la gestion 2019 de Estados Financieros?
+¿Deseas ejecutar la gestion 2020 de Estados Financieros?
+¿Deseas ejecutar la gestion 2021 de Estados Financieros?
+¿Deseas ejecutar la gestion 2022 de Estados Financieros?
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\01\BcosMultiples0122\202201_BMU_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 1
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 255, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 332, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 332, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: BNB
+Total Filas: 334
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\01\BcosPYME0122\202201_BPY_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 1
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 255, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 332, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 332, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: PEF
+Total Filas: 334
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\01\BDR0122\202201_BDR_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 1
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 255, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 332, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 332, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: BDR
+Total Filas: 334
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\01\IFD0122\202201_IFD_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 1
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 255, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 332, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 332, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: ICI
+Total Filas: 334
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\01\Nobancos0122\202201_COO_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 1
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 255, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 332, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: Error en el método PasteSpecial de la clase Range.
+STACK_TRACE:    en System.RuntimeType.ForwardCallToInvokeMember(String memberName, BindingFlags flags, Object target, Int32[] aWrapperTypes, MessageData& msgData)
+   en Microsoft.Office.Interop.Excel.Range.PasteSpecial(XlPasteType Paste, XlPasteSpecialOperation Operation, Object SkipBlanks, Object Transpose)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarPegarFila(Worksheet ExcelWkSheet, Int64 nCol, String txt, Int64 colBusq) en E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 417
+   en ConsoleAppPrepararDatos.BB_ProcedimientosEdicionHojas.Editar_Estados_Financieros(Workbook ExcelWkBook, Int64 gestion, Int32 mes, Int32 tipoEndidadInd) en E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\BB_ProcedimientosEdicionHojas.vb:línea 34
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.cargarProcedimientoEdcion(Workbook ExcelWkBook, Int64 gestion, Int32 mes, Int32 tipoEndidadInd, String categoriaHojas) en E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 432
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 159
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\01\Nobancos0122\202201_EFV_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 1
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 171, Valor de referencia:  PATRIMONIO
+Fila a copiar: 190, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 210, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 250, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 327, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 327, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: VL1
+Total Filas: 329
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\02\BcosMultiples0222\202202_BMU_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 2
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 255, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 332, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 332, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: BNB
+Total Filas: 334
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\02\BcosPYME0222\202202_BPY_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 2
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 255, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 332, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 332, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: PEF
+Total Filas: 334
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\02\BDR0222\202202_BDR_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 2
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 255, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 332, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 332, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: BDR
+Total Filas: 334
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\02\IFD0222\202202_IFD_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 2
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 255, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 332, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 332, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: ICI
+Total Filas: 334
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\02\Nobancos0222\202202_COO_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 2
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 255, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 332, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 332, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: CJN
+Total Filas: 334
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\02\Nobancos0222\202202_EFV_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 2
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 171, Valor de referencia:  PATRIMONIO
+Fila a copiar: 190, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 210, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 250, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 327, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 327, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: VL1
+Total Filas: 329
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\03\BcosMultiples0322\202203_BMU_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 3
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: BNB
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\03\BcosPYME0322\202203_BPY_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 3
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: PEF
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\03\BDR0322\202203_BDR_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 3
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: BDR
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\03\IFD0322\202203_IFD_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 3
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: ICI
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\03\Nobancos0322\202203_COO_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 3
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: CJN
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\03\Nobancos0322\202203_EFV_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 3
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 171, Valor de referencia:  PATRIMONIO
+Fila a copiar: 190, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 210, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 249, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 326, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 326, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: VL1
+Total Filas: 328
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\04\BcosMultiples0422\202204_BMU_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 4
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: BNB
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\04\BcosPYME0422\202204_BPY_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 4
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: PEF
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\04\BDR0422\202204_BDR_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 4
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: BDR
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\04\IFD0422\202204_IFD_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 4
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: ICI
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\04\Nobancos0422\202204_COO_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 4
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: CJN
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\04\Nobancos0422\202204_EFV_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 4
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 171, Valor de referencia:  PATRIMONIO
+Fila a copiar: 190, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 210, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 249, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 326, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 326, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: VL1
+Total Filas: 328
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\05\BcosMultiples0522\202205_BMU_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 5
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: BNB
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\05\BcosPYME0522\202205_BPY_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 5
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: PEF
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\05\BDR0522\202205_BDR_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 5
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: BDR
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\05\IFD0522\202205_IFD_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 5
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: ICI
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\05\Nobancos0522\202205_COO_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 5
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: CJN
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\05\Nobancos0522\202205_EFV_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 5
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 171, Valor de referencia:  PATRIMONIO
+Fila a copiar: 190, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 210, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 249, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 326, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 326, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: VL1
+Total Filas: 328
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\06\BcosMultiples0622\202206_BMU_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 6
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: BNB
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\06\BcosPYME0622\202206_BPY_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 6
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: PEF
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\06\BDR0622\202206_BDR_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 6
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: BDR
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\06\IFD0622\202206_IFD_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 6
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: ICI
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\06\Nobancos0622\202206_COO_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 6
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: CJN
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\06\Nobancos0622\202206_EFV_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 6
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 171, Valor de referencia:  PATRIMONIO
+Fila a copiar: 190, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 210, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 249, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 326, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 326, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: VL1
+Total Filas: 328
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\07\BcosMultiples0722\202207_BMU_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 7
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: BNB
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\07\BcosPYME0722\202207_BPY_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 7
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: PEF
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\07\BDR0722\202207_BDR_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 7
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: BDR
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\07\IFD0722\202207_IFD_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 7
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: ICI
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\07\Nobancos0722\202207_COO_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 7
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: CJN
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\07\Nobancos0722\202207_EFV_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 7
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 171, Valor de referencia:  PATRIMONIO
+Fila a copiar: 190, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 210, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 249, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 326, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 326, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: VL1
+Total Filas: 328
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\08\BcosMultiples0822\202208_BMU_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 8
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: BNB
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\08\BcosPYME0822\202208_BPY_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 8
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: PEF
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\08\BDR0822\202208_BDR_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 8
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: BDR
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\08\IFD0822\202208_IFD_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 8
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: ICI
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\08\Nobancos0822\202208_COO_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 8
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: CJN
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\08\Nobancos0822\202208_EFV_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 8
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 171, Valor de referencia:  PATRIMONIO
+Fila a copiar: 190, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 210, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 249, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 326, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 326, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: VL1
+Total Filas: 328
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\09\BcosMultiples0922\202209_BMU_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 9
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: BNB
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\09\BcosPYME0922\202209_BPY_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 9
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: PEF
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\09\BDR0922\202209_BDR_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 9
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: BDR
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\09\IFD0922\202209_IFD_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 9
+Se elimino la hoja BBDD para crear una nueva...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: ICI
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\09\Nobancos0922\202209_COO_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 9
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: CJN
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\09\Nobancos0922\202209_EFV_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 9
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 171, Valor de referencia:  PATRIMONIO
+Fila a copiar: 190, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 210, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 249, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 326, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 326, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: VL1
+Total Filas: 328
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\10\BcosMultiples1022\202210_BMU_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 10
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: BNB
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\10\BcosPYME1022\202210_BPY_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 10
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: PEF
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\10\BDR1022\202210_BDR_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 10
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: BDR
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\10\IFD1022\202210_IFD_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 10
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: ICI
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\10\Nobancos1022\202210_COO_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 10
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: CJN
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\10\Nobancos1022\202210_EFV_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 10
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 171, Valor de referencia:  PATRIMONIO
+Fila a copiar: 190, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 210, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 249, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 326, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 326, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: VL1
+Total Filas: 328
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\11\BcosMultiples1122\202211_BMU_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 11
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: BNB
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\11\BcosPYME1122\202211_BPY_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 11
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: PEF
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\11\BDR1122\202211_BDR_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 11
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: BDR
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\11\IFD1122\202211_IFD_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 11
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: ICI
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\11\Nobancos1122\202211_COO_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 11
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: CJN
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\11\Nobancos1122\202211_EFV_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 11
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 171, Valor de referencia:  PATRIMONIO
+Fila a copiar: 190, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 210, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 249, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 326, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 326, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: VL1
+Total Filas: 328
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\12\BcosMultiples1222\202212_BMU_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 12
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: BNB
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\12\BcosPYME1222\202212_BPY_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 12
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: PEF
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\12\BDR1222\202212_BDR_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 12
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: BDR
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\12\IFD1222\202212_IFD_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 12
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: ICI
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\12\Nobancos1222\202212_COO_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 12
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 176, Valor de referencia:  PATRIMONIO
+Fila a copiar: 195, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 215, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 254, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 331, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 331, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: CJN
+Total Filas: 333
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\12\Nobancos1222\202212_EFV_EstadosFinancieros.xlsx
+Fecha EEFF: 2022 / 12
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: Sheet1 (2)
+se encontro la hoja
+Fila a copiar: 7, Valor de referencia:  ACTIVO
+Fila a copiar: 114, Valor de referencia:  PASIVO
+Fila a copiar: 171, Valor de referencia:  PATRIMONIO
+Fila a copiar: 190, Valor de referencia:  CUENTAS CONTINGENTES DEUDORAS
+Fila a copiar: 210, Valor de referencia:  CUENTAS DE ORDEN DEUDORAS
+Fila a copiar: 249, Valor de referencia:   (+) INGRESOS FINANCIEROS
+Fila a copiar: 326, Valor de referencia:   (=) RESULTADO NETO DE LA GESTIÓN
+Celda Inicial: 7, Value:  ACTIVO
+Celda Final: 326, Value:   (=) RESULTADO NETO DE LA GESTIÓN
+CelTiBn: 6, Value: VL1
+Total Filas: 328
+-------------------------------------------
+¿Deseas ejecutar la gestion 2023 de Estados Financieros?
+###############################################################################
+Se acabo con los archivos de Estados Financieros
+###############################################################################
+¿Deseas ejecutar la seccion de estados financieros - estados financieros por moneda?
+¿Deseas ejecutar la seccion de indicadores financieros?
+¿Deseas ejecutar la seccion de captaciones?
+¿Deseas ejecutar la seccion de colocaciones?
+¿Deseas ejecutar la seccion de operaciones interbancarias?
+¿Deseas ejecutar la seccion de estados financieros desagregados?
+¿Deseas ejecutar la seccion de agencias, sucursales y numero de empleados?
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+¿ESTADOS DESEA EJECUTAR LA ENUMERACION DE LOS CAMPOS DE LOS ESTADOS?
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+¿DESEA EJECUTAR AGREGAR CAMPOS?
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+¿DESEA EJECUTAR LA UNION DE LAS HOJAS?
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------

@@ -114,7 +114,8 @@ Module BB_ProcedimientosEdicionHojas
         ExcelWkBook.Save()
         ExcelWkBook.Close()
 
-        registroEjecucion000_00("-------------------------------------------")
+
+
 
     End Sub
 
