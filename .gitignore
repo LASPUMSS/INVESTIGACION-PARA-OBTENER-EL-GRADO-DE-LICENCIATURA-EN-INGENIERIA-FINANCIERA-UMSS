@@ -8,9 +8,9 @@
 
 # IGNORAR CARPETAS
 scbm/
-RECURSOS-PROYECTO-DE-GRADO/FUENTES-DE-DATOS/ASFI/ConsoleAppPrepararDatos/bin/Debug/DATOS/scbm/
-RECURSOS-PROYECTO-DE-GRADO/FUENTES-DE-DATOS/ASFI/ConsoleAppPrepararDatos/bin/Debug/DATOS/aa-scbm-copia-base/
-RECURSOS-PROYECTO-DE-GRADO/FUENTES-DE-DATOS/ASFI/ConsoleAppPrepararDatos/bin/Debug/DATOS/scbmModificado/
+FUENTES-DE-DATOS/ASFI/ConsoleAppPrepararDatos/bin/Debug/DATOS/scbm/
+FUENTES-DE-DATOS/ASFI/ConsoleAppPrepararDatos/bin/Debug/DATOS/aa-scbm-copia-base/
+FUENTES-DE-DATOS/ASFI/ConsoleAppPrepararDatos/bin/Debug/DATOS/scbmModificado/
 
 ########################################################################################################
 ## Ignore Visual Studio temporary files, build results, and
