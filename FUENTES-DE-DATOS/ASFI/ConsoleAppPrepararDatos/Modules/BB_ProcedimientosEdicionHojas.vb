@@ -2,10 +2,14 @@
 Module BB_ProcedimientosEdicionHojas
 
 #Region "CATEGORIA - ESTADOS FINANCIEROS"
+
+    Public nTotalFilas As Long = 0
     Public Sub Editar_Estados_Financieros(ByVal ExcelWkBook As Excel.Workbook, ByVal gestion As Long, ByVal mes As Integer, ByVal tipoEndidadInd As Integer)
         Dim tipoEntidadStr(5) As String
         Dim ExcelWkSheet As Excel.Worksheet
         Dim CelTiBn As Excel.Range
+        Dim CelExpresado As Excel.Range
+        Dim expresado As String
         Dim n As Long
         Dim nCol As Long
 
@@ -21,6 +25,10 @@ Module BB_ProcedimientosEdicionHojas
 
         'COPIAR Y PEGAR FORMULAS DE SUMAS
         CelTiBn = celdaTiBn(ExcelWkSheet, "ACTIVO")
+        CelExpresado = encontrarCeldaExpresado(ExcelWkSheet)
+        expresado = QuitarEspAcen(CStr(CelExpresado.Value))
+        registroEjecucion000_00($"EEFF expresado: {expresado}")
+
         nCol = CelTiBn.End(Excel.XlDirection.xlToRight).Column
         Dim ctaCpPg() As String = {"ACTIVO",
                                     "PASIVO",
@@ -52,11 +60,16 @@ Module BB_ProcedimientosEdicionHojas
         Next
 
         'AGREGAR CAMPOS NECESARIOS
-        agregarCamposNecesarios(ExcelWkSheet, gestion, mes, tipoEntidadStr(tipoEndidadInd), "EXPRESADO_EN_MILES_DE_BOLIVIANOS")
+        agregarCamposNecesarios(ExcelWkSheet, gestion, mes, tipoEntidadStr(tipoEndidadInd), expresado)
 
         'VERIFICAR DIMENSIONES
         n = ExcelWkSheet.Cells(ExcelWkSheet.Rows.Count, 1).End(Excel.XlDirection.xlUp).Row
         registroEjecucion000_00($"Total Filas: {n}")
+
+        If n > nTotalFilas Then
+            nTotalFilas = n
+            registroEjecucion000_00($"Este el mayor hasta el momento.")
+        End If
 
         'GUARDAR Y CERRAR
         ExcelWkBook.Save()

@@ -100,10 +100,11 @@ Module CC_ProcedimientosPatrones
                         Try
                             If mes > 9 Then
 
-                                ruta = currentDirectory & "\DATOS\scbm\" & CStr(gestion) & "\" & CStr(mes) & "\" & tipoEntidad(i) & CStr(mes) & CStr(gestion - 2000) & "\" & CStr(gestion) & CStr(mes) & tipoEntidad2(i) & Replace(categoriaHojas, " ", "") & ".xlsx"
+                                ruta = currentDirectory & "\DATOS\scbm\" & CStr(gestion) & "\" & CStr(mes) & "\" & tipoEntidad(i) & CStr(mes) & CStr(gestion - 2000) & "\" & CStr(gestion) & CStr(mes) & tipoEntidad2(i) & Replace(categoriaHojas, " ", "") & ".xls"
 
                                 If My.Computer.FileSystem.FileExists(ruta) Then
 
+                                    'EDITAR
                                     If Not unirHojas And Not enumerar And Not igualarCampos Then
 
                                         registroEjecucion000_00($"El directorio a trabajar: {currentDirectory}")
@@ -111,6 +112,16 @@ Module CC_ProcedimientosPatrones
                                         registroEjecucion000_00($"Fecha EEFF: {gestion} / {mes}")
 
                                         cargarProcedimientoEdcion(ExcelApp.Workbooks.Open(ruta), gestion, mes, i, categoriaHojas)
+
+                                    End If
+
+                                    'IGUALAR CAMPOS
+                                    If igualarCampos And Not enumerar And Not unirHojas Then
+
+                                        registroEjecucion000_00($"El directorio a trabajar: {currentDirectory}")
+                                        registroEjecucion000_00($"El directorio excel a trabajar: {ruta}")
+                                        registroEjecucion000_00($"Fecha EEFF: {gestion} / {mes}")
+                                        igualarCamposEstados(ExcelApp.Workbooks.Open(ruta), categoriaHojas)
 
                                     End If
 
@@ -132,21 +143,14 @@ Module CC_ProcedimientosPatrones
 
                                     End If
 
-                                    If igualarCampos And Not enumerar And Not unirHojas Then
 
-                                        registroEjecucion000_00($"El directorio a trabajar: {currentDirectory}")
-                                        registroEjecucion000_00($"El directorio excel a trabajar: {ruta}")
-                                        registroEjecucion000_00($"Fecha EEFF: {gestion} / {mes}")
-                                        igualarCamposEstados(ExcelApp.Workbooks.Open(ruta), categoriaHojas)
-
-                                    End If
 
                                 End If
 
                             Else
 
 
-                                ruta = currentDirectory & "\DoATOS\scbm\" & CStr(gestion) & "\0" & CStr(mes) & "\" & tipoEntidad(i) & "0" & CStr(mes) & CStr(gestion - 2000) & "\" & CStr(gestion) & "0" & CStr(mes) & tipoEntidad2(i) & Replace(categoriaHojas, " ", "") & ".xlsx"
+                                ruta = currentDirectory & "\DATOS\scbm\" & CStr(gestion) & "\0" & CStr(mes) & "\" & tipoEntidad(i) & "0" & CStr(mes) & CStr(gestion - 2000) & "\" & CStr(gestion) & "0" & CStr(mes) & tipoEntidad2(i) & Replace(categoriaHojas, " ", "") & ".xls"
 
 
                                 If My.Computer.FileSystem.FileExists(ruta) Then

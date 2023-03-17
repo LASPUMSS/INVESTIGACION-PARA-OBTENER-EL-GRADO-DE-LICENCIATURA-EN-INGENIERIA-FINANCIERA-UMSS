@@ -5,14 +5,19 @@ Imports Microsoft.Office.Core
 Module ZZ_ProcedimientosExtras
 
 #Region "PROCEDIMIENTOS COMPLEMENTARIOS"
-
+    ''' <summary>
+    ''' Permite escribir un mensaje en consola y el archivo historial. 
+    ''' </summary>
     Public Sub registroEjecucion000_00(ByVal texto As String)
-
+        ' Permite escribir en consola y el archivo historial.
         Console.WriteLine(texto)
         historialEjecucion.WriteLine(texto)
 
     End Sub
 
+    ''' <summary>
+    ''' Crea las carpetas necesarias para ejecutar el programa.
+    ''' </summary>
     Public Sub cargarCarpetas()
 
         If Not Directory.Exists($"{Directory.GetCurrentDirectory()}\HISTORIAL EJECUCION") Then
@@ -492,6 +497,7 @@ Module ZZ_ProcedimientosExtras
                 ExcelWkSheet.Cells(5, i).Value = "DIA"
                 ExcelWkSheet.Cells(6, i).Value = "TIPO_DE_ENTIDAD"
                 ExcelWkSheet.Cells(7, i).Value = "EXPRESADO"
+
 
             Else
 

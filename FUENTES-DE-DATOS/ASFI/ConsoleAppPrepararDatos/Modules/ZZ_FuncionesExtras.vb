@@ -42,6 +42,12 @@ Module ZZ_FuncionesExtras
 
     End Function
 
+    ''' <summary>
+    ''' <para>Esta función devuelve la hoja donde se encuentra la copia EEFF.</para>
+    ''' <para>Primero elimina las hojas BBDD y BBDD_MOD si existen.</para>
+    ''' <para>Segundo busca la hoja que conitne los EEFF, usando como patron la celda el valor de activo.</para>
+    ''' <para>Tercero copia y devuelve dicha hoja con los EEFF's copiados.</para>
+    ''' </summary>
     Public Function hojaDeDatos(ExcelWkBook As Excel.Workbook, txt As String) As Excel.Worksheet
         Dim strEval As String
         Dim nombreHojaDatos As String = "xxxxxxxxxxxxxxx"
@@ -128,6 +134,7 @@ Module ZZ_FuncionesExtras
         Dim colIn As Integer = 1
         Dim colFn As Long = 50
 
+
         'ENCONTRAR CELDA DE REFERENCIA
         For Each celda As Excel.Range In ExcelWkSheet.Range(ExcelWkSheet.Cells(rowIn, colIn),
                                                             ExcelWkSheet.Cells(rowFn, colFn))
@@ -146,6 +153,56 @@ Module ZZ_FuncionesExtras
 
             If strEval <> "" Then
                 CelResultado = ExcelWkSheet.Cells(i, nCol).Offset(0, 1)
+                Exit For
+            End If
+
+        Next
+
+        Return CelResultado
+
+    End Function
+    Public Function encontrarCeldaExpresado(ExcelWkSheet As Excel.Worksheet, Optional ByVal txt As String = "ACTIVO", Optional ByVal nCol As Long = 1) As Excel.Range
+        Dim strEval As String
+        Dim celReferencia As Excel.Range = ExcelWkSheet.Cells(ExcelWkSheet.Rows.Count, 1)
+        Dim CelTitulos As Excel.Range = ExcelWkSheet.Cells(ExcelWkSheet.Rows.Count, 1)
+        Dim CelResultado As Excel.Range = ExcelWkSheet.Cells(ExcelWkSheet.Rows.Count, 1)
+
+        Dim rowIn As Integer = 1
+        Dim rowFn As Long = 5000
+        Dim colIn As Integer = 1
+        Dim colFn As Long = 50
+
+        'ENCONTRAR CELDA DE REFERENCIA
+        For Each celda As Excel.Range In ExcelWkSheet.Range(ExcelWkSheet.Cells(rowIn, colIn),
+                                                            ExcelWkSheet.Cells(rowFn, colFn))
+            strEval = If(CStr(celda.Value) <> "", QuitarEspAcen(CStr(celda.Value)), "")
+            If strEval = txt Then
+                celReferencia = celda
+                Exit For
+            End If
+        Next
+
+        'ENCONTRAR LA CELDA DE TITULOS
+        For i = celReferencia.Row - 1 To 1 Step -1
+            strEval = If(CStr(ExcelWkSheet.Cells(i, nCol).Offset(0, 1).Value) <> "",
+                        QuitarEspAcen(CStr(ExcelWkSheet.Cells(i, 1).Offset(0, nCol).Value)),
+                        "")
+
+            If strEval <> "" Then
+                CelTitulos = ExcelWkSheet.Cells(i, nCol).Offset(0, 1)
+                Exit For
+            End If
+
+        Next
+
+        'ENCONTRAR EXPRESADO
+        For i = CelTitulos.Row - 1 To 1 Step -1
+            strEval = If(CStr(ExcelWkSheet.Cells(i, nCol).Value) <> "",
+                        QuitarEspAcen(CStr(ExcelWkSheet.Cells(i, nCol).Value)),
+                        "")
+
+            If strEval <> "" Then
+                CelResultado = ExcelWkSheet.Cells(i, nCol)
                 Exit For
             End If
 
