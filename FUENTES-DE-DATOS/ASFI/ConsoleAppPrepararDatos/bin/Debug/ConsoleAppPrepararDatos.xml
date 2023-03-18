@@ -22,5 +22,108 @@ ConsoleAppPrepararDatos
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="M:ConsoleAppPrepararDatos.BB_ProcedimientosEdicionHojas.Editar_Estados_Financieros(Microsoft.Office.Interop.Excel.Workbook,System.Int64,System.Int32,System.Int32)">
+ <summary>
+ <para>Procedimiento que edita los estados financieros.</para>
+ <para>1°: Se encontrar la hoja con EEFF y se realizara una copia, donde se trabajara lo demas.</para>
+ <para>2°: Se copiaran y volver a pegar las filas donde pueden haber formulas, para mantener los resultados solo como datos.</para>
+ <para>3°: Se enconrar en que unidad esta expresado el EEFF.</para>
+ <para>4°: Eliminar las filas que no son necesarias, que estan por ensima y por debajo de los datos.</para>
+ <para>5°: Agregar campos o filas necesaria para identificar el EEFF.</para>
+ <para>6°: Verificar cuantas filas contiene el EEFF despues de ser editado.</para>
+ <para>7°: Guardar y cerrar el libro excel.</para>
+ </summary>
+ <param name="ExcelWkBook">Lirbo a trabajar.</param>
+ <param name="gestion"> Gestion del EEFF.</param>
+ <param name="mes">Mes del EEFF.</param>
+ <param name="tipoEndidadInd">Tipo de entidad a la qe corresponde el EEFFF.</param>
+</member>
+<member name="M:ConsoleAppPrepararDatos.ZZ_FuncionesExtras.hojaConCamposAgregados(Microsoft.Office.Interop.Excel.Workbook)">
+ <summary>
+ Descripcion
+ </summary>
+ <param name="ExcelWkBook"> Libro excel</param>
+ <returns></returns>
+</member>
+<member name="M:ConsoleAppPrepararDatos.ZZ_FuncionesExtras.hojaDeDatos(Microsoft.Office.Interop.Excel.Workbook,System.String)">
+ <summary>
+ <para>Esta función devuelve la hoja donde se encuentra la copia EEFF.</para>
+ <para>Primero elimina las hojas BBDD y BBDD_MOD si existen.</para>
+ <para>Segundo busca la hoja que conitne los EEFF, usando como patron la celda el valor de activo.</para>
+ <para>Tercero copia y devuelve dicha hoja con los EEFF's copiados.</para>
+ </summary>
+ <param name="ExcelWkBook">Libro de excel donde se encuentra los EEFF.</param>
+ <param name="txt">El texto que se utilizara como patron para encontrar la hoja con los EEFF.</param>
+</member>
+<member name="M:ConsoleAppPrepararDatos.ZZ_FuncionesExtras.celdaTiBn(Microsoft.Office.Interop.Excel.Worksheet,System.String,System.Int64)">
+ <summary>
+ <para>Esta función devuelve un celda donde se encuentra el titulo del primer entidad financiera.</para>
+ </summary>
+ <param name="ExcelWkSheet"> Hoja excel "BBDD" que contiene el EEFF</param>
+ <param name="txt">El texto que se utilizara para encontrar la celda de referencia.</param>
+ <param name="nCol">La columna en donde se encontrar el texto de celda de referencia.</param>
+ <returns>Una celda tipo "Excel.Range".</returns>
+</member>
+<member name="M:ConsoleAppPrepararDatos.ZZ_FuncionesExtras.encontrarCeldaExpresado(Microsoft.Office.Interop.Excel.Worksheet,System.String,System.Int64)">
+ <summary>
+ <para>Esta función devuelve un celda donde se encuentra la unidad en la que esta expresada el EEFF.</para>
+ </summary>
+ <param name="ExcelWkSheet">Hoja excel "BBDD" que contiene el EEFF</param>
+ <param name="txt">El texto que se utilizara para encontrar la celda de referencia, por defecto es "ACTIVO".</param>
+ <param name="nCol">La columna en donde se encontrar el texto de celda de referencia.</param>
+ <returns>Una celda tipo "Excel.Range".</returns>
+</member>
+<member name="M:ConsoleAppPrepararDatos.ZZ_FuncionesExtras.NumeroDiasMes(System.Int64,System.Int32)">
+ <summary>
+ <para>Devuelve el ultimo dia del mes en función del si es bisiesto o no.</para>
+ </summary>
+ <param name="gestion">Gestion</param>
+ <param name="mes">Mes del cual se quire saber el ultimo dia del mes.</param>
+ <returns>El ultimo dia del mes, tipo de datos "Integer".</returns>
+</member>
+<member name="M:ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Microsoft.Office.Interop.Excel.Application,System.Int64,System.Int64,System.String,System.Boolean,System.Boolean,System.Boolean)">
+ <summary>
+ <para>Este procedimiento mapea un patron de ruta donde se encuentran los EEFF's, y ejecuta un procediento (editar, igualar, unir, enumerar). </para>
+ <para>Este patron aplica para los siguitente EEFF's:</para>
+ <para> 1° Seccion Estados Financieros - Estados Financieros </para>
+ <para> 2° Seccion Estados Financieros - Estados Financieros Moneda </para>
+ <para> 3° Seccion Indicadores Finanacieros - Indicadores Financieros </para>
+ <para> 4° Seccion Colocaciones - EstratificacionDepDptoTotal </para>
+ <para> 5° Seccion Colocaciones - EstratificacionDepEntidadTotal </para>
+ <para> 6° Seccion Colocaciones - EstratificacionDepositos </para>
+ <para> 7° Seccion de agencia, sucursales y numero de empleados - puntos de Atención Financiera por departamento </para>
+ <para> 8° Seccion de agencia, sucursales y numero de empleados - sucursales y numero de empleados </para>
+ </summary>
+ <param name="ExcelApp"> Objeto microsoft excel. </param>
+ <param name="gestionIn"> Gestion Inicion. </param>
+ <param name="gestionFn"> Gestion Final. </param>
+ <param name="categoriaHojas"> Tipo EEFF (EEFF, EEFF por moneda, etc)</param>
+ <param name="unirHojas"> TRUE si se quire unir hojas. </param>
+ <param name="enumerar"> TRUE si se quiere enumerar campos de hojas. </param>
+ <param name="igualarCampos"> TRUE si se quite igualar campos en BBDD_MOD. </param>
+</member>
+<member name="M:ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.registroEjecucion000_00(System.String)">
+ <summary>
+ Permite escribir un mensaje en consola y el archivo historial. 
+ </summary>
+</member>
+<member name="M:ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.cargarCarpetas">
+ <summary>
+ Crea las carpetas necesarias para ejecutar el programa.
+ </summary>
+</member>
+<member name="M:ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.cargarPatronDeEdicion(Microsoft.Office.Interop.Excel.Application,System.Int64,System.Int64,System.String,System.String,System.Boolean,System.Boolean,System.Boolean)">
+ <summary>
+ <para>Este procedimiento contiene todos los patrones y si se decea editar, igualar campos, unir, enumerar</para>
+ </summary>
+ <param name="ExcelApp"></param>
+ <param name="gestionIn"></param>
+ <param name="gestionFn"></param>
+ <param name="categoriaHojas"></param>
+ <param name="patron"></param>
+ <param name="unirHojas"></param>
+ <param name="enumerar"></param>
+ <param name="igualarCampos"></param>
+</member>
 </members>
 </doc>
