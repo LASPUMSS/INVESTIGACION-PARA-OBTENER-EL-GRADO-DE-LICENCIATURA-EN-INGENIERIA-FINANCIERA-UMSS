@@ -4,6 +4,22 @@ Module BB_ProcedimientosEdicionHojas
 #Region "CATEGORIA - ESTADOS FINANCIEROS"
 
     Public nTotalFilas As Long = 0
+
+
+    ''' <summary>
+    ''' <para>Procedimiento que edita los estados financieros.</para>
+    ''' <para>1°: Se encontrar la hoja con EEFF y se realizara una copia, donde se trabajara lo demas.</para>
+    ''' <para>2°: Se copiaran y volver a pegar las filas donde pueden haber formulas, para mantener los resultados solo como datos.</para>
+    ''' <para>3°: Se enconrar en que unidad esta expresado el EEFF.</para>
+    ''' <para>4°: Eliminar las filas que no son necesarias, que estan por ensima y por debajo de los datos.</para>
+    ''' <para>5°: Agregar campos o filas necesaria para identificar el EEFF.</para>
+    ''' <para>6°: Verificar cuantas filas contiene el EEFF despues de ser editado.</para>
+    ''' <para>7°: Guardar y cerrar el libro excel.</para>
+    ''' </summary>
+    ''' <param name="ExcelWkBook">Lirbo a trabajar.</param>
+    ''' <param name="gestion"> Gestion del EEFF.</param>
+    ''' <param name="mes">Mes del EEFF.</param>
+    ''' <param name="tipoEndidadInd">Tipo de entidad a la qe corresponde el EEFFF.</param>
     Public Sub Editar_Estados_Financieros(ByVal ExcelWkBook As Excel.Workbook, ByVal gestion As Long, ByVal mes As Integer, ByVal tipoEndidadInd As Integer)
         Dim tipoEntidadStr(5) As String
         Dim ExcelWkSheet As Excel.Worksheet
@@ -25,9 +41,6 @@ Module BB_ProcedimientosEdicionHojas
 
         'COPIAR Y PEGAR FORMULAS DE SUMAS
         CelTiBn = celdaTiBn(ExcelWkSheet, "ACTIVO")
-        CelExpresado = encontrarCeldaExpresado(ExcelWkSheet)
-        expresado = QuitarEspAcen(CStr(CelExpresado.Value))
-        registroEjecucion000_00($"EEFF expresado: {expresado}")
 
         nCol = CelTiBn.End(Excel.XlDirection.xlToRight).Column
         Dim ctaCpPg() As String = {"ACTIVO",
@@ -41,6 +54,11 @@ Module BB_ProcedimientosEdicionHojas
         For Each cta As String In ctaCpPg
             copiarPegarFila(ExcelWkSheet, nCol, cta)
         Next
+
+        'ENCONTRAR LA CELDAD EXPRESADO
+        CelExpresado = encontrarCeldaExpresado(ExcelWkSheet)
+        expresado = QuitarEspAcen(CStr(CelExpresado.Value))
+        registroEjecucion000_00($"EEFF expresado: {expresado}")
 
         'ELIMINAR FILA NO NECESARIAS DEL INICIO Y FINAL DE LA HOJA
         eliminarFilasInFn_TP1(ExcelWkSheet, "ACTIVO", "RESULTADO_NETO_DE_LA_GESTION")

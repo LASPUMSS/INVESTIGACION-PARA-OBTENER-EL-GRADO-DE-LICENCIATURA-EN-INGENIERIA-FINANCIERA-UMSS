@@ -12,11 +12,9 @@ Module AA_PRINCIPAL
         Dim gestionActual As String
         Dim gestionIncial As Long
 
-
         '####################################################################################
         '##############  PROCEDIMIENTOS PRELEMINARES
         '####################################################################################
-
 
         ExcelApp = New Excel.Application
         ExcelApp.DisplayAlerts = False

@@ -5,15 +5,25 @@ Module CC_ProcedimientosPatrones
 
 #Region "PATRONES"
 
-    'ESTE PATRON APLICA PARA:
-    'Seccion Estados Financieros - Estados Financieros
-    'Seccion Estados Financieros - Estados Financieros Moneda
-    'Seccion Indicadores Finanacieros - Indicadores Financieros
-    'Seccion Colocaciones - EstratificacionDepDptoTotal
-    'Seccion Colocaciones - EstratificacionDepEntidadTotal
-    'Seccion Colocaciones - EstratificacionDepositos
-    'Seccion de agencia, sucursales y numero de empleados - puntos de Atención Financiera por departamento
-    'Seccion de agencia, sucursales y numero de empleados - sucursales y numero de empleados
+    ''' <summary>
+    ''' <para>Este procedimiento mapea un patron de ruta donde se encuentran los EEFF's, y ejecuta un procediento (editar, igualar, unir, enumerar). </para>
+    ''' <para>Este patron aplica para los siguitente EEFF's:</para>
+    ''' <para> 1° Seccion Estados Financieros - Estados Financieros </para>
+    ''' <para> 2° Seccion Estados Financieros - Estados Financieros Moneda </para>
+    ''' <para> 3° Seccion Indicadores Finanacieros - Indicadores Financieros </para>
+    ''' <para> 4° Seccion Colocaciones - EstratificacionDepDptoTotal </para>
+    ''' <para> 5° Seccion Colocaciones - EstratificacionDepEntidadTotal </para>
+    ''' <para> 6° Seccion Colocaciones - EstratificacionDepositos </para>
+    ''' <para> 7° Seccion de agencia, sucursales y numero de empleados - puntos de Atención Financiera por departamento </para>
+    ''' <para> 8° Seccion de agencia, sucursales y numero de empleados - sucursales y numero de empleados </para>
+    ''' </summary>
+    ''' <param name="ExcelApp"> Objeto microsoft excel. </param>
+    ''' <param name="gestionIn"> Gestion Inicion. </param>
+    ''' <param name="gestionFn"> Gestion Final. </param>
+    ''' <param name="categoriaHojas"> Tipo EEFF (EEFF, EEFF por moneda, etc)</param>
+    ''' <param name="unirHojas"> TRUE si se quire unir hojas. </param>
+    ''' <param name="enumerar"> TRUE si se quiere enumerar campos de hojas. </param>
+    ''' <param name="igualarCampos"> TRUE si se quite igualar campos en BBDD_MOD. </param>
     Public Sub editarArchivosPorPatron01(ExcelApp As Excel.Application, gestionIn As Long, gestionFn As Long, categoriaHojas As String, unirHojas As Boolean, enumerar As Boolean, igualarCampos As Boolean)
         Dim mes As Integer
         Dim gestion As Long
@@ -104,7 +114,7 @@ Module CC_ProcedimientosPatrones
 
                                 If My.Computer.FileSystem.FileExists(ruta) Then
 
-                                    'EDITAR
+                                    'EDITAR (TODOS LOS PARAMETROS DEBEN SER FALSO)
                                     If Not unirHojas And Not enumerar And Not igualarCampos Then
 
                                         registroEjecucion000_00($"El directorio a trabajar: {currentDirectory}")

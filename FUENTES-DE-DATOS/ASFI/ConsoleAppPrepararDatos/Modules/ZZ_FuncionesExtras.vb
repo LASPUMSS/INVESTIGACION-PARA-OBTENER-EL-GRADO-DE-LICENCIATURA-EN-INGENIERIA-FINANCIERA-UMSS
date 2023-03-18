@@ -1,7 +1,11 @@
 ﻿Imports System.Text.RegularExpressions
 Imports Microsoft.Office.Interop
 Module ZZ_FuncionesExtras
-
+    ''' <summary>
+    ''' Descripcion
+    ''' </summary>
+    ''' <param name="ExcelWkBook"> Libro excel</param>
+    ''' <returns></returns>
     Public Function hojaConCamposAgregados(ExcelWkBook As Excel.Workbook) As Excel.Worksheet
         Dim strEval As String
         Dim nombreHojaDatos As String
@@ -48,6 +52,8 @@ Module ZZ_FuncionesExtras
     ''' <para>Segundo busca la hoja que conitne los EEFF, usando como patron la celda el valor de activo.</para>
     ''' <para>Tercero copia y devuelve dicha hoja con los EEFF's copiados.</para>
     ''' </summary>
+    ''' <param name="ExcelWkBook">Libro de excel donde se encuentra los EEFF.</param>
+    ''' <param name="txt">El texto que se utilizara como patron para encontrar la hoja con los EEFF.</param>
     Public Function hojaDeDatos(ExcelWkBook As Excel.Workbook, txt As String) As Excel.Worksheet
         Dim strEval As String
         Dim nombreHojaDatos As String = "xxxxxxxxxxxxxxx"
@@ -124,6 +130,13 @@ Module ZZ_FuncionesExtras
 
     End Function
 
+    ''' <summary>
+    ''' <para>Esta función devuelve un celda donde se encuentra el titulo del primer entidad financiera.</para>
+    ''' </summary>
+    ''' <param name="ExcelWkSheet"> Hoja excel "BBDD" que contiene el EEFF</param>
+    ''' <param name="txt">El texto que se utilizara para encontrar la celda de referencia.</param>
+    ''' <param name="nCol">La columna en donde se encontrar el texto de celda de referencia.</param>
+    ''' <returns>Una celda tipo "Excel.Range".</returns>
     Public Function celdaTiBn(ExcelWkSheet As Excel.Worksheet, txt As String, Optional ByVal nCol As Long = 1) As Excel.Range
         Dim strEval As String
         Dim celReferencia As Excel.Range = ExcelWkSheet.Cells(ExcelWkSheet.Rows.Count, 1)
@@ -161,6 +174,14 @@ Module ZZ_FuncionesExtras
         Return CelResultado
 
     End Function
+
+    ''' <summary>
+    ''' <para>Esta función devuelve un celda donde se encuentra la unidad en la que esta expresada el EEFF.</para>
+    ''' </summary>
+    ''' <param name="ExcelWkSheet">Hoja excel "BBDD" que contiene el EEFF</param>
+    ''' <param name="txt">El texto que se utilizara para encontrar la celda de referencia, por defecto es "ACTIVO".</param>
+    ''' <param name="nCol">La columna en donde se encontrar el texto de celda de referencia.</param>
+    ''' <returns>Una celda tipo "Excel.Range".</returns>
     Public Function encontrarCeldaExpresado(ExcelWkSheet As Excel.Worksheet, Optional ByVal txt As String = "ACTIVO", Optional ByVal nCol As Long = 1) As Excel.Range
         Dim strEval As String
         Dim celReferencia As Excel.Range = ExcelWkSheet.Cells(ExcelWkSheet.Rows.Count, 1)
@@ -212,11 +233,12 @@ Module ZZ_FuncionesExtras
 
     End Function
 
-    Function numAleatorioEntre(ByVal minimo As Integer, ByVal maximo As Integer) As Integer
-        Randomize()
-        Return CLng((minimo - maximo) * Rnd() + maximo)
-    End Function
-
+    ''' <summary>
+    ''' <para>Devuelve el ultimo dia del mes en función del si es bisiesto o no.</para>
+    ''' </summary>
+    ''' <param name="gestion">Gestion</param>
+    ''' <param name="mes">Mes del cual se quire saber el ultimo dia del mes.</param>
+    ''' <returns>El ultimo dia del mes, tipo de datos "Integer".</returns>
     Public Function NumeroDiasMes(ByVal gestion As Long, ByVal mes As Integer) As Integer
         Dim diasMes As Integer
         Dim i2 As Integer

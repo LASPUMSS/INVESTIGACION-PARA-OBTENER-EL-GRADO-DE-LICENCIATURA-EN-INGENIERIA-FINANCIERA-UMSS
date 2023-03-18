@@ -105,6 +105,17 @@ Module ZZ_ProcedimientosExtras
 
     End Sub
 
+    ''' <summary>
+    ''' <para>Este procedimiento contiene todos los patrones y si se decea editar, igualar campos, unir, enumerar</para>
+    ''' </summary>
+    ''' <param name="ExcelApp"></param>
+    ''' <param name="gestionIn"></param>
+    ''' <param name="gestionFn"></param>
+    ''' <param name="categoriaHojas"></param>
+    ''' <param name="patron"></param>
+    ''' <param name="unirHojas"></param>
+    ''' <param name="enumerar"></param>
+    ''' <param name="igualarCampos"></param>
     Public Sub cargarPatronDeEdicion(ByVal ExcelApp As Excel.Application, ByVal gestionIn As Long, ByVal gestionFn As Long, ByVal categoriaHojas As String, ByVal patron As String, Optional unirHojas As Boolean = False, Optional enumerar As Boolean = False, Optional igualarCampos As Boolean = False)
         Dim nCategoria As String = Replace(categoriaHojas, " ", "")
         Dim nPatron As String = Replace(patron, " ", "")
