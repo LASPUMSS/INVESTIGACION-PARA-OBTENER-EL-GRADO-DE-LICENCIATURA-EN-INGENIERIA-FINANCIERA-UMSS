@@ -4,48 +4,51 @@ output: pdf_document
 
 # Estructura capitular tentativo
 
-\vspace{3.5mm}
+\textbf{Caratula} 
+\newline 
+\textbf{Portada} 
+\newline 
+\textbf{Indice capitular} 
+
+\vspace{2.5mm}
 **Capítulo 1 Perfil del proyecto**
-\vspace{3.5mm}
+\vspace{2.5mm}
 
-\vspace{3.5mm}
+\vspace{2.5mm}
 **Capítulo 2 Marco teórico**
-\vspace{3.5mm}
+\vspace{2.5mm}
 
-Objetivos del sustento teórico
-\newline 2.1 Definición de términos financieros básicos
-\newline 2.2 Intermediación financiera y regulación financiera
-\newline 2.3 Aprendizaje automático
-\newline 2.4 Arquitectura de las redes neuronales artificiales
-\newline 2.5 Función de coste
-\newline 2.6 Funciones de activación
-\newline 2.7 Definición de sobreajuste y desajuste de las redes neuronales.
+2.1 Objetivos del sustento teórico
+\newline 2.2 Definición de términos financieros básicos
+\newline 2.3 Intermediación financiera y regulación financiera
+\newline 2.4 Aprendizaje automático
+\newline 2.5 Arquitectura de las redes neuronales artificiales
+\newline 2.6 Función de coste
+\newline 2.7 Funciones de activación
+\newline 2.8 Definición de sobre ajuste y desajuste de las redes neuronales.
 
-\vspace{3.5mm}
+\vspace{2.5mm}
 **Capítulo 3 Diagnóstico de las instituciones financieras del sistema financiero**
-\vspace{3.5mm}
+\vspace{2.5mm}
 
 
-\vspace{3.5mm}
+\vspace{2.5mm}
 **Capítulo 4 Determinación de pronósticos de estados financieros por redes neuronales artificiales**
-\vspace{3.5mm}
+\vspace{2.5mm}
 
 
-\vspace{3.5mm}
+\vspace{2.5mm}
 **Capítulo 5 Conclusiones y recomendaciones**
-\vspace{3.5mm}
+\vspace{2.5mm}
 
-5.1 Conclusiones
-\newline 5.2 Recomendaciones
-
-\vspace{3.5mm}
+\vspace{2.5mm}
 **Bibliografía consultada**
-\vspace{3.5mm}
+\vspace{2.5mm}
 
-\vspace{3.5mm}
+\vspace{2.5mm}
 **Anexos y apéndices**
-\vspace{3.5mm}
+\vspace{2.5mm}
 
-\vspace{3.5mm}
+\vspace{2.5mm}
 **Glosario**
-\vspace{3.5mm}
+\vspace{2.5mm}
