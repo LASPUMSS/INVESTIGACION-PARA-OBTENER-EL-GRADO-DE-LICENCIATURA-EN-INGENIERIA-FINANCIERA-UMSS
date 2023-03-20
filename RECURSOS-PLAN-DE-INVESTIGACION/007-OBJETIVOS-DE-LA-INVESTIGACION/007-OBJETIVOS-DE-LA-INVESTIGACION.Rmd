@@ -1,0 +1,18 @@
+---
+output: pdf_document
+---
+
+# Objetivos de la investigación
+Entre los objetivos propuestos para viabilizar el tema de investigación y la realización del informe final, se describen los siguientes:
+
+## General 
+
+Proporcionar la información financiera adecuada y oportuna, para la toma de decisiones gerenciales sobre bases ciertas y debidamente estructuradas, mediante la determinación de pronósticos de estados financieros por redes neuronales artificiales.
+
+## Especifico 
+
+- Diagnostico de la situación actual del sistema financiero de Bolivia.
+- Definir la arquitectura de un modelo de redes neuronales artificiales para la obtención de información confiable y válida para la toma de decisiones.
+- Realizar el análisis comparativo de los datos y los resultados obtenidos.
+- Determinar las ventajas y desventajas del método redes neuronales artificiales para el análisis financiero de las instituciones financieras.
+

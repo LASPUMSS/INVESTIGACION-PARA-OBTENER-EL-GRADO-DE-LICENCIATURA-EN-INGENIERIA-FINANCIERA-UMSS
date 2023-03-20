@@ -10,7 +10,7 @@ Una de las alternativas de tratamiento de esta información que ofrece el sistem
 
 \begin{figure}
 \centering
-\includegraphics[width=10cm, height=8cm]{RECURSOS-PERFIL-DE-INVESTIGACION/003-PLANTEAMIENTO-DEL-PROBLEMA/arbol-de-problemas.png}
+\includegraphics[width=10cm, height=8cm]{RECURSOS-PLAN-DE-INVESTIGACION/003-PLANTEAMIENTO-DEL-PROBLEMA/arbol-de-problemas.png}
 \caption{Arbol de problemas}
 \end{figure}
 

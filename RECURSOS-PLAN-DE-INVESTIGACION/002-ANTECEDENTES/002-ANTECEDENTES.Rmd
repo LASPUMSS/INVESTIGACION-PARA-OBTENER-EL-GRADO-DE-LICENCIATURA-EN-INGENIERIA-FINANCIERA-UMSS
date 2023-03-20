@@ -7,11 +7,13 @@ output: pdf_document
 **Tema genérico: Proyección de estados financieros.**
 \newline
 **Tema específico: Proyección de estados financieros por el método de redes neuronales artificiales.**
-\newline
-\newline
-**PROYECCION DE ESTADOS FINANCIEROS POR EL MEDOTO DE REDES NEURONALES ARTIFICIALES EN BOLIVIA**
 
-# Antecedentes
+\begin{center}
+\textbf{PROYECCION DE ESTADOS FINANCIEROS POR EL MÉTODO DE REDES NEURONALES ARTIFICIALES EN BOLIVIA}
+\end{center}
+
+# Antecedentes 
+
 Como antecedentes generales muestran que los inicios de la inteligencia artificial de manera formal se dieron en el año 1943 cuando se colocó la primera piedra angular sobre la que se basó lo que hoy se conoce como inteligencia artificial, de la mano de Warren McCulloch y Walter Pitts, con la presentación del primer modelo matemático de aprendizaje, donde por primera vez se dota a un modelo autónomo la capacidad de aprendizaje.
 
 En 1949 se dio otro aporte al campo de las redes neuronales por parte de Donald Hebb, quien fue el primero en explicar los procesos del aprendizaje desde una perspectiva del campo psicológico, desarrollando una regla de como el aprendizaje ocurría. La idea general que propuso era que el aprendizaje ocurría cuando ciertos cambios en una neurona eran activados. 

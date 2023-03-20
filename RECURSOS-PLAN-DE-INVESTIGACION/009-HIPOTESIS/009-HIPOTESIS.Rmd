@@ -1,0 +1,7 @@
+---
+output: pdf_document
+---
+
+# Hipotesis
+
+La aplicación de redes neuronales artificiales permitirá a la empresa proyectar sus estados financieros con una mayor aproximación a la situación económica-financiera de la institución.
