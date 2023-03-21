@@ -1,0 +1,65 @@
+---
+title: "Simulación sobre modelos entrenados"
+output:
+  pdf_document: default
+  html_document: default
+date: "2023-03-21"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      out.width = '50%',
+                      out.height = '50%',
+                      fig.align = 'center',
+                      message = FALSE)
+```
+
+<!-- LIBRERIAS -->
+```{r, message=FALSE}
+library(fpp2)
+```
+
+
+## Modelo arima
+
+```{r}
+fit <- auto.arima(sunspotarea)
+
+nSim <- 3L
+h <- 20L
+
+sim <- ts(matrix(0, nrow=h, ncol=nSim),
+  start=end(sunspotarea)[1L]+1L)
+
+for(i in seq(nSim)){
+  sim[,i] <- simulate(fit, nsim=h)
+}
+
+autoplot(sunspotarea) + 
+    autolayer(forecast(fit,h=h), series = 'proyeccion') +
+    autolayer(sim)
+
+```
+
+
+
+## Modelo redes neuronales
+
+```{r}
+fit <- nnetar(sunspotarea,lambda=0)
+
+nSim <- 3L
+h <- 20L
+
+sim <- ts(matrix(0, nrow=h, ncol=nSim),
+  start=end(sunspotarea)[1L]+1L)
+
+for(i in seq(nSim)){
+  sim[,i] <- simulate(fit, nsim=h)
+}
+
+autoplot(sunspotarea) + 
+    autolayer(forecast(fit,h=h), series = 'proyeccion') +
+    autolayer(sim)
+
+```
