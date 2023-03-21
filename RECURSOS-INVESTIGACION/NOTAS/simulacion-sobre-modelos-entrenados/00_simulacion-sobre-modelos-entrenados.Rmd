@@ -1,7 +1,6 @@
 ---
 title: "Simulación sobre modelos entrenados"
 output: pdf_document
-date: "`r Sys.Date()`"
 ---
 
 ```{r setup, include=FALSE}

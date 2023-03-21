@@ -1,8 +1,6 @@
 ---
 title: "Modelos lineales - Modelos no lineales"
-output:
-  pdf_document: default
-  html_document: default
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE, results='hide'}
@@ -34,6 +32,14 @@ import matplotlib.pyplot as plt
 ## Datos no lineales
 
 Primero generamos datos no lineales de la siguiente función:
+
+$$\left \{
+\begin{array}{rcl}
+     -2.186x-12.864 & Si & -\infty \leq{x} < -2
+  \\ 4.246x & Si & -2 \leq{x} < 0
+  \\ 10e^{-0.05x-0.5}*sen[0.03*x+0.7)*x] & Si & 0 \leq{x}< \infty
+\end{array}
+\right.$$
 
 El correspondiente código  para simular esta función es la siguiente:
 
