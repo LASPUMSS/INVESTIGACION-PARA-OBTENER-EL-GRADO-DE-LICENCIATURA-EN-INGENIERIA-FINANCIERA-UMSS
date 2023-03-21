@@ -1,11 +1,13 @@
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
-\begin{table}[]
+% \usepackage{rotating}
+\begin{table}[h!]
 \centering
 \caption{Matriz de diseño metodológico.}
 
-\resizebox{15cm}{!} {
+\resizebox{13cm}{!} {
 
+\begin{turn}{90}
 \begin{tabular}{|cc|c|c|c|c|}
 \hline
 \multicolumn{2}{|c|}{\textbf{Objetivos}} &
@@ -44,6 +46,7 @@
   \begin{tabular}[c]{@{}c@{}}Revisión\\ Bibliográfica\end{tabular} &
   \begin{tabular}[c]{@{}c@{}}Resultado de la comparación \\ de proyecciones de EEFF\\ y EEFF\end{tabular} \\ \hline
 \end{tabular}
+\end{turn}
 }
 
 
