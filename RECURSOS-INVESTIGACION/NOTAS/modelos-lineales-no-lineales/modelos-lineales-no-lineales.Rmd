@@ -1,5 +1,8 @@
 ---
-output: pdf_document
+title: "Modelos lineales - Modelos no lineales"
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE, results='hide'}
@@ -12,8 +15,6 @@ knitr::opts_chunk$set(echo = TRUE,
                       message=FALSE)
 
 ```
-
-# Modelos lineales - Modelos no lineales
 
 ## Librerias necesarias
 
