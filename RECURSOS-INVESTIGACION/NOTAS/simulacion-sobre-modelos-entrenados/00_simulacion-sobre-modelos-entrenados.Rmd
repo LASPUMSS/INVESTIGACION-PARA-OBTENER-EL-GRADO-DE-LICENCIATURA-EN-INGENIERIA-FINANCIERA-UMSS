@@ -1,21 +1,19 @@
 ---
 title: "Simulación sobre modelos entrenados"
-output:
-  pdf_document: default
-  html_document: default
-date: "2023-03-21"
+output: pdf_document
+date: "`r Sys.Date()`"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,
-                      out.width = '50%',
-                      out.height = '50%',
+                      out.width = '60%',
+                      out.height = '60%',
                       fig.align = 'center',
                       message = FALSE)
 ```
 
 <!-- LIBRERIAS -->
-```{r, message=FALSE}
+```{r, echo=FALSE}
 library(fpp2)
 ```
 
@@ -42,7 +40,7 @@ autoplot(sunspotarea) +
 ```
 
 
-
+\newpage
 ## Modelo redes neuronales
 
 ```{r}
