@@ -1,0 +1,40 @@
+---
+title: "CAMEL calculo"
+output: pdf_document
+date: "2023-03-21"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Capital
+
+- Coeficiente de adecuación patrimonial(no menor al 12%).
+- (Cartera en mora - previsión cartera)/patrimonio.- Cuanto del capital de los inversionistas esta comprometido en créditos incumplidos.
+- (Cartera en mora - previsión cartera + realizables )/patrimonio .- Cuanto del capital de los inversionistas esta comprometido en créditos incumplidos sumando los bienes adjudicados.
+- Patrimonio/(Activo+Contingente) La entidad esta trabajando mas con dinero ajeno o con dinero de los propietarios.
+
+## Activo
+
+- Cartera en mora/ Cartera Bruta 
+- Previsión/Cartera Bruta
+- Previsión/Cartera en mora
+- Cartera reprogramada total/cartera Bruta
+
+## Administración
+
+- Gastos administrativos/(Activos+Contigentes)
+- Gastos administrativos-Impuestos/(Resultado operativo bruto)
+
+## Beneficios
+
+- Resultado Neto de la gestion/(Activo+contigente)
+- Resultado Neto de la gestion/patrimonio
+
+## Liquidez
+
+- Disponibles/obligacione a corto plazo
+- Disponibles+Inversiones temporarias/Obligaciones a corto plazo
+
+

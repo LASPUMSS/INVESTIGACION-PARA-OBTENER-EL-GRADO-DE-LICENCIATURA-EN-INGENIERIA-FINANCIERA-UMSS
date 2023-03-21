@@ -4,31 +4,66 @@ output: pdf_document
 
 # Marco teórico
 
-<!-- ESTADOS FINANCIEROS -->
+<!-- #################################################################  -->
+<!--                    FINANZAS                                        -->
+<!-- #################################################################  -->
+
+<!-- SISTEMA FINANCIEROS -->
+
 ## Sistema financiero
 
 El sistema financiero, "consiste en diversas instituciones y mercados que sirven a las empresas de negocios, los individuos y los gobiernos".[@FAF]
 
-Entonces se afirma que el sistema financiero en general está formado por el conjunto de instituciones, constituidas en mercados, cuyo fin principal es canalizar el ahorro que generan los ahorradores hacia los prestatarios, así como facilitar y otorgar seguridad al movimiento de dinero y al sistema de pagos. En consecuenecia al alacance y limitaciones del estudio de esta investigacion se define al sistema financiero boliviano que está constituido por tres sectores que atienden al origen de su capital, el sector financiero privado, el público y con participación parcial del estado.
+Entonces se afirma que el sistema financiero en general está formado por el conjunto de instituciones, constituidas en mercados, cuyo fin principal es canalizar el ahorro que generan los ahorradores hacia los prestatarios, así como facilitar y otorgar seguridad al movimiento de dinero y al sistema de pagos. En consecuencia al alcance y limitaciones del estudio de esta investigación se define al sistema financiero boliviano que está constituido por tres sectores que atienden al origen de su capital, el sector financiero privado, el público y con participación parcial del estado.
 
 <!-- ESTADOS FINANCIEROS -->
+
 ## Estados financieros
 
 En la página oficial de la Autoridad de Supervisión del Sistema Financiero (ASFI), "se define que los estados financieros constituyen una representación estructurada de la situación financiera y de las transacciones llevadas a cabo por la empresa. Su objetivo, con propósitos de información general, es suministrar información acerca de la situación y rendimiento financieros, así como de los flujos de efectivo que sea útil a una amplia variedad de usuarios al tomar sus decisiones económicas. Los estados financieros también muestran los resultados de la gestión que los administradores han efectuado con los recursos que se les han confiado". [@ASFI]
 
 Entonces se afirma, que los estados financieros son un resumen del ejercicio económico de una empresa o institución, entendiendo al ejercicio económico como la suma de todas las actividades vinculadas al giro de la empresa en un intervalo de tiempo, dando información, sobre ingresos, egresos, pasivos, activos, es decir, los estados financieros son una fotografía de la empresa en un punto del tiempo.
 
+### Balance general
+
+### Estado de resultados
+
+## Evaluación financiera y pronosticos
+
+### Indicadores financieros 
+
+Indicadores de tipo:
+
+- Estructura de activos.
+- Estructura de pasivos.
+- Estructura de obligaciones.
+- Calidad de cartera.
+- Liquidez.
+- Solvencia.
+- Estructura financiera.
+- Rentabilidad.
+- Resultados.
+- Ingresos y gastos financieros.
+- Eficacia administrativas.
+- Spread efectivo.
+
+### Metodologia CAMEL
+
+La metodología CAMEL(capital, Access, Managment, Earnings, Liquidity)
+
+
+
 ### Pronósticos
 
 El termino de pronóstico de uso común, definido por la Real Academia Española (RAE) como la acción y efecto de pronosticar, la misma RAE define pronosticar como predecir algo en el futuro a partir de indicios. El pronóstico es el proceso de estimación en situaciones de incertidumbre, para los propósitos de esta investigación, un pronóstico es un evento asociado a una distribución de probabilidad.
-<!-- 
-### Simulación
-La simulación es una herramienta flexible para realizar un análisis de riesgo de procesos financieros mediante la imitación repetida de la evolución de las transacciones necesarias para generar un perfi l de los resultados posibles.[@IIOF]
 
-Con lo anterior apartado, la simulación se entiende como la experimentación donde un modelo imita ciertos aspectos de la realidad, esto permite trabajar en condiciones similares a las reales, pero con variables controladas y en un entorno semejante al real pero que esta creado o acondicionado artificialmente, para los propósitos de esta investigación la simulación mediante redes neuronales son los indicios que toma como base para realizar los pronósticos de los estados financieros de entidades del sistema financieros boliviano.
--->
+
+<!-- #################################################################  -->
+<!--                    REDES NEURONALES                                -->
+<!-- #################################################################  -->
 
 <!-- INTELIGENCIA ARTIFICIAL -->
+
 ## Inteligencia artificial
 
 "En la literatura referente a la inteligencia artificial no existe consenso sobre lo que se entiende como inteligencia artificial, pero estas diferencias se engloban en dos ideas, donde la inteligencia artificial se refieren a procesos mentales y al razonamiento".[@IAUEM]
@@ -56,18 +91,6 @@ Las Redes Neuronales "son un paradigma de aprendizaje y procesamiento automátic
 Una red neuronal es un método del aprendizaje automático que enseña a las computadoras a procesar datos de una manera que está inspirada en la forma en que lo hace el cerebro humano, las redes neuronales artificiales es modelo computacional resultado de diversas aportaciones científicas, consiste en un conjunto de unidades, llamadas neuronas artificiales, inspiradas en las neuronas del cerebro conectadas entre sí para transmitirse señales.
 
 Las redes neuronales artificiales son modelos de aprendizaje de problemas no lineales que buscan generalizar información extraída de datos ordenados en vectores, que dotan a dicha red neuronal con la capacidad de realizar clasificaciones o regresiones.
-
-\newpage
-### Elementos de una red neuronal
-
-Los elementos de una red neuronal se resumen en la siguiente figura:
-
-\begin{figure}
-\centering
-\includegraphics[width=10cm, height=8cm]{RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/red-neuronal.png}
-\caption{Red Neuronal Artificial}
-\end{figure}
-
 
 Y como todo sistema es el resultado de la interacción de elementos simples trabajando conjuntamente, que se presenta a continuación.
 
@@ -111,17 +134,5 @@ $$ f(x) = \frac{1}{1-e^{-x}}$$
 Esta función de activación llamada tangente hiperbólica tiene un rango de valores de salida entre -1 y 1.
 
 $$ f(x) = \frac{2}{1-e^{-2x}} - 1 $$
-<!-- 
-### Propagación hacia atrás
-
-El algoritmo de propagación hacia atrás (back-propagation) implementa un descenso del gradiente en el espacio de parámetros para minimizar el error de la salida.[@IAUEM]
-
-El nombre de propagación hacia atrás resulta de la forma en que el error es propagado hacia atrás a través de la red neuronal, en decir, que el error se propaga hacia atrás desde la capa de salida hasta la capa de entrada. Esto permite que los pesos de las conexiones de las neuronas ubicadas en las capas ocultas cambien durante el entrenamiento. El cambio de los pesos en las conexiones de las neuronas además de influir sobre la entrada global, influye en la activación y por consiguiente en la salida de una neurona. Por lo tanto, es de gran utilidad considerar las variaciones de la función activación al modificarse el valor de los pesos. Esto se llama sensibilidad de la función activación, de acuerdo al cambio en los pesos.
-
-OVERFITTING, UNDERFITTING 
-## Sobreajuste y desajuste
-
-En aprendizaje automático, el sobreajuste (overfitting) es el efecto de sobreentrenar un algoritmo de aprendizaje con unos ciertos datos para los que se conoce el resultado deseado. El desajuste (underfitting) ocurre cuando un modelo estadístico o un algoritmo de aprendizaje automático no puede capturar la tendencia subyacente de los datos. Se produciría un desajuste, por ejemplo, al ajustar un modelo lineal a datos no lineales. Un modelo así también tendría un rendimiento predictivo deficiente.  -->
-
 
 
