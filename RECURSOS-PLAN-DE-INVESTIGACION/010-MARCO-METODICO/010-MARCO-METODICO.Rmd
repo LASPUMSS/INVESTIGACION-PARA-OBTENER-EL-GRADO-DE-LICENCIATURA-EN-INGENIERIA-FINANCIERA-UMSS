@@ -2,7 +2,7 @@
 output: pdf_document
 ---
 
-# Marco Metódico
+# Marco Metodólogico
 
 ## Tipo de investigación
 

@@ -7,7 +7,7 @@ Entre los objetivos propuestos para viabilizar el tema de investigación y la re
 
 ## General 
 
-Proporcionar la información financiera adecuada y oportuna, para la toma de decisiones gerenciales sobre bases ciertas y debidamente estructuradas, mediante la determinación de pronósticos de estados financieros por redes neuronales artificiales.
+Proporcionar la información financiera adecuada y oportuna, para la toma de decisiones gerenciales sobre bases ciertas y debidamente estructuradas, mediante la determinación de pronósticos de estados financieros por el método de redes neuronales artificiales.
 
 ## Especifico 
 

@@ -2,17 +2,9 @@
 output: pdf_document
 ---
 
-# Anexos
-
-## Anexo 1 - Calculo de variables de la metodologia CAMEL
-
-### Indicadores de capital
-
-
-<!-- ######################################################################################### -->
 \newpage
 
-## Anexo 2 - Elementos de redes neuronales
+## Anexo 1 - Elementos de redes neuronales
 
 Como todo sistema es el resultado de la interacción de elementos simples trabajando conjuntamente, que se presenta a continuación.
 
