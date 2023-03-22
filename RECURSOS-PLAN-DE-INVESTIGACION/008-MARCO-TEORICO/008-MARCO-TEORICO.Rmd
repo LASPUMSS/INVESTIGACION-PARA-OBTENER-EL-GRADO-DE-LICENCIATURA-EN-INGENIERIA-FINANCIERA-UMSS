@@ -26,11 +26,15 @@ Entonces se afirma, que los estados financieros son un resumen del ejercicio eco
 
 ### Balance general
 
-El balance general se entiende como, "estado financiero que muestra, a una fecha determinada, el valor y la estructura del activo, pasivo y patrimonio de una empresa". [@ASFI]
+El balance general se entiende como, "estado financiero que muestra, a una fecha determinada, el valor y la estructura del activo, pasivo y patrimonio de una empresa". [@ASFI] 
+
+Con una expresión equivalente se afirma que el balance general representa una fotografía sobre  el estado de de los bienes y derechos, respecto a las obligaciones con  propietarios e terceros de la institución en un determinado momento.
 
 ### Estado de resultados
 
 Estado de ganancias y pérdidas o estado de resultados, se entiende como, "documento contable que muestra el resultado de las operaciones (utilidad o pérdida) de una entidad durante un periodo y a una fecha determinada; resulta de la comparación de los ingresos con los gastos efectuados". [@ASFI]
+
+Es decir, el estado de resultados muestra la conclusión en términos monetarios del conjunto de actividades administrativas y complementarias en un intervalo de tiempo de la institución correspondiente. 
 
 ## Evaluación financiera y pronosticos
 
@@ -38,9 +42,7 @@ La evaluación financiera se entiende como un proceso de valoración de los resu
 
 ### Indicadores financieros 
 
-La teoría financiera indica que un indicador financiero tiene como objeto final medir una cualidad de la entidad estudiada. 
-
-Indicadores de tipo:
+La teoría financiera indica que un indicador financiero tiene como objeto final medir una característica de la entidad estudiada, estos pueden ser los siguientes:
 
 - Estructura de activos.
 - Estructura de pasivos.
@@ -55,9 +57,11 @@ Indicadores de tipo:
 - Eficacia administrativas.
 - Spread efectivo.
 
+Pero los indicadores financieros por si solos no pueden brindar información integrada sobre la situación económica-financiera de una institución en consecuencia a esta necesidad, se encuentra las metodologías de evaluación que se presenta a continuación.
+
 ### Metodologia CAMEL
 
-La metodología CAMEL evalúa la solidez financiera de las instituciones con base ha indicadores cuantitativos, contemplando cinco aspectos: 
+La metodología CAMEL evalúa la **solidez financiera** de las instituciones con base ha indicadores cuantitativos, contemplando cinco aspectos: 
 
 - Capital adecuado (C).
 - Calidad del activo (A).
@@ -65,10 +69,18 @@ La metodología CAMEL evalúa la solidez financiera de las instituciones con bas
 - Rentabilidad (E).
 - Situación de liquidez (L).
 
+La presente metodología se divide en siguientes pasos:
+
+- Calculo de indicadores.
+- Definición de rangos y limites de los indicadores.
+- Definición de ponderación, que responden a la solidez financiera del institución.
+- Calificación CAMEL.
+
 ### Pronósticos
 
 El termino de pronóstico de uso común, definido por la Real Academia Española (RAE) como la acción y efecto de pronosticar, la misma RAE define pronosticar como predecir algo en el futuro a partir de indicios. El pronóstico es el proceso de estimación en situaciones de incertidumbre, para los propósitos de esta investigación, un pronóstico es un evento asociado a una distribución de probabilidad.
 
+En consecuencia los pronósticos por si solos tampoco pueden brindar información integrada sobre la situación económica-financiera futura de la institución, en consecuencia a esta necesidad, se encuentra las metodologías de evaluación junto con la simulación de procesos estocásticos.
 
 <!-- #################################################################  -->
 <!--                    REDES NEURONALES                                -->
@@ -80,13 +92,13 @@ El termino de pronóstico de uso común, definido por la Real Academia Española
 
 "En la literatura referente a la inteligencia artificial no existe consenso sobre lo que se entiende como inteligencia artificial, pero estas diferencias se engloban en dos ideas, donde la inteligencia artificial se refieren a procesos mentales y al razonamiento".[@IAUEM]
 
-Ahora bien el campo de la inteligencia artificial es relativamente reciente, y cobra atención en la actualidad por su capacidad de resolver problemas que con anterioridad sus resultados se divisaban lejanos, como el pronóstico de fenómenos no lineales, procesamientos de lenguaje natural, generador de imágenes, clasificación de objetos, etc. 
+Ahora bien el campo de la inteligencia artificial es relativamente reciente, y cobra atención en la actualidad por su capacidad de resolver problemas que con anterioridad sus resultados se divisaban lejanos, como el pronóstico de fenómenos no lineales, procesamientos de lenguaje natural, generador de imágenes, clasificación de objetos e procesos estocásticos donde se encuentra la proyección de estados financieros. 
 
 ### Aprendizaje supervisado con redes neuronales
 
 El aprendizaje supervisado corresponde a la situación en que se tiene una variable de salida, ya sea cuantitativa o cualitativa, que se desea predecir basándose en un conjunto de características.[@IALAT]
 
-**El aprendizaje supervisado es una rama del aprendizaje automático, son algoritmos que permiten aprender a la red neuronal mediante datos ejemplos que están compuesta por un vector de entrada que son las variables independientes, y otro vector denomina etiquetas, donde la red se encarga de encontrar las relaciones existentes entre las variables independientes, realizando cambios y adaptando el modelo por medio de variaciones sujetas a una función de coste.**  
+**El aprendizaje supervisado es una rama del aprendizaje automático, son algoritmos que permiten aprender a la red neuronal mediante datos ejemplos que están compuesta por un vector de entrada que son las variables independientes, y otro vector denomina etiquetas, donde la red se encarga de encontrar las relaciones existentes entre las variables independientes, realizando cambios y adaptando el modelo por medio de variaciones sujetas a una función de coste.** 
 
 ### Aprendizaje no supervisado con redes neuronales
 
@@ -101,5 +113,3 @@ Aprendizaje no supervisado es un método de aprendizaje automático donde la red
 Las Redes Neuronales "son un paradigma de aprendizaje y procesamiento automático inspirado en la forma en que funciona el cerebro para realizar las tareas de pensar y tomar decisiones (sistema nervioso)".[@IALAT]
 
 Una red neuronal es un método del aprendizaje automático que enseña a las computadoras a procesar datos de una manera que está inspirada en la forma en que lo hace el cerebro humano, las redes neuronales artificiales es modelo computacional resultado de diversas aportaciones científicas, consiste en un conjunto de unidades, llamadas neuronas artificiales, inspiradas en las neuronas del cerebro conectadas entre sí para transmitirse señales.
-
-Las redes neuronales artificiales son modelos de aprendizaje de problemas no lineales que buscan generalizar información extraída de datos ordenados en vectores, que dotan a dicha red neuronal con la capacidad de realizar clasificaciones o regresiones.
