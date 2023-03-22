@@ -3,6 +3,7 @@ output: pdf_document
 ---
 
 \newpage
+# Anexos
 
 ## Anexo 1 - Elementos de redes neuronales
 

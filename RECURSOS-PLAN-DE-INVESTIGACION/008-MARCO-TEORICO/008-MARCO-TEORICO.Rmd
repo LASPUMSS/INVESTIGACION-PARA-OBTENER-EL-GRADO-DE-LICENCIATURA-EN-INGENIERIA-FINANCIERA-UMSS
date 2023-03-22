@@ -50,12 +50,9 @@ La teoría financiera indica que un indicador financiero tiene como objeto final
 - Calidad de cartera.
 - Liquidez.
 - Solvencia.
-- Estructura financiera.
 - Rentabilidad.
-- Resultados.
 - Ingresos y gastos financieros.
 - Eficacia administrativas.
-- Spread efectivo.
 
 Pero los indicadores financieros por si solos no pueden brindar información integrada sobre la situación económica-financiera de una institución en consecuencia a esta necesidad, se encuentra las metodologías de evaluación que se presenta a continuación.
 

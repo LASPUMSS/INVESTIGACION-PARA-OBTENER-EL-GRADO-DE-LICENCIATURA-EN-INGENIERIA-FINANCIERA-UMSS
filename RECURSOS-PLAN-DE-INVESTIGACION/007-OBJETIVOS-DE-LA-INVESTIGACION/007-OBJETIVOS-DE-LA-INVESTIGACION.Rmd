@@ -3,6 +3,7 @@ output: pdf_document
 ---
 
 # Objetivos de la investigación
+
 Entre los objetivos propuestos para viabilizar el tema de investigación y la realización del informe final, se describen los siguientes:
 
 ## General 

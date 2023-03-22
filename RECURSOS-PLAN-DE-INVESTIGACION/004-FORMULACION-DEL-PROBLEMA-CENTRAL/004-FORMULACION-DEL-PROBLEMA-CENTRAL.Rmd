@@ -4,4 +4,4 @@ output: pdf_document
 
 # Formulación del problema central
 
-Sera que con la aplicación del método de redes neuronales, se obtendrá información adecuada y oportuna para la toma de decisiones.
+¿Sera que con la aplicación del método de redes neuronales, se obtendrá información adecuada y oportuna para la toma de decisiones?
