@@ -1,0 +1,61 @@
+---
+output: pdf_document
+---
+
+# Anexos
+
+## Anexo 1 - Calculo de variables de la metodologia CAMEL
+
+### Indicadores de capital
+
+
+<!-- ######################################################################################### -->
+\newpage
+
+## Anexo 2 - Elementos de redes neuronales
+
+Como todo sistema es el resultado de la interacción de elementos simples trabajando conjuntamente, que se presenta a continuación.
+
+### Neurona artificial
+
+La neurona es la unidad básica de procesamiento de una red neuronal de ahí el nombre, igual que su equivalente biológico una neurona artificial recibe estímulos externos y devuelve otro valor, esta es expresada matemáticamente como una función, donde la neurona realiza una suma ponderada con los datos de entrada.
+
+Dado:
+
+$$ X = \left( x_{1},x_{2},x_{3},...,x_{n} \right) $$
+Se tiene:
+$$ Y = f(X) = \sum_{i=1}^{n}{w_{i}x_{i}}  = \sum{WX}  $$
+Donde:
+\newline
+X = Vector de los datos de entrada.
+\newline
+Y = Vector resultado de la suma ponderada.
+\newline
+W = Vector de los pesos las variables independientes.
+
+La arquitectura de la red neuronal corresponde a la manera en que esta ordena las neuronas, si las neuronas son colocadas de forma vertical, reciben los mismos datos de entrada y sus resultados de salida lo pasan a la siguiente capa, la última capa de una red neuronal se denominan capa de salida y las capas que estén entre la capa de salida y capa de entrada se denominas capas ocultas. Ahora bien, al ser cada neurona una suma ponderada esta equivaldría a una sola capa de la red, a esto se denomina colisión de la red neuronal, para resolver este problema se planteó los que se conoce como función de activación que es una función no lineal que distorsiona los resultados salientes de cada neurona.
+
+$$A = f(Y)$$
+
+### Funciones de activación
+
+Las funciones de activación distorsionan de forma no lineal las salidas de las neuronas para así no colapsar la red, dentro las funciones de activación más conocidas tenemos:
+
+#### Función escalonada
+
+Esta función asigna el valor de 1 si la salida de la neurona supera cierto umbral y cero si no lo supera.
+
+#### Función sigmoide
+
+Esta función genera un en un rango de valores de salida que están entre cero y uno por lo que la salida es interpretada como una probabilidad. 
+
+$$ f(x) = \frac{1}{1-e^{-x}}$$
+
+#### Función hiperbólica
+
+Esta función de activación llamada tangente hiperbólica tiene un rango de valores de salida entre -1 y 1.
+
+$$ f(x) = \frac{2}{1-e^{-2x}} - 1 $$
+
+
+

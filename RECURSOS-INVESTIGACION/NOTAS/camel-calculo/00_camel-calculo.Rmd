@@ -34,7 +34,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Liquidez
 
-- Disponibles/obligacione a corto plazo
+- Disponibles/obligaciones a corto plazo
 - Disponibles+Inversiones temporarias/Obligaciones a corto plazo
+
+## Calificación CAMEL
+
+$$CAMEL = \text{30\%C + 20\%A + 10\%M + 15\%E + 15\%L}$$
+
+## Pasos CAMEL
+
+- Calculo de indicadores
+- Definición de rangos y limites
+- Calificación CAMEL
 
 

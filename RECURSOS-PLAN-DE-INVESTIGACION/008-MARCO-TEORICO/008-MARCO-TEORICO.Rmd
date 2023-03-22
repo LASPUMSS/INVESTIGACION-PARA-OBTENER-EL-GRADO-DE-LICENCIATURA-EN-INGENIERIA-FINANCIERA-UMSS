@@ -26,11 +26,19 @@ Entonces se afirma, que los estados financieros son un resumen del ejercicio eco
 
 ### Balance general
 
+El balance general se entiende como, "estado financiero que muestra, a una fecha determinada, el valor y la estructura del activo, pasivo y patrimonio de una empresa". [@ASFI]
+
 ### Estado de resultados
+
+Estado de ganancias y pérdidas o estado de resultados, se entiende como, "documento contable que muestra el resultado de las operaciones (utilidad o pérdida) de una entidad durante un periodo y a una fecha determinada; resulta de la comparación de los ingresos con los gastos efectuados". [@ASFI]
 
 ## Evaluación financiera y pronosticos
 
+La evaluación financiera se entiende como un proceso de valoración de los resultados de actividades económica-financieras de las instituciones.
+
 ### Indicadores financieros 
+
+La teoría financiera indica que un indicador financiero tiene como objeto final medir una cualidad de la entidad estudiada. 
 
 Indicadores de tipo:
 
@@ -49,9 +57,13 @@ Indicadores de tipo:
 
 ### Metodologia CAMEL
 
-La metodología CAMEL(capital, Access, Managment, Earnings, Liquidity)
+La metodología CAMEL evalúa la solidez financiera de las instituciones con base ha indicadores cuantitativos, contemplando cinco aspectos: 
 
-
+- Capital adecuado (C).
+- Calidad del activo (A).
+- Capacidad de la gerencia (M).
+- Rentabilidad (E).
+- Situación de liquidez (L).
 
 ### Pronósticos
 
@@ -91,48 +103,3 @@ Las Redes Neuronales "son un paradigma de aprendizaje y procesamiento automátic
 Una red neuronal es un método del aprendizaje automático que enseña a las computadoras a procesar datos de una manera que está inspirada en la forma en que lo hace el cerebro humano, las redes neuronales artificiales es modelo computacional resultado de diversas aportaciones científicas, consiste en un conjunto de unidades, llamadas neuronas artificiales, inspiradas en las neuronas del cerebro conectadas entre sí para transmitirse señales.
 
 Las redes neuronales artificiales son modelos de aprendizaje de problemas no lineales que buscan generalizar información extraída de datos ordenados en vectores, que dotan a dicha red neuronal con la capacidad de realizar clasificaciones o regresiones.
-
-Y como todo sistema es el resultado de la interacción de elementos simples trabajando conjuntamente, que se presenta a continuación.
-
-### Neurona artificial
-
-La neurona es la unidad básica de procesamiento de una red neuronal de ahí el nombre, igual que su equivalente biológico una neurona artificial recibe estímulos externos y devuelve otro valor, esta es expresada matemáticamente como una función, donde la neurona realiza una suma ponderada con los datos de entrada.
-
-Dado:
-
-$$ X = \left( x_{1},x_{2},x_{3},...,x_{n} \right) $$
-Se tiene:
-$$ Y = f(X) = \sum_{i=1}^{n}{w_{i}x_{i}}  = \sum{WX}  $$
-Donde:
-\newline
-X = Vector de los datos de entrada.
-\newline
-Y = Vector resultado de la suma ponderada.
-\newline
-W = Vector de los pesos las variables independientes.
-
-La arquitectura de la red neuronal corresponde a la manera en que esta ordena las neuronas, si las neuronas son colocadas de forma vertical, reciben los mismos datos de entrada y sus resultados de salida lo pasan a la siguiente capa, la última capa de una red neuronal se denominan capa de salida y las capas que estén entre la capa de salida y capa de entrada se denominas capas ocultas. Ahora bien, al ser cada neurona una suma ponderada esta equivaldría a una sola capa de la red, a esto se denomina colisión de la red neuronal, para resolver este problema se planteó los que se conoce como función de activación que es una función no lineal que distorsiona los resultados salientes de cada neurona.
-
-$$A = f(Y)$$
-
-### Funciones de activación
-
-Las funciones de activación distorsionan de forma no lineal las salidas de las neuronas para asi no colapsar la red, dentro las funciones de activación más conocidas tenemos:
-
-#### Función escalonada
-
-Esta función asigna el valor de 1 si la salida de la neura supera cierto umbral y cero si no lo supera.
-
-#### Función sigmoide
-
-Esta función genera un en un rango de valores de salida que están entre cero y uno por lo que la salida es interpretada como una probabilidad. 
-
-$$ f(x) = \frac{1}{1-e^{-x}}$$
-
-#### Función hiperbólica
-
-Esta función de activación llamada tangente hiperbólica tiene un rango de valores de salida entre -1 y 1.
-
-$$ f(x) = \frac{2}{1-e^{-2x}} - 1 $$
-
-
