@@ -21,21 +21,31 @@ output: pdf_document
 2.1 Objetivos del sustento teórico
 \newline 2.2 Definición de términos financieros básicos
 \newline 2.3 Intermediación financiera y regulación financiera
-\newline 2.4 Aprendizaje automático
-\newline 2.5 Arquitectura de las redes neuronales artificiales
-\newline 2.6 Función de coste
-\newline 2.7 Funciones de activación
-\newline 2.8 Definición de sobre ajuste y desajuste de las redes neuronales.
+\newline 2.4 Evaluación financiera
+\newline 2.5 Metodología CAMEL
+\newline 2.6 Aprendizaje automático
+\newline 2.7 Arquitectura de las redes neuronales artificiales
 
 \vspace{2.5mm}
 **Capítulo 3 Diagnóstico de las instituciones financieras del sistema financiero**
 \vspace{2.5mm}
 
+3.1 Determinación de indicadores financieros.
+\newline 3.2 Definición de rangos y limites de los indicadores.
+\newline 3.3 Definición de ponderación CAMEL.
+\newline 3.4 Calificación CAMEL.
 
 \vspace{2.5mm}
 **Capítulo 4 Determinación de pronósticos de estados financieros por redes neuronales artificiales**
 \vspace{2.5mm}
 
+4.1 Definición arquitectura de la red neuronal.
+\newline 4.1 Entrenamiento de la red neuronal.
+\newline 4.2 Proyección de estados financieros.
+\newline 4.3 Determinación de indicadores financieros proyectados.
+\newline 4.4 Definición de rangos y limites de los indicadores proyectados.
+\newline 4.5 Definición de ponderación CAMEL.
+\newline 2.4 Evaluación sobre simulación de calificaciones CAMEL.
 
 \vspace{2.5mm}
 **Capítulo 5 Conclusiones y recomendaciones**

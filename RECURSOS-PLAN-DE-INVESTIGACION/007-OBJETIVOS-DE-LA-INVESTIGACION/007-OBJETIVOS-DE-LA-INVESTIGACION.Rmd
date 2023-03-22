@@ -12,7 +12,7 @@ Proporcionar la información financiera adecuada y oportuna, para la toma de dec
 ## Especifico 
 
 - Diagnostico de la situación actual del sistema financiero de Bolivia.
-- Definir la arquitectura de un modelo de redes neuronales artificiales para la obtención de información confiable y válida para la toma de decisiones.
-- Realizar el análisis comparativo de los datos y los resultados obtenidos.
-- Determinar las ventajas y desventajas del método redes neuronales artificiales para el análisis financiero de las instituciones financieras.
+- Definir la arquitectura y entrenamiento del modelo de red de neuronas artificiales.
+- Proyección y simulación de estados financieros.
+- Evaluación financiera sobre estados financieros proyectados-simulados.
 
