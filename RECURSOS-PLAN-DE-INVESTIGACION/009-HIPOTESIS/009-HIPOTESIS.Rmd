@@ -4,11 +4,11 @@ output: pdf_document
 
 # Hipotesis
 
-Con la determinación de proyecciones de estados financieros por el método de redes neuronales, de entidades financieras de Bolivia, se logrará proyectar información con mayor aproximación a la situación económica-financiera de la institución correspondiente.
+Con la determinación de proyecciones de estados financieros por el método de redes neuronales, de entidades financieras de Bolivia, se logrará proyectar información con mayor aproximación a la situación económica-financiera observada de la institución correspondiente.
 
 ## Elementos o componentes
 
 - Unidad de observación y análisis: Entidades financieras de Bolivia.
-- Variable independiente: Estados financieros.
-- Variable dependiente: información con mayor aproximación a la situación económica-financiera de la institución correspondiente.
+- Variable independiente: Proyecciones de estados financieros por el método de redes neuronales.
+- Variable dependiente: Información con mayor aproximación a la situación económica-financiera observada de la institución correspondiente.
 - Enlace lógico: Se logrará.

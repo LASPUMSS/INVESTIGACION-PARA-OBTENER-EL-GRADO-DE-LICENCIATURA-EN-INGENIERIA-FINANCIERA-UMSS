@@ -49,7 +49,6 @@ La teoría financiera indica que un indicador financiero tiene como objeto final
 - Estructura de obligaciones.
 - Calidad de cartera.
 - Liquidez.
-- Solvencia.
 - Rentabilidad.
 - Ingresos y gastos financieros.
 - Eficacia administrativas.
@@ -109,4 +108,4 @@ Aprendizaje no supervisado es un método de aprendizaje automático donde la red
 
 Las Redes Neuronales "son un paradigma de aprendizaje y procesamiento automático inspirado en la forma en que funciona el cerebro para realizar las tareas de pensar y tomar decisiones (sistema nervioso)".[@IALAT]
 
-Una red neuronal es un método del aprendizaje automático que enseña a las computadoras a procesar datos de una manera que está inspirada en la forma en que lo hace el cerebro humano, las redes neuronales artificiales es modelo computacional resultado de diversas aportaciones científicas, consiste en un conjunto de unidades, llamadas neuronas artificiales, inspiradas en las neuronas del cerebro conectadas entre sí para transmitirse señales, para mayor detalle sobre los elementos de una red neuronal ver el anexo 1.
+Una red neuronal es un método del aprendizaje automático que enseña a las computadoras a procesar datos de una manera que está inspirada en la forma en que lo hace el cerebro humano, las redes neuronales artificiales es modelo computacional resultado de diversas aportaciones científicas, consiste en un conjunto de unidades llamadas neuronas artificiales, para mayor detalle sobre los elementos de una red neuronal ver el anexo 1.
