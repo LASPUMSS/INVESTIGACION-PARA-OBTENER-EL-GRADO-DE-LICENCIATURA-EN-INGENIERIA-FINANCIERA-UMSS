@@ -58,7 +58,7 @@ Pero los indicadores financieros por si solos no pueden brindar información int
 
 ### Metodologia CAMEL
 
-La metodología CAMEL evalúa la **solidez financiera** de las instituciones con base ha indicadores cuantitativos, contemplando cinco aspectos: 
+La metodología CAMEL evalúa la **solidez financiera** de las instituciones con base ha indicadores cuantitativos, contemplando cinco características: 
 
 - Capital adecuado (C).
 - Calidad del activo (A).
@@ -68,9 +68,9 @@ La metodología CAMEL evalúa la **solidez financiera** de las instituciones con
 
 La presente metodología se divide en siguientes pasos:
 
-- Calculo de indicadores.
+- Calculo de indicadores que responden a los características antes mencionadas.
 - Definición de rangos y limites de los indicadores.
-- Definición de ponderación, que responden a la solidez financiera del institución.
+- Definición de la ponderación, que responden a la solidez financiera de la institución.
 - Calificación CAMEL.
 
 ### Pronósticos
@@ -109,4 +109,4 @@ Aprendizaje no supervisado es un método de aprendizaje automático donde la red
 
 Las Redes Neuronales "son un paradigma de aprendizaje y procesamiento automático inspirado en la forma en que funciona el cerebro para realizar las tareas de pensar y tomar decisiones (sistema nervioso)".[@IALAT]
 
-Una red neuronal es un método del aprendizaje automático que enseña a las computadoras a procesar datos de una manera que está inspirada en la forma en que lo hace el cerebro humano, las redes neuronales artificiales es modelo computacional resultado de diversas aportaciones científicas, consiste en un conjunto de unidades, llamadas neuronas artificiales, inspiradas en las neuronas del cerebro conectadas entre sí para transmitirse señales.
+Una red neuronal es un método del aprendizaje automático que enseña a las computadoras a procesar datos de una manera que está inspirada en la forma en que lo hace el cerebro humano, las redes neuronales artificiales es modelo computacional resultado de diversas aportaciones científicas, consiste en un conjunto de unidades, llamadas neuronas artificiales, inspiradas en las neuronas del cerebro conectadas entre sí para transmitirse señales, para mayor detalle sobre los elementos de una red neuronal ver el anexo 1.
