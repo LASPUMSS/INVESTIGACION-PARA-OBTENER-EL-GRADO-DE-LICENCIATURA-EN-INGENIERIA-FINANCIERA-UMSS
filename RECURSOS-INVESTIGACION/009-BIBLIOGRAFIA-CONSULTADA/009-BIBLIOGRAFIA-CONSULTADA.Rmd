@@ -4,10 +4,4 @@ output: pdf_document
 
 # Bibliografia consultada
 
-
-\newpage
-# Anexos
-
-
-\newpage
-# Glosario
+<div id="refs"></div>

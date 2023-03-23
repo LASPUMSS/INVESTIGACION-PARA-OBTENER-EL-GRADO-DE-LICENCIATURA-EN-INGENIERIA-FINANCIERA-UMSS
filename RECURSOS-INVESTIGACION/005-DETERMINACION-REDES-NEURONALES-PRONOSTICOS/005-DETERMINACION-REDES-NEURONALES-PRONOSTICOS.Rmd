@@ -1,0 +1,6 @@
+---
+output: pdf_document
+---
+
+# Determinación de pronósticos de estados financieros por redes neuronales artificiales
+

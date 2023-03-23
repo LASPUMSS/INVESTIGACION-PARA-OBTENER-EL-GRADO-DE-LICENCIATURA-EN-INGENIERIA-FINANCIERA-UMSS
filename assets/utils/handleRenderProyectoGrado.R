@@ -1,8 +1,8 @@
 if (!('utils' %in% ls())) { utils <- list() }
 
-utils$handleRenderProyectoGrado <- function(){
+utils$handleRenderInvestigacion<- function(){
     
-    ruta <- paste0(getwd(), '/PRINCIPAL-PROYECTO-DE-GRADO.Rmd')
+    ruta <- paste0(getwd(), '/PRINCIPAL-INVESTIGACION.Rmd')
     rmarkdown::render(ruta)
     
 }

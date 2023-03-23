@@ -1,6 +1,0 @@
----
-output: pdf_document
----
-
-# Redes neuronales artificiales
-
