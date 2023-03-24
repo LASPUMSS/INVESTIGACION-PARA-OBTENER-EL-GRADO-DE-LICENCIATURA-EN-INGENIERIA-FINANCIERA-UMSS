@@ -4,3 +4,17 @@ output: pdf_document
 
 # Marco teorico
 
+## Finanzas y el sistema financiero
+
+
+## Estados financieros
+
+
+## Evaluación financiera y pronosticos
+
+
+## Inteligencia artificial
+
+
+## Redes neuronales artificiales
+

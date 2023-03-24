@@ -4,3 +4,109 @@ output: pdf_document
 
 # Perfil de proyecto
 
+## Planteamiento del problema
+
+En un mundo cada vez más globalizado, y siendo el entorno financiero uno de los sectores que más ha sido impactado por la integración económica multilateral, que ha implicado su incremento en complejidad, donde los agentes económicos son expuestos a una inmensa cantidad de información sobre productos y/o servicios financieros, lo que puede dar lugar a oportunidades de incrementar rendimientos, sin dejar de lado el riesgo de perdidas consecuencia de la complejidad del mismo.
+
+Una de las alternativas de tratamiento de esta información que ofrece el sistema financiero, y que es el objeto de estudio en esta investigación que se propone, es la aplicación de redes neuronales artificiales para la proyección de estados financieros, la cual se encarga de encontrar la relación existente en las variables introducidas al modelo que no pueden ser visibles al análisis subjetivo económico-financiero, dando lugar a la necesidad de evaluar dicha información por herramientas de igual complejidad.
+
+
+## Formulación del problema central
+
+¿Sera que con la aplicación del método de redes neuronales, se obtendrá información adecuada con mayor aproximación a la situación económica-financiera observada de la institución financiera correspondiente para la toma de decisiones?
+
+
+
+## Justificación
+
+Observando la importancia de las proyecciones para la toma de decisiones, y la capacidad de las redes neuronales de encontrar patrones no visibles al análisis subjetivo, este tipo de modelos podrán dotar de mayor información a agentes internos y externos del sector financiero de donde y como hacer colocaciones o inversiones sobre el dinero que administran.
+
+En síntesis, el presente trabajo de investigación no pretende remplazar a otros modelos existentes para la toma de decisiones, por el contrario, ser tomado como una alternativa para el modelado de fenómenos no lineales en el campo de las finanzas. 
+
+
+## Alcance y delimitación
+
+El presente trabajo de investigación se circunscribirá al estudio de las entidades de intermediación de servicios financieras de Bolivia, definidas en el artículo 151 de la ley 393. Con fines de obtener la información que coadyuve a generar la determinación de pronósticos mediante redes neuronales, como herramienta en la toma de decisiones a nivel gerencial y la evaluación de las mismas.
+
+Para viabilizar la realización del tema de investigación se ha elegido, que se tomará como modelo de análisis a las siguientes entidades:
+
+- Bancos múltiples.
+- Bancos PYME.
+- Entidades financieras de vivienda.
+- Cooperativas de ahorro y crédito abiertas.
+- Instituciones financieras de desarrollo.
+- Bancos de desarrollo productivo.
+
+para tener acceso a la información homogénea requerida, que permita generalizar los resultados mensuales obtenidos de las gestiones de 2014 a 2021, proyectando los periodos posteriores. El tema elegido y propuesto, se realizará en un tiempo no mayor a diez meses, a partir de la aprobación y registro del plan de investigación presentado.
+
+
+## Objetivos de la investigación
+
+Entre los objetivos propuestos para viabilizar el tema de investigación y la realización del informe final, se describen los siguientes:
+
+### General 
+
+Proporcionar información financiera adecuada con mayor aproximación a la situación económica-financiera observada, mediante la determinación de pronósticos de estados financieros por el método de redes neuronales artificiales.
+
+### Especifico 
+
+- Diagnostico de la situación actual del sistema financiero de Bolivia.
+- Definir la arquitectura y entrenamiento del modelo de red de neuronas artificiales.
+- Proyección y simulación de estados financieros.
+- Evaluación financiera sobre estados financieros proyectados-simulados.
+
+
+## Hipotesis
+
+Con la determinación de proyecciones de estados financieros por el método de redes neuronales, de entidades financieras de Bolivia, se logrará proyectar información con mayor aproximación a la situación económica-financiera observada de la institución correspondiente.
+
+### Elementos o componentes
+
+- Unidad de observación y análisis: Entidades financieras de Bolivia.
+- Variable independiente: Proyecciones de estados financieros por el método de redes neuronales.
+- Variable dependiente: Información con mayor aproximación a la situación económica-financiera observada de la institución correspondiente.
+- Enlace lógico: Se logrará.
+
+
+## Marco metodólogico
+
+### Tipo de investigación
+
+El tipo de investigación que se aplicará en el informe final será el descriptivo y analítico, donde se busca describir y estudiar la realidad presente de los hechos de las unidades de observación y análisis.
+
+
+### Método de investigación
+
+Donde se aplicará un enfoque inductivo donde desde hechos particulares se llegará a conclusiones generales, que posteriormente puedan ser aplicadas en otras instituciones financieras de manera exitosa y beneficiar al sistema financiero con nuestra propuesta.
+También cabe especificar que los procedimientos a ser aplicados en el informe final, estarán orientados a los métodos inductivo, deductivo, analítico fundamentalmente.
+
+
+### Tecnicas de investigación
+
+En primera instancia se realizara la identificación del problema de investigación que ya esta establecida en el proyecto de grado, donde se identificará la arquitectura de la red neuronal, que está compuesta de las funciones de activación, y ajuste de los datos en formato de tablas. Posteriormente se realizará la etapa de recolección de datos e información del sistema financiero correspondiente a las fuentes secundarias. Para que en consecuencia con la obtención de la información se realizara el ordenamiento de dicha información recopilada para su procesamiento que permitirá dar un análisis concreto y preciso y a la vez realizar su sistematización para la obtención del diagnóstico.
+
+## Fuentes de información
+
+Se recurrirá a las fuentes de información siguientes:
+
+### Fuentes primarias
+Se recurrirá a la investigación y recopilación de datos relacionados al tema específico, mediante
+consultas a libros, revistas, textos digitales, apuntes de clases y otras de información histórica.
+
+### Fuentes secundarias
+Se recurrirá a las fuentes de compilación de información bibliográfica referente al tema, tales como: 
+
+- libros especializados. 
+- leyes. 
+- normas. 
+- resoluciones. 
+- glosarios. 
+- páginas de Internet.
+
+### Técnica de recolección de la información
+
+- Recopilación de información basada en fuentes primarias, secundarias y terciarias.
+- Análisis de la información recopilada, con fines de depuración, selección, tabulación mediante lenguajes de programación R y Python orientado al análisis de datos, adecuando a la arquitectura de la red neuronal.
+
+
+
