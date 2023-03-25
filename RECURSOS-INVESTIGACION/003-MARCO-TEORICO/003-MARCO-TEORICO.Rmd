@@ -6,15 +6,136 @@ output: pdf_document
 
 ## Finanzas y el sistema financiero
 
+Las finanzas se entiende como "la ciencia y arte de administrar el dinero"
+
+El sistema financiero, "consiste en diversas instituciones y mercados que sirven a las empresas de negocios, los individuos y los gobiernos".[@FAF]
+
+Entonces se afirma que el sistema financiero en general está formado por el conjunto de instituciones, constituidas en mercados, cuyo fin principal es canalizar el ahorro que generan los ahorradores hacia los prestatarios, así como facilitar y otorgar seguridad al movimiento de dinero y al sistema de pagos. En consecuencia al alcance y limitaciones del estudio de esta investigación se define al sistema financiero boliviano que está constituido por tres sectores que atienden al origen de su capital, el sector financiero privado, el público y con participación parcial del estado.
+
+### Entidades de intermediación financiera en Bolivia
+
+Las definiciones presentadas a continuación estan suscriptas a la ley 393 - ley de servicios financieros.
+
+#### Bancos múltiples.
+
+Los bancos múltiples tendrán como objetivo la prestación de servicios financieros al publico en general.
+
+#### Bancos PYME
+
+Los bancos PYME tendrá como objetivo la prestación de servicios financieros especializados en el sector de las pequeñas y medianas empresas, sin restricción para la prestación de los mismos también a la microempresa.
+
+
+#### Entidades financieras de vivienda
+
+Las entidades financieras de vivienda es una sociedad que tiene por objeto prestar servicios de intermediación financiera con especialización en prestamos para adquisición de vivienda, proyectos de construcción de vivienda unifamiliar o multifamiliar, compra de terrenos, refacción, remodelación, ampliación y mejoramiento de viviendas individuales o propiedad horizontal y otorgamiento de microcredito para vivienda familiar y para infraestructura de vivienda productiva, asi tambien operaciones de arrendamiento financiero habitacional.
+
+#### Cooperativas de ahorro y crédito abiertas.
+
+Las cooperativas de ahorro y crédito se constituyen como entidades especializadas de objeto único para la prestación de servicios de intermediación financiera, dirigidos a sus socios y al publico en general cunado corresponda.
+
+#### Instituciones financieras de desarrollo
+
+La institución financiera de desarrollo es una organización jurídica propia creada con el objeto de prestar servicios financieros con un enfoque integral que incluye gestión social.
+
+#### Bancos de desarrollo productivo.
+
+El banco de desarrollo productivo es una institución con participación mayoritaria del estado que realiza actividades de primer y segundo piso de fomento y de promoción del desarrollo del sector productivo.
 
 ## Estados financieros
 
+En el campo de la ciencia económicas los estados financieros tiene como objeto reflejar la situación económica-financiera de una institución.
 
-## Evaluación financiera y pronosticos
+En la página oficial de la Autoridad de Supervisión del Sistema Financiero (ASFI), "se define que los estados financieros constituyen una representación estructurada de la situación financiera y de las transacciones llevadas a cabo por la empresa. Su objetivo, con propósitos de información general, es suministrar información acerca de la situación y rendimiento financieros, así como de los flujos de efectivo que sea útil a una amplia variedad de usuarios al tomar sus decisiones económicas. Los estados financieros también muestran los resultados de la gestión que los administradores han efectuado con los recursos que se les han confiado". [@ASFI]
 
+Entonces se afirma, que los estados financieros son un resumen del ejercicio económico de una empresa o institución, entendiendo al ejercicio económico como la suma de todas las actividades vinculadas al giro de la empresa en un intervalo de tiempo, dando información, sobre ingresos, egresos, pasivos, activos, es decir, los estados financieros son una fotografía de la empresa en un punto del tiempo.
+
+### Balance general
+
+El balance general se entiende como, "estado financiero que muestra, a una fecha determinada, el valor y la estructura del activo, pasivo y patrimonio de una empresa". [@ASFI] 
+
+Con una expresión equivalente se afirma que el balance general representa una fotografía sobre  el estado de de los bienes y derechos, respecto a las obligaciones con  propietarios e terceros de la institución en un determinado momento.
+
+### Estado de resultados
+
+Estado de ganancias y pérdidas o estado de resultados, se entiende como, "documento contable que muestra el resultado de las operaciones (utilidad o pérdida) de una entidad durante un periodo y a una fecha determinada; resulta de la comparación de los ingresos con los gastos efectuados". [@ASFI]
+
+Es decir, el estado de resultados muestra la conclusión en términos monetarios del conjunto de actividades administrativas y complementarias en un intervalo de tiempo de la institución correspondiente. 
+
+
+
+## Evaluación financiera
+
+La evaluación financiera se entiende como un proceso de valoración de los resultados de actividades económica-financieras de las instituciones.
+
+### Indicadores financieros 
+
+La teoría financiera indica que un indicador financiero tiene como objeto final medir una característica de la entidad estudiada, estos pueden ser los siguientes:
+
+- Estructura de activos.
+- Estructura de pasivos.
+- Estructura de obligaciones.
+- Calidad de cartera.
+- Liquidez.
+- Rentabilidad.
+- Ingresos y gastos financieros.
+- Eficacia administrativas.
+
+Pero los indicadores financieros por si solos no pueden brindar información integrada sobre la situación económica-financiera de una institución en consecuencia a esta necesidad, se encuentra las metodologías de evaluación que se presenta a continuación.
+
+
+## Metodo CAMEL
+
+La metodología CAMEL evalúa la **solidez financiera** de las instituciones con base ha indicadores cuantitativos, contemplando cinco características: 
+
+- Capital adecuado (C).
+- Calidad del activo (A).
+- Capacidad de la gerencia (M).
+- Rentabilidad (E).
+- Situación de liquidez (L).
+
+La **solidez financiera** de una institución debe entenderse como la capacidad que tiene dicha institución de hacer frente a las obligaciones que tiene con terceros y propietarios.
+
+La presente metodología se divide en siguientes pasos:
+
+- Calculo de indicadores que responden a los características antes mencionadas.
+- Definición de rangos y limites de los indicadores.
+- Definición de la ponderación, que responden a la solidez financiera de la institución.
+- Calificación CAMEL.
+
+## Pronósticos
+
+El termino de pronóstico de uso común, definido por la Real Academia Española (RAE) como la acción y efecto de pronosticar, la misma RAE define pronosticar como predecir algo en el futuro a partir de indicios. El pronóstico es el proceso de estimación en situaciones de incertidumbre, para los propósitos de esta investigación, un pronóstico es un evento asociado a una distribución de probabilidad.
+
+En consecuencia los pronósticos por si solos tampoco pueden brindar información integrada sobre la situación económica-financiera futura de la institución, en consecuencia a esta necesidad, se encuentra las metodologías de evaluación junto con la simulación de procesos estocásticos.
+
+<!-- #################################################################  -->
+<!--                    REDES NEURONALES                                -->
+<!-- #################################################################  -->
+
+<!-- INTELIGENCIA ARTIFICIAL -->
 
 ## Inteligencia artificial
 
+"En la literatura referente a la inteligencia artificial no existe consenso sobre lo que se entiende como inteligencia artificial, pero estas diferencias se engloban en dos ideas, donde la inteligencia artificial se refieren a procesos mentales y al razonamiento".[@IAUEM]
+
+Ahora bien el campo de la inteligencia artificial es relativamente reciente, y cobra atención en la actualidad por su capacidad de resolver problemas que con anterioridad sus resultados se divisaban lejanos, como el pronóstico de fenómenos no lineales, procesamientos de lenguaje natural, generador de imágenes, clasificación de objetos e procesos estocásticos donde se encuentra la proyección de estados financieros. 
+
+### Aprendizaje supervisado con redes neuronales
+
+El aprendizaje supervisado corresponde a la situación en que se tiene una variable de salida, ya sea cuantitativa o cualitativa, que se desea predecir basándose en un conjunto de características.[@IALAT]
+
+**El aprendizaje supervisado es una rama del aprendizaje automático, son algoritmos que permiten aprender a la red neuronal mediante datos ejemplos que están compuesta por un vector de entrada que son las variables independientes, y otro vector denomina etiquetas, donde la red se encarga de encontrar las relaciones existentes entre las variables independientes, realizando cambios y adaptando el modelo por medio de variaciones sujetas a una función de coste.** 
+
+### Aprendizaje no supervisado con redes neuronales
+
+El aprendizaje no supervisado, "corresponde a la situación en que existe un conjunto de datos que contienen diversas características de determinados individuos, sin que ninguna de ellas se considere una variable de salida que se desee predecir".[@IALAT]
+
+Aprendizaje no supervisado es un método de aprendizaje automático donde la red neuronal se ajusta a las observaciones. Se distingue del aprendizaje supervisado por el hecho de que no hay un conocimiento a priori es decir etiquetas que sirvan como guía, en el aprendizaje no supervisado solo se cuenta con un conjunto de datos de objetos de entrada.
+
+<!-- REDES NEURONALES ARTIFICIALES -->
 
 ## Redes neuronales artificiales
 
+Las Redes Neuronales "son un paradigma de aprendizaje y procesamiento automático inspirado en la forma en que funciona el cerebro para realizar las tareas de pensar y tomar decisiones (sistema nervioso)".[@IALAT]
+
+Una red neuronal es un método del aprendizaje automático que enseña a las computadoras a procesar datos de una manera que está inspirada en la forma en que lo hace el cerebro humano, las redes neuronales artificiales es modelo computacional resultado de diversas aportaciones científicas, consiste en un conjunto de unidades llamadas neuronas artificiales, para mayor detalle sobre los elementos de una red neuronal ver el anexo 1.

@@ -2,7 +2,7 @@
 output: pdf_document
 ---
 
-# Perfil de proyecto
+# Perfil de la investigación
 
 ## Planteamiento del problema
 

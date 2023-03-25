@@ -36,6 +36,7 @@ Estado de ganancias y pérdidas o estado de resultados, se entiende como, "docum
 
 Es decir, el estado de resultados muestra la conclusión en términos monetarios del conjunto de actividades administrativas y complementarias en un intervalo de tiempo de la institución correspondiente. 
 
+
 ## Evaluación financiera y pronosticos
 
 La evaluación financiera se entiende como un proceso de valoración de los resultados de actividades económica-financieras de las instituciones.
@@ -84,6 +85,8 @@ En consecuencia los pronósticos por si solos tampoco pueden brindar informació
 
 <!-- INTELIGENCIA ARTIFICIAL -->
 
+
+
 ## Inteligencia artificial
 
 "En la literatura referente a la inteligencia artificial no existe consenso sobre lo que se entiende como inteligencia artificial, pero estas diferencias se engloban en dos ideas, donde la inteligencia artificial se refieren a procesos mentales y al razonamiento".[@IAUEM]
@@ -103,6 +106,7 @@ El aprendizaje no supervisado, "corresponde a la situación en que existe un con
 Aprendizaje no supervisado es un método de aprendizaje automático donde la red neuronal se ajusta a las observaciones. Se distingue del aprendizaje supervisado por el hecho de que no hay un conocimiento a priori es decir etiquetas que sirvan como guía, en el aprendizaje no supervisado solo se cuenta con un conjunto de datos de objetos de entrada.
 
 <!-- REDES NEURONALES ARTIFICIALES -->
+
 
 ## Redes neuronales artificiales
 

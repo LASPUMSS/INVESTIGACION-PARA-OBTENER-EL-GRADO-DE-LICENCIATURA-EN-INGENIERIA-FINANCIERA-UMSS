@@ -3,3 +3,40 @@ output: pdf_document
 ---
 
 # Antecedentes
+
+Los antecedentes presentados a continuación cubren dos segmentos el campo de las finanzas y el campo de las redes neuronales, considerando también como convergen ambos en el tiempo.
+
+<!-- ANTECEDENTES FINANZAS -->
+
+La finanzas como ciencia es el resultado de la contribución de varios individuos en diferentes puntos de tiempo y también como consecuencia de otras ciencias sociales, siendo la ciencias contables y administrativas las bases de la misma, las ciencias contable dotando la materia prima y las administrativas los métodos, con este contexto presentamos los siguientes antecedentes.
+
+En 1494 en Venecia el Fray Luca Pacioli en su obra "Summa" presento un análisis sistemático del método contable dando lugar principio de doble partida.
+
+En 1979 de la mano de Dan Bricklin se presento la primera de hoja de calculo "VisiCal" que tuvo mayor impacto en campo de los negocios, dando como consecuencia el procesamiento automático de datos para generar información.
+
+
+
+<!-- ANTECEDENTES REDES NEURONALES -->
+
+Como antecedentes generales muestran que los inicios de la inteligencia artificial de manera formal se dieron en el año 1943 cuando se colocó la primera piedra angular sobre la que se basó lo que hoy se conoce como inteligencia artificial, de la mano de Warren McCulloch y Walter Pitts, con la presentación del primer modelo matemático de aprendizaje, donde por primera vez se dota a un modelo autónomo la capacidad de aprendizaje.
+
+En 1949 se dio otro aporte al campo de las redes neuronales por parte de Donald Hebb, quien fue el primero en explicar los procesos del aprendizaje desde una perspectiva del campo psicológico, desarrollando una regla de como el aprendizaje ocurría. La idea general que propuso era que el aprendizaje ocurría cuando ciertos cambios en una neurona eran activados. 
+
+En 1950 Alam Turing presento lo que se denominó como la "Prueba de Turing", donde dio una definición operacional y satisfactoria de inteligencia, que dicha prueba consistía en la incapacidad de diferenciar entre entidades inteligentes indiscutibles y seres humanos.
+
+Pero solo en 1957, Frank Rosenblatt pudo generalizar las ideas propuesta por Warren McCulloch y Walter Pitts, a dicho modelo lo denomino PERCEPTRON, el cual tiene la capacidad de generalizar problemas lineales por medio de datos de ejemplo, donde reconoce patrones y hace predicciones con datos diferentes con los que había sido entrenado, es decir está dotado con la capacidad de generalizar, y 1959 Frank Rosenblatt en su libro "Principios de Neuro dinámica" confirmó que, bajo ciertas condiciones, el aprendizaje del Perceptrón convergía hacia un estado finito que denomino teorema de convergencia del Perceptrón.
+
+En 1960 Bernard Widroff y Marcian Hoff, desarrollaron el modelo ADELINE (ADAptative LINear Elements) que fue la primera aplicación comercial de redes neuronales para eliminar ecos en las líneas telefónicas.
+En 1969 se produjo un declive en las redes neuronales en consecuencia, de una publicación de Marvin Minsky y Seymour Papert probaron matemáticamente que, si bien el perceptrón era capaz de resolver con facilidad problemas lineales, pero su rendimiento decaía cuando intentaba modelar problemas no lineales, sobrecargando la capacidad computo.
+
+Pero en 1985 John Hopfield, hizo que las redes neuronales cobraran nuevamente importancia con su libro "Computación neuronal de decisiones en problemas de optimización" donde presenta el algoritmo de retropropagación que reduce cantidad de cómputo en proceso de aprendizaje de las redes neuronales, dotando a esta de la capacidad de resolver problemas no lineales. También 1986 David E. Rumelhart y Geoffrey E. Hinton, mejoraron el algoritmo de aprendizaje de propagación hacia atrás, que permitieron recortar el tiempo aún más el proceso de aprendizaje con respecto a los modelos anteriores.
+
+Uno de los aportes más recientes vino por parte de la Universidad de Toronto y la empresa de Google en 2017 con la publicación del articulo titulado "Atención es todo lo que necesitas", con la presentación de la arquitectura denominada "transformes" que de la mano de las redes neuronales dotan de atención al modelo de inteligencia artificial.
+
+Ahora bien como antecedentes específicos Bolivia no es un país que lleve adelante de investigación o desarrollos significativos sobre inteligencia artificial como un dato relevante según el reporte Government AI Readiness Index 2020 (Oxford Insights), Bolivia ocupa el puesto 122 de 172 países, y el 22 de 32 en la región de Latinoamérica y el Caribe.
+
+
+<!-- CONVERGENCIA FINANZAS - REDES NEURONALES -->
+
+Concluyendo esta sección el punto donde convergen...
+

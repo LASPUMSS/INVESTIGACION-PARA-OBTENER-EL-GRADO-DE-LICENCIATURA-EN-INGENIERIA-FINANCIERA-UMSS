@@ -4,4 +4,17 @@ output: pdf_document
 
 # Diagnóstico de las instituciones financieras del sistema financiero
 
+La metodología a aplicar para realizar diagnóstico de las instituciones financieras del sistema financiero de Bolivia sera el denominado como CAMEL, que responde a la evaluación solidez financiera de las instituciones.
+
+## Calculo de indicadores que responden a los características antes mencionadas
+
+## Definición de rangos y limites de los indicadores
+
+## Definición de la ponderación, que responden a la solidez financiera de la institución
+
+## Calificación CAMEL
+
+
+
+
 
