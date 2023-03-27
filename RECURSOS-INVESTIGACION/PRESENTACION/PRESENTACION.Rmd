@@ -1,28 +1,22 @@
 ---
-title: "Habits"
-author: Luis
-date: March 22, 2005
 output: powerpoint_presentation
 ---
 
-# In the morning
+# Proyección de estados financieros por el método de redes neuronales artificiales aplicable al sector financiero de Bolivia
 
-## Getting up
+## Introducción
 
-- Turn off alarm
-- Get out of bed
 
-## Breakfast
 
-- Eat eggs
-- Drink coffee
+## Planteamiento y formulación de problema
 
-# In the evening
 
-## Dinner
+## Objetivos
 
-- Eat spaghetti
-- Drink wine
+## Hipotesis
+
+
+## Antecedentes
 
 ---
 
@@ -30,7 +24,5 @@ output: powerpoint_presentation
 plot(cars)
 ```
 
-## Going to sleep
+## Conclusiones y recomendaciones
 
-- Get in bed
-- Count sheep
