@@ -12,13 +12,13 @@ La finanzas como ciencia es el resultado de la contribución de varios individuo
 
 En 1494 en Venecia el Fray Luca Pacioli en su obra "Summa" presento un análisis sistemático del método contable dando lugar principio de doble partida.
 
-En 1979 de la mano de Dan Bricklin se presento la primera de hoja de calculo "VisiCal" que tuvo mayor impacto en campo de los negocios, dando como consecuencia el procesamiento automático de datos para generar información.
-
-
+Pero solo en 2001, la ciencia contable llego a uno de sus primeras cumbres que formalizan sus conocimientos con las normas internacionales de contabilidad, de la mano del Comité de Normas Internacionales de Contabilidad.
 
 <!-- ANTECEDENTES REDES NEURONALES -->
 
-Como antecedentes generales muestran que los inicios de la inteligencia artificial de manera formal se dieron en el año 1943 cuando se colocó la primera piedra angular sobre la que se basó lo que hoy se conoce como inteligencia artificial, de la mano de Warren McCulloch y Walter Pitts, con la presentación del primer modelo matemático de aprendizaje, donde por primera vez se dota a un modelo autónomo la capacidad de aprendizaje.
+Ahora por el lado del redes neuronales artificiales se nombran los siguientes antecedentes:
+
+Como antecedentes generales, muestran que los inicios de la inteligencia artificial de manera formal se dieron en el año 1943 cuando se colocó la primera piedra angular sobre la que se basó lo que hoy se conoce como inteligencia artificial, de la mano de Warren McCulloch y Walter Pitts, con la presentación del primer modelo matemático de aprendizaje, donde por primera vez se dota a un modelo autónomo la capacidad de aprendizaje.
 
 En 1949 se dio otro aporte al campo de las redes neuronales por parte de Donald Hebb, quien fue el primero en explicar los procesos del aprendizaje desde una perspectiva del campo psicológico, desarrollando una regla de como el aprendizaje ocurría. La idea general que propuso era que el aprendizaje ocurría cuando ciertos cambios en una neurona eran activados. 
 
@@ -38,5 +38,5 @@ Ahora bien como antecedentes específicos Bolivia no es un país que lleve adela
 
 <!-- CONVERGENCIA FINANZAS - REDES NEURONALES -->
 
-Concluyendo esta sección el punto donde convergen...
+Concluyendo la sección el punto temporal la que se hace manifiesto que convergen el campo de las ciencias sociales y los modelos matemáticos-estadísticos fue traído de la mano de Francis Galton en 1886, quien acuño el términos de regresión en su articulo "Semejanza familiar en estatura", la hipótesis propuesta en este articulo fue contrastada por Karl Pearson dando lugar a la ley de regresión universal, desde este punto hasta la actualidad los métodos de regresión han evolucionado llegando a los métodos mas actuales y complejos como son las redes neuronales artificiales.
 
