@@ -13,7 +13,7 @@ Una de las alternativas de tratamiento de esta información que ofrece el sistem
 
 ## Formulación del problema central
 
-¿Sera que con la aplicación del método de redes neuronales, se obtendrá información adecuada con mayor aproximación a la situación económica-financiera observada de la institución financiera correspondiente para la toma de decisiones?
+¿Sera que con la aplicación del método de redes neuronales, se obtendrá información adecuada con mayor aproximación a la situación económica-financiera observada de la institución financiera correspondiente?
 
 
 
