@@ -29,7 +29,7 @@ Los bancos PYME tendrá como objetivo la prestación de servicios financieros es
 
 Las entidades financieras de vivienda es una sociedad que tiene por objeto prestar servicios de intermediación financiera con especialización en prestamos para adquisición de vivienda, proyectos de construcción de vivienda unifamiliar o multifamiliar, compra de terrenos, refacción, remodelación, ampliación y mejoramiento de viviendas individuales o propiedad horizontal y otorgamiento de microcredito para vivienda familiar y para infraestructura de vivienda productiva, asi tambien operaciones de arrendamiento financiero habitacional.
 
-#### Cooperativas de ahorro y crédito abiertas.
+#### Cooperativas de ahorro y crédito abiertas
 
 Las cooperativas de ahorro y crédito se constituyen como entidades especializadas de objeto único para la prestación de servicios de intermediación financiera, dirigidos a sus socios y al publico en general cunado corresponda.
 
@@ -37,7 +37,7 @@ Las cooperativas de ahorro y crédito se constituyen como entidades especializad
 
 La institución financiera de desarrollo es una organización jurídica propia creada con el objeto de prestar servicios financieros con un enfoque integral que incluye gestión social.
 
-#### Bancos de desarrollo productivo.
+#### Bancos de desarrollo productivo
 
 El banco de desarrollo productivo es una institución con participación mayoritaria del estado que realiza actividades de primer y segundo piso de fomento y de promoción del desarrollo del sector productivo.
 
@@ -62,7 +62,6 @@ Estado de ganancias y pérdidas o estado de resultados, se entiende como, "docum
 Es decir, el estado de resultados muestra la conclusión en términos monetarios del conjunto de actividades administrativas y complementarias en un intervalo de tiempo de la institución correspondiente. 
 
 
-
 ## Evaluación financiera
 
 La evaluación financiera se entiende como un proceso de valoración de los resultados de actividades económica-financieras de las instituciones.
@@ -81,6 +80,8 @@ La teoría financiera indica que un indicador financiero tiene como objeto final
 - Eficacia administrativas.
 
 Pero los indicadores financieros por si solos no pueden brindar información integrada sobre la situación económica-financiera de una institución en consecuencia a esta necesidad, se encuentra las metodologías de evaluación que se presenta a continuación.
+
+### Metodologias de evaluación
 
 
 ## Metodo CAMEL
@@ -101,6 +102,16 @@ La presente metodología se divide en siguientes pasos:
 - Definición de rangos y limites de los indicadores.
 - Definición de la ponderación, que responden a la solidez financiera de la institución.
 - Calificación CAMEL.
+
+Los mismos que se describen a continuación:
+
+### Calculo de indicadores
+
+### Definición de rangos y limites de los indicadores
+
+### Definición de la ponderación
+
+### Calificación CAMEL
 
 ## Pronósticos
 
@@ -138,4 +149,54 @@ Aprendizaje no supervisado es un método de aprendizaje automático donde la red
 
 Las Redes Neuronales "son un paradigma de aprendizaje y procesamiento automático inspirado en la forma en que funciona el cerebro para realizar las tareas de pensar y tomar decisiones (sistema nervioso)".[@IALAT]
 
-Una red neuronal es un método del aprendizaje automático que enseña a las computadoras a procesar datos de una manera que está inspirada en la forma en que lo hace el cerebro humano, las redes neuronales artificiales es modelo computacional resultado de diversas aportaciones científicas, consiste en un conjunto de unidades llamadas neuronas artificiales, para mayor detalle sobre los elementos de una red neuronal ver el anexo 1.
+Una red neuronal es un método del aprendizaje automático que enseña a las computadoras a procesar datos de una manera que está inspirada en la forma en que lo hace el cerebro humano, las redes neuronales artificiales es modelo computacional resultado de diversas aportaciones científicas, consiste en un conjunto de unidades llamadas neuronas artificiales.
+
+## Elementos de redes neuronales
+
+Como todo sistema es el resultado de la interacción de elementos simples trabajando conjuntamente, que se presenta a continuación.
+
+### Neurona artificial
+
+La neurona es la unidad básica de procesamiento de una red neuronal de ahí el nombre, igual que su equivalente biológico una neurona artificial recibe estímulos externos y devuelve otro valor, esta es expresada matemáticamente como una función, donde la neurona realiza una suma ponderada con los datos de entrada.
+
+Dado:
+
+$$ X = \left( x_{1},x_{2},x_{3},...,x_{n} \right) $$
+Se tiene:
+$$ Y = f(X) = \sum_{i=1}^{n}{w_{i}x_{i}}  = \sum{WX}  $$
+Donde:
+\newline
+X = Vector de los datos de entrada.
+\newline
+Y = Vector resultado de la suma ponderada.
+\newline
+W = Vector de los pesos las variables independientes.
+
+La arquitectura de la red neuronal corresponde a la manera en que esta ordena las neuronas, si las neuronas son colocadas de forma vertical, reciben los mismos datos de entrada y sus resultados de salida lo pasan a la siguiente capa, la última capa de una red neuronal se denominan capa de salida y las capas que estén entre la capa de salida y capa de entrada se denominas capas ocultas. Ahora bien, al ser cada neurona una suma ponderada esta equivaldría a una sola capa de la red, a esto se denomina colisión de la red neuronal, para resolver este problema se planteó los que se conoce como función de activación que es una función no lineal que distorsiona los resultados salientes de cada neurona.
+
+$$A = f(Y)$$
+
+### Funciones de activación
+
+Las funciones de activación distorsionan de forma no lineal las salidas de las neuronas para así no colapsar la red, dentro las funciones de activación más conocidas tenemos:
+
+#### Función escalonada
+
+Esta función asigna el valor de 1 si la salida de la neurona supera cierto umbral y cero si no lo supera.
+
+#### Función sigmoide
+
+Esta función genera un en un rango de valores de salida que están entre cero y uno por lo que la salida es interpretada como una probabilidad. 
+
+$$ f(x) = \frac{1}{1-e^{-x}}$$
+
+#### Función hiperbólica
+
+Esta función de activación llamada tangente hiperbólica tiene un rango de valores de salida entre -1 y 1.
+
+$$ f(x) = \frac{2}{1-e^{-2x}} - 1 $$
+
+
+### Algoritmo de propagacion hacia atras o backpropagation
+
+El algoritmo de backpropagation tiene como objeto....
