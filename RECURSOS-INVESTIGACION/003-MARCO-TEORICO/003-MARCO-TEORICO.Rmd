@@ -6,6 +6,8 @@ output: pdf_document
 ```{r}
 library(ggplot2)
 library(dplyr)
+library(patchwork)
+library(knitr)
 ```
 
 # Marco teorico
@@ -190,46 +192,150 @@ Las funciones de activación distorsionan de forma no lineal las salidas de las 
 
 Esta función asigna el valor de 1 si la salida de la neurona supera cierto umbral y cero si no lo supera.
 
+$$ f(x) = max(0,x) = \left \{
+\begin{array}{rcl}
+     0 & Si & x < 0
+  \\ 1 & Si & x \geq{0}
+\end{array}
+\right. $$
+
 #### Función sigmoide
 
 Esta función genera un en un rango de valores de salida que están entre cero y uno por lo que la salida es interpretada como una probabilidad. 
 
 $$ f(x) = \frac{1}{1+e^{-x}}$$
 
-```{r, fig.cap='Función sigmoide'}
-sigmoide <- function(x) {(1)/(1+exp(-x))}
-x <- seq(-6,6,0.1)
-y <- sigmoide(x)    
-
-data.frame(x=x,y=y) %>% 
-    ggplot(aes(x=x,y=y)) + 
-    geom_line() + 
-    xlab('X') + 
-    ylab('Y')
-```
-
-
-#### Función hiperbólica
+#### Función tangente hiperbólica
 
 Esta función de activación llamada tangente hiperbólica tiene un rango de valores de salida entre -1 y 1.
 
 $$ f(x) = \frac{2}{1+e^{-2x}} - 1 $$
 
-```{r, fig.cap='Función hiperbólica'}
+#### Función Relu
+
+La función ReLU transforma los valores introducidos anulando los valores negativos y dejando los positivos.
+
+$$ f(x) = max(0,x) = \left \{
+\begin{array}{rcl}
+     0 & Si & x < 0
+  \\ x & Si & x \geq{0}
+\end{array}
+\right. $$
+
+#### Función Softmax
+
+La función Softmax transforma las salidas a una representación en forma de probabilidades, de tal manera que el sumatorio de todas las probabilidades de las salidas de 1.
+
+$$ f(Z)_{j} = \frac{ e^{Z_{J}} }{ \sum_{k=1}^{K} e^{Z_{K}} } $$
+
+<!-- Gráficos de funciones activación -->
+
+```{r, fig.cap='Funciones de activación', out.height='100%', out.width='100%'}
+######################################################
+### Función de escalonada
+######################################################
+
+escalonada <- function(x) { ifelse(x<0,0,1) }
+
+x <- seq(-6,6,0.1)
+y <- escalonada(x)    
+
+plotEscalonada <-  
+    data.frame(x=x,y=y) %>% 
+    ggplot(aes(x=x,y=y)) + 
+    geom_line() + 
+    xlab('X') + 
+    ylab('Y') +
+    ggtitle('Función escalonada')
+
+######################################################
+### Función de activación sigmoide
+######################################################
+
+sigmoide <- function(x) {(1)/(1+exp(-x))}
+x <- seq(-6,6,0.1)
+y <- sigmoide(x)    
+
+plotSigmoide <- 
+    data.frame(x=x,y=y) %>% 
+    ggplot(aes(x=x,y=y)) + 
+    geom_line() + 
+    xlab('X') + 
+    ylab('Y') + 
+    ggtitle('Función sigmoide')
+
+
+######################################################
+### Función de activación tangente hiperbolica
+######################################################
+
 hiperbolica <- function(x) { (((2)/(1+exp(-2*x)))-1) }
 x <- seq(-6,6,0.1)
 y <- hiperbolica(x)    
 
-data.frame(x=x,y=y) %>% 
+plotHiperbolica <- 
+    data.frame(x=x,y=y) %>% 
     ggplot(aes(x=x,y=y)) + 
     geom_line() + 
     xlab('X') + 
-    ylab('Y')
-```
-#### Función Softmax
+    ylab('Y') + 
+    ggtitle('Función tangente hiperbolica')
 
-Esta función esta sujeta a una distribución de probabilidad.
+######################################################
+### Función de activación ReLU – Rectified Lineal Unit
+######################################################
+
+relu <- function(x) { ifelse(x<0,0,x) }
+
+x <- seq(-6,6,0.1)
+y <- relu(x)    
+
+plotRelu <-  
+    data.frame(x=x,y=y) %>% 
+    ggplot(aes(x=x,y=y)) + 
+    geom_line() + 
+    xlab('X') + 
+    ylab('Y') +
+    ggtitle('Función ReLu')
+
+######################################################
+### Función de activación Softmax
+######################################################
+
+softmax <- function(par){
+    n.par <- length(par)
+    par1 <- sort(par, decreasing = TRUE)
+    Lk <- par1[1]
+    for (k in 1:(n.par-1)) {
+        Lk <- max(par1[k+1], Lk) + log1p(exp(-abs(par1[k+1] - Lk))) 
+    }
+    val <- exp(par - Lk)
+    return(val)
+}
+
+x <- seq(-6,6,0.1)
+y <- softmax(x)    
+
+plotSoftmax <-  
+    data.frame(x=x,y=y) %>% 
+    ggplot(aes(x=x,y=y)) + 
+    geom_line() + 
+    xlab('X') + 
+    ylab('Y') +
+    ggtitle('Función Softmax')
+
+######################################################
+### GRAFICO UNIDO
+######################################################
+(plotEscalonada+plotSigmoide)/(plotHiperbolica+plotRelu)/(plotSoftmax+plotSoftmax)
+
+
+```
 
 ### Algoritmo de propagacion hacia atras o backpropagation
 
 El algoritmo de backpropagation tiene como objeto....
+
+
+
+
