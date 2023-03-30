@@ -10,6 +10,12 @@ En un mundo cada vez más globalizado, y siendo el entorno financiero uno de los
 
 Una de las alternativas de tratamiento de esta información que ofrece el sistema financiero, y que es el objeto de estudio en esta investigación que se propone, es la aplicación de redes neuronales artificiales para la proyección de estados financieros, la cual se encarga de encontrar la relación existente en las variables introducidas al modelo que no pueden ser visibles al análisis subjetivo económico-financiero, dando lugar a la necesidad de evaluar dicha información por herramientas de igual complejidad.
 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=15cm, height=10cm]{RECURSOS-INVESTIGACION/001-PERFIL-DEL-PROYECTO/arbol-de-problemas.png}
+\caption{Arbol de problemas}
+\end{figure}
+
 
 ## Formulación del problema central
 

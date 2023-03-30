@@ -2,6 +2,12 @@
 output: pdf_document
 ---
 
+<!-- LIBRERIAS R NECESARIAS -->
+```{r}
+library(ggplot2)
+library(dplyr)
+```
+
 # Marco teorico
 
 ## Finanzas y el sistema financiero
@@ -188,14 +194,41 @@ Esta función asigna el valor de 1 si la salida de la neurona supera cierto umbr
 
 Esta función genera un en un rango de valores de salida que están entre cero y uno por lo que la salida es interpretada como una probabilidad. 
 
-$$ f(x) = \frac{1}{1-e^{-x}}$$
+$$ f(x) = \frac{1}{1+e^{-x}}$$
+
+```{r, fig.cap='Función sigmoide'}
+sigmoide <- function(x) {(1)/(1+exp(-x))}
+x <- seq(-6,6,0.1)
+y <- sigmoide(x)    
+
+data.frame(x=x,y=y) %>% 
+    ggplot(aes(x=x,y=y)) + 
+    geom_line() + 
+    xlab('X') + 
+    ylab('Y')
+```
+
 
 #### Función hiperbólica
 
 Esta función de activación llamada tangente hiperbólica tiene un rango de valores de salida entre -1 y 1.
 
-$$ f(x) = \frac{2}{1-e^{-2x}} - 1 $$
+$$ f(x) = \frac{2}{1+e^{-2x}} - 1 $$
 
+```{r, fig.cap='Función hiperbólica'}
+hiperbolica <- function(x) { (((2)/(1+exp(-2*x)))-1) }
+x <- seq(-6,6,0.1)
+y <- hiperbolica(x)    
+
+data.frame(x=x,y=y) %>% 
+    ggplot(aes(x=x,y=y)) + 
+    geom_line() + 
+    xlab('X') + 
+    ylab('Y')
+```
+#### Función Softmax
+
+Esta función esta sujeta a una distribución de probabilidad.
 
 ### Algoritmo de propagacion hacia atras o backpropagation
 
