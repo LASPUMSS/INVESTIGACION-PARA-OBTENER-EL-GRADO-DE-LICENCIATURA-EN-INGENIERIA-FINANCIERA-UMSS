@@ -188,7 +188,7 @@ $$A = f(Y)$$
 
 Las funciones de activación distorsionan de forma no lineal las salidas de las neuronas para así no colapsar la red, dentro las funciones de activación más conocidas tenemos:
 
-#### Función escalonada
+#### Función escalon
 
 Esta función asigna el valor de 1 si la salida de la neurona supera cierto umbral y cero si no lo supera.
 
@@ -219,6 +219,17 @@ $$ f(x) = max(0,x) = \left \{
 \begin{array}{rcl}
      0 & Si & x < 0
   \\ x & Si & x \geq{0}
+\end{array}
+\right. $$
+
+#### Función Leaky ReLU
+
+La función Leaky ReLU transforma los valores introducidos multiplicando los negativos por un coeficiente rectificativo y dejando los positivos según entran.
+
+$$ f(x) = max(0,x) = \left \{
+\begin{array}{rcl}
+     0 & Si & x < 0
+  \\ a*x & Si & x \geq{0}
 \end{array}
 \right. $$
 
@@ -299,6 +310,23 @@ plotRelu <-
     ggtitle('Función ReLu')
 
 ######################################################
+### Función de activación Leaky ReLU 
+######################################################
+
+leakyRelu <- function(x,a) { ifelse(x<0,0,x*a) }
+
+x <- seq(-6,6,0.1)
+y <- leakyRelu(x,0.01)    
+
+plotLeakyRelu <-  
+    data.frame(x=x,y=y) %>% 
+    ggplot(aes(x=x,y=y)) + 
+    geom_line() + 
+    xlab('X') + 
+    ylab('Y') +
+    ggtitle('Función Leaky relu')
+
+######################################################
 ### Función de activación Softmax
 ######################################################
 
@@ -327,7 +355,7 @@ plotSoftmax <-
 ######################################################
 ### GRAFICO UNIDO
 ######################################################
-(plotEscalonada+plotSigmoide)/(plotHiperbolica+plotRelu)/(plotSoftmax+plotSoftmax)
+(plotEscalonada+plotSigmoide)/(plotHiperbolica+plotRelu)/(plotLeakyRelu +plotSoftmax)
 
 
 ```

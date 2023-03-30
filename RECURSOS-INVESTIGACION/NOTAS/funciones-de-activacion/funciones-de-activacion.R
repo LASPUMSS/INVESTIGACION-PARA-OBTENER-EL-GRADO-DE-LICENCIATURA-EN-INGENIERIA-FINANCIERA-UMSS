@@ -71,6 +71,23 @@ plotRelu <-
     ggtitle('Función ReLu')
 
 ######################################################
+### Función de activación Leaky ReLU 
+######################################################
+
+leakyRelu <- function(x,a) { ifelse(x<0,0,x*a) }
+
+x <- seq(-6,6,0.1)
+y <- leakyRelu(x,0.01)    
+
+plotLeakyRelu <-  
+    data.frame(x=x,y=y) %>% 
+    ggplot(aes(x=x,y=y)) + 
+    geom_line() + 
+    xlab('X') + 
+    ylab('Y') +
+    ggtitle('Función Leaky relu')
+
+######################################################
 ### Función de activación Softmax
 ######################################################
 
@@ -99,5 +116,5 @@ plotSoftmax <-
 ######################################################
 ### GRAFICO UNIDO
 ######################################################
-(plotEscalonada+plotSigmoide)/(plotHiperbolica+plotRelu)/(plotSoftmax)
+(plotEscalonada+plotSigmoide)/(plotHiperbolica+plotRelu)/(plotLeakyRelu +plotSoftmax)
 
