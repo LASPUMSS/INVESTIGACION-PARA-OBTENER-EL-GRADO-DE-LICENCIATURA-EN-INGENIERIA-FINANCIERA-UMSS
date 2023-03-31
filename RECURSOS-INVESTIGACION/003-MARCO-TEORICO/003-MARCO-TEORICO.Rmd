@@ -94,7 +94,6 @@ Pero los indicadores financieros por si solos no pueden brindar información int
 - CAMEL
 - PERLAS
 
-
 ## Metodo CAMEL
 
 La metodología CAMEL evalúa la **solidez financiera** de las instituciones con base ha indicadores cuantitativos, contemplando cinco características: 
@@ -220,8 +219,9 @@ $$ \frac{ \text{Disponibles} }{ \text{Obligaciones A Corto Plazo} } $$
 
 ### Definición de rangos y limites de los indicadores
 
-En esta sección de la metodología CAMEL se establecen rangos a los cuales le corresponde una calificación.
+En esta sección de la metodología CAMEL se establecen rangos a los cuales le corresponde una calificación, sujeta a una probabilidad, es decir, aquellos resultados mejores pero menos probable reciben una mejor calificación y aquellos resultados peores y menos probables reciben una peor calificación. 
 
+\input{RECURSOS-INVESTIGACION/003-MARCO-TEORICO/tabla-ejemplo-tipo-calificacion-camel}
 
 ### Definición de la ponderación
 
@@ -475,5 +475,10 @@ plotSoftmax <-
 
 El algoritmo de backpropagation tiene como objeto minimizar la función de costo ajustando los pesos y sesgos de la red, el nivel de ajuste está determinado por los gradientes de la función de costo con respecto a esos parámetros, es decir que dicho algoritmo dota a la red la capacidad de aprender o encontrar patrones en el conjunto de datos.
 
+Dada un función de costo:
 
+$$ C = f(\bar{Y},Y) $$
 
+Se calcula las derivadas parciales para cada neurona, para determinar que rutas que han generado menor error.
+
+$$ \frac{ \partial{C} }{ \partial{a} }$$
