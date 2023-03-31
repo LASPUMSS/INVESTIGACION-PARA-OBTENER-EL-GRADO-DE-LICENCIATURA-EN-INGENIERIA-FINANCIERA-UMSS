@@ -91,6 +91,9 @@ Pero los indicadores financieros por si solos no pueden brindar información int
 
 ### Metodologias de evaluación
 
+- CAMEL
+- PERLAS
+
 
 ## Metodo CAMEL
 
@@ -123,43 +126,101 @@ Está definido cómo la relación porcentual entre el capital regulatorio y los 
 
 ##### Coeficiente De Covertura De Cartera En Mora
 
+Este indicador mide o tiene objeto responder si el patrimonio de la institución cubre en tanto por ciento:
+- Los créditos cuyo capital, cuotas de amortización o intereses no hayan sido cancelados íntegramente a la entidad hasta los 30 días contados desde la fecha de vencimiento. 
+- Los créditos por los cuales la entidad ha iniciado las acciones judiciales para el cobro.
+- Descontando la previsión por incobrabilidad de créditos.
+
 $$ \frac{ \text{Cartera En Mora - Previsión Cartera} }{\text{Patrimonio}}$$
 
+##### Coeficiente Acido De Covertura De Cartera En Mora
+
+Este indicador mide o tiene objeto responder si el patrimonio de la institución cubre en tanto por ciento:
+- Los créditos cuyo capital, cuotas de amortización o intereses no hayan sido cancelados íntegramente a la entidad hasta los 30 días contados desde la fecha de vencimiento. 
+- Los créditos por los cuales la entidad ha iniciado las acciones judiciales para el cobro.
+- Descontando la previsión por incobrabilidad de créditos y adjuntando bienes realizables.
+
 $$ \frac{ \text{Cartera De Mora - Previsión Carter + Realizables} }{ \text{Patrimonio} } $$
+
+##### Coeficiente de cobertura patrimonial
+
+Este indicador mide o tiene por objeto responder si los activos descontando los cuentas contingentes cubren los el patrimonio de la misma.
 
 $$ \frac{ \text{Patrimonio} }{ \text{Activo - Contingente} } $$
 
 #### Activo
 
+##### Coeficiente de exposición de cartera
+
+El presente coeficiente determina que por ciento de lo créditos están expuestos a riesgo de ser incumplidos o cancelados.
+
 $$  \frac{ \text{Cartera En Mora} }{ \text{Cartera Bruta} } $$
+
+##### Coeficiente de previsión de cartera
+
+Este coeficiente mide o tiene por objeto responder en que tanto por ciento esta cubierta los créditos realizados por la institución.
 
 $$ \frac{ \text{Prevision} }{ \text{Cartera Bruta} } $$
 
+##### Coeficiente de previsión de cartera en mora
+
+Este coeficiente mide o tiene por objeto responder en que tanto por ciento esta cubierta los créditos incobrables realizados por la institución.
+
 $$ \frac{ \text{Prevision} }{ \text{Cartera En Mora} } $$
+
+##### Coeficiente de reposición de cartera
+
+Dicho coeficiente tiene por objeto medir en que tanto por ciento alcanzan los créditos re programados.
 
 $$ \frac{ \text{Cartera Reprogramada Total} }{ \text{Cartera Bruta} } $$
 
 #### Administración
 
+##### Coeficiente de cobertura gastos administrativos
+
+Este coeficiente mide si los activos de la institución pueden hacer frente a los gastos administrativos de la institución.
+
 $$ \frac{ \text{Gastos Administración} }{ \text{Activos + Contingentes} } $$
+
+
+##### Coeficiente acido de cobertura patrimonial
+
+Este coeficiente mide si los ingresos brutos pueden hacer frente a los gastos administrativos de la institución.
 
 $$ \frac{ \text{Gastos Administración - Impuestos} }{ \text{Resultado Operativo Bruto} } $$
 
 #### Beneficios
 
+##### Coeficiente de rendimiento sobre activos
+
+Este coeficiente determina el rendimiento en tanto por uno, los beneficios que han generado los activos.
+
 $$ \frac{ \text{Resultado Neto De La Gestión} }{ \text{Activo+Contingente} } $$
+
+
+##### Coeficiente de rendimiento sobre patrimonio
+
+Este coeficiente determina el rendimiento en tanto por uno, los beneficios que ha generado el patrimonio.
 
 $$ \frac{ \text{Resultado Neto De La Gestión} }{ \text{Patrimonio} } $$
 
 #### Liquidez
 
-$$ \frac{ \text{Disponibles} }{ \text{Obligaciones A Corto Plazo} } $$
+##### Coeficiente de capacidad de pago frente obligaciones a corto plazo 
+
+El coeficiente busca medir si la institución puede hacer frente a sus obligaciones con los activos disponibles y inversiones temporales.
 
 $$ \frac{ \text{Disponibles + Inversiones Temporarias} }{ \text{Obligaciones A Corto Plazo} } $$
 
+##### Coeficiente acido de capacidad de pago frente obligaciones a corto plazo
+
+El coeficiente busca medir si la institución puede hacer frente a sus obligaciones con los activos disponibles.
+
+$$ \frac{ \text{Disponibles} }{ \text{Obligaciones A Corto Plazo} } $$
 
 ### Definición de rangos y limites de los indicadores
 
+En esta sección de la metodología CAMEL se establecen rangos a los cuales le corresponde una calificación.
 
 
 ### Definición de la ponderación
@@ -167,6 +228,9 @@ $$ \frac{ \text{Disponibles + Inversiones Temporarias} }{ \text{Obligaciones A C
 $$CAMEL = \text{30\%C + 20\%A + 10\%M + 15\%E + 15\%L}$$
 
 ### Calificación CAMEL
+
+Dado los pasos anteriores la metodología CAMEL asigna una puntuación a la institución, y permitirá determinar que institución le corresponde mayor solidez financiera respecto a las otras instituciones.
+
 
 ## Pronósticos
 
@@ -409,8 +473,7 @@ plotSoftmax <-
 
 ### Algoritmo de propagacion hacia atras o backpropagation
 
-El algoritmo de backpropagation tiene como objeto....
-
+El algoritmo de backpropagation tiene como objeto minimizar la función de costo ajustando los pesos y sesgos de la red, el nivel de ajuste está determinado por los gradientes de la función de costo con respecto a esos parámetros, es decir que dicho algoritmo dota a la red la capacidad de aprender o encontrar patrones en el conjunto de datos.
 
 
 
