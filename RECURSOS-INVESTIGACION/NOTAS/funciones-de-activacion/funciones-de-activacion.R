@@ -116,5 +116,5 @@ plotSoftmax <-
 ######################################################
 ### GRAFICO UNIDO
 ######################################################
-(plotEscalonada+plotSigmoide)/(plotHiperbolica+plotRelu)/(plotLeakyRelu +plotSoftmax)
+(plotEscalonada+plotSigmoide)/(plotHiperbolica+plotRelu)/(plotLeakyRelu+plotSoftmax)
 
