@@ -295,9 +295,13 @@ La arquitectura de la red neuronal corresponde a la manera en que esta ordena la
 
 $$A = f(Y)$$
 
+### Capas de la red neuronal
+
+Una capa de una red neuronal se debe entender como la agrupación neuronas.
+
 ### Funciones de activación
 
-Las funciones de activación distorsionan de forma no lineal las salidas de las neuronas para así no colapsar la red, dentro las funciones de activación más conocidas tenemos:
+Las funciones de activación distorsionan de forma no lineal las salidas de las neuronas para así no colapsar la red, es decir, las funciones de activación permiten conectar capas neuronales, dentro las funciones de activación más conocidas se tiene:
 
 #### Función escalon
 
@@ -470,6 +474,7 @@ plotSoftmax <-
 
 
 ```
+
 
 ### Propagación hacia adelanate y hacia atras
 
