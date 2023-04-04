@@ -14,11 +14,9 @@ library(knitr)
 
 ## Finanzas y el sistema financiero
 
-Las finanzas se entiende como "la ciencia y arte de administrar el dinero"
+Las finanzas se entiende como "la ciencia y arte de administrar el dinero" sujetas a restricciones dadas por un contexto que es dado por el sistema financiero, en decir, el sistema financiero, "consiste en diversas instituciones y mercados que sirven a las empresas de negocios, los individuos y los gobiernos".[@FAF]
 
-El sistema financiero, "consiste en diversas instituciones y mercados que sirven a las empresas de negocios, los individuos y los gobiernos".[@FAF]
-
-Entonces se afirma que el sistema financiero en general está formado por el conjunto de instituciones, constituidas en mercados, cuyo fin principal es canalizar el ahorro que generan los ahorradores hacia los prestatarios, así como facilitar y otorgar seguridad al movimiento de dinero y al sistema de pagos. En consecuencia al alcance y limitaciones del estudio de esta investigación se define al sistema financiero boliviano que está constituido por tres sectores que atienden al origen de su capital, el sector financiero privado, el público y con participación parcial del estado.
+Entonces se afirma que el sistema financiero en general está formado por el conjunto de instituciones publicas y privadas, constituidas en mercados, cuyo fin principal es canalizar el ahorro que generan los ahorradores hacia los prestatarios, así como facilitar y otorgar seguridad al movimiento de dinero y al sistema de pagos. 
 
 ### Entidades de intermediación financiera en Bolivia
 
