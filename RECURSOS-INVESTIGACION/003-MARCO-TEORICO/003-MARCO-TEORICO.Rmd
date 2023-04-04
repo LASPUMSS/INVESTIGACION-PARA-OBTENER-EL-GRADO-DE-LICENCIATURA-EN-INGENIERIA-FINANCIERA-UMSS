@@ -24,16 +24,16 @@ Las definiciones presentadas a continuación están suscritas a la ley 393 - ley
 
 #### Bancos múltiples.
 
-Los bancos múltiples tendrán como objetivo la prestación de servicios financieros al publico en general.
+Los bancos múltiples tendrán como objetivo la prestación de servicios financieros al publico en general, entendido como servicios financieros, aquellos servicios que tienen por objeto satisfacer las necesidades de las consumidoras y consumidores financieros.
 
 #### Bancos PYME
 
-Los bancos PYME tendrá como objetivo la prestación de servicios financieros especializados en el sector de las pequeñas y medianas empresas, sin restricción para la prestación de los mismos también a la microempresa.
+Los bancos PYME son aquellos que tienen como objetivo la prestación de servicios financieros especializados en el sector de las pequeñas y medianas empresas, sin restricción para la prestación de los mismos también a la microempresa.
 
 
 #### Entidades financieras de vivienda
 
-Las entidades financieras de vivienda es una sociedad que tiene por objeto prestar servicios de intermediación financiera con especialización en prestamos para adquisición de vivienda, proyectos de construcción de vivienda unifamiliar o multifamiliar, compra de terrenos, refacción, remodelación, ampliación y mejoramiento de viviendas individuales o propiedad horizontal y otorgamiento de microcredito para vivienda familiar y para infraestructura de vivienda productiva, asi tambien operaciones de arrendamiento financiero habitacional.
+Las entidades financieras de vivienda es una sociedad que tiene por objeto prestar servicios de intermediación financiera con especialización en prestamos para adquisición de vivienda, proyectos de construcción de vivienda unifamiliar o multifamiliar, compra de terrenos, refacción, remodelación, ampliación y mejoramiento de viviendas individuales o propiedad horizontal y otorgamiento de microcredito para vivienda familiar y para infraestructura de vivienda productiva, así tambien operaciones de arrendamiento financiero habitacional.
 
 #### Cooperativas de ahorro y crédito abiertas
 
@@ -67,7 +67,6 @@ Estado de ganancias y pérdidas o estado de resultados, se entiende como, "docum
 
 Es decir, el estado de resultados muestra la conclusión en términos monetarios del conjunto de actividades administrativas y complementarias en un intervalo de tiempo de la institución correspondiente. 
 
-
 ## Evaluación financiera
 
 La evaluación financiera se entiende como un proceso de valoración de los resultados de actividades económica-financieras de las instituciones.
@@ -85,14 +84,10 @@ La teoría financiera indica que un indicador financiero tiene como objeto final
 - Ingresos y gastos financieros.
 - Eficacia administrativas.
 
-Pero los indicadores financieros por si solos no pueden brindar información integrada sobre la situación económica-financiera de una institución en consecuencia a esta necesidad, se encuentra las metodologías de evaluación que se presenta a continuación.
+Pero los indicadores financieros por si solos no pueden brindar información integrada sobre la situación económica-financiera de una institución en consecuencia a esta necesidad, se encuentra las metodologías de evaluación como ser la metodología CAMEL y PERLAS.
 
-### Metodologias de evaluación
 
-- CAMEL
-- PERLAS
-
-## Metodo CAMEL
+## Método CAMEL
 
 La metodología CAMEL evalúa la **solidez financiera** de las instituciones con base ha indicadores cuantitativos, contemplando cinco características: 
 
@@ -155,7 +150,7 @@ $$  \frac{ \text{Cartera En Mora} }{ \text{Cartera Bruta} } $$
 
 ##### Coeficiente de previsión de cartera
 
-Este coeficiente mide o tiene por objeto responder en que tanto por ciento esta cubierta los créditos realizados por la institución.
+El presente coeficiente mide o tiene por objeto responder en que tanto por ciento esta cubierta los créditos realizados por la institución.
 
 $$ \frac{ \text{Prevision} }{ \text{Cartera Bruta} } $$
 
@@ -175,7 +170,7 @@ $$ \frac{ \text{Cartera Reprogramada Total} }{ \text{Cartera Bruta} } $$
 
 ##### Coeficiente de cobertura gastos administrativos
 
-Este coeficiente mide si los activos de la institución pueden hacer frente a los gastos administrativos de la institución.
+El coeficiente mide si los activos de la institución pueden hacer frente a los gastos administrativos de la institución.
 
 $$ \frac{ \text{Gastos Administración} }{ \text{Activos + Contingentes} } $$
 
@@ -190,7 +185,7 @@ $$ \frac{ \text{Gastos Administración - Impuestos} }{ \text{Resultado Operativo
 
 ##### Coeficiente de rendimiento sobre activos
 
-Este coeficiente determina el rendimiento en tanto por uno, los beneficios que han generado los activos.
+El presente coeficiente determina el rendimiento en tanto por uno, los beneficios que han generado los activos.
 
 $$ \frac{ \text{Resultado Neto De La Gestión} }{ \text{Activo+Contingente} } $$
 
@@ -293,9 +288,7 @@ La arquitectura de la red neuronal corresponde a la manera en que esta ordena la
 
 $$A = f(Y)$$
 
-### Capas de la red neuronal
-
-Una capa de una red neuronal se debe entender como la agrupación neuronas.
+Dado lo anterior expuesto una capa de una red neuronal se debe entender como la agrupación neuronas.
 
 ### Funciones de activación
 
@@ -354,7 +347,7 @@ $$ f(Z)_{j} = \frac{ e^{Z_{J}} }{ \sum_{k=1}^{K} e^{Z_{K}} } $$
 
 <!-- Gráficos de funciones activación -->
 
-```{r, fig.cap='Funciones de activación', out.height='100%', out.width='100%'}
+```{r, fig.cap='Funciones de activación', out.height='70%', out.width='100%'}
 ######################################################
 ### Función de escalonada
 ######################################################
@@ -470,43 +463,49 @@ plotSoftmax <-
 ######################################################
 (plotEscalonada+plotSigmoide)/(plotHiperbolica+plotRelu)/(plotLeakyRelu +plotSoftmax)
 
-
 ```
 
-
+\newpage
 ### Propagación hacia adelanate y hacia atras
 
 #### Propagación hacia adelante
 
-El la propagación adelante se tiene:
+Para hacer manifiesto el algoritmo de propagación hacia adelante se supone que la estructura de red, estará compuesta de de cuatro capas, es decir, la capa de entrada y salida junto a dos capas neuronales ocultas, dada esta estructura el algoritmo tendrá el siguiente comportamiento:
 
-Capa de entrada
+- Capa de entrada esta definida por:
 
 $$ x = a^{(1)}$$
 
+- La primera capa oculta procesara los datos de la capa de entrada toma la siguiente forma:
+
 $$ z^{(2)} = W^{(1)}x + b^{(1)} $$
+
+- Antes de pasar los datos procesados en las neuronas de la primera capa oculta deben ser pasados por las funcioes de activación, para que no colapse la red: 
 
 $$a^{(2)} = f(z^{(2)})$$
 
+- Nuevamente se procesara los datos de la capa de anterior:
 
 $$ z^{(3)} = W^{(2)}a^{(2)} + b^{(2)} $$
 
+- Tambien nuevamente se envuelve los resultados en una función de activación antes de pasar a la capa de salida:
+
 $$a^{(3)} = f(z^{(3)})$$
 
+- Finalmente tendremos una salida, la cual sera evaluada si coincide con los datos esperados.
 
 $$ s = W^{(3)}a^{(3)} $$
 
+#### Propagación hacia atrás
 
-#### Propagación hacia atras
-
-El algoritmo de backpropagation tiene como objeto minimizar la función de costo ajustando los pesos y sesgos de la red, el nivel de ajuste está determinado por los gradientes de la función de costo con respecto a esos parámetros, es decir que dicho algoritmo dota a la red la capacidad de aprender o encontrar patrones en el conjunto de datos.
+El algoritmo de propagación hacia atrás o "backpropagation" tiene como objeto dotar de aprendizaje a las redes neuronales minimizando la función de costo ajustando los pesos y sesgos de la red, el nivel de ajuste está determinado por los gradientes para cada neurona hasta llegar a la capa de entrada.
 
 Dada un función de costo:
 
 $$ C = f(s,y) $$
 
-Se calcula las derivadas parciales para cada neurona, para determinar que rutas que han generado menor error.
+Se calcula las derivadas parciales para cada neurona, para determinar que rutas que han generado menor error, hasta la capa de entrada:
 
 $$ \frac{ \partial{C} }{ \partial{x} }$$
 
-Para el logro de esta derivada se hace uso de un método matemático "Chain rule".
+Para el logro de esta derivada se hace uso de un método matemático "Chain Rule".
