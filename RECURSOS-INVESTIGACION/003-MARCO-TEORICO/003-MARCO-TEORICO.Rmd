@@ -508,4 +508,4 @@ Se calcula las derivadas parciales para cada neurona, para determinar que rutas 
 
 $$ \frac{ \partial{C} }{ \partial{x} }$$
 
-Para el logro de esta derivada se hace uso de un método matemático "Chain Rule".
+Para el logro de esta derivada se hace uso de un método matemático denominado "Chain Rule", que permite determinar la derivada de una función compuesta, a través de funciones parciales de las funciones que componen la función principal.
