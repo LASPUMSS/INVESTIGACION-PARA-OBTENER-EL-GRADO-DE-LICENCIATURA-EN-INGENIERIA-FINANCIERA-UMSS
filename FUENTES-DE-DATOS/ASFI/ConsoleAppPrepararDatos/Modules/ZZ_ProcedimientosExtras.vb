@@ -547,6 +547,9 @@ Module ZZ_ProcedimientosExtras
 
 
     End Sub
+#End Region
+
+#Region "PROCEDIMIENTOS PARA IGUALAR CAMPOS"
 
     Public Sub agregarCategoriaCtas(ExcelWkSheet As Excel.Worksheet, txtIn As String, txtFn As String, categoriaPrincipal As String, txtFnAux As String, Optional tituloIn As Boolean = True, Optional tituloFn As Boolean = False)
         Dim strEval As String
@@ -650,6 +653,7 @@ Module ZZ_ProcedimientosExtras
             End If
         Next
     End Sub
+
 #End Region
 
 #Region "PROCEDIMIENTOS PARA ENUMERACION HOJAS"
