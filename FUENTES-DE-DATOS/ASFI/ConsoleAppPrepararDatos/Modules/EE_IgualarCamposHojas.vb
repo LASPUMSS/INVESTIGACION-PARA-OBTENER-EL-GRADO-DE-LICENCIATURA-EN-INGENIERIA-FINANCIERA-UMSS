@@ -19,9 +19,11 @@ Module EE_IgualarCamposHojas
         Dim i3 As Integer
         Dim i, i2, n, nCol As Long
 
+        registroEjecucion000_00("punto 1")
 
         ExcelWkSheet = hojaConCamposAgregados(ExcelWkBook)
 
+        registroEjecucion000_00("punto 2")
         'AGREGAR CATEGORIAS A CUENTAS 
         'ACTIVO
         agregarCategoriaCtas(ExcelWkSheet, "DISPONIBILIDADES", "INVERSIONES_TEMPORARIAS", "ACTIVO", "PASIVO")
@@ -51,7 +53,7 @@ Module EE_IgualarCamposHojas
         agregarCategoriaCtas(ExcelWkSheet, "OTROS_GASTOS_OPERATIVOS", "RESULTADO_DE_OPERACION_BRUTO", "OTROS_GASTOS_OPERATIVOS", "RESULTADO_DE_OPERACION_BRUTO", False)
         agregarCategoriaCtas(ExcelWkSheet, "RESULTADO_DE_OPERACION_BRUTO", "RESULTADO_NETO_DE_LA_GESTION", "EERR_S2", "RESULTADO_NETO_DE_LA_GESTION", False, True)
 
-
+        registroEjecucion000_00("punto 3")
         'AREGLAR NOMBRES DE CUENTAS
         cambiarNombreCtas(ExcelWkSheet, "EERR_S2_RESULTADO_DESPUES_DE_AJUSTE_POR_DIF_DE_CAMBIO_Y_MANTENIM_DE_VALOR",
                           "EERR_S2_RESULTADO_DESPUES_DE_AJUSTE_POR_DIFERENCIA_DE_CAMBIO_Y_MANTENIMIENTO_DE_VALOR")
@@ -67,9 +69,11 @@ Module EE_IgualarCamposHojas
         cambiarNombreCtas(ExcelWkSheet, "CUENTAS_CONTINGENTES_DEUDORAS_ESTADO_DE_GANANCIAS_Y_PERIDIDAS",
                           "CUENTAS_CONTINGENTES_DEUDORAS_ESTADO_DE_GANANCIAS_Y_PERDIDAS")
 
+        registroEjecucion000_00("punto 4")
         'ELIMINAR FILAS VACIAS
         eliminarFilasVac(ExcelWkSheet, 2)
 
+        registroEjecucion000_00("punto 5")
         'TRASLADARA LA CUENTAS QUE SE CONTEMPLARON QUE SON 372
         nCol = ExcelWkSheet.Cells(1, 1).End(Excel.XlDirection.xlToRight).Column
         ExcelWkSheet.Activate()
@@ -77,8 +81,11 @@ Module EE_IgualarCamposHojas
         ExcelWkSheet.Range("A500").Select()
         ExcelWkSheet.Paste()
 
-        n = ExcelWkSheet.Cells(ExcelWkSheet.Rows.Count, 1).End(Excel.XlDirection.xlUp).Row
+
         For i2 = 1 To UBound(EF_EF)
+
+            n = ExcelWkSheet.Cells(ExcelWkSheet.Rows.Count, 1).End(Excel.XlDirection.xlUp).Row + 2
+
             For i = 500 To n
                 strEval = If(CStr(ExcelWkSheet.Cells(i, 1).Value) <> "",
                           QuitarEspAcen(CStr(ExcelWkSheet.Cells(i, 1).Value)),
@@ -87,6 +94,7 @@ Module EE_IgualarCamposHojas
                     ExcelWkSheet.Range(ExcelWkSheet.Cells(i, 1), ExcelWkSheet.Cells(i, nCol)).Cut()
                     ExcelWkSheet.Range($"A{i2}").Select()
                     ExcelWkSheet.Paste()
+                    ExcelWkSheet.Rows(i).Delete()
                     Exit For
                 ElseIf i = n And strEval <> EF_EF(i2) Then
                     ExcelWkSheet.Cells(i2, 1).Value = EF_EF(i2)
@@ -97,6 +105,7 @@ Module EE_IgualarCamposHojas
             Next
         Next
 
+        registroEjecucion000_00("punto 6")
         'ENUMERAR LAS CUENTAS QUE NO SE CONTEMPLARON
         For i = 500 To n
             strEval = If(CStr(ExcelWkSheet.Cells(i, 1).Value) <> "",
@@ -108,6 +117,7 @@ Module EE_IgualarCamposHojas
             End If
         Next
 
+        registroEjecucion000_00("punto 7")
         'ELIMINAR LOS DATOS FALTANTES QUE NO SE AJUSTAN A LAS CUENTAS QUE CONTAMOS
         ExcelWkSheet.Range(ExcelWkSheet.Cells(500, 1), ExcelWkSheet.Cells(ExcelWkSheet.Rows.Count, nCol)).Clear()
 

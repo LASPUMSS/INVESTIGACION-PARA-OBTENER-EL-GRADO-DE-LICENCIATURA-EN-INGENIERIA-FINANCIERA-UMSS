@@ -1,0 +1,52 @@
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+¿DESEA EJECUTAR LA EDICION DE LAS HOJAS?
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+¿ESTADOS DESEA EJECUTAR LA ENUMERACION DE LOS CAMPOS DE LOS ESTADOS?
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+¿DESEA EJECUTAR AGREGAR CAMPOS?
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+¿Deseas ejecutar la seccion de estados financieros?
+####################################################################################
+SE EJECUTARA LA SECCION: ESTADOS FINANCIEROS
+####################################################################################
+¿Deseas ejecutar la seccion de estados financieros - estados financieros?
+###############################################################################
+Hola que tal, empecemos con las hojas de calculo de E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug...
+Directorio raiz: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+###############################################################################
+¿Deseas ejecutar la gestion 2014 de Estados Financieros?
+¿Deseas ejecutar la gestion 2015 de Estados Financieros?
+¿Deseas ejecutar la gestion 2016 de Estados Financieros?
+¿Deseas ejecutar la gestion 2017 de Estados Financieros?
+¿Deseas ejecutar la gestion 2018 de Estados Financieros?
+¿Deseas ejecutar la gestion 2019 de Estados Financieros?
+¿Deseas ejecutar la gestion 2020 de Estados Financieros?
+¿Deseas ejecutar la gestion 2021 de Estados Financieros?
+¿Deseas ejecutar la gestion 2022 de Estados Financieros?
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\01\BcosMultiples0122\202201_BMU_EstadosFinancieros.xls
+Fecha EEFF: 2022 / 1
+El libro BBDD_MOD no existe, asi que se creara uno...
+La hoja con los datos es: BBDD (2)
+CUENTAS_CONTINGENTES_DEUDORAS_ACTIVOS_DE_LOS_PATRIMONIOS_AUTONOMOS
+CUENTAS_CONTINGENTES_DEUDORAS_GASTOS_DE_LOS_PATRIMONIOS_AUTONOMOS
+CUENTAS_CONTINGENTES_DEUDORAS_ACTIVOS_DE_LOS_PATRIMONIOS_AUTONOMOS
+CUENTAS_CONTINGENTES_DEUDORAS_GASTOS_DE_LOS_PATRIMONIOS_AUTONOMOS
+Ultima fila: 372
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\01\BcosPYME0122\202201_BPY_EstadosFinancieros.xls
+Fecha EEFF: 2022 / 1
+El libro BBDD_MOD no existe, asi que se creara uno...
+La hoja con los datos es: BBDD (2)
+CUENTAS_CONTINGENTES_DEUDORAS_ACTIVOS_DE_LOS_PATRIMONIOS_AUTONOMOS
+CUENTAS_CONTINGENTES_DEUDORAS_GASTOS_DE_LOS_PATRIMONIOS_AUTONOMOS
+CUEN
