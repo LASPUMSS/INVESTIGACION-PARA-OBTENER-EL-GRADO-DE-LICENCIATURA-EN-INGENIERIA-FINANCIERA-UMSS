@@ -116,7 +116,7 @@ Module ZZ_ProcedimientosExtras
     ''' <param name="unirHojas"></param>
     ''' <param name="enumerar"></param>
     ''' <param name="igualarCampos"></param>
-    Public Sub cargarPatronDeEdicion(ByVal ExcelApp As Excel.Application, ByVal gestionIn As Long, ByVal gestionFn As Long, ByVal categoriaHojas As String, ByVal patron As String, Optional unirHojas As Boolean = False, Optional enumerar As Boolean = False, Optional igualarCampos As Boolean = False)
+    Public Sub cargarPatronRutaArchivo(ByVal ExcelApp As Excel.Application, ByVal gestionIn As Long, ByVal gestionFn As Long, ByVal categoriaHojas As String, ByVal patron As String, Optional unirHojas As Boolean = False, Optional enumerar As Boolean = False, Optional igualarCampos As Boolean = False)
         Dim nCategoria As String = Replace(categoriaHojas, " ", "")
         Dim nPatron As String = Replace(patron, " ", "")
 
@@ -777,8 +777,10 @@ Module ZZ_ProcedimientosExtras
     Public Sub copiarDatosEntreHojas(ByVal ExcelWkBook As Excel.Workbook, ByVal ExcelWkSheetUnir As Excel.Worksheet)
         Dim ExcelWkSheet As Excel.Worksheet
         Dim n1 As Long
+        Dim n2 As Long
+        Dim strEval As String
         ExcelWkBook.Activate()
-        ExcelWkSheet = ExcelWkBook.Sheets("BBDD")
+        ExcelWkSheet = ExcelWkBook.Sheets("BBDD_MOD")
         ExcelWkSheet.Activate()
         ExcelWkSheet.Range("A1").CurrentRegion.Copy()
 
@@ -788,6 +790,18 @@ Module ZZ_ProcedimientosExtras
                                                    Operation:=XlConstants.xlNone,
                                                    SkipBlanks:=False,
                                                    Transpose:=True)
+
+        'Eliminar la fila id que esta por demas
+        n2 = ExcelWkSheetUnir.Cells(ExcelWkSheetUnir.Rows.Count, 1).End(Excel.XlDirection.xlUp).Row
+        For i = n2 To 3 Step -1
+            strEval = If(CStr(ExcelWkSheetUnir.Cells(i, 1).Value) <> "",
+                         QuitarEspAcen(CStr(ExcelWkSheetUnir.Cells(i, 1).Value)),
+                         "")
+            If strEval = "ID" Then
+                ExcelWkSheetUnir.Rows(i).Delete()
+                Exit For
+            End If
+        Next
 
         ExcelWkBook.Save()
         ExcelWkBook.Close()

@@ -85,6 +85,7 @@ Module EE_IgualarCamposHojas
         For i2 = 1 To UBound(EF_EF)
 
             n = ExcelWkSheet.Cells(ExcelWkSheet.Rows.Count, 1).End(Excel.XlDirection.xlUp).Row + 2
+            n = If(n < 500, 502, n)
 
             For i = 500 To n
                 strEval = If(CStr(ExcelWkSheet.Cells(i, 1).Value) <> "",

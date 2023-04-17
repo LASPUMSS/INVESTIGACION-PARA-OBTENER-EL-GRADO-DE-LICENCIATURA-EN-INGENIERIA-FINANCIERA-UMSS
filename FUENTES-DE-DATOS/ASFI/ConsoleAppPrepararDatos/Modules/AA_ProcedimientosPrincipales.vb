@@ -29,7 +29,7 @@ Module AA_ProcedimientosPrincipales
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Estados Financieros", "Patron1")
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Estados Financieros", "Patron1")
                 End If
 
                 '### ESTADOS FINANCIEROS POR MONEDAS
@@ -37,7 +37,7 @@ Module AA_ProcedimientosPrincipales
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Estados Financieros Moneda", "Patron1")
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Estados Financieros Moneda", "Patron1")
                 End If
 
             End If
@@ -58,21 +58,21 @@ Module AA_ProcedimientosPrincipales
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de indicadores financieros - Calificacion de cartera?")
                 ejecSec = UCase(Console.ReadLine())
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Calificacion Cartera", "Patron2")
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Calificacion Cartera", "Patron2")
                 End If
 
                 '### INDICADORES FINANCIEROS
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de indicadores financieros - indicadores financieros?")
                 ejecSec = UCase(Console.ReadLine())
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Indicadores Financieros", "Patron1")
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Indicadores Financieros", "Patron1")
                 End If
 
                 '### PONDERACION DE ACTIVOS
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de indicadores financieros - ponderacion de activos?")
                 ejecSec = UCase(Console.ReadLine())
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Ponderacion Activos", "Patron2")
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Ponderacion Activos", "Patron2")
                 End If
 
             End If
@@ -93,42 +93,42 @@ Module AA_ProcedimientosPrincipales
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Ranking Depositos Publico", "Patron5")
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Ranking Depositos Publico", "Patron5")
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - Ranking Depositos?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "RankingDepositos", "Patron5")
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "RankingDepositos", "Patron5")
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - encaje legal?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Encaje Legal", "Patron4")
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Encaje Legal", "Patron4")
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - EstratificacionDepDptoTotal?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "EstratificacionDepDptoTotal", "Patron1")
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "EstratificacionDepDptoTotal", "Patron1")
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - EstratificacionDepEntidadTotal?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "EstratificacionDepEntidadTotal", "Patron1")
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "EstratificacionDepEntidadTotal", "Patron1")
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - EstratificacionDepositos?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "EstratificacionDepositos", "Patron1")
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "EstratificacionDepositos", "Patron1")
                 End If
 
 
@@ -150,21 +150,21 @@ Module AA_ProcedimientosPrincipales
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Financiamientos Externos", "Patron1")
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Financiamientos Externos", "Patron1")
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - Ranking Colocaciones?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Ranking Colocaciones", "Patron5")
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Ranking Colocaciones", "Patron5")
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - Ranking Contingente?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Ranking Contingente", "Patron5")
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Ranking Contingente", "Patron5")
                 End If
 
             End If
@@ -182,7 +182,7 @@ Module AA_ProcedimientosPrincipales
                 registroEjecucion000_00("SE EJECUTARA LA SECCION: OPERACIONES INTERBANCARIAS")
                 registroEjecucion000_00("####################################################################################")
 
-                cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Operaciones Interbancarias", "Patron5")
+                cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Operaciones Interbancarias", "Patron5")
 
             End If
 
@@ -209,7 +209,7 @@ Module AA_ProcedimientosPrincipales
                 registroEjecucion000_00("SE EJECUTARA LA SECCION: ESTADOS FINANCIEROS DESAGREGADOS")
                 registroEjecucion000_00("####################################################################################")
 
-                cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Estados Financieros Desagregados", "Patron3")
+                cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Estados Financieros Desagregados", "Patron3")
 
             End If
 
@@ -229,7 +229,7 @@ Module AA_ProcedimientosPrincipales
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "PAFs_x_Depto", "Patron1")
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "PAFs_x_Depto", "Patron1")
                 End If
 
 
@@ -237,7 +237,7 @@ Module AA_ProcedimientosPrincipales
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Agencias", "Patron1")
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Agencias", "Patron1")
                 End If
 
             End If
@@ -273,7 +273,7 @@ Module AA_ProcedimientosPrincipales
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Estados Financieros", "Patron1", False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Estados Financieros", "Patron1", False, True)
                 End If
 
                 '### ESTADOS FINANCIEROS POR MONEDAS
@@ -281,7 +281,7 @@ Module AA_ProcedimientosPrincipales
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Estados Financieros Moneda", "Patron1", False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Estados Financieros Moneda", "Patron1", False, True)
                 End If
 
             End If
@@ -302,21 +302,21 @@ Module AA_ProcedimientosPrincipales
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de indicadores financieros - Calificacion de cartera?")
                 ejecSec = UCase(Console.ReadLine())
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Calificacion Cartera", "Patron2", False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Calificacion Cartera", "Patron2", False, True)
                 End If
 
                 '### INDICADORES FINANCIEROS
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de indicadores financieros - indicadores financieros?")
                 ejecSec = UCase(Console.ReadLine())
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Indicadores Financieros", "Patron1", False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Indicadores Financieros", "Patron1", False, True)
                 End If
 
                 '### PONDERACION DE ACTIVOS
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de indicadores financieros - ponderacion de activos?")
                 ejecSec = UCase(Console.ReadLine())
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Ponderacion Activos", "Patron2", False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Ponderacion Activos", "Patron2", False, True)
                 End If
 
             End If
@@ -337,42 +337,42 @@ Module AA_ProcedimientosPrincipales
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Ranking Depositos Publico", "Patron5", False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Ranking Depositos Publico", "Patron5", False, True)
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - Ranking Depositos?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "RankingDepositos", "Patron5", False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "RankingDepositos", "Patron5", False, True)
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - encaje legal?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Encaje Legal", "Patron4", False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Encaje Legal", "Patron4", False, True)
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - EstratificacionDepDptoTotal?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "EstratificacionDepDptoTotal", "Patron1", False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "EstratificacionDepDptoTotal", "Patron1", False, True)
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - EstratificacionDepEntidadTotal?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "EstratificacionDepEntidadTotal", "Patron1", False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "EstratificacionDepEntidadTotal", "Patron1", False, True)
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - EstratificacionDepositos?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "EstratificacionDepositos", "Patron1", False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "EstratificacionDepositos", "Patron1", False, True)
                 End If
 
 
@@ -394,21 +394,21 @@ Module AA_ProcedimientosPrincipales
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Financiamientos Externos", "Patron1", False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Financiamientos Externos", "Patron1", False, True)
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - Ranking Colocaciones?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Ranking Colocaciones", "Patron5", False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Ranking Colocaciones", "Patron5", False, True)
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - Ranking Contingente?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Ranking Contingente", "Patron5", False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Ranking Contingente", "Patron5", False, True)
                 End If
 
             End If
@@ -426,7 +426,7 @@ Module AA_ProcedimientosPrincipales
                 registroEjecucion000_00("SE EJECUTARA LA SECCION: OPERACIONES INTERBANCARIAS")
                 registroEjecucion000_00("####################################################################################")
 
-                cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Operaciones Interbancarias", "Patron5", False, True)
+                cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Operaciones Interbancarias", "Patron5", False, True)
 
             End If
 
@@ -453,7 +453,7 @@ Module AA_ProcedimientosPrincipales
                 registroEjecucion000_00("SE EJECUTARA LA SECCION: ESTADOS FINANCIEROS DESAGREGADOS")
                 registroEjecucion000_00("####################################################################################")
 
-                cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Estados Financieros Desagregados", "Patron3", False, True)
+                cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Estados Financieros Desagregados", "Patron3", False, True)
 
             End If
 
@@ -473,7 +473,7 @@ Module AA_ProcedimientosPrincipales
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "PAFs_x_Depto", "Patron1", False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "PAFs_x_Depto", "Patron1", False, True)
                 End If
 
 
@@ -481,7 +481,7 @@ Module AA_ProcedimientosPrincipales
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Agencias", "Patron1", False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Agencias", "Patron1", False, True)
                 End If
 
             End If
@@ -518,7 +518,7 @@ Module AA_ProcedimientosPrincipales
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Estados Financieros", "Patron1", False, False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Estados Financieros", "Patron1", False, False, True)
                 End If
 
                 '### ESTADOS FINANCIEROS POR MONEDAS
@@ -526,7 +526,7 @@ Module AA_ProcedimientosPrincipales
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Estados Financieros Moneda", "Patron1", False, False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Estados Financieros Moneda", "Patron1", False, False, True)
                 End If
 
             End If
@@ -547,21 +547,21 @@ Module AA_ProcedimientosPrincipales
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de indicadores financieros - Calificacion de cartera?")
                 ejecSec = UCase(Console.ReadLine())
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Calificacion Cartera", "Patron2", False, False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Calificacion Cartera", "Patron2", False, False, True)
                 End If
 
                 '### INDICADORES FINANCIEROS
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de indicadores financieros - indicadores financieros?")
                 ejecSec = UCase(Console.ReadLine())
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Indicadores Financieros", "Patron1", False, False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Indicadores Financieros", "Patron1", False, False, True)
                 End If
 
                 '### PONDERACION DE ACTIVOS
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de indicadores financieros - ponderacion de activos?")
                 ejecSec = UCase(Console.ReadLine())
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Ponderacion Activos", "Patron2", False, False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Ponderacion Activos", "Patron2", False, False, True)
                 End If
 
             End If
@@ -582,42 +582,42 @@ Module AA_ProcedimientosPrincipales
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Ranking Depositos Publico", "Patron5", False, False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Ranking Depositos Publico", "Patron5", False, False, True)
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - Ranking Depositos?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "RankingDepositos", "Patron5", False, False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "RankingDepositos", "Patron5", False, False, True)
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - encaje legal?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Encaje Legal", "Patron4", False, False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Encaje Legal", "Patron4", False, False, True)
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - EstratificacionDepDptoTotal?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "EstratificacionDepDptoTotal", "Patron1", False, False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "EstratificacionDepDptoTotal", "Patron1", False, False, True)
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - EstratificacionDepEntidadTotal?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "EstratificacionDepEntidadTotal", "Patron1", False, False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "EstratificacionDepEntidadTotal", "Patron1", False, False, True)
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - EstratificacionDepositos?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "EstratificacionDepositos", "Patron1", False, False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "EstratificacionDepositos", "Patron1", False, False, True)
                 End If
 
 
@@ -639,21 +639,21 @@ Module AA_ProcedimientosPrincipales
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Financiamientos Externos", "Patron1", False, False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Financiamientos Externos", "Patron1", False, False, True)
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - Ranking Colocaciones?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Ranking Colocaciones", "Patron5", False, False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Ranking Colocaciones", "Patron5", False, False, True)
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - Ranking Contingente?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Ranking Contingente", "Patron5", False, False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Ranking Contingente", "Patron5", False, False, True)
                 End If
 
             End If
@@ -671,7 +671,7 @@ Module AA_ProcedimientosPrincipales
                 registroEjecucion000_00("SE EJECUTARA LA SECCION: OPERACIONES INTERBANCARIAS")
                 registroEjecucion000_00("####################################################################################")
 
-                cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Operaciones Interbancarias", "Patron5", False, False, True)
+                cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Operaciones Interbancarias", "Patron5", False, False, True)
 
             End If
 
@@ -698,7 +698,7 @@ Module AA_ProcedimientosPrincipales
                 registroEjecucion000_00("SE EJECUTARA LA SECCION: ESTADOS FINANCIEROS DESAGREGADOS")
                 registroEjecucion000_00("####################################################################################")
 
-                cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Estados Financieros Desagregados", "Patron3", False, False, True)
+                cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Estados Financieros Desagregados", "Patron3", False, False, True)
 
             End If
 
@@ -718,7 +718,7 @@ Module AA_ProcedimientosPrincipales
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "PAFs_x_Depto", "Patron1", False, False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "PAFs_x_Depto", "Patron1", False, False, True)
                 End If
 
 
@@ -726,7 +726,7 @@ Module AA_ProcedimientosPrincipales
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Agencias", "Patron1", False, False, True)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Agencias", "Patron1", False, False, True)
                 End If
 
             End If
@@ -762,7 +762,7 @@ Module AA_ProcedimientosPrincipales
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Estados Financieros", "Patron1", True, False)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Estados Financieros", "Patron1", True, False)
                 End If
 
                 '### ESTADOS FINANCIEROS POR MONEDAS
@@ -770,7 +770,7 @@ Module AA_ProcedimientosPrincipales
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Estados Financieros Moneda", "Patron1", True, False)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Estados Financieros Moneda", "Patron1", True, False)
                 End If
 
             End If
@@ -791,21 +791,21 @@ Module AA_ProcedimientosPrincipales
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de indicadores financieros - Calificacion de cartera?")
                 ejecSec = UCase(Console.ReadLine())
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Calificacion Cartera", "Patron2", True, False)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Calificacion Cartera", "Patron2", True, False)
                 End If
 
                 '### INDICADORES FINANCIEROS
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de indicadores financieros - indicadores financieros?")
                 ejecSec = UCase(Console.ReadLine())
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Indicadores Financieros", "Patron1", True, False)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Indicadores Financieros", "Patron1", True, False)
                 End If
 
                 '### PONDERACION DE ACTIVOS
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de indicadores financieros - ponderacion de activos?")
                 ejecSec = UCase(Console.ReadLine())
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Ponderacion Activos", "Patron2", True, False)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Ponderacion Activos", "Patron2", True, False)
                 End If
 
             End If
@@ -826,42 +826,42 @@ Module AA_ProcedimientosPrincipales
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Ranking Depositos Publico", "Patron5", True, False)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Ranking Depositos Publico", "Patron5", True, False)
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - Ranking Depositos?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "RankingDepositos", "Patron5", True, False)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "RankingDepositos", "Patron5", True, False)
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - encaje legal?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Encaje Legal", "Patron4", True, False)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Encaje Legal", "Patron4", True, False)
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - EstratificacionDepDptoTotal?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "EstratificacionDepDptoTotal", "Patron1", True, False)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "EstratificacionDepDptoTotal", "Patron1", True, False)
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - EstratificacionDepEntidadTotal?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "EstratificacionDepEntidadTotal", "Patron1", True, False)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "EstratificacionDepEntidadTotal", "Patron1", True, False)
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - EstratificacionDepositos?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "EstratificacionDepositos", "Patron1", True, False)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "EstratificacionDepositos", "Patron1", True, False)
                 End If
 
 
@@ -883,21 +883,21 @@ Module AA_ProcedimientosPrincipales
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Financiamientos Externos", "Patron1", True, False)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Financiamientos Externos", "Patron1", True, False)
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - Ranking Colocaciones?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Ranking Colocaciones", "Patron5", True, False)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Ranking Colocaciones", "Patron5", True, False)
                 End If
 
                 registroEjecucion000_00("¿Deseas ejecutar la seccion de captaciones - Ranking Contingente?")
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Ranking Contingente", "Patron5", True, False)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Ranking Contingente", "Patron5", True, False)
                 End If
 
             End If
@@ -915,7 +915,7 @@ Module AA_ProcedimientosPrincipales
                 registroEjecucion000_00("SE EJECUTARA LA SECCION: OPERACIONES INTERBANCARIAS")
                 registroEjecucion000_00("####################################################################################")
 
-                cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Operaciones Interbancarias", "Patron5", True, False)
+                cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Operaciones Interbancarias", "Patron5", True, False)
 
             End If
 
@@ -942,7 +942,7 @@ Module AA_ProcedimientosPrincipales
                 registroEjecucion000_00("SE EJECUTARA LA SECCION: ESTADOS FINANCIEROS DESAGREGADOS")
                 registroEjecucion000_00("####################################################################################")
 
-                cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Estados Financieros Desagregados", "Patron3", True, False)
+                cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Estados Financieros Desagregados", "Patron3", True, False)
 
             End If
 
@@ -962,7 +962,7 @@ Module AA_ProcedimientosPrincipales
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "PAFs_x_Depto", "Patron1", True, False)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "PAFs_x_Depto", "Patron1", True, False)
                 End If
 
 
@@ -970,7 +970,7 @@ Module AA_ProcedimientosPrincipales
                 ejecSec = UCase(Console.ReadLine())
 
                 If ejecSec = "SI" Then
-                    cargarPatronDeEdicion(ExcelApp, gestionIncial, CLng(gestionActual), "Agencias", "Patron1", True, False)
+                    cargarPatronRutaArchivo(ExcelApp, gestionIncial, CLng(gestionActual), "Agencias", "Patron1", True, False)
                 End If
 
             End If

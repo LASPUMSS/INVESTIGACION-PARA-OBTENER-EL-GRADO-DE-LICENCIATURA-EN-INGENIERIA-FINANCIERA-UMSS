@@ -94,12 +94,9 @@ Module CC_ProcedimientosPatrones
 
         For gestion = gestionIn To gestionFn
 
-            If Not enumerar And Not unirHojas Then
-                registroEjecucion000_00($"¿Deseas ejecutar la gestion {gestion} de {categoriaHojas}?")
-                ejecSec = UCase(Console.ReadLine())
-            Else
-                ejecSec = "SI"
-            End If
+            registroEjecucion000_00($"¿Deseas ejecutar la gestion {gestion} de {categoriaHojas}?")
+            ejecSec = UCase(Console.ReadLine())
+
 
             If ejecSec = "SI" Then
 
@@ -165,6 +162,7 @@ Module CC_ProcedimientosPatrones
 
                                 If My.Computer.FileSystem.FileExists(ruta) Then
 
+                                    'EDITAR (TODOS LOS PARAMETROS DEBEN SER FALSO)
                                     If Not unirHojas And Not enumerar And Not igualarCampos Then
                                         registroEjecucion000_00($"El directorio a trabajar: {currentDirectory}")
                                         registroEjecucion000_00($"El directorio excel a trabajar: {ruta}")
@@ -174,6 +172,7 @@ Module CC_ProcedimientosPatrones
 
                                     End If
 
+                                    'IGUALAR CAMPOS
                                     If unirHojas And Not enumerar And Not igualarCampos Then
 
                                         registroEjecucion000_00($"El directorio a trabajar: {currentDirectory}")
@@ -183,6 +182,7 @@ Module CC_ProcedimientosPatrones
 
                                     End If
 
+                                    'ENUMERAR
                                     If enumerar And Not unirHojas And Not igualarCampos Then
                                         registroEjecucion000_00($"El directorio a trabajar: {currentDirectory}")
                                         registroEjecucion000_00($"El directorio excel a trabajar: {ruta}")
@@ -237,6 +237,7 @@ Module CC_ProcedimientosPatrones
         End If
 
         If unirHojas Then
+            ExcelWkSheetUnir.Rows(1).Delete()
             crearCSV(ExcelApp, ExcelWkBookUnir, rutaCSV)
             ExcelWkBookUnir.Save()
             ExcelWkBookUnir.Close()

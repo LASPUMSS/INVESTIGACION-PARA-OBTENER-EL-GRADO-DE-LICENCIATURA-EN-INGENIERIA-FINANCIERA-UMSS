@@ -112,7 +112,7 @@ ConsoleAppPrepararDatos
  Crea las carpetas necesarias para ejecutar el programa.
  </summary>
 </member>
-<member name="M:ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.cargarPatronDeEdicion(Microsoft.Office.Interop.Excel.Application,System.Int64,System.Int64,System.String,System.String,System.Boolean,System.Boolean,System.Boolean)">
+<member name="M:ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.cargarPatronRutaArchivo(Microsoft.Office.Interop.Excel.Application,System.Int64,System.Int64,System.String,System.String,System.Boolean,System.Boolean,System.Boolean)">
  <summary>
  <para>Este procedimiento contiene todos los patrones y si se decea editar, igualar campos, unir, enumerar</para>
  </summary>
