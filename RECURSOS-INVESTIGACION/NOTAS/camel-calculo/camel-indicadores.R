@@ -1,6 +1,5 @@
 library(openxlsx)
 library(dplyr)
-library(fpp2)
 
 dat <- read.xlsx('FUENTES-DE-DATOS\\ASFI\\ConsoleAppPrepararDatos\\bin\\Debug\\DATOS_ASFI\\BBDD_ESTADOS_FINANCIEROS.xlsx')
 
@@ -24,6 +23,7 @@ dat$indCap_CACCM <- INDICADORES_CAMEL$indCap_CACCM(cartVnc = dat$ACTIVO_CARTERA_
 
 
 INDICADORES_CAMEL <- list()
+
 ######################################################
 #### INDICADORES DE CAPITAL
 ######################################################
@@ -40,21 +40,87 @@ INDICADORES_CAMEL$indCap_CACCM <- function(cartVnc=NA, cartEjc=NA, prevCart=NA, 
     return(result)
 }
 
-
-
-
-######################################################
-tsDat <- ts(matrix(0, nrow=(2022-2021+1)*12, ncol=length(unique(dat$TIPO_DE_ENTIDAD))), 
-            start=2021, frequency=12)
-
-for (i in 1:length(unique(dat$TIPO_DE_ENTIDAD))) {
-    
-    tipoEnt <- as.character(unique(dat$TIPO_DE_ENTIDAD)[i])
-    colnames(tsDat)[i] <- tipoEnt
-    x <- dat[dat$TIPO_DE_ENTIDAD==tipoEnt,][order(dat[dat$TIPO_DE_ENTIDAD==tipoEnt,'FECHA']),'ACTIVO']
-    x <- sapply(x, as.numeric)
-    tsDat[,i] <- x
+# Coeficiente de cobertura patrimonial
+INDICADORES_CAMEL$indCap_CACCM <- function(activo=NA,  contigente=NA, patrimonio=NA) {
+    result <- patrimonio/(activo-contigente)
+    return(result)
 }
 
-autoplot(tsDat[,-2])
+######################################################
+#### INDICADORES DE ACTIVO
+######################################################
+
+# Coeficiente de exposición de cartera
+INDICADORES_CAMEL$indAct_CEC <- function(cartVnc=NA, cartEjc=NA, cartVgt=NA) {
+    result <- (cartEjc+cartVnc)/(cartEjc+cartVnc+cartVgt)
+    return(result)
+}
+
+# Coeficiente de previsión de cartera 
+INDICADORES_CAMEL$indAct_CPC <- function(cartVnc=NA, cartEjc=NA, cartVgt=NA, prevCart=NA) {
+    result <- (prevCart)/(cartEjc+cartVnc+cartVgt)
+    return(result)
+}
+
+
+# Coeficiente de previsión de cartera en mora
+INDICADORES_CAMEL$indAct_CPCM <- function(cartVnc=NA, cartEjc=NA, prevCart=NA) {
+    result <- (prevCart)/(cartEjc+cartVnc)
+    return(result)
+}
+
+# Coeficiente de reposición de cartera
+INDICADORES_CAMEL$indAct_CRC <- function(cartVnc=NA, cartEjc=NA, cartVgt=NA, cartVncRep=NA, cartEjcRep=NA, cartVgtRep=NA) {
+    result <- (cartEjcRep+cartVncRep+cartVgtRep)/(cartEjc+cartVnc+cartVgt)
+    return(result)
+}
+
+######################################################
+#### INDICADORES DE ADMINISTRACION
+######################################################
+
+# Coeficiente de cobertura gastos administrativos 
+INDICADORES_CAMEL$indAdm_CCGA <- function(gastAdm=NA, activo=NA, contigente=NA) {
+    result <- (gastAdm)/(activo+contigente)
+    return(result)
+}
+
+# Coeficiente ácido de cobertura patrimonial
+INDICADORES_CAMEL$indAdm_CACGA <- function(gastAdm=NA, impuestos=NA, resulOp=NA) {
+    result <- (gastAdm - impuestos)/(resulOp)
+    return(result)
+}
+
+######################################################
+#### INDICADORES DE BENEFICIOS
+######################################################
+
+# Coeficiente de rendimiento sobre activos
+INDICADORES_CAMEL$indBenf_ROA <- function(ingNeto=NA, activo=NA, contigente=NA) {
+    result <- (ingNeto)/(activo+contigente)
+    return(result)
+}
+
+# Coeficiente de rendimiento sobre patrimonio
+INDICADORES_CAMEL$indBenf_ROE <- function(ingNeto=NA, patrimonio=NA) {
+    result <- (ingNeto)/(patrimonio)
+    return(result)
+}
+
+######################################################
+#### INDICADORES DE LIQUIDEZ
+######################################################
+
+# Coeficiente de capacidad de pago frente obligaciones a corto plazo
+INDICADORES_CAMEL$indLq_CCPCP <- function(disponibles=NA, invTemp=NA, pasivoCP=NA) {
+    result <- (disponibles+invTemp)/(pasivoCP)
+    return(result)
+}
+
+# Coeficiente ácido de capacidad de pago frente obligaciones a corto
+INDICADORES_CAMEL$indLq_CACPCP <- function(disponibles=NA, pasivoCP=NA) {
+    result <- (disponibles)/(pasivoCP)
+    return(result)
+}
+
 
