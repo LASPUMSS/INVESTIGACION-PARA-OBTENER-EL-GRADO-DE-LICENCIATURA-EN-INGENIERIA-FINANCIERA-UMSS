@@ -9,7 +9,7 @@ names(dat)
 dat <- dat %>% group_by(TIPO_DE_ENTIDAD, FECHA) %>% summarise_if(is.numeric, sum)
 dat <- dat[ , !(names(dat) %in% c('GESTION','MES','DIA'))]
 
-
+source('RECURSOS-INVESTIGACION\\NOTAS\\camel-calculo\\camel-indicadores-functions.R')
 datCamelInd <- data.frame(TIPO_DE_ENTIDAD=dat$TIPO_DE_ENTIDAD,FECHA=dat$FECHA)
 
 # Variables
@@ -105,3 +105,4 @@ datCamelInd$indLq_CCPCP <- INDICADORES_CAMEL$indLq_CCPCP(disponibles = disponibl
 
 datCamelInd$indLq_CACPCP <- INDICADORES_CAMEL$indLq_CACPCP(disponibles = disponibles,
                                                            pasivoCP = pasivoCP)
+
