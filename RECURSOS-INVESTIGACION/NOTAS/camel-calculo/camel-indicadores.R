@@ -10,20 +10,76 @@ dat <- dat %>% group_by(TIPO_DE_ENTIDAD, FECHA) %>% summarise_if(is.numeric, sum
 dat <- dat[ , !(names(dat) %in% c('GESTION','MES','DIA'))]
 
 
-dat$indCap_CCCM <- INDICADORES_CAMEL$indCap_CCCM(cartVnc = dat$ACTIVO_CARTERA_CARTERA_VENCIDA_TOTAL,
+datCamelInd <- data.frame(TIPO_DE_ENTIDAD=dat$TIPO_DE_ENTIDAD,FECHA=dat$FECHA)
+#### INDICADORES DE CAPITAL
+
+datCamelInd$indCap_CCCM <- INDICADORES_CAMEL$indCap_CCCM(cartVnc = dat$ACTIVO_CARTERA_CARTERA_VENCIDA_TOTAL,
                                                  cartEjc = dat$ACTIVO_CARTERA_CARTERA_EJECUCION_TOTAL,
                                                  prevCart = dat$ACTIVO_CARTERA_PREVISION_PARA_INCOBRABILIDAD_DE_CARTERA,
                                                  patrimonio = dat$PATRIMONIO)
 
-dat$indCap_CACCM <- INDICADORES_CAMEL$indCap_CACCM(cartVnc = dat$ACTIVO_CARTERA_CARTERA_VENCIDA_TOTAL,
+datCamelInd$indCap_CACCM <- INDICADORES_CAMEL$indCap_CACCM(cartVnc = dat$ACTIVO_CARTERA_CARTERA_VENCIDA_TOTAL,
                                                    cartEjc = dat$ACTIVO_CARTERA_CARTERA_EJECUCION_TOTAL,
                                                    prevCart = dat$ACTIVO_CARTERA_PREVISION_PARA_INCOBRABILIDAD_DE_CARTERA,
                                                    realizables = dat$ACTIVO_BIENES_REALIZABLES,
                                                    patrimonio = dat$PATRIMONIO)
 
+datCamelInd$indCap_CCP <- INDICADORES_CAMEL$indCap_CCP(activo = NA, 
+                                                       contigente = NA,
+                                                       patrimonio = NA)
+
+#### INDICADORES DE ACTIVO
+
+datCamelInd$indAct_CEC <- INDICADORES_CAMEL$indAct_CEC(cartVnc = NA,
+                                                   cartEjc = NA,
+                                                   cartVgt = NA)
+
+datCamelInd$indAct_CPC <- INDICADORES_CAMEL$indAct_CPC(cartVnc = NA,
+                                              cartEjc = NA,
+                                              cartVgt = NA,
+                                              prevCart = NA)
+
+datCamelInd$indAct_CPCM <- INDICADORES_CAMEL$indAct_CPCM(cartVnc = NA,
+                                               cartEjc = NA,
+                                               prevCart = NA)
+
+datCamelInd$indAct_CRC <- INDICADORES_CAMEL$indAct_CRC(cartVnc = NA,
+                                              cartEjc = NA,
+                                              cartVgt = NA,
+                                              cartVncRep = NA,
+                                              cartEjcRep = NA,
+                                              cartVgtRep = NA)
+
+#### INDICADORES DE ADMINISTRACION
+
+datCamelInd$indAdm_CCGA <- INDICADORES_CAMEL$indAdm_CCGA(gastAdm = NA,
+                                               activo = NA,
+                                               contigente = NA)
+
+datCamelInd$indAdm_CACGA <- INDICADORES_CAMEL$indAdm_CACGA(gastAdm = NA,
+                                                impuestos = NA,
+                                                resulOp = NA)
+
+#### INDICADORES DE BENEFICIOS
+
+datCamelInd$indBenf_ROA <- INDICADORES_CAMEL$indBenf_ROA(ingNeto = NA,
+                                               activo = NA,
+                                               contigente = NA)
+
+datCamelInd$indBenf_ROE <- INDICADORES_CAMEL$indBenf_ROE(ingNeto = NA,
+                                               patrimonio = NA)
+
+#### INDICADORES DE LIQUIDEZ
+
+datCamelInd$indLq_CCPCP <- INDICADORES_CAMEL$indLq_CCPCP(disponibles = NA,
+                                               invTemp = NA,
+                                               pasivoCP = NA)
+
+datCamelInd$indLq_CACPCP <- INDICADORES_CAMEL$indLq_CACPCP(disponibles = NA,
+                                                pasivoCP = NA)
+
 
 INDICADORES_CAMEL <- list()
-
 ######################################################
 #### INDICADORES DE CAPITAL
 ######################################################
@@ -41,7 +97,7 @@ INDICADORES_CAMEL$indCap_CACCM <- function(cartVnc=NA, cartEjc=NA, prevCart=NA, 
 }
 
 # Coeficiente de cobertura patrimonial
-INDICADORES_CAMEL$indCap_CACCM <- function(activo=NA,  contigente=NA, patrimonio=NA) {
+INDICADORES_CAMEL$indCap_CCP <- function(activo=NA,  contigente=NA, patrimonio=NA) {
     result <- patrimonio/(activo-contigente)
     return(result)
 }
