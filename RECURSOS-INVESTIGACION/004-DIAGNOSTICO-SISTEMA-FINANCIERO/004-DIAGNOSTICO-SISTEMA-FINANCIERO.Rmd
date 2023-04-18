@@ -2,11 +2,392 @@
 output: pdf_document
 ---
 
+<!-- LIBRERIAS NECESARIAS -->
+```{r}
+library(openxlsx)
+library(dplyr)
+library(fpp2)
+```
+
+<!-- FUNCIONES NECESARIAS -->
+
+
+```{r}
+INDICADORES_CAMEL <- list()
+######################################################
+#### INDICADORES CAMEL
+######################################################
+
+#### INDICADORES DE CAPITAL
+
+# Coeficiente De Cobertura De Cartera En Mora 
+INDICADORES_CAMEL$indCap_CCCM <- function(cartVnc=NA, cartEjc=NA, prevCart=NA, patrimonio=NA) {
+    result <- ((cartVnc+cartEjc)-abs(prevCart))/patrimonio
+    return(result)
+}
+
+# Coeficiente Ácido De Cobertura De Cartera En Mora
+INDICADORES_CAMEL$indCap_CACCM <- function(cartVnc=NA, cartEjc=NA, prevCart=NA, realizables=NA, patrimonio=NA) {
+    result <- ((cartVnc+cartEjc)-abs(prevCart)+realizables)/patrimonio
+    return(result)
+}
+
+# Coeficiente de cobertura patrimonial
+INDICADORES_CAMEL$indCap_CCP <- function(activo=NA,  contingente=NA, patrimonio=NA) {
+    result <- patrimonio/(activo-contingente)
+    return(result)
+}
+
+
+#### INDICADORES DE ACTIVO
+
+# Coeficiente de exposición de cartera
+INDICADORES_CAMEL$indAct_CEC <- function(cartVnc=NA, cartEjc=NA, cartVgt=NA) {
+    result <- (cartEjc+cartVnc)/(cartEjc+cartVnc+cartVgt)
+    return(result)
+}
+
+# Coeficiente de previsión de cartera 
+INDICADORES_CAMEL$indAct_CPC <- function(cartVnc=NA, cartEjc=NA, cartVgt=NA, prevCart=NA) {
+    result <- (abs(prevCart))/(cartEjc+cartVnc+cartVgt)
+    return(result)
+}
+
+
+# Coeficiente de previsión de cartera en mora
+INDICADORES_CAMEL$indAct_CPCM <- function(cartVnc=NA, cartEjc=NA, prevCart=NA) {
+    result <- (abs(prevCart))/(cartEjc+cartVnc)
+    return(result)
+}
+
+# Coeficiente de reposición de cartera
+INDICADORES_CAMEL$indAct_CRC <- function(cartVnc=NA, cartEjc=NA, cartVgt=NA, cartVncRep=NA, cartEjcRep=NA, cartVgtRep=NA) {
+    result <- (cartEjcRep+cartVncRep+cartVgtRep)/(cartEjc+cartVnc+cartVgt)
+    return(result)
+}
+
+
+#### INDICADORES DE ADMINISTRACION
+
+# Coeficiente de cobertura gastos administrativos 
+INDICADORES_CAMEL$indAdm_CCGA <- function(gastAdm=NA, activo=NA, contingente=NA) {
+    result <- (abs(gastAdm))/(activo+contingente)
+    return(result)
+}
+
+# Coeficiente ácido de cobertura patrimonial
+INDICADORES_CAMEL$indAdm_CACGA <- function(gastAdm=NA, impuestos=NA, resulOp=NA) {
+    result <- (abs(gastAdm) - abs(impuestos))/(resulOp)
+    return(result)
+}
+
+#### INDICADORES DE BENEFICIOS
+
+# Coeficiente de rendimiento sobre activos
+INDICADORES_CAMEL$indBenf_ROA <- function(ingNeto=NA, activo=NA, contingente=NA) {
+    result <- (ingNeto)/(activo+contingente)
+    return(result)
+}
+
+# Coeficiente de rendimiento sobre patrimonio
+INDICADORES_CAMEL$indBenf_ROE <- function(ingNeto=NA, patrimonio=NA) {
+    result <- (ingNeto)/(patrimonio)
+    return(result)
+}
+
+#### INDICADORES DE LIQUIDEZ
+
+# Coeficiente de capacidad de pago frente obligaciones a corto plazo
+INDICADORES_CAMEL$indLq_CCPCP <- function(disponibles=NA, invTemp=NA, pasivoCP=NA) {
+    result <- (disponibles+invTemp)/(pasivoCP)
+    return(result)
+}
+
+# Coeficiente ácido de capacidad de pago frente obligaciones a corto
+INDICADORES_CAMEL$indLq_CACPCP <- function(disponibles=NA, pasivoCP=NA) {
+    result <- (disponibles)/(pasivoCP)
+    return(result)
+}
+
+######################################################
+#### GRAFICO INDICADORES
+######################################################
+
+plotIndCamel <- function(id, dat) {
+    gestInc <- min(as.numeric(format(dat$FECHA, format='%Y')))
+    gestFn <- max(as.numeric(format(dat$FECHA, format='%Y')))
+    
+    tsDat <- ts(matrix(0, nrow=(gestFn-gestInc+1)*12, ncol=length(unique(dat$TIPO_DE_ENTIDAD))), 
+                start=gestInc, frequency=12)
+    
+    for (i in 1:length(unique(dat$TIPO_DE_ENTIDAD))) {
+        
+        tipoEnt <- as.character(unique(dat$TIPO_DE_ENTIDAD)[i])
+        colnames(tsDat)[i] <- tipoEnt
+        x <- dat[dat$TIPO_DE_ENTIDAD==tipoEnt,][order(dat[dat$TIPO_DE_ENTIDAD==tipoEnt,'FECHA']),id]
+        x <- sapply(x, as.numeric)
+        tsDat[,i] <- x
+    }
+    
+    return(tsDat)
+}
+
+```
+
+<!-- CALCULO DE INDICADORES -->
+```{r}
+dat <- read.xlsx('BBDD_ESTADOS_FINANCIEROS.xlsx')
+
+dat$FECHA <- convertToDate(dat$FECHA)
+
+dat <- dat %>% group_by(TIPO_DE_ENTIDAD, FECHA) %>% summarise_if(is.numeric, sum)
+dat <- dat[ , !(names(dat) %in% c('GESTION','MES','DIA'))]
+
+datCamelInd <- data.frame(TIPO_DE_ENTIDAD=dat$TIPO_DE_ENTIDAD,FECHA=dat$FECHA)
+
+# Variables
+
+cartVnc <- dat$ACTIVO_CARTERA_CARTERA_VENCIDA_TOTAL
+cartEjc <- dat$ACTIVO_CARTERA_CARTERA_EJECUCION_TOTAL
+cartVgt <- dat$ACTIVO_CARTERA_CARTERA_VIGENTE_TOTAL
+cartVncRep <- dat$ACTIVO_CARTERA_CARTERA_REPROGRAMADA_VENCIDA
+cartEjcRep <- dat$ACTIVO_CARTERA_CARTERA_REPROGRAMADA_EJECUCION
+cartVgtRep <- dat$ACTIVO_CARTERA_CARTERA_REPROGRAMADA_VIGENTE
+
+prevCart <- dat$ACTIVO_CARTERA_PREVISION_PARA_INCOBRABILIDAD_DE_CARTERA
+patrimonio <- dat$PATRIMONIO
+
+realizables = dat$ACTIVO_BIENES_REALIZABLES
+activo <- dat$ACTIVO
+contingente <- dat$CUENTAS_CONTINGENTES_DEUDORAS
+
+gastAdm <- dat$EERR_S2_GASTOS_DE_ADMINISTRACION
+impuestos <- dat$EERR_S2_IMPUESTOS
+resulOp <- dat$RESULTADO_DE_OPERACION_BRUTO
+
+ingNeto <- dat$EERR_S2_RESULTADO_NETO_DE_LA_GESTION
+
+disponibles <- dat$ACTIVO_DISPONIBILIDADES
+invTemp <- dat$ACTIVO_INVERSIONES_TEMPORARIAS
+
+pasivoCP <- dat$PASIVO # Revisar
+
+#### INDICADORES DE CAPITAL
+
+datCamelInd$indCap_CCCM <- INDICADORES_CAMEL$indCap_CCCM(cartVnc = cartVnc,
+                                                         cartEjc = cartEjc,
+                                                         prevCart = prevCart,
+                                                         patrimonio = patrimonio)
+
+datCamelInd$indCap_CACCM <- INDICADORES_CAMEL$indCap_CACCM(cartVnc = cartVnc,
+                                                           cartEjc = cartEjc,
+                                                           prevCart = prevCart,
+                                                           realizables = realizables,
+                                                           patrimonio = patrimonio)
+
+datCamelInd$indCap_CCP <- INDICADORES_CAMEL$indCap_CCP(activo = activo, 
+                                                       contingente = contingente,
+                                                       patrimonio = patrimonio)
+
+#### INDICADORES DE ACTIVO
+
+datCamelInd$indAct_CEC <- INDICADORES_CAMEL$indAct_CEC(cartVnc = cartVnc,
+                                                       cartEjc = cartVnc,
+                                                       cartVgt = cartVgt)
+
+datCamelInd$indAct_CPC <- INDICADORES_CAMEL$indAct_CPC(cartVnc = cartVnc,
+                                                       cartEjc = cartEjc,
+                                                       cartVgt = cartVgt,
+                                                       prevCart = prevCart)
+
+datCamelInd$indAct_CPCM <- INDICADORES_CAMEL$indAct_CPCM(cartVnc = cartVnc,
+                                                         cartEjc = cartEjc,
+                                                         prevCart = prevCart)
+
+datCamelInd$indAct_CRC <- INDICADORES_CAMEL$indAct_CRC(cartVnc = cartVnc,
+                                                       cartEjc = cartEjc,
+                                                       cartVgt = cartVgt,
+                                                       cartVncRep = cartVncRep,
+                                                       cartEjcRep = cartEjcRep,
+                                                       cartVgtRep = cartVgtRep)
+
+#### INDICADORES DE ADMINISTRACION
+
+datCamelInd$indAdm_CCGA <- INDICADORES_CAMEL$indAdm_CCGA(gastAdm = gastAdm,
+                                                         activo = activo,
+                                                         contingente = contingente)
+
+datCamelInd$indAdm_CACGA <- INDICADORES_CAMEL$indAdm_CACGA(gastAdm = gastAdm ,
+                                                           impuestos = impuestos,
+                                                           resulOp = resulOp)
+
+#### INDICADORES DE BENEFICIOS
+
+datCamelInd$indBenf_ROA <- INDICADORES_CAMEL$indBenf_ROA(ingNeto = ingNeto,
+                                                         activo = activo,
+                                                         contingente = contingente)
+
+datCamelInd$indBenf_ROE <- INDICADORES_CAMEL$indBenf_ROE(ingNeto = ingNeto,
+                                                         patrimonio = patrimonio)
+
+#### INDICADORES DE LIQUIDEZ
+
+datCamelInd$indLq_CCPCP <- INDICADORES_CAMEL$indLq_CCPCP(disponibles = disponibles,
+                                                         invTemp = invTemp,
+                                                         pasivoCP = pasivoCP)
+
+datCamelInd$indLq_CACPCP <- INDICADORES_CAMEL$indLq_CACPCP(disponibles = disponibles,
+                                                           pasivoCP = pasivoCP)
+
+```
+
 # Diagnóstico de las instituciones financieras del sistema financiero de Bolivia
 
 La metodología a aplicar para realizar diagnóstico de las instituciones financieras del sistema financiero de Bolivia sera el denominado como CAMEL, que responde a la evaluación solidez financiera de las instituciones.
 
 ## Calculo de indicadores 
+
+### Capital
+
+#### Coeficiente De Cobertura De Cartera En Mora
+
+```{r, out.width='100%'}
+id <- 'indCap_CCCM'
+tsDat <- plotIndCamel(id, datCamelInd)
+autoplot(tsDat, xlab = 'Tiempo', ylab = id) + 
+    theme(legend.position="bottom", legend.text=element_text(size=8)) + 
+    guides(color=guide_legend(ncol=2, title=""))
+```
+
+#### Coeficiente Acido De Cobertura De Cartera En Mora
+
+```{r, out.width='100%'}
+id <- 'indCap_CACCM'
+tsDat <- plotIndCamel(id, datCamelInd)
+autoplot(tsDat, xlab = 'Tiempo', ylab = id) + 
+    theme(legend.position="bottom", legend.text=element_text(size=8)) + 
+    guides(color=guide_legend(ncol=2, title=""))
+```
+
+#### Coeficiente de cobertura patrimonial 
+
+```{r, out.width='100%'}
+id <- 'indCap_CCP'
+tsDat <- plotIndCamel(id, datCamelInd)
+autoplot(tsDat, xlab = 'Tiempo', ylab = id) + 
+    theme(legend.position="bottom", legend.text=element_text(size=8)) + 
+    guides(color=guide_legend(ncol=2, title=""))
+```
+
+### Activo
+
+#### Coeficiente de exposición de cartera
+
+```{r, out.width='100%'}
+id <- 'indAct_CEC'
+tsDat <- plotIndCamel(id, datCamelInd)
+autoplot(tsDat, xlab = 'Tiempo', ylab = id) + 
+    theme(legend.position="bottom", legend.text=element_text(size=8)) + 
+    guides(color=guide_legend(ncol=2, title=""))
+```
+
+#### Coeficiente de previsión de cartera
+
+```{r, out.width='100%'}
+id <- 'indAct_CPC'
+tsDat <- plotIndCamel(id, datCamelInd)
+autoplot(tsDat, xlab = 'Tiempo', ylab = id) + 
+    theme(legend.position="bottom", legend.text=element_text(size=8)) + 
+    guides(color=guide_legend(ncol=2, title=""))
+```
+
+#### Coeficiente de previsión de cartera en mora
+
+```{r, out.width='100%'}
+id <- 'indAct_CPCM'
+tsDat <- plotIndCamel(id, datCamelInd)
+autoplot(tsDat, xlab = 'Tiempo', ylab = id) + 
+    theme(legend.position="bottom", legend.text=element_text(size=8)) + 
+    guides(color=guide_legend(ncol=2, title=""))
+```
+
+#### Coeficiente de reposición de cartera
+
+```{r, out.width='100%'}
+id <- 'indAct_CRC'
+tsDat <- plotIndCamel(id, datCamelInd)
+autoplot(tsDat, xlab = 'Tiempo', ylab = id) + 
+    theme(legend.position="bottom", legend.text=element_text(size=8)) + 
+    guides(color=guide_legend(ncol=2, title=""))
+```
+
+### Administración
+
+#### Coeficiente de cobertura gastos administrativos
+
+```{r, out.width='100%'}
+id <- 'indAdm_CCGA'
+tsDat <- plotIndCamel(id, datCamelInd)
+autoplot(tsDat, xlab = 'Tiempo', ylab = id) + 
+    theme(legend.position="bottom", legend.text=element_text(size=8)) + 
+    guides(color=guide_legend(ncol=2, title=""))
+```
+
+#### Coeficiente acido de cobertura patrimonial
+
+```{r, out.width='100%'}
+id <- 'indAdm_CACGA'
+tsDat <- plotIndCamel(id, datCamelInd)
+autoplot(tsDat, xlab = 'Tiempo', ylab = id) + 
+    theme(legend.position="bottom", legend.text=element_text(size=8)) + 
+    guides(color=guide_legend(ncol=2, title=""))
+```
+
+### Beneficios
+
+#### Coeficiente de rendimiento sobre activos 
+
+```{r, out.width='100%'}
+id <- 'indBenf_ROA'
+tsDat <- plotIndCamel(id, datCamelInd)
+autoplot(tsDat, xlab = 'Tiempo', ylab = id) + 
+    theme(legend.position="bottom", legend.text=element_text(size=8)) + 
+    guides(color=guide_legend(ncol=2, title=""))
+```
+
+#### Coeficiente de rendimiento sobre patrimonio
+
+```{r, out.width='100%'}
+id <- 'indBenf_ROE'
+tsDat <- plotIndCamel(id, datCamelInd)
+autoplot(tsDat, xlab = 'Tiempo', ylab = id) + 
+    theme(legend.position="bottom", legend.text=element_text(size=8)) + 
+    guides(color=guide_legend(ncol=2, title=""))
+```
+
+
+### Liquidez
+
+####  Coeficiente de capacidad de pago frente obligaciones a corto plazo
+
+```{r, out.width='100%'}
+id <- 'indLq_CCPCP'
+tsDat <- plotIndCamel(id, datCamelInd)
+autoplot(tsDat, xlab = 'Tiempo', ylab = id) + 
+    theme(legend.position="bottom", legend.text=element_text(size=8)) + 
+    guides(color=guide_legend(ncol=2, title=""))
+```
+
+#### Coeficiente acido de capacidad de pago frente obligaciones a corto plazo 
+
+```{r, out.width='100%'}
+id <- 'indLq_CACPCP'
+tsDat <- plotIndCamel(id, datCamelInd)
+autoplot(tsDat, xlab = 'Tiempo', ylab = id) + 
+    theme(legend.position="bottom", legend.text=element_text(size=8)) + 
+    guides(color=guide_legend(ncol=2, title=""))
+```
+
 
 ## Definición de rangos y limites de los indicadores
 
