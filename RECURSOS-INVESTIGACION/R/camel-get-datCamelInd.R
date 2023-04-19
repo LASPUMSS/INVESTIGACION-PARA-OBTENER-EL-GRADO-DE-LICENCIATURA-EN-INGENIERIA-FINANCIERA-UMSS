@@ -103,11 +103,11 @@ getDatCamelInd <- function(variables) {
     
     #### INDICADORES DE LIQUIDEZ
     
-    datCamelInd$indLq_CCPCP <- INDICADORES_CAMEL$indLq_CCPCP(disponibles = disponibles,
+    datCamelInd$indLq_CCPP <- INDICADORES_CAMEL$indLq_CCPP(disponibles = disponibles,
                                                              invTemp = invTemp,
                                                              pasivoCP = pasivoCP)
     
-    datCamelInd$indLq_CACPCP <- INDICADORES_CAMEL$indLq_CACPCP(disponibles = disponibles,
+    datCamelInd$indLq_CACPP <- INDICADORES_CAMEL$indLq_CACPP(disponibles = disponibles,
                                                                pasivoCP = pasivoCP)
     
     

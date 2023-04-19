@@ -110,15 +110,15 @@ plotIndCamel(id, datCamelInd)
 
 ####  Coeficiente de capacidad de pago frente obligaciones a corto plazo
 
-```{r, out.width='100%', fig.cap='Coeficiente de capacidad de pago frente obligaciones a corto plazo'}
-id <- 'indLq_CCPCP'
+```{r, out.width='100%', fig.cap='Coeficiente de capacidad de pago frente a pasivos'}
+id <- 'indLq_CCPP'
 plotIndCamel(id, datCamelInd)
 ```
 
 #### Coeficiente acido de capacidad de pago frente obligaciones a corto plazo 
 
-```{r, out.width='100%', fig.cap='Coeficiente acido de capacidad de pago frente obligaciones a corto plazo '}
-id <- 'indLq_CACPCP'
+```{r, out.width='100%', fig.cap='Coeficiente acido de capacidad de pago frente a pasivos'}
+id <- 'indLq_CACPP'
 plotIndCamel(id, datCamelInd)
 ```
 

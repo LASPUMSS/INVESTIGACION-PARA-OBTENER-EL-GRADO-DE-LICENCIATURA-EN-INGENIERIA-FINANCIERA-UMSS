@@ -195,17 +195,17 @@ $$ \frac{ \text{Resultado Neto De La Gestión} }{ \text{Patrimonio} } $$
 
 #### Liquidez
 
-##### Coeficiente de capacidad de pago frente obligaciones a corto plazo 
+##### Coeficiente de capacidad de pago frente a pasivos
 
 El coeficiente busca medir si la institución puede hacer frente a sus obligaciones con los activos disponibles y inversiones temporales.
 
-$$ \frac{ \text{Disponibles + Inversiones Temporarias} }{ \text{Obligaciones A Corto Plazo} } $$
+$$ \frac{ \text{Disponibles + Inversiones Temporarias} }{ \text{Pasivos} } $$
 
-##### Coeficiente acido de capacidad de pago frente obligaciones a corto plazo
+##### Coeficiente acido de capacidad de pago frente a pasivos
 
 El coeficiente busca medir si la institución puede hacer frente a sus obligaciones con los activos disponibles.
 
-$$ \frac{ \text{Disponibles} }{ \text{Obligaciones A Corto Plazo} } $$
+$$ \frac{ \text{Disponibles} }{ \text{Pasivos} } $$
 
 ### Definición de rangos y limites de los indicadores
 

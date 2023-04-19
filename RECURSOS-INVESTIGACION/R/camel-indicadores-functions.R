@@ -86,14 +86,14 @@ INDICADORES_CAMEL$indBenf_ROE <- function(ingNeto=NA, patrimonio=NA) {
 #### INDICADORES DE LIQUIDEZ
 ######################################################
 
-# Coeficiente de capacidad de pago frente obligaciones a corto plazo
-INDICADORES_CAMEL$indLq_CCPCP <- function(disponibles=NA, invTemp=NA, pasivoCP=NA) {
+# Coeficiente de capacidad de pago frente a pasivos
+INDICADORES_CAMEL$indLq_CCPP <- function(disponibles=NA, invTemp=NA, pasivoCP=NA) {
     result <- (disponibles+invTemp)/(pasivoCP)
     return(result)
 }
 
-# Coeficiente ácido de capacidad de pago frente obligaciones a corto
-INDICADORES_CAMEL$indLq_CACPCP <- function(disponibles=NA, pasivoCP=NA) {
+# Coeficiente ácido de capacidad de pago frente a pasivos
+INDICADORES_CAMEL$indLq_CACPP <- function(disponibles=NA, pasivoCP=NA) {
     result <- (disponibles)/(pasivoCP)
     return(result)
 }
