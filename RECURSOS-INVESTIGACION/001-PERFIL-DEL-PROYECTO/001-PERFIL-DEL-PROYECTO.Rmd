@@ -19,9 +19,7 @@ Una de las alternativas de tratamiento de esta información que ofrece el sistem
 
 ## Formulación del problema central
 
-¿Sera que con la aplicación del método de redes neuronales, se obtendrá información adecuada con mayor aproximación a la situación económica-financiera observada de la institución financiera correspondiente?
-
-
+¿Sera que con la aplicación del método de redes neuronales, se obtendrá información adecuada con mayor aproximación a la situación económica-financiera de la institución financiera analizada?
 
 ## Justificación
 
@@ -54,15 +52,14 @@ Entre los objetivos propuestos para viabilizar el tema de investigación y la re
 
 Proporcionar información financiera adecuada con mayor aproximación a la situación económica-financiera observada, mediante la determinación de pronósticos de estados financieros por el método de redes neuronales artificiales.
 
-### Especifico 
+### Específico 
 
 - Diagnostico de la situación actual del sistema financiero de Bolivia.
 - Definir la arquitectura y entrenamiento del modelo de red de neuronas artificiales.
 - Proyección y simulación de estados financieros.
 - Evaluación financiera sobre estados financieros proyectados-simulados.
 
-
-## Hipotesis
+## Hipótesis
 
 Con la determinación de proyecciones de estados financieros por el método de redes neuronales, de entidades financieras de Bolivia, se logrará proyectar información con mayor aproximación a la situación económica-financiera observada de la institución correspondiente.
 
@@ -89,11 +86,12 @@ También cabe especificar que los procedimientos a ser aplicados en el informe f
 
 ### Tecnicas de investigación
 
-En primera instancia se realizara la identificación del problema de investigación que ya esta establecida en el proyecto de grado, donde se identificará la arquitectura de la red neuronal, que está compuesta de las funciones de activación, y ajuste de los datos en formato de tablas. Posteriormente se realizará la etapa de recolección de datos e información del sistema financiero correspondiente a las fuentes secundarias. Para que en consecuencia con la obtención de la información se realizara el ordenamiento de dicha información recopilada para su procesamiento que permitirá dar un análisis concreto y preciso y a la vez realizar su sistematización para la obtención del diagnóstico.
+En primera instancia se realizará la identificación del problema de investigación que ya esta establecida en el proyecto de grado, donde se identificará la arquitectura de la red neuronal, que está compuesta de las funciones de activación, y ajuste de los datos en formato de tablas. Posteriormente se realizará la etapa de recolección de datos e información del sistema financiero correspondiente a las fuentes secundarias. Para que en consecuencia con la obtención de la información se realizará el ordenamiento de dicha información recopilada para su procesamiento que permitirá dar un análisis concreto y preciso y a la vez realizar su sistematización para la obtención del diagnóstico.
 
-\newpage
+
 \input{RECURSOS-INVESTIGACION/001-PERFIL-DEL-PROYECTO/tabla-marco-metodico}
 
+\newpage
 ## Fuentes de información
 
 Se recurrirá a las fuentes de información siguientes:

@@ -2,23 +2,26 @@
 output: pdf_document
 ---
 
-<!-- FUNCIONES NECESARIAS -->
+<!-- FUNCIONES NECESARIAS 
 ```{r}
 source('../R/camel-get-datCamelInd.R')
 library(knitr)
 library(kableExtra)
 library(dplyr)
 ```
+-->
 
-# Anexos
+\section*{Anexos}
+\addcontentsline{toc}{section}{\protect\numberline{}Anexos}
 
-## Anexo 1 - Permiso uso de datos de entidades financiera de Bolivia publicado por la ASFI
+\subsection*{Anexo 1 - Permiso uso de datos de entidades financiera de Bolivia publicado por la ASFI}
 
 
 
 \newpage
-## Anexo 2 - Indicadores CAMEL calculados
+\subsection*{Anexo 2 - Indicadores CAMEL calculados}
 
+<!--
 ```{r}
 datCamelInd <- getDatCamelInd()
 
@@ -26,4 +29,5 @@ head(datCamelInd) %>%
     kable(caption = "Indicadores CAMEL", digits = 6)  %>%
           kable_styling(latex_options = c("scale_down",'hold_position'))
 ```
+-->
 

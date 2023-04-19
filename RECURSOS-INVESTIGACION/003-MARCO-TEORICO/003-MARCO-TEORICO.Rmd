@@ -2,12 +2,9 @@
 output: pdf_document
 ---
 
-<!-- LIBRERIAS R NECESARIAS -->
+<!-- FUNCIONES NECESARIAS -->
 ```{r}
-library(ggplot2)
-library(dplyr)
-library(patchwork)
-library(knitr)
+source('../R/plot-activation-function.R')
 ```
 
 # Marco teorico
@@ -116,7 +113,7 @@ Los mismos que se describen a continuación:
 
 Está definido cómo la relación porcentual entre el capital regulatorio y los activos y contingentes ponderados en función de factores de riesgo, incluyendo a los riesgos de crédito, de mercado y operativo, utilizando los procedimientos establecidos en la normativa emitida por la Autoridad de Supervisión del Sistema Financiero - ASFI.
 
-##### Coeficiente De Covertura De Cartera En Mora
+##### Coeficiente de cobertura de cartera en mora
 
 Este indicador mide o tiene objeto responder si el patrimonio de la institución cubre en tanto por ciento:
 - Los créditos cuyo capital, cuotas de amortización o intereses no hayan sido cancelados íntegramente a la entidad hasta los 30 días contados desde la fecha de vencimiento. 
@@ -125,7 +122,7 @@ Este indicador mide o tiene objeto responder si el patrimonio de la institución
 
 $$ \frac{ \text{Cartera En Mora - Previsión Cartera} }{\text{Patrimonio}}$$
 
-##### Coeficiente Acido De Covertura De Cartera En Mora
+##### Coeficiente acido de cobertura de cartera en mora
 
 Este indicador mide o tiene objeto responder si el patrimonio de la institución cubre en tanto por ciento:
 - Los créditos cuyo capital, cuotas de amortización o intereses no hayan sido cancelados íntegramente a la entidad hasta los 30 días contados desde la fecha de vencimiento. 
@@ -347,125 +344,10 @@ $$ f(Z)_{j} = \frac{ e^{Z_{J}} }{ \sum_{k=1}^{K} e^{Z_{K}} } $$
 
 <!-- Gráficos de funciones activación -->
 
-```{r, fig.cap='Funciones de activación', out.height='70%', out.width='100%'}
-######################################################
-### Función de escalonada
-######################################################
-
-escalonada <- function(x) { ifelse(x<0,0,1) }
-
-x <- seq(-6,6,0.1)
-y <- escalonada(x)    
-
-plotEscalonada <-  
-    data.frame(x=x,y=y) %>% 
-    ggplot(aes(x=x,y=y)) + 
-    geom_line() + 
-    xlab('X') + 
-    ylab('Y') +
-    ggtitle('Función escalonada')
-
-######################################################
-### Función de activación sigmoide
-######################################################
-
-sigmoide <- function(x) {(1)/(1+exp(-x))}
-x <- seq(-6,6,0.1)
-y <- sigmoide(x)    
-
-plotSigmoide <- 
-    data.frame(x=x,y=y) %>% 
-    ggplot(aes(x=x,y=y)) + 
-    geom_line() + 
-    xlab('X') + 
-    ylab('Y') + 
-    ggtitle('Función sigmoide')
-
-
-######################################################
-### Función de activación tangente hiperbolica
-######################################################
-
-hiperbolica <- function(x) { (((2)/(1+exp(-2*x)))-1) }
-x <- seq(-6,6,0.1)
-y <- hiperbolica(x)    
-
-plotHiperbolica <- 
-    data.frame(x=x,y=y) %>% 
-    ggplot(aes(x=x,y=y)) + 
-    geom_line() + 
-    xlab('X') + 
-    ylab('Y') + 
-    ggtitle('Función tangente hiperbolica')
-
-######################################################
-### Función de activación ReLU – Rectified Lineal Unit
-######################################################
-
-relu <- function(x) { ifelse(x<0,0,x) }
-
-x <- seq(-6,6,0.1)
-y <- relu(x)    
-
-plotRelu <-  
-    data.frame(x=x,y=y) %>% 
-    ggplot(aes(x=x,y=y)) + 
-    geom_line() + 
-    xlab('X') + 
-    ylab('Y') +
-    ggtitle('Función ReLu')
-
-######################################################
-### Función de activación Leaky ReLU 
-######################################################
-
-leakyRelu <- function(x,a) { ifelse(x<0,0,x*a) }
-
-x <- seq(-6,6,0.1)
-y <- leakyRelu(x,0.01)    
-
-plotLeakyRelu <-  
-    data.frame(x=x,y=y) %>% 
-    ggplot(aes(x=x,y=y)) + 
-    geom_line() + 
-    xlab('X') + 
-    ylab('Y') +
-    ggtitle('Función Leaky relu')
-
-######################################################
-### Función de activación Softmax
-######################################################
-
-softmax <- function(par){
-    n.par <- length(par)
-    par1 <- sort(par, decreasing = TRUE)
-    Lk <- par1[1]
-    for (k in 1:(n.par-1)) {
-        Lk <- max(par1[k+1], Lk) + log1p(exp(-abs(par1[k+1] - Lk))) 
-    }
-    val <- exp(par - Lk)
-    return(val)
-}
-
-x <- seq(-6,6,0.1)
-y <- softmax(x)    
-
-plotSoftmax <-  
-    data.frame(x=x,y=y) %>% 
-    ggplot(aes(x=x,y=y)) + 
-    geom_line() + 
-    xlab('X') + 
-    ylab('Y') +
-    ggtitle('Función Softmax')
-
-######################################################
-### GRAFICO UNIDO
-######################################################
-(plotEscalonada+plotSigmoide)/(plotHiperbolica+plotRelu)/(plotLeakyRelu +plotSoftmax)
-
+```{r, fig.cap='Funciones de activación', out.height='40%', out.width='100%'}
+plotActFuntMarcTeor()
 ```
 
-\newpage
 ### Propagación hacia adelanate y hacia atras
 
 #### Propagación hacia adelante

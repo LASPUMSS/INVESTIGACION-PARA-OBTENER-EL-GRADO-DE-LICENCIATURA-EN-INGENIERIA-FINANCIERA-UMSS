@@ -2,6 +2,7 @@
 output: pdf_document
 ---
 
-# Bibliografia consultada
+\section*{Bibliografia consultada}
+\addcontentsline{toc}{section}{\protect\numberline{}Bibliografia consultada}
 
 <div id="refs"></div>

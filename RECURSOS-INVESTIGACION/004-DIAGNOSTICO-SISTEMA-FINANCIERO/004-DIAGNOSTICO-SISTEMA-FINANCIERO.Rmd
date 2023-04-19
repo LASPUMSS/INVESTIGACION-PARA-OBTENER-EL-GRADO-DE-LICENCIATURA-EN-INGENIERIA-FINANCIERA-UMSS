@@ -21,6 +21,7 @@ La metodología a aplicar para realizar diagnóstico de las instituciones financ
 
 ### Capital
 
+
 #### Coeficiente De Cobertura De Cartera En Mora
 
 ```{r, out.width='100%', fig.cap='Coeficiente De Cobertura De Cartera En Mora'}
@@ -127,8 +128,3 @@ plotIndCamel(id, datCamelInd)
 ## Definición de la ponderación de elementos CAMEL
 
 ## Calificación CAMEL
-
-
-
-
-

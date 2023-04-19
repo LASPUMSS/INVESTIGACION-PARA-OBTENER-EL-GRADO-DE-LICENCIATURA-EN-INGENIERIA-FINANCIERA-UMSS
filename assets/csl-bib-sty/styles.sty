@@ -3,6 +3,9 @@
 \usepackage[spanish]{babel}
 \usepackage{graphicx}
 \usepackage{copyrightbox}
+\usepackage{titlesec}
+\usepackage{float}
+\floatplacement{figure}{H}
 
 \usepackage{multirow}
 \usepackage{rotating} % Para girar tablas
@@ -10,7 +13,7 @@
 \addto\captionsspanish{
 \renewcommand{\contentsname}{Indice capitular}
 \renewcommand{\partname}{Parte}
-\renewcommand{\chaptername}{Tema}
+\renewcommand{\chaptername}{Capítulo}
 \renewcommand{\listfigurename}{Lista de figuras}
 \renewcommand{\listtablename}{Lista de tablas}
 \renewcommand{\figurename}{Figura}
@@ -18,3 +21,5 @@
 }
 
 \renewcommand{\baselinestretch}{1.5}
+
+\titleformat{\section}{\bfseries\Large}{Capitulo \thesection.}{0.5em}{\centering}
