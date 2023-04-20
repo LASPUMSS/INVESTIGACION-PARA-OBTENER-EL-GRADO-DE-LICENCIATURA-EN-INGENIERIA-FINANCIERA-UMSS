@@ -1,13 +1,10 @@
 ---
 output: pdf_document
 ---
-
 <!-- FUNCIONES NECESARIAS -->
 ```{r}
 source('../R/camel-norm-getCamelInd.R')
-library(knitr)
-library(kableExtra)
-library(dplyr)
+source('../R/camel-render-table-datCamelIndNorm.R')
 ```
 
 
@@ -26,19 +23,37 @@ datCamelIndNorm <- getDatCamelIndNorm(gestionInc = 2021)
 ```
 
 
-### Capital {-}
+\subsubsection*{Capital}
 
 ```{r}
-cols <- 
-    grepl('indCap', names(datCamelIndNorm)) + 
-    grepl('FECHA', names(datCamelIndNorm)) + 
-    grepl('TIPO_DE_ENTIDAD', names(datCamelIndNorm))
+id <- 'indCap'
+getTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de capital CAMEL')
+```
 
-dat <- datCamelIndNorm[,as.logical(cols)]
 
-tail(dat, n = 20) %>% 
-    kable(caption = "Indicadores de capital CAMEL", digits = 6) %>%
-          kable_styling(latex_options = c("scale_down",'hold_position'))
+\newpage
+\subsubsection*{Activos}
+
+```{r}
+id <- 'indAct'
+getTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de activos CAMEL')
+```
+
+\newpage
+\subsubsection*{Administración y rentabilidad}
+
+```{r}
+id1 <- 'indAdm'
+id2 <- 'indBenf'
+getTableCamelIndNorm2(id1, id2 , datCamelIndNorm, 'Indicadores de administración y rentabilidad CAMEL')
+```
+
+\newpage
+\subsubsection*{Liquidez}
+
+```{r}
+id <- 'indLq'
+getTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de liquidez CAMEL')
 ```
 
 

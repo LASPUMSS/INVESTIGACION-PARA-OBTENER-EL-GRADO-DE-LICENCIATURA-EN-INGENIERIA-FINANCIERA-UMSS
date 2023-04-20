@@ -13,6 +13,7 @@ bibliography: assets/csl-bib-sty/references.bib
 nocite: '@*'
 ---
 
+<!-- Configuración CHUNKS -->
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE,
                       message = FALSE,
@@ -22,7 +23,6 @@ knitr::opts_chunk$set(echo = FALSE,
                       out.height='60%',
                       out.width='100%')
 ```
-
 
 \includepdf[pages=-]{RECURSOS-INVESTIGACION/CARATULA-TESIS/CARATULA-TESIS}
 
