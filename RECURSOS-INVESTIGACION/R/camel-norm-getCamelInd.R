@@ -4,7 +4,7 @@ datCamelInd$ID <- paste0(datCamelInd$TIPO_DE_ENTIDAD,
                          format(datCamelInd$FECHA, format='%Y'),
                          format(datCamelInd$FECHA, format='%m'))
 
-gestionInc <- 2020
+gestionInc <- 2019
 gestionFn <- 2022
 
 # Numero de filas que debera tener el data.frame 
@@ -68,21 +68,7 @@ datCamelIndNorm$ID <- paste0(datCamelIndNorm$TIPO_DE_ENTIDAD,
                          format(datCamelIndNorm$FECHA, format='%Y'),
                          format(datCamelIndNorm$FECHA, format='%m'))
 
-for (i in 1:nrow(datCamelInd)) {
-    
-    
-    print(datCamelInd[i,'ID'])
-    
-}
 
-x <- merge(x=datCamelIndNorm,y=datCamelInd,all= T)
-x <- x[!duplicated(x$ID),]
+datResult <- datCamelIndNorm[!(datCamelIndNorm$ID %in% datCamelInd$ID),]
+datResult <- merge(datResult, datCamelInd, all = T)
 
-x <- merge(x=datCamelIndNorm,y=datCamelInd,all.y = T)
-x <- merge(x=datCamelIndNorm,y=datCamelInd,all.x = T)
-
-x <- merge(x=datCamelIndNorm,y=datCamelInd, all.y = T)
-x <- merge(x=datCamelIndNorm,y=datCamelInd, all.x = T)
-
-x <- merge(x=datCamelIndNorm,y=datCamelInd, by = NULL)
-x <- merge(x=datCamelInd,y=datCamelIndNorm,all.y = T)
