@@ -5,12 +5,12 @@ output: pdf_document
 <!-- FUNCIONES NECESARIAS -->
 ```{r}
 source('../R/camel-plot-functions.R')
-source('../R/camel-get-datCamelInd.R')
+source('../R/camel-norm-getCamelInd.R')
 ```
 
 <!-- DATOS -->
 ```{r}
-datCamelInd <- getDatCamelInd()
+datCamelIndNorm <- getDatCamelIndNorm(gestionInc = 2021)
 ```
 
 # Diagnóstico de las instituciones financieras del sistema financiero de Bolivia
@@ -26,21 +26,21 @@ La metodología a aplicar para realizar diagnóstico de las instituciones financ
 
 ```{r, out.width='100%', fig.cap='Coeficiente De Cobertura De Cartera En Mora'}
 id <- 'indCap_CCCM'
-plotIndCamel(id, datCamelInd)
+plotIndCamel(id, datCamelIndNorm)
 ```
 
 #### Coeficiente Acido De Cobertura De Cartera En Mora
 
 ```{r, out.width='100%', fig.cap='Coeficiente Acido De Cobertura De Cartera En Mora'}
 id <- 'indCap_CACCM'
-plotIndCamel(id, datCamelInd)
+plotIndCamel(id, datCamelIndNorm)
 ```
 
 #### Coeficiente de cobertura patrimonial 
 
 ```{r, out.width='100%', fig.cap='Coeficiente de cobertura patrimonial'}
 id <- 'indCap_CCP'
-plotIndCamel(id, datCamelInd)
+plotIndCamel(id, datCamelIndNorm)
 ```
 
 ### Activo
@@ -49,28 +49,28 @@ plotIndCamel(id, datCamelInd)
 
 ```{r, out.width='100%', fig.cap='Coeficiente de exposición de cartera'}
 id <- 'indAct_CEC'
-plotIndCamel(id, datCamelInd)
+plotIndCamel(id, datCamelIndNorm)
 ```
 
 #### Coeficiente de previsión de cartera
 
 ```{r, out.width='100%', fig.cap='Coeficiente de previsión de cartera'}
 id <- 'indAct_CPC'
-plotIndCamel(id, datCamelInd)
+plotIndCamel(id, datCamelIndNorm)
 ```
 
 #### Coeficiente de previsión de cartera en mora
 
 ```{r, out.width='100%', fig.cap='Coeficiente de previsión de cartera en mora'}
 id <- 'indAct_CPCM'
-plotIndCamel(id, datCamelInd)
+plotIndCamel(id, datCamelIndNorm)
 ```
 
 #### Coeficiente de reposición de cartera
 
 ```{r, out.width='100%', fig.cap='Coeficiente de reposición de cartera'}
 id <- 'indAct_CRC'
-plotIndCamel(id, datCamelInd)
+plotIndCamel(id, datCamelIndNorm)
 ```
 
 ### Administración
@@ -79,14 +79,14 @@ plotIndCamel(id, datCamelInd)
 
 ```{r, out.width='100%', fig.cap='Coeficiente de cobertura gastos administrativos'}
 id <- 'indAdm_CCGA'
-plotIndCamel(id, datCamelInd)
+plotIndCamel(id, datCamelIndNorm)
 ```
 
 #### Coeficiente acido de cobertura patrimonial
 
 ```{r, out.width='100%', fig.cap='Coeficiente acido de cobertura patrimonial'}
 id <- 'indAdm_CACGA'
-plotIndCamel(id, datCamelInd)
+plotIndCamel(id, datCamelIndNorm)
 ```
 
 ### Beneficios
@@ -95,14 +95,14 @@ plotIndCamel(id, datCamelInd)
 
 ```{r, out.width='100%', fig.cap='Coeficiente de rendimiento sobre activos '}
 id <- 'indBenf_ROA'
-plotIndCamel(id, datCamelInd)
+plotIndCamel(id, datCamelIndNorm)
 ```
 
 #### Coeficiente de rendimiento sobre patrimonio
 
 ```{r, out.width='100%', fig.cap='Coeficiente de rendimiento sobre patrimonio'}
 id <- 'indBenf_ROE'
-plotIndCamel(id, datCamelInd)
+plotIndCamel(id, datCamelIndNorm)
 ```
 
 
@@ -112,14 +112,14 @@ plotIndCamel(id, datCamelInd)
 
 ```{r, out.width='100%', fig.cap='Coeficiente de capacidad de pago frente a pasivos'}
 id <- 'indLq_CCPP'
-plotIndCamel(id, datCamelInd)
+plotIndCamel(id, datCamelIndNorm)
 ```
 
 #### Coeficiente acido de capacidad de pago frente obligaciones a corto plazo 
 
 ```{r, out.width='100%', fig.cap='Coeficiente acido de capacidad de pago frente a pasivos'}
 id <- 'indLq_CACPP'
-plotIndCamel(id, datCamelInd)
+plotIndCamel(id, datCamelIndNorm)
 ```
 
 

@@ -3,6 +3,8 @@ plotIndCamel <- function(id, dat) {
     
     require(fpp2)
     
+    dat$TIPO_DE_ENTIDAD <- gsub('_', ' ', dat$TIPO_DE_ENTIDAD)
+    
     gestInc <- min(as.numeric(format(dat$FECHA, format='%Y')))
     gestFn <- max(as.numeric(format(dat$FECHA, format='%Y')))
     
@@ -18,8 +20,13 @@ plotIndCamel <- function(id, dat) {
         tsDat[,i] <- x
     }
     
-    
-    p1 <- autoplot(tsDat, xlab = 'Tiempo', ylab = id) + 
+    nameYlab <- gsub('indCap_', '',
+                     gsub('indAct_', '',
+                          gsub('indAdm_', '',
+                               gsub('indBenf_', '',
+                                    gsub('indLq_', '',id)))))
+        
+    p1 <- autoplot(tsDat, xlab = 'Tiempo', ylab = nameYlab) + 
         theme(legend.position="bottom", legend.text=element_text(size=8)) + 
         guides(color=guide_legend(ncol=2, title="")) + 
         scale_x_continuous(breaks = gestInc:gestFn)
