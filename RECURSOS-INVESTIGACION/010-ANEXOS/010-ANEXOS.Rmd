@@ -2,14 +2,14 @@
 output: pdf_document
 ---
 
-<!-- FUNCIONES NECESARIAS 
+<!-- FUNCIONES NECESARIAS -->
 ```{r}
-source('../R/camel-get-datCamelInd.R')
+source('../R/camel-norm-getCamelInd.R')
 library(knitr)
 library(kableExtra)
 library(dplyr)
 ```
--->
+
 
 \section*{Anexos}
 \addcontentsline{toc}{section}{\protect\numberline{}Anexos}
@@ -21,13 +21,24 @@ library(dplyr)
 \newpage
 \subsection*{Anexo 2 - Indicadores CAMEL calculados}
 
-<!--
 ```{r}
-datCamelInd <- getDatCamelInd()
+datCamelIndNorm <- getDatCamelIndNorm(gestionInc = 2021)
+```
 
-head(datCamelInd) %>% 
-    kable(caption = "Indicadores CAMEL", digits = 6)  %>%
+
+### Capital {-}
+
+```{r}
+cols <- 
+    grepl('indCap', names(datCamelIndNorm)) + 
+    grepl('FECHA', names(datCamelIndNorm)) + 
+    grepl('TIPO_DE_ENTIDAD', names(datCamelIndNorm))
+
+dat <- datCamelIndNorm[,as.logical(cols)]
+
+tail(dat, n = 20) %>% 
+    kable(caption = "Indicadores de capital CAMEL", digits = 6) %>%
           kable_styling(latex_options = c("scale_down",'hold_position'))
 ```
--->
+
 
