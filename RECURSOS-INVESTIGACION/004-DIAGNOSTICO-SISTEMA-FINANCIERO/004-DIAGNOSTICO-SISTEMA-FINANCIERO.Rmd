@@ -9,6 +9,7 @@ source('../R/camel-norm-getCamelInd.R')
 source('../R/camel-limites-rangos.R')
 source('../R/camel-render-table-rangos-limites.R')
 source('../R/camel-calificacion-indicadores.R')
+source('../R/camel-calificacion-entidad.R')
 ```
 
 <!-- DATOS -->
@@ -154,13 +155,19 @@ getTableCamelRangosLimites(datCamelRangosLimites)
 
 $$CAMEL = \text{30\%C + 20\%A + 10\%M + 15\%E + 15\%L}$$
 
+\newpage
 ## Calificación CAMEL
 
 ```{r}
 datCamelCalificacionIndicadores <- getDatCamelCalificacionIndicadores(datCamelIndNorm,
                                                                       datCamelRangosLimites)
+
+datCamelCalificacionEntidad <- getDatCamelCalificacionEntidad(datCamelCalificacionIndicadores)
 ```
 
+```{r, out.width='100%', fig.cap='Resultados CAMEL'}
+plotIndCamel("CAMEL",datCamelCalificacionEntidad)
+```
 
 
 
