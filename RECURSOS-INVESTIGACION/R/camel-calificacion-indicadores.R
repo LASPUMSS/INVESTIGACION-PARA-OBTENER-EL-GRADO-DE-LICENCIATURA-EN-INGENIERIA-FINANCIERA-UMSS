@@ -1,99 +1,105 @@
-##################################################
 
-dat <- datCamelIndNorm
 
-x <- names(dat[,!(names(dat) %in% c('ID','FECHA','TIPO_DE_ENTIDAD'))])
-
-for (i in x) {
-    print(i)
-    dat[,i] <- sapply(dat[,i], calificacionIndicador, id=i, camel_limites = camel_limites)
-}
-
-sapply(dat$indCap_CCCM, calificacionIndicador, id='indCap_CCCM',camel_limites = camel_limites)
-sapply(dat$indAct_CEC, calificacionIndicador, id='indAct_CEC',camel_limites = camel_limites)
-
-names(dat)
-
-calificacionIndicador <- function(x, id, camel_limites) {
+getDatCamelCalificacionIndicadores <- function(datCamelIndNorm, datCamelRangosLimites) {
     
-    if (camel_limites[camel_limites$indicador==id,'AD']=='DESCENDENTE') {
+    calificacionIndicador <- function(x, id, camel_limites, nameColAD='DIRECCION') {
         
-        limInf <- -Inf
-        limSup <- camel_limites[camel_limites$indicador==id,'L2']
-        
-        if (x>=limInf && x<limSup)  {
-            result <- 1
+        if (camel_limites[camel_limites$INDICADOR==id,nameColAD]=='DESCENDENTE') {
+            
+            limInf <- -Inf
+            limSup <- camel_limites[camel_limites$INDICADOR==id,'L2']
+            
+            if (x>=limInf && x<limSup)  {
+                result <- 1
+            }
+            
+            
+            limInf <- camel_limites[camel_limites$INDICADOR==id,'L2']
+            limSup <- camel_limites[camel_limites$INDICADOR==id,'L3']
+            
+            if (x>=limInf && x<limSup) {
+                result <- 2
+            }
+            
+            limInf <- camel_limites[camel_limites$INDICADOR==id,'L3']
+            limSup <- camel_limites[camel_limites$INDICADOR==id,'L4']
+            
+            if (x>=limInf && x<limSup) {
+                result <- 3
+            }
+            limInf <- camel_limites[camel_limites$INDICADOR==id,'L4']
+            limSup <- camel_limites[camel_limites$INDICADOR==id,'L5']
+            
+            if (x>=limInf && x<limSup) {
+                result <- 4
+            }
+            
+            limInf <- camel_limites[camel_limites$INDICADOR==id,'L5']
+            limSup <- Inf
+            
+            if (x>=limInf && x<limSup)  {
+                result <- 5
+            }
+            
         }
         
-        
-        limInf <- camel_limites[camel_limites$indicador==id,'L2']
-        limSup <- camel_limites[camel_limites$indicador==id,'L3']
-        
-        if (x>=limInf && x<limSup) {
-            result <- 2
+        if (camel_limites[camel_limites$INDICADOR==id,nameColAD]=='ASCENDENTE') {
+            
+            
+            limInf <- Inf
+            limSup <- camel_limites[camel_limites$INDICADOR==id,'L2']
+            
+            if (x<=limInf && x>limSup)  {
+                result <- 1
+            }
+            
+            
+            limInf <- camel_limites[camel_limites$INDICADOR==id,'L2']
+            limSup <- camel_limites[camel_limites$INDICADOR==id,'L3']
+            
+            if (x<=limInf && x>limSup) {
+                result <- 2
+            }
+            
+            limInf <- camel_limites[camel_limites$INDICADOR==id,'L3']
+            limSup <- camel_limites[camel_limites$INDICADOR==id,'L4']
+            
+            if (x<=limInf && x>limSup) {
+                result <- 3
+            }
+            limInf <- camel_limites[camel_limites$INDICADOR==id,'L4']
+            limSup <- camel_limites[camel_limites$INDICADOR==id,'L5']
+            
+            if (x<=limInf && x>limSup) {
+                result <- 4
+            }
+            
+            limInf <- camel_limites[camel_limites$INDICADOR==id,'L5']
+            limSup <- -Inf
+            
+            if (x<=limInf && x>limSup)  {
+                result <- 5
+            }
+            
         }
         
-        limInf <- camel_limites[camel_limites$indicador==id,'L3']
-        limSup <- camel_limites[camel_limites$indicador==id,'L4']
-        
-        if (x>=limInf && x<limSup) {
-            result <- 3
-        }
-        limInf <- camel_limites[camel_limites$indicador==id,'L4']
-        limSup <- camel_limites[camel_limites$indicador==id,'L5']
-        
-        if (x>=limInf && x<limSup) {
-            result <- 4
-        }
-        
-        limInf <- camel_limites[camel_limites$indicador==id,'L5']
-        limSup <- Inf
-        
-        if (x>=limInf && x<limSup)  {
-            result <- 5
-        }
-        
+        return(result)
     }
     
-    if (camel_limites[camel_limites$indicador==id,'AD']=='ASCENDENTE') {
-        
-        
-        limInf <- Inf
-        limSup <- camel_limites[camel_limites$indicador==id,'L2']
-        
-        if (x<=limInf && x>limSup)  {
-            result <- 1
-        }
-        
-        
-        limInf <- camel_limites[camel_limites$indicador==id,'L2']
-        limSup <- camel_limites[camel_limites$indicador==id,'L3']
-        
-        if (x<=limInf && x>limSup) {
-            result <- 2
-        }
-        
-        limInf <- camel_limites[camel_limites$indicador==id,'L3']
-        limSup <- camel_limites[camel_limites$indicador==id,'L4']
-        
-        if (x<=limInf && x>limSup) {
-            result <- 3
-        }
-        limInf <- camel_limites[camel_limites$indicador==id,'L4']
-        limSup <- camel_limites[camel_limites$indicador==id,'L5']
-        
-        if (x<=limInf && x>limSup) {
-            result <- 4
-        }
-        
-        limInf <- camel_limites[camel_limites$indicador==id,'L5']
-        limSup <- -Inf
-        
-        if (x<=limInf && x>limSup)  {
-            result <- 5
-        }
-        
+    dat <- datCamelIndNorm
+    x <- names(dat[,!(names(dat) %in% c('ID','FECHA','TIPO_DE_ENTIDAD'))])
+    for (i in x) {
+        dat[,i] <- sapply(dat[,i], 
+                          calificacionIndicador, 
+                          id=i, 
+                          camel_limites = datCamelRangosLimites,
+                          nameColAD='DIRECCION')
     }
     
-    return(result)
+    return(dat)
 }
+
+
+
+
+
