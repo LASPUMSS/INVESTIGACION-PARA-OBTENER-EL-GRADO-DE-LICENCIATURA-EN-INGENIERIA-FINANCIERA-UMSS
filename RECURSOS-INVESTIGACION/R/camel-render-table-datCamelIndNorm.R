@@ -30,7 +30,7 @@ getTableCamelIndNorm <- function(id='indCap', datCamelIndNorm, captionTable='Ind
                     digits = 6) %>%
         kable_styling(latex_options = c("hold_position", "repeat_header"),
                       font_size = 7,
-                      repeat_header_text = "")
+                      repeat_header_text = "Continuación")
     
     return(result)
 }
@@ -69,7 +69,7 @@ getTableCamelIndNorm2 <- function(id1='indAdm', id2='indBenf',datCamelIndNorm, c
               digits = 6) %>%
         kable_styling(latex_options = c("hold_position", "repeat_header"),
                       font_size = 7,
-                      repeat_header_text = "")
+                      repeat_header_text = "Continuación")
     
     return(result)
 }

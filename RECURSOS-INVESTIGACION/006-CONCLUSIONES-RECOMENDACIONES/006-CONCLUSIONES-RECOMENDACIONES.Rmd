@@ -2,5 +2,5 @@
 output: pdf_document
 ---
 
-# Conclusiones y recomendaciones
+# Conclusiones 
 

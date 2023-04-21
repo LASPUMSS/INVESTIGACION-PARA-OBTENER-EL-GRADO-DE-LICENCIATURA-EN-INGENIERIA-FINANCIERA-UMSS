@@ -23,12 +23,19 @@ knitr::opts_chunk$set(echo = FALSE,
                       out.width='100%')
 ```
 
+\pagenumbering{roman}
+
 \includepdf[pages=-]{RECURSOS-INVESTIGACION/CARATULA-TESIS/CARATULA-TESIS}
 
 \newpage
 \tableofcontents
+\newpage
 \listoffigures
+\newpage
 \listoftables
+
+\clearpage
+\pagenumbering{arabic}
 
 <!-- PERFIL DEL PROYECTO -->
 \newpage
