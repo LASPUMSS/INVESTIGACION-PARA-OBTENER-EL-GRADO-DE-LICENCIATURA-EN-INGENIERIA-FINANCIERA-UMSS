@@ -7,6 +7,10 @@ Module EE_IgualarCamposHojas
         If categoriaEst = "EstadosFinancieros" Then
 
             cargarCamposEstadosFinancieros(ExcelWkBook)
+
+        ElseIf categoriaEst = "IndicadoresFinancieros" Then
+
+            cargarCamposIndicadoresFinancieros(ExcelWkBook)
         Else
             registroEjecucion000_00("xxxxxxxxxxxxxxxxxxx")
         End If
@@ -134,4 +138,45 @@ Module EE_IgualarCamposHojas
 
     End Sub
 
+
+    Public Sub cargarCamposIndicadoresFinancieros(ExcelWkBook As Excel.Workbook)
+        Dim ExcelWkSheet As Excel.Worksheet
+        Dim strEval As String
+        Dim i, n As Long
+
+
+        ExcelWkSheet = hojaConCamposAgregados(ExcelWkBook)
+        n = ExcelWkSheet.Cells(ExcelWkSheet.Rows.Count, 1).End(Excel.XlDirection.xlUp).Row
+
+        'AGREGAR CATEGORIAS A CUENTAS 
+
+        While n > 9
+
+            For i = 9 To n
+                strEval = If(CStr(ExcelWkSheet.Cells(i, 1).Value) <> "",
+                              QuitarEspAcen(CStr(ExcelWkSheet.Cells(i, 1).Value)),
+                              "")
+                If strEval <> "COEFICIENTE_DE_ADECUACION_PATRIMONIAL" Then
+                    'registroEjecucion000_00(strEval)
+                    ExcelWkSheet.Rows($"{CStr(i)}:{CStr(i)}").Delete()
+                    Exit For
+                ElseIf strEval = "COEFICIENTE_DE_ADECUACION_PATRIMONIAL" Then
+                    ExcelWkSheet.Rows($"10:{CStr(n)}").Delete()
+                End If
+            Next
+
+            n = ExcelWkSheet.Cells(ExcelWkSheet.Rows.Count, 1).End(Excel.XlDirection.xlUp).Row
+        End While
+
+        'VERFICAR DIMENSIONES
+        n = ExcelWkSheet.Cells(ExcelWkSheet.Rows.Count, 1).End(Excel.XlDirection.xlUp).Row
+        registroEjecucion000_00($"Ultima fila: {n}")
+        registroEjecucion000_00("-------------------------------------------")
+
+        'GUARDAR Y CERRAR
+        ExcelWkBook.Save()
+        ExcelWkBook.Close()
+
+
+    End Sub
 End Module
