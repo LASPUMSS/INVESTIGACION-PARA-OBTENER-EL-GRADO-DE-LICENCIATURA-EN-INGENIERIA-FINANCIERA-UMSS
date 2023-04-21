@@ -6,6 +6,8 @@ output: pdf_document
 ```{r}
 source('../R/camel-plot-functions.R')
 source('../R/camel-norm-getCamelInd.R')
+source('../R/camel-limites-rangos.R')
+source('../R/camel-render-table-rangos-limites.R')
 ```
 
 <!-- DATOS -->
@@ -17,10 +19,10 @@ datCamelIndNorm <- getDatCamelIndNorm(gestionInc = 2021)
 
 La metodología a aplicar para realizar diagnóstico de las instituciones financieras del sistema financiero de Bolivia sera el denominado como CAMEL, que responde a la evaluación solidez financiera de las instituciones.
 
+\newpage
 ## Calculo de indicadores 
 
 ### Capital
-
 
 #### Coeficiente De Cobertura De Cartera En Mora
 
@@ -29,6 +31,7 @@ id <- 'indCap_CCCM'
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+\newpage
 #### Coeficiente Acido De Cobertura De Cartera En Mora
 
 ```{r, out.width='100%', fig.cap='Coeficiente Acido De Cobertura De Cartera En Mora'}
@@ -36,6 +39,7 @@ id <- 'indCap_CACCM'
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+\newpage
 #### Coeficiente de cobertura patrimonial 
 
 ```{r, out.width='100%', fig.cap='Coeficiente de cobertura patrimonial'}
@@ -43,6 +47,7 @@ id <- 'indCap_CCP'
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+\newpage
 ### Activo
 
 #### Coeficiente de exposición de cartera
@@ -52,6 +57,7 @@ id <- 'indAct_CEC'
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+\newpage
 #### Coeficiente de previsión de cartera
 
 ```{r, out.width='100%', fig.cap='Coeficiente de previsión de cartera'}
@@ -59,6 +65,7 @@ id <- 'indAct_CPC'
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+\newpage
 #### Coeficiente de previsión de cartera en mora
 
 ```{r, out.width='100%', fig.cap='Coeficiente de previsión de cartera en mora'}
@@ -66,6 +73,7 @@ id <- 'indAct_CPCM'
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+\newpage
 #### Coeficiente de reposición de cartera
 
 ```{r, out.width='100%', fig.cap='Coeficiente de reposición de cartera'}
@@ -73,6 +81,7 @@ id <- 'indAct_CRC'
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+\newpage
 ### Administración
 
 #### Coeficiente de cobertura gastos administrativos
@@ -82,6 +91,7 @@ id <- 'indAdm_CCGA'
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+\newpage
 #### Coeficiente acido de cobertura patrimonial
 
 ```{r, out.width='100%', fig.cap='Coeficiente acido de cobertura patrimonial'}
@@ -89,6 +99,7 @@ id <- 'indAdm_CACGA'
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+\newpage
 ### Beneficios
 
 #### Coeficiente de rendimiento sobre activos 
@@ -98,6 +109,7 @@ id <- 'indBenf_ROA'
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+\newpage
 #### Coeficiente de rendimiento sobre patrimonio
 
 ```{r, out.width='100%', fig.cap='Coeficiente de rendimiento sobre patrimonio'}
@@ -105,7 +117,7 @@ id <- 'indBenf_ROE'
 plotIndCamel(id, datCamelIndNorm)
 ```
 
-
+\newpage
 ### Liquidez
 
 ####  Coeficiente de capacidad de pago frente obligaciones a corto plazo
@@ -115,6 +127,7 @@ id <- 'indLq_CCPP'
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+\newpage
 #### Coeficiente acido de capacidad de pago frente obligaciones a corto plazo 
 
 ```{r, out.width='100%', fig.cap='Coeficiente acido de capacidad de pago frente a pasivos'}
@@ -123,8 +136,20 @@ plotIndCamel(id, datCamelIndNorm)
 ```
 
 
+\newpage
 ## Definición de rangos y limites de los indicadores
+
+```{r}
+datCamelRangosLimites <- getDatCamelRangosLimites(datCamelIndNorm)
+getTableCamelRangosLimites(datCamelRangosLimites)
+```
+
 
 ## Definición de la ponderación de elementos CAMEL
 
+$$CAMEL = \text{30\%C + 20\%A + 10\%M + 15\%E + 15\%L}$$
+
 ## Calificación CAMEL
+
+
+
