@@ -242,30 +242,30 @@ Module BB_ProcedimientosEdicionHojas
         'MODIFICAR FORMATO DE TITULOS
         modificarTitulosAntesTransponer(ExcelWkSheet)
 
-        'ELIMINAR FILAS POR NOMBRES
-        Dim ctaElm() As String = {"ESTRUCTURA_DE_ACTIVOS",
-                                  "ESTRUCTURA_DE_PASIVOS",
-                                  "ESTRUCTURA_DE_OBLIGACIONES",
-                                  "CALIDAD_DE_CARTERA_1",
-                                  "LIQUIDEZ",
-                                  "SOLVENCIA",
-                                  "ESTRUCTURA_FINANCIERA",
-                                  "RENTABILIDAD_1",
-                                  "RESULTADOS_1",
-                                  "INGRESOS_Y_GASTOS_FINANCIEROS_1",
-                                  "EFICIENCIA_ADMINISTRATIVA",
-                                   "RATIOS_DE_EFICIENCIA_1",
-                                   "ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION",
-                                   "CALCULO_SPREAD_EFECTIVO_1",
-                                   "UTILIZACION_DEL_SPREAD_EFECTIVO_1"}
-        registroEjecucion000_00("+")
-        For Each cta As String In ctaElm
-            eliminarFilaPorNombre(ExcelWkSheet, cta)
-        Next
-        registroEjecucion000_00("+")
+        ''ELIMINAR FILAS POR NOMBRES
+        'Dim ctaElm() As String = {"ESTRUCTURA_DE_ACTIVOS",
+        '                          "ESTRUCTURA_DE_PASIVOS",
+        '                          "ESTRUCTURA_DE_OBLIGACIONES",
+        '                          "CALIDAD_DE_CARTERA_1",
+        '                          "LIQUIDEZ",
+        '                          "SOLVENCIA",
+        '                          "ESTRUCTURA_FINANCIERA",
+        '                          "RENTABILIDAD_1",
+        '                          "RESULTADOS_1",
+        '                          "INGRESOS_Y_GASTOS_FINANCIEROS_1",
+        '                          "EFICIENCIA_ADMINISTRATIVA",
+        '                           "RATIOS_DE_EFICIENCIA_1",
+        '                           "ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION",
+        '                           "CALCULO_SPREAD_EFECTIVO_1",
+        '                           "UTILIZACION_DEL_SPREAD_EFECTIVO_1"}
+        'registroEjecucion000_00("+")
+        'For Each cta As String In ctaElm
+        '    eliminarFilaPorNombre(ExcelWkSheet, cta)
+        'Next
+        'registroEjecucion000_00("+")
 
         'AGREGAR CAMPOS NECESARIOS
-        agregarCamposNecesarios(ExcelWkSheet, gestion, mes, tipoEntidadStr(tipoEndidadInd), "EXPRESADO_EN_MILES_DE_BOLIVIANOS")
+        agregarCamposNecesarios(ExcelWkSheet, gestion, mes, tipoEntidadStr(tipoEndidadInd), "EXPRESADO EN PORCENTAJE")
 
         'GUARDAR Y CERRAR
         ExcelWkBook.Save()

@@ -1,0 +1,1131 @@
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+¿DESEA EJECUTAR LA EDICION DE LAS HOJAS?
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+¿ESTADOS DESEA EJECUTAR LA ENUMERACION DE LOS CAMPOS DE LOS ESTADOS?
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+¿DESEA EJECUTAR AGREGAR CAMPOS?
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+¿DESEA EJECUTAR LA UNION DE LAS HOJAS?
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+¿Deseas ejecutar la seccion de estados financieros?
+¿Deseas ejecutar la seccion de indicadores financieros?
+####################################################################################
+SE EJECUTARA LA SECCION: INDICADORES FINANCIEROS
+####################################################################################
+¿Deseas ejecutar la seccion de indicadores financieros - Calificacion de cartera?
+¿Deseas ejecutar la seccion de indicadores financieros - indicadores financieros?
+###############################################################################
+Hola que tal, empecemos con las hojas de calculo de E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug...
+Directorio raiz: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+###############################################################################
+¿Deseas ejecutar la gestion 2014 de Indicadores Financieros?
+¿Deseas ejecutar la gestion 2015 de Indicadores Financieros?
+¿Deseas ejecutar la gestion 2016 de Indicadores Financieros?
+¿Deseas ejecutar la gestion 2017 de Indicadores Financieros?
+¿Deseas ejecutar la gestion 2018 de Indicadores Financieros?
+¿Deseas ejecutar la gestion 2019 de Indicadores Financieros?
+¿Deseas ejecutar la gestion 2020 de Indicadores Financieros?
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\01\BcosMultiples0120\202001_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 1
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\01\BcosMultiples0120\202001_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 1
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\01\BcosPYME0120\202001_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 1
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\01\BcosPYME0120\202001_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 1
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\01\BDR0120\202001_BDR_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 1
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\01\BDR0120\202001_BDR_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 1
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\01\IFD0120\202001_IFD_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 1
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\01\IFD0120\202001_IFD_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 1
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\01\Nobancos0120\202001_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 1
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\01\Nobancos0120\202001_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 1
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\01\Nobancos0120\202001_EFV_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 1
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\01\Nobancos0120\202001_EFV_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 1
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\02\BcosMultiples0220\202002_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 2
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\02\BcosMultiples0220\202002_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 2
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\02\BcosPYME0220\202002_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 2
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\02\BcosPYME0220\202002_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 2
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\02\BDR0220\202002_BDR_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 2
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\02\BDR0220\202002_BDR_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 2
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\02\IFD0220\202002_IFD_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 2
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\02\IFD0220\202002_IFD_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 2
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\02\Nobancos0220\202002_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 2
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\02\Nobancos0220\202002_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 2
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\02\Nobancos0220\202002_EFV_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 2
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\02\Nobancos0220\202002_EFV_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 2
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\03\BcosMultiples0320\202003_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 3
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\03\BcosMultiples0320\202003_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 3
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\03\BcosPYME0320\202003_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 3
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\03\BcosPYME0320\202003_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 3
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\03\BDR0320\202003_BDR_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 3
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\03\BDR0320\202003_BDR_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 3
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\03\IFD0320\202003_IFD_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 3
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\03\IFD0320\202003_IFD_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 3
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\03\Nobancos0320\202003_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 3
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\03\Nobancos0320\202003_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 3
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\03\Nobancos0320\202003_EFV_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 3
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\03\Nobancos0320\202003_EFV_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 3
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\04\BcosMultiples0420\202004_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 4
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\04\BcosMultiples0420\202004_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 4
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\04\BcosPYME0420\202004_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 4
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\04\BcosPYME0420\202004_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 4
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\04\BDR0420\202004_BDR_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 4
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\04\BDR0420\202004_BDR_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 4
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\04\IFD0420\202004_IFD_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 4
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\04\IFD0420\202004_IFD_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 4
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\04\Nobancos0420\202004_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 4
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\04\Nobancos0420\202004_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 4
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\04\Nobancos0420\202004_EFV_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 4
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\04\Nobancos0420\202004_EFV_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 4
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\05\BcosMultiples0520\202005_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 5
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\05\BcosMultiples0520\202005_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 5
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\05\BcosPYME0520\202005_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 5
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\05\BcosPYME0520\202005_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 5
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\05\BDR0520\202005_BDR_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 5
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\05\BDR0520\202005_BDR_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 5
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\05\IFD0520\202005_IFD_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 5
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\05\IFD0520\202005_IFD_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 5
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\05\Nobancos0520\202005_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 5
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\05\Nobancos0520\202005_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 5
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\05\Nobancos0520\202005_EFV_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 5
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\05\Nobancos0520\202005_EFV_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 5
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\06\BcosMultiples0620\202006_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 6
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\06\BcosMultiples0620\202006_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 6
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\06\BcosPYME0620\202006_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 6
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\06\BcosPYME0620\202006_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 6
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\06\BDR0620\202006_BDR_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 6
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\06\BDR0620\202006_BDR_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 6
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\06\IFD0620\202006_IFD_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 6
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\06\IFD0620\202006_IFD_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 6
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\06\Nobancos0620\202006_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 6
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\06\Nobancos0620\202006_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 6
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\06\Nobancos0620\202006_EFV_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 6
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\06\Nobancos0620\202006_EFV_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 6
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\07\BcosMultiples0720\202007_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 7
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\07\BcosMultiples0720\202007_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 7
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\07\BcosPYME0720\202007_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 7
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\07\BcosPYME0720\202007_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 7
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\07\BDR0720\202007_BDR_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 7
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\07\BDR0720\202007_BDR_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 7
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\07\IFD0720\202007_IFD_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 7
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\07\IFD0720\202007_IFD_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 7
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\07\Nobancos0720\202007_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 7
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\07\Nobancos0720\202007_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 7
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\07\Nobancos0720\202007_EFV_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 7
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\07\Nobancos0720\202007_EFV_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 7
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\08\BcosMultiples0820\202008_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 8
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\08\BcosMultiples0820\202008_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 8
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\08\BcosPYME0820\202008_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 8
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\08\BcosPYME0820\202008_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 8
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\08\BDR0820\202008_BDR_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 8
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\08\BDR0820\202008_BDR_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 8
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\08\IFD0820\202008_IFD_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 8
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\08\IFD0820\202008_IFD_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 8
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\08\Nobancos0820\202008_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 8
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\08\Nobancos0820\202008_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 8
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\08\Nobancos0820\202008_EFV_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 8
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\08\Nobancos0820\202008_EFV_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 8
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\09\BcosMultiples0920\202009_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 9
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\09\BcosMultiples0920\202009_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 9
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\09\BcosPYME0920\202009_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 9
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\09\BcosPYME0920\202009_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 9
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\09\BDR0920\202009_BDR_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 9
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\09\BDR0920\202009_BDR_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 9
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\09\IFD0920\202009_IFD_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 9
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\09\IFD0920\202009_IFD_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 9
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\09\Nobancos0920\202009_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 9
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\09\Nobancos0920\202009_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 9
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\09\Nobancos0920\202009_EFV_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 9
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\09\Nobancos0920\202009_EFV_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 9
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 181
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\10\BcosMultiples1020\202010_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 10
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\10\BcosMultiples1020\202010_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 10
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 140
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\10\BcosPYME1020\202010_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 10
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\10\BcosPYME1020\202010_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 10
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 140
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\10\BDR1020\202010_BDR_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 10
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\10\BDR1020\202010_BDR_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 10
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 140
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\10\IFD1020\202010_IFD_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 10
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\10\IFD1020\202010_IFD_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 10
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 140
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\10\Nobancos1020\202010_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 10
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\10\Nobancos1020\202010_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 10
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 140
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\10\Nobancos1020\202010_EFV_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 10
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\10\Nobancos1020\202010_EFV_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 10
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 140
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\11\BcosMultiples1120\202011_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 11
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\11\BcosMultiples1120\202011_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 11
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 140
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\11\BcosPYME1120\202011_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 11
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\11\BcosPYME1120\202011_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 11
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 140
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\11\BDR1120\202011_BDR_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 11
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\11\BDR1120\202011_BDR_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 11
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 140
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\11\IFD1120\202011_IFD_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 11
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\11\IFD1120\202011_IFD_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 11
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 140
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\11\Nobancos1120\202011_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 11
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\11\Nobancos1120\202011_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 11
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 140
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\11\Nobancos1120\202011_EFV_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 11
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\11\Nobancos1120\202011_EFV_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 11
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 140
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\12\BcosMultiples1220\202012_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 12
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\12\BcosMultiples1220\202012_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 12
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 140
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\12\BcosPYME1220\202012_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 12
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\12\BcosPYME1220\202012_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 12
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 140
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\12\BDR1220\202012_BDR_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 12
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\12\BDR1220\202012_BDR_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 12
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 140
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\12\IFD1220\202012_IFD_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 12
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\12\IFD1220\202012_IFD_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 12
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 140
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\12\Nobancos1220\202012_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 12
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\12\Nobancos1220\202012_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 12
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 140
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\12\Nobancos1220\202012_EFV_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 12
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2020\12\Nobancos1220\202012_EFV_IndicadoresFinancieros.xls
+Fecha EEFF: 2020 / 12
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
+STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.copiarDatosEntreHojas(Workbook ExcelWkBook, Worksheet ExcelWkSheetUnir) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 783
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 140
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+¿Deseas ejecutar la gestion 2021 de Indicadores Financieros?
+¿Deseas ejecutar la gestion 2022 de Indicadores Financieros?
+¿Deseas ejecutar la gestion 2023 de Indicadores Financieros?
+Se creo un archivo CSV de los datos...
+###############################################################################
+Se acabo con los archivos de Indicadores Financieros
+###############################################################################
+¿Deseas ejecutar la seccion de indicadores financieros - ponderacion de activos?
+¿Deseas ejecutar la seccion de captaciones?
+¿Deseas ejecutar la seccion de colocaciones?
+¿Deseas ejecutar la seccion de operaciones interbancarias?
+¿Deseas ejecutar la seccion de estados financieros desagregados?
+¿Deseas ejecutar la seccion de agencias, sucursales y numero de empleados?

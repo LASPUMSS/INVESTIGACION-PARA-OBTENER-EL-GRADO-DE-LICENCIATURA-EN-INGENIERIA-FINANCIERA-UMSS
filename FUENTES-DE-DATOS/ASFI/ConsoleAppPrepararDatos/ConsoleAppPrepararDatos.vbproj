@@ -113,7 +113,6 @@
   <ItemGroup>
     <Compile Include="Modules\AA_ProcedimientosPrincipales.vb" />
     <Compile Include="Modules\BB_ProcedimientosEdicionHojas.vb" />
-    <Compile Include="Modules\DD_FuncionesDeUnirHojas.vb" />
     <Compile Include="Modules\EE_IgualarCamposHojas.vb" />
     <Compile Include="Modules\ZZ_Constantes.vb" />
     <Compile Include="Modules\ZZ_FuncionesExtras.vb" />

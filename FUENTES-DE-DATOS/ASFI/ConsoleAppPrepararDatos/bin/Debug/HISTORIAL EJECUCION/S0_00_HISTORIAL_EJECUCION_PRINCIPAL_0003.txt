@@ -1,0 +1,766 @@
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+¿DESEA EJECUTAR LA EDICION DE LAS HOJAS?
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+¿Deseas ejecutar la seccion de estados financieros?
+¿Deseas ejecutar la seccion de indicadores financieros?
+####################################################################################
+SE EJECUTARA LA SECCION: INDICADORES FINANCIEROS
+####################################################################################
+¿Deseas ejecutar la seccion de indicadores financieros - Calificacion de cartera?
+¿Deseas ejecutar la seccion de indicadores financieros - indicadores financieros?
+###############################################################################
+Hola que tal, empecemos con las hojas de calculo de E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug...
+Directorio raiz: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+###############################################################################
+¿Deseas ejecutar la gestion 2014 de Indicadores Financieros?
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\01\Nobancos0114\201401_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2014 / 1
+Se elimino la hoja BBDD para crear una nueva...
+Se elimino la hoja BBDD_MOD para crear una nueva...
+La hoja con los datos es: 8100 (2)
+se encontro la hoja
+Celda Inicial: 10, Value: ESTRUCTURA DE ACTIVOS
+Celda Final: 123, Value:     UTILIDAD NETA
+CelTiBn: 8, Value: CJN
+CelInicial: 51, Value:     Activo improductivo/Patrimonio
+Celda Final: 59, Value: RENTABILIDAD (1)
++
+Se elimino la fila ESTRUCTURA_DE_ACTIVOS: ESTRUCTURA_DE_ACTIVOS
+Se elimino la fila ESTRUCTURA_DE_PASIVOS: ESTRUCTURA_DE_PASIVOS
+Se elimino la fila ESTRUCTURA_DE_OBLIGACIONES: ESTRUCTURA_DE_OBLIGACIONES
+Se elimino la fila CALIDAD_DE_CARTERA_1: CALIDAD_DE_CARTERA_1
+Se elimino la fila LIQUIDEZ: LIQUIDEZ
+Se elimino la fila SOLVENCIA: SOLVENCIA
+Se elimino la fila ESTRUCTURA_FINANCIERA: ESTRUCTURA_FINANCIERA
+Se elimino la fila RENTABILIDAD_1: RENTABILIDAD_1
+Se elimino la fila RESULTADOS_1: RESULTADOS_1
+Se elimino la fila INGRESOS_Y_GASTOS_FINANCIEROS_1: INGRESOS_Y_GASTOS_FINANCIEROS_1
+Se elimino la fila EFICIENCIA_ADMINISTRATIVA: EFICIENCIA_ADMINISTRATIVA
+Se elimino la fila RATIOS_DE_EFICIENCIA_1: RATIOS_DE_EFICIENCIA_1
+Se elimino la fila ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION: ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION
+Se elimino la fila CALCULO_SPREAD_EFECTIVO_1: CALCULO_SPREAD_EFECTIVO_1
+Se elimino la fila UTILIZACION_DEL_SPREAD_EFECTIVO_1: UTILIZACION_DEL_SPREAD_EFECTIVO_1
++
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\02\Nobancos0214\201402_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2014 / 2
+Se elimino la hoja BBDD para crear una nueva...
+Se elimino la hoja BBDD_MOD para crear una nueva...
+La hoja con los datos es: 8100 (2)
+se encontro la hoja
+Celda Inicial: 10, Value: ESTRUCTURA DE ACTIVOS
+Celda Final: 123, Value:     UTILIDAD NETA
+CelTiBn: 8, Value: CJN
+CelInicial: 51, Value:     Activo improductivo/Patrimonio
+Celda Final: 59, Value: RENTABILIDAD (1)
++
+Se elimino la fila ESTRUCTURA_DE_ACTIVOS: ESTRUCTURA_DE_ACTIVOS
+Se elimino la fila ESTRUCTURA_DE_PASIVOS: ESTRUCTURA_DE_PASIVOS
+Se elimino la fila ESTRUCTURA_DE_OBLIGACIONES: ESTRUCTURA_DE_OBLIGACIONES
+Se elimino la fila CALIDAD_DE_CARTERA_1: CALIDAD_DE_CARTERA_1
+Se elimino la fila LIQUIDEZ: LIQUIDEZ
+Se elimino la fila SOLVENCIA: SOLVENCIA
+Se elimino la fila ESTRUCTURA_FINANCIERA: ESTRUCTURA_FINANCIERA
+Se elimino la fila RENTABILIDAD_1: RENTABILIDAD_1
+Se elimino la fila RESULTADOS_1: RESULTADOS_1
+Se elimino la fila INGRESOS_Y_GASTOS_FINANCIEROS_1: INGRESOS_Y_GASTOS_FINANCIEROS_1
+Se elimino la fila EFICIENCIA_ADMINISTRATIVA: EFICIENCIA_ADMINISTRATIVA
+Se elimino la fila RATIOS_DE_EFICIENCIA_1: RATIOS_DE_EFICIENCIA_1
+Se elimino la fila ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION: ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION
+Se elimino la fila CALCULO_SPREAD_EFECTIVO_1: CALCULO_SPREAD_EFECTIVO_1
+Se elimino la fila UTILIZACION_DEL_SPREAD_EFECTIVO_1: UTILIZACION_DEL_SPREAD_EFECTIVO_1
++
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\03\Nobancos0314\201403_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2014 / 3
+Se elimino la hoja BBDD para crear una nueva...
+Se elimino la hoja BBDD_MOD para crear una nueva...
+La hoja con los datos es: 8100 (2)
+se encontro la hoja
+Celda Inicial: 10, Value: ESTRUCTURA DE ACTIVOS
+Celda Final: 123, Value:     UTILIDAD NETA
+CelTiBn: 8, Value: CJN
+CelInicial: 51, Value:     Activo improductivo/Patrimonio
+Celda Final: 59, Value: RENTABILIDAD (1)
++
+Se elimino la fila ESTRUCTURA_DE_ACTIVOS: ESTRUCTURA_DE_ACTIVOS
+Se elimino la fila ESTRUCTURA_DE_PASIVOS: ESTRUCTURA_DE_PASIVOS
+Se elimino la fila ESTRUCTURA_DE_OBLIGACIONES: ESTRUCTURA_DE_OBLIGACIONES
+Se elimino la fila CALIDAD_DE_CARTERA_1: CALIDAD_DE_CARTERA_1
+Se elimino la fila LIQUIDEZ: LIQUIDEZ
+Se elimino la fila SOLVENCIA: SOLVENCIA
+Se elimino la fila ESTRUCTURA_FINANCIERA: ESTRUCTURA_FINANCIERA
+Se elimino la fila RENTABILIDAD_1: RENTABILIDAD_1
+Se elimino la fila RESULTADOS_1: RESULTADOS_1
+Se elimino la fila INGRESOS_Y_GASTOS_FINANCIEROS_1: INGRESOS_Y_GASTOS_FINANCIEROS_1
+Se elimino la fila EFICIENCIA_ADMINISTRATIVA: EFICIENCIA_ADMINISTRATIVA
+Se elimino la fila RATIOS_DE_EFICIENCIA_1: RATIOS_DE_EFICIENCIA_1
+Se elimino la fila ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION: ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION
+Se elimino la fila CALCULO_SPREAD_EFECTIVO_1: CALCULO_SPREAD_EFECTIVO_1
+Se elimino la fila UTILIZACION_DEL_SPREAD_EFECTIVO_1: UTILIZACION_DEL_SPREAD_EFECTIVO_1
++
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\04\Nobancos0414\201404_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2014 / 4
+Se elimino la hoja BBDD para crear una nueva...
+Se elimino la hoja BBDD_MOD para crear una nueva...
+La hoja con los datos es: 8100 (2)
+se encontro la hoja
+Celda Inicial: 10, Value: ESTRUCTURA DE ACTIVOS
+Celda Final: 123, Value:     UTILIDAD NETA
+CelTiBn: 8, Value: CJN
+CelInicial: 51, Value:     Activo improductivo/Patrimonio
+Celda Final: 59, Value: RENTABILIDAD (1)
++
+Se elimino la fila ESTRUCTURA_DE_ACTIVOS: ESTRUCTURA_DE_ACTIVOS
+Se elimino la fila ESTRUCTURA_DE_PASIVOS: ESTRUCTURA_DE_PASIVOS
+Se elimino la fila ESTRUCTURA_DE_OBLIGACIONES: ESTRUCTURA_DE_OBLIGACIONES
+Se elimino la fila CALIDAD_DE_CARTERA_1: CALIDAD_DE_CARTERA_1
+Se elimino la fila LIQUIDEZ: LIQUIDEZ
+Se elimino la fila SOLVENCIA: SOLVENCIA
+Se elimino la fila ESTRUCTURA_FINANCIERA: ESTRUCTURA_FINANCIERA
+Se elimino la fila RENTABILIDAD_1: RENTABILIDAD_1
+Se elimino la fila RESULTADOS_1: RESULTADOS_1
+Se elimino la fila INGRESOS_Y_GASTOS_FINANCIEROS_1: INGRESOS_Y_GASTOS_FINANCIEROS_1
+Se elimino la fila EFICIENCIA_ADMINISTRATIVA: EFICIENCIA_ADMINISTRATIVA
+Se elimino la fila RATIOS_DE_EFICIENCIA_1: RATIOS_DE_EFICIENCIA_1
+Se elimino la fila ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION: ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION
+Se elimino la fila CALCULO_SPREAD_EFECTIVO_1: CALCULO_SPREAD_EFECTIVO_1
+Se elimino la fila UTILIZACION_DEL_SPREAD_EFECTIVO_1: UTILIZACION_DEL_SPREAD_EFECTIVO_1
++
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\05\Nobancos0514\201405_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2014 / 5
+Se elimino la hoja BBDD para crear una nueva...
+Se elimino la hoja BBDD_MOD para crear una nueva...
+La hoja con los datos es: 8100 (2)
+se encontro la hoja
+Celda Inicial: 10, Value: ESTRUCTURA DE ACTIVOS
+Celda Final: 123, Value:     UTILIDAD NETA
+CelTiBn: 8, Value: CJN
+CelInicial: 51, Value:     Activo improductivo/Patrimonio
+Celda Final: 59, Value: RENTABILIDAD (1)
++
+Se elimino la fila ESTRUCTURA_DE_ACTIVOS: ESTRUCTURA_DE_ACTIVOS
+Se elimino la fila ESTRUCTURA_DE_PASIVOS: ESTRUCTURA_DE_PASIVOS
+Se elimino la fila ESTRUCTURA_DE_OBLIGACIONES: ESTRUCTURA_DE_OBLIGACIONES
+Se elimino la fila CALIDAD_DE_CARTERA_1: CALIDAD_DE_CARTERA_1
+Se elimino la fila LIQUIDEZ: LIQUIDEZ
+Se elimino la fila SOLVENCIA: SOLVENCIA
+Se elimino la fila ESTRUCTURA_FINANCIERA: ESTRUCTURA_FINANCIERA
+Se elimino la fila RENTABILIDAD_1: RENTABILIDAD_1
+Se elimino la fila RESULTADOS_1: RESULTADOS_1
+Se elimino la fila INGRESOS_Y_GASTOS_FINANCIEROS_1: INGRESOS_Y_GASTOS_FINANCIEROS_1
+Se elimino la fila EFICIENCIA_ADMINISTRATIVA: EFICIENCIA_ADMINISTRATIVA
+Se elimino la fila RATIOS_DE_EFICIENCIA_1: RATIOS_DE_EFICIENCIA_1
+Se elimino la fila ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION: ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION
+Se elimino la fila CALCULO_SPREAD_EFECTIVO_1: CALCULO_SPREAD_EFECTIVO_1
+Se elimino la fila UTILIZACION_DEL_SPREAD_EFECTIVO_1: UTILIZACION_DEL_SPREAD_EFECTIVO_1
++
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\06\Nobancos0614\201406_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2014 / 6
+Se elimino la hoja BBDD para crear una nueva...
+Se elimino la hoja BBDD_MOD para crear una nueva...
+La hoja con los datos es: 8100 (2)
+se encontro la hoja
+Celda Inicial: 10, Value: ESTRUCTURA DE ACTIVOS
+Celda Final: 123, Value:     UTILIDAD NETA
+CelTiBn: 8, Value: CJN
+CelInicial: 51, Value:     Activo improductivo/Patrimonio
+Celda Final: 59, Value: RENTABILIDAD (1)
++
+Se elimino la fila ESTRUCTURA_DE_ACTIVOS: ESTRUCTURA_DE_ACTIVOS
+Se elimino la fila ESTRUCTURA_DE_PASIVOS: ESTRUCTURA_DE_PASIVOS
+Se elimino la fila ESTRUCTURA_DE_OBLIGACIONES: ESTRUCTURA_DE_OBLIGACIONES
+Se elimino la fila CALIDAD_DE_CARTERA_1: CALIDAD_DE_CARTERA_1
+Se elimino la fila LIQUIDEZ: LIQUIDEZ
+Se elimino la fila SOLVENCIA: SOLVENCIA
+Se elimino la fila ESTRUCTURA_FINANCIERA: ESTRUCTURA_FINANCIERA
+Se elimino la fila RENTABILIDAD_1: RENTABILIDAD_1
+Se elimino la fila RESULTADOS_1: RESULTADOS_1
+Se elimino la fila INGRESOS_Y_GASTOS_FINANCIEROS_1: INGRESOS_Y_GASTOS_FINANCIEROS_1
+Se elimino la fila EFICIENCIA_ADMINISTRATIVA: EFICIENCIA_ADMINISTRATIVA
+Se elimino la fila RATIOS_DE_EFICIENCIA_1: RATIOS_DE_EFICIENCIA_1
+Se elimino la fila ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION: ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION
+Se elimino la fila CALCULO_SPREAD_EFECTIVO_1: CALCULO_SPREAD_EFECTIVO_1
+Se elimino la fila UTILIZACION_DEL_SPREAD_EFECTIVO_1: UTILIZACION_DEL_SPREAD_EFECTIVO_1
++
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\07\BcosMultiples0714\201407_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2014 / 7
+Se elimino la hoja BBDD para crear una nueva...
+Se elimino la hoja BBDD_MOD para crear una nueva...
+La hoja con los datos es: 9032 (2)
+se encontro la hoja
+Celda Inicial: 10, Value: ESTRUCTURA DE ACTIVOS
+Celda Final: 123, Value:     UTILIDAD NETA
+CelTiBn: 8, Value: BNB
+CelInicial: 51, Value:     Activo improductivo/Patrimonio
+Celda Final: 59, Value: RENTABILIDAD (1)
++
+Se elimino la fila ESTRUCTURA_DE_ACTIVOS: ESTRUCTURA_DE_ACTIVOS
+Se elimino la fila ESTRUCTURA_DE_PASIVOS: ESTRUCTURA_DE_PASIVOS
+Se elimino la fila ESTRUCTURA_DE_OBLIGACIONES: ESTRUCTURA_DE_OBLIGACIONES
+Se elimino la fila CALIDAD_DE_CARTERA_1: CALIDAD_DE_CARTERA_1
+Se elimino la fila LIQUIDEZ: LIQUIDEZ
+Se elimino la fila SOLVENCIA: SOLVENCIA
+Se elimino la fila ESTRUCTURA_FINANCIERA: ESTRUCTURA_FINANCIERA
+Se elimino la fila RENTABILIDAD_1: RENTABILIDAD_1
+Se elimino la fila RESULTADOS_1: RESULTADOS_1
+Se elimino la fila INGRESOS_Y_GASTOS_FINANCIEROS_1: INGRESOS_Y_GASTOS_FINANCIEROS_1
+Se elimino la fila EFICIENCIA_ADMINISTRATIVA: EFICIENCIA_ADMINISTRATIVA
+Se elimino la fila RATIOS_DE_EFICIENCIA_1: RATIOS_DE_EFICIENCIA_1
+Se elimino la fila ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION: ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION
+Se elimino la fila CALCULO_SPREAD_EFECTIVO_1: CALCULO_SPREAD_EFECTIVO_1
+Se elimino la fila UTILIZACION_DEL_SPREAD_EFECTIVO_1: UTILIZACION_DEL_SPREAD_EFECTIVO_1
++
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\07\BcosPYME0714\201407_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2014 / 7
+Se elimino la hoja BBDD para crear una nueva...
+Se elimino la hoja BBDD_MOD para crear una nueva...
+La hoja con los datos es: 9033 (2)
+se encontro la hoja
+Celda Inicial: 10, Value: ESTRUCTURA DE ACTIVOS
+Celda Final: 123, Value:     UTILIDAD NETA
+CelTiBn: 8, Value: PLA
+CelInicial: 51, Value:     Activo improductivo/Patrimonio
+Celda Final: 59, Value: RENTABILIDAD (1)
++
+Se elimino la fila ESTRUCTURA_DE_ACTIVOS: ESTRUCTURA_DE_ACTIVOS
+Se elimino la fila ESTRUCTURA_DE_PASIVOS: ESTRUCTURA_DE_PASIVOS
+Se elimino la fila ESTRUCTURA_DE_OBLIGACIONES: ESTRUCTURA_DE_OBLIGACIONES
+Se elimino la fila CALIDAD_DE_CARTERA_1: CALIDAD_DE_CARTERA_1
+Se elimino la fila LIQUIDEZ: LIQUIDEZ
+Se elimino la fila SOLVENCIA: SOLVENCIA
+Se elimino la fila ESTRUCTURA_FINANCIERA: ESTRUCTURA_FINANCIERA
+Se elimino la fila RENTABILIDAD_1: RENTABILIDAD_1
+Se elimino la fila RESULTADOS_1: RESULTADOS_1
+Se elimino la fila INGRESOS_Y_GASTOS_FINANCIEROS_1: INGRESOS_Y_GASTOS_FINANCIEROS_1
+Se elimino la fila EFICIENCIA_ADMINISTRATIVA: EFICIENCIA_ADMINISTRATIVA
+Se elimino la fila RATIOS_DE_EFICIENCIA_1: RATIOS_DE_EFICIENCIA_1
+Se elimino la fila ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION: ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION
+Se elimino la fila CALCULO_SPREAD_EFECTIVO_1: CALCULO_SPREAD_EFECTIVO_1
+Se elimino la fila UTILIZACION_DEL_SPREAD_EFECTIVO_1: UTILIZACION_DEL_SPREAD_EFECTIVO_1
++
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\07\Nobancos0714\201407_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2014 / 7
+Se elimino la hoja BBDD para crear una nueva...
+Se elimino la hoja BBDD_MOD para crear una nueva...
+La hoja con los datos es: 8100 (2)
+se encontro la hoja
+Celda Inicial: 8, Value: ESTRUCTURA DE ACTIVOS
+Celda Final: 121, Value:     UTILIDAD NETA
+CelTiBn: 6, Value: CJN
+CelInicial: 51, Value:     Activo improductivo/Patrimonio
+Celda Final: 59, Value: RENTABILIDAD (1)
++
+Se elimino la fila ESTRUCTURA_DE_ACTIVOS: ESTRUCTURA_DE_ACTIVOS
+Se elimino la fila ESTRUCTURA_DE_PASIVOS: ESTRUCTURA_DE_PASIVOS
+Se elimino la fila ESTRUCTURA_DE_OBLIGACIONES: ESTRUCTURA_DE_OBLIGACIONES
+Se elimino la fila CALIDAD_DE_CARTERA_1: CALIDAD_DE_CARTERA_1
+Se elimino la fila LIQUIDEZ: LIQUIDEZ
+Se elimino la fila SOLVENCIA: SOLVENCIA
+Se elimino la fila ESTRUCTURA_FINANCIERA: ESTRUCTURA_FINANCIERA
+Se elimino la fila RENTABILIDAD_1: RENTABILIDAD_1
+Se elimino la fila RESULTADOS_1: RESULTADOS_1
+Se elimino la fila INGRESOS_Y_GASTOS_FINANCIEROS_1: INGRESOS_Y_GASTOS_FINANCIEROS_1
+Se elimino la fila EFICIENCIA_ADMINISTRATIVA: EFICIENCIA_ADMINISTRATIVA
+Se elimino la fila RATIOS_DE_EFICIENCIA_1: RATIOS_DE_EFICIENCIA_1
+Se elimino la fila ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION: ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION
+Se elimino la fila CALCULO_SPREAD_EFECTIVO_1: CALCULO_SPREAD_EFECTIVO_1
+Se elimino la fila UTILIZACION_DEL_SPREAD_EFECTIVO_1: UTILIZACION_DEL_SPREAD_EFECTIVO_1
++
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\08\BcosMultiples0814\201408_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2014 / 8
+Se elimino la hoja BBDD para crear una nueva...
+Se elimino la hoja BBDD_MOD para crear una nueva...
+La hoja con los datos es: 9032 (2)
+se encontro la hoja
+Celda Inicial: 10, Value: ESTRUCTURA DE ACTIVOS
+Celda Final: 123, Value:     UTILIDAD NETA
+CelTiBn: 8, Value: BNB
+CelInicial: 51, Value:     Activo improductivo/Patrimonio
+Celda Final: 59, Value: RENTABILIDAD (1)
++
+Se elimino la fila ESTRUCTURA_DE_ACTIVOS: ESTRUCTURA_DE_ACTIVOS
+Se elimino la fila ESTRUCTURA_DE_PASIVOS: ESTRUCTURA_DE_PASIVOS
+Se elimino la fila ESTRUCTURA_DE_OBLIGACIONES: ESTRUCTURA_DE_OBLIGACIONES
+Se elimino la fila CALIDAD_DE_CARTERA_1: CALIDAD_DE_CARTERA_1
+Se elimino la fila LIQUIDEZ: LIQUIDEZ
+Se elimino la fila SOLVENCIA: SOLVENCIA
+Se elimino la fila ESTRUCTURA_FINANCIERA: ESTRUCTURA_FINANCIERA
+Se elimino la fila RENTABILIDAD_1: RENTABILIDAD_1
+Se elimino la fila RESULTADOS_1: RESULTADOS_1
+Se elimino la fila INGRESOS_Y_GASTOS_FINANCIEROS_1: INGRESOS_Y_GASTOS_FINANCIEROS_1
+Se elimino la fila EFICIENCIA_ADMINISTRATIVA: EFICIENCIA_ADMINISTRATIVA
+Se elimino la fila RATIOS_DE_EFICIENCIA_1: RATIOS_DE_EFICIENCIA_1
+Se elimino la fila ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION: ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION
+Se elimino la fila CALCULO_SPREAD_EFECTIVO_1: CALCULO_SPREAD_EFECTIVO_1
+Se elimino la fila UTILIZACION_DEL_SPREAD_EFECTIVO_1: UTILIZACION_DEL_SPREAD_EFECTIVO_1
++
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\08\BcosPYME0814\201408_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2014 / 8
+Se elimino la hoja BBDD para crear una nueva...
+Se elimino la hoja BBDD_MOD para crear una nueva...
+La hoja con los datos es: 9033 (2)
+se encontro la hoja
+Celda Inicial: 10, Value: ESTRUCTURA DE ACTIVOS
+Celda Final: 122, Value:     UTILIDAD NETA
+CelTiBn: 8, Value: PLA
+CelInicial: 51, Value:     Activo improductivo/Patrimonio
+Celda Final: 58, Value: RENTABILIDAD (1)
++
+Se elimino la fila ESTRUCTURA_DE_ACTIVOS: ESTRUCTURA_DE_ACTIVOS
+Se elimino la fila ESTRUCTURA_DE_PASIVOS: ESTRUCTURA_DE_PASIVOS
+Se elimino la fila ESTRUCTURA_DE_OBLIGACIONES: ESTRUCTURA_DE_OBLIGACIONES
+Se elimino la fila CALIDAD_DE_CARTERA_1: CALIDAD_DE_CARTERA_1
+Se elimino la fila LIQUIDEZ: LIQUIDEZ
+Se elimino la fila SOLVENCIA: SOLVENCIA
+Se elimino la fila ESTRUCTURA_FINANCIERA: ESTRUCTURA_FINANCIERA
+Se elimino la fila RENTABILIDAD_1: RENTABILIDAD_1
+Se elimino la fila RESULTADOS_1: RESULTADOS_1
+Se elimino la fila INGRESOS_Y_GASTOS_FINANCIEROS_1: INGRESOS_Y_GASTOS_FINANCIEROS_1
+Se elimino la fila EFICIENCIA_ADMINISTRATIVA: EFICIENCIA_ADMINISTRATIVA
+Se elimino la fila RATIOS_DE_EFICIENCIA_1: RATIOS_DE_EFICIENCIA_1
+Se elimino la fila ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION: ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION
+Se elimino la fila CALCULO_SPREAD_EFECTIVO_1: CALCULO_SPREAD_EFECTIVO_1
+Se elimino la fila UTILIZACION_DEL_SPREAD_EFECTIVO_1: UTILIZACION_DEL_SPREAD_EFECTIVO_1
++
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\08\Nobancos0814\201408_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2014 / 8
+Se elimino la hoja BBDD para crear una nueva...
+Se elimino la hoja BBDD_MOD para crear una nueva...
+La hoja con los datos es: 8100 (2)
+se encontro la hoja
+Celda Inicial: 8, Value: ESTRUCTURA DE ACTIVOS
+Celda Final: 121, Value:     UTILIDAD NETA
+CelTiBn: 6, Value: CJN
+CelInicial: 51, Value:     Activo improductivo/Patrimonio
+Celda Final: 59, Value: RENTABILIDAD (1)
++
+Se elimino la fila ESTRUCTURA_DE_ACTIVOS: ESTRUCTURA_DE_ACTIVOS
+Se elimino la fila ESTRUCTURA_DE_PASIVOS: ESTRUCTURA_DE_PASIVOS
+Se elimino la fila ESTRUCTURA_DE_OBLIGACIONES: ESTRUCTURA_DE_OBLIGACIONES
+Se elimino la fila CALIDAD_DE_CARTERA_1: CALIDAD_DE_CARTERA_1
+Se elimino la fila LIQUIDEZ: LIQUIDEZ
+Se elimino la fila SOLVENCIA: SOLVENCIA
+Se elimino la fila ESTRUCTURA_FINANCIERA: ESTRUCTURA_FINANCIERA
+Se elimino la fila RENTABILIDAD_1: RENTABILIDAD_1
+Se elimino la fila RESULTADOS_1: RESULTADOS_1
+Se elimino la fila INGRESOS_Y_GASTOS_FINANCIEROS_1: INGRESOS_Y_GASTOS_FINANCIEROS_1
+Se elimino la fila EFICIENCIA_ADMINISTRATIVA: EFICIENCIA_ADMINISTRATIVA
+Se elimino la fila RATIOS_DE_EFICIENCIA_1: RATIOS_DE_EFICIENCIA_1
+Se elimino la fila ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION: ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION
+Se elimino la fila CALCULO_SPREAD_EFECTIVO_1: CALCULO_SPREAD_EFECTIVO_1
+Se elimino la fila UTILIZACION_DEL_SPREAD_EFECTIVO_1: UTILIZACION_DEL_SPREAD_EFECTIVO_1
++
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\09\BcosMultiples0914\201409_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2014 / 9
+Se elimino la hoja BBDD para crear una nueva...
+Se elimino la hoja BBDD_MOD para crear una nueva...
+La hoja con los datos es: 9406 (2)
+se encontro la hoja
+Celda Inicial: 10, Value: ESTRUCTURA DE ACTIVOS
+Celda Final: 134, Value:   UTILIDAD NETA
+CelTiBn: 8, Value: BNB
+CelInicial: 51, Value:     Activo improductivo/Patrimonio
+Celda Final: 70, Value: RENTABILIDAD (1)
++
+Se elimino la fila ESTRUCTURA_DE_ACTIVOS: ESTRUCTURA_DE_ACTIVOS
+Se elimino la fila ESTRUCTURA_DE_PASIVOS: ESTRUCTURA_DE_PASIVOS
+Se elimino la fila ESTRUCTURA_DE_OBLIGACIONES: ESTRUCTURA_DE_OBLIGACIONES
+Se elimino la fila CALIDAD_DE_CARTERA_1: CALIDAD_DE_CARTERA_1
+Se elimino la fila LIQUIDEZ: LIQUIDEZ
+Se elimino la fila SOLVENCIA: SOLVENCIA
+Se elimino la fila ESTRUCTURA_FINANCIERA: ESTRUCTURA_FINANCIERA
+Se elimino la fila RENTABILIDAD_1: RENTABILIDAD_1
+Se elimino la fila RESULTADOS_1: RESULTADOS_1
+Se elimino la fila INGRESOS_Y_GASTOS_FINANCIEROS_1: INGRESOS_Y_GASTOS_FINANCIEROS_1
+Se elimino la fila EFICIENCIA_ADMINISTRATIVA: EFICIENCIA_ADMINISTRATIVA
+No se encontro RATIOS_DE_EFICIENCIA_1: Para poder eliminar la fila.
+Se elimino la fila ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION: ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION
+No se encontro CALCULO_SPREAD_EFECTIVO_1: Para poder eliminar la fila.
+Se elimino la fila UTILIZACION_DEL_SPREAD_EFECTIVO_1: UTILIZACION_DEL_SPREAD_EFECTIVO_1
++
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\09\BcosPYME0914\201409_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2014 / 9
+Se elimino la hoja BBDD para crear una nueva...
+Se elimino la hoja BBDD_MOD para crear una nueva...
+La hoja con los datos es: 9033 (2)
+se encontro la hoja
+Celda Inicial: 10, Value: ESTRUCTURA DE ACTIVOS
+Celda Final: 123, Value:     UTILIDAD NETA
+CelTiBn: 8, Value: PLA
+CelInicial: 51, Value:     Activo improductivo/Patrimonio
+Celda Final: 59, Value: RENTABILIDAD (1)
++
+Se elimino la fila ESTRUCTURA_DE_ACTIVOS: ESTRUCTURA_DE_ACTIVOS
+Se elimino la fila ESTRUCTURA_DE_PASIVOS: ESTRUCTURA_DE_PASIVOS
+Se elimino la fila ESTRUCTURA_DE_OBLIGACIONES: ESTRUCTURA_DE_OBLIGACIONES
+Se elimino la fila CALIDAD_DE_CARTERA_1: CALIDAD_DE_CARTERA_1
+Se elimino la fila LIQUIDEZ: LIQUIDEZ
+Se elimino la fila SOLVENCIA: SOLVENCIA
+Se elimino la fila ESTRUCTURA_FINANCIERA: ESTRUCTURA_FINANCIERA
+Se elimino la fila RENTABILIDAD_1: RENTABILIDAD_1
+Se elimino la fila RESULTADOS_1: RESULTADOS_1
+Se elimino la fila INGRESOS_Y_GASTOS_FINANCIEROS_1: INGRESOS_Y_GASTOS_FINANCIEROS_1
+Se elimino la fila EFICIENCIA_ADMINISTRATIVA: EFICIENCIA_ADMINISTRATIVA
+Se elimino la fila RATIOS_DE_EFICIENCIA_1: RATIOS_DE_EFICIENCIA_1
+Se elimino la fila ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION: ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION
+Se elimino la fila CALCULO_SPREAD_EFECTIVO_1: CALCULO_SPREAD_EFECTIVO_1
+Se elimino la fila UTILIZACION_DEL_SPREAD_EFECTIVO_1: UTILIZACION_DEL_SPREAD_EFECTIVO_1
++
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\09\Nobancos0914\201409_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2014 / 9
+Se elimino la hoja BBDD para crear una nueva...
+Se elimino la hoja BBDD_MOD para crear una nueva...
+La hoja con los datos es: 8100 (2)
+se encontro la hoja
+Celda Inicial: 8, Value: ESTRUCTURA DE ACTIVOS
+Celda Final: 121, Value:     UTILIDAD NETA
+CelTiBn: 6, Value: CJN
+CelInicial: 51, Value:     Activo improductivo/Patrimonio
+Celda Final: 59, Value: RENTABILIDAD (1)
++
+Se elimino la fila ESTRUCTURA_DE_ACTIVOS: ESTRUCTURA_DE_ACTIVOS
+Se elimino la fila ESTRUCTURA_DE_PASIVOS: ESTRUCTURA_DE_PASIVOS
+Se elimino la fila ESTRUCTURA_DE_OBLIGACIONES: ESTRUCTURA_DE_OBLIGACIONES
+Se elimino la fila CALIDAD_DE_CARTERA_1: CALIDAD_DE_CARTERA_1
+Se elimino la fila LIQUIDEZ: LIQUIDEZ
+Se elimino la fila SOLVENCIA: SOLVENCIA
+Se elimino la fila ESTRUCTURA_FINANCIERA: ESTRUCTURA_FINANCIERA
+Se elimino la fila RENTABILIDAD_1: RENTABILIDAD_1
+Se elimino la fila RESULTADOS_1: RESULTADOS_1
+Se elimino la fila INGRESOS_Y_GASTOS_FINANCIEROS_1: INGRESOS_Y_GASTOS_FINANCIEROS_1
+Se elimino la fila EFICIENCIA_ADMINISTRATIVA: EFICIENCIA_ADMINISTRATIVA
+Se elimino la fila RATIOS_DE_EFICIENCIA_1: RATIOS_DE_EFICIENCIA_1
+Se elimino la fila ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION: ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION
+Se elimino la fila CALCULO_SPREAD_EFECTIVO_1: CALCULO_SPREAD_EFECTIVO_1
+Se elimino la fila UTILIZACION_DEL_SPREAD_EFECTIVO_1: UTILIZACION_DEL_SPREAD_EFECTIVO_1
++
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\10\BcosMultiples1014\201410_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2014 / 10
+Se elimino la hoja BBDD para crear una nueva...
+Se elimino la hoja BBDD_MOD para crear una nueva...
+La hoja con los datos es: 9406 (2)
+se encontro la hoja
+Celda Inicial: 10, Value: ESTRUCTURA DE ACTIVOS
+Celda Final: 124, Value:   UTILIDAD NETA
+CelTiBn: 8, Value: BNB
+CelInicial: 51, Value:     Activo improductivo/Patrimonio
+Celda Final: 60, Value: RENTABILIDAD (1)
++
+Se elimino la fila ESTRUCTURA_DE_ACTIVOS: ESTRUCTURA_DE_ACTIVOS
+Se elimino la fila ESTRUCTURA_DE_PASIVOS: ESTRUCTURA_DE_PASIVOS
+Se elimino la fila ESTRUCTURA_DE_OBLIGACIONES: ESTRUCTURA_DE_OBLIGACIONES
+Se elimino la fila CALIDAD_DE_CARTERA_1: CALIDAD_DE_CARTERA_1
+Se elimino la fila LIQUIDEZ: LIQUIDEZ
+Se elimino la fila SOLVENCIA: SOLVENCIA
+Se elimino la fila ESTRUCTURA_FINANCIERA: ESTRUCTURA_FINANCIERA
+Se elimino la fila RENTABILIDAD_1: RENTABILIDAD_1
+Se elimino la fila RESULTADOS_1: RESULTADOS_1
+Se elimino la fila INGRESOS_Y_GASTOS_FINANCIEROS_1: INGRESOS_Y_GASTOS_FINANCIEROS_1
+Se elimino la fila EFICIENCIA_ADMINISTRATIVA: EFICIENCIA_ADMINISTRATIVA
+No se encontro RATIOS_DE_EFICIENCIA_1: Para poder eliminar la fila.
+Se elimino la fila ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION: ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION
+No se encontro CALCULO_SPREAD_EFECTIVO_1: Para poder eliminar la fila.
+Se elimino la fila UTILIZACION_DEL_SPREAD_EFECTIVO_1: UTILIZACION_DEL_SPREAD_EFECTIVO_1
++
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\10\BcosPYME1014\201410_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2014 / 10
+Se elimino la hoja BBDD para crear una nueva...
+Se elimino la hoja BBDD_MOD para crear una nueva...
+La hoja con los datos es: 9033 (2)
+se encontro la hoja
+Celda Inicial: 10, Value: ESTRUCTURA DE ACTIVOS
+Celda Final: 123, Value:   UTILIDAD NETA
+CelTiBn: 8, Value: PLA
+CelInicial: 51, Value:     Activo improductivo/Patrimonio
+Celda Final: 59, Value: RENTABILIDAD (1)
++
+Se elimino la fila ESTRUCTURA_DE_ACTIVOS: ESTRUCTURA_DE_ACTIVOS
+Se elimino la fila ESTRUCTURA_DE_PASIVOS: ESTRUCTURA_DE_PASIVOS
+Se elimino la fila ESTRUCTURA_DE_OBLIGACIONES: ESTRUCTURA_DE_OBLIGACIONES
+Se elimino la fila CALIDAD_DE_CARTERA_1: CALIDAD_DE_CARTERA_1
+Se elimino la fila LIQUIDEZ: LIQUIDEZ
+Se elimino la fila SOLVENCIA: SOLVENCIA
+Se elimino la fila ESTRUCTURA_FINANCIERA: ESTRUCTURA_FINANCIERA
+Se elimino la fila RENTABILIDAD_1: RENTABILIDAD_1
+Se elimino la fila RESULTADOS_1: RESULTADOS_1
+Se elimino la fila INGRESOS_Y_GASTOS_FINANCIEROS_1: INGRESOS_Y_GASTOS_FINANCIEROS_1
+Se elimino la fila EFICIENCIA_ADMINISTRATIVA: EFICIENCIA_ADMINISTRATIVA
+No se encontro RATIOS_DE_EFICIENCIA_1: Para poder eliminar la fila.
+Se elimino la fila ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION: ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION
+No se encontro CALCULO_SPREAD_EFECTIVO_1: Para poder eliminar la fila.
+Se elimino la fila UTILIZACION_DEL_SPREAD_EFECTIVO_1: UTILIZACION_DEL_SPREAD_EFECTIVO_1
++
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\10\Nobancos1014\201410_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2014 / 10
+Se elimino la hoja BBDD para crear una nueva...
+Se elimino la hoja BBDD_MOD para crear una nueva...
+La hoja con los datos es: 8100 (2)
+se encontro la hoja
+Celda Inicial: 10, Value: ESTRUCTURA DE ACTIVOS
+Celda Final: 123, Value:     UTILIDAD NETA
+CelTiBn: 8, Value: CJN
+CelInicial: 51, Value:     Activo improductivo/Patrimonio
+Celda Final: 59, Value: RENTABILIDAD (1)
++
+Se elimino la fila ESTRUCTURA_DE_ACTIVOS: ESTRUCTURA_DE_ACTIVOS
+Se elimino la fila ESTRUCTURA_DE_PASIVOS: ESTRUCTURA_DE_PASIVOS
+Se elimino la fila ESTRUCTURA_DE_OBLIGACIONES: ESTRUCTURA_DE_OBLIGACIONES
+Se elimino la fila CALIDAD_DE_CARTERA_1: CALIDAD_DE_CARTERA_1
+Se elimino la fila LIQUIDEZ: LIQUIDEZ
+Se elimino la fila SOLVENCIA: SOLVENCIA
+Se elimino la fila ESTRUCTURA_FINANCIERA: ESTRUCTURA_FINANCIERA
+Se elimino la fila RENTABILIDAD_1: RENTABILIDAD_1
+Se elimino la fila RESULTADOS_1: RESULTADOS_1
+Se elimino la fila INGRESOS_Y_GASTOS_FINANCIEROS_1: INGRESOS_Y_GASTOS_FINANCIEROS_1
+Se elimino la fila EFICIENCIA_ADMINISTRATIVA: EFICIENCIA_ADMINISTRATIVA
+Se elimino la fila RATIOS_DE_EFICIENCIA_1: RATIOS_DE_EFICIENCIA_1
+Se elimino la fila ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION: ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION
+Se elimino la fila CALCULO_SPREAD_EFECTIVO_1: CALCULO_SPREAD_EFECTIVO_1
+Se elimino la fila UTILIZACION_DEL_SPREAD_EFECTIVO_1: UTILIZACION_DEL_SPREAD_EFECTIVO_1
++
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\11\BcosMultiples1114\201411_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2014 / 11
+Se elimino la hoja BBDD para crear una nueva...
+Se elimino la hoja BBDD_MOD para crear una nueva...
+La hoja con los datos es: 9032 (2)
+se encontro la hoja
+Celda Inicial: 7, Value: ESTRUCTURA DE ACTIVOS
+Celda Final: 119, Value:   UTILIDAD NETA
+CelTiBn: 5, Value: BNB
+CelInicial: 51, Value:     Activo improductivo/Patrimonio
+Celda Final: 58, Value: RENTABILIDAD (1)
++
+Se elimino la fila ESTRUCTURA_DE_ACTIVOS: ESTRUCTURA_DE_ACTIVOS
+Se elimino la fila ESTRUCTURA_DE_PASIVOS: ESTRUCTURA_DE_PASIVOS
+Se elimino la fila ESTRUCTURA_DE_OBLIGACIONES: ESTRUCTURA_DE_OBLIGACIONES
+Se elimino la fila CALIDAD_DE_CARTERA_1: CALIDAD_DE_CARTERA_1
+Se elimino la fila LIQUIDEZ: LIQUIDEZ
+Se elimino la fila SOLVENCIA: SOLVENCIA
+Se elimino la fila ESTRUCTURA_FINANCIERA: ESTRUCTURA_FINANCIERA
+Se elimino la fila RENTABILIDAD_1: RENTABILIDAD_1
+Se elimino la fila RESULTADOS_1: RESULTADOS_1
+Se elimino la fila INGRESOS_Y_GASTOS_FINANCIEROS_1: INGRESOS_Y_GASTOS_FINANCIEROS_1
+Se elimino la fila EFICIENCIA_ADMINISTRATIVA: EFICIENCIA_ADMINISTRATIVA
+No se encontro RATIOS_DE_EFICIENCIA_1: Para poder eliminar la fila.
+Se elimino la fila ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION: ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION
+No se encontro CALCULO_SPREAD_EFECTIVO_1: Para poder eliminar la fila.
+Se elimino la fila UTILIZACION_DEL_SPREAD_EFECTIVO_1: UTILIZACION_DEL_SPREAD_EFECTIVO_1
++
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\11\BcosPYME1114\201411_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2014 / 11
+Se elimino la hoja BBDD para crear una nueva...
+Se elimino la hoja BBDD_MOD para crear una nueva...
+La hoja con los datos es: 9033 (2)
+se encontro la hoja
+Celda Inicial: 10, Value: ESTRUCTURA DE ACTIVOS
+Celda Final: 123, Value:   UTILIDAD NETA
+CelTiBn: 8, Value: PLA
+CelInicial: 51, Value:     Activo improductivo/Patrimonio
+Celda Final: 59, Value: RENTABILIDAD (1)
++
+Se elimino la fila ESTRUCTURA_DE_ACTIVOS: ESTRUCTURA_DE_ACTIVOS
+Se elimino la fila ESTRUCTURA_DE_PASIVOS: ESTRUCTURA_DE_PASIVOS
+Se elimino la fila ESTRUCTURA_DE_OBLIGACIONES: ESTRUCTURA_DE_OBLIGACIONES
+Se elimino la fila CALIDAD_DE_CARTERA_1: CALIDAD_DE_CARTERA_1
+Se elimino la fila LIQUIDEZ: LIQUIDEZ
+Se elimino la fila SOLVENCIA: SOLVENCIA
+Se elimino la fila ESTRUCTURA_FINANCIERA: ESTRUCTURA_FINANCIERA
+Se elimino la fila RENTABILIDAD_1: RENTABILIDAD_1
+Se elimino la fila RESULTADOS_1: RESULTADOS_1
+Se elimino la fila INGRESOS_Y_GASTOS_FINANCIEROS_1: INGRESOS_Y_GASTOS_FINANCIEROS_1
+Se elimino la fila EFICIENCIA_ADMINISTRATIVA: EFICIENCIA_ADMINISTRATIVA
+No se encontro RATIOS_DE_EFICIENCIA_1: Para poder eliminar la fila.
+Se elimino la fila ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION: ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION
+No se encontro CALCULO_SPREAD_EFECTIVO_1: Para poder eliminar la fila.
+Se elimino la fila UTILIZACION_DEL_SPREAD_EFECTIVO_1: UTILIZACION_DEL_SPREAD_EFECTIVO_1
++
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\11\Nobancos1114\201411_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2014 / 11
+Se elimino la hoja BBDD para crear una nueva...
+Se elimino la hoja BBDD_MOD para crear una nueva...
+La hoja con los datos es: 8100 (2)
+se encontro la hoja
+Celda Inicial: 8, Value: ESTRUCTURA DE ACTIVOS
+Celda Final: 120, Value:     UTILIDAD NETA
+CelTiBn: 6, Value: CJN
+CelInicial: 51, Value:     Activo improductivo/Patrimonio
+Celda Final: 58, Value: RENTABILIDAD (1)
++
+Se elimino la fila ESTRUCTURA_DE_ACTIVOS: ESTRUCTURA_DE_ACTIVOS
+Se elimino la fila ESTRUCTURA_DE_PASIVOS: ESTRUCTURA_DE_PASIVOS
+Se elimino la fila ESTRUCTURA_DE_OBLIGACIONES: ESTRUCTURA_DE_OBLIGACIONES
+Se elimino la fila CALIDAD_DE_CARTERA_1: CALIDAD_DE_CARTERA_1
+Se elimino la fila LIQUIDEZ: LIQUIDEZ
+Se elimino la fila SOLVENCIA: SOLVENCIA
+Se elimino la fila ESTRUCTURA_FINANCIERA: ESTRUCTURA_FINANCIERA
+Se elimino la fila RENTABILIDAD_1: RENTABILIDAD_1
+Se elimino la fila RESULTADOS_1: RESULTADOS_1
+Se elimino la fila INGRESOS_Y_GASTOS_FINANCIEROS_1: INGRESOS_Y_GASTOS_FINANCIEROS_1
+Se elimino la fila EFICIENCIA_ADMINISTRATIVA: EFICIENCIA_ADMINISTRATIVA
+Se elimino la fila RATIOS_DE_EFICIENCIA_1: RATIOS_DE_EFICIENCIA_1
+Se elimino la fila ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION: ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION
+Se elimino la fila CALCULO_SPREAD_EFECTIVO_1: CALCULO_SPREAD_EFECTIVO_1
+Se elimino la fila UTILIZACION_DEL_SPREAD_EFECTIVO_1: UTILIZACION_DEL_SPREAD_EFECTIVO_1
++
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\12\BcosMultiples1214\201412_BMU_IndicadoresFinancieros.xls
+Fecha EEFF: 2014 / 12
+Se elimino la hoja BBDD para crear una nueva...
+Se elimino la hoja BBDD_MOD para crear una nueva...
+La hoja con los datos es: 9032 (2)
+se encontro la hoja
+Celda Inicial: 10, Value: ESTRUCTURA DE ACTIVOS
+Celda Final: 123, Value:   UTILIDAD NETA
+CelTiBn: 8, Value: BNB
+CelInicial: 51, Value:     Activo improductivo/Patrimonio
+Celda Final: 59, Value: RENTABILIDAD (1)
++
+Se elimino la fila ESTRUCTURA_DE_ACTIVOS: ESTRUCTURA_DE_ACTIVOS
+Se elimino la fila ESTRUCTURA_DE_PASIVOS: ESTRUCTURA_DE_PASIVOS
+Se elimino la fila ESTRUCTURA_DE_OBLIGACIONES: ESTRUCTURA_DE_OBLIGACIONES
+Se elimino la fila CALIDAD_DE_CARTERA_1: CALIDAD_DE_CARTERA_1
+Se elimino la fila LIQUIDEZ: LIQUIDEZ
+Se elimino la fila SOLVENCIA: SOLVENCIA
+Se elimino la fila ESTRUCTURA_FINANCIERA: ESTRUCTURA_FINANCIERA
+Se elimino la fila RENTABILIDAD_1: RENTABILIDAD_1
+Se elimino la fila RESULTADOS_1: RESULTADOS_1
+Se elimino la fila INGRESOS_Y_GASTOS_FINANCIEROS_1: INGRESOS_Y_GASTOS_FINANCIEROS_1
+Se elimino la fila EFICIENCIA_ADMINISTRATIVA: EFICIENCIA_ADMINISTRATIVA
+No se encontro RATIOS_DE_EFICIENCIA_1: Para poder eliminar la fila.
+Se elimino la fila ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION: ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION
+No se encontro CALCULO_SPREAD_EFECTIVO_1: Para poder eliminar la fila.
+Se elimino la fila UTILIZACION_DEL_SPREAD_EFECTIVO_1: UTILIZACION_DEL_SPREAD_EFECTIVO_1
++
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\12\BcosPYME1214\201412_BPY_IndicadoresFinancieros.xls
+Fecha EEFF: 2014 / 12
+Se elimino la hoja BBDD para crear una nueva...
+Se elimino la hoja BBDD_MOD para crear una nueva...
+La hoja con los datos es: 9033 (2)
+se encontro la hoja
+Celda Inicial: 10, Value: ESTRUCTURA DE ACTIVOS
+Celda Final: 123, Value:   UTILIDAD NETA
+CelTiBn: 8, Value: PLA
+CelInicial: 51, Value:     Activo improductivo/Patrimonio
+Celda Final: 59, Value: RENTABILIDAD (1)
++
+Se elimino la fila ESTRUCTURA_DE_ACTIVOS: ESTRUCTURA_DE_ACTIVOS
+Se elimino la fila ESTRUCTURA_DE_PASIVOS: ESTRUCTURA_DE_PASIVOS
+Se elimino la fila ESTRUCTURA_DE_OBLIGACIONES: ESTRUCTURA_DE_OBLIGACIONES
+Se elimino la fila CALIDAD_DE_CARTERA_1: CALIDAD_DE_CARTERA_1
+Se elimino la fila LIQUIDEZ: LIQUIDEZ
+Se elimino la fila SOLVENCIA: SOLVENCIA
+Se elimino la fila ESTRUCTURA_FINANCIERA: ESTRUCTURA_FINANCIERA
+Se elimino la fila RENTABILIDAD_1: RENTABILIDAD_1
+Se elimino la fila RESULTADOS_1: RESULTADOS_1
+Se elimino la fila INGRESOS_Y_GASTOS_FINANCIEROS_1: INGRESOS_Y_GASTOS_FINANCIEROS_1
+Se elimino la fila EFICIENCIA_ADMINISTRATIVA: EFICIENCIA_ADMINISTRATIVA
+No se encontro RATIOS_DE_EFICIENCIA_1: Para poder eliminar la fila.
+Se elimino la fila ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION: ESTRUCTURA_DE_GASTOS_DE_ADMINISTRACION
+No se encontro CALCULO_SPREAD_EFECTIVO_1: Para poder eliminar la fila.
+Se elimino la fila UTILIZACION_DEL_SPREAD_EFECTIVO_1: UTILIZACION_DEL_SPREAD_EFECTIVO_1
++
+-------------------------------------------
+El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\12\Nobancos1214\201412_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2014 / 12
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+La hoja con los datos es: 8100 (2)
+se encontro la hoja
+Celda Inicial: 10, Value: ESTRUCTURA DE ACTIVOS
+Celda Final: 123, Value:     UTILIDAD NETA
+CelTiBn: 8, Value: CJN
+CelInicial: 51, Value:     Activo improductivo/Patrimonio
+###############################################################################
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\12\Nobancos1214\201412_COO_IndicadoresFinancieros.xls
+Fecha EEFF: 2014 / 12
+ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
+DESCRIPCION: Los tipos no coinciden. (Excepción de HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+STACK_TRACE:    en System.RuntimeType.ForwardCallToInvokeMember(String memberName, BindingFlags flags, Object target, Int32[] aWrapperTypes, MessageData& msgData)
+   en Microsoft.Office.Interop.Excel.Range.get__Default(Object RowIndex, Object ColumnIndex)
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.eliminarFilasInter_TP1(Worksheet ExcelWkSheet, String txtIn, String txtFn, Int64 colBusq) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 392
+   en ConsoleAppPrepararDatos.BB_ProcedimientosEdicionHojas.Editar_Indicadores_Financieros(Workbook ExcelWkBook, Int64 gestion, Int32 mes, Int32 tipoEndidadInd) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\BB_ProcedimientosEdicionHojas.vb:línea 237
+   en ConsoleAppPrepararDatos.ZZ_ProcedimientosExtras.cargarProcedimientoEdcion(Workbook ExcelWkBook, Int64 gestion, Int32 mes, Int32 tipoEndidadInd, String categoriaHojas) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_ProcedimientosExtras.vb:línea 454
+   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 121
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###############################################################################
+-------------------------------------------
+¿Deseas ejecutar la gestion 2015 de Indicadores Financieros?
+¿Deseas ejecutar la gestion 2016 de Indicadores Financieros?
+¿Deseas ejecutar la gestion 2017 de Indicadores Financieros?
+¿Deseas ejecutar la gestion 2018 de Indicadores Financieros?
+¿Deseas ejecutar la gestion 2019 de Indicadores Financieros?
+¿Deseas ejecutar la gestion 2020 de Indicadores Financieros?
+¿Deseas ejecutar la gestion 2021 de Indicadores Financieros?
+¿Deseas ejecutar la gestion 2022 de Indicadores Financieros?
+¿Deseas ejecutar la gestion 2023 de Indicadores Financieros?
+###############################################################################
+Se acabo con los archivos de Indicadores Financieros
+###############################################################################
+¿Deseas ejecutar la seccion de indicadores financieros - ponderacion de activos?
+¿Deseas ejecutar la seccion de captaciones?
+¿Deseas ejecutar la seccion de colocaciones?
+¿Deseas ejecutar la seccion de operaciones interbancarias?
+¿Deseas ejecutar la seccion de estados financieros desagregados?
+¿Deseas ejecutar la seccion de agencias, sucursales y numero de empleados?
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+¿ESTADOS DESEA EJECUTAR LA ENUMERACION DE LOS CAMPOS DE LOS ESTADOS?
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+¿DESEA EJECUTAR AGREGAR CAMPOS?
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+¿DESEA EJECUTAR LA UNION DE LAS HOJAS?
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
