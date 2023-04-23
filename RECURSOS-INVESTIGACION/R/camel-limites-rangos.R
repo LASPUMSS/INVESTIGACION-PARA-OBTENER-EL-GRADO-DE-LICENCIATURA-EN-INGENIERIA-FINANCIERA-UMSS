@@ -31,7 +31,8 @@ getDatCamelRangosLimites <- function(datCamelIndNorm){
     camel_limites <- Reduce(function(x, y) merge(x, y, by='indicador'), list(l1, l2, l3,l4,l5))
     
     
-    indicadoresCamelId <- c('DESCENDENTE',
+    indicadoresCamelId <- c('ASCENDENTE',        
+                            'DESCENDENTE',
                             'DESCENDENTE',
                             'ASCENDENTE',
                             

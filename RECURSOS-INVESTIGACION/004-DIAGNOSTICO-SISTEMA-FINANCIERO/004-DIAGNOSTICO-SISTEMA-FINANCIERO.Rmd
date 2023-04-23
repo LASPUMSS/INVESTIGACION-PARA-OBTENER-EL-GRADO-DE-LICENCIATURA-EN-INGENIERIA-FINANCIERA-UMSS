@@ -26,6 +26,15 @@ La metodología a aplicar para realizar diagnóstico de las instituciones financ
 
 ### Capital
 
+#### Coeficiente De Adecuación Patrimonial
+
+```{r, out.width='100%', fig.cap='Coeficiente De Adecuación Patrimonial'}
+id <- 'indCap_CAP'
+plotIndCamel(id, datCamelIndNorm)
+```
+
+
+\newpage
 #### Coeficiente De Cobertura De Cartera En Mora
 
 ```{r, out.width='100%', fig.cap='Coeficiente De Cobertura De Cartera En Mora'}

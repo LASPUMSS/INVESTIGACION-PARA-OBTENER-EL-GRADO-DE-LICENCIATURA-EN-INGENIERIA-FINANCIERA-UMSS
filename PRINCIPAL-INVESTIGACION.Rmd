@@ -23,9 +23,10 @@ knitr::opts_chunk$set(echo = FALSE,
                       out.width='100%')
 ```
 
-\pagenumbering{roman}
-
 \includepdf[pages=-]{RECURSOS-INVESTIGACION/CARATULA-TESIS/CARATULA-TESIS}
+
+\clearpage
+\pagenumbering{roman}
 
 \newpage
 \tableofcontents

@@ -1,4 +1,4 @@
-getDatCamelInd <- function(variables) {
+getDatCamelInd <- function() {
     # Paquetes necesarios
     require(openxlsx)
     require(dplyr)
@@ -7,14 +7,19 @@ getDatCamelInd <- function(variables) {
     source('../../RECURSOS-INVESTIGACION/R/camel-indicadores-functions.R')
     
     # Carga de datos
-    dat <- read.xlsx('../../FUENTES-DE-DATOS/ASFI/ConsoleAppPrepararDatos/bin/Debug/DATOS_ASFI/BBDD_ESTADOS_FINANCIEROS.xlsx')
+    dat <- read.xlsx('../../FUENTES-DE-DATOS/ASFI/ConsoleAppPrepararDatos/bin/Debug/DATOS_ASFI/BBDD_ESTADOS_FINANCIEROS.xlsx') 
     
     dat$FECHA <- convertToDate(dat$FECHA)
     
     dat <- dat %>% group_by(TIPO_DE_ENTIDAD, FECHA) %>% summarise_if(is.numeric, sum)
     dat <- dat[ , !(names(dat) %in% c('GESTION','MES','DIA'))]
     
-    datCamelInd <- data.frame(TIPO_DE_ENTIDAD=dat$TIPO_DE_ENTIDAD,FECHA=dat$FECHA)
+    
+    datCamelInd <- data.frame(ID=paste0(dat$TIPO_DE_ENTIDAD,
+                                        format(dat$FECHA, format='%Y'),
+                                        format(dat$FECHA, format='%m')),
+                              TIPO_DE_ENTIDAD=dat$TIPO_DE_ENTIDAD,
+                              FECHA=dat$FECHA)
     
     # Variables
     
@@ -44,6 +49,8 @@ getDatCamelInd <- function(variables) {
     pasivoCP <- dat$PASIVO # Revisar
     
     #### INDICADORES DE CAPITAL
+    
+    datCamelInd$indCap_CAP <- rep(NA,nrow(dat))
     
     datCamelInd$indCap_CCCM <- INDICADORES_CAMEL$indCap_CCCM(cartVnc = cartVnc,
                                                              cartEjc = cartEjc,
@@ -109,6 +116,28 @@ getDatCamelInd <- function(variables) {
     
     datCamelInd$indLq_CACPP <- INDICADORES_CAMEL$indLq_CACPP(disponibles = disponibles,
                                                                pasivoCP = pasivoCP)
+    
+    
+    ### ANEXO - INDICADOR DE ADECUACIÓN PATRIMONIAL
+    
+    dat2 <- read.xlsx('../../FUENTES-DE-DATOS/ASFI/ConsoleAppPrepararDatos/bin/Debug/DATOS_ASFI/BBDD_INDICADORES_FINANCIEROS.xlsx')
+    dat2$FECHA <- convertToDate(dat2$FECHA)
+    dat2 <- dat2[gsub(' ','',dat2$ENTIDIDAD)=='TOTALSISTEMA',]
+    
+    dat2$ID <- paste0(dat2$TIPO_DE_ENTIDAD,
+                      format(dat2$FECHA, format='%Y'),
+                      format(dat2$FECHA, format='%m'))
+    
+    dat2 <- dat2[,c('ID','COEFICIENTE_DE_ADECUACION_PATRIMONIAL')]
+    names(dat2) <- c('ID','indCap_CAP')
+    
+    datResult <- left_join(datCamelInd, dat2, 
+                           by = join_by(ID == ID), 
+                           relationship = 'one-to-one', 
+                           suffix = c("x", ""))[,'indCap_CAP']
+    
+    datCamelInd$indCap_CAP <- datResult
+
     
     
     return(datCamelInd)

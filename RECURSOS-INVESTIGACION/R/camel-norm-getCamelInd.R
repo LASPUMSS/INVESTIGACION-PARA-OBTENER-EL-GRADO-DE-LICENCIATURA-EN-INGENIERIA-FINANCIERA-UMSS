@@ -21,6 +21,7 @@ getDatCamelIndNorm <- function(gestionInc=2014, gestionFn=2022) {
         FECHA=rep(NA,n),
         TIPO_DE_ENTIDAD=rep(NA,n),
         
+        indCap_CAP=rep(NA,n),
         indCap_CCCM=rep(NA,n),
         indCap_CACCM=rep(NA,n),
         indCap_CCP=rep(NA,n),
@@ -69,7 +70,6 @@ getDatCamelIndNorm <- function(gestionInc=2014, gestionFn=2022) {
     datCamelIndNorm$ID <- paste0(datCamelIndNorm$TIPO_DE_ENTIDAD,
                                  format(datCamelIndNorm$FECHA, format='%Y'),
                                  format(datCamelIndNorm$FECHA, format='%m'))
-    
     
     datResult <- data.frame()
     datResult <- datCamelIndNorm[!(datCamelIndNorm$ID %in% datCamelInd$ID),]
