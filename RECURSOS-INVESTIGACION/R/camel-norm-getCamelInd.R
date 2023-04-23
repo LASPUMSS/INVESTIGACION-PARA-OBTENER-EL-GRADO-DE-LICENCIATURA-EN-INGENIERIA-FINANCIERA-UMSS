@@ -1,6 +1,9 @@
 
 getDatCamelIndNorm <- function(gestionInc=2014, gestionFn=2022) {
     
+    # Librerias necesarias
+    require(dplyr)
+    
     # Funciones necesarias
     source('../../RECURSOS-INVESTIGACION/R/camel-get-datCamelInd.R')
     
@@ -8,6 +11,7 @@ getDatCamelIndNorm <- function(gestionInc=2014, gestionFn=2022) {
     datCamelInd$ID <- paste0(datCamelInd$TIPO_DE_ENTIDAD,
                              format(datCamelInd$FECHA, format='%Y'),
                              format(datCamelInd$FECHA, format='%m'))
+    datCamelInd <- select(datCamelInd, -c(TIPO_DE_ENTIDAD, FECHA))
     
     # Numero de filas que debera tener el data.frame 
     nGestiones <- (gestionFn-gestionInc+1)
@@ -18,8 +22,8 @@ getDatCamelIndNorm <- function(gestionInc=2014, gestionFn=2022) {
     datCamelIndNorm <- data.frame(
         
         ID=rep(NA,n),
-        FECHA=rep(NA,n),
         TIPO_DE_ENTIDAD=rep(NA,n),
+        FECHA=rep(NA,n),
         
         indCap_CAP=rep(NA,n),
         indCap_CCCM=rep(NA,n),
@@ -71,9 +75,15 @@ getDatCamelIndNorm <- function(gestionInc=2014, gestionFn=2022) {
                                  format(datCamelIndNorm$FECHA, format='%Y'),
                                  format(datCamelIndNorm$FECHA, format='%m'))
     
-    datResult <- data.frame()
-    datResult <- datCamelIndNorm[!(datCamelIndNorm$ID %in% datCamelInd$ID),]
-    datResult <- merge(datResult, datCamelInd, all = T)
+    
+    datResult <- 
+        left_join(datCamelIndNorm, 
+                  datCamelInd, 
+                  by = join_by(ID == ID), 
+                  relationship = 'one-to-one', 
+                  suffix = c("_x", "")) %>% 
+        select(-ends_with("_x")) %>% 
+        relocate(FECHA, .after = ID)
     
     return(datResult)
 }

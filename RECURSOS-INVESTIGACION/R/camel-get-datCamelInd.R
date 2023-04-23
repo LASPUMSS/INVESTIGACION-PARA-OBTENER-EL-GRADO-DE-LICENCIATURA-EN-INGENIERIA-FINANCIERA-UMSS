@@ -131,14 +131,14 @@ getDatCamelInd <- function() {
     dat2 <- dat2[,c('ID','COEFICIENTE_DE_ADECUACION_PATRIMONIAL')]
     names(dat2) <- c('ID','indCap_CAP')
     
-    datResult <- left_join(datCamelInd, dat2, 
+    datResult <- 
+        left_join(datCamelInd, dat2, 
                            by = join_by(ID == ID), 
                            relationship = 'one-to-one', 
-                           suffix = c("x", ""))[,'indCap_CAP']
+                           suffix = c("x", "")) %>% 
+        select(-c(indCap_CAPx)) %>% 
+        relocate(indCap_CAP, .after = FECHA)
     
-    datCamelInd$indCap_CAP <- datResult
-
     
-    
-    return(datCamelInd)
+    return(datResult)
 }

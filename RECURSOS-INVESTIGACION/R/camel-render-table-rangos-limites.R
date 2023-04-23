@@ -1,5 +1,12 @@
 getTableCamelRangosLimites <- function(dat) {
     
+    dat$INDICADOR <- gsub('indCap ', '',
+                          gsub('indAct ', '',
+                               gsub('indAdm ', '',
+                                    gsub('indBenf ', '',
+                                         gsub('indLq ', '',
+                                              gsub('_',' ', dat$INDICADOR))))))
+    
     require(knitr)
     require(kableExtra)
     
