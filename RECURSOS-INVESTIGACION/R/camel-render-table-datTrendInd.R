@@ -3,6 +3,8 @@ getTableTrendInd <- function(dat, captionTable='') {
     require(knitr)
     require(kableExtra)
     
+    names(dat) <- gsub('_',' ', names(dat))
+    
     result <- 
         kbl(dat, 
             longtable = T, 

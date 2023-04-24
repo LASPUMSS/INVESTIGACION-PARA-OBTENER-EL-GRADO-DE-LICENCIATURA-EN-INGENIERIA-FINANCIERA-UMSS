@@ -76,7 +76,14 @@ datCamelCalificacionIndicadores <- getDatCamelCalificacionIndicadores(datCamelIn
 
 datCamelCalificacionEntidad <- getDatCamelCalificacionEntidad(datCamelCalificacionIndicadores)
 
-getTableSimpleRender(datCamelCalificacionEntidad, 'Calificacion CAMEL')
+```
 
+```{r}
+dat <- datCamelCalificacionEntidad[,-1]
+
+dat$TIPO_DE_ENTIDAD <- gsub('_',' ', dat$TIPO_DE_ENTIDAD)
+names(dat) <- gsub('_',' ', names(dat))
+
+getTableSimpleRender(dat, 'Calificacion CAMEL')
 ```
 
