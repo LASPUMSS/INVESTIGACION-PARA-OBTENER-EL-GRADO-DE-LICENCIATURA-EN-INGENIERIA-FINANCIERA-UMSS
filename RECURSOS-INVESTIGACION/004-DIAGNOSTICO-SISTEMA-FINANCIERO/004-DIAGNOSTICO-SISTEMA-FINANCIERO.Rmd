@@ -10,6 +10,8 @@ source('../R/camel-limites-rangos.R')
 source('../R/camel-render-table-rangos-limites.R')
 source('../R/camel-calificacion-indicadores.R')
 source('../R/camel-calificacion-entidad.R')
+source('../R/camel-tendencia-indicadores.R')
+source('../R/camel-render-table-datTrendInd.R')
 ```
 
 <!-- DATOS -->
@@ -33,6 +35,12 @@ id <- 'indCap_CAP'
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+```{r}
+datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+getTableTrendInd(datTrendInd, 
+                 captionTable ='Tendencia del coeficiente de adecuación patrimonial por tipo de entidad' )
+```
+
 
 \newpage
 #### Coeficiente de cobertura de cartera en mora
@@ -40,6 +48,12 @@ plotIndCamel(id, datCamelIndNorm)
 ```{r, out.width='100%', fig.cap='Coeficiente de cobertura de cartera en mora'}
 id <- 'indCap_CCCM'
 plotIndCamel(id, datCamelIndNorm)
+```
+
+```{r}
+datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+getTableTrendInd(datTrendInd, 
+                 captionTable ='Tendencia del coeficiente de cobertura de cartera en mora por tipo de entidad' )
 ```
 
 \newpage
@@ -50,12 +64,25 @@ id <- 'indCap_CACCM'
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+```{r}
+datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+getTableTrendInd(datTrendInd, 
+                 captionTable ='Tendencia del coeficiente acido de cobertura de cartera en mora por tipo de entidad' )
+```
+
+
 \newpage
 #### Coeficiente de cobertura patrimonial 
 
 ```{r, out.width='100%', fig.cap='Coeficiente de cobertura patrimonial'}
 id <- 'indCap_CCP'
 plotIndCamel(id, datCamelIndNorm)
+```
+
+```{r}
+datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+getTableTrendInd(datTrendInd, 
+                 captionTable ='Tendencia del coeficiente de cobertura patrimonial por tipo de entidad' )
 ```
 
 \newpage
@@ -68,12 +95,24 @@ id <- 'indAct_CEC'
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+```{r}
+datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+getTableTrendInd(datTrendInd, 
+                 captionTable ='Tendencia del coeficiente de exposición de cartera por tipo de entidad' )
+```
+
 \newpage
 #### Coeficiente de previsión de cartera
 
 ```{r, out.width='100%', fig.cap='Coeficiente de previsión de cartera'}
 id <- 'indAct_CPC'
 plotIndCamel(id, datCamelIndNorm)
+```
+
+```{r}
+datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+getTableTrendInd(datTrendInd, 
+                 captionTable ='Tendencia del coeficiente de previsión de cartera por tipo de entidad' )
 ```
 
 \newpage
@@ -84,6 +123,12 @@ id <- 'indAct_CPCM'
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+```{r}
+datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+getTableTrendInd(datTrendInd, 
+                 captionTable ='Tendencia del coeficiente de previsión de cartera en mora por tipo de entidad' )
+```
+
 \newpage
 #### Coeficiente de reposición de cartera
 
@@ -91,6 +136,13 @@ plotIndCamel(id, datCamelIndNorm)
 id <- 'indAct_CRC'
 plotIndCamel(id, datCamelIndNorm)
 ```
+
+```{r}
+datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+getTableTrendInd(datTrendInd, 
+                 captionTable ='Tendencia del coeficiente de reposición de cartera por tipo de entidad' )
+```
+
 
 \newpage
 ### Administración
@@ -102,12 +154,24 @@ id <- 'indAdm_CCGA'
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+```{r}
+datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+getTableTrendInd(datTrendInd, 
+                 captionTable ='Tendencia del coeficiente de cobertura gastos administrativos por tipo de entidad' )
+```
+
 \newpage
 #### Coeficiente acido de cobertura patrimonial
 
 ```{r, out.width='100%', fig.cap='Coeficiente acido de cobertura patrimonial'}
 id <- 'indAdm_CACGA'
 plotIndCamel(id, datCamelIndNorm)
+```
+
+```{r}
+datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+getTableTrendInd(datTrendInd, 
+                 captionTable ='Tendencia del coeficiente acido de cobertura patrimonial por tipo de entidad' )
 ```
 
 \newpage
@@ -120,12 +184,24 @@ id <- 'indBenf_ROA'
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+```{r}
+datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+getTableTrendInd(datTrendInd, 
+                 captionTable ='Tendencia del coeficiente de rendimiento sobre activos por tipo de entidad' )
+```
+
 \newpage
 #### Coeficiente de rendimiento sobre patrimonio
 
 ```{r, out.width='100%', fig.cap='Coeficiente de rendimiento sobre patrimonio'}
 id <- 'indBenf_ROE'
 plotIndCamel(id, datCamelIndNorm)
+```
+
+```{r}
+datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+getTableTrendInd(datTrendInd, 
+                 captionTable ='Tendencia del coeficiente de rendimiento sobre patrimonio por tipo de entidad' )
 ```
 
 \newpage
@@ -138,6 +214,12 @@ id <- 'indLq_CCPP'
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+```{r}
+datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+getTableTrendInd(datTrendInd, 
+                 captionTable ='Tendencia del coeficiente de capacidad de pago frente a pasivos por tipo de entidad' )
+```
+
 \newpage
 #### Coeficiente acido de capacidad de pago frente a pasivos
 
@@ -146,6 +228,11 @@ id <- 'indLq_CACPP'
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+```{r}
+datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+getTableTrendInd(datTrendInd, 
+                 captionTable ='Tendencia del coeficiente acido de capacidad de pago frente a pasivos por tipo de entidad' )
+```
 
 \newpage
 ## Definición de rangos y limites de los indicadores
