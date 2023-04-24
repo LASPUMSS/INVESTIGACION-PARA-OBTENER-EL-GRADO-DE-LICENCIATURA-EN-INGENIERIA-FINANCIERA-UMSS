@@ -25,7 +25,8 @@ plotIndCamel <- function(id, dat) {
                           gsub('indAdm_', '',
                                gsub('indBenf_', '',
                                     gsub('indLq_', '',id)))))
-        
+    
+ 
     p1 <- autoplot(tsDat, xlab = 'Tiempo', ylab = nameYlab) + 
         theme(legend.position="bottom", legend.text=element_text(size=8)) + 
         guides(color=guide_legend(ncol=2, title="")) + 
