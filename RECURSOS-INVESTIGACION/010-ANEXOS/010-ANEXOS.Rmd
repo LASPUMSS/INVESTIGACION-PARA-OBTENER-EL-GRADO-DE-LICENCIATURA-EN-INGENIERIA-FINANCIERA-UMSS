@@ -5,6 +5,12 @@ output: pdf_document
 ```{r}
 source('../R/camel-norm-getCamelInd.R')
 source('../R/camel-render-table-datCamelIndNorm.R')
+
+source('../R/camel-limites-rangos.R')
+source('../R/camel-calificacion-indicadores.R')
+source('../R/camel-calificacion-entidad.R')
+source('../R/camel-render-table-simple.R')
+
 ```
 
 
@@ -56,4 +62,21 @@ id <- 'indLq'
 getTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de liquidez CAMEL')
 ```
 
+
+
+\newpage
+\subsection*{Anexo 3 - Calificaciones CAMEL}
+
+```{r}
+
+datCamelRangosLimites <- getDatCamelRangosLimites(datCamelIndNorm)
+
+datCamelCalificacionIndicadores <- getDatCamelCalificacionIndicadores(datCamelIndNorm,
+                                                                      datCamelRangosLimites)
+
+datCamelCalificacionEntidad <- getDatCamelCalificacionEntidad(datCamelCalificacionIndicadores)
+
+getTableSimpleRender(datCamelCalificacionEntidad, 'Calificacion CAMEL')
+
+```
 
