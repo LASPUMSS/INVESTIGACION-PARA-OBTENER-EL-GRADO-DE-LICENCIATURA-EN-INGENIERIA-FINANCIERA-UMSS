@@ -1,15 +1,3 @@
-\usepackage{pdfpages}
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
-\usepackage{graphicx}
-\usepackage{copyrightbox}
-\usepackage{titlesec}
-\usepackage{float}
-\floatplacement{figure}{H}
-
-\usepackage{multirow}
-\usepackage{rotating} % Para girar tablas
-
 % Paquetes para kable_extra
 \usepackage{booktabs}
 \usepackage{longtable}
@@ -25,12 +13,24 @@
 \usepackage[normalem]{ulem}
 \usepackage{makecell}
 \usepackage{xcolor}
+% -----------------------
+
+\usepackage{pdfpages} % Para insertar pdfs
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+%\usepackage{graphicx}
+%\usepackage{copyrightbox}
+\usepackage{titlesec}
+
+\floatplacement{figure}{H}
+
+\usepackage{multirow} % Para tablas
+\usepackage{rotating} % Para girar tablas
+
 
 
 \addto\captionsspanish{
 \renewcommand{\contentsname}{Indice capitular}
-\renewcommand{\partname}{Parte}
-\renewcommand{\chaptername}{Capítulo}
 \renewcommand{\listfigurename}{Lista de figuras}
 \renewcommand{\listtablename}{Lista de tablas}
 \renewcommand{\figurename}{Figura}

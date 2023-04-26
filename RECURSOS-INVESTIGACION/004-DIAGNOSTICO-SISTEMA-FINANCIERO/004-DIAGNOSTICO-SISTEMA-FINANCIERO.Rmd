@@ -6,6 +6,7 @@ output: pdf_document
 ```{r}
 source('../R/camel-plot-functions.R')
 source('../R/camel-norm-getCamelInd.R')
+source('../R/camel-get-datIdsNamesCamelInds.R')
 source('../R/camel-limites-rangos.R')
 source('../R/camel-render-table-rangos-limites.R')
 source('../R/camel-calificacion-indicadores.R')
@@ -17,6 +18,7 @@ source('../R/camel-render-table-datTrendInd.R')
 <!-- DATOS -->
 ```{r}
 datCamelIndNorm <- getDatCamelIndNorm(gestionInc = 2020)
+datIdsNamesCamelInds <- getDatIdsNamesCamelInds()
 ```
 
 # Diagnóstico de las instituciones financieras del sistema financiero de Bolivia
@@ -33,16 +35,26 @@ La metodología a aplicar para realizar diagnóstico de las instituciones financ
 ```{r}
 id <- 'indCap_CAP'
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+
+nameIndById <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'NOMBRES']
+idsDecreasing <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'DECRECIENTE']
+nameEntBestTrend <- datTrendInd[order(datTrendInd$TENDENCIA, decreasing = idsDecreasing),][1,1]
+trendBestEnt <- datTrendInd[order(datTrendInd$TENDENCIA,decreasing = idsDecreasing),][1,2]
 ```
 
-```{r, out.width='100%', fig.cap='Coeficiente de adecuación patrimonial'}
+```{r, out.width='100%', fig.cap=nameIndById}
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+El sector del sistema financiero con la tendencia mas favorable en el `r tolower(nameIndById)` atravez del tiempo son los `r tolower(nameEntBestTrend)` con una tendencia de `r trendBestEnt`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r trendBestEnt` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+
+
 ```{r}
 getTableTrendInd(datTrendInd, 
-                 captionTable ='Tendencia del CAP por tipo de entidad' )
+                 captionTable ='Tendencia del CAP por tipo de entidad',
+                 idsDecreasing=idsDecreasing)
 ```
+
 
 
 \newpage
@@ -51,15 +63,23 @@ getTableTrendInd(datTrendInd,
 ```{r}
 id <- 'indCap_CCCM'
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+
+nameIndById <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'NOMBRES']
+idsDecreasing <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'DECRECIENTE']
+nameEntBestTrend <- datTrendInd[order(datTrendInd$TENDENCIA, decreasing = idsDecreasing),][1,1]
+trendBestEnt <- datTrendInd[order(datTrendInd$TENDENCIA,decreasing = idsDecreasing),][1,2]
 ```
 
-```{r, out.width='100%', fig.cap='Coeficiente de cobertura de cartera en mora'}
+```{r, out.width='100%', fig.cap=nameIndById}
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+El sector del sistema financiero con la tendencia mas favorable en el `r tolower(nameIndById)` atravez del tiempo son los `r tolower(nameEntBestTrend)` con una tendencia de `r trendBestEnt`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r trendBestEnt` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+
 ```{r}
 getTableTrendInd(datTrendInd, 
-                 captionTable ='Tendencia del CCCM por tipo de entidad' )
+                 captionTable ='Tendencia del CCCM por tipo de entidad',
+                 idsDecreasing=idsDecreasing)
 ```
 
 \newpage
@@ -68,15 +88,23 @@ getTableTrendInd(datTrendInd,
 ```{r}
 id <- 'indCap_CACCM'
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+
+nameIndById <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'NOMBRES']
+idsDecreasing <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'DECRECIENTE']
+nameEntBestTrend <- datTrendInd[order(datTrendInd$TENDENCIA, decreasing = idsDecreasing),][1,1]
+trendBestEnt <- datTrendInd[order(datTrendInd$TENDENCIA,decreasing = idsDecreasing),][1,2]
 ```
 
-```{r, out.width='100%', fig.cap='Coeficiente acido de cobertura de cartera en mora'}
+```{r, out.width='100%', fig.cap=nameIndById}
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+El sector del sistema financiero con la tendencia mas favorable en el `r tolower(nameIndById)` atravez del tiempo son los `r tolower(nameEntBestTrend)` con una tendencia de `r trendBestEnt`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r trendBestEnt` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+
 ```{r}
 getTableTrendInd(datTrendInd, 
-                 captionTable ='Tendencia del CACCM por tipo de entidad' )
+                 captionTable ='Tendencia del CACCM por tipo de entidad',
+                 idsDecreasing=idsDecreasing)
 ```
 
 \newpage
@@ -85,15 +113,23 @@ getTableTrendInd(datTrendInd,
 ```{r}
 id <- 'indCap_CCP'
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+
+nameIndById <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'NOMBRES']
+idsDecreasing <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'DECRECIENTE']
+nameEntBestTrend <- datTrendInd[order(datTrendInd$TENDENCIA, decreasing = idsDecreasing),][1,1]
+trendBestEnt <- datTrendInd[order(datTrendInd$TENDENCIA,decreasing = idsDecreasing),][1,2]
 ```
 
-```{r, out.width='100%', fig.cap='Coeficiente de cobertura patrimonial'}
+```{r, out.width='100%', fig.cap=nameIndById}
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+El sector del sistema financiero con la tendencia mas favorable en el `r tolower(nameIndById)` atravez del tiempo son los `r tolower(nameEntBestTrend)` con una tendencia de `r trendBestEnt`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r trendBestEnt` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+
 ```{r}
 getTableTrendInd(datTrendInd, 
-                 captionTable ='Tendencia del CCP por tipo de entidad' )
+                 captionTable ='Tendencia del CCP por tipo de entidad',
+                 idsDecreasing=idsDecreasing)
 ```
 
 \newpage
@@ -104,15 +140,23 @@ getTableTrendInd(datTrendInd,
 ```{r}
 id <- 'indAct_CEC'
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+
+nameIndById <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'NOMBRES']
+idsDecreasing <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'DECRECIENTE']
+nameEntBestTrend <- datTrendInd[order(datTrendInd$TENDENCIA, decreasing = idsDecreasing),][1,1]
+trendBestEnt <- datTrendInd[order(datTrendInd$TENDENCIA,decreasing = idsDecreasing),][1,2]
 ```
 
-```{r, out.width='100%', fig.cap='Coeficiente de exposición de cartera'}
+```{r, out.width='100%', fig.cap=nameIndById}
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+El sector del sistema financiero con la tendencia mas favorable en el `r tolower(nameIndById)` atravez del tiempo son los `r tolower(nameEntBestTrend)` con una tendencia de `r trendBestEnt`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r trendBestEnt` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+
 ```{r}
 getTableTrendInd(datTrendInd, 
-                 captionTable ='Tendencia del CEC por tipo de entidad' )
+                 captionTable ='Tendencia del CEC por tipo de entidad',
+                 idsDecreasing=idsDecreasing)
 ```
 
 \newpage
@@ -121,15 +165,23 @@ getTableTrendInd(datTrendInd,
 ```{r}
 id <- 'indAct_CPC'
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+
+nameIndById <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'NOMBRES']
+idsDecreasing <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'DECRECIENTE']
+nameEntBestTrend <- datTrendInd[order(datTrendInd$TENDENCIA, decreasing = idsDecreasing),][1,1]
+trendBestEnt <- datTrendInd[order(datTrendInd$TENDENCIA,decreasing = idsDecreasing),][1,2]
 ```
 
-```{r, out.width='100%', fig.cap='Coeficiente de previsión de cartera'}
+```{r, out.width='100%', fig.cap=nameIndById}
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+El sector del sistema financiero con la tendencia mas favorable en el `r tolower(nameIndById)` atravez del tiempo son los `r tolower(nameEntBestTrend)` con una tendencia de `r trendBestEnt`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r trendBestEnt` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+
 ```{r}
 getTableTrendInd(datTrendInd, 
-                 captionTable ='Tendencia del CPC por tipo de entidad' )
+                 captionTable ='Tendencia del CPC por tipo de entidad',
+                 idsDecreasing=idsDecreasing)
 ```
 
 \newpage
@@ -138,15 +190,23 @@ getTableTrendInd(datTrendInd,
 ```{r}
 id <- 'indAct_CPCM'
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+
+nameIndById <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'NOMBRES']
+idsDecreasing <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'DECRECIENTE']
+nameEntBestTrend <- datTrendInd[order(datTrendInd$TENDENCIA, decreasing = idsDecreasing),][1,1]
+trendBestEnt <- datTrendInd[order(datTrendInd$TENDENCIA,decreasing = idsDecreasing),][1,2]
 ```
 
-```{r, out.width='100%', fig.cap='Coeficiente de previsión de cartera en mora'}
+```{r, out.width='100%', fig.cap=nameIndById}
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+El sector del sistema financiero con la tendencia mas favorable en el `r tolower(nameIndById)` atravez del tiempo son los `r tolower(nameEntBestTrend)` con una tendencia de `r trendBestEnt`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r trendBestEnt` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+
 ```{r}
 getTableTrendInd(datTrendInd, 
-                 captionTable ='Tendencia del CPCM por tipo de entidad' )
+                 captionTable ='Tendencia del CPCM por tipo de entidad',
+                 idsDecreasing=idsDecreasing)
 ```
 
 \newpage
@@ -155,15 +215,23 @@ getTableTrendInd(datTrendInd,
 ```{r}
 id <- 'indAct_CRC'
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+
+nameIndById <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'NOMBRES']
+idsDecreasing <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'DECRECIENTE']
+nameEntBestTrend <- datTrendInd[order(datTrendInd$TENDENCIA, decreasing = idsDecreasing),][1,1]
+trendBestEnt <- datTrendInd[order(datTrendInd$TENDENCIA,decreasing = idsDecreasing),][1,2]
 ```
 
-```{r, out.width='100%', fig.cap='Coeficiente de reposición de cartera'}
+```{r, out.width='100%', fig.cap=nameIndById}
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+El sector del sistema financiero con la tendencia mas favorable en el `r tolower(nameIndById)` atravez del tiempo son los `r tolower(nameEntBestTrend)` con una tendencia de `r trendBestEnt`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r trendBestEnt` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+
 ```{r}
 getTableTrendInd(datTrendInd, 
-                 captionTable ='Tendencia del CRC por tipo de entidad' )
+                 captionTable ='Tendencia del CRC por tipo de entidad',
+                 idsDecreasing=idsDecreasing)
 ```
 
 
@@ -175,15 +243,23 @@ getTableTrendInd(datTrendInd,
 ```{r}
 id <- 'indAdm_CCGA'
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+
+nameIndById <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'NOMBRES']
+idsDecreasing <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'DECRECIENTE']
+nameEntBestTrend <- datTrendInd[order(datTrendInd$TENDENCIA, decreasing = idsDecreasing),][1,1]
+trendBestEnt <- datTrendInd[order(datTrendInd$TENDENCIA,decreasing = idsDecreasing),][1,2]
 ```
 
-```{r, out.width='100%', fig.cap='Coeficiente de cobertura gastos administrativos'}
+```{r, out.width='100%', fig.cap=nameIndById}
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+El sector del sistema financiero con la tendencia mas favorable en el `r tolower(nameIndById)` atravez del tiempo son los `r tolower(nameEntBestTrend)` con una tendencia de `r trendBestEnt`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r trendBestEnt` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+
 ```{r}
 getTableTrendInd(datTrendInd, 
-                 captionTable ='Tendencia del CCGA por tipo de entidad' )
+                 captionTable ='Tendencia del CCGA por tipo de entidad',
+                 idsDecreasing=idsDecreasing)
 ```
 
 \newpage
@@ -192,15 +268,23 @@ getTableTrendInd(datTrendInd,
 ```{r}
 id <- 'indAdm_CACGA'
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+
+nameIndById <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'NOMBRES']
+idsDecreasing <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'DECRECIENTE']
+nameEntBestTrend <- datTrendInd[order(datTrendInd$TENDENCIA, decreasing = idsDecreasing),][1,1]
+trendBestEnt <- datTrendInd[order(datTrendInd$TENDENCIA,decreasing = idsDecreasing),][1,2]
 ```
 
-```{r, out.width='100%', fig.cap='Coeficiente acido de cobertura patrimonial'}
+```{r, out.width='100%', fig.cap=nameIndById}
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+El sector del sistema financiero con la tendencia mas favorable en el `r tolower(nameIndById)` atravez del tiempo son los `r tolower(nameEntBestTrend)` con una tendencia de `r trendBestEnt`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r trendBestEnt` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+
 ```{r}
 getTableTrendInd(datTrendInd, 
-                 captionTable ='Tendencia del CACGA por tipo de entidad' )
+                 captionTable ='Tendencia del CACGA por tipo de entidad',
+                 idsDecreasing=idsDecreasing)
 ```
 
 \newpage
@@ -211,15 +295,23 @@ getTableTrendInd(datTrendInd,
 ```{r}
 id <- 'indBenf_ROA'
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+
+nameIndById <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'NOMBRES']
+idsDecreasing <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'DECRECIENTE']
+nameEntBestTrend <- datTrendInd[order(datTrendInd$TENDENCIA, decreasing = idsDecreasing),][1,1]
+trendBestEnt <- datTrendInd[order(datTrendInd$TENDENCIA,decreasing = idsDecreasing),][1,2]
 ```
 
-```{r, out.width='100%', fig.cap='Coeficiente de rendimiento sobre activos '}
+```{r, out.width='100%', fig.cap=nameIndById}
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+El sector del sistema financiero con la tendencia mas favorable en el `r tolower(nameIndById)` atravez del tiempo son los `r tolower(nameEntBestTrend)` con una tendencia de `r trendBestEnt`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r trendBestEnt` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+
 ```{r}
 getTableTrendInd(datTrendInd, 
-                 captionTable ='Tendencia del ROA por tipo de entidad' )
+                 captionTable ='Tendencia del ROA por tipo de entidad',
+                 idsDecreasing=idsDecreasing)
 ```
 
 \newpage
@@ -228,15 +320,23 @@ getTableTrendInd(datTrendInd,
 ```{r}
 id <- 'indBenf_ROE'
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+
+nameIndById <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'NOMBRES']
+idsDecreasing <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'DECRECIENTE']
+nameEntBestTrend <- datTrendInd[order(datTrendInd$TENDENCIA, decreasing = idsDecreasing),][1,1]
+trendBestEnt <- datTrendInd[order(datTrendInd$TENDENCIA,decreasing = idsDecreasing),][1,2]
 ```
 
-```{r, out.width='100%', fig.cap='Coeficiente de rendimiento sobre patrimonio'}
+```{r, out.width='100%', fig.cap=nameIndById}
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+El sector del sistema financiero con la tendencia mas favorable en el `r tolower(nameIndById)` atravez del tiempo son los `r tolower(nameEntBestTrend)` con una tendencia de `r trendBestEnt`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r trendBestEnt` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+
 ```{r}
 getTableTrendInd(datTrendInd, 
-                 captionTable ='Tendencia del ROE por tipo de entidad' )
+                 captionTable ='Tendencia del ROE por tipo de entidad',
+                 idsDecreasing=idsDecreasing)
 ```
 
 \newpage
@@ -247,15 +347,23 @@ getTableTrendInd(datTrendInd,
 ```{r}
 id <- 'indLq_CCPP'
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+
+nameIndById <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'NOMBRES']
+idsDecreasing <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'DECRECIENTE']
+nameEntBestTrend <- datTrendInd[order(datTrendInd$TENDENCIA, decreasing = idsDecreasing),][1,1]
+trendBestEnt <- datTrendInd[order(datTrendInd$TENDENCIA,decreasing = idsDecreasing),][1,2]
 ```
 
-```{r, out.width='100%', fig.cap='Coeficiente de capacidad de pago frente a pasivos'}
+```{r, out.width='100%', fig.cap=nameIndById}
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+El sector del sistema financiero con la tendencia mas favorable en el `r tolower(nameIndById)` atravez del tiempo son los `r tolower(nameEntBestTrend)` con una tendencia de `r trendBestEnt`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r trendBestEnt` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+
 ```{r}
 getTableTrendInd(datTrendInd, 
-                 captionTable ='Tendencia del CCPP por tipo de entidad' )
+                 captionTable ='Tendencia del CCPP por tipo de entidad',
+                 idsDecreasing=idsDecreasing)
 ```
 
 \newpage
@@ -264,15 +372,23 @@ getTableTrendInd(datTrendInd,
 ```{r}
 id <- 'indLq_CACPP'
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm)
+
+nameIndById <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'NOMBRES']
+idsDecreasing <- datIdsNamesCamelInds[datIdsNamesCamelInds$INDICADOR==id,'DECRECIENTE']
+nameEntBestTrend <- datTrendInd[order(datTrendInd$TENDENCIA, decreasing = idsDecreasing),][1,1]
+trendBestEnt <- datTrendInd[order(datTrendInd$TENDENCIA,decreasing = idsDecreasing),][1,2]
 ```
 
-```{r, out.width='100%', fig.cap='Coeficiente acido de capacidad de pago frente a pasivos'}
+```{r, out.width='100%', fig.cap=nameIndById}
 plotIndCamel(id, datCamelIndNorm)
 ```
 
+El sector del sistema financiero con la tendencia mas favorable en el `r tolower(nameIndById)` atravez del tiempo son los `r tolower(nameEntBestTrend)` con una tendencia de `r trendBestEnt`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r trendBestEnt` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+
 ```{r}
 getTableTrendInd(datTrendInd, 
-                 captionTable ='Tendencia del CACPP por tipo de entidad' )
+                 captionTable ='Tendencia del CACPP por tipo de entidad',
+                 idsDecreasing=idsDecreasing)
 ```
 
 \newpage
