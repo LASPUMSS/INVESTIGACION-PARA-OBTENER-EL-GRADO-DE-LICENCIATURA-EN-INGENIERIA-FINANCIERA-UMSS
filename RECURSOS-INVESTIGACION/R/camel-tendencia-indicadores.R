@@ -22,8 +22,8 @@ getDatTrendInd <- function(id='indCap_CAP', datCamelIndNorm) {
         tsDat[,i] <- x
     }
     
-    tsDat[,which.max(colnames(tsDat)==id)]
-    tslm(tsDat[,"BANCOS DE DESARROLLO PRODUCTIVO"]~trend)
+    #tsDat[,which.max(colnames(tsDat)==id)]
+    #tslm(tsDat[,"BANCOS DE DESARROLLO PRODUCTIVO"]~trend)
     
     datTrendInd <- data.frame(TIPO_DE_ENTIDAD=rep(NA,length(colnames(tsDat))),
                               TENDENCIA=rep(NA,length(colnames(tsDat))))
