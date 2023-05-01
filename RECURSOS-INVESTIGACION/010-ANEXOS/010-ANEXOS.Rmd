@@ -25,7 +25,7 @@ source('../R/camel-render-table-simple.R')
 \subsection*{Anexo 2 - Indicadores CAMEL calculados}
 
 ```{r}
-datCamelIndNorm <- getDatCamelIndNorm(gestionInc = 2021)
+datCamelIndNorm <- getDatCamelIndNorm(gestionInc = 2022)
 ```
 
 

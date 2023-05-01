@@ -22,6 +22,7 @@ getDatCamelInd <- function() {
                               FECHA=dat$FECHA)
     
     # Variables
+    # Revisar
     
     cartVnc <- dat$ACTIVO_CARTERA_CARTERA_VENCIDA_TOTAL
     cartEjc <- dat$ACTIVO_CARTERA_CARTERA_EJECUCION_TOTAL
@@ -46,7 +47,7 @@ getDatCamelInd <- function() {
     disponibles <- dat$ACTIVO_DISPONIBILIDADES
     invTemp <- dat$ACTIVO_INVERSIONES_TEMPORARIAS
     
-    pasivoCP <- dat$PASIVO # Revisar
+    pasivoCP <- dat$PASIVO
     
     #### INDICADORES DE CAPITAL
     
@@ -139,6 +140,7 @@ getDatCamelInd <- function() {
         select(-c(indCap_CAPx)) %>% 
         relocate(indCap_CAP, .after = FECHA)
     
+    datResult$indCap_CAP <- as.numeric(datResult$indCap_CAP)
     
     return(datResult)
 }
