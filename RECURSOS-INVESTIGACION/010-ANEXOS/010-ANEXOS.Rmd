@@ -19,6 +19,11 @@ source('../R/camel-render-table-simple.R')
 
 \subsection*{Anexo 1 - Permiso uso de datos de entidades financiera de Bolivia publicado por la ASFI}
 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=20cm,height=17cm]{RECURSOS-INVESTIGACION/010-ANEXOS/permiso-asfi.jpg}
+\caption{Permiso usos de datos ASFI}
+\end{figure}
 
 
 \newpage
