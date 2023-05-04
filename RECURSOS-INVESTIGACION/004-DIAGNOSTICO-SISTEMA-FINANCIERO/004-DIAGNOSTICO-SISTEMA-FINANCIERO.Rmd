@@ -425,7 +425,8 @@ plotIndCamel("CAMEL",datCamelCalificacionEntidad)
 id <- 'CAMEL'
 datTrendInd <- getDatTrendInd(id, datCamelCalificacionEntidad)
 getTableTrendInd(datTrendInd, 
-                 captionTable ='Tendencia CAMEL' )
+                 captionTable ='Tendencia CAMEL',
+                 idsDecreasing = FALSE)
 ```
 
 
