@@ -109,11 +109,11 @@ Los mismos que se describen a continuación:
 
 #### Capital
 
-##### Coeficiente De Adecuación Patrimonial
+##### Coeficiente De Adecuación Patrimonial (CAP)
 
 Está definido cómo la relación porcentual entre el capital regulatorio y los activos y contingentes ponderados en función de factores de riesgo, incluyendo a los riesgos de crédito, de mercado y operativo, utilizando los procedimientos establecidos en la normativa emitida por la Autoridad de Supervisión del Sistema Financiero - ASFI.
 
-##### Coeficiente de cobertura de cartera en mora
+##### Coeficiente de cobertura de cartera en mora (CCCM)
 
 Este indicador mide o tiene objeto responder si el patrimonio de la institución cubre en tanto por ciento:
 - Los créditos cuyo capital, cuotas de amortización o intereses no hayan sido cancelados íntegramente a la entidad hasta los 30 días contados desde la fecha de vencimiento. 
@@ -122,7 +122,7 @@ Este indicador mide o tiene objeto responder si el patrimonio de la institución
 
 $$ \frac{ \text{Cartera En Mora - Previsión Cartera} }{\text{Patrimonio}}$$
 
-##### Coeficiente acido de cobertura de cartera en mora
+##### Coeficiente acido de cobertura de cartera en mora (CACCM)
 
 Este indicador mide o tiene objeto responder si el patrimonio de la institución cubre en tanto por ciento:
 - Los créditos cuyo capital, cuotas de amortización o intereses no hayan sido cancelados íntegramente a la entidad hasta los 30 días contados desde la fecha de vencimiento. 
@@ -131,7 +131,7 @@ Este indicador mide o tiene objeto responder si el patrimonio de la institución
 
 $$ \frac{ \text{Cartera De Mora - Previsión Carter + Realizables} }{ \text{Patrimonio} } $$
 
-##### Coeficiente de cobertura patrimonial
+##### Coeficiente de cobertura patrimonial (CCP) 
 
 Este indicador mide o tiene por objeto responder si los activos descontando los cuentas contingentes cubren los el patrimonio de la misma.
 
@@ -139,25 +139,25 @@ $$ \frac{ \text{Patrimonio} }{ \text{Activo - Contingente} } $$
 
 #### Activo
 
-##### Coeficiente de exposición de cartera
+##### Coeficiente de exposición de cartera (CEC) 
 
 El presente coeficiente determina que por ciento de lo créditos están expuestos a riesgo de ser incumplidos o cancelados.
 
 $$  \frac{ \text{Cartera En Mora} }{ \text{Cartera Bruta} } $$
 
-##### Coeficiente de previsión de cartera
+##### Coeficiente de previsión de cartera (CPC) 
 
 El presente coeficiente mide o tiene por objeto responder en que tanto por ciento esta cubierta los créditos realizados por la institución.
 
 $$ \frac{ \text{Prevision} }{ \text{Cartera Bruta} } $$
 
-##### Coeficiente de previsión de cartera en mora
+##### Coeficiente de previsión de cartera en mora (CPCM)
 
 Este coeficiente mide o tiene por objeto responder en que tanto por ciento esta cubierta los créditos incobrables realizados por la institución.
 
 $$ \frac{ \text{Prevision} }{ \text{Cartera En Mora} } $$
 
-##### Coeficiente de reposición de cartera
+##### Coeficiente de reposición de cartera (CRC)
 
 Dicho coeficiente tiene por objeto medir en que tanto por ciento alcanzan los créditos re programados.
 
@@ -165,14 +165,14 @@ $$ \frac{ \text{Cartera Reprogramada Total} }{ \text{Cartera Bruta} } $$
 
 #### Administración
 
-##### Coeficiente de cobertura gastos administrativos
+##### Coeficiente de cobertura gastos administrativos (CCGA)
 
 El coeficiente mide si los activos de la institución pueden hacer frente a los gastos administrativos de la institución.
 
 $$ \frac{ \text{Gastos Administración} }{ \text{Activos + Contingentes} } $$
 
 
-##### Coeficiente acido de cobertura patrimonial
+##### Coeficiente acido de cobertura patrimonial (CACGA) 
 
 Este coeficiente mide si los ingresos brutos pueden hacer frente a los gastos administrativos de la institución.
 
@@ -180,14 +180,14 @@ $$ \frac{ \text{Gastos Administración - Impuestos} }{ \text{Resultado Operativo
 
 #### Beneficios
 
-##### Coeficiente de rendimiento sobre activos
+##### Coeficiente de rendimiento sobre activos (ROA)
 
 El presente coeficiente determina el rendimiento en tanto por uno, los beneficios que han generado los activos.
 
 $$ \frac{ \text{Resultado Neto De La Gestión} }{ \text{Activo+Contingente} } $$
 
 
-##### Coeficiente de rendimiento sobre patrimonio
+##### Coeficiente de rendimiento sobre patrimonio (ROE)
 
 Este coeficiente determina el rendimiento en tanto por uno, los beneficios que ha generado el patrimonio.
 
@@ -195,13 +195,13 @@ $$ \frac{ \text{Resultado Neto De La Gestión} }{ \text{Patrimonio} } $$
 
 #### Liquidez
 
-##### Coeficiente de capacidad de pago frente a pasivos
+##### Coeficiente de capacidad de pago frente a pasivos (CCPP)
 
 El coeficiente busca medir si la institución puede hacer frente a sus obligaciones con los activos disponibles y inversiones temporales.
 
 $$ \frac{ \text{Disponibles + Inversiones Temporarias} }{ \text{Pasivos} } $$
 
-##### Coeficiente acido de capacidad de pago frente a pasivos
+##### Coeficiente acido de capacidad de pago frente a pasivos (CACPP) 
 
 El coeficiente busca medir si la institución puede hacer frente a sus obligaciones con los activos disponibles.
 
