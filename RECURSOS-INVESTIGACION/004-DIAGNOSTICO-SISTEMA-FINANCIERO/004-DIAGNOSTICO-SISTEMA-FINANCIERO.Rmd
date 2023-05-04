@@ -17,7 +17,7 @@ source('../R/camel-render-table-datTrendInd.R')
 
 <!-- DATOS -->
 ```{r}
-datCamelIndNorm <- getDatCamelIndNorm(gestionInc = 2019)
+datCamelIndNorm <- getDatCamelIndNorm(gestionInc = 2014)
 datIdsNamesCamelInds <- getDatIdsNamesCamelInds()
 ```
 
