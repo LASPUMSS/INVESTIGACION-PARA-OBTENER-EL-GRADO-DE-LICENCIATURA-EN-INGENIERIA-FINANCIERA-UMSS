@@ -10,6 +10,9 @@ getDatCamelInd <- function() {
     dat <- read.xlsx('../../FUENTES-DE-DATOS/ASFI/ConsoleAppPrepararDatos/bin/Debug/DATOS_ASFI/BBDD_ESTADOS_FINANCIEROS.xlsx') 
     
     dat$FECHA <- convertToDate(dat$FECHA)
+    dat$TIPO_DE_ENTIDAD <- gsub('COPERATIVAS_DE_AHORRO_Y_CREDITO',
+                                'COOPERATIVAS_DE_AHORRO_Y_CREDITO',
+                                dat$TIPO_DE_ENTIDAD)
     
     dat <- dat %>% group_by(TIPO_DE_ENTIDAD, FECHA) %>% summarise_if(is.numeric, sum)
     dat <- dat[ , !(names(dat) %in% c('GESTION','MES','DIA'))]
@@ -123,6 +126,9 @@ getDatCamelInd <- function() {
     
     dat2 <- read.xlsx('../../FUENTES-DE-DATOS/ASFI/ConsoleAppPrepararDatos/bin/Debug/DATOS_ASFI/BBDD_INDICADORES_FINANCIEROS.xlsx')
     dat2$FECHA <- convertToDate(dat2$FECHA)
+    dat2$TIPO_DE_ENTIDAD <- gsub('COPERATIVAS_DE_AHORRO_Y_CREDITO',
+                                'COOPERATIVAS_DE_AHORRO_Y_CREDITO',
+                                dat2$TIPO_DE_ENTIDAD)
     dat2 <- dat2[gsub(' ','',dat2$ENTIDIDAD)=='TOTALSISTEMA',]
     
     dat2$ID <- paste0(dat2$TIPO_DE_ENTIDAD,

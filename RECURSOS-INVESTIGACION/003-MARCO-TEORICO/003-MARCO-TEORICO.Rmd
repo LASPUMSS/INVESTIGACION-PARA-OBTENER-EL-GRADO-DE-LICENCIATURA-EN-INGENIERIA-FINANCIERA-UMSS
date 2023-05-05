@@ -215,7 +215,7 @@ En esta sección de la metodología CAMEL se establecen rangos a los cuales le c
 
 ### Definición de la ponderación
 
-$$CAMEL = \text{30\%C + 20\%A + 10\%M + 15\%E + 15\%L}$$
+$$CAMEL = \text{30\%C + 25\%A + 10\%M + 15\%E + 20\%L}$$
 
 ### Calificación CAMEL
 

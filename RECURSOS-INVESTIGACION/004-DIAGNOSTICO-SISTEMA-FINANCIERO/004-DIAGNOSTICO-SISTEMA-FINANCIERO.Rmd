@@ -405,7 +405,7 @@ getTableCamelRangosLimites(datCamelRangosLimites)
 
 ## Definición de la ponderación de elementos CAMEL
 
-$$CAMEL = \text{30\%C + 20\%A + 10\%M + 15\%E + 15\%L}$$
+$$CAMEL = \text{30\%C + 25\%A + 10\%M + 15\%E + 20\%L}$$
 
 \newpage
 ## Calificación CAMEL

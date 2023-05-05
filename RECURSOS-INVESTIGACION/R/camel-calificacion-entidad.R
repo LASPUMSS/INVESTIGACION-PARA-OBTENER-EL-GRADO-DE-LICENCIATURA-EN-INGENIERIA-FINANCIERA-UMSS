@@ -5,10 +5,10 @@ getDatCamelCalificacionEntidad <- function(datCamelCalificacionIndicadores) {
     x <- names(dat[,!(names(dat) %in% c('ID','FECHA','TIPO_DE_ENTIDAD'))])
     
     CAMEL_C <- 0.3
-    CAMEL_A <- 0.2
+    CAMEL_A <- 0.25
     CAMEL_M <- 0.10
     CAMEL_E <- 0.15
-    CAMEL_L <- 0.15
+    CAMEL_L <- 0.20
     
     for (i in x) {
         
