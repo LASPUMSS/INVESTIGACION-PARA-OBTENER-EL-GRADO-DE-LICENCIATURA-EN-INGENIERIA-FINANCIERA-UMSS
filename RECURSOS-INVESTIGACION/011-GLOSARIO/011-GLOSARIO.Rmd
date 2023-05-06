@@ -5,4 +5,7 @@ output: pdf_document
 \section*{Glosario}
 \addcontentsline{toc}{section}{\protect\numberline{}Glosario}
 
+#### Tendencia {-}
+
+Tasa variación o tasa de cambio de una magnitud respecto al tiempo.
 
