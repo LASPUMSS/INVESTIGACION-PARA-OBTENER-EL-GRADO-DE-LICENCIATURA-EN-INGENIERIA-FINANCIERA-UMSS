@@ -3,10 +3,10 @@ output: pdf_document
 ---
 <!-- FUNCIONES NECESARIAS -->
 ```{r}
-source('../R/camel-norm-getCamelInd.R')
+source('../R/camel-getCamelIndNorm.R')
 source('../R/camel-render-table-datCamelIndNorm.R')
 
-source('../R/camel-limites-rangos.R')
+source('../R/camel-get-limites-rangos.R')
 source('../R/camel-calificacion-indicadores.R')
 source('../R/camel-calificacion-entidad.R')
 source('../R/camel-render-table-simple.R')

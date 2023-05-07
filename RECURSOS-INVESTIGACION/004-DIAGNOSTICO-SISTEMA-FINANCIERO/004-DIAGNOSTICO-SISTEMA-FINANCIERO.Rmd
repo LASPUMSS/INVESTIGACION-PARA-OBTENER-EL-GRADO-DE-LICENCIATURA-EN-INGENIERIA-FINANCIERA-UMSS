@@ -4,10 +4,13 @@ output: pdf_document
 
 <!-- FUNCIONES NECESARIAS -->
 ```{r}
+source('../R/get-dat-basic.R')
+
 source('../R/camel-plot-functions.R')
-source('../R/camel-norm-getCamelInd.R')
+source('../R/camel-getCamelIndNorm.R')
 source('../R/camel-get-datIdsNamesCamelInds.R')
-source('../R/camel-limites-rangos.R')
+source('../R/camel-get-limites-rangos.R')
+
 source('../R/camel-render-table-rangos-limites.R')
 source('../R/camel-calificacion-indicadores.R')
 source('../R/camel-calificacion-entidad.R')
@@ -19,6 +22,7 @@ source('../R/camel-render-table-datTrendInd.R')
 ```{r}
 datCamelIndNorm <- getDatCamelIndNorm(gestionInc = 2014)
 datIdsNamesCamelInds <- getDatIdsNamesCamelInds()
+
 ```
 
 # Diagnóstico de las instituciones financieras del sistema financiero de Bolivia
