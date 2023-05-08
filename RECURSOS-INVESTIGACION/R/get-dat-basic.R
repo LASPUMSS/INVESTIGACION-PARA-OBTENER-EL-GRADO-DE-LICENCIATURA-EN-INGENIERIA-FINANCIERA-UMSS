@@ -1,6 +1,7 @@
 getDatEEFF <- function() {
     
     require(openxlsx)
+    require(dplyr)
     
     rootMainDir <- 'E:/INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS'
     rootFile <- 'FUENTES-DE-DATOS/ASFI/ConsoleAppPrepararDatos/bin/Debug/DATOS_ASFI/BBDD_ESTADOS_FINANCIEROS.xlsx'
@@ -16,6 +17,8 @@ getDatEEFF <- function() {
     dat$TIPO_DE_ENTIDAD <- gsub('COPERATIVAS_DE_AHORRO_Y_CREDITO',
                                 'COOPERATIVAS_DE_AHORRO_Y_CREDITO',
                                 dat$TIPO_DE_ENTIDAD)
+    
+    dat$ENTIDIDAD <- gsub('CSN \\(1\\)','CSN', dat$ENTIDIDAD)
     
     dat$GESTION <- as.character(dat$GESTION)
     dat$MES <- as.character(dat$MES)
