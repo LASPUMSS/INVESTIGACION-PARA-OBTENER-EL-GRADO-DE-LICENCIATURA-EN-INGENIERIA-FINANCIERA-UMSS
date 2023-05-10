@@ -2,16 +2,11 @@ getDatEEFF <- function() {
     
     require(openxlsx)
     require(dplyr)
-    
-    rootMainDir <- 'E:/INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS'
+
+ 
     rootFile <- 'FUENTES-DE-DATOS/ASFI/ConsoleAppPrepararDatos/bin/Debug/DATOS_ASFI/BBDD_ESTADOS_FINANCIEROS.xlsx'
-    
-    if (getwd() == rootMainDir ) {
-        dat <- read.xlsx(rootFile) 
-    }else{
-        dat <- read.xlsx(paste0('../../',rootFile) ) 
-    }
-    
+    dat <- read.xlsx(rootFile)
+
     dat$FECHA <- convertToDate(dat$FECHA)
     
     dat$TIPO_DE_ENTIDAD <- gsub('COPERATIVAS_DE_AHORRO_Y_CREDITO',

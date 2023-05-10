@@ -1,13 +1,11 @@
 
-getEntidadesCompModelo <- function() {
+getEntidadesCompModelo <- function(dat=NULL) {
     
     # Paquetes Necesarios
     require(dplyr)
     require(openxlsx)
     
     # Funciones necesarias
-    source("RECURSOS-INVESTIGACION/R/get-dat-basic.R")
-    
     dateInEnt <- function(siglaEntidad, dat) {
         return(dat %>% 
                    filter(ENTIDIDAD==siglaEntidad) %>% 
@@ -26,8 +24,13 @@ getEntidadesCompModelo <- function() {
                    as.character())
     }
     
+    # Validaciones
+    if (is.null(dat) ) {
+        source("RECURSOS-INVESTIGACION/R/get-dat-basic.R")
+        dat <- getDatEEFF()
+    }
+    
     # Cuerpo de la funcion
-    dat <- getDatEEFF()
     
     datDefEntMod <- dat %>% group_by(ENTIDIDAD,TIPO_DE_ENTIDAD) %>% summarise()
     names(datDefEntMod) <- c('SIGLA','TIPO_DE_ENTIDAD')

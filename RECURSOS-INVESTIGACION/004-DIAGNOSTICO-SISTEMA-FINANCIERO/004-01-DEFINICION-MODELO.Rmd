@@ -2,19 +2,38 @@
 output: html_document
 ---
 
-## Definición y alcance del modelo
-
-### Entidades financieras comprendidas por el modelo
-
 ```{r}
+# PAQUETES NECESARIOS
+require(glue)
+
+# FUNCIONES NECESARIAS
+source("RECURSOS-INVESTIGACION/R/get-dat-basic.R")
 source("RECURSOS-INVESTIGACION/R/def-mod-entidades.R")
 source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
+source("RECURSOS-INVESTIGACION/R/handles.R")
 
-entidadesCompModelo <- getEntidadesCompModelo()
+# VARIABLES GLOBALES DEL DOCUMENTO
+dat <- getDatEEFF()
+entidadesCompModelo <- getEntidadesCompModelo(dat)
 ```
 
 
-#### Bancos multiples
+## Definición y alcance del modelo
+
+El numero de observaciones de la datos manejados por esta investigación alcanzan a `r nrow(dat)` los cuales se agrupara por sectores financieros los cuales son:
+
+- Bancos múltiples
+- Bancos PYME
+- Bancos de desarrollo productivo
+- Instituciones financieras de desarrollo
+- Entidades financieras de vivienda
+- Cooperativas
+
+
+### Entidades financieras comprendidas por el modelo
+
+
+#### Bancos múltiples
 
 ```{r}
 idTipoEntidad <- 'BANCOS_MULTIPLES'
@@ -26,7 +45,8 @@ El sector de `r tolower(gsub('_',' ',idTipoEntidad))` comprendido en los datos d
 
 
 ```{r}
-renderTableBasic(entidadesModelo)
+captionTable <- glue('{handle$toUpperFirstText(gsub("_"," ",idTipoEntidad))} contenidas en los datos')
+renderTableBasic(entidadesModelo,captionTable = captionTable)
 ```
 
 
@@ -38,11 +58,12 @@ entidadesModelo <- entidadesCompModelo[entidadesCompModelo$TIPO_DE_ENTIDAD==idTi
                                        c('SIGLA','ENTIDAD','DE','HASTA')]
 ```
 
-El sector de `r tolower(gsub('_',' ',idTipoEntidad))` comprendido en los datos de la presente investigación conforman un total de `r nrow(entidadesModelo)`, que se presentan a continuación:
+El sector de `r gsub('pyme','PYME',tolower(gsub('_',' ',idTipoEntidad)))` comprendido en los datos de la presente investigación conforman un total de `r nrow(entidadesModelo)`, que se presentan a continuación:
 
 
 ```{r}
-renderTableBasic(entidadesModelo)
+captionTable <- glue('{gsub("pyme","PYME",handle$toUpperFirstText(gsub("_"," ",idTipoEntidad)))} contenidos en los datos')
+renderTableBasic(entidadesModelo,captionTable = captionTable)
 ```
 
 
@@ -58,11 +79,12 @@ El sector de `r tolower(gsub('_',' ',idTipoEntidad))` comprendido en los datos d
 
 
 ```{r}
-renderTableBasic(entidadesModelo)
+captionTable <- glue('{handle$toUpperFirstText(gsub("_"," ",idTipoEntidad))} contenidas en los datos')
+renderTableBasic(entidadesModelo,captionTable = captionTable)
 ```
 
 
-#### Bancos Intituciones financieras de desarrollo
+#### Instituciones financieras de desarrollo
 
 ```{r}
 idTipoEntidad <- 'INSTITUCIONES_FINANCIERAS_DE_DESARROLLO'
@@ -74,10 +96,11 @@ El sector de `r tolower(gsub('_',' ',idTipoEntidad))` comprendido en los datos d
 
 
 ```{r}
-renderTableBasic(entidadesModelo)
+captionTable <- glue('{handle$toUpperFirstText(gsub("_"," ",idTipoEntidad))} contenidas en los datos')
+renderTableBasic(entidadesModelo,captionTable = captionTable)
 ```
 
-#### Bancos entidades finanacieras de vivienda
+#### Entidades financieras de vivienda
 
 ```{r}
 idTipoEntidad <- 'ENTIDADES_FINANCIERAS_DE_VIVIENDA'
@@ -89,7 +112,8 @@ El sector de `r tolower(gsub('_',' ',idTipoEntidad))` comprendido en los datos d
 
 
 ```{r}
-renderTableBasic(entidadesModelo)
+captionTable <- glue('{handle$toUpperFirstText(gsub("_"," ",idTipoEntidad))} contenidas en los datos')
+renderTableBasic(entidadesModelo,captionTable = captionTable)
 ```
 
 #### Cooperativas
@@ -104,6 +128,39 @@ El sector de `r tolower(gsub('_',' ',idTipoEntidad))` comprendido en los datos d
 
 
 ```{r}
-renderTableBasic(entidadesModelo)
+captionTable <- glue('{handle$toUpperFirstText(gsub("_"," ",idTipoEntidad))} contenidas en los datos')
+renderTableBasic(entidadesModelo,captionTable = captionTable)
 ```
+
+### Variables comprendidas por el modelo
+
+#### Cartera en mora
+
+#### Privisión cartera
+
+#### Patrimonio
+
+#### Realizables
+
+#### Activo
+
+#### Contingente
+
+#### Cartera Bruta
+
+#### Cartera reprogramada total
+
+#### Gastos administrativos
+
+#### Impuestos
+
+#### Resultado operativo bruto
+
+#### Resultado neto de la gestión
+
+#### Inversiones temporarias
+
+#### Pasivos
+
+#### Disponibles
 
