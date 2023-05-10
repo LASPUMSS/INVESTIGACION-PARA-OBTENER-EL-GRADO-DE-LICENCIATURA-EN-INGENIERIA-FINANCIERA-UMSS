@@ -1,3 +1,4 @@
+%----------------------------
 % Paquetes para kable_extra
 \usepackage{booktabs}
 \usepackage{longtable}
@@ -26,7 +27,7 @@
 
 \usepackage{multirow} % Para tablas
 \usepackage{rotating} % Para girar tablas
-
+\usepackage{caption} % editar formato captions
 
 
 \addto\captionsspanish{
@@ -40,3 +41,13 @@
 \renewcommand{\baselinestretch}{1.5}
 
 \titleformat{\section}{\bfseries\Large}{Capitulo \thesection.}{0.5em}{\centering}
+
+
+
+%----------------------------
+% Editar size de los captions
+
+\captionsetup[figure]{font=small,labelfont=bf}
+\captionsetup[table]{font=small,labelfont=bf}
+
+%----------------------------
