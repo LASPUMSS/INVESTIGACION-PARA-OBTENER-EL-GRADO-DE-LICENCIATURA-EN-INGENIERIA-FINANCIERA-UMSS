@@ -4,7 +4,7 @@ output: pdf_document
 
 <!-- FUNCIONES NECESARIAS -->
 ```{r}
-source('../R/plot-activation-function.R')
+source('RECURSOS-INVESTIGACION/R/plot-activation-function.R')
 ```
 
 # Marco teorico

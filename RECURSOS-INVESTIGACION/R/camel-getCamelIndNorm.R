@@ -5,7 +5,7 @@ getDatCamelIndNorm <- function(gestionInc=2014, gestionFn=2022) {
     require(dplyr)
     
     # Funciones necesarias
-    source('../../RECURSOS-INVESTIGACION/R/camel-get-datCamelInd.R')
+    source('RECURSOS-INVESTIGACION/R/camel-get-datCamelInd.R')
     
     datCamelInd <- getDatCamelInd()
     datCamelInd$ID <- paste0(datCamelInd$TIPO_DE_ENTIDAD,

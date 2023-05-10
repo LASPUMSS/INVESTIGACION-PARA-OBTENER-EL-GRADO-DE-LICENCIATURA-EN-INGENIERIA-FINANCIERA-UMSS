@@ -4,8 +4,8 @@ getDatCamelInd <- function() {
     require(dplyr)
     
     # Funciones necesarias
-    source('../../RECURSOS-INVESTIGACION/R/camel-indicadores-functions.R')
-    source('../../RECURSOS-INVESTIGACION/R/get-dat-basic.R')
+    source('RECURSOS-INVESTIGACION/R/camel-indicadores-functions.R')
+    source('RECURSOS-INVESTIGACION/R/get-dat-basic.R')
     
     # Carga de datos
     dat <- getDatEEFF()
@@ -121,7 +121,7 @@ getDatCamelInd <- function() {
     
     ### ANEXO - INDICADOR DE ADECUACIÓN PATRIMONIAL
     
-    dat2 <- read.xlsx('../../FUENTES-DE-DATOS/ASFI/ConsoleAppPrepararDatos/bin/Debug/DATOS_ASFI/BBDD_INDICADORES_FINANCIEROS.xlsx')
+    dat2 <- read.xlsx('FUENTES-DE-DATOS/ASFI/ConsoleAppPrepararDatos/bin/Debug/DATOS_ASFI/BBDD_INDICADORES_FINANCIEROS.xlsx')
     dat2$FECHA <- convertToDate(dat2$FECHA)
     dat2$TIPO_DE_ENTIDAD <- gsub('COPERATIVAS_DE_AHORRO_Y_CREDITO',
                                 'COOPERATIVAS_DE_AHORRO_Y_CREDITO',

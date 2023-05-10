@@ -3,13 +3,13 @@ output: pdf_document
 ---
 <!-- FUNCIONES NECESARIAS -->
 ```{r}
-source('../R/camel-getCamelIndNorm.R')
-source('../R/camel-render-table-datCamelIndNorm.R')
+source('RECURSOS-INVESTIGACION/R/camel-getCamelIndNorm.R')
+source('RECURSOS-INVESTIGACION/R/camel-render-table-datCamelIndNorm.R')
 
-source('../R/camel-get-limites-rangos.R')
-source('../R/camel-calificacion-indicadores.R')
-source('../R/camel-calificacion-entidad.R')
-source('../R/camel-render-table-simple.R')
+source('RECURSOS-INVESTIGACION/R/camel-get-limites-rangos.R')
+source('RECURSOS-INVESTIGACION/R/camel-calificacion-indicadores.R')
+source('RECURSOS-INVESTIGACION/R/camel-calificacion-entidad.R')
+source('RECURSOS-INVESTIGACION/R/camel-render-table-simple.R')
 
 ```
 
