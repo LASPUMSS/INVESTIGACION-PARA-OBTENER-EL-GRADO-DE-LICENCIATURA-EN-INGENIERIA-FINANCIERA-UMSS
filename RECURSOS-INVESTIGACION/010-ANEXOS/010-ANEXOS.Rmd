@@ -17,17 +17,29 @@ source('RECURSOS-INVESTIGACION/R/camel-render-table-simple.R')
 \section*{Anexos}
 \addcontentsline{toc}{section}{\protect\numberline{}Anexos}
 
-\subsection*{Anexo 1 - Permiso uso de datos de entidades financiera de Bolivia publicado por la ASFI}
+<!-- ANEXO 1 -->
+\subsection*{Anexo 1 - Carta solicitud permiso uso de datos de entidades financiera de Bolivia publicado por la ASFI}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=20cm,height=17cm]{RECURSOS-INVESTIGACION/010-ANEXOS/carta-solicitud-permiso-asfi.jpg}
+\caption{Carta solicitud permiso uso de datos ASFI}
+\end{figure}
+
+
+<!-- ANEXO 2 -->
+\newpage
+\subsection*{Anexo 2 - Respuesta solicitud permiso uso de datos de entidades financiera de Bolivia publicado por la ASFI}
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=20cm,height=17cm]{RECURSOS-INVESTIGACION/010-ANEXOS/permiso-asfi.jpg}
-\caption{Permiso usos de datos ASFI}
+\caption{Respuesta solicitud permiso uso de datos ASFI}
 \end{figure}
 
-
+<!-- ANEXO 3-->
 \newpage
-\subsection*{Anexo 2 - Indicadores CAMEL calculados}
+\subsection*{Anexo 3 - Indicadores CAMEL calculados}
 
 ```{r}
 datCamelIndNorm <- getDatCamelIndNorm(gestionInc = 2022)
