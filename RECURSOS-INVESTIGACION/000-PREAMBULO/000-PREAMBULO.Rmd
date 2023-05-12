@@ -1,0 +1,19 @@
+---
+output: pdf_document
+---
+
+<!-- RESUMEN -->
+
+
+<!-- ABSTRAC -->
+
+
+<!-- AGRADECIMIENTOS -->
+
+
+<!-- DEDICATORIA -->
+
+
+<!-- INTRODUCCION -->
+
+

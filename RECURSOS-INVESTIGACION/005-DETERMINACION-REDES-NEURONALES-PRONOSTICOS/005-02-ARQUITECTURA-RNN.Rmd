@@ -1,0 +1,5 @@
+---
+output: pdf_document
+---
+
+## Arquitectura de la red neuronal
