@@ -159,19 +159,38 @@ Según [@MANUAL_CUENTAS_ASFI] los activos disponibles (designado por el código 
 
 #### Realizables
 
-- Bienes realizables (150.00)
+Según [@MANUAL_CUENTAS_ASFI] los activos realizables (designado por el código 150.00 en el manual de cuentas) representa los bienes tangibles de propiedad de la entidad con destino de venta como ser: 
+
+- Los bienes adquiridos o construidos para la venta 
+- Los bienes recibidos en recuperación de créditos o de operaciones de arrendamiento financiero
+- Los bienes fuera de uso y otros bienes realizables
 
 #### Inversiones temporarias
 
-- Inversiones temporarias (120.00)
+Según [@MANUAL_CUENTAS_ASFI] las inversiones temporarias (designado por el código 120.00 en el manual de cuentas) registran:
+
+- Las inversiones en depósitos en otras “entidades de intermediación financiera” 
+- Los depósitos en el Banco Central de Bolivia y los valores representativos de deuda adquiridos por la entidad
+- Las inversiones que han sido realizadas, conforme a su política de inversiones, con la intención de obtener una adecuada rentabilidad de sus excedentes temporales de liquidez y que puedan ser convertidas en disponibilidades en un plazo no mayor a treinta (30) días.
 
 #### Pasivos
 
-- Pasivos (200)
+Según [@MANUAL_CUENTAS_ASFI] los pasivos (designado por el código 200.00 en el manual de cuentas) se agrupan las cuentas representativas de las obligaciones directas de la entidad la que comprenden:
+
+- Las obligaciones con el público, 
+- Las obligaciones con instituciones fiscales,
+- Las obligaciones con bancos y entidades de financiamiento, incluyendo las obligaciones
+con el Banco Central de Bolivia y otros; 
+- Los títulos valores en circulación emitidos por la entidad, 
+- Las obligaciones subordinadas 
+- Las obligaciones con empresas públicas 
+- Las obligaciones diversas a cargo de la entidad 
+- Las previsiones que no representan correcciones de valores del activo. 
+
 
 #### Patrimonio
 
-- Patrimonio (300.00)
+Según [@MANUAL_CUENTAS_ASFI] el patrimonio (designado por el código 300.00 en el manual de cuentas) representa la participación de los propietarios en el activo de la entidad. Su importe se determina por la diferencia entre el activo y el pasivo. 
 
 #### Cartera en mora
 
