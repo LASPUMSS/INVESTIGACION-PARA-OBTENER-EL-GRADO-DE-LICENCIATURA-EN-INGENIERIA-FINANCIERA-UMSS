@@ -9,7 +9,8 @@ output:
 geometry: "left=3cm,right=2cm,top=2cm,bottom=2cm"
 fontsize: 12pt
 csl: assets/csl-bib-sty/apa.csl
-bibliography: assets/csl-bib-sty/references.bib 
+bibliography: [assets/csl-bib-sty/references_01.bib, 
+               assets/csl-bib-sty/references_02.bib ]
 nocite: '@*'
 ---
 

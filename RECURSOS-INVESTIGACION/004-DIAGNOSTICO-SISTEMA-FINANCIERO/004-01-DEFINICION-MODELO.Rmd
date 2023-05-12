@@ -8,6 +8,7 @@ require(glue)
 
 # FUNCIONES NECESARIAS
 source("RECURSOS-INVESTIGACION/R/get-dat-basic.R")
+source("RECURSOS-INVESTIGACION/R/get-dat-group.R")
 source("RECURSOS-INVESTIGACION/R/def-mod-entidades.R")
 source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
 source("RECURSOS-INVESTIGACION/R/handles.R")
@@ -15,23 +16,25 @@ source("RECURSOS-INVESTIGACION/R/handles.R")
 # VARIABLES GLOBALES DEL DOCUMENTO
 dat <- getDatEEFF()
 entidadesCompModelo <- getEntidadesCompModelo(dat)
+datGroupBySector <- getDatEEFFByGroup(dat,by = 'TIPO_DE_ENTIDAD' )
 ```
-
 
 ## Precisiones del diagnostico financiero presentado
 
-En la presente sección se presentaran las características a la cuales están sujetas el diagnostico presentado.
+En la presente sección se presentaran las características a la cuales están sujetas el diagnostico presentado en este capítulo.
 
-### Entidades financieras comprendidas por el modelo
+### Entidades financieras comprendidas por el diagnostico
 
-El numero de observaciones de la datos manejados por esta investigación alcanzan a `r nrow(dat)` los cuales se agrupara por sectores financieros los cuales son:
+El numero de observaciones de la datos manejados por esta investigación alcanzan a `r nrow(dat)`, donde cada observación corresponde a un balance general y un estado de resultados en un punto del tiempo entre las fechas (`r min(dat$FECHA)` - `r max(dat$FECHA)`), dichos estados financieros se clasifican o agrupara por sectores financieros los cuales son:
 
 - Bancos múltiples
-- Bancos PYME
-- Bancos de desarrollo productivo
-- Instituciones financieras de desarrollo
-- Entidades financieras de vivienda
-- Cooperativas
+- Bancos PYME.
+- Bancos de desarrollo productivo.
+- Instituciones financieras de desarrollo.
+- Entidades financieras de vivienda.
+- Cooperativas.
+
+Una vez agrupados los datos por sectores los datos dan un total de `r nrow(datGroupBySector)` observaciones.
 
 #### Bancos múltiples
 
@@ -41,7 +44,7 @@ entidadesModelo <- entidadesCompModelo[entidadesCompModelo$TIPO_DE_ENTIDAD==idTi
                                        c('SIGLA','ENTIDAD','DE','HASTA')]
 ```
 
-El sector de `r tolower(gsub('_',' ',idTipoEntidad))` comprendido en los datos de la presente investigación conforman un total de `r nrow(entidadesModelo)`, que se presentan a continuación:
+El sector de `r tolower(gsub('_',' ',idTipoEntidad))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector esta comprendido por `r nrow(entidadesModelo)` entidades, que se presentan a continuación:
 
 
 ```{r}
@@ -58,7 +61,7 @@ entidadesModelo <- entidadesCompModelo[entidadesCompModelo$TIPO_DE_ENTIDAD==idTi
                                        c('SIGLA','ENTIDAD','DE','HASTA')]
 ```
 
-El sector de `r gsub('pyme','PYME',tolower(gsub('_',' ',idTipoEntidad)))` comprendido en los datos de la presente investigación conforman un total de `r nrow(entidadesModelo)`, que se presentan a continuación:
+El sector de `r gsub('pyme','PYME',tolower(gsub('_',' ',idTipoEntidad)))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector esta comprendido por `r nrow(entidadesModelo)` entidades, que se presentan a continuación:
 
 
 ```{r}
@@ -75,7 +78,7 @@ entidadesModelo <- entidadesCompModelo[entidadesCompModelo$TIPO_DE_ENTIDAD==idTi
                                        c('SIGLA','ENTIDAD','DE','HASTA')]
 ```
 
-El sector de `r tolower(gsub('_',' ',idTipoEntidad))` comprendido en los datos de la presente investigación conforman un total de `r nrow(entidadesModelo)`, que se presentan a continuación:
+El sector de `r tolower(gsub('_',' ',idTipoEntidad))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector esta comprendido por `r nrow(entidadesModelo)` entidades, que se presentan a continuación:
 
 
 ```{r}
@@ -92,7 +95,7 @@ entidadesModelo <- entidadesCompModelo[entidadesCompModelo$TIPO_DE_ENTIDAD==idTi
                                        c('SIGLA','ENTIDAD','DE','HASTA')]
 ```
 
-El sector de `r tolower(gsub('_',' ',idTipoEntidad))` comprendido en los datos de la presente investigación conforman un total de `r nrow(entidadesModelo)`, que se presentan a continuación:
+El sector de `r tolower(gsub('_',' ',idTipoEntidad))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector esta comprendido por `r nrow(entidadesModelo)` entidades, que se presentan a continuación:
 
 
 ```{r}
@@ -108,7 +111,7 @@ entidadesModelo <- entidadesCompModelo[entidadesCompModelo$TIPO_DE_ENTIDAD==idTi
                                        c('SIGLA','ENTIDAD','DE','HASTA')]
 ```
 
-El sector de `r tolower(gsub('_',' ',idTipoEntidad))` comprendido en los datos de la presente investigación conforman un total de `r nrow(entidadesModelo)`, que se presentan a continuación:
+El sector de `r tolower(gsub('_',' ',idTipoEntidad))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector esta comprendido por `r nrow(entidadesModelo)` entidades, que se presentan a continuación:
 
 
 ```{r}
@@ -124,7 +127,7 @@ entidadesModelo <- entidadesCompModelo[entidadesCompModelo$TIPO_DE_ENTIDAD==idTi
                                        c('SIGLA','ENTIDAD','DE','HASTA')]
 ```
 
-El sector de `r tolower(gsub('_',' ',idTipoEntidad))` comprendido en los datos de la presente investigación conforman un total de `r nrow(entidadesModelo)`, que se presentan a continuación:
+El sector de `r tolower(gsub('_',' ',idTipoEntidad))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector esta comprendido por `r nrow(entidadesModelo)` entidades, que se presentan a continuación:
 
 
 ```{r}
@@ -132,33 +135,48 @@ captionTable <- glue('{handle$toUpperFirstText(gsub("_"," ",idTipoEntidad))} con
 renderTableBasic(entidadesModelo,captionTable = captionTable)
 ```
 
-### Variables comprendidas por el modelo
+### Variables comprendidas en el diganostico
 
-#### Cartera en mora
+Las variables comprendidas en el modelo del diagnostico están sujetas al manual de cuentas para entidades financieras.
 
-- Cartera vencida (133.00)
-- Cartera en ejecución (134.00)
+#### Activo
 
-#### Previsión cartera
+Según [@MANUAL_CUENTAS_ASFI] los activos (designado por el código 100.00 en el manual de cuentas) son aquellas que agrupan las cuentas representativas de bienes y derechos de la entidad, la cuales comprenden:
 
-- Previsión para incobrabilidad de cartera (139.00)
+- Disponibilidades
+- Inversiones temporarias
+- Cartera
+- Otras cuentas por cobrar
+- Bienes realizables
+- Inversiones permanentes
+- Bienes de uso 
+- Otros activos. 
 
-#### Patrimonio
 
-- Patrimonio (300.00)
+#### Disponibles
+
+Según [@MANUAL_CUENTAS_ASFI] los activos disponibles (designado por el código 110.00 en el manual de cuentas) representa el efectivo que mantiene la entidad en caja, los saldos a la vista en el Banco Central de Bolivia, en oficina matriz y sucursales del exterior, en bancos y corresponsales del país y del exterior; así como, la tenencia de metales preciosos. También representa la existencia de cheques, otros documentos mercantiles de cobro inmediato y órdenes electrónicas de pago pendientes de liquidación. 
 
 #### Realizables
 
 - Bienes realizables (150.00)
 
-#### Activo
+#### Inversiones temporarias
 
-- Activo (100.00)
+- Inversiones temporarias (120.00)
 
-#### Contingente
+#### Pasivos
 
-- Cuentas contingentes deudoras (600.00)
-- Cuentas contingentes acreedoras (700.00)
+- Pasivos (200)
+
+#### Patrimonio
+
+- Patrimonio (300.00)
+
+#### Cartera en mora
+
+- Cartera vencida (133.00)
+- Cartera en ejecución (134.00)
 
 #### Cartera Bruta
 
@@ -171,6 +189,16 @@ renderTableBasic(entidadesModelo,captionTable = captionTable)
 - Cartera reprogramada o restructurada vigente (135.00)
 - Cartera reprogramada o restructurada vencida (136.00)
 - Cartera reprogramada o restructurada en ejecución (137.00)
+
+#### Previsión cartera
+
+- Previsión para incobrabilidad de cartera (139.00)
+
+#### Contingente
+
+- Cuentas contingentes deudoras (600.00)
+- Cuentas contingentes acreedoras (700.00)
+
 
 #### Gastos administrativos
 
@@ -185,15 +213,6 @@ renderTableBasic(entidadesModelo,captionTable = captionTable)
 
 #### Resultado neto de la gestión
 
-#### Inversiones temporarias
 
-- Inversiones temporarias (120.00)
 
-#### Pasivos
-
-- Pasivos (200)
-
-#### Disponibles
-
-- Disponibilidades (110.00)
 

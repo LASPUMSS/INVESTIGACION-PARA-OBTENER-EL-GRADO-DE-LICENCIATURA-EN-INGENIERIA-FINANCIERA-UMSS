@@ -17,7 +17,7 @@ Entonces se afirma que el sistema financiero en general está formado por el con
 
 ### Entidades de intermediación financiera en Bolivia
 
-Las definiciones presentadas a continuación están suscritas a la ley 393 - ley de servicios financieros.
+Las definiciones presentadas a continuación están suscritas a la ley 393 - ley de servicios financieros [@ASFI393].
 
 #### Bancos múltiples.
 
@@ -48,19 +48,19 @@ El banco de desarrollo productivo es una institución con participación mayorit
 
 En el campo de la ciencia económicas los estados financieros tiene como objeto reflejar la situación económica-financiera de una institución.
 
-En la página oficial de la Autoridad de Supervisión del Sistema Financiero (ASFI), "se define que los estados financieros constituyen una representación estructurada de la situación financiera y de las transacciones llevadas a cabo por la empresa. Su objetivo, con propósitos de información general, es suministrar información acerca de la situación y rendimiento financieros, así como de los flujos de efectivo que sea útil a una amplia variedad de usuarios al tomar sus decisiones económicas. Los estados financieros también muestran los resultados de la gestión que los administradores han efectuado con los recursos que se les han confiado". [@ASFI]
+En la página oficial de la Autoridad de Supervisión del Sistema Financiero (ASFI), "se define que los estados financieros constituyen una representación estructurada de la situación financiera y de las transacciones llevadas a cabo por la empresa. Su objetivo, con propósitos de información general, es suministrar información acerca de la situación y rendimiento financieros, así como de los flujos de efectivo que sea útil a una amplia variedad de usuarios al tomar sus decisiones económicas. Los estados financieros también muestran los resultados de la gestión que los administradores han efectuado con los recursos que se les han confiado". [@GLOSARIO_ASFI]
 
 Entonces se afirma, que los estados financieros son un resumen del ejercicio económico de una empresa o institución, entendiendo al ejercicio económico como la suma de todas las actividades vinculadas al giro de la empresa en un intervalo de tiempo, dando información, sobre ingresos, egresos, pasivos, activos, es decir, los estados financieros son una fotografía de la empresa en un punto del tiempo.
 
 ### Balance general
 
-El balance general se entiende como, "estado financiero que muestra, a una fecha determinada, el valor y la estructura del activo, pasivo y patrimonio de una empresa". [@ASFI] 
+El balance general se entiende como, "estado financiero que muestra, a una fecha determinada, el valor y la estructura del activo, pasivo y patrimonio de una empresa". [@GLOSARIO_ASFI] 
 
 Con una expresión equivalente se afirma que el balance general representa una fotografía sobre  el estado de de los bienes y derechos, respecto a las obligaciones con  propietarios e terceros de la institución en un determinado momento.
 
 ### Estado de resultados
 
-Estado de ganancias y pérdidas o estado de resultados, se entiende como, "documento contable que muestra el resultado de las operaciones (utilidad o pérdida) de una entidad durante un periodo y a una fecha determinada; resulta de la comparación de los ingresos con los gastos efectuados". [@ASFI]
+Estado de ganancias y pérdidas o estado de resultados, se entiende como, "documento contable que muestra el resultado de las operaciones (utilidad o pérdida) de una entidad durante un periodo y a una fecha determinada; resulta de la comparación de los ingresos con los gastos efectuados". [@GLOSARIO_ASFI]
 
 Es decir, el estado de resultados muestra la conclusión en términos monetarios del conjunto de actividades administrativas y complementarias en un intervalo de tiempo de la institución correspondiente. 
 
@@ -125,6 +125,7 @@ $$ \frac{ \text{Cartera En Mora - Previsión Cartera} }{\text{Patrimonio}}$$
 ##### Coeficiente acido de cobertura de cartera en mora (CACCM)
 
 Este indicador mide o tiene objeto responder si el patrimonio de la institución cubre en tanto por ciento:
+
 - Los créditos cuyo capital, cuotas de amortización o intereses no hayan sido cancelados íntegramente a la entidad hasta los 30 días contados desde la fecha de vencimiento. 
 - Los créditos por los cuales la entidad ha iniciado las acciones judiciales para el cobro.
 - Descontando la previsión por incobrabilidad de créditos y adjuntando bienes realizables.
