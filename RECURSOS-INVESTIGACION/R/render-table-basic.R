@@ -1,5 +1,5 @@
 
-renderTableBasic <- function(dat, captionTable='tabla', headerUpper=TRUE) {
+renderTableBasic <- function(dat, captionTable='tabla', headerUpper=TRUE, fontSize=8) {
     
     require(knitr)
     require(kableExtra)
@@ -21,7 +21,7 @@ renderTableBasic <- function(dat, captionTable='tabla', headerUpper=TRUE) {
               caption = captionTable, 
               digits = 6) %>%
         kable_styling(latex_options = c("hold_position", "repeat_header"),
-                      font_size = 7,
+                      font_size = fontSize,
 
                       repeat_header_text = "(Continuación)")
     

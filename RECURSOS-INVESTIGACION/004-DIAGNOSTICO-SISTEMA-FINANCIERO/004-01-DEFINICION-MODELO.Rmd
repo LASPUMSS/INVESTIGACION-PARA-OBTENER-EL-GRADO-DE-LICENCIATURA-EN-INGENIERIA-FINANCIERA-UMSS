@@ -18,7 +18,11 @@ entidadesCompModelo <- getEntidadesCompModelo(dat)
 ```
 
 
-## Definición y alcance del modelo
+## Precisiones del diagnostico financiero presentado
+
+En la presente sección se presentaran las características a la cuales están sujetas el diagnostico presentado.
+
+### Entidades financieras comprendidas por el modelo
 
 El numero de observaciones de la datos manejados por esta investigación alcanzan a `r nrow(dat)` los cuales se agrupara por sectores financieros los cuales son:
 
@@ -28,10 +32,6 @@ El numero de observaciones de la datos manejados por esta investigación alcanza
 - Instituciones financieras de desarrollo
 - Entidades financieras de vivienda
 - Cooperativas
-
-
-### Entidades financieras comprendidas por el modelo
-
 
 #### Bancos múltiples
 
@@ -136,23 +136,50 @@ renderTableBasic(entidadesModelo,captionTable = captionTable)
 
 #### Cartera en mora
 
-#### Privisión cartera
+- Cartera vencida (133.00)
+- Cartera en ejecución (134.00)
+
+#### Previsión cartera
+
+- Previsión para incobrabilidad de cartera (139.00)
 
 #### Patrimonio
 
+- Patrimonio (300.00)
+
 #### Realizables
+
+- Bienes realizables (150.00)
 
 #### Activo
 
+- Activo (100.00)
+
 #### Contingente
+
+- Cuentas contingentes deudoras (600.00)
+- Cuentas contingentes acreedoras (700.00)
 
 #### Cartera Bruta
 
-#### Cartera reprogramada total
+- Cartera vigente (131.00)
+- Cartera vencida (133.00)
+- Cartera en ejecución (134.00)
+
+#### Cartera reprogramada o restructurada total
+
+- Cartera reprogramada o restructurada vigente (135.00)
+- Cartera reprogramada o restructurada vencida (136.00)
+- Cartera reprogramada o restructurada en ejecución (137.00)
 
 #### Gastos administrativos
 
+- Gastos de administración (450.00)
+
 #### Impuestos
+
+- Impuestos (455.00)
+- Impuestos sobre las utilidades de las empresas (460.00)
 
 #### Resultado operativo bruto
 
@@ -160,7 +187,13 @@ renderTableBasic(entidadesModelo,captionTable = captionTable)
 
 #### Inversiones temporarias
 
+- Inversiones temporarias (120.00)
+
 #### Pasivos
 
+- Pasivos (200)
+
 #### Disponibles
+
+- Disponibilidades (110.00)
 
