@@ -1,0 +1,10 @@
+---
+output: pdf_document
+---
+
+
+## Definición de rangos y limites de los indicadores
+
+
+
+

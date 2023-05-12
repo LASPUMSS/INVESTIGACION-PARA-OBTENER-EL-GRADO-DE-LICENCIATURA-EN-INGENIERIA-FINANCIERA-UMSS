@@ -187,51 +187,81 @@ con el Banco Central de Bolivia y otros;
 - Las obligaciones diversas a cargo de la entidad 
 - Las previsiones que no representan correcciones de valores del activo. 
 
-
 #### Patrimonio
 
 Según [@MANUAL_CUENTAS_ASFI] el patrimonio (designado por el código 300.00 en el manual de cuentas) representa la participación de los propietarios en el activo de la entidad. Su importe se determina por la diferencia entre el activo y el pasivo. 
 
 #### Cartera en mora
 
-- Cartera vencida (133.00)
-- Cartera en ejecución (134.00)
+(designado por el código 133.00 en el manual de cuentas) En esta cuenta se registran los créditos cuyo capital, cuotas de amortización o intereses no hayan sido cancelados íntegramente a la entidad hasta los 30 días contados desde la fecha de vencimiento. Para este efecto, la fecha efectiva de contabilización en esta cuenta es el día 31 de incumplimiento en cronograma de pagos.
+
+(designado por el código 134.00 en el manual de cuentas) En esta cuenta se registran los créditos por los cuales la entidad ha iniciado las acciones judiciales para el cobro.
 
 #### Cartera Bruta
 
-- Cartera vigente (131.00)
-- Cartera vencida (133.00)
-- Cartera en ejecución (134.00)
+Esta variable esta compuesta:
+
+- Cartera vigente 
+- Cartera vencida 
+- Cartera en ejecución
+
+La cartera vencida y en ejecución fueron descritas anteriormente sumando una cuenta, quedando la cartera vigente (designado por el código 131.00 en el manual de cuentas) En esta cuenta se registran los créditos que tienen sus amortizaciones de capital e intereses al día conforme al plan de pagos establecido en el contrato de crédito, y aquellos que se encuentran con un atraso en sus pagos de hasta 30 días, a partir de la fecha de incumplimiento del cronograma original de pagos.
+
 
 #### Cartera reprogramada o restructurada total
 
-- Cartera reprogramada o restructurada vigente (135.00)
-- Cartera reprogramada o restructurada vencida (136.00)
-- Cartera reprogramada o restructurada en ejecución (137.00)
+(designado por el código 135.00 en el manual de cuentas) En esta cuenta se registran los créditos reprogramados o reestructurados que tienen sus amortizaciones de capital e intereses al día conforme al plan de pagos establecido en el contrato de reprogramación o reestructuración del crédito, y aquellos que se encuentran con un atraso en sus pagos de hasta 30 días a partir de la fecha de vencimiento. Las operaciones de crédito serán traspasadas a cartera reestructurada vigente una vez admitida la solicitud de apertura del procedimiento para la suscripción de un acuerdo de transacción e inscrita en el Registro de Comercio de la Autoridad de Fiscalización y Control Social de Empresas. Las subcuentas del 1 al 49 son utilizadas para el registro de reprogramaciones y del 51 al 99 para el registro de reestructuraciones.
+
+(designado por el código 136.00 en el manual de cuentas) En esta cuenta se registran los créditos reprogramados o reestructurados cuyo capital, cuotas de amortización o intereses no hayan sido cancelados íntegramente a la entidad hasta los 30 días contados desde la fecha de vencimiento. Para este efecto, la fecha efectiva de contabilización en esta cuenta es el día 31 de incumplimiento en el cronograma de pagos.
+
+(designado por el código 137.00 en el manual de cuentas) En esta cuenta se registran los créditos reprogramados o reestructurados por los cuales la entidad ha iniciado las acciones judiciales para el cobro. Las operaciones de crédito serán traspasadas a cartera reestructurada en ejecución una vez admitida la solicitud de apertura del procedimiento para la suscripción de un acuerdo de transacción e inscrita en el Registro de Comercio de la Autoridad de Fiscalización y Control Social de Empresas.
 
 #### Previsión cartera
 
-- Previsión para incobrabilidad de cartera (139.00)
+(designado por el código 139.00 en el manual de cuentas) En esta cuenta se registra el importe que se estima para cubrir los riesgos de pérdidas por incobrabilidad de préstamos, de acuerdo con lo dispuesto en el Libro 3°, Título II de la Recopilación de Normas para Servicios Financieros y en la descripción del grupo Cartera. 
 
 #### Contingente
 
-- Cuentas contingentes deudoras (600.00)
-- Cuentas contingentes acreedoras (700.00)
+(designado por el código 600.00 en el manual de cuentas) Representa derechos eventuales que tendría la entidad contra el deudor principal en caso que éste no cumpla con las obligaciones sobre las cuales la entidad indirectamente asumió responsabilidad.Comprende operaciones por Cartas de crédito, Garantías otorgadas, Documentos descontados, Líneas de crédito comprometidas utilizables automáticamente y Otras
+contingencias. 
 
+(designado por el código 700.00 en el manual de cuentas) Representa las obligaciones eventuales que tendría la entidad por responsabilidades asumidas, si el deudor principal no cumple con las mismas. Comprende operaciones por cartas de crédito, garantías otorgadas, documentos descontados, líneas de crédito comprometidas y otras contingencias. 
 
 #### Gastos administrativos
 
-- Gastos de administración (450.00)
+Según [@MANUAL_CUENTAS_ASFI] los gastos administrativos (designado por el código 450.00 en el manual de cuentas) representa los gastos devengados en el período incurridos para el desenvolvimiento administrativo de la entidad, que se resumen en:
+
+- Comprende los gastos de personal (retribuciones, cargas sociales, servicios al personal, etc.)
+- Servicios contratados a terceros (computación, seguridad, etc.)
+- Seguros, comunicaciones y traslados
+- Impuestos
+- Mantenimiento y reparaciones
+- Depreciación de bienes de uso
+- Amortización de cargos diferidos y activos intangibles
+- Otros gastos de administración (gastos notariales y judiciales, alquileres, energía eléctrica, agua y calefacción, papelería, útiles y materiales de servicio, etc.) 
+
 
 #### Impuestos
 
-- Impuestos (455.00)
-- Impuestos sobre las utilidades de las empresas (460.00)
+En esta cuenta se (designado por el código 455.00 en el manual de cuentas) registran los gastos devengados en el período por concepto de impuestos, asimismo los intereses y recargos originados por los mismos. El gasto por Impuesto al valor agregado que se registra en esta cuenta, es el que surge de aplicar la tasa del impuesto sobre ingresos presuntos, tales como el que proviene de tomar en anticrético un bien. 
+
+(designado por el código 460.00 en el manual de cuentas) Comprende los gastos devengados en el período por concepto de impuesto sobre las utilidades de las empresas. 
+
 
 #### Resultado operativo bruto
 
+- Ingresos financieros
+- (-) Gastos financieros
+- (+) Otros ingresos operativos
+- (-) Otros gastos operativos
+
 #### Resultado neto de la gestión
 
-
+- Ingresos financieros
+- (-) Gastos financieros
+- (+) Otros ingresos operativos
+- (-) Otros gastos operativos
+- (+/-) Gastos (Ingresos) extraordinarios 
+- (-) Impuestos
 
 

@@ -1,0 +1,9 @@
+---
+output: pdf_document
+---
+
+
+## Ponderación de elementos CAMEL
+
+
+
