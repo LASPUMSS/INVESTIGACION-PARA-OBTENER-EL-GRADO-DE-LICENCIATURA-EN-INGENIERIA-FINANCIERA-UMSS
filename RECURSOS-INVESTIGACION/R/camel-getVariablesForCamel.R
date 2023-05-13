@@ -1,0 +1,29 @@
+getVariablesForCAMEL <- function() {
+    
+    cartVnc <- dat$ACTIVO_CARTERA_CARTERA_VENCIDA_TOTAL
+    cartEjc <- dat$ACTIVO_CARTERA_CARTERA_EJECUCION_TOTAL
+    cartVgt <- dat$ACTIVO_CARTERA_CARTERA_VIGENTE_TOTAL
+    cartVncRep <- dat$ACTIVO_CARTERA_CARTERA_REPROGRAMADA_VENCIDA
+    cartEjcRep <- dat$ACTIVO_CARTERA_CARTERA_REPROGRAMADA_EJECUCION
+    cartVgtRep <- dat$ACTIVO_CARTERA_CARTERA_REPROGRAMADA_VIGENTE
+    
+    prevCart <- dat$ACTIVO_CARTERA_PREVISION_PARA_INCOBRABILIDAD_DE_CARTERA
+    patrimonio <- dat$PATRIMONIO
+    
+    realizables = dat$ACTIVO_BIENES_REALIZABLES
+    activo <- dat$ACTIVO
+    contingente <- dat$CUENTAS_CONTINGENTES_DEUDORAS
+    
+    gastAdm <- dat$EERR_S2_GASTOS_DE_ADMINISTRACION
+    impuestos <- dat$EERR_S2_IMPUESTOS
+    resulOp <- dat$RESULTADO_DE_OPERACION_BRUTO
+    
+    ingNeto <- dat$EERR_S2_RESULTADO_NETO_DE_LA_GESTION
+    
+    disponibles <- dat$ACTIVO_DISPONIBILIDADES
+    invTemp <- dat$ACTIVO_INVERSIONES_TEMPORARIAS
+    
+    pasivoCP <- dat$PASIVO
+    
+    
+}
