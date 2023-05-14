@@ -9,7 +9,7 @@ getDatEEFFByGroup <- function(dat=NULL, by='TIPO_DE_ENTIDAD') {
     # Verificar si "dat" es nulo
     if (is.null(dat) ) { dat <- getDatEEFF() }
     
-    # Agrupar por sectores
+    # Agrupar por sectores 368
     if (by=='TIPO_DE_ENTIDAD') {
         
         dat <- 
@@ -37,10 +37,11 @@ getDatEEFFByGroup <- function(dat=NULL, by='TIPO_DE_ENTIDAD') {
             left_join(dat, datCAP, 
                       by = join_by(ID == ID), 
                       relationship = 'one-to-one', 
-                      suffix = c("x", ""))
+                      suffix = c("x", "")) %>% 
+            relocate(ID, .before = TIPO_DE_ENTIDAD)
     }
     
-    # Agrupar por entidades
+    # Agrupar por entidades 368
     if (by=='ENTIDAD') {
         
         dat <- 
@@ -68,7 +69,10 @@ getDatEEFFByGroup <- function(dat=NULL, by='TIPO_DE_ENTIDAD') {
             left_join(dat, datCAP, 
                       by = join_by(ID == ID), 
                       relationship = 'one-to-one', 
-                      suffix = c("x", ""))
+                      suffix = c("x", "")) %>% 
+            select(-TIPO_DE_ENTIDAD, -EXPRESADO) %>% 
+            relocate(ENTIDIDAD, .before = FECHA) %>% 
+            relocate(ID, .before = ENTIDIDAD)
     }
     
     return(datResult)

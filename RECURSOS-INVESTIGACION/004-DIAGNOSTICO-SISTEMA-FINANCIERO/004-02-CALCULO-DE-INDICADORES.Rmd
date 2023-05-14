@@ -2,7 +2,28 @@
 output: pdf_document
 ---
 
+```{r}
+source("RECURSOS-INVESTIGACION/R/camel-get-datCamelIndicadores.R")
+source('RECURSOS-INVESTIGACION/R/camel-getCamelIndNormalizada.R')
+source('RECURSOS-INVESTIGACION/R/camel-plot-functions.R')
+
+datCamelIndNorm <- getDatCamelIndNormalizada(gestionInc = 2014,
+                                             by = 'TIPO_DE_ENTIDAD')
+
+```
+
 
 ## Calculo de indicadores
 
+### Capital
 
+#### Coeficiente de adecuación patrimonial (CAP)
+
+```{r}
+id <- 'indCap_CAP'
+```
+
+
+```{r}
+plotIndCamel(id, datCamelIndNorm)
+```

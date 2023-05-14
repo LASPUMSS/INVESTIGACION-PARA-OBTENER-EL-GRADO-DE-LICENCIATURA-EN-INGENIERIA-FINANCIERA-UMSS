@@ -1,8 +1,5 @@
 getDatCamelIndicadores <- function(dat=NULL, by='TIPO_DE_ENTIDAD') {
     
-    dat <- NULL
-    by <- 'TIPO_DE_ENTIDAD'
-    
     # Funciones necesarias
     source('RECURSOS-INVESTIGACION/R/camel-indicadores-functions.R')
     source('RECURSOS-INVESTIGACION/R/get-dat-basic.R')
@@ -18,11 +15,9 @@ getDatCamelIndicadores <- function(dat=NULL, by='TIPO_DE_ENTIDAD') {
         datCamelInd <- data.frame(ID=dat$ID,
                                   TIPO_DE_ENTIDAD=dat$TIPO_DE_ENTIDAD,
                                   FECHA=dat$FECHA)   
-    }
-    
-    if (by=='ENTIDAD') {
+    } else if (by=='ENTIDAD') {
         datCamelInd <- data.frame(ID=dat$ID,
-                                  TIPO_DE_ENTIDAD=dat$TIPO_DE_ENTIDAD,
+                                  TIPO_DE_ENTIDAD=dat$ENTIDIDAD,
                                   FECHA=dat$FECHA)   
     }
     
