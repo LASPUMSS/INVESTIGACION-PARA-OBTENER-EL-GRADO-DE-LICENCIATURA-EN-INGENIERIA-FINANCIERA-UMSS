@@ -1,4 +1,4 @@
-getTableCamelRangosLimites <- function(dat) {
+renderTableCamelRangosLimites <- function(dat) {
     
     dat$INDICADOR <- gsub('indCap ', '',
                           gsub('indAct ', '',
@@ -17,7 +17,7 @@ getTableCamelRangosLimites <- function(dat) {
             caption = "Rangos y limites para indicadores CAMEL") %>%
         add_header_above(c(" ", " ", "Rangos - Limites" = 5)) %>%
         kable_styling(latex_options = c("repeat_header"), 
-                      font_size = 7)
+                      font_size = 8)
     
     return(result)
     

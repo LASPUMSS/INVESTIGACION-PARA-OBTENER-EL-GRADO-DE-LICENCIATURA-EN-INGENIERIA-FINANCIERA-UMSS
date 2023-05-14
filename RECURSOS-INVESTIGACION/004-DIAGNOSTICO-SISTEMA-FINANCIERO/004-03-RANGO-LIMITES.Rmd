@@ -2,9 +2,21 @@
 output: pdf_document
 ---
 
+```{r}
+source('RECURSOS-INVESTIGACION/R/camel-getCamelIndNormalizada.R')
+source('RECURSOS-INVESTIGACION/R/camel-get-limites-rangos.R')
+source("RECURSOS-INVESTIGACION/R/camel-render-table-rangos-limites.R")
+
+datCamelIndNorm <- getDatCamelIndNormalizada(gestionInc=2014,by='TIPO_DE_ENTIDAD')
+datCamelRangosLimites <- getDatCamelRangosLimites(datCamelIndNorm)
+
+```
 
 ## Definición de rangos y limites de los indicadores
 
+```{r}
+renderTableCamelRangosLimites(datCamelRangosLimites)
+```
 
 
 

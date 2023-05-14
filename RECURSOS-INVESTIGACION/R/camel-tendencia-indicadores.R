@@ -1,6 +1,6 @@
 
 
-getDatTrendInd <- function(id='indCap_CAP', datCamelIndNorm) {
+getDatTrendInd <- function(id='indCap_CAP', datCamelIndNorm, idsDecreasing = FALSE) {
     
     require(fpp2)
     dat <- datCamelIndNorm
@@ -22,9 +22,6 @@ getDatTrendInd <- function(id='indCap_CAP', datCamelIndNorm) {
         tsDat[,i] <- x
     }
     
-    #tsDat[,which.max(colnames(tsDat)==id)]
-    #tslm(tsDat[,"BANCOS DE DESARROLLO PRODUCTIVO"]~trend)
-    
     datTrendInd <- data.frame(TIPO_DE_ENTIDAD=rep(NA,length(colnames(tsDat))),
                               TENDENCIA=rep(NA,length(colnames(tsDat))))
     
@@ -38,7 +35,12 @@ getDatTrendInd <- function(id='indCap_CAP', datCamelIndNorm) {
         
     }
     
-    return(datTrendInd)
+    datTrendInd <- datTrendInd[order(datTrendInd$TENDENCIA,decreasing = idsDecreasing),]
+    
+    datResult <- data.frame(TIPO_DE_ENTIDAD=datTrendInd$TIPO_DE_ENTIDAD,
+                            TENDENCIA=datTrendInd$TENDENCIA)
+    
+    return(datResult)
 }
 
 

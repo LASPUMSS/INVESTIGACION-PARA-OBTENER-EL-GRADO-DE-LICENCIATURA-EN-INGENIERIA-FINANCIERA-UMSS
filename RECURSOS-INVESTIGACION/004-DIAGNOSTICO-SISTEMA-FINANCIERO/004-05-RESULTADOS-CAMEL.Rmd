@@ -2,7 +2,76 @@
 output: pdf_document
 ---
 
+```{r}
+source('RECURSOS-INVESTIGACION/R/camel-getCamelIndNormalizada.R')
+source('RECURSOS-INVESTIGACION/R/camel-get-limites-rangos.R')
 
-## Calificación CAMEL del sistema financiero
+source('RECURSOS-INVESTIGACION/R/camel-calificacion-indicadores.R')
+source('RECURSOS-INVESTIGACION/R/camel-calificacion-entidad.R')
+source('RECURSOS-INVESTIGACION/R/camel-tendencia-indicadores.R')
+source('RECURSOS-INVESTIGACION/R/camel-plot-functions.R')
+
+datCamelIndNorm <- getDatCamelIndNormalizada(gestionInc=2014,by='TIPO_DE_ENTIDAD')
+datCamelRangosLimites <- getDatCamelRangosLimites(datCamelIndNorm)
+
+datCamelCalificacionIndicadores <- getDatCamelCalificacionIndicadores(datCamelIndNorm,
+                                                                      datCamelRangosLimites)
+
+datCamelCalificacionEntidad <- getDatCamelCalificacionEntidad(datCamelCalificacionIndicadores)
+
+```
+
+## Resultados CAMEL del sistema financiero
+
+### Resultados indicadores de capital (C - CAMEL)
+
+```{r, out.width='100%', fig.cap='Resultado indicadores de Capital'}
+plotIndCamel("C",datCamelCalificacionEntidad)
+```
+
+
+
+\newpage
+### Resultados indicadores de activos (A - CAMEL)
+
+```{r, out.width='100%', fig.cap='Resultado indicadores de activos'}
+plotIndCamel("A",datCamelCalificacionEntidad)
+```
+
+
+\newpage
+### Resultados indicadores de administración (M - CAMEL)
+
+```{r, out.width='100%', fig.cap='Resultado indicadores de administración'}
+plotIndCamel("M",datCamelCalificacionEntidad)
+```
+
+
+
+\newpage
+### Resultados indicadores de beneficios (E - CAMEL)
+
+```{r, out.width='100%', fig.cap='Resultado indicadores de beneficios'}
+plotIndCamel("E",datCamelCalificacionEntidad)
+```
+
+
+
+\newpage
+### Resultados indicadores de liquidez (L - CAMEL)
+
+```{r, out.width='100%', fig.cap='Resultado indicadores de liquidez'}
+plotIndCamel("L",datCamelCalificacionEntidad)
+```
+
+
+\newpage
+### Calificación CAMEL
+
+```{r, out.width='100%', fig.cap='Calificación CAMEL'}
+plotIndCamel("CAMEL",datCamelCalificacionEntidad)
+```
+
+
 
 

@@ -1,4 +1,4 @@
-getDatIdsNamesCamelInds <- function() {
+getDatIdsNamesCamelIndicadores <- function() {
     
     indicadoresCamelId <- data.frame(
         INDICADOR = c('indCap_CAP',        
