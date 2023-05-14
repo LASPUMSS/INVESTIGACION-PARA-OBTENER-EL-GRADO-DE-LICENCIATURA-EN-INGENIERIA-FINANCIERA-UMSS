@@ -1,39 +1,32 @@
 getDatCAP <- function() {
     
-    require(stringi)
+    require(openxlsx)
     
     dat <- read.xlsx('FUENTES-DE-DATOS/ASFI/ConsoleAppPrepararDatos/bin/Debug/DATOS_ASFI/BBDD_INDICADORES_FINANCIEROS.xlsx')
+    
     dat$FECHA <- convertToDate(dat$FECHA)
+    dat$TIPO_DE_ENTIDAD <- gsub('COPERATIVAS_DE_AHORRO_Y_CREDITO','COOPERATIVAS_DE_AHORRO_Y_CREDITO',dat$TIPO_DE_ENTIDAD)
     
-    dat$TIPO_DE_ENTIDAD <- gsub('COPERATIVAS_DE_AHORRO_Y_CREDITO',
-                                 'COOPERATIVAS_DE_AHORRO_Y_CREDITO',
-                                 dat$TIPO_DE_ENTIDAD)
-    
+    dat$ENTIDIDAD <- gsub("[\r\n]", "", dat$ENTIDIDAD)
     dat$ENTIDIDAD <- gsub('BFO \\(5\\)','BFO', dat$ENTIDIDAD)
     dat$ENTIDIDAD <- gsub('BFO ','BFO', dat$ENTIDIDAD)
     dat$ENTIDIDAD <- gsub('CSN \\(6\\)','CSN', dat$ENTIDIDAD)
+    dat$ENTIDIDAD <- gsub('TOTAL SISTEMA \\(5\\)','TOTAL', dat$ENTIDIDAD)
+    dat$ENTIDIDAD <- gsub('TOTAL SISTEMA','TOTAL', dat$ENTIDIDAD)
+    dat$ENTIDIDAD <- gsub('TOTAL','TOTAL_SISTEMA', dat$ENTIDIDAD)
+    dat$COEFICIENTE_DE_ADECUACION_PATRIMONIAL <- gsub(',','.',dat$COEFICIENTE_DE_ADECUACION_PATRIMONIAL)
     
-    for (i in nrow(dat)) {
-        
-        if (grepl('TOTAL', dat[i,'ENTIDIDAD']) ) {
-            print('aqui')
-            dat[i,'ENTIDIDAD'] <- 'TOTAL'
-        }
-        
-    }
+    datX1 <- dat[grepl("%",dat$COEFICIENTE_DE_ADECUACION_PATRIMONIAL),]
+    datX1$COEFICIENTE_DE_ADECUACION_PATRIMONIAL <- gsub('%','',datX1$COEFICIENTE_DE_ADECUACION_PATRIMONIAL)
+    datX1$COEFICIENTE_DE_ADECUACION_PATRIMONIAL <- as.numeric(datX1$COEFICIENTE_DE_ADECUACION_PATRIMONIAL)
+    datX1$COEFICIENTE_DE_ADECUACION_PATRIMONIAL <- datX1$COEFICIENTE_DE_ADECUACION_PATRIMONIAL/100
     
-    unique(dat$ENTIDIDAD)
+    datX2 <- dat[!grepl("%",dat$COEFICIENTE_DE_ADECUACION_PATRIMONIAL),]
+    datX2$COEFICIENTE_DE_ADECUACION_PATRIMONIAL <- as.numeric(datX2$COEFICIENTE_DE_ADECUACION_PATRIMONIAL)
     
-    dat$ENTIDIDAD <- gsub('TOTAL SISTEMA \\(5\\)','TOTAL_SISTEMA', dat$ENTIDIDAD)
-    dat$ENTIDIDAD <- gsub('TOTAL SISTEMA','TOTAL_SISTEMA', dat$ENTIDIDAD)
+    datResult <- bind_rows(datX1,datX2)
     
-    #dat$ENTIDIDAD <- gsub('TOTAL','TOTAL_SISTEMA', dat$ENTIDIDAD)
-    
-    dat$ID <- paste0(dat$TIPO_DE_ENTIDAD,
-                      format(dat$FECHA, format='%Y'),
-                      format(dat$FECHA, format='%m'))
-    
-    return(dat)
+    return(datResult)
     
     
 }

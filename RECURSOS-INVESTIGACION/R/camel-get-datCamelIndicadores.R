@@ -1,55 +1,34 @@
 getDatCamelIndicadores <- function(dat=NULL, by='TIPO_DE_ENTIDAD') {
     
+    dat <- NULL
+    by <- 'TIPO_DE_ENTIDAD'
+    
     # Funciones necesarias
     source('RECURSOS-INVESTIGACION/R/camel-indicadores-functions.R')
-    source('RECURSOS-INVESTIGACION/R/camel-get-datCAP.R')
+    source('RECURSOS-INVESTIGACION/R/get-dat-basic.R')
     source('RECURSOS-INVESTIGACION/R/get-dat-group.R')
-    
-    # Paquetes necesarios
-    require(openxlsx)
     require(dplyr)
     
-    # Dat de coeficiente de adecuación patrimonial
-    datCAP <- getDatCAP()
-    unique(datCAP$ENTIDIDAD)
+    # Verificar dat
+    if (is.null(dat) ) { dat <- getDatEEFF() }
     
-    # Dat
-    if (is.null(dat) ) {
-        source('RECURSOS-INVESTIGACION/R/get-dat-basic.R')
-        dat <- getDatEEFF()
+    dat <- getDatEEFFByGroup(dat, by)
+    
+    if (by=='TIPO_DE_ENTIDAD') {
+        datCamelInd <- data.frame(ID=dat$ID,
+                                  TIPO_DE_ENTIDAD=dat$TIPO_DE_ENTIDAD,
+                                  FECHA=dat$FECHA)   
     }
     
     if (by=='ENTIDAD') {
-        
-        dat <- dat
-        dat$ID <- paste0(dat$TIPO_DE_ENTIDAD,
-                         format(dat$FECHA, format='%Y'),
-                         format(dat$FECHA, format='%m'))
-        
-        
+        datCamelInd <- data.frame(ID=dat$ID,
+                                  TIPO_DE_ENTIDAD=dat$TIPO_DE_ENTIDAD,
+                                  FECHA=dat$FECHA)   
     }
-    
-    if (by=='TIPO_DE_ENTIDAD') {
-        
-        # Agrupar por sectores
-        dat <- getDatEEFFByGroup(dat, 'TIPO_DE_ENTIDAD')
-        dat$ID <- paste0(dat$TIPO_DE_ENTIDAD,
-                         format(dat$FECHA, format='%Y'),
-                         format(dat$FECHA, format='%m'))
-        
-    }
-    
-    
-    
-    datCamelInd <- data.frame(ID=paste0(dat$TIPO_DE_ENTIDAD,
-                                        format(dat$FECHA, format='%Y'),
-                                        format(dat$FECHA, format='%m')),
-                              TIPO_DE_ENTIDAD=dat$TIPO_DE_ENTIDAD,
-                              FECHA=dat$FECHA)
     
     # Variables
     # Revisar
-    
+    cap <- dat$COEFICIENTE_DE_ADECUACION_PATRIMONIAL
     cartVnc <- dat$ACTIVO_CARTERA_CARTERA_VENCIDA_TOTAL
     cartEjc <- dat$ACTIVO_CARTERA_CARTERA_EJECUCION_TOTAL
     cartVgt <- dat$ACTIVO_CARTERA_CARTERA_VIGENTE_TOTAL
@@ -77,7 +56,7 @@ getDatCamelIndicadores <- function(dat=NULL, by='TIPO_DE_ENTIDAD') {
     
     #### INDICADORES DE CAPITAL
     
-    datCamelInd$indCap_CAP <- rep(NA,nrow(dat))
+    datCamelInd$indCap_CAP <- cap
     
     datCamelInd$indCap_CCCM <- INDICADORES_CAMEL$indCap_CCCM(cartVnc = cartVnc,
                                                              cartEjc = cartEjc,
@@ -145,31 +124,5 @@ getDatCamelIndicadores <- function(dat=NULL, by='TIPO_DE_ENTIDAD') {
                                                              pasivoCP = pasivoCP)
     
     
-    ### ANEXO - INDICADOR DE ADECUACIÓN PATRIMONIAL
-    
-    dat2 <- read.xlsx('FUENTES-DE-DATOS/ASFI/ConsoleAppPrepararDatos/bin/Debug/DATOS_ASFI/BBDD_INDICADORES_FINANCIEROS.xlsx')
-    dat2$FECHA <- convertToDate(dat2$FECHA)
-    dat2$TIPO_DE_ENTIDAD <- gsub('COPERATIVAS_DE_AHORRO_Y_CREDITO',
-                                 'COOPERATIVAS_DE_AHORRO_Y_CREDITO',
-                                 dat2$TIPO_DE_ENTIDAD)
-    dat2 <- dat2[gsub(' ','',dat2$ENTIDIDAD)=='TOTALSISTEMA',]
-    
-    dat2$ID <- paste0(dat2$TIPO_DE_ENTIDAD,
-                      format(dat2$FECHA, format='%Y'),
-                      format(dat2$FECHA, format='%m'))
-    
-    dat2 <- dat2[,c('ID','COEFICIENTE_DE_ADECUACION_PATRIMONIAL')]
-    names(dat2) <- c('ID','indCap_CAP')
-    
-    datResult <- 
-        left_join(datCamelInd, dat2, 
-                  by = join_by(ID == ID), 
-                  relationship = 'one-to-one', 
-                  suffix = c("x", "")) %>% 
-        select(-c(indCap_CAPx)) %>% 
-        relocate(indCap_CAP, .after = FECHA)
-    
-    datResult$indCap_CAP <- as.numeric(datResult$indCap_CAP)
-    
-    return(datResult)
+    return(datCamelInd)
 }
