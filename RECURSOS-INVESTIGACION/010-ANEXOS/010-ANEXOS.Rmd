@@ -9,7 +9,6 @@ source('RECURSOS-INVESTIGACION/R/camel-render-table-datCamelIndNorm.R')
 source('RECURSOS-INVESTIGACION/R/camel-get-limites-rangos.R')
 source('RECURSOS-INVESTIGACION/R/camel-calificacion-indicadores.R')
 source('RECURSOS-INVESTIGACION/R/camel-calificacion-entidad.R')
-source('RECURSOS-INVESTIGACION/R/camel-render-table-simple.R')
 
 datCamelIndNorm <- getDatCamelIndNormalizada(gestionInc = 2022,by = 'TIPO_DE_ENTIDAD')
 datCamelRangosLimites <- getDatCamelRangosLimites(datCamelIndNorm)
@@ -104,6 +103,6 @@ dat <- datCamelCalificacionEntidad[,-1]
 dat$TIPO_DE_ENTIDAD <- gsub('_',' ', dat$TIPO_DE_ENTIDAD)
 names(dat) <- gsub('_',' ', names(dat))
 
-getTableSimpleRender(dat, 'Calificación CAMEL')
+renderTableBasic(dat, 'Calificación CAMEL')
 ```
 
