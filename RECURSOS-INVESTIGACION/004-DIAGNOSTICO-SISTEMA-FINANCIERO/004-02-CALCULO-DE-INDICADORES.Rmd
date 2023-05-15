@@ -11,6 +11,7 @@ source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
 source("RECURSOS-INVESTIGACION/R/handles.R")
 
 require(dplyr)
+require(stringr)
 require(glue)
 
 datCamelIndNorm <- getDatCamelIndNormalizada(gestionInc=2014,by='TIPO_DE_ENTIDAD')
@@ -41,10 +42,10 @@ captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de
 plotIndCamel(id, datCamelIndNorm)
 ```
 
-La tendencia mas favorable en el `r tolower(nameIndById)` a través del tiempo esta dado por el sector de `r tolower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
 
 ```{r}
-captionTable <- glue('Tendencia del {tolower(nameIndById)} por tipo de entidad')
+captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
 renderTableBasic(datTrendInd,captionTable = captionTable)
 ```
 
@@ -58,7 +59,7 @@ nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES
 
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- datTrendInd[1,2]
+trendBestEnt <- round(datTrendInd[1,2], 6)
 
 captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de entidad')
 ```
@@ -67,10 +68,10 @@ captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de
 plotIndCamel(id, datCamelIndNorm)
 ```
 
-La tendencia mas favorable en el `r tolower(nameIndById)` a través del tiempo esta dado por el sector de `r tolower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
 
 ```{r}
-captionTable <- glue('Tendencia del {tolower(nameIndById)} por tipo de entidad')
+captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
 renderTableBasic(datTrendInd,captionTable = captionTable)
 ```
 
@@ -84,7 +85,7 @@ nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES
 
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- datTrendInd[1,2]
+trendBestEnt <- round(datTrendInd[1,2], 6)
 
 captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de entidad')
 ```
@@ -93,10 +94,10 @@ captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de
 plotIndCamel(id, datCamelIndNorm)
 ```
 
-La tendencia mas favorable en el `r tolower(nameIndById)` a través del tiempo esta dado por el sector de `r tolower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
 
 ```{r}
-captionTable <- glue('Tendencia del {tolower(nameIndById)} por tipo de entidad')
+captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
 renderTableBasic(datTrendInd,captionTable = captionTable)
 ```
 
@@ -110,7 +111,7 @@ nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES
 
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- datTrendInd[1,2]
+trendBestEnt <- round(datTrendInd[1,2], 6)
 
 captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de entidad')
 ```
@@ -119,10 +120,10 @@ captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de
 plotIndCamel(id, datCamelIndNorm)
 ```
 
-La tendencia mas favorable en el `r tolower(nameIndById)` a través del tiempo esta dado por el sector de `r tolower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
 
 ```{r}
-captionTable <- glue('Tendencia del {tolower(nameIndById)} por tipo de entidad')
+captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
 renderTableBasic(datTrendInd,captionTable = captionTable)
 ```
 
@@ -138,7 +139,7 @@ nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES
 
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- datTrendInd[1,2]
+trendBestEnt <- round(datTrendInd[1,2], 6)
 
 captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de entidad')
 ```
@@ -147,10 +148,10 @@ captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de
 plotIndCamel(id, datCamelIndNorm)
 ```
 
-La tendencia mas favorable en el `r tolower(nameIndById)` a través del tiempo esta dado por el sector de `r tolower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
 
 ```{r}
-captionTable <- glue('Tendencia del {tolower(nameIndById)} por tipo de entidad')
+captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
 renderTableBasic(datTrendInd,captionTable = captionTable)
 ```
 
@@ -163,7 +164,7 @@ nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES
 
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- datTrendInd[1,2]
+trendBestEnt <- round(datTrendInd[1,2], 6)
 
 captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de entidad')
 ```
@@ -172,10 +173,10 @@ captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de
 plotIndCamel(id, datCamelIndNorm)
 ```
 
-La tendencia mas favorable en el `r tolower(nameIndById)` a través del tiempo esta dado por el sector de `r tolower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
 
 ```{r}
-captionTable <- glue('Tendencia del {tolower(nameIndById)} por tipo de entidad')
+captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
 renderTableBasic(datTrendInd,captionTable = captionTable)
 ```
 
@@ -189,7 +190,7 @@ nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES
 
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- datTrendInd[1,2]
+trendBestEnt <- round(datTrendInd[1,2], 6)
 
 captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de entidad')
 ```
@@ -198,10 +199,10 @@ captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de
 plotIndCamel(id, datCamelIndNorm)
 ```
 
-La tendencia mas favorable en el `r tolower(nameIndById)` a través del tiempo esta dado por el sector de `r tolower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
 
 ```{r}
-captionTable <- glue('Tendencia del {tolower(nameIndById)} por tipo de entidad')
+captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
 renderTableBasic(datTrendInd,captionTable = captionTable)
 ```
 
@@ -215,7 +216,7 @@ nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES
 
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- datTrendInd[1,2]
+trendBestEnt <- round(datTrendInd[1,2], 6)
 
 captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de entidad')
 ```
@@ -224,10 +225,10 @@ captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de
 plotIndCamel(id, datCamelIndNorm)
 ```
 
-La tendencia mas favorable en el `r tolower(nameIndById)` a través del tiempo esta dado por el sector de `r tolower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
 
 ```{r}
-captionTable <- glue('Tendencia del {tolower(nameIndById)} por tipo de entidad')
+captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
 renderTableBasic(datTrendInd,captionTable = captionTable)
 ```
 
@@ -243,7 +244,7 @@ nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES
 
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- datTrendInd[1,2]
+trendBestEnt <- round(datTrendInd[1,2], 6)
 
 captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de entidad')
 ```
@@ -252,10 +253,10 @@ captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de
 plotIndCamel(id, datCamelIndNorm)
 ```
 
-La tendencia mas favorable en el `r tolower(nameIndById)` a través del tiempo esta dado por el sector de `r tolower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
 
 ```{r}
-captionTable <- glue('Tendencia del {tolower(nameIndById)} por tipo de entidad')
+captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
 renderTableBasic(datTrendInd,captionTable = captionTable)
 ```
 
@@ -269,7 +270,7 @@ nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES
 
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- datTrendInd[1,2]
+trendBestEnt <- round(datTrendInd[1,2], 6)
 
 captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de entidad')
 ```
@@ -278,10 +279,10 @@ captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de
 plotIndCamel(id, datCamelIndNorm)
 ```
 
-La tendencia mas favorable en el `r tolower(nameIndById)` a través del tiempo esta dado por el sector de `r tolower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
 
 ```{r}
-captionTable <- glue('Tendencia del {tolower(nameIndById)} por tipo de entidad')
+captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
 renderTableBasic(datTrendInd,captionTable = captionTable)
 ```
 
@@ -297,7 +298,7 @@ nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES
 
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- datTrendInd[1,2]
+trendBestEnt <- round(datTrendInd[1,2], 6)
 
 captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de entidad')
 ```
@@ -306,10 +307,10 @@ captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de
 plotIndCamel(id, datCamelIndNorm)
 ```
 
-La tendencia mas favorable en el `r tolower(nameIndById)` a través del tiempo esta dado por el sector de `r tolower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
 
 ```{r}
-captionTable <- glue('Tendencia del {tolower(nameIndById)} por tipo de entidad')
+captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
 renderTableBasic(datTrendInd,captionTable = captionTable)
 ```
 
@@ -323,7 +324,7 @@ nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES
 
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- datTrendInd[1,2]
+trendBestEnt <- round(datTrendInd[1,2], 6)
 
 captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de entidad')
 ```
@@ -332,10 +333,10 @@ captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de
 plotIndCamel(id, datCamelIndNorm)
 ```
 
-La tendencia mas favorable en el `r tolower(nameIndById)` a través del tiempo esta dado por el sector de `r tolower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
 
 ```{r}
-captionTable <- glue('Tendencia del {tolower(nameIndById)} por tipo de entidad')
+captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
 renderTableBasic(datTrendInd,captionTable = captionTable)
 ```
 
@@ -351,7 +352,7 @@ nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES
 
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- datTrendInd[1,2]
+trendBestEnt <- round(datTrendInd[1,2], 6)
 
 captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de entidad')
 ```
@@ -360,10 +361,10 @@ captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de
 plotIndCamel(id, datCamelIndNorm)
 ```
 
-La tendencia mas favorable en el `r tolower(nameIndById)` a través del tiempo esta dado por el sector de `r tolower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
 
 ```{r}
-captionTable <- glue('Tendencia del {tolower(nameIndById)} por tipo de entidad')
+captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
 renderTableBasic(datTrendInd,captionTable = captionTable)
 ```
 
@@ -377,7 +378,7 @@ nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES
 
 datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- datTrendInd[1,2]
+trendBestEnt <- round(datTrendInd[1,2], 6)
 
 captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de entidad')
 ```
@@ -386,10 +387,10 @@ captionPlotIndicador <- glue('{handle$toUpperFirstText(nameIndById)} por tipo de
 plotIndCamel(id, datCamelIndNorm)
 ```
 
-La tendencia mas favorable en el `r tolower(nameIndById)` a través del tiempo esta dado por el sector de `r tolower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r tolower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r tolower(nameIndById)`.
+La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
 
 ```{r}
-captionTable <- glue('Tendencia del {tolower(nameIndById)} por tipo de entidad')
+captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
 renderTableBasic(datTrendInd,captionTable = captionTable)
 ```
 

@@ -1,5 +1,5 @@
 
-getTableCamelIndNorm <- function(id='indCap', datCamelIndNorm, captionTable='Indicadores de capital CAMEL') {
+renderTableCamelIndNorm <- function(id='indCap', datCamelIndNorm, captionTable='Indicadores de capital CAMEL') {
     
     require(knitr)
     require(kableExtra)
@@ -37,7 +37,7 @@ getTableCamelIndNorm <- function(id='indCap', datCamelIndNorm, captionTable='Ind
 
 
 
-getTableCamelIndNorm2 <- function(id1='indAdm', id2='indBenf',datCamelIndNorm, captionTable='Indicadores de id1 y id2 CAMEL') {
+renderTableCamelIndNorm2 <- function(id1='indAdm', id2='indBenf',datCamelIndNorm, captionTable='Indicadores de id1 y id2 CAMEL') {
     
     require(knitr)
     require(kableExtra)

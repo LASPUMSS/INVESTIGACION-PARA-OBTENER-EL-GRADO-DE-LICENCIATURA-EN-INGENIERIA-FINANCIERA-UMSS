@@ -10,14 +10,16 @@ source('RECURSOS-INVESTIGACION/R/camel-calificacion-indicadores.R')
 source('RECURSOS-INVESTIGACION/R/camel-calificacion-entidad.R')
 source('RECURSOS-INVESTIGACION/R/camel-tendencia-indicadores.R')
 source('RECURSOS-INVESTIGACION/R/camel-plot-functions.R')
+source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
 
 datCamelIndNorm <- getDatCamelIndNormalizada(gestionInc=2014,by='TIPO_DE_ENTIDAD')
 datCamelRangosLimites <- getDatCamelRangosLimites(datCamelIndNorm)
 
-datCamelCalificacionIndicadores <- getDatCamelCalificacionIndicadores(datCamelIndNorm,
-                                                                      datCamelRangosLimites)
+datCamelCalificacionIndicadores <- 
+    getDatCamelCalificacionIndicadores(datCamelIndNorm,datCamelRangosLimites)
 
-datCamelCalificacionEntidad <- getDatCamelCalificacionEntidad(datCamelCalificacionIndicadores)
+datCamelCalificacionEntidad <- 
+    getDatCamelCalificacionEntidad(datCamelCalificacionIndicadores)
 
 ```
 
@@ -26,16 +28,27 @@ datCamelCalificacionEntidad <- getDatCamelCalificacionEntidad(datCamelCalificaci
 ### Resultados indicadores de capital (C - CAMEL)
 
 ```{r, out.width='100%', fig.cap='Resultado indicadores de Capital'}
-plotIndCamel("C",datCamelCalificacionEntidad)
+id <- 'C'
+plotIndCamel(id,datCamelCalificacionEntidad)
 ```
 
+```{r}
+datTrendInd <- getDatTrendInd(id, datCamelCalificacionEntidad, FALSE)
+renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de capital (CAMEL)')
+```
 
 
 \newpage
 ### Resultados indicadores de activos (A - CAMEL)
 
 ```{r, out.width='100%', fig.cap='Resultado indicadores de activos'}
-plotIndCamel("A",datCamelCalificacionEntidad)
+id <- 'A'
+plotIndCamel(id,datCamelCalificacionEntidad)
+```
+
+```{r}
+datTrendInd <- getDatTrendInd(id, datCamelCalificacionEntidad, FALSE)
+renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de activos (CAMEL)')
 ```
 
 
@@ -43,7 +56,13 @@ plotIndCamel("A",datCamelCalificacionEntidad)
 ### Resultados indicadores de administración (M - CAMEL)
 
 ```{r, out.width='100%', fig.cap='Resultado indicadores de administración'}
-plotIndCamel("M",datCamelCalificacionEntidad)
+id <- 'M'
+plotIndCamel(id,datCamelCalificacionEntidad)
+```
+
+```{r}
+datTrendInd <- getDatTrendInd(id, datCamelCalificacionEntidad, FALSE)
+renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de administración (CAMEL)')
 ```
 
 
@@ -52,24 +71,40 @@ plotIndCamel("M",datCamelCalificacionEntidad)
 ### Resultados indicadores de beneficios (E - CAMEL)
 
 ```{r, out.width='100%', fig.cap='Resultado indicadores de beneficios'}
-plotIndCamel("E",datCamelCalificacionEntidad)
+id <- 'E'
+plotIndCamel(id,datCamelCalificacionEntidad)
 ```
 
+```{r}
+datTrendInd <- getDatTrendInd(id, datCamelCalificacionEntidad, FALSE)
+renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de beneficios o rendimiento (CAMEL)')
+```
 
 
 \newpage
 ### Resultados indicadores de liquidez (L - CAMEL)
 
 ```{r, out.width='100%', fig.cap='Resultado indicadores de liquidez'}
-plotIndCamel("L",datCamelCalificacionEntidad)
+id <- 'L'
+plotIndCamel(id,datCamelCalificacionEntidad)
 ```
 
+```{r}
+datTrendInd <- getDatTrendInd(id, datCamelCalificacionEntidad, FALSE)
+renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de liquidez (CAMEL)')
+```
 
 \newpage
 ### Calificación CAMEL
 
 ```{r, out.width='100%', fig.cap='Calificación CAMEL'}
-plotIndCamel("CAMEL",datCamelCalificacionEntidad)
+id <- 'CAMEL'
+plotIndCamel(id,datCamelCalificacionEntidad)
+```
+
+```{r}
+datTrendInd <- getDatTrendInd(id, datCamelCalificacionEntidad, FALSE)
+renderTableBasic(datTrendInd,captionTable = 'Tendencia CAMEL por tipo de entidad')
 ```
 
 

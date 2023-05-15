@@ -1,11 +1,17 @@
 if (!('hanlde' %in% ls())) { handle <- list() }
 
 handle$toProperText <- function(x) {
-    return(gsub("(?<=\\b)([a-z])", "\\U\\1", tolower(x), perl=TRUE))
+    require(stringr)
+    
+    x <- str_trim(x)
+    x <- str_to_title(x)
+    return(x)
 }
 
 handle$toUpperFirstText <- function(x) {
-    x <- tolower(x)
-    substr(x, 1, 1) <- toupper(substr(x, 1, 1))
+    require(stringr)
+    
+    x <- str_trim(x)
+    x <- str_to_sentence(x)
     return(x)
 }

@@ -3,7 +3,7 @@ output: pdf_document
 ---
 <!-- FUNCIONES NECESARIAS -->
 ```{r}
-source('RECURSOS-INVESTIGACION/R/camel-getCamelIndNorm.R')
+source('RECURSOS-INVESTIGACION/R/camel-getCamelIndNormalizada.R')
 source('RECURSOS-INVESTIGACION/R/camel-render-table-datCamelIndNorm.R')
 
 source('RECURSOS-INVESTIGACION/R/camel-get-limites-rangos.R')
@@ -11,13 +11,25 @@ source('RECURSOS-INVESTIGACION/R/camel-calificacion-indicadores.R')
 source('RECURSOS-INVESTIGACION/R/camel-calificacion-entidad.R')
 source('RECURSOS-INVESTIGACION/R/camel-render-table-simple.R')
 
+datCamelIndNorm <- getDatCamelIndNormalizada(gestionInc = 2022,by = 'TIPO_DE_ENTIDAD')
+datCamelRangosLimites <- getDatCamelRangosLimites(datCamelIndNorm)
+
+datCamelCalificacionIndicadores <-
+    getDatCamelCalificacionIndicadores(datCamelIndNorm,datCamelRangosLimites)
+
+datCamelCalificacionEntidad <- 
+    getDatCamelCalificacionEntidad(datCamelCalificacionIndicadores)
+
 ```
 
 
 \section*{Anexos}
 \addcontentsline{toc}{section}{\protect\numberline{}Anexos}
 
-<!-- ANEXO 1 -->
+<!-- ############################################################### -->
+<!-- ###################### ANEXO 1 #################################-->
+<!-- ############################################################### -->
+
 \subsection*{Anexo 1 - Carta solicitud permiso uso de datos de entidades financiera de Bolivia publicado por la ASFI}
 
 \begin{figure}[h!]
@@ -27,7 +39,10 @@ source('RECURSOS-INVESTIGACION/R/camel-render-table-simple.R')
 \end{figure}
 
 
-<!-- ANEXO 2 -->
+<!-- ############################################################### -->
+<!-- ###################### ANEXO 2 #################################-->
+<!-- ############################################################### -->
+
 \newpage
 \subsection*{Anexo 2 - Respuesta solicitud permiso uso de datos de entidades financiera de Bolivia publicado por la ASFI}
 
@@ -37,20 +52,18 @@ source('RECURSOS-INVESTIGACION/R/camel-render-table-simple.R')
 \caption{Respuesta solicitud permiso uso de datos ASFI}
 \end{figure}
 
-<!-- ANEXO 3-->
+<!-- ############################################################### -->
+<!-- ###################### ANEXO 3 #################################-->
+<!-- ############################################################### -->
+
 \newpage
 \subsection*{Anexo 3 - Indicadores CAMEL calculados}
-
-```{r}
-datCamelIndNorm <- getDatCamelIndNorm(gestionInc = 2022)
-```
-
 
 \subsubsection*{Capital}
 
 ```{r}
 id <- 'indCap'
-getTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de capital CAMEL')
+renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de capital CAMEL')
 ```
 
 
@@ -59,8 +72,9 @@ getTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de capital CAMEL')
 
 ```{r}
 id <- 'indAct'
-getTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de activos CAMEL')
+renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de activos CAMEL')
 ```
+
 
 \newpage
 \subsubsection*{Administración y rentabilidad}
@@ -68,32 +82,21 @@ getTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de activos CAMEL')
 ```{r}
 id1 <- 'indAdm'
 id2 <- 'indBenf'
-getTableCamelIndNorm2(id1, id2 , datCamelIndNorm, 'Indicadores de administración y rentabilidad CAMEL')
+renderTableCamelIndNorm2(id1, id2 , datCamelIndNorm, 'Indicadores de administración y rentabilidad CAMEL')
 ```
+
 
 \newpage
 \subsubsection*{Liquidez}
 
 ```{r}
 id <- 'indLq'
-getTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de liquidez CAMEL')
+renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de liquidez CAMEL')
 ```
-
 
 
 \newpage
 \subsection*{Anexo 3 - Calificaciones CAMEL}
-
-```{r}
-
-datCamelRangosLimites <- getDatCamelRangosLimites(datCamelIndNorm)
-
-datCamelCalificacionIndicadores <- getDatCamelCalificacionIndicadores(datCamelIndNorm,
-                                                                      datCamelRangosLimites)
-
-datCamelCalificacionEntidad <- getDatCamelCalificacionEntidad(datCamelCalificacionIndicadores)
-
-```
 
 ```{r}
 dat <- datCamelCalificacionEntidad[,-1]
@@ -101,6 +104,6 @@ dat <- datCamelCalificacionEntidad[,-1]
 dat$TIPO_DE_ENTIDAD <- gsub('_',' ', dat$TIPO_DE_ENTIDAD)
 names(dat) <- gsub('_',' ', names(dat))
 
-getTableSimpleRender(dat, 'Calificacion CAMEL')
+getTableSimpleRender(dat, 'Calificación CAMEL')
 ```
 
