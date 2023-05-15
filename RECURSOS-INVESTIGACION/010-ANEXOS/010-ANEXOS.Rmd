@@ -1,26 +1,6 @@
 ---
 output: pdf_document
 ---
-<!-- FUNCIONES NECESARIAS -->
-```{r}
-source('RECURSOS-INVESTIGACION/R/camel-getCamelIndNormalizada.R')
-source('RECURSOS-INVESTIGACION/R/camel-render-table-datCamelIndNorm.R')
-
-source('RECURSOS-INVESTIGACION/R/camel-get-limites-rangos.R')
-source('RECURSOS-INVESTIGACION/R/camel-calificacion-indicadores.R')
-source('RECURSOS-INVESTIGACION/R/camel-calificacion-entidad.R')
-
-datCamelIndNorm <- getDatCamelIndNormalizada(gestionInc = 2022,by = 'TIPO_DE_ENTIDAD')
-datCamelRangosLimites <- getDatCamelRangosLimites(datCamelIndNorm)
-
-datCamelCalificacionIndicadores <-
-    getDatCamelCalificacionIndicadores(datCamelIndNorm,datCamelRangosLimites)
-
-datCamelCalificacionEntidad <- 
-    getDatCamelCalificacionEntidad(datCamelCalificacionIndicadores)
-
-```
-
 
 \section*{Anexos}
 \addcontentsline{toc}{section}{\protect\numberline{}Anexos}
@@ -29,13 +9,10 @@ datCamelCalificacionEntidad <-
 <!-- ###################### ANEXO 1 #################################-->
 <!-- ############################################################### -->
 
-\subsection*{Anexo 1 - Carta solicitud permiso uso de datos de entidades financiera de Bolivia publicado por la ASFI}
+\newpage
+```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-01-SOLICITUD-ASFI.Rmd"}
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=20cm,height=17cm]{RECURSOS-INVESTIGACION/010-ANEXOS/carta-solicitud-permiso-asfi.jpg}
-\caption{Carta solicitud permiso uso de datos ASFI}
-\end{figure}
+```
 
 
 <!-- ############################################################### -->
@@ -43,66 +20,16 @@ datCamelCalificacionEntidad <-
 <!-- ############################################################### -->
 
 \newpage
-\subsection*{Anexo 2 - Respuesta solicitud permiso uso de datos de entidades financiera de Bolivia publicado por la ASFI}
+```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-02-RESPUESTA-ASFI.Rmd"}
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=20cm,height=17cm]{RECURSOS-INVESTIGACION/010-ANEXOS/permiso-asfi.jpg}
-\caption{Respuesta solicitud permiso uso de datos ASFI}
-\end{figure}
+```
 
 <!-- ############################################################### -->
 <!-- ###################### ANEXO 3 #################################-->
 <!-- ############################################################### -->
 
 \newpage
-\subsection*{Anexo 3 - Indicadores CAMEL calculados}
 
-\subsubsection*{Capital}
+```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-03-INDICADORES-CAMEL.Rmd"}
 
-```{r}
-id <- 'indCap'
-renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de capital CAMEL')
 ```
-
-
-\newpage
-\subsubsection*{Activos}
-
-```{r}
-id <- 'indAct'
-renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de activos CAMEL')
-```
-
-
-\newpage
-\subsubsection*{Administración y rentabilidad}
-
-```{r}
-id1 <- 'indAdm'
-id2 <- 'indBenf'
-renderTableCamelIndNorm2(id1, id2 , datCamelIndNorm, 'Indicadores de administración y rentabilidad CAMEL')
-```
-
-
-\newpage
-\subsubsection*{Liquidez}
-
-```{r}
-id <- 'indLq'
-renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de liquidez CAMEL')
-```
-
-
-\newpage
-\subsection*{Anexo 3 - Calificaciones CAMEL}
-
-```{r}
-dat <- datCamelCalificacionEntidad[,-1]
-
-dat$TIPO_DE_ENTIDAD <- gsub('_',' ', dat$TIPO_DE_ENTIDAD)
-names(dat) <- gsub('_',' ', names(dat))
-
-renderTableBasic(dat, 'Calificación CAMEL')
-```
-

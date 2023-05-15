@@ -15,3 +15,5 @@ handle$toUpperFirstText <- function(x) {
     x <- str_to_sentence(x)
     return(x)
 }
+
+

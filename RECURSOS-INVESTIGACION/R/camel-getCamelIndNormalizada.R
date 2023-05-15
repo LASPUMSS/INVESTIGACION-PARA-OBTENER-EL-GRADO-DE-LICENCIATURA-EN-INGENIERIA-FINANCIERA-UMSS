@@ -1,13 +1,13 @@
 
-getDatCamelIndNormalizada <- function(gestionInc=2014, gestionFn=2022, by='TIPO_DE_ENTIDAD') {
-    
-    # Librerias necesarias
-    require(dplyr)
+getDatCamelIndNormalizada <- function(gestionInc=2014, gestionFn=2022, by='TIPO_DE_ENTIDAD', dat=NULL) {
     
     # Funciones necesarias
     source('RECURSOS-INVESTIGACION/R/camel-get-datCamelIndicadores.R')
     
-    datCamelInd <- getDatCamelIndicadores(by=by)
+    # Librerias necesarias
+    require(dplyr)
+    
+    datCamelInd <- getDatCamelIndicadores(dat=dat, by=by)
     
     entidades <- unique(datCamelInd$TIPO_DE_ENTIDAD)
     

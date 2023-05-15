@@ -14,7 +14,9 @@ require(dplyr)
 require(stringr)
 require(glue)
 
-datCamelIndNorm <- getDatCamelIndNormalizada(gestionInc=2014,by='TIPO_DE_ENTIDAD')
+if (!('dat' %in% ls())) {dat <- NULL}
+
+datCamelIndNorm <- getDatCamelIndNormalizada(gestionInc=2014,by='TIPO_DE_ENTIDAD',dat=dat)
 datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
 
 ```

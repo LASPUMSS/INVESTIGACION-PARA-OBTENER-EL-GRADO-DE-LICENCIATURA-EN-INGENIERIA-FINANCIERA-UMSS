@@ -12,7 +12,9 @@ source('RECURSOS-INVESTIGACION/R/camel-tendencia-indicadores.R')
 source('RECURSOS-INVESTIGACION/R/camel-plot-functions.R')
 source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
 
-datCamelIndNorm <- getDatCamelIndNormalizada(gestionInc=2014,by='TIPO_DE_ENTIDAD')
+if (!('dat' %in% ls())) {dat <- NULL}
+
+datCamelIndNorm <- getDatCamelIndNormalizada(gestionInc=2014,by='TIPO_DE_ENTIDAD',dat=dat)
 datCamelRangosLimites <- getDatCamelRangosLimites(datCamelIndNorm)
 
 datCamelCalificacionIndicadores <- 

@@ -1,0 +1,11 @@
+---
+output: pdf_document
+---
+
+\subsection*{Anexo 2 - Respuesta solicitud permiso uso de datos de entidades financiera de Bolivia publicado por la ASFI}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=20cm,height=17cm]{RECURSOS-INVESTIGACION/010-ANEXOS/permiso-asfi.jpg}
+\caption{Respuesta solicitud permiso uso de datos ASFI}
+\end{figure}

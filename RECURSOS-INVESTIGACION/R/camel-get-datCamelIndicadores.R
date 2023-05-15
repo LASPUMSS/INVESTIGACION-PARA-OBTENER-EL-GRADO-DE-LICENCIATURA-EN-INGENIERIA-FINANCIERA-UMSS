@@ -2,6 +2,7 @@ getDatCamelIndicadores <- function(dat=NULL, by='TIPO_DE_ENTIDAD') {
     
     # Funciones necesarias
     source('RECURSOS-INVESTIGACION/R/camel-indicadores-functions.R')
+    source('RECURSOS-INVESTIGACION/R/camel-getVariablesForCamel.R')
     source('RECURSOS-INVESTIGACION/R/get-dat-basic.R')
     source('RECURSOS-INVESTIGACION/R/get-dat-group.R')
     require(dplyr)
@@ -22,32 +23,26 @@ getDatCamelIndicadores <- function(dat=NULL, by='TIPO_DE_ENTIDAD') {
     }
     
     # Variables
-    # Revisar
-    cap <- dat$COEFICIENTE_DE_ADECUACION_PATRIMONIAL
-    cartVnc <- dat$ACTIVO_CARTERA_CARTERA_VENCIDA_TOTAL
-    cartEjc <- dat$ACTIVO_CARTERA_CARTERA_EJECUCION_TOTAL
-    cartVgt <- dat$ACTIVO_CARTERA_CARTERA_VIGENTE_TOTAL
-    cartVncRep <- dat$ACTIVO_CARTERA_CARTERA_REPROGRAMADA_VENCIDA
-    cartEjcRep <- dat$ACTIVO_CARTERA_CARTERA_REPROGRAMADA_EJECUCION
-    cartVgtRep <- dat$ACTIVO_CARTERA_CARTERA_REPROGRAMADA_VIGENTE
     
-    prevCart <- dat$ACTIVO_CARTERA_PREVISION_PARA_INCOBRABILIDAD_DE_CARTERA
-    patrimonio <- dat$PATRIMONIO
-    
-    realizables = dat$ACTIVO_BIENES_REALIZABLES
-    activo <- dat$ACTIVO
-    contingente <- dat$CUENTAS_CONTINGENTES_DEUDORAS
-    
-    gastAdm <- dat$EERR_S2_GASTOS_DE_ADMINISTRACION
-    impuestos <- dat$EERR_S2_IMPUESTOS
-    resulOp <- dat$RESULTADO_DE_OPERACION_BRUTO
-    
-    ingNeto <- dat$EERR_S2_RESULTADO_NETO_DE_LA_GESTION
-    
-    disponibles <- dat$ACTIVO_DISPONIBILIDADES
-    invTemp <- dat$ACTIVO_INVERSIONES_TEMPORARIAS
-    
-    pasivoCP <- dat$PASIVO
+    cap <- getVariablesForCAMEL('cap',dat)
+    cartVnc <- getVariablesForCAMEL('cartVnc',dat,by)
+    cartEjc <- getVariablesForCAMEL('cartEjc',dat,by)
+    cartVgt <- getVariablesForCAMEL('cartVgt',dat,by)
+    cartVncRep <- getVariablesForCAMEL('cartVncRep',dat,by)
+    cartEjcRep <- getVariablesForCAMEL('cartEjcRep',dat,by)
+    cartVgtRep <- getVariablesForCAMEL('cartVgtRep',dat,by)
+    prevCart <- getVariablesForCAMEL('prevCart',dat,by)
+    patrimonio <- getVariablesForCAMEL('patrimonio',dat,by)
+    realizables = getVariablesForCAMEL('realizables',dat,by)
+    activo <- getVariablesForCAMEL('activo',dat,by)
+    contingente <- getVariablesForCAMEL('contingente',dat,by)
+    gastAdm <- getVariablesForCAMEL('gastAdm',dat,by)
+    impuestos <- getVariablesForCAMEL('impuestos',dat,by)
+    resulOp <- getVariablesForCAMEL('resulOp',dat,by)
+    ingNeto <- getVariablesForCAMEL('ingNeto',dat,by)
+    disponibles <- getVariablesForCAMEL('disponibles',dat,by)
+    invTemp <- getVariablesForCAMEL('invTemp',dat,by)
+    pasivoCP <- getVariablesForCAMEL('pasivoCP',dat,by)
     
     #### INDICADORES DE CAPITAL
     
