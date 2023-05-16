@@ -28,11 +28,24 @@ getDatTrendInd <- function(id='indCap_CAP', datCamelIndNorm, idsDecreasing = FAL
     for (i in 1:(length(colnames(tsDat)))) {
         
         valor <- colnames(tsDat)[i]
-        fit <- tslm(tsDat[,valor]~trend)
         
-        datTrendInd[i,1] <- valor
-        datTrendInd[i,2] <- fit$coefficients[2]
+        if (all(is.na(tsDat[,valor]))) {
+            
+            datTrendInd[i,1] <- valor
+            datTrendInd[i,2] <- NA
+            
+        } else if(any(is.na(tsDat[,valor]))){
+            
+            datTrendInd[i,1] <- valor
+            datTrendInd[i,2] <- NA
+            
+        }
+        else {
         
+            fit <- tslm(tsDat[,valor]~trend)
+            datTrendInd[i,1] <- valor
+            datTrendInd[i,2] <- fit$coefficients[2]
+        }
     }
     
     datTrendInd <- datTrendInd[order(datTrendInd$TENDENCIA,decreasing = idsDecreasing),]

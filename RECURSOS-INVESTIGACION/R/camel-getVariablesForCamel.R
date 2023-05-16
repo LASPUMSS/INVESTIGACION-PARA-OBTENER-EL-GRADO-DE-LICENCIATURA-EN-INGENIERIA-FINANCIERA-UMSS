@@ -9,6 +9,7 @@ getVariablesForCAMEL <- function(x, dat=NULL, by='TIPO_DE_ENTIDAD') {
         dat <- getDatEEFF() 
         dat <- getDatEEFFByGroup(dat, by)
     }
+
     
     if (x=='cap') {
         
@@ -16,26 +17,64 @@ getVariablesForCAMEL <- function(x, dat=NULL, by='TIPO_DE_ENTIDAD') {
         
     } else if(x=='cartVnc'){
         
-        result <- dat$ACTIVO_CARTERA_CARTERA_VENCIDA_TOTAL
+        cuentas <- dat[,c('ACTIVO_CARTERA_CARTERA_VENCIDA_TOTAL',
+                          'ACTIVO_CARTERA_CARTERA_VENCIDA',
+                          'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_VENCIDA',
+                          'ACTIVO_CARTERA_CARTERA_REESTRUCTURADA_VENCIDA',
+                          'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_O_REESTRUCTURADA_VENCIDA')]
+        
+        cuentas$TOTAL <- 
+            ifelse(is.na(cuentas$ACTIVO_CARTERA_CARTERA_VENCIDA),0,cuentas$ACTIVO_CARTERA_CARTERA_VENCIDA) +
+            ifelse(is.na(cuentas$ACTIVO_CARTERA_CARTERA_REPROGRAMADA_VENCIDA),0,cuentas$ACTIVO_CARTERA_CARTERA_REPROGRAMADA_VENCIDA) + 
+            ifelse(is.na(cuentas$ACTIVO_CARTERA_CARTERA_REESTRUCTURADA_VENCIDA),0,cuentas$ACTIVO_CARTERA_CARTERA_REESTRUCTURADA_VENCIDA) +
+            ifelse(is.na(cuentas$ACTIVO_CARTERA_CARTERA_REPROGRAMADA_O_REESTRUCTURADA_VENCIDA),0,cuentas$ACTIVO_CARTERA_CARTERA_REPROGRAMADA_O_REESTRUCTURADA_VENCIDA)
+        
+        result <- cuentas$TOTAL
         
     } else if(x=='cartEjc'){
         
-        result <- dat$ACTIVO_CARTERA_CARTERA_EJECUCION_TOTAL
+        cuentas <- dat[,c('ACTIVO_CARTERA_CARTERA_EJECUCION_TOTAL',
+                          'ACTIVO_CARTERA_CARTERA_EN_EJECUCION',
+                          'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_EJECUCION',
+                          'ACTIVO_CARTERA_CARTERA_REESTRUCTURADA_EN_EJECUCION',
+                          'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_O_REESTRUCTURADA_EN_EJECUCION')]
+        cuentas$TOTAL <- 
+            ifelse(is.na(cuentas$ACTIVO_CARTERA_CARTERA_EN_EJECUCION),0,cuentas$ACTIVO_CARTERA_CARTERA_EN_EJECUCION) +
+            ifelse(is.na(cuentas$ACTIVO_CARTERA_CARTERA_REPROGRAMADA_EJECUCION),0,cuentas$ACTIVO_CARTERA_CARTERA_REPROGRAMADA_EJECUCION) + 
+            ifelse(is.na(cuentas$ACTIVO_CARTERA_CARTERA_REESTRUCTURADA_EN_EJECUCION),0,cuentas$ACTIVO_CARTERA_CARTERA_REESTRUCTURADA_EN_EJECUCION) +
+            ifelse(is.na(cuentas$ACTIVO_CARTERA_CARTERA_REPROGRAMADA_O_REESTRUCTURADA_EN_EJECUCION),0,cuentas$ACTIVO_CARTERA_CARTERA_REPROGRAMADA_O_REESTRUCTURADA_EN_EJECUCION)
+        
+        result <- cuentas$TOTAL
         
     } else if(x=='cartVgt'){
         
-        result <- dat$ACTIVO_CARTERA_CARTERA_VIGENTE_TOTAL
+        cuentas <- dat[,c('ACTIVO_CARTERA_CARTERA_VIGENTE_TOTAL',
+                          'ACTIVO_CARTERA_CARTERA_VIGENTE',
+                          'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_VIGENTE',
+                          'ACTIVO_CARTERA_CARTERA_REESTRUCTURADA_VIGENTE',
+                          'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_O_REESTRUCTURADA_VIGENTE')]
+        cuentas$TOTAL <- 
+            ifelse(is.na(cuentas$ACTIVO_CARTERA_CARTERA_VIGENTE),0,cuentas$ACTIVO_CARTERA_CARTERA_VIGENTE) +
+            ifelse(is.na(cuentas$ACTIVO_CARTERA_CARTERA_REPROGRAMADA_VIGENTE),0,cuentas$ACTIVO_CARTERA_CARTERA_REPROGRAMADA_VIGENTE) + 
+            ifelse(is.na(cuentas$ACTIVO_CARTERA_CARTERA_REESTRUCTURADA_VIGENTE),0,cuentas$ACTIVO_CARTERA_CARTERA_REESTRUCTURADA_VIGENTE) +
+            ifelse(is.na(cuentas$ACTIVO_CARTERA_CARTERA_REPROGRAMADA_O_REESTRUCTURADA_VIGENTE),0,cuentas$ACTIVO_CARTERA_CARTERA_REPROGRAMADA_O_REESTRUCTURADA_VIGENTE)
+        
+        
+        result <- cuentas$TOTAL
         
     } else if(x=='cartVncRep'){
         
+        # REVISAR (77 EEFF NO DIFERENCIA ENTRE REPROGRAMA O RESTRUCTURAR)
         result <- dat$ACTIVO_CARTERA_CARTERA_REPROGRAMADA_VENCIDA
         
     } else if(x=='cartEjcRep'){
         
+        # REVISAR (77 EEFF NO DIFERENCIA ENTRE REPROGRAMA O RESTRUCTURAR)
         result <- dat$ACTIVO_CARTERA_CARTERA_REPROGRAMADA_EJECUCION
         
     } else if(x=='cartVgtRep'){
         
+        # REVISAR (77 EEFF NO DIFERENCIA ENTRE REPROGRAMA O RESTRUCTURAR)
         result <- dat$ACTIVO_CARTERA_CARTERA_REPROGRAMADA_VIGENTE
         
     } else if(x=='prevCart'){
@@ -56,6 +95,7 @@ getVariablesForCAMEL <- function(x, dat=NULL, by='TIPO_DE_ENTIDAD') {
         
     } else if(x=='contingente'){
         
+        # REVISAR (SE DEBE SUMAR O RESTAR)
         result <- dat$CUENTAS_CONTINGENTES_DEUDORAS
         
     } else if(x=='gastAdm'){
@@ -64,7 +104,16 @@ getVariablesForCAMEL <- function(x, dat=NULL, by='TIPO_DE_ENTIDAD') {
         
     } else if(x=='impuestos'){
         
-        result <- dat$EERR_S2_IMPUESTOS
+        names(dat)[grepl("IMPUESTO",names(dat))]
+        
+        cuentas <- dat[,c('EERR_S2_IMPUESTOS',
+                          'EERR_S2_IMPUESTO_SOBRE_LAS_UTILIDADES_DE_LAS_EMPRESAS')]
+        
+        cuentas$TOTAL <- 
+            ifelse(is.na(cuentas$EERR_S2_IMPUESTOS),0,cuentas$EERR_S2_IMPUESTOS) +
+            ifelse(is.na(cuentas$EERR_S2_IMPUESTO_SOBRE_LAS_UTILIDADES_DE_LAS_EMPRESAS),0,cuentas$EERR_S2_IMPUESTO_SOBRE_LAS_UTILIDADES_DE_LAS_EMPRESAS)
+            
+        result <- cuentas$TOTAL
         
     } else if(x=='resulOp'){
         
