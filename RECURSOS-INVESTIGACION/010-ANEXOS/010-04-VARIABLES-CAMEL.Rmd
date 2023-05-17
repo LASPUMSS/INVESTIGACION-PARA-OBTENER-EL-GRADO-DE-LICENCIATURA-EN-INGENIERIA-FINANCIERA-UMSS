@@ -1,0 +1,32 @@
+---
+output: pdf_document
+---
+
+<!-- FUNCIONES NECESARIAS -->
+```{r}
+source('RECURSOS-INVESTIGACION/R/camel-get-datVariablesDiagnostico.R')
+source('RECURSOS-INVESTIGACION/R/render-table-basic.R')
+require(dplyr)
+
+datVariablesDiagnostico <- getDatVariablesDiagnostico(by = 'TIPO_DE_ENTIDAD',gestionInc = 2022)
+
+```
+
+
+\subsection*{Anexo 4 - Variables utilizadas en el diagnostico CAMEL}
+
+\subsubsection*{Cartera vencida y en ejecución utilizado en análisis CAMEL}
+
+
+```{r}
+datForRender <- datVariablesDiagnostico %>% 
+    select(FECHA,
+           TIPO_DE_ENTIDAD,
+           CARTERA_VENCIDA,
+           CARTERA_EN_EJECUCION)
+
+captionTable <- 'Cartera vencida, en ejecución utilizado en análisis CAMEL'
+renderTableBasic(datForRender, 
+                 captionTable = captionTable,fontSize = 6)
+```
+

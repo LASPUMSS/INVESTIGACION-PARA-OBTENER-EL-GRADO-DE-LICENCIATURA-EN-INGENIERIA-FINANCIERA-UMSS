@@ -33,3 +33,13 @@ output: pdf_document
 ```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-03-INDICADORES-CAMEL.Rmd"}
 
 ```
+
+<!-- ############################################################### -->
+<!-- ###################### ANEXO 4 #################################-->
+<!-- ############################################################### -->
+
+\newpage
+
+```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-04-VARIABLES-CAMEL.Rmd"}
+
+```
