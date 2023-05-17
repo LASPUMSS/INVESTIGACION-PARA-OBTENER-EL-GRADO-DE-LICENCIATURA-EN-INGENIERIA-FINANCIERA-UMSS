@@ -1,5 +1,5 @@
 
-getDatCamelCalificacionEntidad <- function(datCamelCalificacionIndicadores) {
+getDatCamelCalificacionEntidad <- function(datCamelCalificacionIndicadores, ponderado=TRUE) {
     
     dat <- datCamelCalificacionIndicadores
     x <- names(dat[,!(names(dat) %in% c('ID','FECHA','TIPO_DE_ENTIDAD'))])
@@ -16,31 +16,31 @@ getDatCamelCalificacionEntidad <- function(datCamelCalificacionIndicadores) {
         valor <- 'indCap_'
         if (grepl(valor, i)) {
             n <- sum(grepl(valor, x))
-            dat[,i] <- dat[,i]*CAMEL_C/n
+            dat[,i] <- dat[,i]*ifelse(ponderado,CAMEL_C,1)/n
         }
         
         valor <- 'indAct_'
         if (grepl(valor, i)) {
             n <- sum(grepl(valor, x))
-            dat[,i] <- dat[,i]*CAMEL_A/n
+            dat[,i] <- dat[,i]*ifelse(ponderado,CAMEL_A,1)/n
         }
         
         valor <- 'indAdm_'
         if (grepl(valor, i)) {
             n <- sum(grepl(valor, x))
-            dat[,i] <- dat[,i]*CAMEL_M/n
+            dat[,i] <- dat[,i]*ifelse(ponderado,CAMEL_M,1)/n
         }
         
         valor <- 'indBenf_'
         if (grepl(valor, i)) {
             n <- sum(grepl(valor, x))
-            dat[,i] <- dat[,i]*CAMEL_E/n
+            dat[,i] <- dat[,i]*ifelse(ponderado,CAMEL_E,1)/n
         }
         
         valor <- 'indLq_'
         if (grepl(valor, i)) {
             n <- sum(grepl(valor, x))
-            dat[,i] <- dat[,i]*CAMEL_L/n
+            dat[,i] <- dat[,i]*ifelse(ponderado,CAMEL_L,1)/n
         }
     }
     
