@@ -34,13 +34,7 @@ getDatTrendInd <- function(id='indCap_CAP', datCamelIndNorm, idsDecreasing = FAL
             datTrendInd[i,1] <- valor
             datTrendInd[i,2] <- NA
             
-        } else if(any(is.na(tsDat[,valor]))){
-            
-            datTrendInd[i,1] <- valor
-            datTrendInd[i,2] <- NA
-            
-        }
-        else {
+        } else {
         
             fit <- tslm(tsDat[,valor]~trend)
             datTrendInd[i,1] <- valor

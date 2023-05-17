@@ -4,386 +4,109 @@ output: pdf_document
 
 ```{r}
 source('RECURSOS-INVESTIGACION/R/camel-getCamelIndNormalizada.R')
-source('RECURSOS-INVESTIGACION/R/camel-get-datIdsNamesCamelInds.R')
-source('RECURSOS-INVESTIGACION/R/camel-tendencia-indicadores.R')
-source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
-source("RECURSOS-INVESTIGACION/R/handles.R")
+source('RECURSOS-INVESTIGACION/R/camel-get-limites-rangos.R')
 
-require(dplyr)
-require(stringr)
-require(glue)
+source('RECURSOS-INVESTIGACION/R/camel-calificacion-indicadores.R')
+source('RECURSOS-INVESTIGACION/R/camel-calificacion-entidad.R')
+source('RECURSOS-INVESTIGACION/R/camel-tendencia-indicadores.R')
+source('RECURSOS-INVESTIGACION/R/camel-plot-functions.R')
+source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
 
 if (!('dat' %in% ls())) {dat <- NULL}
 
 datCamelIndNorm <- getDatCamelIndNormalizada(gestionInc=2014,by='ENTIDAD',dat=dat)
-datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
+datCamelRangosLimites <- getDatCamelRangosLimites(datCamelIndNorm)
+
+datCamelCalificacionIndicadores <- 
+    getDatCamelCalificacionIndicadores(datCamelIndNorm,datCamelRangosLimites)
+
+datCamelCalificacionEntidad <- 
+    getDatCamelCalificacionEntidad(datCamelCalificacionIndicadores)
 
 ```
 
+## Resultados CAMEL del sistema financiero
 
-## Calculo de indicadores
+### Resultados indicadores de capital (C - CAMEL)
 
-### Capital
+```{r, out.width='100%', fig.cap='Resultado indicadores de Capital'}
+id <- 'C'
 
-#### Coeficiente de adecuación patrimonial (CAP)
-
-```{r}
-id <- 'indCap_CAP'
-nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
-idsDecreasing<- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(DECRECIENTE) %>% pull()
-
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
-nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- round(datTrendInd[1,2], 6)
 ```
 
-
-La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
-
 ```{r}
-captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
+datTrendInd <- getDatTrendInd(id, datCamelCalificacionEntidad, FALSE)
+renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de capital (CAMEL)')
 ```
 
 
 \newpage
-#### Coeficiente de cobertura de cartera en mora (CCCM)
+### Resultados indicadores de activos (A - CAMEL)
 
-El indicador esta definido por la siguiente ecuación:
-
-$$ \frac{ \text{Cartera En Mora - Previsión Cartera} }{\text{Patrimonio}}$$
-
-```{r}
-id <- 'indCap_CCCM'
-nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
-
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
-nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- round(datTrendInd[1,2], 6)
+```{r, out.width='100%', fig.cap='Resultado indicadores de activos'}
+id <- 'A'
 
 ```
 
-La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
-
 ```{r}
-captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
+datTrendInd <- getDatTrendInd(id, datCamelCalificacionEntidad, FALSE)
+renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de activos (CAMEL)')
 ```
 
 
 \newpage
-#### Coeficiente acido de cobertura de cartera en mora (CACCM)
+### Resultados indicadores de administración (M - CAMEL)
 
-El indicador esta definido por la siguiente ecuación:
-
-$$ \frac{ \text{Cartera De Mora - Previsión Carter + Realizables} }{ \text{Patrimonio} } $$
-
-```{r}
-id <- 'indCap_CACCM'
-nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
-
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
-nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- round(datTrendInd[1,2], 6)
+```{r, out.width='100%', fig.cap='Resultado indicadores de administración'}
+id <- 'M'
 
 ```
 
-La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
+```{r}
+datTrendInd <- getDatTrendInd(id, datCamelCalificacionEntidad, FALSE)
+renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de administración (CAMEL)')
+```
+
+
+
+\newpage
+### Resultados indicadores de beneficios (E - CAMEL)
+
+```{r, out.width='100%', fig.cap='Resultado indicadores de beneficios'}
+id <- 'E'
+
+```
 
 ```{r}
-captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
+datTrendInd <- getDatTrendInd(id, datCamelCalificacionEntidad, FALSE)
+renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de beneficios o rendimiento (CAMEL)')
 ```
 
 
 \newpage
-#### Coeficiente de cobertura patrimonial (CCP)
+### Resultados indicadores de liquidez (L - CAMEL)
 
-El indicador esta definido por la siguiente ecuación:
-
-$$ \frac{ \text{Patrimonio} }{ \text{Activo - Contingente} } $$
-
-```{r}
-id <- 'indCap_CCP'
-nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
-
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
-nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- round(datTrendInd[1,2], 6)
+```{r, out.width='100%', fig.cap='Resultado indicadores de liquidez'}
+id <- 'L'
 
 ```
 
-
-La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
-
 ```{r}
-captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
-```
-
-
-\newpage
-### Activo
-
-#### Coeficiente de exposición de cartera (CEC)
-
-El indicador esta definido por la siguiente ecuación:
-
-$$  \frac{ \text{Cartera En Mora} }{ \text{Cartera Bruta} } $$
-
-```{r}
-id <- 'indAct_CEC'
-nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
-
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
-nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- round(datTrendInd[1,2], 6)
-
-```
-
-
-La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
-
-```{r}
-captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
+datTrendInd <- getDatTrendInd(id, datCamelCalificacionEntidad, FALSE)
+renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de liquidez (CAMEL)')
 ```
 
 \newpage
-#### Coeficiente de previsión de cartera (CPC)
+### Calificación CAMEL
 
-El indicador esta definido por la siguiente ecuación:
-
-$$ \frac{ \text{Prevision} }{ \text{Cartera Bruta} } $$
-
-```{r}
-id <- 'indAct_CPC'
-nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
-
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
-nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- round(datTrendInd[1,2], 6)
+```{r, out.width='100%', fig.cap='Calificación CAMEL'}
+id <- 'CAMEL'
 
 ```
 
-
-La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
-
 ```{r}
-captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
+datTrendInd <- getDatTrendInd(id, datCamelCalificacionEntidad, FALSE)
+renderTableBasic(datTrendInd,captionTable = 'Tendencia CAMEL por tipo de entidad')
 ```
 
-
-\newpage
-#### Coeficiente de previsión de cartera en mora (CPCM)
-
-El indicador esta definido por la siguiente ecuación:
-
-$$ \frac{ \text{Prevision} }{ \text{Cartera En Mora} } $$
-
-```{r}
-id <- 'indAct_CPCM'
-nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
-
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
-nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- round(datTrendInd[1,2], 6)
-
-```
-
-La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
-
-```{r}
-captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
-```
-
-
-\newpage
-#### Coeficiente de reposición de cartera (CRC)
-
-El indicador esta definido por la siguiente ecuación:
-
-$$ \frac{ \text{Cartera Reprogramada Total} }{ \text{Cartera Bruta} } $$
-
-```{r}
-id <- 'indAct_CRC'
-nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
-
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
-nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- round(datTrendInd[1,2], 6)
-
-```
-
-
-La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
-
-```{r}
-captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
-```
-
-
-\newpage
-### Administración
-
-#### Coeficiente de cobertura gastos administrativos (CCGA)
-
-El indicador esta definido por la siguiente ecuación:
-
-$$ \frac{ \text{Gastos Administración} }{ \text{Activos + Contingentes} } $$
-
-```{r}
-id <- 'indAdm_CCGA'
-nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
-
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
-nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- round(datTrendInd[1,2], 6)
-
-```
-
-
-La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
-
-```{r}
-captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
-```
-
-
-\newpage
-#### Coeficiente acido de cobertura gastos administrativos (CACGA)
-
-El indicador esta definido por la siguiente ecuación:
-
-$$ \frac{ \text{Gastos Administración - Impuestos} }{ \text{Resultado Operativo Bruto} } $$
-
-```{r}
-id <- 'indAdm_CACGA'
-nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
-
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
-nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- round(datTrendInd[1,2], 6)
-
-```
-
-
-La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
-
-```{r}
-captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
-```
-
-
-\newpage
-### Beneficios
-
-#### Coeficiente de rendimiento sobre activos (ROA)
-
-El indicador esta definido por la siguiente ecuación:
-
-$$ \frac{ \text{Resultado Neto De La Gestión} }{ \text{Activo+Contingente} } $$
-
-```{r}
-id <- 'indBenf_ROA'
-nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
-
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
-nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- round(datTrendInd[1,2], 6)
-
-```
-
-
-La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
-
-```{r}
-captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
-```
-
-
-\newpage
-#### Coeficiente de rendimiento sobre patrimonio (ROE)
-
-El indicador esta definido por la siguiente ecuación:
-
-$$ \frac{ \text{Resultado Neto De La Gestión} }{ \text{Patrimonio} } $$
-
-```{r}
-id <- 'indBenf_ROE'
-nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
-
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
-nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- round(datTrendInd[1,2], 6)
-
-```
-
-
-La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
-
-```{r}
-captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
-```
-
-
-\newpage
-### Liquidez
-
-####  Coeficiente de capacidad de pago frente a pasivos (CCPP)
-
-El indicador esta definido por la siguiente ecuación:
-
-$$ \frac{ \text{Disponibles + Inversiones Temporarias} }{ \text{Pasivos} } $$
-
-```{r}
-id <- 'indLq_CCPP'
-nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
-
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
-nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- round(datTrendInd[1,2], 6)
-
-```
-
-
-La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
-
-```{r}
-captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
-```
-
-
-\newpage
-#### Coeficiente acido de capacidad de pago frente a pasivos (CACPP)
-
-El indicador esta definido por la siguiente ecuación:
-
-$$ \frac{ \text{Disponibles} }{ \text{Pasivos} } $$
-
-```{r}
-id <- 'indLq_CACPP'
-nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
-
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
-nameEntBestTrend <- datTrendInd[1,1]
-trendBestEnt <- round(datTrendInd[1,2], 6)
-
-```
-
-
-La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado por el sector de `r str_to_lower(nameEntBestTrend)` con una tendencia de `r format(trendBestEnt, scientific=FALSE)`, es decir, que los `r str_to_lower(nameEntBestTrend)` varían en `r format(trendBestEnt, scientific=FALSE)` por unidad de tiempo respecto al `r str_to_lower(nameIndById)`.
-
-```{r}
-captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
-```
 
