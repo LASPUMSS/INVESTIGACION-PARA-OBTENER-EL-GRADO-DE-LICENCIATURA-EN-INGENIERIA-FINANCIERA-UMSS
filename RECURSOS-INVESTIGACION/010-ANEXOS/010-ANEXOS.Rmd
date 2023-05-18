@@ -40,6 +40,16 @@ output: pdf_document
 
 \newpage
 
-```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-04-VARIABLES-CAMEL.Rmd"}
+```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-04-CALIFICACION-CAMEL.Rmd"}
+
+```
+
+<!-- ############################################################### -->
+<!-- ###################### ANEXO 5 #################################-->
+<!-- ############################################################### -->
+
+\newpage
+
+```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-05-VARIABLES-CAMEL.Rmd"}
 
 ```

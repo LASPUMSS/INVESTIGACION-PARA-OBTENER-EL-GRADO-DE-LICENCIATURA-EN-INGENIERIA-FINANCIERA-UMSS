@@ -1,6 +1,6 @@
 
 
-getDatStatsOverviewInd <- function(id='indCap_CAP', datCamelIndNorm, roundInd=TRUE) {
+getDatStatsOverviewInd <- function(id='indCap_CAP', datCamelIndNorm, roundInd=TRUE, idsDecreasing=FALSE) {
     
     require(fpp2)
     require(dplyr)
@@ -48,7 +48,11 @@ getDatStatsOverviewInd <- function(id='indCap_CAP', datCamelIndNorm, roundInd=TR
      
     }
     
-    datResult <- datResult %>%  arrange(PROMEDIO, DESVIACION)
+    if (idsDecreasing) {
+        datResult <- datResult %>%  arrange(desc(PROMEDIO), desc(DESVIACION))
+    }else{
+        datResult <- datResult %>%  arrange(PROMEDIO, DESVIACION)
+    }
     
     return(datResult)
 }

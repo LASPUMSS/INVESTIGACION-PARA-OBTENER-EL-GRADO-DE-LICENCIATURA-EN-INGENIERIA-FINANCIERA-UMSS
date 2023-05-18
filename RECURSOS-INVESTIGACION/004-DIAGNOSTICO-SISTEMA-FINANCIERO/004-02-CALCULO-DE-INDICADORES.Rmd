@@ -5,7 +5,7 @@ output: pdf_document
 ```{r}
 source('RECURSOS-INVESTIGACION/R/camel-getCamelIndNormalizada.R')
 source('RECURSOS-INVESTIGACION/R/camel-get-datIdsNamesCamelInds.R')
-source('RECURSOS-INVESTIGACION/R/camel-tendencia-indicadores.R')
+source('RECURSOS-INVESTIGACION/R/camel-tendencia-stats-overview.R')
 source('RECURSOS-INVESTIGACION/R/camel-plot-functions.R')
 source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
 source("RECURSOS-INVESTIGACION/R/handles.R")
@@ -33,7 +33,7 @@ id <- 'indCap_CAP'
 nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
 idsDecreasing<- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(DECRECIENTE) %>% pull()
 
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
+datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelIndNorm, FALSE ,idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
 trendBestEnt <- round(datTrendInd[1,2], 6)
 
@@ -48,7 +48,7 @@ La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tie
 
 ```{r}
 captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
+renderTableBasic(datTrendInd,captionTable = captionTable,fontSize = 6.5)
 ```
 
 
@@ -62,8 +62,10 @@ $$ \frac{ \text{Cartera En Mora - Previsión Cartera} }{\text{Patrimonio}}$$
 ```{r}
 id <- 'indCap_CCCM'
 nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
+idsDecreasing<- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(DECRECIENTE) %>% pull()
 
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
+
+datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelIndNorm, FALSE ,idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
 trendBestEnt <- round(datTrendInd[1,2], 6)
 
@@ -78,7 +80,7 @@ La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tie
 
 ```{r}
 captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
+renderTableBasic(datTrendInd,captionTable = captionTable,fontSize = 6.5)
 ```
 
 
@@ -92,8 +94,9 @@ $$ \frac{ \text{Cartera De Mora - Previsión Carter + Realizables} }{ \text{Patr
 ```{r}
 id <- 'indCap_CACCM'
 nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
+idsDecreasing<- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(DECRECIENTE) %>% pull()
 
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
+datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelIndNorm, FALSE ,idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
 trendBestEnt <- round(datTrendInd[1,2], 6)
 
@@ -108,7 +111,7 @@ La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tie
 
 ```{r}
 captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
+renderTableBasic(datTrendInd,captionTable = captionTable,fontSize = 6.5)
 ```
 
 
@@ -122,8 +125,9 @@ $$ \frac{ \text{Patrimonio} }{ \text{Activo - Contingente} } $$
 ```{r}
 id <- 'indCap_CCP'
 nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
+idsDecreasing<- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(DECRECIENTE) %>% pull()
 
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
+datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelIndNorm, FALSE ,idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
 trendBestEnt <- round(datTrendInd[1,2], 6)
 
@@ -138,7 +142,7 @@ La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tie
 
 ```{r}
 captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
+renderTableBasic(datTrendInd,captionTable = captionTable,fontSize = 6.5)
 ```
 
 
@@ -154,8 +158,9 @@ $$  \frac{ \text{Cartera En Mora} }{ \text{Cartera Bruta} } $$
 ```{r}
 id <- 'indAct_CEC'
 nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
+idsDecreasing<- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(DECRECIENTE) %>% pull()
 
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
+datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelIndNorm, FALSE ,idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
 trendBestEnt <- round(datTrendInd[1,2], 6)
 
@@ -170,7 +175,7 @@ La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tie
 
 ```{r}
 captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
+renderTableBasic(datTrendInd,captionTable = captionTable,fontSize = 6.5)
 ```
 
 \newpage
@@ -183,8 +188,9 @@ $$ \frac{ \text{Prevision} }{ \text{Cartera Bruta} } $$
 ```{r}
 id <- 'indAct_CPC'
 nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
+idsDecreasing<- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(DECRECIENTE) %>% pull()
 
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
+datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelIndNorm, FALSE ,idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
 trendBestEnt <- round(datTrendInd[1,2], 6)
 
@@ -199,7 +205,7 @@ La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tie
 
 ```{r}
 captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
+renderTableBasic(datTrendInd,captionTable = captionTable,fontSize = 6.5)
 ```
 
 
@@ -213,8 +219,9 @@ $$ \frac{ \text{Prevision} }{ \text{Cartera En Mora} } $$
 ```{r}
 id <- 'indAct_CPCM'
 nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
+idsDecreasing<- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(DECRECIENTE) %>% pull()
 
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
+datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelIndNorm, FALSE ,idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
 trendBestEnt <- round(datTrendInd[1,2], 6)
 
@@ -229,7 +236,7 @@ La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tie
 
 ```{r}
 captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
+renderTableBasic(datTrendInd,captionTable = captionTable,fontSize = 6.5)
 ```
 
 
@@ -243,8 +250,9 @@ $$ \frac{ \text{Cartera Reprogramada Total} }{ \text{Cartera Bruta} } $$
 ```{r}
 id <- 'indAct_CRC'
 nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
+idsDecreasing<- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(DECRECIENTE) %>% pull()
 
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
+datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelIndNorm, FALSE ,idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
 trendBestEnt <- round(datTrendInd[1,2], 6)
 
@@ -259,7 +267,7 @@ La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tie
 
 ```{r}
 captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
+renderTableBasic(datTrendInd,captionTable = captionTable,fontSize = 6.5)
 ```
 
 
@@ -275,8 +283,9 @@ $$ \frac{ \text{Gastos Administración} }{ \text{Activos + Contingentes} } $$
 ```{r}
 id <- 'indAdm_CCGA'
 nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
+idsDecreasing<- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(DECRECIENTE) %>% pull()
 
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
+datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelIndNorm, FALSE ,idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
 trendBestEnt <- round(datTrendInd[1,2], 6)
 
@@ -291,7 +300,7 @@ La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tie
 
 ```{r}
 captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
+renderTableBasic(datTrendInd,captionTable = captionTable,fontSize = 6.5)
 ```
 
 
@@ -305,8 +314,9 @@ $$ \frac{ \text{Gastos Administración - Impuestos} }{ \text{Resultado Operativo
 ```{r}
 id <- 'indAdm_CACGA'
 nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
+idsDecreasing<- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(DECRECIENTE) %>% pull()
 
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
+datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelIndNorm, FALSE ,idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
 trendBestEnt <- round(datTrendInd[1,2], 6)
 
@@ -321,7 +331,7 @@ La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tie
 
 ```{r}
 captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
+renderTableBasic(datTrendInd,captionTable = captionTable,fontSize = 6.5)
 ```
 
 
@@ -337,8 +347,9 @@ $$ \frac{ \text{Resultado Neto De La Gestión} }{ \text{Activo+Contingente} } $$
 ```{r}
 id <- 'indBenf_ROA'
 nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
+idsDecreasing<- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(DECRECIENTE) %>% pull()
 
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
+datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelIndNorm, FALSE ,idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
 trendBestEnt <- round(datTrendInd[1,2], 6)
 
@@ -353,7 +364,7 @@ La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tie
 
 ```{r}
 captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
+renderTableBasic(datTrendInd,captionTable = captionTable,fontSize = 6.5)
 ```
 
 
@@ -367,8 +378,9 @@ $$ \frac{ \text{Resultado Neto De La Gestión} }{ \text{Patrimonio} } $$
 ```{r}
 id <- 'indBenf_ROE'
 nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
+idsDecreasing<- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(DECRECIENTE) %>% pull()
 
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
+datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelIndNorm, FALSE ,idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
 trendBestEnt <- round(datTrendInd[1,2], 6)
 
@@ -383,7 +395,7 @@ La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tie
 
 ```{r}
 captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
+renderTableBasic(datTrendInd,captionTable = captionTable,fontSize = 6.5)
 ```
 
 
@@ -399,8 +411,9 @@ $$ \frac{ \text{Disponibles + Inversiones Temporarias} }{ \text{Pasivos} } $$
 ```{r}
 id <- 'indLq_CCPP'
 nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
+idsDecreasing<- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(DECRECIENTE) %>% pull()
 
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
+datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelIndNorm, FALSE ,idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
 trendBestEnt <- round(datTrendInd[1,2], 6)
 
@@ -415,7 +428,7 @@ La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tie
 
 ```{r}
 captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
+renderTableBasic(datTrendInd,captionTable = captionTable,fontSize = 6.5)
 ```
 
 
@@ -429,8 +442,9 @@ $$ \frac{ \text{Disponibles} }{ \text{Pasivos} } $$
 ```{r}
 id <- 'indLq_CACPP'
 nameIndById <- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(NOMBRES) %>% pull()
+idsDecreasing<- datIdsNamesCamelInds %>% filter(INDICADOR==id) %>% select(DECRECIENTE) %>% pull()
 
-datTrendInd <- getDatTrendInd(id, datCamelIndNorm, idsDecreasing)
+datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelIndNorm, FALSE ,idsDecreasing)
 nameEntBestTrend <- datTrendInd[1,1]
 trendBestEnt <- round(datTrendInd[1,2], 6)
 
@@ -445,6 +459,6 @@ La tendencia mas favorable en el `r str_to_lower(nameIndById)` a través del tie
 
 ```{r}
 captionTable <- glue('Tendencia del {str_to_lower(nameIndById)} por tipo de entidad')
-renderTableBasic(datTrendInd,captionTable = captionTable)
+renderTableBasic(datTrendInd,captionTable = captionTable,fontSize = 6.5)
 ```
 

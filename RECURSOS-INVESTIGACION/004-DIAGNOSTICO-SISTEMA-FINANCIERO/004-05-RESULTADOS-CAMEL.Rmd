@@ -8,8 +8,7 @@ source('RECURSOS-INVESTIGACION/R/camel-get-limites-rangos.R')
 
 source('RECURSOS-INVESTIGACION/R/camel-calificacion-indicadores.R')
 source('RECURSOS-INVESTIGACION/R/camel-calificacion-entidad.R')
-source('RECURSOS-INVESTIGACION/R/camel-tendencia-indicadores.R')
-source('RECURSOS-INVESTIGACION/R/camel-estadistica-descriptiva-indicadores.R')
+source('RECURSOS-INVESTIGACION/R/camel-tendencia-stats-overview.R')
 source('RECURSOS-INVESTIGACION/R/camel-get-tabla-referencia-calificaciones.R')
 
 source('RECURSOS-INVESTIGACION/R/camel-plot-functions.R')
@@ -37,113 +36,108 @@ tableRefenceCamelCalificaciones <- getTableRefenceCamelCalificaciones()
 
 ### Resultados indicadores de capital (C - CAMEL)
 
-```{r, out.width='100%', fig.cap='Resultado indicadores de Capital'}
+```{r}
 id <- 'C'
+datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelCalificacionEntidadSinPoderar,TRUE ,FALSE)
+```
+
+
+```{r, out.width='100%', fig.cap='Resultado indicadores de Capital'}
 plotIndCamel(id,datCamelCalificacionEntidadSinPoderar)
 ```
 
 ```{r}
-datTrendInd <- getDatTrendInd(id, datCamelCalificacionEntidadSinPoderar, FALSE)
-renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de capital (CAMEL)')
+renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de capital (CAMEL)',fontSize = 6.5)
 ```
 
-```{r}
-datStatsOverviewInd <- getDatStatsOverviewInd(id, datCamelCalificacionEntidadSinPoderar)
-renderTableBasic(datStatsOverviewInd, captionTable = 'Estadisticas descriptivas del indicador de capital (CAMEL) por tipo de entidad')
-```
 
 \newpage
 ### Resultados indicadores de activos (A - CAMEL)
 
-```{r, out.width='100%', fig.cap='Resultado indicadores de activos'}
+```{r}
 id <- 'A'
+datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelCalificacionEntidadSinPoderar,TRUE ,FALSE)
+```
+
+```{r, out.width='100%', fig.cap='Resultado indicadores de activos'}
 plotIndCamel(id,datCamelCalificacionEntidadSinPoderar)
 ```
 
 ```{r}
-datTrendInd <- getDatTrendInd(id, datCamelCalificacionEntidadSinPoderar, FALSE)
-renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de activos (CAMEL)')
+renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de activos (CAMEL)',fontSize = 6.5)
 ```
 
-```{r}
-datStatsOverviewInd <- getDatStatsOverviewInd(id, datCamelCalificacionEntidadSinPoderar)
-renderTableBasic(datStatsOverviewInd, captionTable = 'Estadisticas descriptivas del indicador de activos (CAMEL) por tipo de entidad')
-```
+
 
 \newpage
 ### Resultados indicadores de administración (M - CAMEL)
 
-```{r, out.width='100%', fig.cap='Resultado indicadores de administración'}
+```{r}
 id <- 'M'
+datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelCalificacionEntidadSinPoderar,TRUE ,FALSE)
+```
+
+```{r, out.width='100%', fig.cap='Resultado indicadores de administración'}
 plotIndCamel(id,datCamelCalificacionEntidadSinPoderar)
 ```
 
 ```{r}
-datTrendInd <- getDatTrendInd(id, datCamelCalificacionEntidadSinPoderar, FALSE)
-renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de administración (CAMEL)')
+renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de administración (CAMEL)',fontSize = 6.5)
 ```
 
-```{r}
-datStatsOverviewInd <- getDatStatsOverviewInd(id, datCamelCalificacionEntidadSinPoderar)
-renderTableBasic(datStatsOverviewInd, captionTable = 'Estadisticas descriptivas del indicador de administración (CAMEL) por tipo de entidad')
-```
 
 
 \newpage
 ### Resultados indicadores de beneficios (E - CAMEL)
 
-```{r, out.width='100%', fig.cap='Resultado indicadores de beneficios'}
+```{r}
 id <- 'E'
+datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelCalificacionEntidadSinPoderar,TRUE ,FALSE)
+```
+
+```{r, out.width='100%', fig.cap='Resultado indicadores de beneficios'}
 plotIndCamel(id,datCamelCalificacionEntidadSinPoderar)
 ```
 
 ```{r}
-datTrendInd <- getDatTrendInd(id, datCamelCalificacionEntidadSinPoderar, FALSE)
-renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de beneficios o rendimiento (CAMEL)')
+renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de beneficios o rendimiento (CAMEL)',fontSize = 6.5)
 ```
 
 
-```{r}
-datStatsOverviewInd <- getDatStatsOverviewInd(id, datCamelCalificacionEntidadSinPoderar)
-renderTableBasic(datStatsOverviewInd, captionTable = 'Estadisticas descriptivas del indicador beneficios (CAMEL) por tipo de entidad')
-```
 
 \newpage
 ### Resultados indicadores de liquidez (L - CAMEL)
 
-```{r, out.width='100%', fig.cap='Resultado indicadores de liquidez'}
+```{r}
 id <- 'L'
+datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelCalificacionEntidadSinPoderar,TRUE ,FALSE)
+```
+
+```{r, out.width='100%', fig.cap='Resultado indicadores de liquidez'}
 plotIndCamel(id,datCamelCalificacionEntidadSinPoderar)
 ```
 
 ```{r}
-datTrendInd <- getDatTrendInd(id, datCamelCalificacionEntidadSinPoderar, FALSE)
-renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de liquidez (CAMEL)')
+renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de liquidez (CAMEL)',fontSize = 6.5)
 ```
 
 
-```{r}
-datStatsOverviewInd <- getDatStatsOverviewInd(id, datCamelCalificacionEntidadSinPoderar)
-renderTableBasic(datStatsOverviewInd, captionTable = 'Estadisticas descriptivas del indicador liquidez (CAMEL) por tipo de entidad')
-```
 
 \newpage
 ### Calificación CAMEL
 
-```{r, out.width='100%', fig.cap='Calificación CAMEL'}
+```{r}
 id <- 'CAMEL'
+datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelCalificacionEntidadSinPoderar,TRUE ,FALSE)
+```
+
+```{r, out.width='100%', fig.cap='Calificación CAMEL'}
 plotIndCamel(id,datCamelCalificacionEntidad)
 ```
 
 ```{r}
-datTrendInd <- getDatTrendInd(id, datCamelCalificacionEntidad, FALSE)
-renderTableBasic(datTrendInd,captionTable = 'Tendencia CAMEL por tipo de entidad')
+renderTableBasic(datTrendInd,captionTable = 'Tendencia CAMEL por tipo de entidad',fontSize = 6.5)
 ```
 
-
-```{r}
-datStatsOverviewInd <- getDatStatsOverviewInd(id, datCamelCalificacionEntidad)
-renderTableBasic(datStatsOverviewInd, captionTable = 'Estadisticas descriptivas del indicador CAMEL por tipo de entidad')
-```
 
 
