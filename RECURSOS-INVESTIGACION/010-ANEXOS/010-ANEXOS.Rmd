@@ -29,7 +29,6 @@ output: pdf_document
 <!-- ############################################################### -->
 
 \newpage
-
 ```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-03-INDICADORES-CAMEL.Rmd"}
 
 ```
@@ -39,17 +38,16 @@ output: pdf_document
 <!-- ############################################################### -->
 
 \newpage
-
 ```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-04-CALIFICACION-CAMEL.Rmd"}
 
 ```
+
 
 <!-- ############################################################### -->
 <!-- ###################### ANEXO 5 #################################-->
 <!-- ############################################################### -->
 
 \newpage
-
 ```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-05-VARIABLES-CAMEL.Rmd"}
 
 ```

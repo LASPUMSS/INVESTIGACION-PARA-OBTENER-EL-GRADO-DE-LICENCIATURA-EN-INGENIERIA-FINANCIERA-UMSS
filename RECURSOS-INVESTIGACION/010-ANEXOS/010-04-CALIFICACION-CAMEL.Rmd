@@ -12,8 +12,10 @@ source('RECURSOS-INVESTIGACION/R/camel-calificacion-indicadores.R')
 source('RECURSOS-INVESTIGACION/R/camel-calificacion-entidad.R')
 source('RECURSOS-INVESTIGACION/R/render-table-basic.R')
 
+if (!('dat' %in% ls())) {dat <- NULL}
 
-datCamelIndNorm <- getDatCamelIndNormalizada(gestionInc = 2022,by='TIPO_DE_ENTIDAD')
+
+datCamelIndNorm <- getDatCamelIndNormalizada(gestionInc = 2022,by='TIPO_DE_ENTIDAD',dat = dat)
 datCamelRangosLimites <- getDatCamelRangosLimites(datCamelIndNorm)
 
 datCamelCalificacionIndicadores <-
@@ -32,12 +34,12 @@ datCamelCalificacionEntidad <-
 
 \subsubsection*{Calificaciones CAMEL sin ponderar}
 ```{r}
-dat <- datCamelCalificacionEntidadSinPoderar[,c(-1,-9)]
+datAux <- datCamelCalificacionEntidadSinPoderar[,c(-1,-9)]
 
-dat$TIPO_DE_ENTIDAD <- gsub('_',' ', dat$TIPO_DE_ENTIDAD)
-names(dat) <- gsub('_',' ', names(dat))
+datAux$TIPO_DE_ENTIDAD <- gsub('_',' ', datAux$TIPO_DE_ENTIDAD)
+names(datAux) <- gsub('_',' ', names(datAux))
 
-renderTableBasic(dat, 'Calificaciones CAMEL sin poderar')
+renderTableBasic(datAux, 'Calificaciones CAMEL sin poderar')
 ```
 
 
@@ -46,10 +48,10 @@ renderTableBasic(dat, 'Calificaciones CAMEL sin poderar')
 \subsubsection*{Calificación CAMEL ponderada}
 
 ```{r}
-dat <- datCamelCalificacionEntidad[,-1]
+datAux <- datCamelCalificacionEntidad[,-1]
 
-dat$TIPO_DE_ENTIDAD <- gsub('_',' ', dat$TIPO_DE_ENTIDAD)
-names(dat) <- gsub('_',' ', names(dat))
+datAux$TIPO_DE_ENTIDAD <- gsub('_',' ', datAux$TIPO_DE_ENTIDAD)
+names(datAux) <- gsub('_',' ', names(datAux))
 
-renderTableBasic(dat, 'Calificación CAMEL ponderada')
+renderTableBasic(datAux, 'Calificación CAMEL ponderada')
 ```

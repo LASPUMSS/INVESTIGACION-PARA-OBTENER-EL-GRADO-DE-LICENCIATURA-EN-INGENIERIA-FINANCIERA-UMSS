@@ -9,7 +9,6 @@ source('RECURSOS-INVESTIGACION/R/camel-get-limites-rangos.R')
 source('RECURSOS-INVESTIGACION/R/camel-calificacion-indicadores.R')
 source('RECURSOS-INVESTIGACION/R/camel-calificacion-entidad.R')
 source('RECURSOS-INVESTIGACION/R/camel-tendencia-stats-overview.R')
-source('RECURSOS-INVESTIGACION/R/camel-get-tabla-referencia-calificaciones.R')
 
 source('RECURSOS-INVESTIGACION/R/camel-plot-functions.R')
 source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
@@ -47,7 +46,7 @@ plotIndCamel(id,datCamelCalificacionEntidadSinPoderar)
 ```
 
 ```{r}
-renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de capital (CAMEL)',fontSize = 6.5)
+renderTableBasic(datTrendInd,captionTable = 'Tendencia y estadisticas de indicadores de capital (CAMEL)',fontSize = 6.5)
 ```
 
 
@@ -64,7 +63,7 @@ plotIndCamel(id,datCamelCalificacionEntidadSinPoderar)
 ```
 
 ```{r}
-renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de activos (CAMEL)',fontSize = 6.5)
+renderTableBasic(datTrendInd,captionTable = 'Tendencia y estadisticas de indicadores de activos (CAMEL)',fontSize = 6.5)
 ```
 
 
@@ -82,7 +81,7 @@ plotIndCamel(id,datCamelCalificacionEntidadSinPoderar)
 ```
 
 ```{r}
-renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de administración (CAMEL)',fontSize = 6.5)
+renderTableBasic(datTrendInd,captionTable = 'Tendencia y estadisticas de indicadores de administración (CAMEL)',fontSize = 6.5)
 ```
 
 
@@ -100,7 +99,7 @@ plotIndCamel(id,datCamelCalificacionEntidadSinPoderar)
 ```
 
 ```{r}
-renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de beneficios o rendimiento (CAMEL)',fontSize = 6.5)
+renderTableBasic(datTrendInd,captionTable = 'Tendencia y estadisticas de indicadores de beneficios o rendimiento (CAMEL)',fontSize = 6.5)
 ```
 
 
@@ -118,7 +117,7 @@ plotIndCamel(id,datCamelCalificacionEntidadSinPoderar)
 ```
 
 ```{r}
-renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de liquidez (CAMEL)',fontSize = 6.5)
+renderTableBasic(datTrendInd,captionTable = 'Tendencia y estadisticas de indicadores de liquidez (CAMEL)',fontSize = 6.5)
 ```
 
 
@@ -128,7 +127,7 @@ renderTableBasic(datTrendInd,captionTable = 'Tendencia indicadores de liquidez (
 
 ```{r}
 id <- 'CAMEL'
-datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelCalificacionEntidadSinPoderar,TRUE ,FALSE)
+datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelCalificacionEntidad,TRUE ,FALSE)
 ```
 
 ```{r, out.width='100%', fig.cap='Calificación CAMEL'}
@@ -136,7 +135,7 @@ plotIndCamel(id,datCamelCalificacionEntidad)
 ```
 
 ```{r}
-renderTableBasic(datTrendInd,captionTable = 'Tendencia CAMEL por tipo de entidad',fontSize = 6.5)
+renderTableBasic(datTrendInd,captionTable = 'Tendencia y estadisticas de CAMEL por tipo de entidad',fontSize = 6.5)
 ```
 
 
