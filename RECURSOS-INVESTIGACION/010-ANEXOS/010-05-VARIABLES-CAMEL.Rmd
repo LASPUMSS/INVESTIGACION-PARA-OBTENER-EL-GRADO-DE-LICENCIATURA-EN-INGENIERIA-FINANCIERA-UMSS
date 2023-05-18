@@ -29,7 +29,7 @@ datForRender <- datVariablesDiagnostico %>%
 
 names(datForRender) <- c('FECHA','TIPO DE ENTIDAD', 'C.VC.','C.E.')
 
-captionTable <- 'Cartera vencida, en ejecución utilizado en análisis CAMEL'
+captionTable <- 'Cartera vencida y en ejecución expresado en bolivianos utilizado en análisis CAMEL'
 renderTableBasic(datForRender, 
                  captionTable = captionTable)
 ```
@@ -50,7 +50,7 @@ datForRender <- datVariablesDiagnostico %>%
 
 names(datForRender) <- c('FECHA','TIPO DE ENTIDAD', 'C.V.','C.VC.R.')
 
-captionTable <- 'Cartera vigente y vencida reprogramada utilizado en análisis CAMEL'
+captionTable <- 'Cartera vigente y vencida reprogramada expresado en bolivianos utilizado en análisis CAMEL'
 renderTableBasic(datForRender, 
                  captionTable = captionTable)
 ```
@@ -71,7 +71,7 @@ datForRender <- datVariablesDiagnostico %>%
 
 names(datForRender) <- c('FECHA','TIPO DE ENTIDAD', 'C.E.R.','C.V.R.')
 
-captionTable <- 'Cartera vencida, en ejecución utilizado en análisis CAMEL'
+captionTable <- 'Cartera en ejecución reprogramada y vigente reprogramada expresado en bolivianos utilizado en análisis CAMEL'
 renderTableBasic(datForRender, 
                  captionTable = captionTable)
 ```
@@ -90,7 +90,7 @@ datForRender <- datVariablesDiagnostico %>%
 
 names(datForRender) <- c('FECHA','TIPO DE ENTIDAD', 'P.I.C.','PATRIMONIO')
 
-captionTable <- 'Cartera vencida, en ejecución utilizado en análisis CAMEL'
+captionTable <- 'Previsión incobrabilidad de cartera y patrimonio expresado en bolivianos utilizado en análisis CAMEL'
 renderTableBasic(datForRender, 
                  captionTable = captionTable)
 ```
@@ -109,14 +109,14 @@ datForRender <- datVariablesDiagnostico %>%
 
 names(datForRender) <- c('FECHA','TIPO DE ENTIDAD', 'ACTIVO','A.R.')
 
-captionTable <- 'Cartera vencida, en ejecución utilizado en análisis CAMEL'
+captionTable <- 'Activo y activo realizable expresado en bolivianos utilizado en análisis CAMEL'
 renderTableBasic(datForRender, 
                  captionTable = captionTable)
 ```
 
 
 \newpage
-\subsubsection*{Activ contingente y disponible expresado en bolivianos utilizado en análisis CAMEL}
+\subsubsection*{Activo contingente y disponible expresado en bolivianos utilizado en análisis CAMEL}
 
 - A.C. = Activo contingente
 - A.D. = Activo disponible
@@ -130,7 +130,7 @@ datForRender <- datVariablesDiagnostico %>%
 
 names(datForRender) <- c('FECHA','TIPO DE ENTIDAD', 'A.C.','A.D.')
 
-captionTable <- 'Cartera vencida, en ejecución utilizado en análisis CAMEL'
+captionTable <- 'Activo contingente y disponible expresado en bolivianos utilizado en análisis CAMEL'
 renderTableBasic(datForRender, 
                  captionTable = captionTable)
 ```
@@ -150,7 +150,7 @@ datForRender <- datVariablesDiagnostico %>%
 
 names(datForRender) <- c('FECHA','TIPO DE ENTIDAD', 'A.I.T.','PASIVO')
 
-captionTable <- 'Cartera vencida, en ejecución utilizado en análisis CAMEL'
+captionTable <- 'Activo de inversiones temporarias y pasivo expresado en bolivianos utilizado en análisis CAMEL'
 renderTableBasic(datForRender, 
                  captionTable = captionTable)
 ```
@@ -169,7 +169,7 @@ datForRender <- datVariablesDiagnostico %>%
            IMPUESTOS)
 names(datForRender) <- c('FECHA','TIPO DE ENTIDAD', 'G.A.','IMPUESTOS')
 
-captionTable <- 'Cartera vencida, en ejecución utilizado en análisis CAMEL'
+captionTable <- 'Gastos administrativos y impuestos expresado en bolivianos utilizado en análisis CAMEL'
 renderTableBasic(datForRender, 
                  captionTable = captionTable)
 ```
@@ -189,7 +189,7 @@ datForRender <- datVariablesDiagnostico %>%
 
 names(datForRender) <- c('FECHA','TIPO DE ENTIDAD', 'R.O.','I.N.')
 
-captionTable <- 'Cartera vencida, en ejecución utilizado en análisis CAMEL'
+captionTable <- 'Resultado opertativo y neto expresado en bolivianos utilizado en análisis CAMEL'
 renderTableBasic(datForRender, 
                  captionTable = captionTable)
 ```

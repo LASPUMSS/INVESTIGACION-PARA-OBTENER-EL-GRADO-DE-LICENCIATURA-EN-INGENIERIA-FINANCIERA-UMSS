@@ -16,7 +16,6 @@ datCamelIndNorm <- getDatCamelIndNormalizada(gestionInc=2014,by='TIPO_DE_ENTIDAD
 datCamelRangosLimites <- getDatCamelRangosLimites(datCamelIndNorm)
 
 tableRefenceCamelCalificaciones <- getTableRefenceCamelCalificaciones2()
-
 ```
 
 ## Definición de rangos y limites de los indicadores
@@ -26,7 +25,7 @@ renderTableCamelRangosLimites(datCamelRangosLimites)
 ```
 
 
-```{r}
+```{r tabla-rango-calificacion-camel-diagnostico}
 renderTableBasic(tableRefenceCamelCalificaciones, captionTable = 'Rangos calificación CAMEL')
 ```
 
