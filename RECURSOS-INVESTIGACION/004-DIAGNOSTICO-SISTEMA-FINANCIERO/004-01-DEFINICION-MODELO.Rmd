@@ -25,7 +25,7 @@ En la presente sección se presentaran las características a la cuales están s
 
 ### Entidades financieras comprendidas por el diagnostico
 
-El numero de observaciones de la datos manejados por esta investigación alcanzan a `r nrow(dat)`, donde cada observación corresponde a un balance general y un estado de resultados en un punto del tiempo entre las fechas (`r min(dat$FECHA)` - `r max(dat$FECHA)`), dichos estados financieros se clasifican o agrupara por sectores financieros los cuales son:
+El numero de observaciones de la datos manejados por esta investigación alcanzan a `r nrow(dat)`, donde cada observación corresponde a un balance general y un estado de resultados en un punto del tiempo entre las fechas (`r min(dat$FECHA)` - `r max(dat$FECHA)`), dichos estados financieros se clasifican o agrupan por sectores financieros los cuales son:
 
 - Bancos múltiples
 - Bancos PYME.
@@ -137,7 +137,7 @@ renderTableBasic(entidadesModelo,captionTable = captionTable)
 
 ### Variables comprendidas en el diganostico
 
-Las variables comprendidas en el modelo del diagnostico están sujetas al manual de cuentas para entidades financieras.
+Las variables comprendidas en el modelo del diagnostico están sujetas al manual de cuentas para entidades financieras, definidas por la autoridad de supervisión del sistema financiero.
 
 #### Activo
 
@@ -155,11 +155,11 @@ Según [@MANUAL_CUENTAS_ASFI] los activos (designado por el código 100.00 en el
 
 #### Disponibles
 
-Según [@MANUAL_CUENTAS_ASFI] los activos disponibles (designado por el código 110.00 en el manual de cuentas) representa el efectivo que mantiene la entidad en caja, los saldos a la vista en el Banco Central de Bolivia, en oficina matriz y sucursales del exterior, en bancos y corresponsales del país y del exterior; así como, la tenencia de metales preciosos. También representa la existencia de cheques, otros documentos mercantiles de cobro inmediato y órdenes electrónicas de pago pendientes de liquidación. 
+Los activos disponibles (designado por el código 110.00 en el manual de cuentas) según [@MANUAL_CUENTAS_ASFI] representa el efectivo que mantiene la entidad en caja, los saldos a la vista en el Banco Central de Bolivia, en oficina matriz y sucursales del exterior, en bancos y corresponsales del país y del exterior; así como, la tenencia de metales preciosos. También representa la existencia de cheques, otros documentos mercantiles de cobro inmediato y órdenes electrónicas de pago pendientes de liquidación. 
 
 #### Realizables
 
-Según [@MANUAL_CUENTAS_ASFI] los activos realizables (designado por el código 150.00 en el manual de cuentas) representa los bienes tangibles de propiedad de la entidad con destino de venta como ser: 
+Los activos realizables (designado por el código 150.00 en el manual de cuentas) según [@MANUAL_CUENTAS_ASFI]  representa los bienes tangibles de propiedad de la entidad con destino de venta como ser: 
 
 - Los bienes adquiridos o construidos para la venta 
 - Los bienes recibidos en recuperación de créditos o de operaciones de arrendamiento financiero
@@ -167,7 +167,7 @@ Según [@MANUAL_CUENTAS_ASFI] los activos realizables (designado por el código 
 
 #### Inversiones temporarias
 
-Según [@MANUAL_CUENTAS_ASFI] las inversiones temporarias (designado por el código 120.00 en el manual de cuentas) registran:
+Las inversiones temporarias (designado por el código 120.00 en el manual de cuentas) según [@MANUAL_CUENTAS_ASFI] registran:
 
 - Las inversiones en depósitos en otras “entidades de intermediación financiera” 
 - Los depósitos en el Banco Central de Bolivia y los valores representativos de deuda adquiridos por la entidad
@@ -175,7 +175,7 @@ Según [@MANUAL_CUENTAS_ASFI] las inversiones temporarias (designado por el cód
 
 #### Pasivos
 
-Según [@MANUAL_CUENTAS_ASFI] los pasivos (designado por el código 200.00 en el manual de cuentas) se agrupan las cuentas representativas de las obligaciones directas de la entidad la que comprenden:
+Los pasivos (designado por el código 200.00 en el manual de cuentas) según [@MANUAL_CUENTAS_ASFI] se agrupan las cuentas representativas de las obligaciones directas de la entidad la que comprenden:
 
 - Las obligaciones con el público, 
 - Las obligaciones con instituciones fiscales,
@@ -189,43 +189,58 @@ con el Banco Central de Bolivia y otros;
 
 #### Patrimonio
 
-Según [@MANUAL_CUENTAS_ASFI] el patrimonio (designado por el código 300.00 en el manual de cuentas) representa la participación de los propietarios en el activo de la entidad. Su importe se determina por la diferencia entre el activo y el pasivo. 
+El patrimonio (designado por el código 300.00 en el manual de cuentas) según [@MANUAL_CUENTAS_ASFI] representa la participación de los propietarios en el activo de la entidad. Su importe se determina por la diferencia entre el activo y el pasivo. 
 
 #### Cartera en mora
 
-(designado por el código 133.00 en el manual de cuentas) En esta cuenta se registran los créditos cuyo capital, cuotas de amortización o intereses no hayan sido cancelados íntegramente a la entidad hasta los 30 días contados desde la fecha de vencimiento. Para este efecto, la fecha efectiva de contabilización en esta cuenta es el día 31 de incumplimiento en cronograma de pagos.
+La variable de cartera en mora esta compuesta por dos elementos del manual de cuentas:
 
-(designado por el código 134.00 en el manual de cuentas) En esta cuenta se registran los créditos por los cuales la entidad ha iniciado las acciones judiciales para el cobro.
+- Cartera vencida 
+- Cartera en ejecución
+
+Donde según [@MANUAL_CUENTAS_ASFI] la cartera vencida (designado por el código 133.00 en el manual de cuentas) En esta cuenta se registran los créditos cuyo capital, cuotas de amortización o intereses no hayan sido cancelados íntegramente a la entidad hasta los 30 días contados desde la fecha de vencimiento. Para este efecto, la fecha efectiva de contabilización en esta cuenta es el día 31 de incumplimiento en cronograma de pagos.
+
+Asi tambien la cartera en ejecución (designado por el código 134.00 en el manual de cuentas) En esta cuenta se registran los créditos por los cuales la entidad ha iniciado las acciones judiciales para el cobro.
 
 #### Cartera Bruta
 
-Esta variable esta compuesta:
+La variable de cartera bruta esta compuesta por tres elementos del manual de cuentas:
 
 - Cartera vigente 
 - Cartera vencida 
 - Cartera en ejecución
 
-La cartera vencida y en ejecución fueron descritas anteriormente sumando una cuenta, quedando la cartera vigente (designado por el código 131.00 en el manual de cuentas) En esta cuenta se registran los créditos que tienen sus amortizaciones de capital e intereses al día conforme al plan de pagos establecido en el contrato de crédito, y aquellos que se encuentran con un atraso en sus pagos de hasta 30 días, a partir de la fecha de incumplimiento del cronograma original de pagos.
+Donde según [@MANUAL_CUENTAS_ASFI] la cartera vencida y en ejecución fueron descritas anteriormente sumando una cuenta, quedando la cartera vigente (designado por el código 131.00 en el manual de cuentas) en esta cuenta se registran los créditos que tienen sus amortizaciones de capital e intereses al día conforme al plan de pagos establecido en el contrato de crédito, y aquellos que se encuentran con un atraso en sus pagos de hasta 30 días, a partir de la fecha de incumplimiento del cronograma original de pagos.
 
+#### Cartera reprogramada total
 
-#### Cartera reprogramada o restructurada total
+La variable de cartera reprogramada total esta compuesta por tres elementos del manual de cuentas:
 
-(designado por el código 135.00 en el manual de cuentas) En esta cuenta se registran los créditos reprogramados o reestructurados que tienen sus amortizaciones de capital e intereses al día conforme al plan de pagos establecido en el contrato de reprogramación o reestructuración del crédito, y aquellos que se encuentran con un atraso en sus pagos de hasta 30 días a partir de la fecha de vencimiento. Las operaciones de crédito serán traspasadas a cartera reestructurada vigente una vez admitida la solicitud de apertura del procedimiento para la suscripción de un acuerdo de transacción e inscrita en el Registro de Comercio de la Autoridad de Fiscalización y Control Social de Empresas. Las subcuentas del 1 al 49 son utilizadas para el registro de reprogramaciones y del 51 al 99 para el registro de reestructuraciones.
+- Cartera vigente reprogramada
+- Cartera vencida reprogramada 
+- Cartera en ejecución reprogramada
 
-(designado por el código 136.00 en el manual de cuentas) En esta cuenta se registran los créditos reprogramados o reestructurados cuyo capital, cuotas de amortización o intereses no hayan sido cancelados íntegramente a la entidad hasta los 30 días contados desde la fecha de vencimiento. Para este efecto, la fecha efectiva de contabilización en esta cuenta es el día 31 de incumplimiento en el cronograma de pagos.
+Donde según [@MANUAL_CUENTAS_ASFI] la cartera vigente reprogramada (designado por el código 135.00 en el manual de cuentas) en esta cuenta se registran los créditos reprogramados o reestructurados que tienen sus amortizaciones de capital e intereses al día conforme al plan de pagos establecido en el contrato de reprogramación o reestructuración del crédito, y aquellos que se encuentran con un atraso en sus pagos de hasta 30 días a partir de la fecha de vencimiento. Las operaciones de crédito serán traspasadas a cartera reestructurada vigente una vez admitida la solicitud de apertura del procedimiento para la suscripción de un acuerdo de transacción e inscrita en el Registro de Comercio de la Autoridad de Fiscalización y Control Social de Empresas. Las subcuentas del 1 al 49 son utilizadas para el registro de reprogramaciones y del 51 al 99 para el registro de reestructuraciones.
 
-(designado por el código 137.00 en el manual de cuentas) En esta cuenta se registran los créditos reprogramados o reestructurados por los cuales la entidad ha iniciado las acciones judiciales para el cobro. Las operaciones de crédito serán traspasadas a cartera reestructurada en ejecución una vez admitida la solicitud de apertura del procedimiento para la suscripción de un acuerdo de transacción e inscrita en el Registro de Comercio de la Autoridad de Fiscalización y Control Social de Empresas.
+Así también la cartera vencida reprogramada (designado por el código 136.00 en el manual de cuentas) en esta cuenta se registran los créditos reprogramados o reestructurados cuyo capital, cuotas de amortización o intereses no hayan sido cancelados íntegramente a la entidad hasta los 30 días contados desde la fecha de vencimiento. Para este efecto, la fecha efectiva de contabilización en esta cuenta es el día 31 de incumplimiento en el cronograma de pagos.
 
-#### Previsión cartera
+Tambien la cartera en ejecución reprogramada (designado por el código 137.00 en el manual de cuentas) en esta cuenta se registran los créditos reprogramados o reestructurados por los cuales la entidad ha iniciado las acciones judiciales para el cobro. Las operaciones de crédito serán traspasadas a cartera reestructurada en ejecución una vez admitida la solicitud de apertura del procedimiento para la suscripción de un acuerdo de transacción e inscrita en el Registro de Comercio de la Autoridad de Fiscalización y Control Social de Empresas.
 
-(designado por el código 139.00 en el manual de cuentas) En esta cuenta se registra el importe que se estima para cubrir los riesgos de pérdidas por incobrabilidad de préstamos, de acuerdo con lo dispuesto en el Libro 3°, Título II de la Recopilación de Normas para Servicios Financieros y en la descripción del grupo Cartera. 
+#### Previsión de cartera
+
+La previsión de cartera (designado por el código 139.00 en el manual de cuentas) según [@MANUAL_CUENTAS_ASFI] en esta cuenta se registra el importe que se estima para cubrir los riesgos de pérdidas por incobrabilidad de préstamos, de acuerdo con lo dispuesto en el Libro 3°, Título II de la Recopilación de Normas para Servicios Financieros y en la descripción del grupo Cartera. 
 
 #### Contingente
 
-(designado por el código 600.00 en el manual de cuentas) Representa derechos eventuales que tendría la entidad contra el deudor principal en caso que éste no cumpla con las obligaciones sobre las cuales la entidad indirectamente asumió responsabilidad.Comprende operaciones por Cartas de crédito, Garantías otorgadas, Documentos descontados, Líneas de crédito comprometidas utilizables automáticamente y Otras
+La variable de contingente esta compuesta por dos elementos del manual de cuentas:
+
+- Cuentas contingentes deudoras
+- Cuentas contingentes acreedoras
+
+Donde según [@MANUAL_CUENTAS_ASFI] las cuentas contingentes deudoras (designado por el código 600.00 en el manual de cuentas) representa derechos eventuales que tendría la entidad contra el deudor principal en caso que éste no cumpla con las obligaciones sobre las cuales la entidad indirectamente asumió responsabilidad.Comprende operaciones por Cartas de crédito, Garantías otorgadas, Documentos descontados, Líneas de crédito comprometidas utilizables automáticamente y Otras
 contingencias. 
 
-(designado por el código 700.00 en el manual de cuentas) Representa las obligaciones eventuales que tendría la entidad por responsabilidades asumidas, si el deudor principal no cumple con las mismas. Comprende operaciones por cartas de crédito, garantías otorgadas, documentos descontados, líneas de crédito comprometidas y otras contingencias. 
+Así también las cuentas contingentes acreedoras (designado por el código 700.00 en el manual de cuentas) representa las obligaciones eventuales que tendría la entidad por responsabilidades asumidas, si el deudor principal no cumple con las mismas. Comprende operaciones por cartas de crédito, garantías otorgadas, documentos descontados, líneas de crédito comprometidas y otras contingencias. 
 
 #### Gastos administrativos
 
@@ -243,25 +258,29 @@ Según [@MANUAL_CUENTAS_ASFI] los gastos administrativos (designado por el códi
 
 #### Impuestos
 
-En esta cuenta se (designado por el código 455.00 en el manual de cuentas) registran los gastos devengados en el período por concepto de impuestos, asimismo los intereses y recargos originados por los mismos. El gasto por Impuesto al valor agregado que se registra en esta cuenta, es el que surge de aplicar la tasa del impuesto sobre ingresos presuntos, tales como el que proviene de tomar en anticrético un bien. 
+La variable impuestos esta compuesta por dos elementos del manual de cuentas:
 
-(designado por el código 460.00 en el manual de cuentas) Comprende los gastos devengados en el período por concepto de impuesto sobre las utilidades de las empresas. 
+- Impuestos
+- Impuesto a las utilidades de las empresas (IUE)
+
+Donde según [@MANUAL_CUENTAS_ASFI] los impuestos (designado por el código 455.00 en el manual de cuentas) registran los gastos devengados en el período por concepto de impuestos, asimismo los intereses y recargos originados por los mismos. El gasto por Impuesto al valor agregado que se registra en esta cuenta, es el que surge de aplicar la tasa del impuesto sobre ingresos presuntos, tales como el que proviene de tomar en anticrético un bien. 
+
+Así también el impuesto a las utilidades de las empresas (designado por el código 460.00 en el manual de cuentas) comprende los gastos devengados en el período por concepto de impuesto sobre las utilidades de las empresas.
+
+#### Resultado operativo bruto (ROB)
+
+Esta variable de resultado operativo bruto esta definida por la siguiente ecuación:
+
+$$ R.O.B. = \text{Ingresos Financieros} - \text{Gastos Financieros} \pm \text{Otros (Ingresos/Gastos) Operativos}   $$
 
 
-#### Resultado operativo bruto
 
-- Ingresos financieros
-- (-) Gastos financieros
-- (+) Otros ingresos operativos
-- (-) Otros gastos operativos
+#### Resultado neto de la gestión (RNG)
 
-#### Resultado neto de la gestión
+Esta variable de resultado neto de la gestión esta definida por la siguiente ecuación:
 
-- Ingresos financieros
-- (-) Gastos financieros
-- (+) Otros ingresos operativos
-- (-) Otros gastos operativos
-- (+/-) Gastos (Ingresos) extraordinarios 
-- (-) Impuestos
+$$ R.N.G. = \text{Resultado Operativo Bruto} \pm \text{Otros (Ingresos/Gastos) Extraordinarios} - \text{IUE} $$
+
+
 
 

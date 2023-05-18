@@ -24,15 +24,25 @@ getTableRefenceCamelCalificaciones <- function() {
     
 }
 
-getTableRefenceCamelCalificaciones2 <- function() {
+getTableRefenceCamelCalificaciones2 <- function(calificadorDuro=FALSE) {
     
     raiting <- as.character(1:5)
     
-    rango <- c('De L1 a L2', 
-               'De L2 a L3',
-               'De L3 a L4',
-               'De L4 a L5',
-               'Mayor a L5')
+    if (calificadorDuro) {
+        rango <- c('Menor a L1', 
+                   'De L1 a L2',
+                   'De L2 a L3',
+                   'De L3 a L4',
+                   'Mayor a L4')
+        
+    } else {
+        
+        rango <- c('De L1 a L2', 
+                   'De L2 a L3',
+                   'De L3 a L4',
+                   'De L4 a L5',
+                   'Mayor a L5')
+    }
     
     descripcion <- c('Robusto', 
                      'Satisfactorio',

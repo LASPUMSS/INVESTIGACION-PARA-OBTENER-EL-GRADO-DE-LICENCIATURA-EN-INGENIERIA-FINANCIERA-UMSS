@@ -63,3 +63,4 @@ id <- 'indLq'
 renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de liquidez CAMEL')
 ```
 
+
