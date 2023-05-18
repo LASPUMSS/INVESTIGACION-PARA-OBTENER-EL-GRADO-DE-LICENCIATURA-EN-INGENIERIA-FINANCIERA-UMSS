@@ -90,7 +90,7 @@ renderTableBasic(datTrendInd,captionTable = captionTable,fontSize = 6.5)
 
 El indicador esta definido por la siguiente ecuación:
 
-$$ \frac{ \text{Cartera De Mora - Previsión Carter + Realizables} }{ \text{Patrimonio} } $$
+$$ \frac{ \text{Cartera En Mora - Previsión Cartera + Realizables} }{ \text{Patrimonio} } $$
 
 ```{r}
 id <- 'indCap_CACCM'
@@ -184,7 +184,7 @@ renderTableBasic(datTrendInd,captionTable = captionTable,fontSize = 6.5)
 
 El indicador esta definido por la siguiente ecuación:
 
-$$ \frac{ \text{Prevision} }{ \text{Cartera Bruta} } $$
+$$ \frac{ \text{Previsión} }{ \text{Cartera Bruta} } $$
 
 ```{r}
 id <- 'indAct_CPC'
@@ -215,7 +215,7 @@ renderTableBasic(datTrendInd,captionTable = captionTable,fontSize = 6.5)
 
 El indicador esta definido por la siguiente ecuación:
 
-$$ \frac{ \text{Prevision} }{ \text{Cartera En Mora} } $$
+$$ \frac{ \text{Previsión} }{ \text{Cartera En Mora} } $$
 
 ```{r}
 id <- 'indAct_CPCM'
