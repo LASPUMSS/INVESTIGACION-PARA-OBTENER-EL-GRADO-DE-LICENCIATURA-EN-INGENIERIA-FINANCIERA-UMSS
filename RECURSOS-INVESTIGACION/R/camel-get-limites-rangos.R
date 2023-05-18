@@ -83,11 +83,11 @@ getDatCamelRangosLimites <- function(datCamelIndNorm){
         valor <- camel_limites[i,2]
         
         if (valor=='DESCENDENTE') {
-            camel_limites[i,-(1:2)] <- sort(camel_limites[i,-(1:2)])
+            camel_limites[i,-(1:2)] <- sort(t(camel_limites[i,-(1:2)]))
         }
         
         if (valor=='ASCENDENTE') {
-            camel_limites[i,-(1:2)] <- sort(camel_limites[i,-(1:2)], decreasing = T)
+            camel_limites[i,-(1:2)] <- sort(t(camel_limites[i,-(1:2)]), decreasing = T)
         }
     }
     
