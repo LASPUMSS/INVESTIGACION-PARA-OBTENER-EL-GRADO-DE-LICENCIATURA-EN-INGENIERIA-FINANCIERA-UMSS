@@ -16,6 +16,11 @@ source('RECURSOS-INVESTIGACION/R/camel-plot-functions.R')
 source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
 
 require(stringr)
+require(ggplot2)
+require(patchwork)
+require(knitr)
+require(kableExtra)
+require(dplyr)
 
 if (!('dat' %in% ls())) {dat <- NULL}
 
@@ -33,98 +38,77 @@ datCamelCalificacionEntidad <-
 
 tableRefenceCamelCalificaciones <- getTableRefenceCamelCalificaciones()
 
+######################################
+
+p1 <- plotIndCamel('C',datCamelCalificacionEntidadSinPoderar)
+p2 <- plotIndCamel('A',datCamelCalificacionEntidadSinPoderar)
+p3 <- plotIndCamel('M',datCamelCalificacionEntidadSinPoderar)
+p4 <- plotIndCamel('E',datCamelCalificacionEntidadSinPoderar)
+p5 <- plotIndCamel('L',datCamelCalificacionEntidadSinPoderar)
+
+p1 <- p1+theme(legend.position = "none",
+               axis.title.x=element_blank(),
+               axis.title.y = element_text(size=30,angle =0),
+               axis.text.y=element_text(size=15),
+               axis.text.x=element_blank())
+p2 <- p2+theme(legend.position = "none",
+               axis.title.x=element_blank(),
+               axis.title.y = element_text(size=30,angle = 0),
+               axis.text.y=element_text(size=15),
+               axis.text.x=element_blank())
+p3 <- p3+theme(legend.position = "none",
+               axis.title.x=element_blank(),
+               axis.title.y = element_text(size=30,angle = 0),
+               axis.text.y=element_text(size=15),
+               axis.text.x=element_blank())
+p4 <- p4+theme(legend.position = "none",
+               axis.title.x=element_blank(),
+               axis.title.y = element_text(size=30,angle = 0),
+               axis.text.y=element_text(size=15),
+               axis.text.x=element_blank())
+
+p5 <- p5+ theme(legend.text = element_text(size=24),
+                axis.title.x=element_text(size=24),
+                axis.title.y = element_text(size=30,angle = 0),
+                axis.text.y=element_text(size=15),
+                axis.text.x = element_text(size=24))
+
+p <- (p1/p2/p3/p4/p5)
+
+###################################
+
+datTrendIndC <- getDatTrendStatsOverviewInd('C', datCamelCalificacionEntidadSinPoderar,TRUE ,FALSE)
+datTrendIndA <- getDatTrendStatsOverviewInd('A', datCamelCalificacionEntidadSinPoderar,TRUE ,FALSE)
+datTrendIndM <- getDatTrendStatsOverviewInd('M', datCamelCalificacionEntidadSinPoderar,TRUE ,FALSE)
+datTrendIndE <- getDatTrendStatsOverviewInd('E', datCamelCalificacionEntidadSinPoderar,TRUE ,FALSE)
+datTrendIndL <- getDatTrendStatsOverviewInd('L', datCamelCalificacionEntidadSinPoderar,TRUE ,FALSE)
+
+datTrendIndTotal <- bind_rows(datTrendIndC,datTrendIndA,datTrendIndM,datTrendIndE,datTrendIndL)
+
 ```
 
 ## Resultados CAMEL del sistema financiero
 
-### Resultados indicadores de capital (C - CAMEL)
-
-```{r}
-id <- 'C'
-datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelCalificacionEntidadSinPoderar,TRUE ,FALSE)
-```
-
-
-```{r, out.width='100%', fig.cap='Resultado indicadores de Capital'}
-plotIndCamel(id,datCamelCalificacionEntidadSinPoderar)
+```{r, fig.height = 20, fig.width = 20, fig.cap='Resultados C-A-M-E-L'}
+p
 ```
 
 ```{r}
-renderTableBasic(datTrendInd,captionTable = 'Tendencia y estadisticas de indicadores de capital (CAMEL)',fontSize = 6.5)
+kbl(datTrendIndTotal,
+    longtable = T,
+    booktabs = T, 
+    digits = 6,
+    caption ="Tendencia y estadisticas de C-A-M-E-L no ponderado por tipo de entidad") %>%
+    pack_rows("CAPITAL", 1, 6) %>%
+    pack_rows("ACTIVOS", 7, 12) %>% 
+    pack_rows("ADMNISTRACION", 13, 18) %>% 
+    pack_rows("BENEFICIOS", 19, 24) %>% 
+    pack_rows("LIQUIDEZ", 25, 30) %>% 
+    kable_styling(latex_options = c("hold_position", "repeat_header"),
+                      font_size = 6.5,
+                      repeat_header_text = "(Continuación)")
+
 ```
-
-
-\newpage
-### Resultados indicadores de activos (A - CAMEL)
-
-```{r}
-id <- 'A'
-datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelCalificacionEntidadSinPoderar,TRUE ,FALSE)
-```
-
-```{r, out.width='100%', fig.cap='Resultado indicadores de activos'}
-plotIndCamel(id,datCamelCalificacionEntidadSinPoderar)
-```
-
-```{r}
-renderTableBasic(datTrendInd,captionTable = 'Tendencia y estadisticas de indicadores de activos (CAMEL)',fontSize = 6.5)
-```
-
-
-
-\newpage
-### Resultados indicadores de administración (M - CAMEL)
-
-```{r}
-id <- 'M'
-datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelCalificacionEntidadSinPoderar,TRUE ,FALSE)
-```
-
-```{r, out.width='100%', fig.cap='Resultado indicadores de administración'}
-plotIndCamel(id,datCamelCalificacionEntidadSinPoderar)
-```
-
-```{r}
-renderTableBasic(datTrendInd,captionTable = 'Tendencia y estadisticas de indicadores de administración (CAMEL)',fontSize = 6.5)
-```
-
-
-
-\newpage
-### Resultados indicadores de beneficios (E - CAMEL)
-
-```{r}
-id <- 'E'
-datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelCalificacionEntidadSinPoderar,TRUE ,FALSE)
-```
-
-```{r, out.width='100%', fig.cap='Resultado indicadores de beneficios'}
-plotIndCamel(id,datCamelCalificacionEntidadSinPoderar)
-```
-
-```{r}
-renderTableBasic(datTrendInd,captionTable = 'Tendencia y estadisticas de indicadores de beneficios o rendimiento (CAMEL)',fontSize = 6.5)
-```
-
-
-
-\newpage
-### Resultados indicadores de liquidez (L - CAMEL)
-
-```{r}
-id <- 'L'
-datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelCalificacionEntidadSinPoderar,TRUE ,FALSE)
-```
-
-```{r, out.width='100%', fig.cap='Resultado indicadores de liquidez'}
-plotIndCamel(id,datCamelCalificacionEntidadSinPoderar)
-```
-
-```{r}
-renderTableBasic(datTrendInd,captionTable = 'Tendencia y estadisticas de indicadores de liquidez (CAMEL)',fontSize = 6.5)
-```
-
-
 
 \newpage
 ### Calificación CAMEL
@@ -158,7 +142,7 @@ calificacionCamelSignificado <-
 plotIndCamel(id,datCamelCalificacionEntidad)
 ```
 
-El promedio mas favorable CAMEL a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(trendBestPromedio, scientific=FALSE)` siguiendo el criterio de calificación CAMEL el sector de `r str_to_lower(nameEntBestPromedio)` tiene una solidez financiera `r str_to_lower(calificacionCamelDescrpcion)` lo que quiere decir el sector es `r str_to_lower(calificacionCamelSignificado)`, si bien existe otros sectores con un mismo promedio histórico estos mismos poseen mayor desviación estándar lo que en consecuencia involucra mayor riesgo en su respectiva solidez financiera.
+El promedio mas favorable CAMEL a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(trendBestPromedio, scientific=FALSE)` siguiendo el criterio de calificación CAMEL el sector de `r str_to_lower(nameEntBestPromedio)` tiene una solidez financiera `r paste0('**',str_to_lower(calificacionCamelDescrpcion),'**')` lo que quiere decir el sector es `r paste0('**',str_to_lower(calificacionCamelSignificado),'**')`, si bien existe otros sectores con un mismo promedio histórico estos mismos poseen mayor desviación estándar lo que en consecuencia involucra mayor riesgo en su respectiva solidez financiera.
 
 Otro punto a resaltar es que la tendencia en las series de tiempo CAMEL para los diferentes sectores financieros son positivos lo cual indica que la insolidez financiera va creciendo a través del tiempo siendo el sector de `r str_to_lower(nameWorstTrend)` los mas afectadas.
 
