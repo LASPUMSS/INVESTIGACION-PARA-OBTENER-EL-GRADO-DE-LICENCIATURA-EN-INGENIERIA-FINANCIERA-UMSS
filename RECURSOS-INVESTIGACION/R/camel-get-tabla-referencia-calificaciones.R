@@ -33,7 +33,7 @@ getTableRefenceCamelCalificaciones2 <- function(calificadorDuro=FALSE) {
                    'De L1 a L2',
                    'De L2 a L3',
                    'De L3 a L4',
-                   'Mayor a L4')
+                   'De L4 a L5')
         
     } else {
         

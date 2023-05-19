@@ -2,8 +2,10 @@
 output: pdf_document
 ---
 
+\vspace*{\fill}
 \section*{Anexos}
 \addcontentsline{toc}{section}{\protect\numberline{}Anexos}
+\vspace*{\fill}
 
 <!-- ############################################################### -->
 <!-- ###################### ANEXO 1 #################################-->

@@ -24,7 +24,8 @@ renderTableBasic <- function(dat, captionTable='tabla', headerUpper=TRUE, fontSi
               booktabs = TRUE, 
               longtable = TRUE, 
               caption = captionTable, 
-              digits = 6) %>%
+              digits = 6,
+              format.args = list(big.mark = " ") ) %>%
         kable_styling(latex_options = c("hold_position", "repeat_header"),
                       font_size = fontSize,
                       repeat_header_text = "(Continuación)")

@@ -158,7 +158,7 @@ calificacionCamelSignificado <-
 plotIndCamel(id,datCamelCalificacionEntidad)
 ```
 
-El promedio mas favorable CAMEL a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(trendBestPromedio, scientific=FALSE)` siguiendo el criterio de calificación CAMEL el sector de `r str_to_lower(nameEntBestPromedio)` tiene una solidez financiera `r str_to_lower(calificacionCamelDescrpcion)` lo que quiere decir el sector es `r str_to_lower(calificacionCamelDescrpcion)`, si bien existe otros sectores con un mismo promedio histórico estos mismos poseen mayor desviación estándar lo que en consecuencia involucra mayor riesgo en su respectiva solidez financiera.
+El promedio mas favorable CAMEL a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(trendBestPromedio, scientific=FALSE)` siguiendo el criterio de calificación CAMEL el sector de `r str_to_lower(nameEntBestPromedio)` tiene una solidez financiera `r str_to_lower(calificacionCamelDescrpcion)` lo que quiere decir el sector es `r str_to_lower(calificacionCamelSignificado)`, si bien existe otros sectores con un mismo promedio histórico estos mismos poseen mayor desviación estándar lo que en consecuencia involucra mayor riesgo en su respectiva solidez financiera.
 
 Otro punto a resaltar es que la tendencia en las series de tiempo CAMEL para los diferentes sectores financieros son positivos lo cual indica que la insolidez financiera va creciendo a través del tiempo siendo el sector de `r str_to_lower(nameWorstTrend)` los mas afectadas.
 
