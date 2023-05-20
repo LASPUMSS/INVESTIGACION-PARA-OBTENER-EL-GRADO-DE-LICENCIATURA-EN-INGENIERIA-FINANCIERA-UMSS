@@ -16,6 +16,8 @@ require(stringr)
 require(glue)
 require(ggplot2)
 require(patchwork)
+require(knitr)
+require(kableExtra)
 
 if (!('dat' %in% ls())) {dat <- NULL}
 
@@ -29,6 +31,8 @@ datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
 
 ### Capital
 
+Acontinuación se presentan los indicadores de capital:
+
 ```{r}
 ids <- c('indCap_CAP','indCap_CCCM','indCap_CACCM','indCap_CCP')
 listResult <- getListStatsOverviewInd(ids, datCamelIndNorm, datIdsNamesCamelInds)
@@ -39,6 +43,53 @@ listPlots <- getListPlotsInd(listResult)
 ```{r, fig.height = 20, fig.width = 20,}
 wrap_plots(listPlots, ncol = 1)
 ```
+
+```{r}
+listTables <- list()
+n <- length(listResult)
+datTrendIndTotal <- data.frame()
+
+for (i in seq(n)) {
+    
+    id <- listResult[[i]][['id']]
+    datTrendInd <- listResult[[i]][['datTrendInd']]
+    
+   datTrendIndTotal <-  bind_rows(datTrendIndTotal,datTrendInd)
+}
+
+tableResult <- 
+    kbl(datTrendIndTotal,
+    longtable = T,
+    booktabs = T, 
+    digits = 6,
+    caption ="Tendencia y estadisticas de C-A-M-E-L no ponderado por tipo de entidad") %>% 
+    kable_styling(latex_options = c("hold_position", "repeat_header"),
+                      font_size = 6.5,
+                      repeat_header_text = "(Continuación)")
+
+
+nIn <- 1
+nFn <- 6
+
+for (i in seq(n)) {
+    
+    nameIndById <- listResult[[i]][['nameIndById']]
+    nameIndById <- str_to_upper(nameIndById)
+    
+    if (i!=1) {
+        nIn <- nIn + 6
+        nFn <- nFn + 6
+    }
+    
+    tableResult <-  
+        tableResult %>% 
+        pack_rows(nameIndById, nIn, nFn) 
+}
+
+tableResult
+
+```
+
 
 #### Coeficiente de adecuación patrimonial (CAP)
 
@@ -88,23 +139,4 @@ bestPromedio <- listResult[[id]][['bestPromedio']]
 
 El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
 
-
-```{r}
-listTables <- list()
-n <- length(listResult)
-datTrendIndTotal <- data.frame()
-
-for (i in seq(n)) {
-    
-    id <- listResult[[i]][['id']]
-    datTrendInd <- listResult[[i]][['datTrendInd']]
-    
-   datTrendIndTotal <-  bind_rows(datTrendIndTotal,datTrendInd)
-}
-
-for (id in ids) {
-    
-}
-
-```
 
