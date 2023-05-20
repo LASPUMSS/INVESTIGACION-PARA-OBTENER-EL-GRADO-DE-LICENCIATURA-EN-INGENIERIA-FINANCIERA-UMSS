@@ -84,14 +84,3 @@ knitr::opts_knit$set(root.dir = getwd())
 
 ```
 
-<!-- ANEXOS -->
-\newpage
-```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-ANEXOS.Rmd"}
-
-```
-
-<!-- GLOSARIO -->
-\newpage
-```{r, child="RECURSOS-INVESTIGACION/011-GLOSARIO/011-GLOSARIO.Rmd"}
-
-```
