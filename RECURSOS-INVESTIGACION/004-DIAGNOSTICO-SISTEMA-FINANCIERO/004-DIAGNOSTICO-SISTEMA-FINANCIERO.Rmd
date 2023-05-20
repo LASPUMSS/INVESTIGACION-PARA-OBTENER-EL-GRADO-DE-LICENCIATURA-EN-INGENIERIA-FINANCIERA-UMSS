@@ -12,7 +12,7 @@ La metodología a aplicar para realizar diagnóstico de las instituciones financ
 ```
 
 <!-- CALCULO DE INDICADORES -->
-```{r, child="RECURSOS-INVESTIGACION/004-DIAGNOSTICO-SISTEMA-FINANCIERO/prueba.Rmd"}
+```{r, child="RECURSOS-INVESTIGACION/004-DIAGNOSTICO-SISTEMA-FINANCIERO/004-02-CALCULO-DE-INDICADORES.Rmd"}
 
 ```
 
