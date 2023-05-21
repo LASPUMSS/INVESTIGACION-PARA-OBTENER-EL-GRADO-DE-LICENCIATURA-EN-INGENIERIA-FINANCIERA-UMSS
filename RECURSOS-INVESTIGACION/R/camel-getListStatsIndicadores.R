@@ -1,4 +1,4 @@
-getListStatsOverviewInd <- function(ids, datCamelIndNorm, datIdsNamesCamelInds) {
+getListStatsOverviewInd <- function(ids, datCamelIndNorm, datIdsNamesCamelInds,roundInd=FALSE) {
     
     source('RECURSOS-INVESTIGACION/R/camel-tendencia-stats-overview.R')
     source('RECURSOS-INVESTIGACION/R/camel-plot-functions.R')
@@ -21,7 +21,7 @@ getListStatsOverviewInd <- function(ids, datCamelIndNorm, datIdsNamesCamelInds) 
             select(DECRECIENTE) %>% 
             pull()
         datTrendInd <- 
-            getDatTrendStatsOverviewInd(id, datCamelIndNorm, FALSE ,idsDecreasing)
+            getDatTrendStatsOverviewInd(id, datCamelIndNorm, roundInd ,idsDecreasing)
         nameEntBestPromedio <- 
             datTrendInd %>% 
             select(TIPO_DE_ENTIDAD) %>% 

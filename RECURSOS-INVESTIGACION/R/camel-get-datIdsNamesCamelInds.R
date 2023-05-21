@@ -18,26 +18,44 @@ getDatIdsNamesCamelIndicadores <- function() {
                       'indBenf_ROE',
                       
                       'indLq_CCPP',
-                      'indLq_CACPP'
+                      'indLq_CACPP',
+                      
+                      'C',
+                      'A',
+                      'M',
+                      'E',
+                      'L',
+                      'CAMEL',
+                      'CAMEL_FLEXIBLE',
+                      'CAMEL_ESTRICTO'
         ),
         NOMBRES = c('Coeficiente de adecuación patrimonial',        
-                      'Coeficiente de cobertura de cartera en mora',
-                      'Coeficiente acido de cobertura de cartera en mora',
-                      'Coeficiente de cobertura patrimonial',
+                    'Coeficiente de cobertura de cartera en mora',
+                    'Coeficiente acido de cobertura de cartera en mora',
+                    'Coeficiente de cobertura patrimonial',
+
+                    'Coeficiente de exposición de cartera',
+                    'Coeficiente de previsión de cartera',
+                    'Coeficiente de previsión de cartera en mora',
+                    'Coeficiente de reposición de cartera',
                       
-                      'Coeficiente de exposición de cartera',
-                      'Coeficiente de previsión de cartera',
-                      'Coeficiente de previsión de cartera en mora',
-                      'Coeficiente de reposición de cartera',
+                    'Coeficiente de cobertura gastos administrativos',
+                    'Coeficiente acido de cobertura patrimonial',
                       
-                      'Coeficiente de cobertura gastos administrativos',
-                      'Coeficiente acido de cobertura patrimonial',
+                    'Coeficiente de rendimiento sobre activos',
+                    'Coeficiente de rendimiento sobre patrimonio',
                       
-                      'Coeficiente de rendimiento sobre activos',
-                      'Coeficiente de rendimiento sobre patrimonio',
-                      
-                      'Coeficiente de capacidad de pago frente a pasivos',
-                      'Coeficiente acido de capacidad de pago frente a pasivos'
+                    'Coeficiente de capacidad de pago frente a pasivos',
+                    'Coeficiente acido de capacidad de pago frente a pasivos',
+                    
+                    'C',
+                    'A',
+                    'M',
+                    'E',
+                    'L',
+                    'CAMEL',
+                    'CAMEL rangos flexibles',
+                    'CAMEL rangos extrictos'
         ),
         DIRECCION = c('ASCENDENTE',        
                       'DESCENDENTE',
@@ -56,7 +74,16 @@ getDatIdsNamesCamelIndicadores <- function() {
                       'ASCENDENTE',
                       
                       'ASCENDENTE',
-                      'ASCENDENTE'
+                      'ASCENDENTE',
+                      
+                      'DESCENDENTE',
+                      'DESCENDENTE',
+                      'DESCENDENTE',
+                      'DESCENDENTE',
+                      'DESCENDENTE',
+                      'DESCENDENTE',
+                      'DESCENDENTE',
+                      'DESCENDENTE'
         )
     )
     

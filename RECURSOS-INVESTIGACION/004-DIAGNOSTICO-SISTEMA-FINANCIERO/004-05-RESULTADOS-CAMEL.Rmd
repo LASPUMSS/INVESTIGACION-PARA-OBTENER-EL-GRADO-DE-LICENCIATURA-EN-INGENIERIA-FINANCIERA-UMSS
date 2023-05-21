@@ -1,6 +1,5 @@
 ---
 output: pdf_document
-tables: true
 ---
 
 ```{r}
@@ -10,10 +9,18 @@ source("RECURSOS-INVESTIGACION/R/camel-get-tabla-referencia-calificaciones.R")
 
 source('RECURSOS-INVESTIGACION/R/camel-calificacion-indicadores.R')
 source('RECURSOS-INVESTIGACION/R/camel-calificacion-entidad.R')
+
+source('RECURSOS-INVESTIGACION/R/camel-getListStatsIndicadores.R')
+source('RECURSOS-INVESTIGACION/R/camel-getListPlotsIndicadores.R')
+
+source('RECURSOS-INVESTIGACION/R/camel-get-datIdsNamesCamelInds.R')
+source("RECURSOS-INVESTIGACION/R/camel-render-tables-indicadoresStats.R")
+
 source('RECURSOS-INVESTIGACION/R/camel-tendencia-stats-overview.R')
 
 source('RECURSOS-INVESTIGACION/R/camel-plot-functions.R')
 source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
+
 
 require(stringr)
 require(ggplot2)
@@ -29,126 +36,98 @@ datCamelRangosLimites <- getDatCamelRangosLimites(datCamelIndNorm)
 
 datCamelCalificacionIndicadores <- 
     getDatCamelCalificacionIndicadores(datCamelIndNorm,datCamelRangosLimites)
+datCamelCalificacionIndicadoresHard <- 
+    getDatCamelCalificacionIndicadores(datCamelIndNorm,datCamelRangosLimites,
+                                       calificacionDuro = TRUE)
 
 datCamelCalificacionEntidadSinPoderar <- 
     getDatCamelCalificacionEntidad(datCamelCalificacionIndicadores, FALSE)
+datCamelCalificacionEntidadSinPoderarHard <- 
+    getDatCamelCalificacionEntidad(datCamelCalificacionIndicadoresHard, FALSE)
 
 datCamelCalificacionEntidad <- 
     getDatCamelCalificacionEntidad(datCamelCalificacionIndicadores)
+datCamelCalificacionEntidadHard <- 
+    getDatCamelCalificacionEntidad(datCamelCalificacionIndicadoresHard)
 
 tableRefenceCamelCalificaciones <- getTableRefenceCamelCalificaciones()
-
-######################################
-
-p1 <- plotIndCamel('C',datCamelCalificacionEntidadSinPoderar)
-p2 <- plotIndCamel('A',datCamelCalificacionEntidadSinPoderar)
-p3 <- plotIndCamel('M',datCamelCalificacionEntidadSinPoderar)
-p4 <- plotIndCamel('E',datCamelCalificacionEntidadSinPoderar)
-p5 <- plotIndCamel('L',datCamelCalificacionEntidadSinPoderar)
-
-p1 <- p1+theme(legend.position = "none",
-               axis.title.x=element_blank(),
-               axis.title.y = element_text(size=30,angle =0),
-               axis.text.y=element_text(size=15),
-               axis.text.x=element_blank())
-p2 <- p2+theme(legend.position = "none",
-               axis.title.x=element_blank(),
-               axis.title.y = element_text(size=30,angle = 0),
-               axis.text.y=element_text(size=15),
-               axis.text.x=element_blank())
-p3 <- p3+theme(legend.position = "none",
-               axis.title.x=element_blank(),
-               axis.title.y = element_text(size=30,angle = 0),
-               axis.text.y=element_text(size=15),
-               axis.text.x=element_blank())
-p4 <- p4+theme(legend.position = "none",
-               axis.title.x=element_blank(),
-               axis.title.y = element_text(size=30,angle = 0),
-               axis.text.y=element_text(size=15),
-               axis.text.x=element_blank())
-
-p5 <- p5+ theme(legend.text = element_text(size=24),
-                axis.title.x=element_text(size=24),
-                axis.title.y = element_text(size=30,angle = 0),
-                axis.text.y=element_text(size=15),
-                axis.text.x = element_text(size=24))
-
-p <- (p1/p2/p3/p4/p5)
-
-###################################
-
-datTrendIndC <- getDatTrendStatsOverviewInd('C', datCamelCalificacionEntidadSinPoderar,TRUE ,FALSE)
-datTrendIndA <- getDatTrendStatsOverviewInd('A', datCamelCalificacionEntidadSinPoderar,TRUE ,FALSE)
-datTrendIndM <- getDatTrendStatsOverviewInd('M', datCamelCalificacionEntidadSinPoderar,TRUE ,FALSE)
-datTrendIndE <- getDatTrendStatsOverviewInd('E', datCamelCalificacionEntidadSinPoderar,TRUE ,FALSE)
-datTrendIndL <- getDatTrendStatsOverviewInd('L', datCamelCalificacionEntidadSinPoderar,TRUE ,FALSE)
-
-datTrendIndTotal <- bind_rows(datTrendIndC,datTrendIndA,datTrendIndM,datTrendIndE,datTrendIndL)
+datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
 
 ```
 
 ## Resultados CAMEL del sistema financiero
 
+Flexible
+
+```{r}
+ids <- c('C','A','M','E','L')
+listResult <- getListStatsOverviewInd(ids, 
+                                      datCamelCalificacionEntidadSinPoderar, 
+                                      datIdsNamesCamelInds,
+                                      TRUE)
+listPlots <- getListPlotsInd(listResult, scaleOne = FALSE,numDigScale = 0.01)
+listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas C-A-M-E-L', 6)
+```
+
+
 ```{r, fig.height = 20, fig.width = 20, fig.cap='Resultados C-A-M-E-L'}
-p
+wrap_plots(listPlots, ncol = 1)
 ```
 
 ```{r}
-kbl(datTrendIndTotal,
-    longtable = T,
-    booktabs = T, 
-    digits = 6,
-    caption ="Tendencia y estadisticas de C-A-M-E-L no ponderado por tipo de entidad") %>%
-    pack_rows("CAPITAL", 1, 6) %>%
-    pack_rows("ACTIVOS", 7, 12) %>% 
-    pack_rows("ADMNISTRACION", 13, 18) %>% 
-    pack_rows("BENEFICIOS", 19, 24) %>% 
-    pack_rows("LIQUIDEZ", 25, 30) %>% 
-    kable_styling(latex_options = c("hold_position", "repeat_header"),
-                      font_size = 6.5,
-                      repeat_header_text = "(Continuación)")
-
+listTablesRender
 ```
+
+Estrictos
+
+```{r}
+ids <- c('C','A','M','E','L')
+listResult <- getListStatsOverviewInd(ids, 
+                                      datCamelCalificacionEntidadSinPoderarHard, 
+                                      datIdsNamesCamelInds,
+                                      TRUE)
+listPlots <- getListPlotsInd(listResult)
+listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas C-A-M-E-L', 6)
+```
+
+
+```{r, fig.height = 20, fig.width = 20, fig.cap='Resultados C-A-M-E-L'}
+wrap_plots(listPlots, ncol = 1)
+```
+
+```{r}
+listTablesRender
+```
+
 
 \newpage
 ### Calificación CAMEL
 
 ```{r}
-id <- 'CAMEL'
-datTrendInd <- getDatTrendStatsOverviewInd(id, datCamelCalificacionEntidad,TRUE ,FALSE)
+datAuxCAMEL <- 
+    datCamelCalificacionEntidad %>% 
+    select(ID,TIPO_DE_ENTIDAD,FECHA) %>% 
+    mutate(CAMEL_FLEXIBLE=datCamelCalificacionEntidad$CAMEL,
+           CAMEL_ESTRICTO=datCamelCalificacionEntidadHard$CAMEL)
 
-nameEntBestPromedio <- datTrendInd[1,1]
-trendBestPromedio <- datTrendInd[1,3]
 
-nameWorstTrend <- 
-    datTrendInd %>% 
-    arrange(desc(TENDENCIA)) %>% 
-    select(TIPO_DE_ENTIDAD) %>% 
-    slice(1) %>% 
-    pull()
-
-calificacionCamelDescrpcion <- 
-    tableRefenceCamelCalificaciones %>% 
-    filter(RAITING==as.character(trendBestPromedio)) %>% 
-    select(DESCRIPCION) %>% pull()
-calificacionCamelSignificado <- 
-    tableRefenceCamelCalificaciones %>% 
-    filter(RAITING==as.character(trendBestPromedio)) %>% 
-    select(SIGNIFICADO) %>% pull()
 
 ```
-
-```{r, out.width='100%', fig.cap='Calificación CAMEL'}
-plotIndCamel(id,datCamelCalificacionEntidad)
-```
-
-El promedio mas favorable CAMEL a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(trendBestPromedio, scientific=FALSE)` siguiendo el criterio de calificación CAMEL el sector de `r str_to_lower(nameEntBestPromedio)` tiene una solidez financiera `r paste0('**',str_to_lower(calificacionCamelDescrpcion),'**')` lo que quiere decir el sector es `r paste0('**',str_to_lower(calificacionCamelSignificado),'**')`, si bien existe otros sectores con un mismo promedio histórico estos mismos poseen mayor desviación estándar lo que en consecuencia involucra mayor riesgo en su respectiva solidez financiera.
-
-Otro punto a resaltar es que la tendencia en las series de tiempo CAMEL para los diferentes sectores financieros son positivos lo cual indica que la insolidez financiera va creciendo a través del tiempo siendo el sector de `r str_to_lower(nameWorstTrend)` los mas afectadas.
 
 
 ```{r}
-renderTableBasic(datTrendInd,captionTable = 'Tendencia y estadisticas de CAMEL por tipo de entidad',fontSize = 6.5)
+ids <- c('CAMEL_FLEXIBLE','CAMEL_ESTRICTO')
+listResult <- getListStatsOverviewInd(ids, datAuxCAMEL, datIdsNamesCamelInds,TRUE)
+listPlots <- getListPlotsInd(listResult)
+listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas CAMEL', 6)
+```
+
+```{r, fig.height = 20, fig.width = 20, fig.cap='Resultados C-A-M-E-L'}
+wrap_plots(listPlots, ncol = 1)
+```
+
+```{r}
+listTablesRender
 ```
 
 

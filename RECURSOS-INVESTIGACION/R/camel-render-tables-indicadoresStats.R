@@ -17,6 +17,8 @@ renderListTablesInd <- function(listResult ,captionTable, c) {
         datTrendIndTotal <-  bind_rows(datTrendIndTotal,datTrendInd)
     }
     
+    names(datTrendIndTotal) <- gsub('_',' ', names(datTrendIndTotal))
+    
     tableResult <- 
         kbl(datTrendIndTotal,
             longtable = T,
