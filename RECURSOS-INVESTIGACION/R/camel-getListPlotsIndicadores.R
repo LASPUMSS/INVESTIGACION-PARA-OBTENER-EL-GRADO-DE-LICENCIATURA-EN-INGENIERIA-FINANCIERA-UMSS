@@ -16,7 +16,7 @@ getListPlotsInd <- function(listResult) {
                 theme(legend.text = element_text(size=24),
                       axis.title.x=element_text(size=24),
                       axis.title.y = element_text(size=30),
-                      axis.text.y=element_text(size=15),
+                      axis.text.y=element_text(size=24),
                       axis.text.x = element_text(size=24))
             
         } else {
@@ -24,7 +24,7 @@ getListPlotsInd <- function(listResult) {
                 theme(legend.position = "none",
                       axis.title.x=element_blank(),
                       axis.title.y = element_text(size=30),
-                      axis.text.y=element_text(size=15),
+                      axis.text.y=element_text(size=24),
                       axis.text.x=element_blank())
         }
         

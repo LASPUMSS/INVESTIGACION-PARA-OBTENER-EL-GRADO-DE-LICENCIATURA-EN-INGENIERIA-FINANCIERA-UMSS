@@ -30,17 +30,19 @@ datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
 
 ## Calculo de indicadores
 
+El presente sección tiene por objeto presentar los indicadores que evaluaran las diferentes características de los sectores financieros que harán manifiesto si dicho sector tiene la capacidad de hacer frente a sus obligaciones con terceros.
+
 <!-- ##################################################### -->
 <!-- #####################  INDICADORES DE CAPITAL         -->
 <!-- ##################################################### -->
 
-### Capital
+### Indicadores de capital
 
 ```{r}
 ids <- c('indCap_CAP','indCap_CCCM','indCap_CACCM','indCap_CCP')
 listResult <- getListStatsOverviewInd(ids, datCamelIndNorm, datIdsNamesCamelInds)
 listPlots <- getListPlotsInd(listResult)
-listTablesRender <- renderListTablesInd(listResult, 'Indicadores de capital', 6)
+listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas de indicadores de capital', 6)
 
 ```
 
@@ -77,6 +79,10 @@ bestPromedio <- listResult[[id]][['bestPromedio']]
 
 ```
 
+El indicador esta definido por la siguiente ecuación:
+
+$$ \frac{ \text{Cartera En Mora - Previsión Cartera} }{\text{Patrimonio}}$$
+
 El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
 
 #### Coeficiente acido de cobertura de cartera en mora (CACCM)
@@ -88,6 +94,10 @@ nameEntBestPromedio <- listResult[[id]][['nameEntBestPromedio']]
 bestPromedio <- listResult[[id]][['bestPromedio']]
 
 ```
+
+El indicador esta definido por la siguiente ecuación:
+
+$$ \frac{ \text{Cartera En Mora - Previsión Cartera + Realizables} }{ \text{Patrimonio} } $$
 
 El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
 
@@ -101,13 +111,18 @@ bestPromedio <- listResult[[id]][['bestPromedio']]
 
 ```
 
+
+El indicador esta definido por la siguiente ecuación:
+
+$$ \frac{ \text{Patrimonio} }{ \text{Activo - Contingente} } $$
+
 El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
 
 <!-- ##################################################### -->
 <!-- #####################  INDICADORES DE ACTIVOS         -->
 <!-- ##################################################### -->
 \newpage
-### Activos
+### Indicadores de activos
 
 Los indicadores de activos tienen por objeto de evaluar la capacidad del activo de las instituciones para hacer frente a sus obligaciones con terceros, a continuación se presentan los indicadores de activos:
 
@@ -115,7 +130,7 @@ Los indicadores de activos tienen por objeto de evaluar la capacidad del activo 
 ids <- c('indAct_CEC','indAct_CPC','indAct_CPCM','indAct_CRC')
 listResult <- getListStatsOverviewInd(ids, datCamelIndNorm, datIdsNamesCamelInds)
 listPlots <- getListPlotsInd(listResult)
-listTablesRender <- renderListTablesInd(listResult, 'Indicadores de activos', 6)
+listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas de indicadores de activos', 6)
 
 ```
 
@@ -137,6 +152,10 @@ bestPromedio <- listResult[[id]][['bestPromedio']]
 
 ```
 
+El indicador esta definido por la siguiente ecuación:
+
+$$  \frac{ \text{Cartera En Mora} }{ \text{Cartera Bruta} } $$
+
 El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
 
 #### Coeficiente de previsión de cartera (CPC)
@@ -148,6 +167,10 @@ nameEntBestPromedio <- listResult[[id]][['nameEntBestPromedio']]
 bestPromedio <- listResult[[id]][['bestPromedio']]
 
 ```
+
+El indicador esta definido por la siguiente ecuación:
+
+$$ \frac{ \text{Previsión} }{ \text{Cartera Bruta} } $$ 
 
 El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
 
@@ -161,6 +184,10 @@ bestPromedio <- listResult[[id]][['bestPromedio']]
 
 ```
 
+El indicador esta definido por la siguiente ecuación:
+
+$$ \frac{ \text{Previsión} }{ \text{Cartera En Mora} } $$
+
 El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
 
 #### Coeficiente de reposición de cartera (CRC)
@@ -173,21 +200,25 @@ bestPromedio <- listResult[[id]][['bestPromedio']]
 
 ```
 
+El indicador esta definido por la siguiente ecuación:
+
+$$ \frac{ \text{Cartera Reprogramada Total} }{ \text{Cartera Bruta} } $$
+
 El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
 
 <!-- ##################################################### -->
 <!-- ###############  INDICADORES DE ADMINISTRACION        -->
 <!-- ##################################################### -->
 \newpage
-### Administracion
+### Indicadores de administración
 
-Los indicadores de administración tienen por objeto evaluar como las intituciones gestionan sus gastos administrativos, los cuales se presenta a continuación:
+Los indicadores de administración tienen por objeto evaluar como las instituciones gestionan sus gastos administrativos, los cuales se presenta a continuación:
 
 ```{r}
 ids <- c('indAdm_CCGA','indAdm_CACGA')
 listResult <- getListStatsOverviewInd(ids, datCamelIndNorm, datIdsNamesCamelInds)
 listPlots <- getListPlotsInd(listResult)
-listTablesRender <- renderListTablesInd(listResult, 'Indicadores de administración', 6)
+listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas de indicadores de administración', 6)
 
 ```
 
@@ -209,6 +240,10 @@ bestPromedio <- listResult[[id]][['bestPromedio']]
 
 ```
 
+El indicador esta definido por la siguiente ecuación:
+
+$$ \frac{ \text{Gastos Administración} }{ \text{Activos + Contingentes} } $$ 
+
 El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
 
 #### Coeficiente acido de cobertura gastos administrativos (CACGA)
@@ -221,13 +256,17 @@ bestPromedio <- listResult[[id]][['bestPromedio']]
 
 ```
 
+El indicador esta definido por la siguiente ecuación:
+
+$$ \frac{ \text{Gastos Administración - Impuestos} }{ \text{Resultado Operativo Bruto} } $$
+
 El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
 
 <!-- ##################################################### -->
 <!-- ###############  INDICADORES DE BENEFICIOS       -->
 <!-- ##################################################### -->
 \newpage
-### Beneficios
+### Indicadores de beneficios
 
 Los indicadores de beneficios tienen por objeto de evaluar la capacidad de los beneficios de las instituciones para hacer frente a sus obligaciones con terceros, a continuación se presentan los indicadores de beneficios:
 
@@ -235,7 +274,7 @@ Los indicadores de beneficios tienen por objeto de evaluar la capacidad de los b
 ids <- c('indBenf_ROA','indBenf_ROE')
 listResult <- getListStatsOverviewInd(ids, datCamelIndNorm, datIdsNamesCamelInds)
 listPlots <- getListPlotsInd(listResult)
-listTablesRender <- renderListTablesInd(listResult, 'Indicadores de beneficios', 6)
+listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas de indicadores de beneficios', 6)
 
 ```
 
@@ -257,6 +296,10 @@ bestPromedio <- listResult[[id]][['bestPromedio']]
 
 ```
 
+El indicador esta definido por la siguiente ecuación:
+
+$$ \frac{ \text{Resultado Neto De La Gestión} }{ \text{Activo+Contingente} } $$
+
 El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
 
 #### Coeficiente de rendimiento sobre patrimonio (ROE)
@@ -269,13 +312,17 @@ bestPromedio <- listResult[[id]][['bestPromedio']]
 
 ```
 
+El indicador esta definido por la siguiente ecuación:
+
+$$ \frac{ \text{Resultado Neto De La Gestión} }{ \text{Patrimonio} } $$
+
 El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
 
 <!-- ##################################################### -->
 <!-- ###############  INDICADORES DE BENEFICIOS            -->
 <!-- ##################################################### -->
 \newpage
-### Liquidez
+### Indicadores de liquidez
 
 Los indicadores de liquidez tienen por objeto de evaluar la capacidad de las instituciones para hacer frente a sus obligaciones con terceros con sus activos mas líquidos, a continuación se presentan los indicadores de liquidez:
 
@@ -283,7 +330,7 @@ Los indicadores de liquidez tienen por objeto de evaluar la capacidad de las ins
 ids <- c('indLq_CCPP','indLq_CACPP')
 listResult <- getListStatsOverviewInd(ids, datCamelIndNorm, datIdsNamesCamelInds)
 listPlots <- getListPlotsInd(listResult)
-listTablesRender <- renderListTablesInd(listResult, 'Indicadores de liquidez', 6)
+listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas de indicadores de liquidez', 6)
 
 ```
 
@@ -305,6 +352,10 @@ bestPromedio <- listResult[[id]][['bestPromedio']]
 
 ```
 
+El indicador esta definido por la siguiente ecuación:
+
+$$ \frac{ \text{Disponibles + Inversiones Temporarias} }{ \text{Pasivos} } $$
+
 El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
 
 #### Coeficiente acido de capacidad de pago frente a pasivos (CACPP)
@@ -317,4 +368,11 @@ bestPromedio <- listResult[[id]][['bestPromedio']]
 
 ```
 
+El indicador esta definido por la siguiente ecuación:
+
+$$ \frac{ \text{Disponibles} }{ \text{Pasivos} } $$
+
 El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
+
+
+
