@@ -20,3 +20,16 @@ getTsFromDat <- function(id, dat) {
     
     return(tsDat)
 }
+
+
+getTsFromDat2 <- function(id, dat) {
+    
+    gestInc <- min(as.numeric(format(dat$FECHA, format='%Y')))
+    gestFn <- max(as.numeric(format(dat$FECHA, format='%Y')))
+    
+    tsDat <- ts(dat[,id], start=gestInc, frequency=12)
+    
+
+    
+    return(tsDat)
+}

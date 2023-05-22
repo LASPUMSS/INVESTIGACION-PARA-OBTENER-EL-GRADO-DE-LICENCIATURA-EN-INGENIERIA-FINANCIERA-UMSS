@@ -22,20 +22,33 @@ tableRefenceCamelCalificacionesHard <- getTableRefenceCamelCalificaciones2(calif
 
 ## Definición de rangos y limites de los indicadores
 
+Los limites de los indicadores están definidos por la desviación estándar y el promedio de los datos históricos:
+
+- L3 $\bar{X}$
+- L2 y L4 $\bar{X} \pm \sqrt{\sigma^2}$
+- L1 y L5 $\bar{X} \pm 2\sqrt{\sigma^2}$
+
+Es decir L1 representa un escenario poco probable pero beneficio para el sector y por el otro lado L5 representa un escenario poco probable pero perjudicial para el sector, dejando a L3 como el escenario mas probable por se el promedio.
+
+
 ```{r}
 renderTableCamelRangosLimites(datCamelRangosLimites)
 ```
 
 ### Rangos CAMEL flexibles
 
+Los rangos CAMEL flexibles presume el escenario mas favorable a la hora de calificar los resultados de los indicadores, es decir, si un indicador esta entre dos limites por ejemplo **L1** y **L2** se le da la calificación de 1.
+
 ```{r}
 renderTableBasic(tableRefenceCamelCalificaciones, 
-                 captionTable = 'Rangos calificación CAMEL flexibles')
+                 captionTable = 'Rangos de calificación CAMEL flexibles')
 ```
 
-### Rangos CAMEL extrictos
+### Rangos CAMEL estrictos
+
+Los rangos CAMEL estrictos presume el escenario menos favorable a la hora de calificar los resultados de los indicadores, es decir, si un indicador esta entre dos limites por ejemplo **L1** y **L2** se le da la calificación de 2.
 
 ```{r}
 renderTableBasic(tableRefenceCamelCalificacionesHard, 
-                 captionTable = 'Rangos calificación CAMEL extrictos')
+                 captionTable = 'Rangos de calificación CAMEL estrictos')
 ```

@@ -27,7 +27,7 @@ plotIndCamel <- function(id, dat) {
                                     gsub('indLq_', '',id)))))
     nameYlab <- gsub('_',' ',nameYlab)
  
-    p1 <- autoplot(tsDat, xlab = 'Tiempo', ylab = nameYlab) + 
+    p1 <- autoplot(tsDat, xlab = 'TIEMPO', ylab = nameYlab) + 
         theme(legend.position="bottom", legend.text=element_text(size=8)) + 
         guides(color=guide_legend(ncol=2, title="")) + 
         scale_x_continuous(breaks = gestInc:gestFn)

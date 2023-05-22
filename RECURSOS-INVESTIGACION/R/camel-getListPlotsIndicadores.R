@@ -15,6 +15,7 @@ getListPlotsInd <- function(listResult, scaleOne=FALSE, numDigScale=NULL) {
             
             p <- p + 
                 theme(legend.text = element_text(size=24),
+                      legend.key.size = unit(2, 'cm'),
                       axis.title.x=element_text(size=24),
                       axis.title.y = element_text(size=30),
                       axis.text.y=element_text(size=24),

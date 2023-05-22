@@ -54,8 +54,8 @@ getDatIdsNamesCamelIndicadores <- function() {
                     'E',
                     'L',
                     'CAMEL',
-                    'CAMEL rangos flexibles',
-                    'CAMEL rangos extrictos'
+                    'CAMEL con rangos flexibles',
+                    'CAMEL con rangos estrictos'
         ),
         DIRECCION = c('ASCENDENTE',        
                       'DESCENDENTE',

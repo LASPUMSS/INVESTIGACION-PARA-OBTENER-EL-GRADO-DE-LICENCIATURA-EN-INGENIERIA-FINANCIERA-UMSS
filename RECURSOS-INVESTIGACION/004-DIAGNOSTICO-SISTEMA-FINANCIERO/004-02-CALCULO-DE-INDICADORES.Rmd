@@ -30,7 +30,7 @@ datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
 
 ## Calculo de indicadores
 
-El presente sección tiene por objeto presentar los indicadores que evaluaran las diferentes características de los sectores financieros que harán manifiesto si dicho sector tiene la capacidad de hacer frente a sus obligaciones con terceros.
+En la presente sección se tiene por objeto presentar los indicadores que evaluaran las diferentes características de los sectores financieros que harán manifiesto si dicho sector tiene la capacidad de hacer frente a sus obligaciones con terceros.
 
 <!-- ##################################################### -->
 <!-- #####################  INDICADORES DE CAPITAL         -->
@@ -46,9 +46,9 @@ listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas de
 
 ```
 
-Los indicadores de capital tienen por objeto de evaluar la capacidad del capital de las instituciones para hacer frente a sus obligaciones con terceros, a continuación se presentan los indicadores de capital:
+Los indicadores de capital buscan responder o evaluar la capacidad del capital de los sectores financieros para hacer frente a sus obligaciones con terceros y propios, a continuación se presentan los indicadores de capital:
 
-```{r, fig.height = 20, fig.width = 20}
+```{r, fig.height = 20, fig.width = 20, fig.cap='Indicadores de capital'}
 wrap_plots(listPlots, ncol = 1)
 ```
 
@@ -83,7 +83,8 @@ El indicador esta definido por la siguiente ecuación:
 
 $$ \frac{ \text{Cartera En Mora - Previsión Cartera} }{\text{Patrimonio}}$$
 
-El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
+El mejor resultado para este indicador esta dado por aquel que sea lo mas bajo posible lo cual mostraría que el patrimonio del sector puede cubrir en su totalidad la cartera en mora, donde la tabla da como promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`, ahora bien el hecho que los promedios para los diferentes sectores sea negativo indica que los mismos hacen una previsión superior a la cartera en mora lo cual es favorable para su solidez financiera, así también el promedio de sus indicadores se menores a 1 indica que el patrimonio puede hacer frente las obligaciones que se puedan generar por cubrir la cartera en mora.
+
 
 #### Coeficiente acido de cobertura de cartera en mora (CACCM)
 
@@ -134,7 +135,7 @@ listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas de
 
 ```
 
-```{r, fig.height = 20, fig.width = 20}
+```{r, fig.height = 20, fig.width = 20, fig.cap='Indicadores de activos'}
 wrap_plots(listPlots, ncol = 1)
 ```
 
@@ -222,7 +223,7 @@ listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas de
 
 ```
 
-```{r, fig.height = 20, fig.width = 20}
+```{r, fig.height = 20, fig.width = 20, fig.cap='Indicadores de administración'}
 wrap_plots(listPlots, ncol = 1)
 ```
 
@@ -278,7 +279,7 @@ listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas de
 
 ```
 
-```{r, fig.height = 20, fig.width = 20}
+```{r, fig.height = 20, fig.width = 20, fig.cap='Indicadores de beneficios'}
 wrap_plots(listPlots, ncol = 1)
 ```
 
@@ -318,6 +319,8 @@ $$ \frac{ \text{Resultado Neto De La Gestión} }{ \text{Patrimonio} } $$
 
 El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
 
+Es decir, que el sector de `r str_to_lower(nameEntBestPromedio)` puede generar un rendimiento promedio mensual de `r format(round(bestPromedio*100,2), scientific=FALSE)` sobre el patrimonio.
+
 <!-- ##################################################### -->
 <!-- ###############  INDICADORES DE BENEFICIOS            -->
 <!-- ##################################################### -->
@@ -334,7 +337,7 @@ listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas de
 
 ```
 
-```{r, fig.height = 20, fig.width = 20}
+```{r, fig.height = 20, fig.width = 20, fig.cap='Indicadores de liquidez'}
 wrap_plots(listPlots, ncol = 1)
 ```
 
@@ -358,6 +361,8 @@ $$ \frac{ \text{Disponibles + Inversiones Temporarias} }{ \text{Pasivos} } $$
 
 El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
 
+Es decir, el sector de `r str_to_lower(nameEntBestPromedio)` puede hacer frente a sus obligaciones con terceros en menos de 30 días hasta un  `r format(round(bestPromedio*100,2), scientific=FALSE)`% de su totalidad.
+
 #### Coeficiente acido de capacidad de pago frente a pasivos (CACPP)
 
 ```{r}
@@ -373,6 +378,8 @@ El indicador esta definido por la siguiente ecuación:
 $$ \frac{ \text{Disponibles} }{ \text{Pasivos} } $$
 
 El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
+
+Es decir, el sector de `r str_to_lower(nameEntBestPromedio)` puede hacer frente a sus obligaciones con terceros de manera con sus activos mas líquidos de disposición inmediata hasta un  `r format(round(bestPromedio*100,2), scientific=FALSE)`% del total de las obligaciones con terceros.
 
 
 

@@ -57,7 +57,7 @@ datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
 
 ## Resultados CAMEL del sistema financiero
 
-Flexible
+### Resutados CAMEL con rangos flexibles sin ponderar
 
 ```{r}
 ids <- c('C','A','M','E','L')
@@ -78,7 +78,7 @@ wrap_plots(listPlots, ncol = 1)
 listTablesRender
 ```
 
-Estrictos
+### Resutados CAMEL con rangos extrictos sin ponderar
 
 ```{r}
 ids <- c('C','A','M','E','L')
@@ -109,9 +109,6 @@ datAuxCAMEL <-
     select(ID,TIPO_DE_ENTIDAD,FECHA) %>% 
     mutate(CAMEL_FLEXIBLE=datCamelCalificacionEntidad$CAMEL,
            CAMEL_ESTRICTO=datCamelCalificacionEntidadHard$CAMEL)
-
-
-
 ```
 
 
