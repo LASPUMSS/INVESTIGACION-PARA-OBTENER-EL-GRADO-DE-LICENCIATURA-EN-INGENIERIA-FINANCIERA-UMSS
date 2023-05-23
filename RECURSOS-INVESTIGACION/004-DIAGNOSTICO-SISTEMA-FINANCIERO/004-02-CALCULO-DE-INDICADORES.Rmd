@@ -6,7 +6,6 @@ output: pdf_document
 source('RECURSOS-INVESTIGACION/R/camel-getCamelIndNormalizada.R')
 source('RECURSOS-INVESTIGACION/R/camel-getListStatsIndicadores.R')
 source('RECURSOS-INVESTIGACION/R/camel-getListPlotsIndicadores.R')
-
 source('RECURSOS-INVESTIGACION/R/camel-get-datIdsNamesCamelInds.R')
 source("RECURSOS-INVESTIGACION/R/camel-render-tables-indicadoresStats.R")
 source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
@@ -32,11 +31,11 @@ datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
 
 En la presente sección se tiene por objeto presentar los indicadores que evaluaran las diferentes características de los sectores financieros que harán manifiesto si dicho sector tiene la capacidad de hacer frente a sus obligaciones con terceros.
 
+### Indicadores de capital
+
 <!-- ##################################################### -->
 <!-- #####################  INDICADORES DE CAPITAL         -->
 <!-- ##################################################### -->
-
-### Indicadores de capital
 
 ```{r}
 ids <- c('indCap_CAP','indCap_CCCM','indCap_CACCM','indCap_CCP')
@@ -119,13 +118,15 @@ $$ \frac{ \text{Patrimonio} }{ \text{Activo - Contingente} } $$
 
 El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
 
-<!-- ##################################################### -->
-<!-- #####################  INDICADORES DE ACTIVOS         -->
-<!-- ##################################################### -->
+
 \newpage
 ### Indicadores de activos
 
-Los indicadores de activos tienen por objeto de evaluar la capacidad del activo de las instituciones para hacer frente a sus obligaciones con terceros, a continuación se presentan los indicadores de activos:
+<!-- ##################################################### -->
+<!-- #####################  INDICADORES DE ACTIVOS         -->
+<!-- ##################################################### -->
+
+Los indicadores de activos tienen por objeto de evaluar la capacidad de los activos de los respectivos sectores financieros para hacer frente a sus obligaciones con terceros, a continuación se presentan los indicadores de activos:
 
 ```{r}
 ids <- c('indAct_CEC','indAct_CPC','indAct_CPCM','indAct_CRC')
@@ -153,11 +154,11 @@ bestPromedio <- listResult[[id]][['bestPromedio']]
 
 ```
 
-El indicador esta definido por la siguiente ecuación:
+El indicador busca mostrar en que nivel de la cartera total o bruta esta expuesta a impago, dicho indicador esta definido por la siguiente ecuación:
 
 $$  \frac{ \text{Cartera En Mora} }{ \text{Cartera Bruta} } $$
 
-El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
+Donde el promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`, es decir, que el `r format(round(bestPromedio*100,2), scientific=FALSE)`% de la cartera bruta o total tiene riesgo de impago siendo este menor respecto a los de los otros sectores.
 
 #### Coeficiente de previsión de cartera (CPC)
 
@@ -169,11 +170,11 @@ bestPromedio <- listResult[[id]][['bestPromedio']]
 
 ```
 
-El indicador esta definido por la siguiente ecuación:
+El indicador busca mostrar el porcentaje de la cartera total o bruta se susceptible de impago, dicho indicador esta definido por la siguiente ecuación:
 
 $$ \frac{ \text{Previsión} }{ \text{Cartera Bruta} } $$ 
 
-El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
+Donde el promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`, es decir, el sector supone que el `r format(round(bestPromedio*100,2), scientific=FALSE)`% de la cartera bruta o total sera sujeto de impago.
 
 #### Coeficiente de previsión de cartera en mora (CPCM)
 
@@ -201,17 +202,18 @@ bestPromedio <- listResult[[id]][['bestPromedio']]
 
 ```
 
-El indicador esta definido por la siguiente ecuación:
+El indicador muestra que porcentaje de la cartera total fueron reprogramados, dicho indicador esta definido por la siguiente ecuación:
 
 $$ \frac{ \text{Cartera Reprogramada Total} }{ \text{Cartera Bruta} } $$
 
-El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
+Donde el promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`, es decir, el `r format(round(bestPromedio*100,2), scientific=FALSE)`% de la cartera bruta o total es sujeta a reprogramación, tomando en cuenta que dicho promedio sufre un sesgo fruto por la pandemia covid-19 que dio que un incremento considerado la reprogramación de cartera en las gestiones 2020 y 2021.
+
+\newpage
+### Indicadores de administración
 
 <!-- ##################################################### -->
 <!-- ###############  INDICADORES DE ADMINISTRACION        -->
 <!-- ##################################################### -->
-\newpage
-### Indicadores de administración
 
 Los indicadores de administración tienen por objeto evaluar como las instituciones gestionan sus gastos administrativos, los cuales se presenta a continuación:
 
@@ -263,11 +265,12 @@ $$ \frac{ \text{Gastos Administración - Impuestos} }{ \text{Resultado Operativo
 
 El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
 
+\newpage
+### Indicadores de beneficios
+
 <!-- ##################################################### -->
 <!-- ###############  INDICADORES DE BENEFICIOS       -->
 <!-- ##################################################### -->
-\newpage
-### Indicadores de beneficios
 
 Los indicadores de beneficios tienen por objeto de evaluar la capacidad de los beneficios de las instituciones para hacer frente a sus obligaciones con terceros, a continuación se presentan los indicadores de beneficios:
 
@@ -321,11 +324,12 @@ El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiem
 
 Es decir, que el sector de `r str_to_lower(nameEntBestPromedio)` puede generar un rendimiento promedio mensual de `r format(round(bestPromedio*100,2), scientific=FALSE)` sobre el patrimonio.
 
+\newpage
+### Indicadores de liquidez
+
 <!-- ##################################################### -->
 <!-- ###############  INDICADORES DE BENEFICIOS            -->
 <!-- ##################################################### -->
-\newpage
-### Indicadores de liquidez
 
 Los indicadores de liquidez tienen por objeto de evaluar la capacidad de las instituciones para hacer frente a sus obligaciones con terceros con sus activos mas líquidos, a continuación se presentan los indicadores de liquidez:
 
