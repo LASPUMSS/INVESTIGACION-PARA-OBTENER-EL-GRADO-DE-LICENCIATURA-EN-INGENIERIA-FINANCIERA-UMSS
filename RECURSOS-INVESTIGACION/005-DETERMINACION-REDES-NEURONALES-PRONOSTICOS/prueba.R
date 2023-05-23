@@ -4,26 +4,34 @@ source('RECURSOS-INVESTIGACION/R/get-ts-from-dat.R')
 
 library(fpp2)
 library(dplyr)
+library(lubridate)
 
 datNorm <- getDatEEFFNormalizada(by = 'TIPO_DE_ENTIDAD')
 
-x <- 
+dat <- 
     datNorm %>% 
     group_by(FECHA) %>% 
     summarise_if(is.numeric, sum)
 
-id <- 'EERR_S2_GASTOS_DE_ADMINISTRACION'
-tsDat <- getTsFromDat2(id,x)
+gestionFn <- max(dat$FECHA) - years(1)
 
-autoplot(tsDat)
+datTrain <- dat %>% filter(FECHA<gestionFn)
+datTest <- dat %>% filter(FECHA>gestionFn)
 
-mcoModel <- tslm(tsDat~trend)
-nnModel <- nnetar(tsDat)
+id <- 'ACTIVO'
+tsDatTrain <- getTsFromDat2(id,datTrain)
+tsDatTest <- getTsFromDat2(id,datTest)
 
-mcoForecast <- forecast(mcoModel, h = 24)
-nnForecast <- forecast(nnModel,h = 24)
+mcoModel <- tslm(tsDatTrain~trend)
+nnModel <- nnetar(tsDatTrain)
 
-autoplot(tsDat) + autolayer(mcoForecast, PI = F) + autolayer(nnForecast)
+mcoForecast <- forecast(mcoModel, h = 13)
+nnForecast <- forecast(nnModel,h = 13)
+
+autoplot(tsDatTrain) + 
+    autolayer(mcoForecast, PI = F, series = 'MCO') + 
+    autolayer(nnForecast, series = 'NN')  + 
+    autolayer(tsDatTest)
 
 
 

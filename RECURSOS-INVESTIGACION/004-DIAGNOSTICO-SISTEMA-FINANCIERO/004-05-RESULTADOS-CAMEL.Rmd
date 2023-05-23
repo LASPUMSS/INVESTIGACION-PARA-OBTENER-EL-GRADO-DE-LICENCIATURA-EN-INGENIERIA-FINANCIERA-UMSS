@@ -6,21 +6,15 @@ output: pdf_document
 source('RECURSOS-INVESTIGACION/R/camel-getCamelIndNormalizada.R')
 source('RECURSOS-INVESTIGACION/R/camel-get-limites-rangos.R')
 source("RECURSOS-INVESTIGACION/R/camel-get-tabla-referencia-calificaciones.R")
-
 source('RECURSOS-INVESTIGACION/R/camel-calificacion-indicadores.R')
 source('RECURSOS-INVESTIGACION/R/camel-calificacion-entidad.R')
-
 source('RECURSOS-INVESTIGACION/R/camel-getListStatsIndicadores.R')
 source('RECURSOS-INVESTIGACION/R/camel-getListPlotsIndicadores.R')
-
 source('RECURSOS-INVESTIGACION/R/camel-get-datIdsNamesCamelInds.R')
 source("RECURSOS-INVESTIGACION/R/camel-render-tables-indicadoresStats.R")
-
 source('RECURSOS-INVESTIGACION/R/camel-tendencia-stats-overview.R')
-
 source('RECURSOS-INVESTIGACION/R/camel-plot-functions.R')
 source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
-
 
 require(stringr)
 require(ggplot2)
