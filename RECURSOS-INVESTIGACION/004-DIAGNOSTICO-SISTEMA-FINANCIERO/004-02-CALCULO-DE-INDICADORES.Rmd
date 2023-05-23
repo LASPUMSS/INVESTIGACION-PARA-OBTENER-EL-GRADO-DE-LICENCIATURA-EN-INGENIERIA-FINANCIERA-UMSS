@@ -29,7 +29,7 @@ datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
 
 ## Calculo de indicadores
 
-En la presente sección se tiene por objeto presentar los indicadores que evaluaran las diferentes características de los sectores financieros que harán manifiesto si dicho sector tiene la capacidad de hacer frente a sus obligaciones con terceros.
+En la presente sección se tiene por objeto presentar los indicadores que evaluaran las diferentes características de los sectores financieros que harán manifiesto si dicho sector tiene la capacidad de hacer frente a sus obligaciones.
 
 ### Indicadores de capital
 
@@ -52,7 +52,9 @@ wrap_plots(listPlots, ncol = 1)
 ```
 
 ```{r}
-listTablesRender
+listTablesRender %>% 
+    footnote(general_title = 'NOTA:',
+                              general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
 ```
 
 
@@ -126,7 +128,7 @@ El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiem
 <!-- #####################  INDICADORES DE ACTIVOS         -->
 <!-- ##################################################### -->
 
-Los indicadores de activos tienen por objeto de evaluar la capacidad de los activos de los respectivos sectores financieros para hacer frente a sus obligaciones con terceros, a continuación se presentan los indicadores de activos:
+Los indicadores de activos tienen por objeto de evaluar la capacidad de los activos de los respectivos sectores financieros para hacer frente a sus obligaciones, a continuación se presentan los indicadores de activos:
 
 ```{r}
 ids <- c('indAct_CEC','indAct_CPC','indAct_CPCM','indAct_CRC')
@@ -141,7 +143,9 @@ wrap_plots(listPlots, ncol = 1)
 ```
 
 ```{r}
-listTablesRender
+listTablesRender %>% 
+    footnote(general_title = 'NOTA:',
+                              general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
 ```
 
 #### Coeficiente de exposición de cartera (CEC)
@@ -230,7 +234,9 @@ wrap_plots(listPlots, ncol = 1)
 ```
 
 ```{r}
-listTablesRender
+listTablesRender %>% 
+    footnote(general_title = 'NOTA:',
+                              general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
 ```
 
 #### Coeficiente de cobertura gastos administrativos (CCGA)
@@ -287,7 +293,9 @@ wrap_plots(listPlots, ncol = 1)
 ```
 
 ```{r}
-listTablesRender
+listTablesRender %>% 
+    footnote(general_title = 'NOTA:',
+                              general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
 ```
 
 #### Coeficiente de rendimiento sobre activos (ROA)
@@ -346,7 +354,9 @@ wrap_plots(listPlots, ncol = 1)
 ```
 
 ```{r}
-listTablesRender
+listTablesRender %>% 
+    footnote(general_title = 'NOTA:',
+                              general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
 ```
 
 ####  Coeficiente de capacidad de pago frente a pasivos (CCPP)
