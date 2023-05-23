@@ -36,3 +36,22 @@ autoplot(tsDatTrain) +
 r2_nn <- (cor(nnForecast$mean, tsDatTest))^2
 r2_mco <- (cor(mcoForecast$mean, tsDatTest))^2
 
+# simular 
+sim <- ts(matrix(0, nrow=12L, ncol=9L),
+          start=end(tsDatTrain)[1L]+1L, frequency = 12)
+for(i in seq(9)){
+    
+    sim[,i] <- simulate(nnModel, nsim=12L)
+    
+}
+autoplot(tsDatTrain) + autolayer(sim)
+
+
+sim <- ts(matrix(0, nrow=12L, ncol=9L),
+          start=end(tsDatTrain)[1L]+1L, frequency = 12)
+for(i in seq(9)){
+    
+    sim[,i] <- simulate(mcoModel, nsim=12L)
+    
+}
+autoplot(tsDatTrain) + autolayer(sim)
