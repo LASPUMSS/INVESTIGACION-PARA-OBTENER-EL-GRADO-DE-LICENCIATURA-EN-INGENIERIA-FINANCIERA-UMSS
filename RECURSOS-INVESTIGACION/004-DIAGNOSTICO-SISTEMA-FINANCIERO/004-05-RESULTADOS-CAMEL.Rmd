@@ -51,11 +51,11 @@ datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
 
 ## Resultados CAMEL del sistema financiero
 
-Los resultados CAMEL....
+Los sección de resultados CAMEL del sistema financiero de Bolivia presenta la información resultado del diagnostico de la solidez financiera de los sectores financieros contenidos en la misma sujeta a los indicadores, rangos y ponderaciones antes presentados.
 
 ### Resutados CAMEL con rangos flexibles sin ponderar
 
-Las calificaciones promedio a cada característica de cada sector financiero con rangos flexibles sin ponderar...
+Los resultados CAMEL con rangos flexibles sin ponderar agrupados por tipo de indicador se presentan a continuación:
 
 ```{r}
 ids <- c('C','A','M','E','L')
@@ -78,9 +78,9 @@ listTablesRender %>%
                               general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
 ```
 
-### Resutados CAMEL con rangos extrictos sin ponderar
+### Resutados CAMEL con rangos estrictos sin ponderar
 
-Las calificaciones promedio a cada característica de cada sector financiero con rangos estrictos sin ponderar...
+Los resultados CAMEL con rangos estrictos sin ponderar agrupados por tipo de indicador se presentan a continuación:
 
 ```{r}
 ids <- c('C','A','M','E','L')
@@ -106,7 +106,7 @@ listTablesRender %>%
 \newpage
 ### Calificación CAMEL
 
-La calificación CAMEL....
+La calificación CAMEL contiene dentro si las calificaciones ponderadas asignadas a los resultados de los diferentes indicadores, don 1 indica un sector solvente en todos aspectos y 5 serios problemas de solidez, así también una tendencia negativa se traduce en un incremento el la solidez financiera.
 
 ```{r}
 datAuxCAMEL <- 
