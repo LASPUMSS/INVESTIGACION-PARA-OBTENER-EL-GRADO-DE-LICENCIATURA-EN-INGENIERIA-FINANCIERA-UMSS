@@ -51,11 +51,11 @@ datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
 
 ## Resultados CAMEL del sistema financiero
 
-Los resultados CAMEL por 
+Los resultados CAMEL....
 
 ### Resutados CAMEL con rangos flexibles sin ponderar
 
-Las calificaciones promedio a cada característica de cada sector financiero con rangos flexibles sin ponderar
+Las calificaciones promedio a cada característica de cada sector financiero con rangos flexibles sin ponderar...
 
 ```{r}
 ids <- c('C','A','M','E','L')
@@ -80,7 +80,7 @@ listTablesRender %>%
 
 ### Resutados CAMEL con rangos extrictos sin ponderar
 
-Las calificaciones promedio a cada característica de cada sector financiero con rangos estrictos sin ponderar
+Las calificaciones promedio a cada característica de cada sector financiero con rangos estrictos sin ponderar...
 
 ```{r}
 ids <- c('C','A','M','E','L')
@@ -105,6 +105,8 @@ listTablesRender %>%
 
 \newpage
 ### Calificación CAMEL
+
+La calificación CAMEL....
 
 ```{r}
 datAuxCAMEL <- 
@@ -131,4 +133,25 @@ listTablesRender %>%
     footnote(general_title = 'NOTA:',
                               general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
 ```
+
+<!-- RESULTADOS CAMEL FLEXIBLES -->
+
+```{r}
+nameIndById <- listResult$CAMEL_FLEXIBLE$nameIndById
+nameEntBestPromedio <- listResult$CAMEL_FLEXIBLE$nameEntBestPromedio
+bestPromedio <- listResult$CAMEL_FLEXIBLE$bestPromedio
+```
+
+El promedio mas favorable en el `r nameIndById` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
+
+
+<!-- RESULTADOS CAMEL ESTRITOS -->
+
+```{r}
+nameIndById <- listResult$CAMEL_ESTRICTO$nameIndById
+nameEntBestPromedio <- listResult$CAMEL_ESTRICTO$nameEntBestPromedio
+bestPromedio <- listResult$CAMEL_ESTRICTO$bestPromedio
+```
+
+El promedio mas favorable en el `r nameIndById` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
 
