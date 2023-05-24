@@ -170,7 +170,6 @@ Según [@MANUAL_CUENTAS_ASFI] los activos (designado por el código 100.00 en el
 - Bienes de uso 
 - Otros activos. 
 
-
 #### Disponibles
 
 Los activos disponibles (designado por el código 110.00 en el manual de cuentas) según [@MANUAL_CUENTAS_ASFI] representa el efectivo que mantiene la entidad en caja, los saldos a la vista en el Banco Central de Bolivia, en oficina matriz y sucursales del exterior, en bancos y corresponsales del país y del exterior; así como, la tenencia de metales preciosos. También representa la existencia de cheques, otros documentos mercantiles de cobro inmediato y órdenes electrónicas de pago pendientes de liquidación. 
@@ -276,14 +275,7 @@ Según [@MANUAL_CUENTAS_ASFI] los gastos administrativos (designado por el códi
 
 #### Impuestos
 
-La variable impuestos esta compuesta por dos elementos del manual de cuentas:
-
-- Impuestos
-- Impuesto a las utilidades de las empresas (IUE)
-
-Donde según [@MANUAL_CUENTAS_ASFI] los impuestos (designado por el código 455.00 en el manual de cuentas) registran los gastos devengados en el período por concepto de impuestos, asimismo los intereses y recargos originados por los mismos. El gasto por Impuesto al valor agregado que se registra en esta cuenta, es el que surge de aplicar la tasa del impuesto sobre ingresos presuntos, tales como el que proviene de tomar en anticrético un bien. 
-
-Así también el impuesto a las utilidades de las empresas (designado por el código 460.00 en el manual de cuentas) comprende los gastos devengados en el período por concepto de impuesto sobre las utilidades de las empresas.
+Según [@MANUAL_CUENTAS_ASFI] los impuestos (designado por el código 455.00 en el manual de cuentas) registran los gastos devengados en el período por concepto de impuestos, asimismo los intereses y recargos originados por los mismos. El gasto por Impuesto al valor agregado que se registra en esta cuenta, es el que surge de aplicar la tasa del impuesto sobre ingresos presuntos, tales como el que proviene de tomar en anticrético un bien. 
 
 #### Resultado operativo bruto (ROB)
 
@@ -291,14 +283,10 @@ Esta variable de resultado operativo bruto esta definida por la siguiente ecuaci
 
 $$ R.O.B. = \text{Ingresos Financieros} - \text{Gastos Financieros} \pm \text{Otros (Ingresos/Gastos) Operativos}   $$
 
-
-
 #### Resultado neto de la gestión (RNG)
 
 Esta variable de resultado neto de la gestión esta definida por la siguiente ecuación:
 
 $$ R.N.G. = \text{Resultado Operativo Bruto} \pm \text{Otros (Ingresos/Gastos) Extraordinarios} - \text{IUE} $$
-
-
 
 

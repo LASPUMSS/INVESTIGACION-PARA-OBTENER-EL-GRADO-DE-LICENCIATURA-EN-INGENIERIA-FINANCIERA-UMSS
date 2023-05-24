@@ -106,13 +106,11 @@ getVariablesForCAMEL <- function(x, dat=NULL, by='TIPO_DE_ENTIDAD') {
         
         names(dat)[grepl("IMPUESTO",names(dat))]
         
-        cuentas <- dat[,c('EERR_S2_IMPUESTOS',
-                          'EERR_S2_IMPUESTO_SOBRE_LAS_UTILIDADES_DE_LAS_EMPRESAS')]
+        cuentas <- dat[,c('EERR_S2_IMPUESTOS')]
         
         cuentas$TOTAL <- 
-            ifelse(is.na(cuentas$EERR_S2_IMPUESTOS),0,cuentas$EERR_S2_IMPUESTOS) +
-            ifelse(is.na(cuentas$EERR_S2_IMPUESTO_SOBRE_LAS_UTILIDADES_DE_LAS_EMPRESAS),0,cuentas$EERR_S2_IMPUESTO_SOBRE_LAS_UTILIDADES_DE_LAS_EMPRESAS)
-            
+            ifelse(is.na(cuentas$EERR_S2_IMPUESTOS),0,cuentas$EERR_S2_IMPUESTOS) 
+
         result <- cuentas$TOTAL
         
     } else if(x=='resulOp'){
