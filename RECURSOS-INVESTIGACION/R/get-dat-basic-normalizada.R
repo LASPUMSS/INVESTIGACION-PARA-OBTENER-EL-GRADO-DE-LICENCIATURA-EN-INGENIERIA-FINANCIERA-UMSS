@@ -1,6 +1,6 @@
 # PARA PODER EXPLORAR LAS CUENTAS DE MANERA INDIVIDUAL
 
-getDatEEFFNormalizada <- function(by='TIPO_DE_ENTIDAD') {
+getDatEEFFNormalizada <- function(by='TIPO_DE_ENTIDAD', na.cero=FALSE) {
     
     source('RECURSOS-INVESTIGACION/R/get-dat-basic.R')
     source('RECURSOS-INVESTIGACION/R/get-dat-group.R')
@@ -18,7 +18,7 @@ getDatEEFFNormalizada <- function(by='TIPO_DE_ENTIDAD') {
     nEntidades <- length(entidades)
     n <- nGestiones*nMeses*nEntidades
     
-    datNorm <- data.frame(matrix(NA, nrow = n, ncol = ncol(dat)))
+    datNorm <- data.frame(matrix(0, nrow = n, ncol = ncol(dat)))
     names(datNorm) <- names(dat)
     
     datNorm$TIPO_DE_ENTIDAD <- sort(rep(entidades,nMeses*nGestiones))
@@ -56,4 +56,9 @@ getDatEEFFNormalizada <- function(by='TIPO_DE_ENTIDAD') {
         select(-ends_with("_x")) %>% 
         relocate(FECHA, .after = ID)
     
+    if (na.cero) {
+        datResult <- datResult %>% replace(is.na(.), 0)
+        
+    }
+    return(datResult)
 }

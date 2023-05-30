@@ -101,7 +101,7 @@ El indicador esta definido por la siguiente ecuación:
 
 $$ \frac{ \text{Cartera En Mora - Previsión Cartera + Realizables} }{ \text{Patrimonio} } $$
 
-El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
+El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`, una vez mas se hace presente que la previsión cubre la cartera en mora mas realizables que vienen siendo en mayoría activos producto de la recuperación de créditos incumplidos con la entidad.
 
 #### Coeficiente de cobertura patrimonial (CCP)
 

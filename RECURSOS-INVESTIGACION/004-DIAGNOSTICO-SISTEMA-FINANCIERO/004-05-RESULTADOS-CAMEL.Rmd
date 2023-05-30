@@ -106,7 +106,7 @@ listTablesRender %>%
 \newpage
 ### Calificación CAMEL
 
-La calificación CAMEL contiene dentro si las calificaciones ponderadas asignadas a los resultados de los diferentes indicadores, don 1 indica un sector solvente en todos aspectos y 5 serios problemas de solidez, así también una tendencia negativa se traduce en un incremento el la solidez financiera.
+La calificación CAMEL contiene dentro si las calificaciones ponderadas asignadas a los resultados de los diferentes indicadores, don 1 indica un sector solvente en todos aspectos y 5 serios problemas de solidez, así también una tendencia negativa se traduce en un incremento de la solidez financiera.
 
 ```{r}
 datAuxCAMEL <- 
