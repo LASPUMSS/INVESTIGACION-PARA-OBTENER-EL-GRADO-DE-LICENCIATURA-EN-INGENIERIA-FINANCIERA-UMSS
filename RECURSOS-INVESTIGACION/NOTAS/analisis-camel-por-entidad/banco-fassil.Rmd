@@ -1,0 +1,151 @@
+---
+output: pdf_document
+---
+
+```{r}
+source('RECURSOS-INVESTIGACION/R/camel-getCamelIndNormalizada.R')
+source('RECURSOS-INVESTIGACION/R/camel-get-limites-rangos.R')
+source("RECURSOS-INVESTIGACION/R/camel-get-tabla-referencia-calificaciones.R")
+source('RECURSOS-INVESTIGACION/R/camel-calificacion-indicadores.R')
+source('RECURSOS-INVESTIGACION/R/camel-calificacion-entidad.R')
+source('RECURSOS-INVESTIGACION/R/camel-getListStatsIndicadores.R')
+source('RECURSOS-INVESTIGACION/R/camel-getListPlotsIndicadores.R')
+source('RECURSOS-INVESTIGACION/R/camel-get-datIdsNamesCamelInds.R')
+source("RECURSOS-INVESTIGACION/R/camel-render-tables-indicadoresStats.R")
+source('RECURSOS-INVESTIGACION/R/camel-tendencia-stats-overview.R')
+source('RECURSOS-INVESTIGACION/R/camel-plot-functions.R')
+source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
+
+require(stringr)
+require(ggplot2)
+require(patchwork)
+require(knitr)
+require(kableExtra)
+require(dplyr)
+
+if (!('dat' %in% ls())) {dat <- NULL}
+
+datCamelIndNorm <- getDatCamelIndNormalizada(gestionInc=2014,by='ENTIDAD',dat=dat) %>% filter(TIPO_DE_ENTIDAD=='BFS' )
+
+datCamelRangosLimites <- getDatCamelRangosLimites(datCamelIndNorm)
+
+datCamelCalificacionIndicadores <- 
+    getDatCamelCalificacionIndicadores(datCamelIndNorm,datCamelRangosLimites)
+datCamelCalificacionIndicadoresHard <- 
+    getDatCamelCalificacionIndicadores(datCamelIndNorm,datCamelRangosLimites,
+                                       calificacionDuro = TRUE)
+
+datCamelCalificacionEntidadSinPoderar <- 
+    getDatCamelCalificacionEntidad(datCamelCalificacionIndicadores, FALSE)
+datCamelCalificacionEntidadSinPoderarHard <- 
+    getDatCamelCalificacionEntidad(datCamelCalificacionIndicadoresHard, FALSE)
+
+datCamelCalificacionEntidad <- 
+    getDatCamelCalificacionEntidad(datCamelCalificacionIndicadores)
+datCamelCalificacionEntidadHard <- 
+    getDatCamelCalificacionEntidad(datCamelCalificacionIndicadoresHard)
+
+tableRefenceCamelCalificaciones <- getTableRefenceCamelCalificaciones()
+datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
+
+```
+
+## Resultados CAMEL del sistema financiero
+
+Los sección de resultados CAMEL del sistema financiero de Bolivia presenta la información resultado del diagnostico de la solidez financiera de los sectores financieros contenidos en la misma sujeta a los indicadores, rangos y ponderaciones antes presentados.
+
+### Resutados CAMEL con rangos flexibles sin ponderar
+
+Los resultados CAMEL con rangos flexibles sin ponderar agrupados por tipo de indicador se presentan a continuación:
+
+```{r}
+ids <- c('C','A','M','E','L')
+listResult <- getListStatsOverviewInd(ids, 
+                                      datCamelCalificacionEntidadSinPoderar, 
+                                      datIdsNamesCamelInds,
+                                      TRUE)
+listPlots <- getListPlotsInd(listResult, scaleOne = FALSE,numDigScale = 0.01)
+listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas C-A-M-E-L con rangos flexibles sin ponderar', 1)
+```
+
+```{r}
+wrap_plots(listPlots)
+```
+
+
+```{r}
+listTablesRender %>% 
+    footnote(general_title = 'NOTA:',
+                              general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
+```
+
+### Resutados CAMEL con rangos estrictos sin ponderar
+
+Los resultados CAMEL con rangos estrictos sin ponderar agrupados por tipo de indicador se presentan a continuación:
+
+```{r}
+ids <- c('C','A','M','E','L')
+listResult <- getListStatsOverviewInd(ids, 
+                                      datCamelCalificacionEntidadSinPoderarHard, 
+                                      datIdsNamesCamelInds,
+                                      TRUE)
+listPlots <- getListPlotsInd(listResult)
+listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas C-A-M-E-L con rangos estrictos sin ponderar', 1)
+```
+
+
+```{r}
+listTablesRender %>% 
+    footnote(general_title = 'NOTA:',
+                              general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
+```
+
+\newpage
+### Calificación CAMEL
+
+La calificación CAMEL contiene dentro si las calificaciones ponderadas asignadas a los resultados de los diferentes indicadores, don 1 indica un sector solvente en todos aspectos y 5 serios problemas de solidez, así también una tendencia negativa se traduce en un incremento de la solidez financiera.
+
+```{r}
+datAuxCAMEL <- 
+    datCamelCalificacionEntidad %>% 
+    select(ID,TIPO_DE_ENTIDAD,FECHA) %>% 
+    mutate(CAMEL_FLEXIBLE=datCamelCalificacionEntidad$CAMEL,
+           CAMEL_ESTRICTO=datCamelCalificacionEntidadHard$CAMEL)
+```
+
+
+```{r}
+ids <- c('CAMEL_FLEXIBLE','CAMEL_ESTRICTO')
+listResult <- getListStatsOverviewInd(ids, datAuxCAMEL, datIdsNamesCamelInds,TRUE)
+listPlots <- getListPlotsInd(listResult)
+listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas CAMEL', 1)
+```
+
+
+```{r}
+listTablesRender %>% 
+    footnote(general_title = 'NOTA:',
+                              general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
+```
+
+<!-- RESULTADOS CAMEL FLEXIBLES -->
+
+```{r}
+nameIndById <- listResult$CAMEL_FLEXIBLE$nameIndById
+nameEntBestPromedio <- listResult$CAMEL_FLEXIBLE$nameEntBestPromedio
+bestPromedio <- listResult$CAMEL_FLEXIBLE$bestPromedio
+```
+
+El promedio mas favorable en el `r nameIndById` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
+
+
+<!-- RESULTADOS CAMEL ESTRITOS -->
+
+```{r}
+nameIndById <- listResult$CAMEL_ESTRICTO$nameIndById
+nameEntBestPromedio <- listResult$CAMEL_ESTRICTO$nameEntBestPromedio
+bestPromedio <- listResult$CAMEL_ESTRICTO$bestPromedio
+```
+
+El promedio mas favorable en el `r nameIndById` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
+

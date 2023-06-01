@@ -34,6 +34,8 @@ getDatEEFF <- function() {
     dat$MES <- as.numeric(dat$MES)
     dat$DIA <- as.numeric(dat$DIA)
     
+    dat <- dat %>% replace(is.na(.), 0)
+    
     return(dat)
     
 }
