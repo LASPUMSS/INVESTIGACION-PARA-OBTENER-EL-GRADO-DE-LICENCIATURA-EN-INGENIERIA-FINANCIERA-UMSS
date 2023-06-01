@@ -2,6 +2,19 @@
 output: pdf_document
 ---
 
+
+<!-- Configuración CHUNKS -->
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE,
+                      fig.align='center',
+                      out.height='60%',
+                      out.width='100%')
+```
+
+
 ```{r}
 source('RECURSOS-INVESTIGACION/R/camel-getCamelIndNormalizada.R')
 source('RECURSOS-INVESTIGACION/R/camel-get-limites-rangos.R')
@@ -49,13 +62,10 @@ datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
 
 ```
 
-## Resultados CAMEL del sistema financiero
-
-Los sección de resultados CAMEL del sistema financiero de Bolivia presenta la información resultado del diagnostico de la solidez financiera de los sectores financieros contenidos en la misma sujeta a los indicadores, rangos y ponderaciones antes presentados.
+## Resultados CAMEL de entidades financieras
 
 ### Resutados CAMEL con rangos flexibles sin ponderar
 
-Los resultados CAMEL con rangos flexibles sin ponderar agrupados por tipo de indicador se presentan a continuación:
 
 ```{r}
 ids <- c('C','A','M','E','L')
@@ -64,7 +74,7 @@ listResult <- getListStatsOverviewInd(ids,
                                       datIdsNamesCamelInds,
                                       TRUE)
 listPlots <- getListPlotsInd(listResult, scaleOne = FALSE,numDigScale = 0.01)
-listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas C-A-M-E-L con rangos flexibles sin ponderar', 6)
+listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas C-A-M-E-L con rangos flexibles sin ponderar', 73)
 ```
 
 
@@ -76,7 +86,6 @@ listTablesRender %>%
 
 ### Resutados CAMEL con rangos estrictos sin ponderar
 
-Los resultados CAMEL con rangos estrictos sin ponderar agrupados por tipo de indicador se presentan a continuación:
 
 ```{r}
 ids <- c('C','A','M','E','L')
@@ -85,7 +94,7 @@ listResult <- getListStatsOverviewInd(ids,
                                       datIdsNamesCamelInds,
                                       TRUE)
 listPlots <- getListPlotsInd(listResult)
-listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas C-A-M-E-L con rangos estrictos sin ponderar', 6)
+listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas C-A-M-E-L con rangos estrictos sin ponderar', 73)
 ```
 
 
@@ -97,8 +106,6 @@ listTablesRender %>%
 
 \newpage
 ### Calificación CAMEL
-
-La calificación CAMEL contiene dentro si las calificaciones ponderadas asignadas a los resultados de los diferentes indicadores, don 1 indica un sector solvente en todos aspectos y 5 serios problemas de solidez, así también una tendencia negativa se traduce en un incremento de la solidez financiera.
 
 ```{r}
 datAuxCAMEL <- 
@@ -113,7 +120,7 @@ datAuxCAMEL <-
 ids <- c('CAMEL_FLEXIBLE','CAMEL_ESTRICTO')
 listResult <- getListStatsOverviewInd(ids, datAuxCAMEL, datIdsNamesCamelInds,TRUE)
 listPlots <- getListPlotsInd(listResult)
-listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas CAMEL', 6)
+listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas CAMEL', 73)
 ```
 
 
@@ -123,24 +130,9 @@ listTablesRender %>%
                               general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
 ```
 
-<!-- RESULTADOS CAMEL FLEXIBLES -->
 
 ```{r}
-nameIndById <- listResult$CAMEL_FLEXIBLE$nameIndById
-nameEntBestPromedio <- listResult$CAMEL_FLEXIBLE$nameEntBestPromedio
-bestPromedio <- listResult$CAMEL_FLEXIBLE$bestPromedio
+renderTableBasic(tableRefenceCamelCalificaciones)
 ```
 
-El promedio mas favorable en el `r nameIndById` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
-
-
-<!-- RESULTADOS CAMEL ESTRITOS -->
-
-```{r}
-nameIndById <- listResult$CAMEL_ESTRICTO$nameIndById
-nameEntBestPromedio <- listResult$CAMEL_ESTRICTO$nameEntBestPromedio
-bestPromedio <- listResult$CAMEL_ESTRICTO$bestPromedio
-```
-
-El promedio mas favorable en el `r nameIndById` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
 

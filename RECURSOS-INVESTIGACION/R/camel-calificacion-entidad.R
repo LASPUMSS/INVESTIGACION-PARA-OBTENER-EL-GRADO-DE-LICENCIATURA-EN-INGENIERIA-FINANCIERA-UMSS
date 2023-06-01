@@ -58,7 +58,6 @@ getDatCamelCalificacionEntidad <- function(datCamelCalificacionIndicadores, pond
         
         result[,'CAMEL'] <- result[,'CAMEL'] + dat[,i]
         
-        
         valor <- 'indCap_'
         if (grepl(valor, i)) {
             result[,'C'] <- result[,'C'] + dat[,i]
