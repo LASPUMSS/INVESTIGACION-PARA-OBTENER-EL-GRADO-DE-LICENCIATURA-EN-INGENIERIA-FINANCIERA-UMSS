@@ -9,12 +9,7 @@ library(lubridate)
 library(ggplot2)
 library(patchwork)
 
-datNorm <- getDatEEFFNormalizada(by = 'TIPO_DE_ENTIDAD', na.cero=TRUE)
-
-dat <- 
-    datNorm %>% 
-    group_by(FECHA) %>% 
-    summarise_if(is.numeric, sum)
+dat <- getDatEEFFNormalizada(by = 'TOTAL_SISTEMA')
 
 gestionFn <- max(dat$FECHA) - years(1) + 4
 datTrain <- dat %>% filter(FECHA<gestionFn)
@@ -27,26 +22,20 @@ id <- 'ACTIVO'
 tsDatTrain <- getTsFromDat2(id,datTrain)
 tsDatTest <- getTsFromDat2(id,datTest)
 
-mcoModel <- tslm(tsDatTrain~trend)
+mcoModel <- tslm(tsDatTrain~trend+season)
 nnModel <- nnetar(tsDatTrain)
 arimaModel <- auto.arima(tsDatTrain)
-arModel <- arfima(tsDatTrain)
 
 # simular 
-
 n_simulaicones <- 1000L
 n_proyeciones <- 12L
 
 mcoModelSimulate <- simulateTsModels(mcoModel,n_simulaicones,n_proyeciones,tsDatTest,tsDatTrain)
 nnModelSimulate <- simulateTsModels(nnModel,n_simulaicones,n_proyeciones,tsDatTest,tsDatTrain)
 arimaModelSimulate <- simulateTsModels(arimaModel,n_simulaicones,n_proyeciones,tsDatTest,tsDatTrain)
-arModelSimulate <- simulateTsModels(arModel,n_simulaicones,n_proyeciones,tsDatTest,tsDatTrain)
-
 
 p1 <- data.frame(r2Model=mcoModelSimulate$r2Model) %>%  ggplot(aes(x=r2Model)) + geom_histogram()
 p2 <- data.frame(r2Model=nnModelSimulate$r2Model) %>%  ggplot(aes(x=r2Model)) + geom_histogram()
 p3 <- data.frame(r2Model=arimaModelSimulate$r2Model) %>%  ggplot(aes(x=r2Model)) + geom_histogram()
-p4 <- data.frame(r2Model=arModelSimulate$r2Model) %>%  ggplot(aes(x=r2Model)) + geom_histogram()
 
-
-p1/p2/p3/p4
+p1/p2/p3

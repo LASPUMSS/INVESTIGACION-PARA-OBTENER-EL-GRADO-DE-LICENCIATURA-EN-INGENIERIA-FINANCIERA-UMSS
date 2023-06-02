@@ -2,4 +2,33 @@
 output: pdf_document
 ---
 
-## Presiciones del modelo de redes neuronales
+## Presiciones de modelos utilizados
+
+
+### Modelo utilizados
+
+- Redes neuronales
+- MCO 
+- Arima
+
+#### Arquitectura de redes neuronales
+
+#### Arquitectura de MCO
+
+#### Arquitectura ARIMA
+
+
+### Evaluación de modelos
+
+- R2 sobre datos ajustados
+- R2 sobre datos proyectados
+
+### Variables comprendidas
+
+- Activo
+- Pasivo
+- Patrimonio
+- Ingresos
+
+
+

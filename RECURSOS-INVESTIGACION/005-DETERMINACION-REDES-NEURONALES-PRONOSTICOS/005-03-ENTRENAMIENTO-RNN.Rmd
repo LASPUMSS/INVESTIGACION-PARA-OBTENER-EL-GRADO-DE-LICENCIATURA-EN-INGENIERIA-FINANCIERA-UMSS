@@ -2,4 +2,4 @@
 output: pdf_document
 ---
 
-## Entrenamiento de la red neuronal
+## Evaluación de datos ajustados de modelos

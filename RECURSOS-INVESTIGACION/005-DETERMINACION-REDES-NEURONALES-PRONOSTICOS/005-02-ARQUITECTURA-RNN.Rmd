@@ -2,4 +2,7 @@
 output: pdf_document
 ---
 
-## Arquitectura de la red neuronal
+## Arquitectura de los modelos
+
+
+### Arquitectura de 

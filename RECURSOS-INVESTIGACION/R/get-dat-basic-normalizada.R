@@ -1,6 +1,6 @@
 # PARA PODER EXPLORAR LAS CUENTAS DE MANERA INDIVIDUAL
 
-getDatEEFFNormalizada <- function(by='TIPO_DE_ENTIDAD', na.cero=FALSE) {
+getDatEEFFNormalizada <- function(by='TIPO_DE_ENTIDAD') {
     
     source('RECURSOS-INVESTIGACION/R/get-dat-basic.R')
     source('RECURSOS-INVESTIGACION/R/get-dat-group.R')
@@ -54,11 +54,8 @@ getDatEEFFNormalizada <- function(by='TIPO_DE_ENTIDAD', na.cero=FALSE) {
                   relationship = 'one-to-one', 
                   suffix = c("_x", "")) %>% 
         select(-ends_with("_x")) %>% 
-        relocate(FECHA, .after = ID)
-    
-    if (na.cero) {
-        datResult <- datResult %>% replace(is.na(.), 0)
-        
-    }
+        relocate(FECHA, .after = ID) %>% 
+        replace(is.na(.), 0)
+  
     return(datResult)
 }

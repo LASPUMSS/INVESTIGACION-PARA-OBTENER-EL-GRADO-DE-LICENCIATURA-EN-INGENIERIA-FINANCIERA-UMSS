@@ -2,6 +2,6 @@
 output: pdf_document
 ---
 
-## Evaluación de la red neuronal 
+## Evaluación de datos ajustados de modelos
 
 Aquí se contrastara la hipótesis de la investigación.
