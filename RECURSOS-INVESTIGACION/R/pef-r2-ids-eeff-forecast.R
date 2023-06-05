@@ -63,3 +63,14 @@ for (id in ids) {
                              arimaModelSimulate=arimaModelSimulate)
 }
 
+
+
+# PRUEBAS
+
+sapply(listResult, function(x) x[['r2mcoModel']]) %>% mean() 
+sapply(listResult, function(x) x[['r2nnModel']]) %>% mean()
+sapply(listResult, function(x) x[['r2arimaModel']]) %>% mean()
+
+sapply(listResult, function(x) x[['mcoModelSimulate']][['r2Mean']]) %>% mean()
+sapply(listResult, function(x) x[['nnModelSimulate']][['r2Mean']]) %>% mean()
+sapply(listResult, function(x) x[['arimaModelSimulate']][['r2Mean']]) %>% mean()
