@@ -18,7 +18,9 @@ simulateTsModels <- function(object,n_simulaicones=9L,n_proyeciones=12L, tsDatTe
             
         }
         
-        result <- list(simulate=sim, r2Model=r2Model)
+        result <- list(simulate=sim, 
+                       r2Model=r2Model, 
+                       r2Mean=mean(r2Model, na.rm=TRUE))
         
     } else {
         
@@ -33,7 +35,9 @@ simulateTsModels <- function(object,n_simulaicones=9L,n_proyeciones=12L, tsDatTe
             
         }
         
-        result <- list(simulate=sim, r2Model=r2Model)
+        result <- list(simulate=sim, 
+                       r2Model=r2Model, 
+                       r2Mean=mean(r2Model, na.rm=TRUE))
     }
     
 }
