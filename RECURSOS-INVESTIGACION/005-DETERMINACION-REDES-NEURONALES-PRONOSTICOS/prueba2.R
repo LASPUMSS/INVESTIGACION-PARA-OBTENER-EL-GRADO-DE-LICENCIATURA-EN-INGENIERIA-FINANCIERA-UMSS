@@ -52,4 +52,4 @@ p2 <- data.frame(r2Model=nnModelSimulate$r2Model) %>%  ggplot(aes(x=r2Model)) + 
 p3 <- data.frame(r2Model=arimaModelSimulate$r2Model) %>%  ggplot(aes(x=r2Model)) + geom_histogram()
 
 p <- (p1/p2/p3)
-
+p

@@ -1,5 +1,0 @@
----
-output: pdf_document
----
-
-## Proyección de estados financieros por el metodo de redes neuronales

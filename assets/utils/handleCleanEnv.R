@@ -2,7 +2,7 @@ if (!('utils' %in% ls())) { utils <- list() }
 
 # LIMPIAR MEMORIA
 
-noVar <- c('utils', 'simbolos')
+noVar <- c('utils')
 rm(list =ls()[!(ls() %in% noVar)])
 
 utils$handleCleanEnv <- function(){

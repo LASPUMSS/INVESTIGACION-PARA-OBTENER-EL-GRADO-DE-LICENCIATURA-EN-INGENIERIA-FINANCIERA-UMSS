@@ -1,5 +1,0 @@
----
-output: pdf_document
----
-
-## Evaluación de datos ajustados de modelos

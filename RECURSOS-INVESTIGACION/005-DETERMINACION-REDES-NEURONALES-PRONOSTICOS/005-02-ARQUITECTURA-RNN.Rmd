@@ -1,8 +1,0 @@
----
-output: pdf_document
----
-
-## Arquitectura de los modelos
-
-
-### Arquitectura de 
