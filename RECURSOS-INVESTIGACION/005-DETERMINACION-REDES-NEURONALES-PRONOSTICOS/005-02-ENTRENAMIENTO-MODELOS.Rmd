@@ -3,3 +3,48 @@ output: pdf_document
 ---
 
 ## Entrenamiento de modelos
+
+```{r}
+source('RECURSOS-INVESTIGACION/R/get-dat-basic-normalizada.R')
+source('RECURSOS-INVESTIGACION/R/pef-r2-ids-eeff-forecast.R')
+source('RECURSOS-INVESTIGACION/R/pef-list-summary-resumen.R')
+source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
+
+require(fpp2)
+
+datTotalSistema <- getDatEEFFNormalizada(by = 'TOTAL_SISTEMA')
+
+ids <- c('EERR_S2_RESULTADO_NETO_DE_LA_GESTION')
+listResult <- getListFittedAndSimulateModels(datTotalSistema,ids)
+listResumeModels <- getListResumeSummaryModels(listResult)
+
+```
+
+
+Los datos se dividen en dos secciones:
+
+- Datos de entrenamiento
+- Datos para realizar pruebas
+
+
+```{r}
+autoplot(listResult$EERR_S2_RESULTADO_NETO_DE_LA_GESTION$tsDatTrain,series = 'dat train') +
+    autolayer(listResult$EERR_S2_RESULTADO_NETO_DE_LA_GESTION$tsDatTest,series = 'dat test')
+```
+
+
+Posteriormente los modelos presentados en la anterior sección son entrenados sujetas a sus respectivas  especificaciones.
+
+Sobre los mismos modelos se proyecciones simuladas sujetas a desviaciones de error que el modelo presento en su entrenamiento.
+
+Posteriormente calculamos el ajuste de los datos proyectados simulados respecto a los datos observados.
+
+```{r}
+hist(listResult$EERR_S2_RESULTADO_NETO_DE_LA_GESTION$mcoModelSimulate$r2Model)
+```
+
+```{r}
+renderTableBasic(listResumeModels$r2ForecastResum)
+```
+
+
