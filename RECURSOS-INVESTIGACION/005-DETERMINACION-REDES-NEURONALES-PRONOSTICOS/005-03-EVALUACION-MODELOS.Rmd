@@ -2,12 +2,47 @@
 output: pdf_document
 ---
 
+```{r}
+source('RECURSOS-INVESTIGACION/R/get-dat-basic-normalizada.R')
+source('RECURSOS-INVESTIGACION/R/pef-r2-ids-eeff-forecast.R')
+source('RECURSOS-INVESTIGACION/R/pef-list-summary-resumen.R')
+source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
+
+datTotalSistema <- getDatEEFFNormalizada(by = 'TOTAL_SISTEMA')
+
+
+ids <- c('ACTIVO',
+         'PASIVO',
+         'PATRIMONIO',
+         'INGRESOS_FINANCIEROS',
+         'GASTOS_FINANCIEROS',
+         'EERR_S2_GASTOS_DE_ADMINISTRACION',
+         'EERR_S2_RESULTADO_NETO_DE_LA_GESTION')
+
+listResult <- getListFittedAndSimulateModels(datTotalSistema,ids)
+listResumeModels <- getListResumeSummaryModels(listResult)
+
+
+```
+
+
 ## Evaluación de datos ajustados de modelos
 
+```{r}
+renderTableBasic(listResumeModels$r2ModelsResum, captionTable = 'Ajuste R2 por cuenta')
+```
 
-
+```{r}
+renderTableBasic(listResumeModels$r2ModelsResumMean, captionTable = 'Ajuste R2 por modelo')
+```
 
 
 ## Evaluación de datos proyectados de modelos
 
-Aquí se contrastara la hipótesis de la investigación.
+```{r}
+renderTableBasic(listResumeModels$r2ForecastResum, captionTable = 'Ajuste R2 de proyeciones por cuenta')
+```
+
+```{r}
+renderTableBasic(listResumeModels$r2ForecastResumMean, captionTable = 'Ajuste R2 de proyeciones por modelo')
+```
