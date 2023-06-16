@@ -8,19 +8,21 @@ source('RECURSOS-INVESTIGACION/R/pef-r2-ids-eeff-forecast.R')
 source('RECURSOS-INVESTIGACION/R/pef-list-summary-resumen.R')
 source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
 
-datTotalSistema <- getDatEEFFNormalizada(by = 'TOTAL_SISTEMA')
+if (!('listResultPEF' %in% ls())) {
+    datTotalSistema <- getDatEEFFNormalizada(by = 'TOTAL_SISTEMA')
+    
+    ids <- c('ACTIVO',
+             'PASIVO',
+             'PATRIMONIO',
+             'INGRESOS_FINANCIEROS',
+             'GASTOS_FINANCIEROS',
+             'EERR_S2_GASTOS_DE_ADMINISTRACION',
+             'EERR_S2_RESULTADO_NETO_DE_LA_GESTION')
+    
+    listResultPEF <- getListFittedAndSimulateModels(datTotalSistema,ids)
+    listResumeModels <- getListResumeSummaryModels(listResultPEF)
+}
 
-
-ids <- c('ACTIVO',
-         'PASIVO',
-         'PATRIMONIO',
-         'INGRESOS_FINANCIEROS',
-         'GASTOS_FINANCIEROS',
-         'EERR_S2_GASTOS_DE_ADMINISTRACION',
-         'EERR_S2_RESULTADO_NETO_DE_LA_GESTION')
-
-listResult <- getListFittedAndSimulateModels(datTotalSistema,ids)
-listResumeModels <- getListResumeSummaryModels(listResult)
 
 
 ```
