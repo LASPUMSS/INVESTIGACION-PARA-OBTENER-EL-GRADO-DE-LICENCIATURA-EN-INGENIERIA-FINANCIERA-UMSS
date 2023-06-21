@@ -10,16 +10,18 @@ require(kableExtra)
 require(dplyr)
 
 # FUNCIONES NECESARIAS
+source('RECURSOS-INVESTIGACION/R/get-dat-basic-normalizada.R')
 source("RECURSOS-INVESTIGACION/R/get-dat-basic.R")
 source("RECURSOS-INVESTIGACION/R/get-dat-group.R")
 source("RECURSOS-INVESTIGACION/R/def-mod-entidades.R")
 source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
 source("RECURSOS-INVESTIGACION/R/handles.R")
 
-# VARIABLES GLOBALES DEL DOCUMENTO
-dat <- getDatEEFF()
-entidadesCompModelo <- getEntidadesCompModelo(dat)
-datGroupBySector <- getDatEEFFByGroup(dat,by = 'TIPO_DE_ENTIDAD' )
+# VARIABLES GLOBALES DEL CAPITULO
+datBasic <- getDatEEFF()
+dat <- getDatEEFFNormalizada(by='TIPO_DE_ENTIDAD')
+entidadesCompModelo <- getEntidadesCompModelo(datBasic)
+datGroupBySector <- getDatEEFFByGroup(datBasic,by = 'TIPO_DE_ENTIDAD' )
 ```
 
 ## Precisiones del diagnostico financiero presentado
@@ -28,7 +30,7 @@ En la presente sección se presentaran las características a la cuales están s
 
 ### Entidades financieras comprendidas por el diagnostico
 
-El numero de observaciones de la datos manejados por esta investigación alcanzan a `r nrow(dat)`, donde cada observación corresponde a un balance general y un estado de resultados en un punto del tiempo entre las fechas (`r min(dat$FECHA)` - `r max(dat$FECHA)`), dichos estados financieros se clasifican o agrupan por sectores financieros los cuales son:
+El numero de observaciones de la datos manejados por esta investigación alcanzan a `r nrow(datBasic)`, donde cada observación corresponde a un balance general y un estado de resultados en un punto del tiempo entre las fechas (`r min(datBasic$FECHA)` - `r max(datBasic$FECHA)`), dichos estados financieros se clasifican o agrupan por sectores financieros los cuales son:
 
 - Bancos múltiples
 - Bancos PYME.

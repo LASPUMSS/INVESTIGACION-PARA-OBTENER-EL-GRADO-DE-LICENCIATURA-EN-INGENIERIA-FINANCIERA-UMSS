@@ -3,7 +3,7 @@ output: pdf_document
 ---
 
 ```{r}
-source('RECURSOS-INVESTIGACION/R/camel-getCamelIndNormalizada.R')
+source('RECURSOS-INVESTIGACION/R/camel-get-datCamelIndicadores.R')
 source('RECURSOS-INVESTIGACION/R/camel-getListStatsIndicadores.R')
 source('RECURSOS-INVESTIGACION/R/camel-getListPlotsIndicadores.R')
 source('RECURSOS-INVESTIGACION/R/camel-get-datIdsNamesCamelInds.R')
@@ -21,7 +21,7 @@ require(kableExtra)
 
 if (!('dat' %in% ls())) {dat <- NULL}
 
-datCamelIndNorm <- getDatCamelIndNormalizada(gestionInc=2014,by='TIPO_DE_ENTIDAD',dat=dat)
+datCamelIndNorm <- getDatCamelIndicadores(dat=dat, by='TIPO_DE_ENTIDAD')
 datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
 
 ```

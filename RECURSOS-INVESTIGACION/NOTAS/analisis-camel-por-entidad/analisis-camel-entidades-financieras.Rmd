@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = FALSE,
 
 
 ```{r}
-source('RECURSOS-INVESTIGACION/R/camel-getCamelIndNormalizada.R')
+source('RECURSOS-INVESTIGACION/R/camel-get-datCamelIndicadores.R')
 source('RECURSOS-INVESTIGACION/R/camel-get-limites-rangos.R')
 source("RECURSOS-INVESTIGACION/R/camel-get-tabla-referencia-calificaciones.R")
 source('RECURSOS-INVESTIGACION/R/camel-calificacion-indicadores.R')
@@ -38,7 +38,7 @@ require(dplyr)
 
 if (!('dat' %in% ls())) {dat <- NULL}
 
-datCamelIndNorm <- getDatCamelIndNormalizada(gestionInc=2014,by='ENTIDAD',dat=dat)
+datCamelIndNorm <- getDatCamelIndicadores(dat=dat, by='ENTIDAD')
 datCamelRangosLimites <- getDatCamelRangosLimites(datCamelIndNorm)
 
 datCamelCalificacionIndicadores <- 

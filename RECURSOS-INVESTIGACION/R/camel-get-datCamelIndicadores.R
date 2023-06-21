@@ -3,24 +3,19 @@ getDatCamelIndicadores <- function(dat=NULL, by='TIPO_DE_ENTIDAD') {
     # Funciones necesarias
     source('RECURSOS-INVESTIGACION/R/camel-indicadores-functions.R')
     source('RECURSOS-INVESTIGACION/R/camel-getVariablesForCamel.R')
-    source('RECURSOS-INVESTIGACION/R/get-dat-basic.R')
+    source('RECURSOS-INVESTIGACION/R/get-dat-basic-normalizada.R')
     source('RECURSOS-INVESTIGACION/R/get-dat-group.R')
     require(dplyr)
     
     # Verificar dat
-    if (is.null(dat) ) { dat <- getDatEEFF() }
-    
-    dat <- getDatEEFFByGroup(dat, by)
-    
-    if (by=='TIPO_DE_ENTIDAD') {
-        datCamelInd <- data.frame(ID=dat$ID,
-                                  TIPO_DE_ENTIDAD=dat$TIPO_DE_ENTIDAD,
-                                  FECHA=dat$FECHA)   
-    } else if (by=='ENTIDAD') {
-        datCamelInd <- data.frame(ID=dat$ID,
-                                  TIPO_DE_ENTIDAD=dat$ENTIDIDAD,
-                                  FECHA=dat$FECHA)   
+    if (is.null(dat) ) { 
+        dat <- getDatEEFFNormalizada(by = by) 
     }
+    
+
+    datCamelInd <- data.frame(ID=dat$ID,
+                              TIPO_DE_ENTIDAD=dat$TIPO_DE_ENTIDAD,
+                              FECHA=dat$FECHA)   
     
     # Variables
     
@@ -116,3 +111,7 @@ getDatCamelIndicadores <- function(dat=NULL, by='TIPO_DE_ENTIDAD') {
     
     return(datCamelInd)
 }
+
+
+
+

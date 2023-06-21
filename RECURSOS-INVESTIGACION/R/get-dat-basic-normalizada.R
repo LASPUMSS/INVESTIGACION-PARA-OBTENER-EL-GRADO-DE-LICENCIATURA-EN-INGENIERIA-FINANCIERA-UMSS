@@ -1,13 +1,12 @@
 # PARA PODER EXPLORAR LAS CUENTAS DE MANERA INDIVIDUAL
 
-getDatEEFFNormalizada <- function(by='TIPO_DE_ENTIDAD') {
+getDatEEFFNormalizada <- function(by='ENTIDAD') {
     
     source('RECURSOS-INVESTIGACION/R/get-dat-basic.R')
     source('RECURSOS-INVESTIGACION/R/get-dat-group.R')
     
     dat <- getDatEEFF() 
     dat <- getDatEEFFByGroup(dat, by)
-    names(dat)[2] <- 'TIPO_DE_ENTIDAD'
     
     # Numero de filas que debera tener el data.frame 
     entidades <- unique(dat$TIPO_DE_ENTIDAD)

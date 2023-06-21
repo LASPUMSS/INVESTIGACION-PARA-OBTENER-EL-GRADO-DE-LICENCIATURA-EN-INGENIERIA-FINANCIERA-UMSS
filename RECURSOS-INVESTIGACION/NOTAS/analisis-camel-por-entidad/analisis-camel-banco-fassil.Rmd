@@ -2,7 +2,6 @@
 output: pdf_document
 ---
 
-
 <!-- Configuración CHUNKS -->
 ```{r setup, include=FALSE}
 
@@ -13,7 +12,6 @@ knitr::opts_chunk$set(echo = FALSE,
                       out.height='60%',
                       out.width='100%')
 ```
-
 
 ```{r}
 source('RECURSOS-INVESTIGACION/R/camel-get-datCamelIndicadores.R')
@@ -39,6 +37,7 @@ require(dplyr)
 if (!('dat' %in% ls())) {dat <- NULL}
 
 datCamelIndNorm <- getDatCamelIndicadores(dat=dat, by='ENTIDAD')
+
 datCamelRangosLimites <- getDatCamelRangosLimites(datCamelIndNorm)
 
 datCamelCalificacionIndicadores <- 
@@ -57,23 +56,24 @@ datCamelCalificacionEntidad <-
 datCamelCalificacionEntidadHard <- 
     getDatCamelCalificacionEntidad(datCamelCalificacionIndicadoresHard)
 
+
 ## Filtrar resultados por entidad
-entidad <- c('BCR','BDB','BEC','BFO','BFS','BGA','BIE','BIS','BME','BNA','BNB','BPR','BSO','BUN')
+entidad <- 'BFS'
 
 datCamelCalificacionIndicadores <- datCamelCalificacionIndicadores %>%
-    filter(TIPO_DE_ENTIDAD %in% entidad )
+    filter(TIPO_DE_ENTIDAD==entidad )
 datCamelCalificacionIndicadoresHard <- datCamelCalificacionIndicadoresHard %>%
-    filter(TIPO_DE_ENTIDAD %in% entidad )
+    filter(TIPO_DE_ENTIDAD==entidad )
 
 datCamelCalificacionEntidadSinPoderar <- datCamelCalificacionEntidadSinPoderar %>%
-    filter(TIPO_DE_ENTIDAD %in% entidad )
+    filter(TIPO_DE_ENTIDAD==entidad )
 datCamelCalificacionEntidadSinPoderarHard <- datCamelCalificacionEntidadSinPoderarHard %>%
-    filter(TIPO_DE_ENTIDAD %in% entidad )
+    filter(TIPO_DE_ENTIDAD==entidad )
 
 datCamelCalificacionEntidad <- datCamelCalificacionEntidad %>% 
-    filter(TIPO_DE_ENTIDAD %in% entidad )
+    filter(TIPO_DE_ENTIDAD==entidad )
 datCamelCalificacionEntidadHard <- datCamelCalificacionEntidadHard %>%
-    filter(TIPO_DE_ENTIDAD %in% entidad )
+    filter(TIPO_DE_ENTIDAD==entidad )
 
 
 ### Otros
@@ -83,10 +83,9 @@ datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
 
 ```
 
-## Resultados CAMEL de bancos multiples
+## Resultados CAMEL del Banco Fassil
 
 ### Resutados CAMEL con rangos flexibles sin ponderar
-
 
 ```{r}
 ids <- c('C','A','M','E','L')
@@ -95,7 +94,7 @@ listResult <- getListStatsOverviewInd(ids,
                                       datIdsNamesCamelInds,
                                       TRUE)
 listPlots <- getListPlotsInd(listResult, scaleOne = FALSE,numDigScale = 0.01)
-listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas C-A-M-E-L con rangos flexibles sin ponderar', 14)
+listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas C-A-M-E-L con rangos flexibles sin ponderar', 1)
 ```
 
 ```{r, fig.height = 20, fig.width = 20, fig.cap='Resultados C-A-M-E-L con rangos flexibles sin ponderar'}
@@ -118,13 +117,12 @@ listResult <- getListStatsOverviewInd(ids,
                                       datIdsNamesCamelInds,
                                       TRUE)
 listPlots <- getListPlotsInd(listResult)
-listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas C-A-M-E-L con rangos estrictos sin ponderar', 14)
+listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas C-A-M-E-L con rangos estrictos sin ponderar', 1)
 ```
 
 ```{r, fig.height = 20, fig.width = 20, fig.cap='Resultados C-A-M-E-L con rangos extrictos sin ponderar'}
 wrap_plots(listPlots, ncol = 1)
 ```
-
 
 ```{r}
 listTablesRender %>% 
@@ -149,7 +147,7 @@ datAuxCAMEL <-
 ids <- c('CAMEL_FLEXIBLE','CAMEL_ESTRICTO')
 listResult <- getListStatsOverviewInd(ids, datAuxCAMEL, datIdsNamesCamelInds,TRUE)
 listPlots <- getListPlotsInd(listResult)
-listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas CAMEL', 14)
+listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas CAMEL', 1)
 ```
 
 ```{r, fig.height = 20, fig.width = 20, fig.cap='Resultados CAMEL'}
@@ -161,7 +159,6 @@ listTablesRender %>%
     footnote(general_title = 'NOTA:',
                               general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
 ```
-
 
 ```{r}
 renderTableBasic(tableRefenceCamelCalificaciones)

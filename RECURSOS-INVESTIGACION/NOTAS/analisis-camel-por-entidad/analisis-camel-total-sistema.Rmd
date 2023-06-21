@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = FALSE,
 ```
 
 ```{r}
-source('RECURSOS-INVESTIGACION/R/camel-getCamelIndNormalizada.R')
+source('RECURSOS-INVESTIGACION/R/camel-get-datCamelIndicadores.R')
 source('RECURSOS-INVESTIGACION/R/camel-get-limites-rangos.R')
 source("RECURSOS-INVESTIGACION/R/camel-get-tabla-referencia-calificaciones.R")
 source('RECURSOS-INVESTIGACION/R/camel-calificacion-indicadores.R')
@@ -36,8 +36,7 @@ require(dplyr)
 
 if (!('dat' %in% ls())) {dat <- NULL}
 
-datCamelIndNorm <- getDatCamelIndNormalizada(gestionInc=2014,by='ENTIDAD',dat=dat) 
-#%>% filter(TIPO_DE_ENTIDAD=='BFS' )
+datCamelIndNorm <- getDatCamelIndicadores(dat=dat, by='TOTAL_SISTEMA')
 
 datCamelRangosLimites <- getDatCamelRangosLimites(datCamelIndNorm)
 
@@ -57,26 +56,6 @@ datCamelCalificacionEntidad <-
 datCamelCalificacionEntidadHard <- 
     getDatCamelCalificacionEntidad(datCamelCalificacionIndicadoresHard)
 
-
-## Filtrar resultados por entidad
-entidad <- 'BFS'
-
-datCamelCalificacionIndicadores <- datCamelCalificacionIndicadores %>%
-    filter(TIPO_DE_ENTIDAD==entidad )
-datCamelCalificacionIndicadoresHard <- datCamelCalificacionIndicadoresHard %>%
-    filter(TIPO_DE_ENTIDAD==entidad )
-
-datCamelCalificacionEntidadSinPoderar <- datCamelCalificacionEntidadSinPoderar %>%
-    filter(TIPO_DE_ENTIDAD==entidad )
-datCamelCalificacionEntidadSinPoderarHard <- datCamelCalificacionEntidadSinPoderarHard %>%
-    filter(TIPO_DE_ENTIDAD==entidad )
-
-datCamelCalificacionEntidad <- datCamelCalificacionEntidad %>% 
-    filter(TIPO_DE_ENTIDAD==entidad )
-datCamelCalificacionEntidadHard <- datCamelCalificacionEntidadHard %>%
-    filter(TIPO_DE_ENTIDAD==entidad )
-
-
 ### Otros
 
 tableRefenceCamelCalificaciones <- getTableRefenceCamelCalificaciones()
@@ -84,7 +63,7 @@ datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
 
 ```
 
-## Resultados CAMEL del Banco Fassil
+## Resultados CAMEL total sistema
 
 ### Resutados CAMEL con rangos flexibles sin ponderar
 
@@ -97,6 +76,7 @@ listResult <- getListStatsOverviewInd(ids,
 listPlots <- getListPlotsInd(listResult, scaleOne = FALSE,numDigScale = 0.01)
 listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas C-A-M-E-L con rangos flexibles sin ponderar', 1)
 ```
+
 
 ```{r, fig.height = 20, fig.width = 20, fig.cap='Resultados C-A-M-E-L con rangos flexibles sin ponderar'}
 wrap_plots(listPlots, ncol = 1)
@@ -164,4 +144,3 @@ listTablesRender %>%
 ```{r}
 renderTableBasic(tableRefenceCamelCalificaciones)
 ```
-

@@ -113,5 +113,8 @@ getDatEEFFByGroup <- function(dat=NULL, by='TIPO_DE_ENTIDAD') {
         
     }
     
+    # Configuraciones finales
+    names(datResult)[2] <- 'TIPO_DE_ENTIDAD'
+    
     return(datResult)
 }
