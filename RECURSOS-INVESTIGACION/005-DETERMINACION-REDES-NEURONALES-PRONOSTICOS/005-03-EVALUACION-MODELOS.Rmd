@@ -19,14 +19,6 @@ if (!('listResultPEF' %in% ls())) {
              'EERR_S2_GASTOS_DE_ADMINISTRACION',
              'EERR_S2_RESULTADO_NETO_DE_LA_GESTION')
     
-    ids <- c('COEFICIENTE_DE_ADECUACION_PATRIMONIAL',
-             'ACTIVO_CARTERA_CARTERA_VENCIDA_TOTAL',
-             'ACTIVO_CARTERA_CARTERA_VENCIDA',
-             'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_VENCIDA',
-             'ACTIVO_CARTERA_CARTERA_REESTRUCTURADA_VENCIDA',
-             'EERR_S2_GASTOS_DE_ADMINISTRACION',
-             'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_O_REESTRUCTURADA_VENCIDA')
-    
     listResultPEF <- getListFittedAndSimulateModels(datTotalSistema,ids)
     listResumeModels <- getListResumeSummaryModels(listResultPEF)
 }
