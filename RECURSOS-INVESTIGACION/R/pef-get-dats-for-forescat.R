@@ -18,11 +18,88 @@ if (!('listResultPEF' %in% ls())) {
     listResumeModels <- getListResumeSummaryModels(listResultPEF)
 }
 
-x <- forecast(listResultPEF$ACTIVO$arimaModel,h = 12)
-x$mean
+# MCO MODEL
+mcoDataForecastCuentas <- 
+    sapply(listResultPEF, 
+       function(cuentas){
+           
+           tsTrain <- cuentas[['tsDatTrain']]
+           tsForecast <- cuentas[['mcoModel']] %>% forecast(h=12)
+           tsForecast <-  tsForecast$mean
+           
+           result <- ts(c(tsTrain,tsForecast), 
+                        start=start(tsTrain), 
+                        frequency = frequency(tsTrain))
+           
+           result
+           
+           }
+    ) %>% 
+    data.frame() %>% 
+    mutate(FECHA=datTotalSistema$FECHA, 
+           TIPO_DE_ENTIDAD=datTotalSistema$TIPO_DE_ENTIDAD,
+           ID=datTotalSistema$ID) %>% 
+    relocate(FECHA, .before = ACTIVO) %>% 
+    relocate(TIPO_DE_ENTIDAD, .after = FECHA) %>% 
+    relocate(ID, .before = FECHA)
 
-x2 <- ts(c(listResultPEF$ACTIVO$tsDatTrain,x$mean),
-        start = start(listResultPEF$ACTIVO$tsDatTrain), 
-        frequency = frequency(listResultPEF$ACTIVO$tsDatTrain))
-x2
+# NN MODEL
+nnDataForecastCuentas <- 
+    sapply(listResultPEF, 
+       function(cuentas){
+           
+           tsTrain <- cuentas[['tsDatTrain']]
+           tsForecast <- cuentas[['nnModel']] %>% forecast(h=12)
+           tsForecast <-  tsForecast$mean
+           
+           result <- ts(c(tsTrain,tsForecast), 
+                        start=start(tsTrain), 
+                        frequency = frequency(tsTrain))
+           
+           result
+           
+       }
+) %>% 
+    data.frame() %>% 
+    mutate(FECHA=datTotalSistema$FECHA, 
+           TIPO_DE_ENTIDAD=datTotalSistema$TIPO_DE_ENTIDAD,
+           ID=datTotalSistema$ID) %>% 
+    relocate(FECHA, .before = ACTIVO) %>% 
+    relocate(TIPO_DE_ENTIDAD, .after = FECHA) %>% 
+    relocate(ID, .before = FECHA)
+
+# ARIMA MODEL
+arimaDataForecastCuentas <-  
+    sapply(listResultPEF, 
+       function(cuentas){
+           
+           tsTrain <- cuentas[['tsDatTrain']]
+           tsForecast <- cuentas[['arimaModel']] %>% forecast(h=12)
+           tsForecast <-  tsForecast$mean
+           
+           result <- ts(c(tsTrain,tsForecast), 
+                        start=start(tsTrain), 
+                        frequency = frequency(tsTrain))
+           
+           result
+           
+       }
+) %>% 
+    data.frame() %>% 
+    mutate(FECHA=datTotalSistema$FECHA, 
+           TIPO_DE_ENTIDAD=datTotalSistema$TIPO_DE_ENTIDAD,
+           ID=datTotalSistema$ID) %>% 
+    relocate(FECHA, .before = ACTIVO) %>% 
+    relocate(TIPO_DE_ENTIDAD, .after = FECHA) %>% 
+    relocate(ID, .before = FECHA)
+
+
+listDataForecastCuentas <- 
+    list(nnDataForecastCuentas=nnDataForecastCuentas,
+         mcoDataForecastCuentas=mcoDataForecastCuentas,
+         arimaDataForecastCuentas=arimaDataForecastCuentas
+         )
+
+
+
 
