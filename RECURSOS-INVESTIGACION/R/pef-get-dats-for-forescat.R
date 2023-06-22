@@ -18,6 +18,30 @@ if (!('listResultPEF' %in% ls())) {
     listResumeModels <- getListResumeSummaryModels(listResultPEF)
 }
 
+# DAT ORIGINAL
+datCuentas <- 
+    sapply(listResultPEF, 
+           function(cuentas){
+               
+               tsTrain <- cuentas[['tsDatTrain']]
+               tsTest <- cuentas[['tsDatTest']]
+               
+               result <- ts(c(tsTrain,tsTest), 
+                            start=start(tsTrain), 
+                            frequency = frequency(tsTrain))
+               
+               result
+               
+           }
+    ) %>% 
+    data.frame() %>% 
+    mutate(FECHA=datTotalSistema$FECHA, 
+           TIPO_DE_ENTIDAD=datTotalSistema$TIPO_DE_ENTIDAD,
+           ID=datTotalSistema$ID) %>% 
+    relocate(FECHA, .before = ACTIVO) %>% 
+    relocate(TIPO_DE_ENTIDAD, .after = FECHA) %>% 
+    relocate(ID, .before = FECHA)
+
 # MCO MODEL
 mcoDataForecastCuentas <- 
     sapply(listResultPEF, 
@@ -95,11 +119,8 @@ arimaDataForecastCuentas <-
 
 
 listDataForecastCuentas <- 
-    list(nnDataForecastCuentas=nnDataForecastCuentas,
+    list(datCuentas=datCuentas,
+         nnDataForecastCuentas=nnDataForecastCuentas,
          mcoDataForecastCuentas=mcoDataForecastCuentas,
          arimaDataForecastCuentas=arimaDataForecastCuentas
          )
-
-
-
-
