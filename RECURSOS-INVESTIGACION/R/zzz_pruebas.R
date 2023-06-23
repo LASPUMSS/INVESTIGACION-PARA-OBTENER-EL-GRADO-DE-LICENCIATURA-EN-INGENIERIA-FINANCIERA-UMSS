@@ -1,17 +1,129 @@
 source('RECURSOS-INVESTIGACION/R/get-dat-basic-normalizada.R')
-source('RECURSOS-INVESTIGACION/R/camel-get-datCamelIndicadores.R')
-source('RECURSOS-INVESTIGACION/R/camel-get-limites-rangos.R')
+source('RECURSOS-INVESTIGACION/R/pef-r2-ids-eeff-forecast.R')
+source('RECURSOS-INVESTIGACION/R/pef-list-summary-resumen.R')
+source('RECURSOS-INVESTIGACION/R/pef-get-dats-for-forescat.R')
+source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
+
+if (!('listResultPEF' %in% ls())) {
+    datTotalSistema <- getDatEEFFNormalizada(by = 'TOTAL_SISTEMA')
+    
+    ids <- c('ACTIVO',
+             'PASIVO',
+             'PATRIMONIO',
+             'INGRESOS_FINANCIEROS',
+             'GASTOS_FINANCIEROS',
+             'EERR_S2_GASTOS_DE_ADMINISTRACION',
+             'EERR_S2_RESULTADO_NETO_DE_LA_GESTION')
+    
+    listResultPEF <- getListFittedAndSimulateModels(datTotalSistema,ids)
+    listResumeModels <- getListResumeSummaryModels(listResultPEF)
+    
+    listDatsForTestCamels <- getDatsForTestCamels(listResultPEF)
+}
+
+# DAT ORIGINAL
+datCuentas <- 
+    sapply(listResultPEF, 
+           function(cuentas){
+               
+               tsTrain <- cuentas[['tsDatTrain']]
+               tsTest <- cuentas[['tsDatTest']]
+               
+               result <- ts(c(tsTrain,tsTest), 
+                            start=start(tsTrain), 
+                            frequency = frequency(tsTrain))
+               
+               result
+               
+           }
+    ) %>% 
+    data.frame() %>% 
+    mutate(FECHA=datTotalSistema$FECHA, 
+           TIPO_DE_ENTIDAD=datTotalSistema$TIPO_DE_ENTIDAD,
+           ID=datTotalSistema$ID) %>% 
+    relocate(FECHA, .before = ACTIVO) %>% 
+    relocate(TIPO_DE_ENTIDAD, .after = FECHA) %>% 
+    relocate(ID, .before = FECHA)
+
+# MCO MODEL
+mcoDataForecastCuentas <- 
+    sapply(listResultPEF, 
+           function(cuentas){
+               
+               tsTrain <- cuentas[['tsDatTrain']]
+               tsForecast <- cuentas[['mcoModel']] %>% forecast(h=12)
+               tsForecast <-  tsForecast$mean
+               
+               result <- ts(c(tsTrain,tsForecast), 
+                            start=start(tsTrain), 
+                            frequency = frequency(tsTrain))
+               
+               result
+               
+           }
+    ) %>% 
+    data.frame() %>% 
+    mutate(FECHA=datTotalSistema$FECHA, 
+           TIPO_DE_ENTIDAD=datTotalSistema$TIPO_DE_ENTIDAD,
+           ID=datTotalSistema$ID) %>% 
+    relocate(FECHA, .before = ACTIVO) %>% 
+    relocate(TIPO_DE_ENTIDAD, .after = FECHA) %>% 
+    relocate(ID, .before = FECHA)
+
+# NN MODEL
+nnDataForecastCuentas <- 
+    sapply(listResultPEF, 
+           function(cuentas){
+               
+               tsTrain <- cuentas[['tsDatTrain']]
+               tsForecast <- cuentas[['nnModel']] %>% forecast(h=12)
+               tsForecast <-  tsForecast$mean
+               
+               result <- ts(c(tsTrain,tsForecast), 
+                            start=start(tsTrain), 
+                            frequency = frequency(tsTrain))
+               
+               result
+               
+           }
+    ) %>% 
+    data.frame() %>% 
+    mutate(FECHA=datTotalSistema$FECHA, 
+           TIPO_DE_ENTIDAD=datTotalSistema$TIPO_DE_ENTIDAD,
+           ID=datTotalSistema$ID) %>% 
+    relocate(FECHA, .before = ACTIVO) %>% 
+    relocate(TIPO_DE_ENTIDAD, .after = FECHA) %>% 
+    relocate(ID, .before = FECHA)
+
+# ARIMA MODEL
+arimaDataForecastCuentas <-  
+    sapply(listResultPEF, 
+           function(cuentas){
+               
+               tsTrain <- cuentas[['tsDatTrain']]
+               tsForecast <- cuentas[['arimaModel']] %>% forecast(h=12)
+               tsForecast <-  tsForecast$mean
+               
+               result <- ts(c(tsTrain,tsForecast), 
+                            start=start(tsTrain), 
+                            frequency = frequency(tsTrain))
+               
+               result
+               
+           }
+    ) %>% 
+    data.frame() %>% 
+    mutate(FECHA=datTotalSistema$FECHA, 
+           TIPO_DE_ENTIDAD=datTotalSistema$TIPO_DE_ENTIDAD,
+           ID=datTotalSistema$ID) %>% 
+    relocate(FECHA, .before = ACTIVO) %>% 
+    relocate(TIPO_DE_ENTIDAD, .after = FECHA) %>% 
+    relocate(ID, .before = FECHA)
 
 
-dat1 <- getDatEEFFNormalizada(by = 'TOTAL_SISTEMA')
-dat2 <- getDatEEFFNormalizada(by = 'TIPO_DE_ENTIDAD')
-dat3 <- getDatEEFFNormalizada(by = 'ENTIDAD')
-
-
-datCamelIndNorm1 <- getDatCamelIndicadores2(dat1,by='TOTAL_SISTEMA')
-datCamelIndNorm2 <- getDatCamelIndicadores2(dat2,by='TIPO_DE_ENTIDAD')
-datCamelIndNorm3 <- getDatCamelIndicadores2(dat3,by='ENTIDAD')
-
-datCamelRangosLimites1 <- getDatCamelRangosLimites(datCamelIndNorm1)
-datCamelRangosLimites2 <- getDatCamelRangosLimites(datCamelIndNorm2)
-datCamelRangosLimites3 <- getDatCamelRangosLimites(datCamelIndNorm3)
+listDataForecastCuentas <- 
+    list(datCuentas=datCuentas,
+         nnDataForecastCuentas=nnDataForecastCuentas,
+         mcoDataForecastCuentas=mcoDataForecastCuentas,
+         arimaDataForecastCuentas=arimaDataForecastCuentas
+    )
