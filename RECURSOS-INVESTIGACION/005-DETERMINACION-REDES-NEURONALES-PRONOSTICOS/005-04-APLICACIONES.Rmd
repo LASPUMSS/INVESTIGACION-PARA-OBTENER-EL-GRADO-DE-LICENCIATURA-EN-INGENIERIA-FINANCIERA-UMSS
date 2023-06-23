@@ -3,28 +3,80 @@ output: pdf_document
 ---
 
 ```{r}
+
 source('RECURSOS-INVESTIGACION/R/get-dat-basic-normalizada.R')
 source('RECURSOS-INVESTIGACION/R/pef-r2-ids-eeff-forecast.R')
 source('RECURSOS-INVESTIGACION/R/pef-list-summary-resumen.R')
+source('RECURSOS-INVESTIGACION/R/pef-get-dats-for-forescat.R')
 source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
 
 if (!('listResultPEF' %in% ls())) {
     datTotalSistema <- getDatEEFFNormalizada(by = 'TOTAL_SISTEMA')
     
     ids <- c('ACTIVO',
-             'PASIVO',
+             
+             'COEFICIENTE_DE_ADECUACION_PATRIMONIAL',
+             
+             'ACTIVO_CARTERA_CARTERA_VENCIDA_TOTAL',
+             'ACTIVO_CARTERA_CARTERA_VENCIDA',
+             'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_VENCIDA',
+             'ACTIVO_CARTERA_CARTERA_REESTRUCTURADA_VENCIDA',
+             'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_O_REESTRUCTURADA_VENCIDA',
+             
+             'ACTIVO_CARTERA_CARTERA_EJECUCION_TOTAL',
+             'ACTIVO_CARTERA_CARTERA_EN_EJECUCION',
+             'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_EJECUCION',
+             'ACTIVO_CARTERA_CARTERA_REESTRUCTURADA_EN_EJECUCION',
+             'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_O_REESTRUCTURADA_EN_EJECUCION',
+             
+             'ACTIVO_CARTERA_CARTERA_VIGENTE_TOTAL',
+             'ACTIVO_CARTERA_CARTERA_VIGENTE',
+             'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_VIGENTE',
+             'ACTIVO_CARTERA_CARTERA_REESTRUCTURADA_VIGENTE',
+             'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_O_REESTRUCTURADA_VIGENTE',
+             
+             'ACTIVO_CARTERA_PREVISION_PARA_INCOBRABILIDAD_DE_CARTERA',
+             
              'PATRIMONIO',
-             'INGRESOS_FINANCIEROS',
-             'GASTOS_FINANCIEROS',
+             
+             'ACTIVO_BIENES_REALIZABLES',
+             
+             'CUENTAS_CONTINGENTES_DEUDORAS',
+             
              'EERR_S2_GASTOS_DE_ADMINISTRACION',
-             'EERR_S2_RESULTADO_NETO_DE_LA_GESTION')
+             
+             'EERR_S2_IMPUESTOS',
+             
+             'RESULTADO_DE_OPERACION_BRUTO',
+             
+             'EERR_S2_RESULTADO_NETO_DE_LA_GESTION',
+             
+             'ACTIVO_DISPONIBILIDADES',
+             
+             'ACTIVO_INVERSIONES_TEMPORARIAS',
+             
+             'PASIVO')
     
     listResultPEF <- getListFittedAndSimulateModels(datTotalSistema,ids)
     listResumeModels <- getListResumeSummaryModels(listResultPEF)
+    listDatsForTestCamels <- getDatsForTestCamels(listResultPEF,12,TRUE)
 }
 
+```
 
 
+```{r}
+source("RECURSOS-INVESTIGACION/R/pef-get-camel-test.R")
+
+originalCamelTest <- getCamelTestForecast(listDatsForTestCamels$datCuentas)
+nnCamelTest <- getCamelTestForecast(listDatsForTestCamels$nnDataForecastCuentas)
+mcoCamelTest <- getCamelTestForecast(listDatsForTestCamels$mcoDataForecastCuentas)
+arimaCamelTest <- getCamelTestForecast(listDatsForTestCamels$arimaDataForecastCuentas)
+
+originalCamelTest
+nnCamelTest
+mcoCamelTest
+arimaCamelTest
 ```
 
 

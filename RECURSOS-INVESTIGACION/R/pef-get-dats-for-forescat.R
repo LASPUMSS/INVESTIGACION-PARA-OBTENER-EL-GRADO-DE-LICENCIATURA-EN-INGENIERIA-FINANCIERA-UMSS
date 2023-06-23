@@ -1,4 +1,4 @@
-getDatsForTestCamels <- function(listResultPEF, nF=12) {
+getDatsForTestCamels <- function(listResultPEF, nF=12, onlyForecast=FALSE) {
     
     require(dplyr)
     
@@ -102,12 +102,24 @@ getDatsForTestCamels <- function(listResultPEF, nF=12) {
         relocate(ID, .before = FECHA)
     
     
-    listDataForecastCuentas <- 
-        list(datCuentas=datCuentas,
-             nnDataForecastCuentas=nnDataForecastCuentas,
-             mcoDataForecastCuentas=mcoDataForecastCuentas,
-             arimaDataForecastCuentas=arimaDataForecastCuentas
-        )
+    
+    if (onlyForecast) {
+        listDataForecastCuentas <- 
+            list(datCuentas=datCuentas %>% filter(FECHA > '2022-01-01'),
+                 nnDataForecastCuentas=nnDataForecastCuentas %>% filter(FECHA > '2022-01-01'),
+                 mcoDataForecastCuentas=mcoDataForecastCuentas %>% filter(FECHA > '2022-01-01'),
+                 arimaDataForecastCuentas=arimaDataForecastCuentas %>% filter(FECHA > '2022-01-01')
+            )
+        
+    } else{
+        listDataForecastCuentas <- 
+            list(datCuentas=datCuentas,
+                 nnDataForecastCuentas=nnDataForecastCuentas,
+                 mcoDataForecastCuentas=mcoDataForecastCuentas,
+                 arimaDataForecastCuentas=arimaDataForecastCuentas
+            )
+    }
+    
     
     return(listDataForecastCuentas)
     
