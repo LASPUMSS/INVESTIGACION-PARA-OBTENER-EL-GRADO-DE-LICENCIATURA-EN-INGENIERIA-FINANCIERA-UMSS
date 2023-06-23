@@ -1,4 +1,4 @@
-getDatsForTestCamels <- function(listResultPEF, nF=12, onlyForecast=FALSE) {
+getDatsForTestCamels <- function(listResultPEF, datTotalSistema, nF=12, onlyForecast=FALSE) {
     
     require(dplyr)
     
