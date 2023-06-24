@@ -26,20 +26,28 @@ if (!('listResultPEF' %in% ls())) {
 ## Evaluación de datos ajustados de modelos
 
 ```{r}
-renderTableBasic(listResumeModels$r2ModelsResum, captionTable = 'Ajuste R2 por cuenta')
+renderTableBasic(listResumeModels$r2ModelsResum, 
+                 captionTable = 'Ajuste R2 por cuenta',
+                 fontSize = 6)
 ```
 
 ```{r}
-renderTableBasic(listResumeModels$r2ModelsResumMean, captionTable = 'Ajuste R2 por modelo')
+renderTableBasic(listResumeModels$r2ModelsResumMean, 
+                 captionTable = 'Ajuste R2 por modelo',
+                 fontSize = 6)
 ```
 
 
 ## Evaluación de datos proyectados de modelos
 
 ```{r}
-renderTableBasic(listResumeModels$r2ForecastResum, captionTable = 'Ajuste R2 de proyeciones por cuenta')
+renderTableBasic(listResumeModels$r2ForecastResum, 
+                 captionTable = 'Ajuste R2 de proyeciones por cuenta',
+                 fontSize = 6)
 ```
 
 ```{r}
-renderTableBasic(listResumeModels$r2ForecastResumMean, captionTable = 'Ajuste R2 de proyeciones por modelo')
+renderTableBasic(listResumeModels$r2ForecastResumMean,
+                 captionTable = 'Ajuste R2 de proyeciones por modelo',
+                 fontSize = 6)
 ```

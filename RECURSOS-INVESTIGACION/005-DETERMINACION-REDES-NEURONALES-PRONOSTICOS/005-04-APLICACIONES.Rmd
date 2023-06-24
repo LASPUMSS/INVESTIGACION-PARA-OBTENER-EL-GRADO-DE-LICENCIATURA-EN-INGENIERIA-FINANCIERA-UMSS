@@ -9,6 +9,7 @@ source('RECURSOS-INVESTIGACION/R/pef-r2-ids-eeff-forecast.R')
 source('RECURSOS-INVESTIGACION/R/pef-list-summary-resumen.R')
 source('RECURSOS-INVESTIGACION/R/pef-get-dats-for-forescat.R')
 source('RECURSOS-INVESTIGACION/R/pef-get-ids-for-models.R')
+source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
 
 if (!('listResultPEF' %in% ls())) {
     datTotalSistema <- getDatEEFFNormalizada(by = 'TOTAL_SISTEMA')
@@ -45,7 +46,10 @@ camelTestModels <- bind_rows(originalCamelTest,
 ## Aplicaciones
 
 ```{r}
-kable(camelTestModels) %>% 
+
+renderTableBasic(camelTestModels, 
+                 captionTable = 'Aplicacion',
+                 fontSize = 6) %>% 
     pack_rows(index = c('DATOS ORIGINALES',
                         'REDES NEURONALES',
                         'MCO',
