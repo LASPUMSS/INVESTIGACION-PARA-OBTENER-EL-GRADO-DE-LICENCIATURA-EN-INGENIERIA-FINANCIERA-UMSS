@@ -2,6 +2,47 @@
 output: pdf_document
 ---
 
+```{r}
+source('RECURSOS-INVESTIGACION/R/get-dat-basic-normalizada.R')
+source('RECURSOS-INVESTIGACION/R/pef-r2-ids-eeff-forecast.R')
+source('RECURSOS-INVESTIGACION/R/pef-list-summary-resumen.R')
+source('RECURSOS-INVESTIGACION/R/pef-get-dats-for-forescat.R')
+source('RECURSOS-INVESTIGACION/R/pef-get-ids-for-models.R')
+source("RECURSOS-INVESTIGACION/R/pef-get-camel-test.R")
+source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
+
+require(kableExtra)
+require(patchwork)
+require(ggplot2)
+require(dplyr)
+require(fpp2)
+
+if (!('listResultPEF' %in% ls())) {
+    
+    datTotalSistema <- getDatEEFFNormalizada(by = 'TOTAL_SISTEMA')
+    
+    ids <- getVariablesForModelsForecast()
+    
+    listResultPEF <- getListFittedAndSimulateModels(datTotalSistema,ids)
+    listResumeModels <- getListResumeSummaryModels(listResultPEF)
+    listDatsForTestCamels <- getDatsForTestCamels(listResultPEF,datTotalSistema,12,TRUE)
+    
+    
+    originalCamelTest <- getCamelTestForecast(listDatsForTestCamels$datCuentas)
+    nnCamelTest <- getCamelTestForecast(listDatsForTestCamels$nnDataForecastCuentas)
+    mcoCamelTest <- getCamelTestForecast(listDatsForTestCamels$mcoDataForecastCuentas)
+    arimaCamelTest <- getCamelTestForecast(listDatsForTestCamels$arimaDataForecastCuentas)
+    
+    camelTestModels <- bind_rows(originalCamelTest,
+                                 nnCamelTest,
+                                 mcoCamelTest,
+                                 arimaCamelTest)
+}
+
+id <- 'EERR_S2_RESULTADO_NETO_DE_LA_GESTION'
+
+```
+
 ## Presiciones de modelos utilizados
 
 ### Modelo utilizados
