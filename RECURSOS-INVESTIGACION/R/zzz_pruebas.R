@@ -8,52 +8,11 @@ if (!('listResultPEF' %in% ls())) {
     datTotalSistema <- getDatEEFFNormalizada(by = 'TOTAL_SISTEMA')
     
     ids <- c('ACTIVO',
-             
-             'COEFICIENTE_DE_ADECUACION_PATRIMONIAL',
-             
-             'ACTIVO_CARTERA_CARTERA_VENCIDA_TOTAL',
-             'ACTIVO_CARTERA_CARTERA_VENCIDA',
-             'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_VENCIDA',
-             'ACTIVO_CARTERA_CARTERA_REESTRUCTURADA_VENCIDA',
-             'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_O_REESTRUCTURADA_VENCIDA',
-             
-             'ACTIVO_CARTERA_CARTERA_EJECUCION_TOTAL',
-             'ACTIVO_CARTERA_CARTERA_EN_EJECUCION',
-             'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_EJECUCION',
-             'ACTIVO_CARTERA_CARTERA_REESTRUCTURADA_EN_EJECUCION',
-             'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_O_REESTRUCTURADA_EN_EJECUCION',
-             
-             'ACTIVO_CARTERA_CARTERA_VIGENTE_TOTAL',
-             'ACTIVO_CARTERA_CARTERA_VIGENTE',
-             'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_VIGENTE',
-             'ACTIVO_CARTERA_CARTERA_REESTRUCTURADA_VIGENTE',
-             'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_O_REESTRUCTURADA_VIGENTE',
-             
-             'ACTIVO_CARTERA_PREVISION_PARA_INCOBRABILIDAD_DE_CARTERA',
-             
-             'PATRIMONIO',
-             
-             'ACTIVO_BIENES_REALIZABLES',
-             
-             'CUENTAS_CONTINGENTES_DEUDORAS',
-             
-             'EERR_S2_GASTOS_DE_ADMINISTRACION',
-             
-             'EERR_S2_IMPUESTOS',
-             
-             'RESULTADO_DE_OPERACION_BRUTO',
-             
-             'EERR_S2_RESULTADO_NETO_DE_LA_GESTION',
-             
-             'ACTIVO_DISPONIBILIDADES',
-             
-             'ACTIVO_INVERSIONES_TEMPORARIAS',
-             
-             'PASIVO')
+             'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_O_REESTRUCTURADA_VENCIDA')
     
     listResultPEF <- getListFittedAndSimulateModels(datTotalSistema,ids)
     listResumeModels <- getListResumeSummaryModels(listResultPEF)
-    listDatsForTestCamels <- getDatsForTestCamels(listResultPEF,12,TRUE)
+    listDatsForTestCamels <- getDatsForTestCamels(listResultPEF,datTotalSistema,12,TRUE)
 }
 
 ######################################################################

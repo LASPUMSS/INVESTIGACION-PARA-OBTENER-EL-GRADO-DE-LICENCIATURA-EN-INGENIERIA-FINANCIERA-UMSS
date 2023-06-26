@@ -49,7 +49,7 @@ camelTestModels <- bind_rows(originalCamelTest,
 
 renderTableBasic(camelTestModels, 
                  captionTable = 'Aplicacion',
-                 fontSize = 6) %>% 
+                 fontSize = 8) %>% 
     pack_rows(index = c('DATOS ORIGINALES',
                         'REDES NEURONALES',
                         'MCO',

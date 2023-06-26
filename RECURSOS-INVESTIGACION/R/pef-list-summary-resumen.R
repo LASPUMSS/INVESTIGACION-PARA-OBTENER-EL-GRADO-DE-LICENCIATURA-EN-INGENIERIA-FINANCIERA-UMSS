@@ -3,14 +3,14 @@ getListResumeSummaryModels <- function(listResult) {
     require(dplyr)
     
     # AJUSTE DE MODELO
-    r2nnModelMean <-  sapply(listResult, function(x) x[['r2nnModel']]) %>% mean()
-    r2mcoModelMean <-  sapply(listResult, function(x) x[['r2mcoModel']]) %>% mean() 
-    r2arimaModelMean <-  sapply(listResult, function(x) x[['r2arimaModel']]) %>% mean()
+    r2nnModelMean <-  sapply(listResult, function(x) x[['r2nnModel']]) %>% mean(na.rm = TRUE)
+    r2mcoModelMean <-  sapply(listResult, function(x) x[['r2mcoModel']]) %>% mean(na.rm = TRUE) 
+    r2arimaModelMean <-  sapply(listResult, function(x) x[['r2arimaModel']]) %>% mean(na.rm = TRUE)
     
     # AJUSTE DE SIMULAICON DE PROYECCIONES
-    nnModelSimulateR2Mean <-  sapply(listResult, function(x) x[['nnModelSimulate']][['r2Mean']]) %>% mean()
-    mcoModelSimulateR2Mean <-  sapply(listResult, function(x) x[['mcoModelSimulate']][['r2Mean']]) %>% mean()
-    arimaModelSimulateR2Mean <-  sapply(listResult, function(x) x[['arimaModelSimulate']][['r2Mean']]) %>% mean()
+    nnModelSimulateR2Mean <-  sapply(listResult, function(x) x[['nnModelSimulate']][['r2Mean']]) %>% mean(na.rm = TRUE)
+    mcoModelSimulateR2Mean <-  sapply(listResult, function(x) x[['mcoModelSimulate']][['r2Mean']]) %>% mean(na.rm = TRUE)
+    arimaModelSimulateR2Mean <-  sapply(listResult, function(x) x[['arimaModelSimulate']][['r2Mean']]) %>% mean(na.rm = TRUE)
     
     # DATAFRAMES RESUMENES
     r2ModelsResum <- data.frame(
