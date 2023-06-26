@@ -43,7 +43,7 @@ camelTestModels <- bind_rows(originalCamelTest,
 ```
 
 
-## Aplicaciones
+## Aplicación de metodologia CAMEL sobre datos proyectados
 
 ```{r}
 

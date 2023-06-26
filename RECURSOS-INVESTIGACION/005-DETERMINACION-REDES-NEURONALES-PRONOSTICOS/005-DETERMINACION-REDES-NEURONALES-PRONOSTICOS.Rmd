@@ -4,6 +4,18 @@ output: pdf_document
 
 # Determinación de pronósticos de estados financieros por redes neuronales artificiales
 
+En el presente capitulo se buscara resolver objetivos planteados en el perfil de la investigación que son los siguientes:
+
+- Definir la arquitectura y entrenamiento del modelo de red de neuronas artificiales.
+- Proyección y simulación de estados financieros.
+- Evaluación financiera sobre estados financieros proyectados-simulados.
+
+Así también refutar o validar la hipótesis a la que se suscribe la presente investigación:
+
+**"Con la determinación de proyecciones de estados financieros por el método de redes neuronales, de entidades financieras de Bolivia, se logrará proyectar información con mayor aproximación a la situación económica-financiera observada de la institución correspondiente"**
+
+
+
 <!-- DEFINICIÓN DE VARIABLES -->
 ```{r, child="RECURSOS-INVESTIGACION/005-DETERMINACION-REDES-NEURONALES-PRONOSTICOS/005-01-DEFINICION-DEL-MODELO-RNN.Rmd"}
 
