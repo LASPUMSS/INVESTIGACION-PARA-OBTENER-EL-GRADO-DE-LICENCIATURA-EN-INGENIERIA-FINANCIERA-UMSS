@@ -37,40 +37,26 @@ if (!('listResultPEF' %in% ls())) {
                                  nnCamelTest,
                                  mcoCamelTest,
                                  arimaCamelTest)
+    
+    id <- 'EERR_S2_RESULTADO_NETO_DE_LA_GESTION'
 }
 
-id <- 'EERR_S2_RESULTADO_NETO_DE_LA_GESTION'
-
 ```
 
-## Entrenamiento de modelos
+## Entrenamiento de modelos, proyeciones y simulaciones
 
-Los datos se dividen en dos secciones:
-
-- Datos de entrenamiento
-- Datos para realizar pruebas
-
-### Seperar los datos
-
-```{r}
-autoplot(listResultPEF[[id]]$tsDatTrain,series = 'dat train') +
-    autolayer(listResultPEF[[id]]$tsDatTest,series = 'dat test')
-```
-
-### Entrenamientos de los modelos
-
-#### MCO
+### MCO
 
 ```{r, echo=TRUE}
 summary(listResultPEF[[id]]$mcoModel)
 ```
 
-#### ARIMA
+### ARIMA
 
 ```{r, echo=TRUE}
 summary(listResultPEF[[id]]$arimaModel)
 ```
-#### NN
+### NN
 
 Presentar la NN como caja negra.
 
@@ -78,7 +64,7 @@ Presentar la NN como caja negra.
 summary(listResultPEF[[id]]$nnModel)
 ```
 
-#### Eficiencia de los modelos en el entrenamiento
+### Eficiencia de los modelos en el entrenamiento
 
 ```{r}
 renderTableBasic( listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) )
@@ -86,7 +72,7 @@ renderTableBasic( listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) )
 
 Posteriormente los modelos presentados en la anterior sección son entrenados sujetas a sus respectivas  especificaciones.
 
-#### Eficiencia de los modelos en los pronosticos
+### Eficiencia de los modelos en los pronosticos
 
 ```{r}
 renderTableBasic( listResumeModels$r2ForecastResum %>% filter(CUENTAS==id) )

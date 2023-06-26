@@ -37,9 +37,9 @@ if (!('listResultPEF' %in% ls())) {
                                  nnCamelTest,
                                  mcoCamelTest,
                                  arimaCamelTest)
+    
+    id <- 'EERR_S2_RESULTADO_NETO_DE_LA_GESTION'
 }
-
-id <- 'EERR_S2_RESULTADO_NETO_DE_LA_GESTION'
 
 ```
 

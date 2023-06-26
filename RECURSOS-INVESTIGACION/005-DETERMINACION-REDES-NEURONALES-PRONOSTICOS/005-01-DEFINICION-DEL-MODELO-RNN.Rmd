@@ -37,19 +37,35 @@ if (!('listResultPEF' %in% ls())) {
                                  nnCamelTest,
                                  mcoCamelTest,
                                  arimaCamelTest)
+    
+    id <- 'EERR_S2_RESULTADO_NETO_DE_LA_GESTION'
 }
-
-id <- 'EERR_S2_RESULTADO_NETO_DE_LA_GESTION'
 
 ```
 
 ## Presiciones de modelos utilizados
 
-### Modelo utilizados
+Los datos están definidos por series de tiempo cada serie de tiempo `r nrow(datTotalSistema)` donde cada serie de tiempo representa cuentas de los estados financieros, las cuales agrupan a todas las entidades del sistema financiero de Bolivia, presentadas en el capitulo anterior.
 
-- Redes neuronales
-- MCO 
-- Arima
+### Precisiones de las series de tiempo
+
+Los datos se dividen en dos secciones:
+
+- Datos de entrenamiento
+- Datos para realizar pruebas
+
+```{r}
+autoplot(listResultPEF[[id]]$tsDatTrain,series = 'dat train') +
+    autolayer(listResultPEF[[id]]$tsDatTest,series = 'dat test')
+```
+
+### Modelos 
+
+Los modelo utilizados para las proyecciones son los siguientes:
+
+- Redes neuronales artificiales (RNA)
+- Minimos cuadrados ordinarios (MCO) 
+- ARIMA
 
 #### Arquitectura de redes neuronales
 
