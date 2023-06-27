@@ -67,8 +67,54 @@ getListFittedAndSimulateModels <- function(dat=NULL, ids=NULL) {
     return(listResult)
 }
 
+#############################################################
+# Sin simulaciones
+#############################################################
 
-
-
+getListFittedAndSimulateModelsRNN <- function(dat=NULL, ids=NULL) {
+    
+    source('RECURSOS-INVESTIGACION/R/pef-fitted-ts-models.R')
+    source('RECURSOS-INVESTIGACION/R/get-dat-basic-normalizada.R')
+    source('RECURSOS-INVESTIGACION/R/camel-plot-functions.R')
+    source('RECURSOS-INVESTIGACION/R/get-ts-from-dat.R')
+    
+    library(fpp2)
+    library(dplyr)
+    library(lubridate)
+    library(ggplot2)
+    library(patchwork)
+    
+    if (is.null(dat)) {
+        dat <- getDatEEFFNormalizada(by = 'TOTAL_SISTEMA')
+    }
+    
+    if (is.null(ids)) {
+        ids <- c('ACTIVO')
+    }
+    
+    
+    gestionFn <- max(dat$FECHA) - years(1) + 4
+    datTrain <- dat %>% filter(FECHA<gestionFn)
+    datTest <- dat %>% filter(FECHA>gestionFn)
+    
+    listResult <- list()
+    
+    for (id in ids) {
+        
+        tsDatTrain <- getTsFromDat2(id,datTrain)
+        tsDatTest <- getTsFromDat2(id,datTest)
+        
+        nnModel <- nnetar(tsDatTrain)
+        
+        listResult[[id]] <- list(nameAccount=id,
+                                 tsDatTrain=tsDatTrain,
+                                 tsDatTest=tsDatTest,
+                                 nnModel=nnModel)
+    }
+    
+    print('Next ListFittedAndSimulateModelsRNN...')
+    
+    return(listResult)
+}
 
 

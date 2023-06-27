@@ -39,6 +39,8 @@ if (!('listResultPEF' %in% ls())) {
                                  arimaCamelTest)
     
     id <- 'EERR_S2_RESULTADO_NETO_DE_LA_GESTION'
+    
+    trendCamelRNN <- readRDS(file ='FUENTES-DE-DATOS/DATA/trendCamelRNN.rds')
 }
 
 ```
