@@ -26,7 +26,7 @@ datGroupBySector <- getDatEEFFByGroup(datBasic,by = 'TIPO_DE_ENTIDAD' )
 
 ## Precisiones del diagnostico financiero presentado
 
-En la presente sección se presentaran las características a la cuales están sujetas el diagnostico presentado en este capítulo.
+En la presente sección se hacen manifiesto las precisiones de las características a las cuales están sujetas el diagnostico presentado en este capítulo.
 
 ### Entidades financieras comprendidas por el diagnostico
 

@@ -5,10 +5,11 @@ output: pdf_document
 
 ## Ponderación de elementos CAMEL
 
+La ponderación de los elementos CAMEL son asignados de manera arbitraria.
 
-$$CAMEL = \text{30\%C + 25\%A + 10\%M + 15\%E + 20\%L}$$
+$$CAMEL = \text{30\%C + 30\%A + 10\%M + 15\%E + 15\%L}$$
 
-Se le da mayor ponderación a los indicadores de capital ya que en ultimo termino es con el patrimonio que una institución financiera puede hacer frente a sus obligaciones, seguido por lo activos.
+Se le da mayor ponderación a los indicadores de capital y activos ya que en ultimo termino es con estos mismos con la una institución financiera puede hacer frente a sus obligaciones con terceros.
 
 Así también los indicadores de liquidez reciben mayor peso que los indicadores de administración y beneficios ya que estos nos permiten ver si el sector puede hacer frente a sus obligaciones con terceros en el menor tiempo tiempo posible.
 

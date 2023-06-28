@@ -8,7 +8,7 @@ output:
         number_sections: true
 geometry: "left=3cm,right=2cm,top=2cm,bottom=2cm"
 fontsize: 12pt
-bibliography: assets/csl-bib-sty/references.bib 
+bibliography: assets/csl-bib-sty/references_01.bib
 csl: assets/csl-bib-sty/apa.csl
 nocite: '@*'
 ---
