@@ -32,8 +32,8 @@ getListFittedAndSimulateModels <- function(dat=NULL, ids=NULL) {
         tsDatTrain <- getTsFromDat2(id,datTrain)
         tsDatTest <- getTsFromDat2(id,datTest)
         
-        mcoModel <- tslm(tsDatTrain~trend+season)
         nnModel <- nnetar(tsDatTrain)
+        mcoModel <- tslm(tsDatTrain~trend+season)
         arimaModel <- auto.arima(tsDatTrain)
         
         # Ajuste de modelos

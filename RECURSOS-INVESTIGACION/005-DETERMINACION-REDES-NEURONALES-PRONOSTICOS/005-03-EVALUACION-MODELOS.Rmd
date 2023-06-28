@@ -65,12 +65,12 @@ renderTableBasic(listResumeModels$r2ModelsResumMean,
 
 ```{r}
 renderTableBasic(listResumeModels$r2ForecastResum, 
-                 captionTable = 'Ajuste R2 de proyeciones por cuenta',
+                 captionTable = 'Ajuste R2 de proyecciones por cuenta',
                  fontSize = 6)
 ```
 
 ```{r}
 renderTableBasic(listResumeModels$r2ForecastResumMean,
-                 captionTable = 'Ajuste R2 de proyeciones por modelo',
+                 captionTable = 'Ajuste R2 de proyecciones por modelo',
                  fontSize = 6)
 ```

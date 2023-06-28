@@ -14,6 +14,7 @@ source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
 require(kableExtra)
 require(patchwork)
 require(ggplot2)
+require(scales)
 require(dplyr)
 require(fpp2)
 
@@ -45,25 +46,40 @@ if (!('listResultPEF' %in% ls())) {
 
 ```
 
-## Presiciones de modelos utilizados
+## Presiciones de los pronosticos de estados financieros
 
-Los datos están definidos por series de tiempo cada serie de tiempo `r nrow(datTotalSistema)` donde cada serie de tiempo representa cuentas de los estados financieros, las cuales agrupan a todas las entidades del sistema financiero de Bolivia, presentadas en el capitulo anterior.
+Los pronósticos realizados en el presente capítulo estarán sujetos a las especificaciones dadas a continuación.
 
-### Precisiones de las series de tiempo
+### Series de tiempo
 
-Los datos se dividen en dos secciones:
+Los datos ha ser modelados están definidos por series de tiempo (cada serie de tiempo representa una cuenta de los estados financieros) de `r nrow(datTotalSistema)` observaciones cada una, las cuales agrupan a todas las entidades del sistema financiero de Bolivia, presentadas en el capitulo anterior.
 
-- Datos de entrenamiento
-- Datos para realizar pruebas
+Así también los datos se dividen en dos grupos:
 
-```{r}
-autoplot(listResultPEF[[id]]$tsDatTrain,series = 'dat train') +
-    autolayer(listResultPEF[[id]]$tsDatTest,series = 'dat test')
+- Datos de entrenamiento.
+- Datos para realizar pruebas.
+
+Donde los datos de entrenamiento serán utilizados para entrenar los modelos y los datos de pruebas para contrastar el ajuste de los pronósticos de los modelos respecto a la misma.
+
+```{r, fig.height = 10, fig.width = 20, fig.cap='Agrupamiento de los datos de las series de tiempo.'}
+autoplot(listResultPEF[[id]]$tsDatTrain,series = 'Datos de entrenamiento') +
+    autolayer(listResultPEF[[id]]$tsDatTest,series = 'Datos para realizar pruebas') +
+    ylab('RESULTADO NETO DE LA GESTION') +
+    xlab('TIEMPO') +
+    guides(color=guide_legend(ncol=2, title="")) +
+    theme(legend.position="bottom",
+          legend.text = element_text(size=24),
+          legend.key.size = unit(2, 'cm'),
+          axis.title.x=element_text(size=24), 
+          axis.title.y = element_text(size=30),
+          axis.text.y=element_text(size=24),
+          axis.text.x = element_text(size=24))
+    
 ```
 
 ### Modelos 
 
-Los modelo utilizados para las proyecciones son los siguientes:
+Los modelo empleados para las proyecciones son los siguientes:
 
 - Redes neuronales artificiales (RNA)
 - Minimos cuadrados ordinarios (MCO) 
@@ -73,8 +89,9 @@ Los modelo utilizados para las proyecciones son los siguientes:
 
 #### Arquitectura de MCO
 
-#### Arquitectura ARIMA
+$$ \text{Serie De Tiempo} = \text{ Tendencia + Estacionalidad} $$
 
+#### Arquitectura ARIMA
 
 ### Evaluación de modelos
 

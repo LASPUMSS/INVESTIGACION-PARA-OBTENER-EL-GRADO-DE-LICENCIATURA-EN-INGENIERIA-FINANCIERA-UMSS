@@ -69,7 +69,8 @@ summary(listResultPEF[[id]]$nnModel)
 ### Eficiencia de los modelos en el entrenamiento
 
 ```{r}
-renderTableBasic( listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) )
+renderTableBasic( listResumeModels$r2ModelsResum %>% filter(CUENTAS==id), 
+                  captionTable = 'Ajuste R2 de modelos para resultado neto de la gestion')
 ```
 
 Posteriormente los modelos presentados en la anterior sección son entrenados sujetas a sus respectivas  especificaciones.
@@ -77,7 +78,8 @@ Posteriormente los modelos presentados en la anterior sección son entrenados su
 ### Eficiencia de los modelos en los pronosticos
 
 ```{r}
-renderTableBasic( listResumeModels$r2ForecastResum %>% filter(CUENTAS==id) )
+renderTableBasic( listResumeModels$r2ForecastResum %>% filter(CUENTAS==id),
+                  captionTable = 'Ajuste R2 de proyecciones de modelos para resultado neto de la gestion')
 ```
 
 ### Simulacion de proyeciones

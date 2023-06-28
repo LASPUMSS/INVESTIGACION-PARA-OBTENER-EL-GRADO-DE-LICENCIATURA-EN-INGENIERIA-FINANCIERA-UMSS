@@ -2,7 +2,9 @@
 output: pdf_document
 ---
 
-# Conclusiones 
+# Conclusiones y recomendaciones
+
+## Conclusiones
 
 Con base al trabajo realizado se plantea las conclusiones en base a los objetivos específicos y hipótesis de la investigación, que son los siguientes:
 
@@ -27,4 +29,6 @@ Evaluación financiera sobre estados financieros proyectados-simulados
 
 Contraste de la hipótesis (donde la hipótesis quedo contrastada debido a que el ajuste del modelo de redes neuronales muestra mayor r2 en las proyecciones)
 
+
+## Recomendaciones
 
