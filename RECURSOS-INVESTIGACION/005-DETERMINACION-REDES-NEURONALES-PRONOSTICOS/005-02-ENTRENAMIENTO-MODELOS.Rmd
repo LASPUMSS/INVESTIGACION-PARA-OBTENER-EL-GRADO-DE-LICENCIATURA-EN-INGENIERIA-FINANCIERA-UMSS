@@ -50,21 +50,34 @@ if (!('listResultPEF' %in% ls())) {
 ### MCO
 
 ```{r, echo=TRUE}
-summary(listResultPEF[[id]]$mcoModel)
+coef(listResultPEF[[id]]$mcoModel)
 ```
+
+
 
 ### ARIMA
 
 ```{r, echo=TRUE}
-summary(listResultPEF[[id]]$arimaModel)
+coef(listResultPEF[[id]]$arimaModel)
 ```
+
+
 ### NN
 
-Presentar la NN como caja negra.
+```{r}
+library(devtools)
+source_url('https://gist.githubusercontent.com/fawda123/7471137/raw/466c1474d0a505ff044412703516c34f1a4684a5/nnet_plot_update.r')
+
+wts.in<-listResultPEF[[id]]$nnModel$model[[1]]$wts
+struct<-listResultPEF[[id]]$nnModel$model[[1]]$n
+plot.nnet(wts.in,struct=struct)
+```
+
 
 ```{r, echo=TRUE}
-summary(listResultPEF[[id]]$nnModel)
+wts.in
 ```
+
 
 ### Eficiencia de los modelos en el entrenamiento
 
