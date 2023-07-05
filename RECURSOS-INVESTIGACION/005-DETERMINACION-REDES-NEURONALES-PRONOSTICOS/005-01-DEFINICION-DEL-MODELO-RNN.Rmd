@@ -90,13 +90,31 @@ Los modelo empleados para las proyecciones son los siguientes:
 #### Arquitectura de MCO
 
 $$ \text{Serie De Tiempo} = \text{ Tendencia + Estacionalidad} $$
+Es decir:
+
+$$ Y_{t+1} = \beta_{0} + \beta_{1}{T_{t+1}} + \beta_{2}{S_{1}} + \beta_{3}{S_{2}} + \beta_{4}{S_{3}} + \beta_{5}{S_{4}} + \beta_{6}{S_{5}} + \beta_{7}{S_{6}} + \beta_{8}{S_{7}} + \beta_{9}{S_{8}} + \beta_{10}{S_{9}} + \beta_{11}{S_{10}} + \beta_{12}{S_{11}} + \beta_{13}{S_{12}}  $$
+
+Donde:
+
+- $Y_{t+1} =$ Representa el precio futuro.
+- $T =$ Representa el tiempo.
+- $S_{i} =$ Representa la estacionalidad de serie dividiéndola en 12 por los meses contenidos en un año.
+- $\beta_{i} =$ Representa la tasa de cambio, es decir, el efecto de la variable sobre el precio futuro.
+
 
 #### Arquitectura ARIMA
 
 ### Evaluación de modelos
 
-- R2 sobre datos ajustados
-- R2 sobre datos proyectados
+$$ R2 = \left ( \frac{ \sum{[(x_{i}-\bar{x})-(y_{i}-\bar{y})]} } { \sqrt{ \sum{(x_{i}-\bar{x})^{2}} * \sum{(y_{i}-\bar{y})^{2}} } }  \right )^{2} $$
+
+#### R2 sobre datos ajustados
+
+Representa el ajuste entre los datos observados y los datos ajustados por el modelo.
+
+#### R2 sobre datos proyectados
+
+Representa el ajuste entre los datos observados y los datos proyectados por el modelo.
 
 ### Variables comprendidas
 

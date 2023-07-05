@@ -48,11 +48,15 @@ if (!('listResultPEF' %in% ls())) {
 
 ## Evaluación de datos ajustados de modelos
 
+En esta sección se calcula el nivel de ajuste de los modelos para las distintas series de tiempo observadas.
+
 ```{r}
 renderTableBasic(listResumeModels$r2ModelsResum, 
                  captionTable = 'Ajuste R2 por cuenta',
                  fontSize = 6)
 ```
+
+Donde el ajuste promedio por modelo se tiene los siguiente:
 
 ```{r}
 renderTableBasic(listResumeModels$r2ModelsResumMean, 
@@ -63,11 +67,15 @@ renderTableBasic(listResumeModels$r2ModelsResumMean,
 
 ## Evaluación de datos proyectados de modelos
 
+En esta sección se calcula el nivel de ajuste de las proyecciones de los modelos para las distintas series de tiempo observadas.
+
 ```{r}
 renderTableBasic(listResumeModels$r2ForecastResum, 
                  captionTable = 'Ajuste R2 de proyecciones por cuenta',
                  fontSize = 6)
 ```
+
+Donde el ajuste promedio de las proyecciones por modelo se tiene los siguiente:
 
 ```{r}
 renderTableBasic(listResumeModels$r2ForecastResumMean,
