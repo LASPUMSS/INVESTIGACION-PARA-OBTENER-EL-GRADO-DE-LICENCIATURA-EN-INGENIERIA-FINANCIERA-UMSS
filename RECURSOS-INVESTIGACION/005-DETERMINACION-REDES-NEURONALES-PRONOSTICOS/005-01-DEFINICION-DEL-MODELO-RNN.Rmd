@@ -90,6 +90,10 @@ Los modelo empleados para las proyecciones son los siguientes:
 
 <!-- https://github.com/cran/forecast/blob/master/R/nnetar.R -->
 
+
+$$z_j = b_j + \sum_{i=1}^4 w_{i,j} x_i$$
+$$s(z) = \frac{1}{1+e^{-z}}$$
+
 #### Arquitectura de MCO
 
 <!-- https://github.com/cran/forecast/blob/master/R/lm.R -->
@@ -111,7 +115,7 @@ Donde:
 
 <!-- https://github.com/cran/forecast/blob/878f06ca38ae78337c242c034bc814eb38df9be9/R/newarima2.R -->
 
-
+Los modelos ARIMA (AutoRegressive Integrated Moving Average) es el resultado de la combinación de dos modelos que son los modelos auto regresivos y modelos de media móvil.
 
 
 ### Evaluación de modelos
@@ -127,6 +131,8 @@ Representa el ajuste entre los datos observados y los datos ajustados por el mod
 Representa el ajuste entre los datos observados y los datos proyectados por el modelo.
 
 ### Variables comprendidas
+
+La variables comprendidas para los pronósticos son las mismas definidas en el capitulo anterior, incluyendo los siguientes:
 
 - Activo
 - Pasivo
