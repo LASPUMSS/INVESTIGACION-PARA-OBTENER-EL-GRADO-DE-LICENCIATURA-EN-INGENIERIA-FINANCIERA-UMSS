@@ -41,6 +41,7 @@ if (!('listResultPEF' %in% ls())) {
     id <- 'EERR_S2_RESULTADO_NETO_DE_LA_GESTION'
     
     trendCamelRNN <- readRDS(file ='FUENTES-DE-DATOS/DATA/trendCamelRNN.rds')
+    sdCamelRNN <- readRDS(file ='FUENTES-DE-DATOS/DATA/sdCamelRNN.rds')
 }
 
 ```

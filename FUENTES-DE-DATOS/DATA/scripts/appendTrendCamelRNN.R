@@ -10,19 +10,30 @@ createTrendsCamelRnnModels <- function(n=2) {
     
     require(dplyr)
     
-    
     datTotalSistema <- getDatEEFFNormalizada(by = 'TOTAL_SISTEMA')
     ids <- getVariablesForModelsForecast()
     
-    trendCamelRnnNew <-  
+    listResult <- 
         replicate(n = n, 
-                  getListFittedAndSimulateModelsRNN(datTotalSistema,ids), 
-                  simplify=FALSE) %>% 
+              getListFittedAndSimulateModelsRNN(datTotalSistema,ids), 
+              simplify=FALSE) %>% 
         sapply(function(x){
-            print('Next trendCamelRNN...')
+            print('Next trendsCamelRNN...')
             listDatsForTestCamels <- getDatsForTestCamels(x,datTotalSistema,12,TRUE)
-            getCamelTestForecast(listDatsForTestCamels$nnDataForecastCuentas)$TENDENCIA
-        })
+            result <- getCamelTestForecast(listDatsForTestCamels$nnDataForecastCuentas)
+            trendCamelRnnNew <- result$TENDENCIA
+            sdCamelRnnNew <- result$DESVIACION
+            
+            return(list(trendCamelRnnNew=trendCamelRnnNew,
+                        sdCamelRnnNew=sdCamelRnnNew))
+            
+        }) %>% 
+        t() %>% 
+        as.data.frame()
+    
+    trendCamelRnnNew <- listResult$trendCamelRnnNew %>% as.numeric()
+    sdCamelRnnNew <- listResult$sdCamelRnnNew %>% as.numeric()
+    
     
     if (file.exists("FUENTES-DE-DATOS/DATA/trendCamelRNN.rds")) {
         trendCamelRNN <- readRDS(file ='FUENTES-DE-DATOS/DATA/trendCamelRNN.rds')
@@ -31,6 +42,15 @@ createTrendsCamelRnnModels <- function(n=2) {
     }else{
         trendCamelRNN <- trendCamelRnnNew
         saveRDS(trendCamelRNN, 'FUENTES-DE-DATOS/DATA/trendCamelRNN.rds')
+    }
+    
+    if (file.exists("FUENTES-DE-DATOS/DATA/sdCamelRNN.rds")) {
+        sdCamelRNN <- readRDS(file ='FUENTES-DE-DATOS/DATA/sdCamelRNN.rds')
+        sdCamelRNN <- append(sdCamelRNN, sdCamelRnnNew)
+        saveRDS(sdCamelRNN, 'FUENTES-DE-DATOS/DATA/sdCamelRNN.rds')
+    }else{
+        sdCamelRNN<- sdCamelRnnNew
+        saveRDS(sdCamelRNN, 'FUENTES-DE-DATOS/DATA/sdCamelRNN.rds')
     }
     
 }

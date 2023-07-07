@@ -42,6 +42,7 @@ if (!('listResultPEF' %in% ls())) {
     id <- 'EERR_S2_RESULTADO_NETO_DE_LA_GESTION'
     
     trendCamelRNN <- readRDS(file ='FUENTES-DE-DATOS/DATA/trendCamelRNN.rds')
+    sdCamelRNN <- readRDS(file ='FUENTES-DE-DATOS/DATA/sdCamelRNN.rds')
 }
 
 ```
@@ -87,7 +88,11 @@ Los modelo empleados para las proyecciones son los siguientes:
 
 #### Arquitectura de redes neuronales
 
+<!-- https://github.com/cran/forecast/blob/master/R/nnetar.R -->
+
 #### Arquitectura de MCO
+
+<!-- https://github.com/cran/forecast/blob/master/R/lm.R -->
 
 $$ \text{Serie De Tiempo} = \text{ Tendencia + Estacionalidad} $$
 Es decir:
@@ -103,6 +108,11 @@ Donde:
 
 
 #### Arquitectura ARIMA
+
+<!-- https://github.com/cran/forecast/blob/878f06ca38ae78337c242c034bc814eb38df9be9/R/newarima2.R -->
+
+
+
 
 ### Evaluación de modelos
 

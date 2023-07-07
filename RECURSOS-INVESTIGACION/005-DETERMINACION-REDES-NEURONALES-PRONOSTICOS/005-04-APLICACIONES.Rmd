@@ -41,6 +41,7 @@ if (!('listResultPEF' %in% ls())) {
     id <- 'EERR_S2_RESULTADO_NETO_DE_LA_GESTION'
     
     trendCamelRNN <- readRDS(file ='FUENTES-DE-DATOS/DATA/trendCamelRNN.rds')
+    sdCamelRNN <- readRDS(file ='FUENTES-DE-DATOS/DATA/sdCamelRNN.rds')
 }
 
 ```
@@ -63,14 +64,20 @@ renderTableBasic(camelTestModels,
 Hacer notar que debido a la naturaleza de la arquitectura de las redes neuronales cuando estos se re-entrenan no darán los mismos pronósticos, ya que el primer paso de entrenamiento los pesos asignados en las diferentes neuronas son aleatorios, dada esta situación se realizo `r length(trendCamelRNN)` con sus respectivos pronósticos y sobre los cuales se aplico la metodología CAMEL dando lugar a las siguientes tendencias:
 
 ```{r, fig.height = 10, fig.width = 20, fig.cap='Historgrama de diferentes redes neuronales entrenadas.'}
-z <- data.frame(trendCamelRNN=trendCamelRNN)
-p <- 
-    z %>% 
+
+p1 <- 
+    data.frame(trendCamelRNN=trendCamelRNN) %>% 
     ggplot(aes(x=trendCamelRNN)) + 
     geom_histogram()
-p
+
+p2 <- 
+    data.frame(sdCamelRNN=sdCamelRNN) %>% 
+    ggplot(aes(x=sdCamelRNN)) + 
+    geom_histogram()
+
+p1+p2
 ```
 
 
-Donde se observa que la tendencia promedio en la calificación CAMEL de los pronósticos realizados por las distintas redes neuronales es de `r mean(trendCamelRNN)`, lo que en consiguiente nos permite afirmar que las redes neuronales pueden encontrar patrones no sujetos al análisis subjetivo en las series de tiempo lo que da lugar a mejores pronósticos de los mismos.
+Donde se observa que la tendencia promedio en la calificación CAMEL de los pronósticos realizados por las distintas redes neuronales es de `r mean(trendCamelRNN)`, `r mean(sdCamelRNN)` lo que en consiguiente nos permite afirmar que las redes neuronales pueden encontrar patrones no sujetos al análisis subjetivo en las series de tiempo lo que da lugar a mejores pronósticos de los mismos.
 
