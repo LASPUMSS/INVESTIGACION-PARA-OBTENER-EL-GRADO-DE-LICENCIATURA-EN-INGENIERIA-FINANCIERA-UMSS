@@ -82,9 +82,9 @@ autoplot(listResultPEF[[id]]$tsDatTrain,series = 'Datos de entrenamiento') +
 
 Los modelo empleados para las proyecciones son los siguientes:
 
-- Redes neuronales artificiales (RNA)
-- Minimos cuadrados ordinarios (MCO) 
+- Modelo clasico de series de tiempo
 - ARIMA
+- Redes neuronales artificiales (RNA)
 
 #### Arquitectura de redes neuronales
 
@@ -116,6 +116,10 @@ Donde:
 <!-- https://github.com/cran/forecast/blob/878f06ca38ae78337c242c034bc814eb38df9be9/R/newarima2.R -->
 
 Los modelos ARIMA (AutoRegressive Integrated Moving Average) es el resultado de la combinación de dos modelos que son los modelos auto regresivos y modelos de media móvil.
+
+$$y_{t} = c + \phi_{1}y_{t-1} + \phi_{2}y_{t-2} + \dots + \phi_{p}y_{t-p} + \varepsilon_{t}$$
+
+$$y_{t} = c + \varepsilon_t + \theta_{1}\varepsilon_{t-1} + \theta_{2}\varepsilon_{t-2} + \dots + \theta_{q}\varepsilon_{t-q}$$
 
 
 ### Evaluación de modelos
