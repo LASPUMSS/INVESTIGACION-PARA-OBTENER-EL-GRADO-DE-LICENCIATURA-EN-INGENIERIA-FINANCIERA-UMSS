@@ -8,6 +8,8 @@ Los antecedentes presentados a continuación cubren dos segmentos el campo de la
 
 <!-- ANTECEDENTES FINANZAS -->
 
+## Finanzas
+
 La finanzas como ciencia es el resultado de la contribución de varios individuos en diferentes puntos de tiempo y también como consecuencia de otras ciencias sociales, siendo la ciencias contables y administrativas las bases de la misma, las ciencias contable dotando la materia prima y las administrativas los métodos, con este contexto presentamos los antecedentes financieros generales:
 
 En 1494 en Venecia el Fray Luca Pacioli en su obra "Summa" presento un análisis sistemático del método contable dando lugar principio de doble partida.
@@ -15,6 +17,8 @@ En 1494 en Venecia el Fray Luca Pacioli en su obra "Summa" presento un análisis
 Así también en 1973 de la mano de la IASC (Internacional Accounting Standards Committee) emite las normas internacionales de contabilidad (NIC), la institución mantuvo su nombre hasta el año 2001 y fue cambiado por IASB (International Accounting Standards Board), donde las normas internacionales de contabilidad se fueron ampliando y elaborando interpretaciones.
 
 <!-- ANTECEDENTES REDES NEURONALES -->
+
+## Redes neuronales
 
 Ahora por el lado del redes neuronales artificiales se nombran los siguientes antecedentes:
 
@@ -36,6 +40,8 @@ Uno de los aportes más recientes vino por parte de la Universidad de Toronto y 
 Ahora bien como antecedentes específicos Bolivia no es un país que lleve adelante de investigación o desarrollos significativos sobre inteligencia artificial como un dato relevante según el reporte Government AI Readiness Index 2020 (Oxford Insights), Bolivia ocupa el puesto 122 de 172 países, y el 22 de 32 en la región de Latinoamérica y el Caribe.
 
 <!-- CONVERGENCIA FINANZAS - REDES NEURONALES -->
+
+## Convergencia de finanzas y redes neuronales
 
 Concluyendo la sección el punto temporal la que se hace manifiesto que convergen el campo de las ciencias sociales y los modelos matemáticos-estadísticos fue traído de la mano de Francis Galton en 1886, quien acuño el términos de regresión en su articulo "Semejanza familiar en estatura", la hipótesis propuesta en este articulo fue contrastada por Karl Pearson dando lugar a la ley de regresión universal, desde este punto hasta la actualidad los métodos de regresión han evolucionado llegando a los métodos mas actuales y complejos como son las redes neuronales artificiales.
 

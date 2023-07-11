@@ -48,6 +48,8 @@ if (!('listResultPEF' %in% ls())) {
 
 ## Aplicación de metodologia CAMEL sobre datos proyectados
 
+Para empezar los pesos en las neuronas que dotan de la capacidad de aprendizaje a la red inicialmente toman valores aleatorios
+
 Como tercer método de evaluación de los modelos se realiza una valuación CAMEL sobre los datos proyectados dando lugar los siguientes resultados:
 
 ```{r}

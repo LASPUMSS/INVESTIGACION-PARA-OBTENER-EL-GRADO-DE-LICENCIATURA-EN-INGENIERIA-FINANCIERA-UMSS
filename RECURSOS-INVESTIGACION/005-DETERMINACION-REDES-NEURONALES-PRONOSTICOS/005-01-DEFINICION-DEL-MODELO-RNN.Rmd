@@ -82,7 +82,7 @@ autoplot(listResultPEF[[id]]$tsDatTrain,series = 'Datos de entrenamiento') +
 
 Los modelo empleados para las proyecciones son los siguientes:
 
-- Modelo clasico de series de tiempo
+- Modelo clásico de series de tiempo
 - ARIMA
 - Redes neuronales artificiales (RNA)
 
@@ -90,9 +90,15 @@ Los modelo empleados para las proyecciones son los siguientes:
 
 <!-- https://github.com/cran/forecast/blob/master/R/nnetar.R -->
 
+La arquitectura de una rede neuronal hace referencia al numero de capas, neuronas y funciones de activación que se aplicaran, estas mismas pueden ser asignadas de forma arbitraria donde el uso de muchas capas y neuronas causaran un sobre ajuste del modelo, y usar muy pocas hará que el modelo no pueda generalizar la información contenida en las series de tiempo.
 
-$$z_j = b_j + \sum_{i=1}^4 w_{i,j} x_i$$
-$$s(z) = \frac{1}{1+e^{-z}}$$
+Las redes neuronales que se emplearan en la presente investigación estarán sujetos a las siguientes lineamientos que determinan su arquitectura:
+
+- Las series de tiempo son consideradas no estacionales.
+- El numero de neuronas de entrada esta definido por el criterio de información de Akaike.
+- El numero de capas ocultas serán igual a 1, con el mismo numero de neuronas que la capa de entrada.
+- La función de activación de aplicar sera la función sigmoide.
+
 
 #### Arquitectura de MCO
 
@@ -110,6 +116,8 @@ Donde:
 - $S_{i} =$ Representa la estacionalidad de serie dividiéndola en 12 por los meses contenidos en un año.
 - $\beta_{i} =$ Representa la tasa de cambio, es decir, el efecto de la variable sobre el precio futuro.
 
+En consecuencia el metodo a usar para ajustar los pesos en $\beta_{i}$ sera el de minimos cuadrados ordinarios (MCO).
+
 
 #### Arquitectura ARIMA
 
@@ -117,22 +125,36 @@ Donde:
 
 Los modelos ARIMA (AutoRegressive Integrated Moving Average) es el resultado de la combinación de dos modelos que son los modelos auto regresivos y modelos de media móvil.
 
+Los modelos auto regresivos están definidos por:
+
 $$y_{t} = c + \phi_{1}y_{t-1} + \phi_{2}y_{t-2} + \dots + \phi_{p}y_{t-p} + \varepsilon_{t}$$
+
+Y los modelos de promedios móviles están definidos por:
 
 $$y_{t} = c + \varepsilon_t + \theta_{1}\varepsilon_{t-1} + \theta_{2}\varepsilon_{t-2} + \dots + \theta_{q}\varepsilon_{t-q}$$
 
+Donde la integración de ambos modelos dan lugar al modelo ARIMA, que se puede definir como:
+
+$$ y'_{t} = c + \phi_{1}y'_{t-1} + \cdots + \phi_{p}y'_{t-p} + \theta_{1}\varepsilon_{t-1} + \cdots + \theta_{q}\varepsilon_{t-q} + \varepsilon_{t} $$
 
 ### Evaluación de modelos
 
+Para poder evaluar la eficacia de los modelos se hara uso del ajuste de las predicciones que haga dicho modelo.
+
 $$ R2 = \left ( \frac{ \sum{[(x_{i}-\bar{x})-(y_{i}-\bar{y})]} } { \sqrt{ \sum{(x_{i}-\bar{x})^{2}} * \sum{(y_{i}-\bar{y})^{2}} } }  \right )^{2} $$
 
-#### R2 sobre datos ajustados
+#### R2 sobre datos de entrenamiento
 
 Representa el ajuste entre los datos observados y los datos ajustados por el modelo.
 
-#### R2 sobre datos proyectados
+#### R2 sobre datos de prueba
 
 Representa el ajuste entre los datos observados y los datos proyectados por el modelo.
+
+#### Aplicación de metodologia CAMEL sobre datos proyectados
+
+Como en ultimo método de evaluación se utilizara la metodología CAMEL sobre datos proyectados por los modelos y los datos efectivamente observados que son los datos de prueba, para asi poder cuestionar si estas proyecciones siguen la misma tendencia que los datos observados.
+
 
 ### Variables comprendidas
 
@@ -142,6 +164,4 @@ La variables comprendidas para los pronósticos son las mismas definidas en el c
 - Pasivo
 - Patrimonio
 - Ingresos
-
-
 
