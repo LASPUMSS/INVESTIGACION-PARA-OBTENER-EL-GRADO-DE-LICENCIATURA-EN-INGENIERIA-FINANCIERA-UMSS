@@ -48,9 +48,10 @@ if (!('listResultPEF' %in% ls())) {
 
 ## Aplicación de metodologia CAMEL sobre datos proyectados
 
-Para empezar los pesos en las neuronas que dotan de la capacidad de aprendizaje a la red inicialmente toman valores aleatorios
+<!--pero evaluar la eficacia de una proyección va mas lejos que solo el ajuste -->
 
-Como tercer método de evaluación de los modelos se realiza una valuación CAMEL sobre los datos proyectados dando lugar los siguientes resultados:
+Como tercer método de evaluación de los modelos se realiza una valuación CAMEL sobre las series de tiempo proyectadas, donde el presente método de evaluación se justifica ya que el fin ultimo de cualquier pronostico o proyección de un modelo es revelar al analista una situación futura, entonces al aplicar la metodología CAMEL a las proyecciones realizadas por los modelos permitirá confirmar o negar si estos siguen la tendencia general de los series de tiempo efectivamente observadas.
+
 
 ```{r}
 
@@ -63,23 +64,41 @@ renderTableBasic(camelTestModels,
                         'ARIMA'))
 ```
 
-Hacer notar que debido a la naturaleza de la arquitectura de las redes neuronales cuando estos se re-entrenan no darán los mismos pronósticos, ya que el primer paso de entrenamiento los pesos asignados en las diferentes neuronas son aleatorios, dada esta situación se realizo `r length(trendCamelRNN)` con sus respectivos pronósticos y sobre los cuales se aplico la metodología CAMEL dando lugar a las siguientes tendencias:
+Hacer notar que debido a la naturaleza de la arquitectura y funcionamiento de las redes neuronales en el paso inicial los pesos en las neuronas que dotan de la capacidad de aprendizaje a la red toman valores aleatorios lo que en consecuencia cuando estos se re-entrenan no darán los mismos pronósticos, dada esta situación se realizo `r length(trendCamelRNN)` entrenamientos para cada serie de tiempo con sus respectivos pronósticos y sobre los cuales se aplico la metodología CAMEL dando lugar a las siguientes tendencias:
 
 ```{r, fig.height = 10, fig.width = 20, fig.cap='Historgrama de diferentes redes neuronales entrenadas.'}
 
 p1 <- 
     data.frame(trendCamelRNN=trendCamelRNN) %>% 
     ggplot(aes(x=trendCamelRNN)) + 
-    geom_histogram()
+    geom_histogram() + 
+    xlab('Tendencia') + 
+    ylab('') +
+    theme(
+        axis.title.x=element_text(size=30),
+        axis.text.y=element_text(size=24),
+        axis.text.x=element_text(size=24))
 
 p2 <- 
     data.frame(sdCamelRNN=sdCamelRNN) %>% 
     ggplot(aes(x=sdCamelRNN)) + 
-    geom_histogram()
+    geom_histogram() + 
+    xlab('Desviación estandar') + 
+    ylab('')+
+    theme(
+        axis.title.x=element_text(size=30),
+        axis.text.y=element_text(size=24),
+        axis.text.x=element_text(size=24))
 
 p1+p2
 ```
 
 
-Donde se observa que la tendencia promedio en la calificación CAMEL de los pronósticos realizados por las distintas redes neuronales es de `r mean(trendCamelRNN)`, `r mean(sdCamelRNN)` lo que en consiguiente nos permite afirmar que las redes neuronales pueden encontrar patrones no sujetos al análisis subjetivo en las series de tiempo lo que da lugar a mejores pronósticos de los mismos.
+Donde se observa que la tendencia promedio en la calificación CAMEL de los pronósticos realizados por las distintas redes neuronales es de `r mean(trendCamelRNN)` y la desviación estándar de `r mean(sdCamelRNN)`, así mismos se observa que la tendencia de los datos de prueba y de las proyecciones de las redes neuronales van en un mismo sentido contradiciendo la tendencia de los otros modelos, dando lugar a las siguiente situaciones:
+
+- Los datos efectivamente observados y los pronósticos de las redes neuronales indica que la insolidez financiera del sistema financiero Boliviano aumentaría, lo cual podría dar a correcciones o modificaciones a políticas aplicadas.
+
+- En contra parte los otros dos modelos presumen que la solidez financiera iría en aumento lo cual se contradice con los datos efectivamente observados lo podría dar lugar a mantener políticas viciadas o mal ejecutadas.
+
+Teniendo en cuenta los antes expuesto podemos afirmar que las redes neuronales pueden encontrar patrones no sujetos al análisis subjetivo en las series de tiempo lo que da lugar a mejores pronósticos de los mismos respecto a los otros modelos.
 

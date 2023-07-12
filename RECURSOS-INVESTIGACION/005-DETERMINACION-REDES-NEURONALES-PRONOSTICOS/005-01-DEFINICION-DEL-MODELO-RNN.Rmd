@@ -53,14 +53,14 @@ Los pronósticos realizados en el presente capítulo estarán sujetos a las espe
 
 ### Series de tiempo
 
-Los datos ha ser modelados están definidos por series de tiempo (cada serie de tiempo representa una cuenta de los estados financieros) de `r nrow(datTotalSistema)` observaciones cada una, las cuales agrupan a todas las entidades del sistema financiero de Bolivia, presentadas en el capitulo anterior.
+Los datos ha ser modelados están definidos como series de tiempo (cada serie de tiempo representa una cuenta de los estados financieros) de `r nrow(datTotalSistema)` observaciones cada una, las cuales agrupan a todas las entidades del sistema financiero de Bolivia, presentadas en el capitulo anterior.
 
-Así también los datos se dividen en dos grupos:
+Así mismo los datos se dividen en dos grupos:
 
 - Datos de entrenamiento.
 - Datos para realizar pruebas.
 
-Donde los datos de entrenamiento serán utilizados para entrenar los modelos y los datos de pruebas para contrastar el ajuste de los pronósticos de los modelos respecto a la misma.
+Donde los datos de entrenamiento serán utilizados para adaptar los modelos y los datos de pruebas buscaran contrastar el ajuste de los pronósticos de los modelos respecto a la misma.
 
 ```{r, fig.height = 10, fig.width = 20, fig.cap='Agrupamiento de los datos de las series de tiempo.'}
 autoplot(listResultPEF[[id]]$tsDatTrain,series = 'Datos de entrenamiento') +
@@ -80,46 +80,52 @@ autoplot(listResultPEF[[id]]$tsDatTrain,series = 'Datos de entrenamiento') +
 
 ### Modelos 
 
-Los modelo empleados para las proyecciones son los siguientes:
+Los modelos empleados para realizar las proyecciones son los siguientes:
 
+- Redes neuronales artificiales (RNA)
 - Modelo clásico de series de tiempo
 - ARIMA
-- Redes neuronales artificiales (RNA)
 
-#### Arquitectura de redes neuronales
+Los cuales estarán sujetos a las arquitecturas o especificaciones que se mencionan a continuación.
+
+#### Redes neuronales
 
 <!-- https://github.com/cran/forecast/blob/master/R/nnetar.R -->
 
-La arquitectura de una rede neuronal hace referencia al numero de capas, neuronas y funciones de activación que se aplicaran, estas mismas pueden ser asignadas de forma arbitraria donde el uso de muchas capas y neuronas causaran un sobre ajuste del modelo, y usar muy pocas hará que el modelo no pueda generalizar la información contenida en las series de tiempo.
+La arquitectura de una rede neuronal hace referencia al numero de capas, neuronas y funciones de activación que se aplicaran, estas mismas pueden ser asignadas de forma arbitraria donde el uso de muchas capas y neuronas causaran un sobre ajuste del modelo, y usar muy pocas hará que el modelo no pueda generalizar la información contenida en las series de tiempo, en consecuencia las redes neuronales que se emplearan en la presente investigación estarán sujetos a las siguientes lineamientos que determinan su arquitectura:
 
-Las redes neuronales que se emplearan en la presente investigación estarán sujetos a las siguientes lineamientos que determinan su arquitectura:
-
-- Las series de tiempo son consideradas no estacionales.
 - El numero de neuronas de entrada esta definido por el criterio de información de Akaike.
 - El numero de capas ocultas serán igual a 1, con el mismo numero de neuronas que la capa de entrada.
 - La función de activación de aplicar sera la función sigmoide.
+- El algoritmo esta desarrollado en el lenguaje de programación R.
+
+Las especificaciones del algoritmo utilizado corresponde al paquete "forecast" del repositorio publico CRAN [@R-forecast].
 
 
-#### Arquitectura de MCO
+#### Modelo clásico de series de tiempo
 
 <!-- https://github.com/cran/forecast/blob/master/R/lm.R -->
 
-$$ \text{Serie De Tiempo} = \text{ Tendencia + Estacionalidad} $$
-Es decir:
+El modelo clásico de series de tiempo define a la misma en la suma de dos elementos:
 
-$$ Y_{t+1} = \beta_{0} + \beta_{1}{T_{t+1}} + \beta_{2}{S_{1}} + \beta_{3}{S_{2}} + \beta_{4}{S_{3}} + \beta_{5}{S_{4}} + \beta_{6}{S_{5}} + \beta_{7}{S_{6}} + \beta_{8}{S_{7}} + \beta_{9}{S_{8}} + \beta_{10}{S_{9}} + \beta_{11}{S_{10}} + \beta_{12}{S_{11}} + \beta_{13}{S_{12}}  $$
+$$ \text{Serie De Tiempo} = \text{ Tendencia + Estacionalidad} $$
+
+Entendiendo la tendencia como la tasa de cambio de la serie de tiempo respecto al tiempo y las estacionalidades como tasas de cambio correspondientes a variables dicótomas, es decir, solo pueden asumir valores de 0 o 1, donde el modelo presentado asume una estacionalidad de 12 periodos en consecuencia la ecuación antes mencionada toma la siguiente forma:
+
+$$Y_{t} = \beta_{0} + \beta_{1}{T_{t}} + \sum_{\substack{i=2\\j=2}}^{\substack{i=n\\ j=m}}{\beta_{i}{S_{j}}} $$
+
 
 Donde:
 
-- $Y_{t+1} =$ Representa el precio futuro.
+- $Y_{t} =$ Representa el valor de la serie en el momento t.
 - $T =$ Representa el tiempo.
 - $S_{i} =$ Representa la estacionalidad de serie dividiéndola en 12 por los meses contenidos en un año.
-- $\beta_{i} =$ Representa la tasa de cambio, es decir, el efecto de la variable sobre el precio futuro.
+- $\beta_{i} =$ Representa la tasa de cambio, es decir, el efecto de la variable sobre la serie de tiempo.
 
-En consecuencia el metodo a usar para ajustar los pesos en $\beta_{i}$ sera el de minimos cuadrados ordinarios (MCO).
+Así mismo, el método a usar para ajustar los pesos en $\beta_{i}$ sera el de mínimos cuadrados ordinarios (MCO).
 
 
-#### Arquitectura ARIMA
+#### Modelo ARIMA
 
 <!-- https://github.com/cran/forecast/blob/878f06ca38ae78337c242c034bc814eb38df9be9/R/newarima2.R -->
 
@@ -135,33 +141,56 @@ $$y_{t} = c + \varepsilon_t + \theta_{1}\varepsilon_{t-1} + \theta_{2}\varepsilo
 
 Donde la integración de ambos modelos dan lugar al modelo ARIMA, que se puede definir como:
 
-$$ y'_{t} = c + \phi_{1}y'_{t-1} + \cdots + \phi_{p}y'_{t-p} + \theta_{1}\varepsilon_{t-1} + \cdots + \theta_{q}\varepsilon_{t-q} + \varepsilon_{t} $$
+$$ y_{t} = c + \phi_{1}y_{t-1} + \cdots + \phi_{p}y_{t-p} + \theta_{1}\varepsilon_{t-1} + \cdots + \theta_{q}\varepsilon_{t-q} + \varepsilon_{t} $$
+
+Donde las especificaciones del algoritmo utilizado para el presente modelo corresponde al paquete "forecast" del repositorio publico CRAN [@R-forecast].
+
 
 ### Evaluación de modelos
 
-Para poder evaluar la eficacia de los modelos se hara uso del ajuste de las predicciones que haga dicho modelo.
+Una vez finalizado el entrenamiento de los modelos para las diferentes series de tiempo se evaluara la validez o consistencia de los mismos siguiendo dos criterios:
+
+- Ajuste del modelo.
+- Capacidad de generalización del modelo.
+
+Donde se realizara una evaluación CAMEL sobre los datos proyectados para visualizar la capacidad de generalización de los modelos, es decir, si los datos proyectados siguen la misma tendencia que los datos efectivamente observados.
+
+Así también, el ajuste de los modelos esta determinado por el estadístico R2 que se define como:
 
 $$ R2 = \left ( \frac{ \sum{[(x_{i}-\bar{x})-(y_{i}-\bar{y})]} } { \sqrt{ \sum{(x_{i}-\bar{x})^{2}} * \sum{(y_{i}-\bar{y})^{2}} } }  \right )^{2} $$
 
+Donde el presente estadístico puede ser aplicado antes y después del entrenamiento:
+
 #### R2 sobre datos de entrenamiento
 
-Representa el ajuste entre los datos observados y los datos ajustados por el modelo.
+Representa el ajuste existente entre los datos observados en el entrenamientos respecto a los datos pronosticados para los mismos intervalos de tiempo.
 
 #### R2 sobre datos de prueba
 
-Representa el ajuste entre los datos observados y los datos proyectados por el modelo.
-
-#### Aplicación de metodologia CAMEL sobre datos proyectados
-
-Como en ultimo método de evaluación se utilizara la metodología CAMEL sobre datos proyectados por los modelos y los datos efectivamente observados que son los datos de prueba, para asi poder cuestionar si estas proyecciones siguen la misma tendencia que los datos observados.
+Representa el ajuste entre los datos observados para realizar pruebas respecto los datos proyectados por el modelo para los mismos intervalos de tiempo.
 
 
 ### Variables comprendidas
 
-La variables comprendidas para los pronósticos son las mismas definidas en el capitulo anterior, incluyendo los siguientes:
+La variables comprendidas para los pronósticos son las mismas definidas en el capitulo anterior:
 
 - Activo
+- Disponibilidades
+- Inversiones temporarias
+- Cartera vigente, vencida y en ejecución
+- Cartera reprogramada vigente, vencida y en ejecución
+- Cartera reestructurada vigente, vencida y en ejecución
+- Previsión de incobrarbilidad de cartera
+- Bienes realizables
+- Cuentas contingentes deudoras
 - Pasivo
 - Patrimonio
 - Ingresos
+- Gastos de administración
+- Impuestos
+- Resultado operativo bruto
+- Resultado neto de la gestión
+- Coeficiente de adecuación patrimonial
+
+Donde el coeficiente de adecuación patrimonial no es una cuenta del manual de cuentas pero se realiza sus pronósticos al ser necesario para evaluación de los modelo por la metodología CAMEL.
 

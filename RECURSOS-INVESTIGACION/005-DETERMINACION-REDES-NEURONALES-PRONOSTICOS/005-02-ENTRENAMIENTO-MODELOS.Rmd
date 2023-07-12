@@ -48,22 +48,34 @@ if (!('listResultPEF' %in% ls())) {
 
 ## Entrenamiento de modelos, proyeciones y simulaciones
 
-### MCO
+Para una mayor ejemplificación de los modelos se presenta el proceso de entrenamiento para la serie de tiempo correspondiente a los resultados neto de la gestión.
 
-```{r, echo=TRUE}
-coef(listResultPEF[[id]]$mcoModel)
+### Modelo clásico de series de tiempo 
+
+Una vez concluida en el entrenamiento de este tipo de modelo se obtendrá los coeficientes o tasas de cambio para las diferentes variables contenidas en el modelo.
+
+```{r}
+variables <- c('Intercepto','Tendencia','Estacion 2','Estacion 3','Estacion 4','Estacion 5','Estacion 6','Estacion 7','Estacion 8','Estacion 9','Estacion 10','Estacion 11','Estacion 12')
+
+resultadosMCO <- data.frame(VARIABLES=variables, BETAS=coef(listResultPEF[[id]]$mcoModel), row.names = NULL)
+renderTableBasic(resultadosMCO,captionTable = 'Tasas de cambio modelo clasico')
 ```
 
-
+Donde cada tasa de cambio esta sujeta a su interpretación, por ejemplo la tasa de cambio correspondiente a la tendencia nos indica que el resultado neto de gestión sufre una variación de `r resultadosMCO[2,2]` Bs por cada mes.
 
 ### ARIMA
 
-```{r, echo=TRUE}
-coef(listResultPEF[[id]]$arimaModel)
+El modelo ARIMA obtenido sujeto al algoritmo dado en las especificaciones son los siguientes:
+
+```{r}
+resultadosARIMA <- data.frame(t(coef(listResultPEF[[id]]$arimaModel)))
+renderTableBasic(resultadosARIMA,captionTable = 'Regresores y medias moviles')
 ```
 
 
-### NN
+### Redes neuronales
+
+Una vez entrenado el modelo de red neuronal para la cuenta correspondiente su estructura la siguiente forma:
 
 ```{r, fig.cap='Arquitectura de red neuronal para la cuenta.'}
 library(devtools)
@@ -74,22 +86,22 @@ struct<-listResultPEF[[id]]$nnModel$model[[1]]$n
 plot.nnet(wts.in,struct=struct)
 ```
 
-
-```{r, echo=TRUE}
-wts.in
-```
-
+Así también, dentro del análisis de los pesos ajustados de una red neuronal estos no pueden ser interpretados mas que solo como una tasa de cambio.
 
 ### Eficiencia de los modelos en el entrenamiento
+
+Una vez terminada el entrenamiento de los modelos se realizara la evaluación de los mismos.
 
 ```{r}
 renderTableBasic( listResumeModels$r2ModelsResum %>% filter(CUENTAS==id), 
                   captionTable = 'Ajuste R2 de modelos para resultado neto de la gestion')
 ```
 
-Posteriormente los modelos presentados en la anterior sección son entrenados sujetas a sus respectivas  especificaciones.
+Es decir que los datos pronosticados del resultado neto de la gestión para el intervalo de tiempo correspondiente a los datos de entrenamiento se ajustan en `r listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% select(NN) %>% round(digits = 4) %>% pull() *100`,% `r listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% select(MCO) %>% round(digits = 4) %>% pull() *100`% y `r listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% select(ARIMA) %>% round(digits = 4) %>% pull() *100`% para los modelos correspondientes suscritos a la tabla anterior.
 
 ### Eficiencia de los modelos en los pronosticos
+
+Posteriormente se calcula el ajuste de las proyecciones respecto a los datos de prueba, los cuales son nuevos para el modelo y nos dan una idea de que si el modelo esta logrando generalizar los patrones contenidos en la serie de tiempo.
 
 ```{r}
 renderTableBasic( listResumeModels$r2ForecastResum %>% filter(CUENTAS==id),
@@ -98,22 +110,22 @@ renderTableBasic( listResumeModels$r2ForecastResum %>% filter(CUENTAS==id),
 
 ### Simulacion de proyeciones
 
-Sobre los mismos modelos se proyecciones simuladas sujetas a desviaciones de error que el modelo presento en su entrenamiento.
+Sobre los mismos modelos se realizan simulaciones sobre las proyecciones que son el resultado de la proyección promedio mas menos selección aleatoria de los errores o desviaciones, sobre los cuales se calcula su ajuste R2 donde dichas simulaciones nos muestra el rango de ajuste al que esta sujeto cada modelo, estos pueden ser visualizados a través de histogramas.
 
-Posteriormente calculamos el ajuste de los datos proyectados simulados respecto a los datos observados.
-
-```{r}
+```{r, fig.cap='Ajuste R2 de los modelos para proyecciones simuladas'}
 z <- data.frame(r2Model=listResultPEF[[id]]$nnModelSimulate$r2Model)
-p1 <- z %>% ggplot(aes(x=r2Model)) + geom_histogram() + ggtitle('NN')
+p1 <- z %>% ggplot(aes(x=r2Model)) + geom_histogram() + ggtitle('NN') + xlab('') + ylab('')
 
 z <- data.frame(r2Model=listResultPEF[[id]]$mcoModelSimulate$r2Model)
-p2 <- z %>% ggplot(aes(x=r2Model)) + geom_histogram() + ggtitle('MCO')
+p2 <- z %>% ggplot(aes(x=r2Model)) + geom_histogram() + ggtitle('MCO') + xlab('') + ylab('')
 
 z <- data.frame(r2Model=listResultPEF[[id]]$arimaModelSimulate$r2Model)
-p3 <- z %>% ggplot(aes(x=r2Model)) + geom_histogram() + ggtitle('ARIMA')
+p3 <- z %>% ggplot(aes(x=r2Model)) + geom_histogram() + ggtitle('ARIMA') + xlab('R2') + ylab('')
 
 p1/p2/p3
 ```
+
+Para las diferentes series de tiempo se realizara `r length(listResultPEF[[id]]$nnModelSimulate$r2Model)` simulaciones, en la siguientes sección se presentara los resultados obtenidos para cada serie de tiempo sujeta al proceso presentado anteriormente.
 
 
 

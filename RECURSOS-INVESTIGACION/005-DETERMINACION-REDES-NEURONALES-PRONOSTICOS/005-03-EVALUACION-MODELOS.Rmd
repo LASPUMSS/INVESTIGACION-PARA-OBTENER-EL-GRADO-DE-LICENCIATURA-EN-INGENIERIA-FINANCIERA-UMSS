@@ -49,7 +49,7 @@ if (!('listResultPEF' %in% ls())) {
 
 ## Evaluación de datos ajustados de modelos
 
-En esta sección se calcula el nivel de ajuste de los modelos para las distintas series de tiempo observadas.
+En esta sección se presentan el nivel de ajuste de los modelos para las distintas series de tiempo observadas respecto a las series de tiempo pronosticadas por los modelos:
 
 ```{r}
 renderTableBasic(listResumeModels$r2ModelsResum, 
@@ -65,10 +65,11 @@ renderTableBasic(listResumeModels$r2ModelsResumMean,
                  fontSize = 6)
 ```
 
+Dejando a las redes neuronales como el mejor modelo bajo el presente método de evaluación al tener mayor ajuste promedio para las diferentes series de tiempo.
 
 ## Evaluación de datos proyectados de modelos
 
-En esta sección se calcula el nivel de ajuste de las proyecciones de los modelos para las distintas series de tiempo observadas.
+Ahora bien se presenta el nivel de ajuste de las proyecciones de los modelos respecto a las series de tiempo de prueba, las cuales no fueron incluidas en el entrenamiento de los mismos.
 
 ```{r}
 renderTableBasic(listResumeModels$r2ForecastResum, 
@@ -83,3 +84,7 @@ renderTableBasic(listResumeModels$r2ForecastResumMean,
                  captionTable = 'Ajuste R2 de proyecciones por modelo',
                  fontSize = 6)
 ```
+
+En el segundo método de evaluación los modelos ARIMA lograron mayor ajuste R2 en los series de tiempo proyectadas, lo que entra en contradicción con la evaluación anterior para poder resolver esta contradicción el siguiente método no evaluara el ajuste de los modelo sino su capacidad de generalizar los patrones contenidos en la series de tiempo sobre las cuales en ultimo termino se pueden tomar decisiones.
+
+
