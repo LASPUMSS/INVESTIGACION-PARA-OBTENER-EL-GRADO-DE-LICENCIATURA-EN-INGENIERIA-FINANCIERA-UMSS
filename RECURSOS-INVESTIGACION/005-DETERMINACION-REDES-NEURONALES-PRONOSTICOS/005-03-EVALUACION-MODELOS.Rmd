@@ -82,7 +82,9 @@ Donde el ajuste promedio de las proyecciones por modelo se tiene los siguiente:
 ```{r}
 renderTableBasic(listResumeModels$r2ForecastResumMean,
                  captionTable = 'Ajuste R2 de proyecciones por modelo',
-                 fontSize = 6)
+                 fontSize = 6) %>% 
+    footnote(general = 'NaN indica que uno de los series de tiempo es 0 en todos sus elementos, donde el R2 devuelve una indeterminación.',
+             general_title = 'NOTA: ' )
 ```
 
 En el segundo método de evaluación los modelos ARIMA lograron mayor ajuste R2 en los series de tiempo proyectadas, lo que entra en contradicción con la evaluación anterior para poder resolver esta contradicción el siguiente método no evaluara el ajuste de los modelo sino su capacidad de generalizar los patrones contenidos en la series de tiempo sobre las cuales en ultimo termino se pueden tomar decisiones.

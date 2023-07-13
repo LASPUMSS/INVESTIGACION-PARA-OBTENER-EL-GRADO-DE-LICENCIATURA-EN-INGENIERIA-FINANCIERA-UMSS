@@ -72,6 +72,7 @@ resultadosARIMA <- data.frame(t(coef(listResultPEF[[id]]$arimaModel)))
 renderTableBasic(resultadosARIMA,captionTable = 'Regresores y medias moviles')
 ```
 
+El algoritmo de [@R-forecast] determino que el modelo ARIMA que minimiza el parámetro AIC esta definido por un autoregresor junto a una media móvil y un autoregresor estacional.
 
 ### Redes neuronales
 

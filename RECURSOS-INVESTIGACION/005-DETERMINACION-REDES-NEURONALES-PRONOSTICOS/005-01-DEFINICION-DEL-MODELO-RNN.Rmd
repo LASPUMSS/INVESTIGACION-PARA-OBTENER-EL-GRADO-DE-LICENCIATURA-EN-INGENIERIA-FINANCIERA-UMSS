@@ -94,7 +94,7 @@ Los cuales estarán sujetos a las arquitecturas o especificaciones que se mencio
 
 La arquitectura de una rede neuronal hace referencia al numero de capas, neuronas y funciones de activación que se aplicaran, estas mismas pueden ser asignadas de forma arbitraria donde el uso de muchas capas y neuronas causaran un sobre ajuste del modelo, y usar muy pocas hará que el modelo no pueda generalizar la información contenida en las series de tiempo, en consecuencia las redes neuronales que se emplearan en la presente investigación estarán sujetos a las siguientes lineamientos que determinan su arquitectura:
 
-- El numero de neuronas de entrada esta definido por el criterio de información de Akaike.
+- El numero de neuronas de entrada esta definido por el criterio de información de Akaike (AIC).
 - El numero de capas ocultas serán igual a 1, con el mismo numero de neuronas que la capa de entrada.
 - La función de activación de aplicar sera la función sigmoide.
 - El algoritmo esta desarrollado en el lenguaje de programación R.
