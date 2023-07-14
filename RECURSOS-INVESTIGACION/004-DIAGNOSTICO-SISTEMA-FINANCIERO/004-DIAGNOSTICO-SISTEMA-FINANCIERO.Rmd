@@ -1,6 +1,3 @@
----
-output: pdf_document
----
 
 # Diagnóstico de las instituciones financieras del sistema financiero de Bolivia
 
@@ -21,13 +18,12 @@ Donde la metodología a aplicar para realizar el diagnóstico de los sectores fi
 
 ```
 
-\newpage
+
 <!-- DEFINICIÓN DE RANGOS Y LIMITES -->
 ```{r, child="RECURSOS-INVESTIGACION/004-DIAGNOSTICO-SISTEMA-FINANCIERO/004-03-RANGO-LIMITES.Rmd"}
 
 ```
 
-\newpage
 <!-- PONDERACIÓN ELEMENTOS CAMEL -->
 ```{r, child="RECURSOS-INVESTIGACION/004-DIAGNOSTICO-SISTEMA-FINANCIERO/004-04-PONDERACION.Rmd"}
 

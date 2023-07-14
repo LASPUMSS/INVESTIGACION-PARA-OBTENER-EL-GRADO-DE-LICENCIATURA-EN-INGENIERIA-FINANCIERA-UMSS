@@ -1,6 +1,3 @@
----
-output: pdf_document
----
 
 \section*{Bibliografia consultada}
 \addcontentsline{toc}{section}{\protect\numberline{}Bibliografia consultada}

@@ -1,7 +1,3 @@
----
-output: pdf_document
----
-
 ```{r}
 source('RECURSOS-INVESTIGACION/R/camel-get-datCamelIndicadores.R')
 source('RECURSOS-INVESTIGACION/R/camel-get-limites-rangos.R')

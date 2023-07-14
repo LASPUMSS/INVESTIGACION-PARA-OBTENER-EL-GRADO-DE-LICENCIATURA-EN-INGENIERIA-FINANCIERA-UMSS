@@ -1,7 +1,3 @@
----
-output: pdf_document
----
-
 ```{r}
 source('RECURSOS-INVESTIGACION/R/camel-get-datCamelIndicadores.R')
 source('RECURSOS-INVESTIGACION/R/camel-get-limites-rangos.R')
@@ -51,7 +47,7 @@ datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
 
 ## Resultados CAMEL del sistema financiero
 
-Los sección de resultados CAMEL del sistema financiero de Bolivia presenta la información resultado del diagnostico de la solidez financiera de los sectores financieros contenidos en la misma sujeta a los indicadores, rangos y ponderaciones antes presentados.
+Los sección de resultados CAMEL del sistema financiero de Bolivia presenta la información consecuente del diagnostico de la solidez financiera de los sectores financieros contenidos en la misma que esta sujeta a los indicadores, rangos y ponderaciones antes presentados.
 
 ### Resutados CAMEL con rangos flexibles sin ponderar
 

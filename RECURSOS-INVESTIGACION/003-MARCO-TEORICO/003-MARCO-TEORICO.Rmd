@@ -1,6 +1,3 @@
----
-output: pdf_document
----
 
 <!-- FUNCIONES NECESARIAS -->
 ```{r}
@@ -107,7 +104,11 @@ Los mismos que se describen a continuación:
 
 ### Calculo de indicadores
 
+A continuación se definen los indicadores que componen a la metodología CAMEL contenida en la presente investigación:
+
 #### Capital
+
+Los indicadores de capital buscan responder o evaluar la capacidad del capital contable de los sectores financieros para hacer frente a sus obligaciones con terceros y propios.
 
 ##### Coeficiente De Adecuación Patrimonial (CAP)
 
@@ -140,6 +141,8 @@ $$ \frac{ \text{Patrimonio} }{ \text{Activo - Contingente} } $$
 
 #### Activo
 
+Los indicadores de activos tienen por objeto de evaluar la composición de los activos de los respectivos sectores financieros los cuales junto al patrimonio permiten hacer frente a sus obligaciones.
+
 ##### Coeficiente de exposición de cartera (CEC) 
 
 El presente coeficiente determina que por ciento de lo créditos están expuestos a riesgo de ser incumplidos o cancelados.
@@ -166,6 +169,8 @@ $$ \frac{ \text{Cartera Reprogramada Total} }{ \text{Cartera Bruta} } $$
 
 #### Administración
 
+Los indicadores de administración tienen por objeto evaluar como las instituciones gestionan sus gastos administrativos.
+
 ##### Coeficiente de cobertura gastos administrativos (CCGA)
 
 El coeficiente mide si los activos de la institución pueden hacer frente a los gastos administrativos de la institución.
@@ -181,6 +186,8 @@ $$ \frac{ \text{Gastos Administración - Impuestos} }{ \text{Resultado Operativo
 
 #### Beneficios
 
+Los indicadores de beneficios tienen por objeto de evaluar el rendimiento o generación de valor de las instituciones o sectores financieros.
+
 ##### Coeficiente de rendimiento sobre activos (ROA)
 
 El presente coeficiente determina el rendimiento en tanto por uno, los beneficios que han generado los activos.
@@ -195,6 +202,8 @@ Este coeficiente determina el rendimiento en tanto por uno, los beneficios que h
 $$ \frac{ \text{Resultado Neto De La Gestión} }{ \text{Patrimonio} } $$
 
 #### Liquidez
+
+Los indicadores de liquidez tienen por objeto de evaluar la capacidad de las instituciones para hacer frente a sus obligaciones con terceros con sus activos mas líquidos.
 
 ##### Coeficiente de capacidad de pago frente a pasivos (CCPP)
 
@@ -216,7 +225,11 @@ En esta sección de la metodología CAMEL se establecen rangos a los cuales le c
 
 ### Definición de la ponderación
 
+La ponderación de los elementos CAMEL son asignados de manera arbitraria pero sujeto a lineamientos económico-financieros el cual presenta presenta las siguiente forma:
+
 $$CAMEL = \text{30\%C + 30\%A + 10\%M + 15\%E + 15\%L}$$
+
+Donde la mayor ponderación esta concentrado en los indicadores de capital y activos ya que en ultimo termino son estos mismos con la que una institución financiera puede hacer frente a sus obligaciones con terceros, como también dando mayor ponderación a los indicadores de rendimiento y liquidez respecto a la administración debido a la relación que guardan los mismos con el activo y el capital, es decir, el rendimiento tiene efectos sobre el capital y por el otro lado la liquidez tiene efectos sobre los activos.
 
 ### Calificación CAMEL
 
@@ -349,7 +362,9 @@ $$ f(Z)_{j} = \frac{ e^{Z_{J}} }{ \sum_{k=1}^{K} e^{Z_{K}} } $$
 plotActFuntMarcTeor()
 ```
 
-### Propagación hacia adelanate y hacia atras
+### Propagación hacia adelante y hacia atrás
+
+Los algoritmos de propagación hacia adelante y hacia atrás son los que dotan de inicialización - aprendizaje a la red neuronal.
 
 #### Propagación hacia adelante
 
