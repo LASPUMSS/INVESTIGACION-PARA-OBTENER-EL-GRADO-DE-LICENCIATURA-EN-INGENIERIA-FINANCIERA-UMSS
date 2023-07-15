@@ -229,7 +229,7 @@ La ponderación de los elementos CAMEL son asignados de manera arbitraria pero s
 
 $$CAMEL = \text{30\%C + 30\%A + 10\%M + 15\%E + 15\%L}$$
 
-Donde la mayor ponderación esta concentrado en los indicadores de capital y activos ya que en ultimo termino son estos mismos con la que una institución financiera puede hacer frente a sus obligaciones con terceros, como también dando mayor ponderación a los indicadores de rendimiento y liquidez respecto a la administración debido a la relación que guardan los mismos con el activo y el capital, es decir, el rendimiento tiene efectos sobre el capital y por el otro lado la liquidez tiene efectos sobre los activos.
+Donde la mayor ponderación esta concentrado en los indicadores de capital y activos ya que en ultimo termino son estos mismos con la que una institución financiera puede hacer frente a sus obligaciones con terceros, como también dando mayor ponderación a los indicadores de rendimiento y liquidez respecto a los indicadores de administración debido a la relación que guardan los mismos con el activo y el capital, es decir, el rendimiento tiene efectos sobre el capital y por el otro lado la liquidez tiene efectos sobre los activos.
 
 ### Calificación CAMEL
 
