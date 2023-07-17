@@ -9,6 +9,7 @@ source('RECURSOS-INVESTIGACION/R/pef-list-summary-resumen.R')
 source('RECURSOS-INVESTIGACION/R/pef-get-dats-for-forescat.R')
 source('RECURSOS-INVESTIGACION/R/pef-get-ids-for-models.R')
 source("RECURSOS-INVESTIGACION/R/pef-get-camel-test.R")
+source("RECURSOS-INVESTIGACION/R/pef-aux-render-table.R")
 source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
 
 require(kableExtra)
@@ -52,7 +53,7 @@ if (!('listResultPEF' %in% ls())) {
 En esta sección se presentan el nivel de ajuste de los modelos para las distintas series de tiempo observadas respecto a las series de tiempo pronosticadas por los modelos:
 
 ```{r}
-renderTableBasic(listResumeModels$r2ModelsResum, 
+renderTableBasic(listResumeModels$r2ModelsResum %>% transformTableAuzPef, 
                  captionTable = 'Ajuste R2 por cuenta',
                  fontSize = 6)
 ```
@@ -72,7 +73,7 @@ Dejando a las redes neuronales como el mejor modelo bajo el presente método de 
 Ahora bien se presenta el nivel de ajuste de las proyecciones de los modelos respecto a las series de tiempo de prueba, las cuales no fueron incluidas en el entrenamiento de los mismos.
 
 ```{r}
-renderTableBasic(listResumeModels$r2ForecastResum, 
+renderTableBasic(listResumeModels$r2ForecastResum %>% transformTableAuzPef, 
                  captionTable = 'Ajuste R2 de proyecciones por cuenta',
                  fontSize = 6) %>% 
     footnote(general = 'NaN indica que uno de los series de tiempo es 0 en todos sus elementos, donde el R2 devuelve una indeterminación.',
@@ -87,6 +88,6 @@ renderTableBasic(listResumeModels$r2ForecastResumMean,
                  fontSize = 6)
 ```
 
-En el segundo método de evaluación los modelos ARIMA lograron mayor ajuste R2 en los series de tiempo proyectadas, lo que entra en contradicción con la evaluación anterior para poder resolver esta contradicción el siguiente método no evaluara el ajuste de los modelo sino su capacidad de generalizar los patrones contenidos en la series de tiempo sobre las cuales en ultimo termino se pueden tomar decisiones.
+En el segundo método de evaluación los modelos ARIMA lograron mayor ajuste R2 en las series de tiempo proyectadas, lo que entra en contradicción con la evaluación anterior para poder resolver esta contradicción el siguiente método no evaluara el ajuste de los modelo sino su capacidad de generalizar los patrones contenidos en la series de tiempo sobre los cuales en ultimo termino se pueden tomar decisiones.
 
 

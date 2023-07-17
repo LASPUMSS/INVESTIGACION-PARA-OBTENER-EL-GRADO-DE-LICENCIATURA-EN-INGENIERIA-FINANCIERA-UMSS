@@ -82,13 +82,13 @@ autoplot(listResultPEF[[id]]$tsDatTrain,series = 'Datos de entrenamiento') +
 
 Los modelos empleados para realizar las proyecciones son los siguientes:
 
-- Redes neuronales artificiales (RNA)
-- Modelo clásico de series de tiempo
+- Redes neuronales artificiales (NN)
+- Modelo clásico de series de tiempo (MCO)
 - ARIMA
 
 Los cuales estarán sujetos a las arquitecturas o especificaciones que se mencionan a continuación.
 
-#### Redes neuronales
+#### Redes neuronales (NN)
 
 <!-- https://github.com/cran/forecast/blob/master/R/nnetar.R -->
 
@@ -102,19 +102,19 @@ La arquitectura de una rede neuronal hace referencia al numero de capas, neurona
 Las especificaciones del algoritmo utilizado corresponde al paquete "forecast" del repositorio publico CRAN [@R-forecast].
 
 
-#### Modelo clásico de series de tiempo
+#### Modelo clásico de series de tiempo (MCO)
 
 <!-- https://github.com/cran/forecast/blob/master/R/lm.R -->
 
-El modelo clásico de series de tiempo define a la misma en la suma de dos elementos:
+El modelo clásico de series de tiempo define a la misma como la suma de dos elementos:
 
 $$ \text{Serie De Tiempo} = \text{ Tendencia + Estacionalidad} $$
 
-Entendiendo la tendencia como la tasa de cambio de la serie de tiempo respecto al tiempo y las estacionalidades como tasas de cambio correspondientes a variables dicótomas, es decir, solo pueden asumir valores de 0 o 1, donde el modelo presentado asume una estacionalidad de 12 periodos en consecuencia la ecuación antes mencionada toma la siguiente forma:
+Entendiendo la tendencia como la tasa de cambio de la serie de tiempo respecto al tiempo y las estacionalidades como tasas de cambio correspondientes a variables dicótomas, es decir, solo pueden asumir valores de 0 o 1 cuando la observación se encuentre en la estacionalidad dada, así mismo el modelo presentado asume una estacionalidad de 12 periodos que en consecuencia la ecuación antes mencionada toma la siguiente forma:
 
 $$Y_{t} = \beta_{0} + \beta_{1}{T_{t}} + \sum_{\substack{i=2\\j=2}}^{\substack{i=n\\ j=m}}{\beta_{i}{S_{j}}} $$
 
-
+\newpage
 Donde:
 
 - $Y_{t} =$ Representa el valor de la serie en el momento t.
@@ -172,7 +172,7 @@ Representa el ajuste entre los datos observados para realizar pruebas respecto l
 
 ### Variables comprendidas
 
-La variables comprendidas para los pronósticos son las mismas definidas en el capitulo anterior:
+La variables comprendidas que corresponden a las cuentas representadas en forma de series de tiempo para los pronósticos son las mismas definidas en el capitulo anterior:
 
 - Activo
 - Disponibilidades
@@ -192,5 +192,5 @@ La variables comprendidas para los pronósticos son las mismas definidas en el c
 - Resultado neto de la gestión
 - Coeficiente de adecuación patrimonial
 
-Donde el coeficiente de adecuación patrimonial no es una cuenta del manual de cuentas pero se realiza sus pronósticos al ser necesario para evaluación de los modelo por la metodología CAMEL.
+Debiendo aclarar que el coeficiente de adecuación patrimonial no es una cuenta del manual de cuentas de ASFI pero se realiza sus pronósticos al ser necesario para la evaluación de los modelos por la metodología CAMEL.
 

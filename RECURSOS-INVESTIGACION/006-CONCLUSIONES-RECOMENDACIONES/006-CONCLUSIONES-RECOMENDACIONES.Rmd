@@ -1,7 +1,5 @@
 
-# Conclusiones y recomendaciones
-
-## Conclusiones
+# Conclusiones
 
 Con base al trabajo realizado se plantea las conclusiones en base a los objetivos específicos y hipótesis de la investigación, que son los siguientes:
 
@@ -12,20 +10,19 @@ De acuerdo al diagnostico realizado de la situación actual del sistema financie
 
 **Conclusión 2:**
 
-Definir la arquitectura y entrenamiento del modelo de red de neuronas artificiales
+Respecto a la arquitectura y entrenamiento del modelo de red de neuronas artificiales se concluye que este representa mayor esfuerzo computacional respecto a los otros modelos presentados pero donde su capacidad de ajuste a los datos de la presente investigación fue mayor y que su capacidad de encontrar patrones que le permitan generalizar la información contenida fue completamente mayor a la de los otros modelos.
 
-**Conclusión 3**
-
-Proyección y simulación de estados financieros
-
-**Conclusión 4:**
-
-Evaluación financiera sobre estados financieros proyectados-simulados
 
 **Conclusión general:**
 
-Contraste de la hipótesis (donde la hipótesis quedo contrastada debido a que el ajuste del modelo de redes neuronales muestra mayor r2 en las proyecciones)
+La hipótesis planteada en la presente investigación sugería que: 
+
+**"Con la determinación de proyecciones de estados financieros por el método de redes neuronales, de entidades financieras de Bolivia, se logrará proyectar información con mayor aproximación a la situación económica-financiera observada de la institución correspondiente"**
+
+Y posteriormente a través de la evaluación de ajuste con los datos de entrenamiento y de prueba las redes neuronales presentaron mayor ajuste promedio y el la prueba de la evaluación financiera sobre datos proyectados el modelo de redes neuronales fue el único en lograr generalizar los patrones contenidos en las series de tiempo, teniendo en cuenta que esta hipótesis se considera contrasta y tomada como valida solo para los datos contenidos en la presente investigación.
 
 
-## Recomendaciones
+
+
+
 
