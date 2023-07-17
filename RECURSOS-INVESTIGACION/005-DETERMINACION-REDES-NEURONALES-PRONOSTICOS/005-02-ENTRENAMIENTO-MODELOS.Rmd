@@ -70,7 +70,7 @@ El modelo ARIMA obtenido sujeto a las especificaciones dadas es el siguiente:
 
 ```{r}
 resultadosARIMA <- data.frame(t(coef(listResultPEF[[id]]$arimaModel)))
-renderTableBasic(resultadosARIMA,captionTable = 'Regresores y medias moviles')
+renderTableBasic(resultadosARIMA,captionTable = 'Regresores y medias moviles del modeo ARIMA')
 ```
 
 Es decir, que el algoritmo de [@R-forecast] determino que el modelo ARIMA que minimiza el coeficiente de información de Akaike (AIC) esta definido por un autoregresor junto a una media móvil y un autoregresor estacional.
@@ -79,7 +79,7 @@ Es decir, que el algoritmo de [@R-forecast] determino que el modelo ARIMA que mi
 
 Una vez entrenado el modelo de red neuronal para la cuenta correspondiente su estructura preentara la siguiente forma:
 
-```{r, fig.cap='Arquitectura de red neuronal para la cuenta.'}
+```{r, fig.cap='Arquitectura de red neuronal por la cuenta.'}
 library(devtools)
 source_url('https://gist.githubusercontent.com/fawda123/7471137/raw/466c1474d0a505ff044412703516c34f1a4684a5/nnet_plot_update.r')
 
@@ -96,7 +96,7 @@ Una vez terminado el entrenamiento de los modelos se realizara la evaluación de
 
 ```{r}
 renderTableBasic( listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% transformTableAuzPef, 
-                  captionTable = 'Ajuste R2 de modelos para resultado neto de la gestion')
+                  captionTable = 'Ajuste R2 de los modelos para resultado neto de la gestion')
 ```
 
 Es decir que los datos pronosticados del resultado neto de la gestión para el intervalo de tiempo correspondiente a los datos de entrenamiento se ajustan en `r listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% select(NN) %>% round(digits = 4) %>% pull() *100`,% `r listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% select(MCO) %>% round(digits = 4) %>% pull() *100`% y `r listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% select(ARIMA) %>% round(digits = 4) %>% pull() *100`% para los modelos correspondientes suscritos a la tabla anterior.
@@ -114,7 +114,7 @@ renderTableBasic( listResumeModels$r2ForecastResum %>% filter(CUENTAS==id) %>% t
 
 Sobre los mismos modelos se realizan simulaciones sobre las proyecciones que son el resultado de la proyección promedio mas menos selección aleatoria de los errores o desviaciones, sobre los cuales se calcula su ajuste R2 donde dichas simulaciones nos muestra el rango de ajuste al que esta sujeto cada modelo para la cuenta de resultado neto de la gestión , los cuales pueden ser visualizados a través de histogramas.
 
-```{r, fig.cap='Ajuste R2 de los modelos para proyecciones simuladas'}
+```{r, fig.cap='Ajuste R2 de los modelos para proyecciones simuladas por cuenta'}
 z <- data.frame(r2Model=listResultPEF[[id]]$nnModelSimulate$r2Model)
 p1 <- z %>% ggplot(aes(x=r2Model)) + geom_histogram() + ggtitle('NN') + xlab('') + ylab('')
 

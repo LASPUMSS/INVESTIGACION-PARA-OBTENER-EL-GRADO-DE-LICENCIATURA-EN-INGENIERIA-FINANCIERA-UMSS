@@ -83,3 +83,9 @@ knitr::opts_knit$set(root.dir = getwd())
 ```{r, child="RECURSOS-INVESTIGACION/009-BIBLIOGRAFIA-CONSULTADA/009-BIBLIOGRAFIA-CONSULTADA.Rmd"}
 
 ```
+
+<!-- ANEXOS -->
+\newpage
+```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-ANEXOS.Rmd"}
+
+```

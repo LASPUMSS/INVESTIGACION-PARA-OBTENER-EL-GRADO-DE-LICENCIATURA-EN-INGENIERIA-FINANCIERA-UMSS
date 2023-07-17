@@ -64,7 +64,7 @@ bestPromedio <- listResult[[id]][['bestPromedio']]
 
 ```
 
-El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(round(bestPromedio,4), scientific=FALSE)`%, lo cual indica que el capital regulatorio de las `r str_to_lower(nameEntBestPromedio)` cubre en promedio el `r format(round(bestPromedio,4), scientific=FALSE)`% de los activos y contingentes ponderados en función de factores de riesgo.
+El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(round(bestPromedio*100,2), scientific=FALSE)`%, lo cual indica que el capital regulatorio de las `r str_to_lower(nameEntBestPromedio)` cubre en promedio el `r format(round(bestPromedio*100,2), scientific=FALSE)`% de los activos y contingentes ponderados en función de factores de riesgo.
 
 #### Coeficiente de cobertura de cartera en mora (CCCM)
 

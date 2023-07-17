@@ -54,7 +54,7 @@ En esta sección se presentan el nivel de ajuste de los modelos para las distint
 
 ```{r}
 renderTableBasic(listResumeModels$r2ModelsResum %>% transformTableAuzPef, 
-                 captionTable = 'Ajuste R2 por cuenta',
+                 captionTable = 'Ajuste R2 por cuentas',
                  fontSize = 6)
 ```
 
@@ -62,7 +62,7 @@ Donde el ajuste promedio por modelo se tiene los siguiente:
 
 ```{r}
 renderTableBasic(listResumeModels$r2ModelsResumMean, 
-                 captionTable = 'Ajuste R2 por modelo',
+                 captionTable = 'Ajuste R2 por modelos',
                  fontSize = 6)
 ```
 
@@ -74,7 +74,7 @@ Ahora bien se presenta el nivel de ajuste de las proyecciones de los modelos res
 
 ```{r}
 renderTableBasic(listResumeModels$r2ForecastResum %>% transformTableAuzPef, 
-                 captionTable = 'Ajuste R2 de proyecciones por cuenta',
+                 captionTable = 'Ajuste R2 de proyecciones por cuentas',
                  fontSize = 6) %>% 
     footnote(general = 'NaN indica que uno de los series de tiempo es 0 en todos sus elementos, donde el R2 devuelve una indeterminación.',
              general_title = 'NOTA: ' )

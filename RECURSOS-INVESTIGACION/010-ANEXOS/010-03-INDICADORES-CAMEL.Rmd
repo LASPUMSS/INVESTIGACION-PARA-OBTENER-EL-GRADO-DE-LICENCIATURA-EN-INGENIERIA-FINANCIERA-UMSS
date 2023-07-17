@@ -4,7 +4,7 @@ output: pdf_document
 
 <!-- FUNCIONES NECESARIAS -->
 ```{r}
-source('RECURSOS-INVESTIGACION/R/camel-getCamelIndNormalizada.R')
+source('RECURSOS-INVESTIGACION/R/camel-get-datCamelIndicadores.R')
 source('RECURSOS-INVESTIGACION/R/camel-render-table-datCamelIndNorm.R')
 
 source('RECURSOS-INVESTIGACION/R/camel-get-limites-rangos.R')
@@ -14,7 +14,7 @@ source('RECURSOS-INVESTIGACION/R/render-table-basic.R')
 
 if (!('dat' %in% ls())) {dat <- NULL}
 
-datCamelIndNorm <- getDatCamelIndNormalizada(gestionInc = 2022,by='TIPO_DE_ENTIDAD',dat=dat)
+datCamelIndNorm <- getDatCamelIndicadores(dat=dat, by='TIPO_DE_ENTIDAD')
 datCamelRangosLimites <- getDatCamelRangosLimites(datCamelIndNorm)
 
 datCamelCalificacionIndicadores <-

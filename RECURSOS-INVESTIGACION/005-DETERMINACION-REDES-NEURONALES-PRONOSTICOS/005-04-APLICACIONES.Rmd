@@ -56,7 +56,7 @@ Como tercer método de evaluación de los modelos se realiza una valuación CAME
 ```{r}
 
 renderTableBasic(camelTestModels, 
-                 captionTable = 'Aplicacion',
+                 captionTable = 'Aplicacion de metodologia CAMEL a proyecciones realizadas',
                  fontSize = 8) %>% 
     pack_rows(index = c('DATOS ORIGINALES',
                         'REDES NEURONALES',
