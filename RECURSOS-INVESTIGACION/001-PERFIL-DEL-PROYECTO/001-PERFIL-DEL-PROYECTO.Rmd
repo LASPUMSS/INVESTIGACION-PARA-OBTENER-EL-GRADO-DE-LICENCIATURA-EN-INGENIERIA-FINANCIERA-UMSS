@@ -100,12 +100,12 @@ consultas a libros, revistas, textos digitales, apuntes de clases y otras de inf
 ### Fuentes secundarias
 Se recurrirá a las fuentes de compilación de información bibliográfica referente al tema, tales como: 
 
-- libros especializados. 
-- leyes. 
-- normas. 
-- resoluciones. 
-- glosarios. 
-- páginas de Internet.
+- Libros especializados. 
+- Leyes. 
+- Normas. 
+- Resoluciones. 
+- Glosarios. 
+- Páginas de Internet.
 
 ### Técnica de recolección de la información
 

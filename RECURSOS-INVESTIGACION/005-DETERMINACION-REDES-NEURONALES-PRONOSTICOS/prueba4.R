@@ -3,6 +3,10 @@ source('RECURSOS-INVESTIGACION/R/pef-r2-ids-eeff-forecast.R')
 source('RECURSOS-INVESTIGACION/R/pef-list-summary-resumen.R')
 
 datTotalSistema <- getDatEEFFNormalizada(by = 'TOTAL_SISTEMA')
+datTotalSistema <- getDatEEFFNormalizada(by = 'ENTIDAD')
+
+dat <- datTotalSistema %>% filter(TIPO_DE_ENTIDAD=='CCB')
+
 
 
 ids <- c('ACTIVO',
