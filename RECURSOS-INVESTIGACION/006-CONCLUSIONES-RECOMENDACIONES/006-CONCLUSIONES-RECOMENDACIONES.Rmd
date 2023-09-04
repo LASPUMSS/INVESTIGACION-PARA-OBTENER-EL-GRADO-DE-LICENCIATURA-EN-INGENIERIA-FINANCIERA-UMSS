@@ -1,19 +1,23 @@
 
 # Conclusiones y recomendaciones
 
-Con base al trabajo realizado se plantea las conclusiones en base a los objetivos específicos y hipótesis de la investigación, que son los siguientes:
+Con base al trabajo realizado se plantea las conclusiones en base a los objetivos específicos e hipótesis de la investigación, que son los siguientes:
 
+**Conclusión - recomendación 1:**
 
-**Conclusión 1:**
+De acuerdo al diagnostico realizado de la situación actual del sistema financiero de Bolivia se concluyo que las cooperativas, entidades financieras de vivienda y bancos múltiples como sector pueden hacer frente en promedio a sus obligaciones con terceros y que en contraposición los sectores instituciones financieras de desarrollo, bancos PYME y el banco de desarrollo productivo se ven expuesto por naturaleza de sus activos junto al giro de su negocio y deben revisar sus políticas de administración.
 
-De acuerdo al diagnostico realizado de la situación actual del sistema financiero de Bolivia se concluyo que las cooperativas, entidades financieras de vivienda y bancos múltiples como sector pueden hacer frente en promedio sus obligaciones con terceros y que en contraposición los sectores instituciones financieras de desarrollo, bancos PYME y el banco de desarrollo productivo se ven expuesto por naturaleza de sus activos junto al giro de su negocio y deben revisar sus políticas de administración.
+Se recomienda a los bancos PYME y al banco de desarrollo productivo mejorar los resultados obtenidos en los indicadores de capital, es decir, 
 
-**Conclusión 2:**
+en contraparte las instituciones financieras de desarrollo deben mejorar sus resultados en los indicadores sobre activos, es decir, 
+
+**Conclusión - recomendación 2:**
 
 Respecto a la arquitectura y entrenamiento del modelo de red de neuronas artificiales se concluye que este representa mayor esfuerzo computacional respecto a los otros modelos presentados pero donde su capacidad de ajuste a los datos de la presente investigación fue mayor y que su capacidad de encontrar patrones que le permitan generalizar la información contenida fue completamente mayor a la de los otros modelos.
 
+Así mismo, se recomienda que para mayor ajuste de pronósticos de redes neuronales se deben emplear arquitecturas mas complejas atendiendo características como ser, tipo de entidad, estacionalidad mensual, etc.
 
-**Conclusión general:**
+**Conclusión - recomendación general:**
 
 La hipótesis planteada en la presente investigación sugería que: 
 
