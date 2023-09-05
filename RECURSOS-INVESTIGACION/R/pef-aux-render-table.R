@@ -1,5 +1,5 @@
 
-transformTableAuzPef <- function(dat) {
+transformTableAuxPef <- function(dat) {
     
     converCuentas <- function(nameCuenta) {
         

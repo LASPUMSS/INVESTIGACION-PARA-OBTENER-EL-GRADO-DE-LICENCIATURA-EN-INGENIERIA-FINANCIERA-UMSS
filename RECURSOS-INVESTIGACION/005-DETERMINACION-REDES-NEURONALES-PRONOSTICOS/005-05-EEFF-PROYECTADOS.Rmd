@@ -1,0 +1,121 @@
+---
+output: pdf_document
+---
+
+```{r}
+source('RECURSOS-INVESTIGACION/R/get-dat-basic-normalizada.R')
+source('RECURSOS-INVESTIGACION/R/pef-r2-ids-eeff-forecast.R')
+source('RECURSOS-INVESTIGACION/R/pef-list-summary-resumen.R')
+source('RECURSOS-INVESTIGACION/R/pef-get-dats-for-forescat.R')
+source('RECURSOS-INVESTIGACION/R/pef-get-ids-for-models.R')
+source("RECURSOS-INVESTIGACION/R/pef-get-camel-test.R")
+source("RECURSOS-INVESTIGACION/R/pef-aux-render-table.R")
+source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
+
+require(kableExtra)
+require(patchwork)
+require(ggplot2)
+require(dplyr)
+require(fpp2)
+
+if (!('listResultPEF' %in% ls())) {
+    
+    datTotalSistema <- getDatEEFFNormalizada(by = 'TOTAL_SISTEMA')
+    
+    ids <- getVariablesForModelsForecast()
+    
+    listResultPEF <- getListFittedAndSimulateModels(datTotalSistema,ids)
+    listDatsForTestCamels <- getDatsForTestCamels(listResultPEF,datTotalSistema,12,TRUE)
+
+}
+
+```
+
+## Estados financieros proyectados
+
+Balance general
+
+```{r}
+idsEEFF <- c('ACTIVO','PASIVO','PATRIMONIO')
+
+datAccounts <- listDatsForTestCamels$datCuentas %>% tail(n = 1) %>% select(any_of(idsEEFF)) 
+originalData <- cbind(names(datAccounts), t(datAccounts)) %>% data.frame(row.names = NULL)
+names(originalData) <- c('DESCRIPCION','OBSERVADO')
+
+datAccounts <- listDatsForTestCamels$mcoDataForecastCuentas %>% tail(n = 1) %>% select(any_of(idsEEFF)) 
+mcoForecasData <- cbind(names(datAccounts), t(datAccounts)) %>% data.frame(row.names = NULL)
+names(mcoForecasData) <- c('DESCRIPCION','MCO')
+
+datAccounts <- listDatsForTestCamels$arimaDataForecastCuentas %>% tail(n = 1) %>% select(any_of(idsEEFF))  
+arimaForecasData <- cbind(names(datAccounts), t(datAccounts)) %>% data.frame(row.names = NULL)
+names(arimaForecasData) <- c('DESCRIPCION','ARIMA')
+
+datAccounts <- listDatsForTestCamels$nnDataForecastCuentas %>% tail(n = 1) %>% select(any_of(idsEEFF)) 
+nnForecasData <- cbind(names(datAccounts), t(datAccounts)) %>% data.frame(row.names = NULL)
+names(nnForecasData) <- c('DESCRIPCION','NN')
+
+datEEEFF_Forescat <- 
+    left_join(originalData, mcoForecasData, by='DESCRIPCION') %>%
+    left_join(., arimaForecasData, by='DESCRIPCION')  %>%
+    left_join(., nnForecasData, by='DESCRIPCION') 
+
+datEEEFF_Forescat$OBSERVADO <- as.numeric(datEEEFF_Forescat$OBSERVADO)
+datEEEFF_Forescat$MCO <- as.numeric(datEEEFF_Forescat$MCO)
+datEEEFF_Forescat$ARIMA <- as.numeric(datEEEFF_Forescat$ARIMA)
+datEEEFF_Forescat$NN <- as.numeric(datEEEFF_Forescat$NN)
+```
+
+
+```{r}
+renderTableBasic(datEEEFF_Forescat %>% transformTableAuxPef, 
+                 captionTable = 'Balance general proyectado')
+
+```
+
+Estado de resultados
+
+```{r}
+idsEEFF <- 
+    c('INGRESOS_FINANCIEROS',
+      'GASTOS_FINANCIEROS',
+      'RESULTADO_FINANCIERO_BRUTO',
+             
+      'OTROS_INGRESOS_OPERATIVOS',
+      'OTROS_GASTOS_OPERATIVOS',
+      'RESULTADO_DE_OPERACION_BRUTO',
+      'EERR_S2_GASTOS_DE_ADMINISTRACION',
+      'EERR_S2_RESULTADO_NETO_DE_LA_GESTION')
+
+datAccounts <- listDatsForTestCamels$datCuentas %>% tail(n = 1) %>% select(any_of(idsEEFF)) 
+originalData <- cbind(names(datAccounts), t(datAccounts)) %>% data.frame(row.names = NULL)
+names(originalData) <- c('DESCRIPCION','OBSERVADO')
+
+datAccounts <- listDatsForTestCamels$mcoDataForecastCuentas %>% tail(n = 1) %>% select(any_of(idsEEFF)) 
+mcoForecasData <- cbind(names(datAccounts), t(datAccounts)) %>% data.frame(row.names = NULL)
+names(mcoForecasData) <- c('DESCRIPCION','MCO')
+
+datAccounts <- listDatsForTestCamels$arimaDataForecastCuentas %>% tail(n = 1) %>% select(any_of(idsEEFF))  
+arimaForecasData <- cbind(names(datAccounts), t(datAccounts)) %>% data.frame(row.names = NULL)
+names(arimaForecasData) <- c('DESCRIPCION','ARIMA')
+
+datAccounts <- listDatsForTestCamels$nnDataForecastCuentas %>% tail(n = 1) %>% select(any_of(idsEEFF)) 
+nnForecasData <- cbind(names(datAccounts), t(datAccounts)) %>% data.frame(row.names = NULL)
+names(nnForecasData) <- c('DESCRIPCION','NN')
+
+datEEEFF_Forescat <- 
+    left_join(originalData, mcoForecasData, by='DESCRIPCION') %>%
+    left_join(., arimaForecasData, by='DESCRIPCION')  %>%
+    left_join(., nnForecasData, by='DESCRIPCION') 
+
+datEEEFF_Forescat$OBSERVADO <- as.numeric(datEEEFF_Forescat$OBSERVADO)
+datEEEFF_Forescat$MCO <- as.numeric(datEEEFF_Forescat$MCO)
+datEEEFF_Forescat$ARIMA <- as.numeric(datEEEFF_Forescat$ARIMA)
+datEEEFF_Forescat$NN <- as.numeric(datEEEFF_Forescat$NN)
+```
+
+
+```{r}
+renderTableBasic(datEEEFF_Forescat %>% transformTableAuxPef, 
+                 captionTable = 'Balance general proyectado')
+
+```

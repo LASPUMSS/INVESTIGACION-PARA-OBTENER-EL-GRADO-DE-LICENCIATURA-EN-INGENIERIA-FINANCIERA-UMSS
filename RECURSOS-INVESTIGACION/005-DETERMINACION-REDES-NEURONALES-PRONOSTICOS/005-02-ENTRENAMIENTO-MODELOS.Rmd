@@ -95,7 +95,7 @@ Así también, dentro lo correspondiente al análisis de los pesos ajustados de 
 Una vez terminado el entrenamiento de los modelos se realizara la evaluación de los mismos.
 
 ```{r}
-renderTableBasic( listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% transformTableAuzPef, 
+renderTableBasic( listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% transformTableAuxPef, 
                   captionTable = 'Ajuste R2 de los modelos para resultado neto de la gestion')
 ```
 
@@ -106,7 +106,7 @@ Es decir que los datos pronosticados del resultado neto de la gestión para el i
 Posteriormente se calcula el ajuste de las proyecciones respecto a los datos de prueba, los cuales son nuevos para el modelo y nos dan una idea de que si el modelo esta logrando generalizar los patrones contenidos en la serie de tiempo.
 
 ```{r}
-renderTableBasic( listResumeModels$r2ForecastResum %>% filter(CUENTAS==id) %>% transformTableAuzPef,
+renderTableBasic( listResumeModels$r2ForecastResum %>% filter(CUENTAS==id) %>% transformTableAuxPef,
                   captionTable = 'Ajuste R2 de proyecciones de modelos para resultado neto de la gestion')
 ```
 

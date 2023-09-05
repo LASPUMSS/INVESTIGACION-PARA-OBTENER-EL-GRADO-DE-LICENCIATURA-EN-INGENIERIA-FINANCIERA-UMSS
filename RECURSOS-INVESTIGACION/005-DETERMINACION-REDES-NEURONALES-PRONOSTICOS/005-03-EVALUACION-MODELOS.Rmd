@@ -53,7 +53,7 @@ if (!('listResultPEF' %in% ls())) {
 En esta sección se presentan el nivel de ajuste de los modelos para las distintas series de tiempo observadas respecto a las series de tiempo pronosticadas por los modelos:
 
 ```{r}
-renderTableBasic(listResumeModels$r2ModelsResum %>% transformTableAuzPef, 
+renderTableBasic(listResumeModels$r2ModelsResum %>% transformTableAuxPef, 
                  captionTable = 'Ajuste R2 por cuentas',
                  fontSize = 6)
 ```
@@ -73,7 +73,7 @@ Dejando a las redes neuronales como el mejor modelo bajo el presente método de 
 Ahora bien se presenta el nivel de ajuste de las proyecciones de los modelos respecto a las series de tiempo de prueba, las cuales no fueron incluidas en el entrenamiento de los mismos.
 
 ```{r}
-renderTableBasic(listResumeModels$r2ForecastResum %>% transformTableAuzPef, 
+renderTableBasic(listResumeModels$r2ForecastResum %>% transformTableAuxPef, 
                  captionTable = 'Ajuste R2 de proyecciones por cuentas',
                  fontSize = 6) %>% 
     footnote(general = 'NaN indica que uno de los series de tiempo es 0 en todos sus elementos, donde el R2 devuelve una indeterminación.',
