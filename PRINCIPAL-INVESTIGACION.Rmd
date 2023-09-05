@@ -25,6 +25,8 @@ knitr::opts_chunk$set(echo = FALSE,
                       out.width='100%')
 
 knitr::opts_knit$set(root.dir = getwd())
+
+options(scipen=999)
 ```
 
 \includepdf[pages=-]{RECURSOS-INVESTIGACION/CARATULA-TESIS/CARATULA-TESIS}
@@ -42,6 +44,29 @@ knitr::opts_knit$set(root.dir = getwd())
 \clearpage
 \pagenumbering{arabic}
 
+<!-- PERFIL DEL PROYECTO -->
+\newpage
+```{r, child="RECURSOS-INVESTIGACION/001-PERFIL-DEL-PROYECTO/001-PERFIL-DEL-PROYECTO.Rmd"}
+
+```
+
+<!-- ANTECEDENTES -->
+\newpage
+```{r, child="RECURSOS-INVESTIGACION/002-ANTECEDENTES/002-ANTECEDENTES.Rmd"}
+
+```
+
+<!-- MARCO TEORICO -->
+\newpage
+```{r, child="RECURSOS-INVESTIGACION/003-MARCO-TEORICO/003-MARCO-TEORICO.Rmd"}
+
+```
+
+<!-- DIAGNOSTICO SISTEMA FINANCIERO -->
+\newpage
+```{r, child="RECURSOS-INVESTIGACION/004-DIAGNOSTICO-SISTEMA-FINANCIERO/004-DIAGNOSTICO-SISTEMA-FINANCIERO.Rmd"}
+
+```
 
 <!-- DETERMINACION REDES NEURONALES-PRONOSTICOS -->
 \newpage

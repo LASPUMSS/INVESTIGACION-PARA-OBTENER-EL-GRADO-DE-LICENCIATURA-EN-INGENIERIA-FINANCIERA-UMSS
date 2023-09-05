@@ -18,6 +18,8 @@ require(ggplot2)
 require(dplyr)
 require(fpp2)
 
+
+
 if (!('listResultPEF' %in% ls())) {
     
     datTotalSistema <- getDatEEFFNormalizada(by = 'TOTAL_SISTEMA')
@@ -33,7 +35,7 @@ if (!('listResultPEF' %in% ls())) {
 
 ## Estados financieros proyectados
 
-Balance general
+En esta ultima sección se presenta los estados financieros observados respecto a sus proyecciones correspondientes para cada cuenta, es decir, balance general y estado de resultados del sistema financiero en su conjunto para la fecha del 31 de diciembre de la gestión 2022 expresado en bolivianos.
 
 ```{r}
 idsEEFF <- c('ACTIVO',
@@ -122,13 +124,16 @@ datEEEFF_Forescat$NN <- as.numeric(datEEEFF_Forescat$NN)
 
 
 ```{r}
-renderTableBasic(datEEEFF_Forescat %>% transformTableAuxPef2, 
-                 captionTable = 'Balance general proyectado',
-                 fontSize = 6)
+renderTableBasic(datEEEFF_Forescat %>% select(DESCRIPCION, OBSERVADO, NN) %>% transformTableAuxPef2, 
+                 captionTable = 'Balance general observado respecto a proyecciones por redes neuronales')
 
 ```
 
-Estado de resultados
+```{r}
+renderTableBasic(datEEEFF_Forescat %>% select(DESCRIPCION, OBSERVADO, MCO, ARIMA) %>% transformTableAuxPef2, 
+                 captionTable = 'Balance general observado respecto a proyecciones por MCO y ARIMA')
+```
+
 
 ```{r}
 idsEEFF <- 
@@ -195,8 +200,14 @@ datEEEFF_Forescat$NN <- as.numeric(datEEEFF_Forescat$NN)
 
 
 ```{r}
-renderTableBasic(datEEEFF_Forescat %>% transformTableAuxPef2, 
-                 captionTable = 'Estado de resultados proyectado',
-                 fontSize = 6)
+renderTableBasic(datEEEFF_Forescat %>% select(DESCRIPCION, OBSERVADO, NN) %>% transformTableAuxPef2, 
+                 captionTable = 'Estado de resultados observado respecto a proyecciones por redes neuronales')
 
 ```
+
+```{r}
+renderTableBasic(datEEEFF_Forescat %>% select(DESCRIPCION, OBSERVADO, MCO, ARIMA) %>% transformTableAuxPef2, 
+                 captionTable = 'Estado de resultados observado respecto a proyecciones por MCO y ARIMA',
+                 fontSize = 6)
+```
+
