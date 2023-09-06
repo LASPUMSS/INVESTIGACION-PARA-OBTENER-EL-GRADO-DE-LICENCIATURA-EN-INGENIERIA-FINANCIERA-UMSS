@@ -1,6 +1,3 @@
----
-output: pdf_document
----
 
 ```{r}
 source('RECURSOS-INVESTIGACION/R/get-dat-basic-normalizada.R')
@@ -70,7 +67,7 @@ Dejando a las redes neuronales como el mejor modelo bajo el presente método de 
 
 ## Evaluación de datos proyectados de modelos
 
-Ahora bien se presenta el nivel de ajuste de las proyecciones de los modelos respecto a las series de tiempo de prueba, las cuales no fueron incluidas en el entrenamiento de los mismos.
+Ahora bien, se presenta el nivel de ajuste de las proyecciones de los modelos respecto a las series de tiempo de prueba, las cuales no fueron incluidas en el entrenamiento de los mismos.
 
 ```{r}
 renderTableBasic(listResumeModels$r2ForecastResum %>% transformTableAuxPef, 
@@ -88,6 +85,6 @@ renderTableBasic(listResumeModels$r2ForecastResumMean,
                  fontSize = 6)
 ```
 
-En el segundo método de evaluación los modelos ARIMA lograron mayor ajuste R2 en las series de tiempo proyectadas, lo que entra en contradicción con la evaluación anterior para poder resolver esta contradicción el siguiente método no evaluara el ajuste de los modelo sino su capacidad de generalizar los patrones contenidos en la series de tiempo sobre los cuales en ultimo termino se pueden tomar decisiones.
+En el segundo método de evaluación los modelos ARIMA lograron mayor ajuste R2 en las series de tiempo proyectadas, lo que entra en contradicción con la evaluación anterior para poder resolver esta contradicción el siguiente método no evaluara el ajuste de los modelos sino su capacidad de generalizar los patrones contenidos en las series de tiempo sobre los cuales en ultimo termino se pueden tomar decisiones.
 
 

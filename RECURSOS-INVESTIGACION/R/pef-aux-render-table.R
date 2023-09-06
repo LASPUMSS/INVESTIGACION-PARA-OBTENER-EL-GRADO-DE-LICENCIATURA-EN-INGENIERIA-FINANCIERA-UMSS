@@ -122,7 +122,7 @@ transformTableAuxPef2 <- function(dat) {
         if (nameCuenta=='ACTIVO_DISPONIBILIDADES') {result <- 'Disponibilidades'}
         if (nameCuenta=='ACTIVO_INVERSIONES_TEMPORARIAS') {result <- 'Inversiones Temporarias'}
         
-        if (nameCuenta=='ACTIVO_CARTERA') {result <- 'CARTERA'}
+        if (nameCuenta=='ACTIVO_CARTERA') {result <- 'Cartera'}
         
         if (nameCuenta=='ACTIVO_CARTERA_CARTERA_VENCIDA_TOTAL') {result <- 'Cartera Vencida Total'}
         if (nameCuenta=='ACTIVO_CARTERA_CARTERA_VENCIDA') {result <- 'Cartera Vencida'}

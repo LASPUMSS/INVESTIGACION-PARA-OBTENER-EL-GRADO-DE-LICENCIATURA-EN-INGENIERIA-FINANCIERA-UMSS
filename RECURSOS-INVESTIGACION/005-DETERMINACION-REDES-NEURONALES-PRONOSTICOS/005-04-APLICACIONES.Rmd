@@ -1,6 +1,3 @@
----
-output: pdf_document
----
 
 ```{r}
 source('RECURSOS-INVESTIGACION/R/get-dat-basic-normalizada.R')
@@ -46,11 +43,11 @@ if (!('listResultPEF' %in% ls())) {
 
 ```
 
-## Aplicación de metodologia CAMEL sobre datos proyectados
+## Aplicación de metodología CAMEL sobre datos proyectados
 
-<!--pero evaluar la eficacia de una proyección va mas lejos que solo el ajuste -->
+<!--pero evaluar la eficacia de una proyección va más lejos que solo el ajuste -->
 
-Como tercer método de evaluación de los modelos se realiza una valuación CAMEL sobre las series de tiempo proyectadas, donde el presente método de evaluación se justifica ya que el fin ultimo de cualquier pronostico o proyección de un modelo es revelar al analista una situación futura, entonces al aplicar la metodología CAMEL a las proyecciones realizadas por los modelos permitirá confirmar o negar si estos siguen la tendencia general de los series de tiempo efectivamente observadas.
+Como tercer método de evaluación de los modelos se realiza una valuación CAMEL sobre las series de tiempo proyectadas, donde el presente método de evaluación se justifica ya que el fin último de cualquier pronostico o proyección de un modelo es revelar al analista una situación futura, entonces al aplicar la metodología CAMEL a las proyecciones realizadas por los modelos permitirá confirmar o negar si estos siguen la tendencia general de las series de tiempo efectivamente observadas.
 
 
 ```{r}
@@ -64,7 +61,7 @@ renderTableBasic(camelTestModels,
                         'ARIMA'))
 ```
 
-Hacer notar que debido a la naturaleza de la arquitectura y funcionamiento de las redes neuronales en el paso inicial los pesos en las neuronas que dotan de la capacidad de aprendizaje a la red toman valores aleatorios lo que en consecuencia cuando estos se re-entrenan no darán los mismos pronósticos, dada esta situación se realizo `r length(trendCamelRNN)` entrenamientos para cada serie de tiempo con sus respectivos pronósticos y sobre los cuales se aplico la metodología CAMEL dando lugar a las siguientes tendencias:
+Hacer notar que debido a la naturaleza de la arquitectura y funcionamiento de las redes neuronales en el paso inicial los pesos en las neuronas que dotan de la capacidad de aprendizaje a la red toman valores aleatorios lo que en consecuencia cuando estos se re-entrenan no darán los mismos pronósticos, dada esta situación se realizó `r length(trendCamelRNN)` entrenamientos para cada serie de tiempo con sus respectivos pronósticos y sobre los cuales se aplicó la metodología CAMEL dando lugar a las siguientes tendencias:
 
 ```{r, fig.height = 10, fig.width = 20, fig.cap='Historgrama de diferentes redes neuronales entrenadas.'}
 

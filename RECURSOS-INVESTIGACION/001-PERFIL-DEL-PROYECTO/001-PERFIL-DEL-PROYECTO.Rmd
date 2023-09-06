@@ -16,7 +16,7 @@ Una de las alternativas de tratamiento de esta información que ofrece el sistem
 
 ## Formulación del problema central
 
-¿Sera que con la aplicación del método de redes neuronales, se obtendrá información adecuada con mayor aproximación a la situación económica-financiera de la institución financiera analizada?
+¿Sera que, con la aplicación del método de redes neuronales se obtendrá información adecuada con mayor aproximación a la situación económica-financiera de la institución financiera analizada?
 
 ## Justificación
 
@@ -29,7 +29,7 @@ En síntesis, el presente trabajo de investigación no pretende remplazar a otro
 
 El presente trabajo de investigación se circunscribirá al estudio de las entidades de intermediación de servicios financieras de Bolivia, definidas en el artículo 151 de la ley 393. Con fines de obtener la información que coadyuve a generar la determinación de pronósticos mediante redes neuronales, como herramienta en la toma de decisiones a nivel gerencial y la evaluación de las mismas.
 
-Para viabilizar la realización del tema de investigación se ha elegido, que se tomará como modelo de análisis a las siguientes entidades:
+En el diagnostico financiero las entidades financieras se agruparán por sectores:
 
 - Bancos múltiples.
 - Bancos PYME.
@@ -38,8 +38,9 @@ Para viabilizar la realización del tema de investigación se ha elegido, que se
 - Instituciones financieras de desarrollo.
 - Bancos de desarrollo productivo.
 
-para tener acceso a la información homogénea requerida, que permita generalizar los resultados mensuales obtenidos de las gestiones de 2014 a 2021, proyectando los periodos posteriores. El tema elegido y propuesto, se realizará en un tiempo no mayor a diez meses, a partir de la aprobación y registro del plan de investigación presentado.
+Para tener acceso a la información homogénea requerida en los pronósticos, los estados financieros se agruparán de forma tal que representan el sistema en su conjunto los cuales tienen un intervalo mensual obtenidos de las gestiones de 2014 a 2021, proyectando los periodos posteriores. 
 
+El tema elegido y propuesto, se realizará en un tiempo no mayor a diez meses, a partir de la aprobación y registro del plan de investigación presentado.
 
 ## Objetivos de la investigación
 
@@ -68,7 +69,7 @@ Con la determinación de proyecciones de estados financieros por el método de r
 - Enlace lógico: Se logrará.
 
 
-## Marco metodólogico
+## Marco metodológico
 
 ### Tipo de investigación
 
@@ -81,9 +82,9 @@ Donde se aplicará un enfoque inductivo donde desde hechos particulares se llega
 También cabe especificar que los procedimientos a ser aplicados en el informe final, estarán orientados a los métodos inductivo, deductivo, analítico fundamentalmente.
 
 
-### Tecnicas de investigación
+### Técnicas de investigación
 
-En primera instancia se realizará la identificación del problema de investigación que ya esta establecida en el proyecto de grado, donde se identificará la arquitectura de la red neuronal, que está compuesta de las funciones de activación, y ajuste de los datos en formato de tablas. Posteriormente se realizará la etapa de recolección de datos e información del sistema financiero correspondiente a las fuentes secundarias. Para que en consecuencia con la obtención de la información se realizará el ordenamiento de dicha información recopilada para su procesamiento que permitirá dar un análisis concreto y preciso y a la vez realizar su sistematización para la obtención del diagnóstico.
+En primera instancia se realizará la identificación del problema de investigación que ya está establecida en el proyecto de grado, donde se identificará la arquitectura de la red neuronal, que está compuesta de las funciones de activación, y ajuste de los datos en formato de tablas. Posteriormente se realizará la etapa de recolección de datos e información del sistema financiero correspondiente a las fuentes secundarias. Para que en consecuencia con la obtención de la información se realizará el ordenamiento de dicha información recopilada para su procesamiento que permitirá dar un análisis concreto y preciso y a la vez realizar su sistematización para la obtención del diagnóstico.
 
 
 \input{RECURSOS-INVESTIGACION/001-PERFIL-DEL-PROYECTO/tabla-marco-metodico}
@@ -112,6 +113,10 @@ Se recurrirá a las fuentes de compilación de información bibliográfica refer
 - Recopilación de información basada en fuentes primarias, secundarias y terciarias.
 - Análisis de la información recopilada, con fines de depuración, selección, tabulación mediante lenguajes de programación R y Python orientado al análisis de datos, adecuando a la arquitectura de la red neuronal.
 - La investigación tendrá un repositorio en GitHub (https://github.com/LASPUMSS/INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS).
+
+
+
+
 
 
 

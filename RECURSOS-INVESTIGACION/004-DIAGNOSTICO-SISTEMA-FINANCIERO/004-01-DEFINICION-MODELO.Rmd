@@ -21,13 +21,13 @@ entidadesCompModelo <- getEntidadesCompModelo(datBasic)
 datGroupBySector <- getDatEEFFByGroup(datBasic,by = 'TIPO_DE_ENTIDAD' )
 ```
 
-## Precisiones del diagnostico financiero presentado
+## Precisiones del diagnóstico financiero presentado
 
-A continuación se hacen manifiesto las precisiones a las cuales están sujetas el diagnostico presentado en este capítulo.
+A continuación, se hacen manifiesto las precisiones a las cuales están sujetas el diagnostico presentado en este capítulo.
 
 ### Entidades financieras comprendidas por el diagnostico
 
-El numero de observaciones de la datos manejados por esta investigación alcanzan a `r nrow(datBasic)`, donde cada observación corresponde a un balance general y un estado de resultados en un punto del tiempo entre las fechas (`r min(datBasic$FECHA)` - `r max(datBasic$FECHA)`) con una frecuencia mensual, dichos estados financieros se clasifican o agrupan por sectores financieros los cuales son:
+El número de observaciones de la datos manejados por esta investigación alcanzan a `r nrow(datBasic)`, donde cada observación corresponde a un balance general y un estado de resultados en un punto del tiempo entre las fechas (`r min(datBasic$FECHA)` - `r max(datBasic$FECHA)`) con una frecuencia mensual, dichos estados financieros se clasifican o agrupan por sectores financieros los cuales son:
 
 - Bancos múltiples
 - Bancos PYME.
@@ -67,7 +67,7 @@ entidadesModelo <-
     select(SIGLA,ENTIDAD,DE,HASTA)
 ```
 
-El sector de `r gsub('pyme','PYME',tolower(gsub('_',' ',idTipoEntidad)))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector esta comprendido por `r nrow(entidadesModelo)` entidades, que se presentan a continuación:
+El sector de `r gsub('pyme','PYME',tolower(gsub('_',' ',idTipoEntidad)))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector está comprendido por `r nrow(entidadesModelo)` entidades, que se presentan a continuación:
 
 
 ```{r}
@@ -85,7 +85,7 @@ entidadesModelo <-
     select(SIGLA,ENTIDAD,DE,HASTA)
 ```
 
-El sector de `r tolower(gsub('_',' ',idTipoEntidad))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector esta comprendido por `r nrow(entidadesModelo)` entidades, que se presentan a continuación:
+El sector de `r tolower(gsub('_',' ',idTipoEntidad))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector está comprendido por `r nrow(entidadesModelo)` entidades, que se presentan a continuación:
 
 
 ```{r}
@@ -104,7 +104,7 @@ entidadesModelo <-
     select(SIGLA,ENTIDAD,DE,HASTA)
 ```
 
-El sector de `r tolower(gsub('_',' ',idTipoEntidad))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector esta comprendido por `r nrow(entidadesModelo)` entidades, que se presentan a continuación:
+El sector de `r tolower(gsub('_',' ',idTipoEntidad))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector está comprendido por `r nrow(entidadesModelo)` entidades, que se presentan a continuación:
 
 
 ```{r}
@@ -122,7 +122,7 @@ entidadesModelo <-
     select(SIGLA,ENTIDAD,DE,HASTA)
 ```
 
-El sector de `r tolower(gsub('_',' ',idTipoEntidad))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector esta comprendido por `r nrow(entidadesModelo)` entidades, que se presentan a continuación:
+El sector de `r tolower(gsub('_',' ',idTipoEntidad))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector está comprendido por `r nrow(entidadesModelo)` entidades, que se presentan a continuación:
 
 
 ```{r}
@@ -142,7 +142,7 @@ entidadesModelo <-
     select(SIGLA,ENTIDAD,DE,HASTA)
 ```
 
-El sector de `r tolower(gsub('_',' ',idTipoEntidad))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector esta comprendido por `r nrow(entidadesModelo)` entidades, que se presentan a continuación:
+El sector de `r tolower(gsub('_',' ',idTipoEntidad))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector está comprendido por `r nrow(entidadesModelo)` entidades, que se presentan a continuación:
 
 
 ```{r}
@@ -150,9 +150,9 @@ captionTable <- glue('{handle$toUpperFirstText(gsub("_"," ",idTipoEntidad))} con
 renderTableBasic(entidadesModelo,captionTable = captionTable)
 ```
 
-### Variables comprendidas en el diganostico
+### Variables comprendidas en el diagnóstico
 
-Las variables comprendidas en el modelo del diagnostico están sujetas al manual de cuentas para entidades financieras, definidas por la autoridad de supervisión del sistema financiero (ASFI).
+Las variables comprendidas en el modelo del diagnóstico están sujetas al manual de cuentas para entidades financieras, definidas por la autoridad de supervisión del sistema financiero (ASFI).
 
 #### Activo
 
@@ -173,7 +173,7 @@ Los activos disponibles (designado por el código 110.00 en el manual de cuentas
 
 #### Realizables
 
-Los activos realizables (designado por el código 150.00 en el manual de cuentas) según [@MANUAL_CUENTAS_ASFI]  representa los bienes tangibles de propiedad de la entidad con destino de venta como ser: 
+Los activos realizables (designado por el código 150.00 en el manual de cuentas) según [@MANUAL_CUENTAS_ASFI] representa los bienes tangibles de propiedad de la entidad con destino de venta como ser: 
 
 - Los bienes adquiridos o construidos para la venta 
 - Los bienes recibidos en recuperación de créditos o de operaciones de arrendamiento financiero
@@ -207,7 +207,7 @@ El patrimonio (designado por el código 300.00 en el manual de cuentas) según [
 
 #### Cartera en mora
 
-La variable de cartera en mora esta compuesta por dos elementos del manual de cuentas:
+La variable de cartera en mora está compuesta por dos elementos del manual de cuentas:
 
 - Cartera vencida 
 - Cartera en ejecución
@@ -218,7 +218,7 @@ Asi tambien la cartera en ejecución (designado por el código 134.00 en el manu
 
 #### Cartera Bruta
 
-La variable de cartera bruta esta compuesta por tres elementos del manual de cuentas:
+La variable de cartera bruta está compuesta por tres elementos del manual de cuentas:
 
 - Cartera vigente 
 - Cartera vencida 
@@ -228,7 +228,7 @@ Donde según [@MANUAL_CUENTAS_ASFI] la cartera vencida y en ejecución fueron de
 
 #### Cartera reprogramada total
 
-La variable de cartera reprogramada total esta compuesta por tres elementos del manual de cuentas:
+La variable de cartera reprogramada total está compuesta por tres elementos del manual de cuentas:
 
 - Cartera vigente reprogramada
 - Cartera vencida reprogramada 
@@ -238,7 +238,7 @@ Donde según [@MANUAL_CUENTAS_ASFI] la cartera vigente reprogramada (designado p
 
 Así también la cartera vencida reprogramada (designado por el código 136.00 en el manual de cuentas) en esta cuenta se registran los créditos reprogramados o reestructurados cuyo capital, cuotas de amortización o intereses no hayan sido cancelados íntegramente a la entidad hasta los 30 días contados desde la fecha de vencimiento. Para este efecto, la fecha efectiva de contabilización en esta cuenta es el día 31 de incumplimiento en el cronograma de pagos.
 
-Tambien la cartera en ejecución reprogramada (designado por el código 137.00 en el manual de cuentas) en esta cuenta se registran los créditos reprogramados o reestructurados por los cuales la entidad ha iniciado las acciones judiciales para el cobro. Las operaciones de crédito serán traspasadas a cartera reestructurada en ejecución una vez admitida la solicitud de apertura del procedimiento para la suscripción de un acuerdo de transacción e inscrita en el Registro de Comercio de la Autoridad de Fiscalización y Control Social de Empresas.
+También la cartera en ejecución reprogramada (designado por el código 137.00 en el manual de cuentas) en esta cuenta se registran los créditos reprogramados o reestructurados por los cuales la entidad ha iniciado las acciones judiciales para el cobro. Las operaciones de crédito serán traspasadas a cartera reestructurada en ejecución una vez admitida la solicitud de apertura del procedimiento para la suscripción de un acuerdo de transacción e inscrita en el Registro de Comercio de la Autoridad de Fiscalización y Control Social de Empresas.
 
 #### Previsión de cartera
 
@@ -246,13 +246,12 @@ La previsión de cartera (designado por el código 139.00 en el manual de cuenta
 
 #### Contingente
 
-La variable de contingente esta compuesta por dos elementos del manual de cuentas:
+La variable de contingente está compuesta por dos elementos del manual de cuentas:
 
 - Cuentas contingentes deudoras
 - Cuentas contingentes acreedoras
 
-Donde según [@MANUAL_CUENTAS_ASFI] las cuentas contingentes deudoras (designado por el código 600.00 en el manual de cuentas) representa derechos eventuales que tendría la entidad contra el deudor principal en caso que éste no cumpla con las obligaciones sobre las cuales la entidad indirectamente asumió responsabilidad.Comprende operaciones por Cartas de crédito, Garantías otorgadas, Documentos descontados, Líneas de crédito comprometidas utilizables automáticamente y Otras
-contingencias. 
+Donde según [@MANUAL_CUENTAS_ASFI] las cuentas contingentes deudoras (designado por el código 600.00 en el manual de cuentas) representa derechos eventuales que tendría la entidad contra el deudor principal en caso que éste no cumpla con las obligaciones sobre las cuales la entidad indirectamente asumió responsabilidad. Comprende operaciones por Cartas de crédito, Garantías otorgadas, Documentos descontados, Líneas de crédito comprometidas utilizables automáticamente y Otras contingencias. 
 
 Así también las cuentas contingentes acreedoras (designado por el código 700.00 en el manual de cuentas) representa las obligaciones eventuales que tendría la entidad por responsabilidades asumidas, si el deudor principal no cumple con las mismas. Comprende operaciones por cartas de crédito, garantías otorgadas, documentos descontados, líneas de crédito comprometidas y otras contingencias. 
 
@@ -275,13 +274,13 @@ Según [@MANUAL_CUENTAS_ASFI] los impuestos (designado por el código 455.00 en 
 
 #### Resultado operativo bruto (ROB)
 
-Esta variable de resultado operativo bruto esta definida por la siguiente ecuación:
+Esta variable de resultado operativo bruto está definida por la siguiente ecuación:
 
 $$ R.O.B. = \text{Ingresos Financieros} - \text{Gastos Financieros} \pm \text{Otros (Ingresos/Gastos) Operativos}   $$
 
 #### Resultado neto de la gestión (RNG)
 
-Esta variable de resultado neto de la gestión esta definida por la siguiente ecuación:
+Esta variable de resultado neto de la gestión está definida por la siguiente ecuación:
 
 $$ R.N.G. = \text{Resultado Operativo Bruto} \pm \text{Otros (Ingresos/Gastos) Extraordinarios} - \text{IUE} $$
 

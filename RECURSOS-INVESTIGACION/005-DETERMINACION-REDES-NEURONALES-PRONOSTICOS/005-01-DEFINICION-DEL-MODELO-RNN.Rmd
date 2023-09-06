@@ -1,6 +1,3 @@
----
-output: pdf_document
----
 
 ```{r}
 source('RECURSOS-INVESTIGACION/R/get-dat-basic-normalizada.R')
@@ -47,20 +44,20 @@ if (!('listResultPEF' %in% ls())) {
 
 ```
 
-## Presiciones de los pronosticos de estados financieros
+## Precisiones de los pronósticos de estados financieros
 
 Los pronósticos realizados en el presente capítulo estarán sujetos a las especificaciones dadas a continuación.
 
 ### Series de tiempo
 
-Los datos ha ser modelados están definidos como series de tiempo (cada serie de tiempo representa una cuenta de los estados financieros) de `r nrow(datTotalSistema)` observaciones cada una, las cuales agrupan a todas las entidades del sistema financiero de Bolivia, presentadas en el capitulo anterior.
+Los datos a ser modelados están definidos como series de tiempo (cada serie de tiempo representa una cuenta de los estados financieros) de `r nrow(datTotalSistema)` observaciones cada una, las cuales agrupan a todas las entidades del sistema financiero de Bolivia, presentadas en el capítulo anterior.
 
 Así mismo los datos se dividen en dos grupos:
 
 - Datos de entrenamiento.
 - Datos para realizar pruebas.
 
-Donde los datos de entrenamiento serán utilizados para adaptar los modelos y los datos de pruebas buscaran contrastar el ajuste de los pronósticos de los modelos respecto a la misma.
+Donde los datos de entrenamiento serán utilizados para adaptar los modelos y los datos de pruebas buscarán contrastar el ajuste de los pronósticos de los modelos respecto a la misma.
 
 ```{r, fig.height = 10, fig.width = 20, fig.cap='Agrupamiento de los datos de las series de tiempo.'}
 autoplot(listResultPEF[[id]]$tsDatTrain,series = 'Datos de entrenamiento') +
@@ -92,14 +89,14 @@ Los cuales estarán sujetos a las arquitecturas o especificaciones que se mencio
 
 <!-- https://github.com/cran/forecast/blob/master/R/nnetar.R -->
 
-La arquitectura de una rede neuronal hace referencia al numero de capas, neuronas y funciones de activación que se aplicaran, estas mismas pueden ser asignadas de forma arbitraria donde el uso de muchas capas y neuronas causaran un sobre ajuste del modelo, y usar muy pocas hará que el modelo no pueda generalizar la información contenida en las series de tiempo, en consecuencia las redes neuronales que se emplearan en la presente investigación estarán sujetos a las siguientes lineamientos que determinan su arquitectura:
+La arquitectura de una rede neuronal hace referencia al número de capas, neuronas y funciones de activación que se aplicaran, estas mismas pueden ser asignadas de forma arbitraria donde el uso de muchas capas y neuronas causaran un sobre ajuste del modelo, y usar muy pocas hará que el modelo no pueda generalizar la información contenida en las series de tiempo, en consecuencia las redes neuronales que se emplearan en la presente investigación estarán sujetos a las siguientes lineamientos que determinan su arquitectura:
 
-- El numero de neuronas de entrada esta definido por el criterio de información de Akaike (AIC).
-- El numero de capas ocultas serán igual a 1, con el mismo numero de neuronas que la capa de entrada.
-- La función de activación de aplicar sera la función sigmoide.
+- El número de neuronas de entrada está definido por el criterio de información de Akaike (AIC).
+- El número de capas ocultas serán igual a 1, con el mismo número de neuronas que la capa de entrada.
+- La función de activación de aplicar será la función sigmoide.
 - El algoritmo esta desarrollado en el lenguaje de programación R.
 
-Las especificaciones del algoritmo utilizado corresponde al paquete "forecast" del repositorio publico CRAN [@R-forecast].
+Las especificaciones del algoritmo utilizado corresponden al paquete "forecast" del repositorio publico CRAN [@R-forecast].
 
 
 #### Modelo clásico de series de tiempo (MCO)
@@ -139,23 +136,23 @@ Y los modelos de promedios móviles están definidos por:
 
 $$y_{t} = c + \varepsilon_t + \theta_{1}\varepsilon_{t-1} + \theta_{2}\varepsilon_{t-2} + \dots + \theta_{q}\varepsilon_{t-q}$$
 
-Donde la integración de ambos modelos dan lugar al modelo ARIMA, que se puede definir como:
+Donde la integración de ambos modelos da lugar al modelo ARIMA, que se puede definir como:
 
 $$ y_{t} = c + \phi_{1}y_{t-1} + \cdots + \phi_{p}y_{t-p} + \theta_{1}\varepsilon_{t-1} + \cdots + \theta_{q}\varepsilon_{t-q} + \varepsilon_{t} $$
 
-Donde las especificaciones del algoritmo utilizado para el presente modelo corresponde al paquete "forecast" del repositorio publico CRAN [@R-forecast].
+Donde las especificaciones del algoritmo utilizado para el presente modelo corresponden al paquete "forecast" del repositorio publico CRAN [@R-forecast].
 
 
 ### Evaluación de modelos
 
-Una vez finalizado el entrenamiento de los modelos para las diferentes series de tiempo se evaluara la validez o consistencia de los mismos siguiendo dos criterios:
+Una vez finalizado el entrenamiento de los modelos para las diferentes series de tiempo se evaluará la validez o consistencia de los mismos siguiendo dos criterios:
 
 - Ajuste del modelo.
 - Capacidad de generalización del modelo.
 
-Donde se realizara una evaluación CAMEL sobre los datos proyectados para visualizar la capacidad de generalización de los modelos, es decir, si los datos proyectados siguen la misma tendencia que los datos efectivamente observados.
+Donde se realizará una evaluación CAMEL sobre los datos proyectados para visualizar la capacidad de generalización de los modelos, es decir, si los datos proyectados siguen la misma tendencia que los datos efectivamente observados.
 
-Así también, el ajuste de los modelos esta determinado por el estadístico R2 que se define como:
+Así también, el ajuste de los modelos está determinado por el estadístico R2 que se define como:
 
 $$ R2 = \left ( \frac{ \sum{[(x_{i}-\bar{x})-(y_{i}-\bar{y})]} } { \sqrt{ \sum{(x_{i}-\bar{x})^{2}} * \sum{(y_{i}-\bar{y})^{2}} } }  \right )^{2} $$
 
@@ -163,7 +160,7 @@ Donde el presente estadístico puede ser aplicado antes y después del entrenami
 
 #### R2 sobre datos de entrenamiento
 
-Representa el ajuste existente entre los datos observados en el entrenamientos respecto a los datos pronosticados para los mismos intervalos de tiempo.
+Representa el ajuste existente entre los datos observados en el entrenamiento respecto a los datos pronosticados para los mismos intervalos de tiempo.
 
 #### R2 sobre datos de prueba
 
@@ -172,7 +169,7 @@ Representa el ajuste entre los datos observados para realizar pruebas respecto l
 
 ### Variables comprendidas
 
-La variables comprendidas que corresponden a las cuentas representadas en forma de series de tiempo para los pronósticos son las mismas definidas en el capitulo anterior:
+Las variables comprendidas que corresponden a las cuentas representadas en forma de series de tiempo para los pronósticos son las mismas definidas en el capítulo anterior:
 
 - Activo
 - Disponibilidades
@@ -180,7 +177,7 @@ La variables comprendidas que corresponden a las cuentas representadas en forma 
 - Cartera vigente, vencida y en ejecución
 - Cartera reprogramada vigente, vencida y en ejecución
 - Cartera reestructurada vigente, vencida y en ejecución
-- Previsión de incobrarbilidad de cartera
+- Previsión de incobrabilidad de cartera
 - Bienes realizables
 - Cuentas contingentes deudoras
 - Pasivo
@@ -192,5 +189,5 @@ La variables comprendidas que corresponden a las cuentas representadas en forma 
 - Resultado neto de la gestión
 - Coeficiente de adecuación patrimonial
 
-Debiendo aclarar que el coeficiente de adecuación patrimonial no es una cuenta del manual de cuentas de ASFI pero se realiza sus pronósticos al ser necesario para la evaluación de los modelos por la metodología CAMEL.
+Debiendo aclarar que el coeficiente de adecuación patrimonial no es una cuenta del manual de cuentas de ASFI, pero se realiza sus pronósticos al ser necesario para la evaluación de los modelos por la metodología CAMEL.
 

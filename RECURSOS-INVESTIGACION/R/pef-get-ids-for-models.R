@@ -51,8 +51,6 @@ getVariablesForModelsForecast <- function() {
              'PATRIMONIO_RESERVAS',
              'PATRIMONIO_RESULTADOS_ACUMULADOS',
              
-             'PATRIMONIO_PASIVO_PATRIMONIO',
-             
              'CUENTAS_CONTINGENTES_DEUDORAS',
              'CUENTAS_CONTINGENTES_DEUDORAS_CUENTAS_DE_ORDEN_DEUDORAS',
              

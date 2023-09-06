@@ -9,8 +9,8 @@ output:
 geometry: "left=3cm,right=2cm,top=2cm,bottom=2cm"
 fontsize: 12pt
 csl: assets/csl-bib-sty/apa.csl
-bibliography: [assets/csl-bib-sty/references_01.bib, 
-               assets/csl-bib-sty/references_02.bib ]
+bibliography: [assets/csl-bib-sty/references_inv_books.bib, 
+               assets/csl-bib-sty/references_inv_manuals.bib ]
 nocite: '@*'
 ---
 
@@ -27,6 +27,7 @@ knitr::opts_chunk$set(echo = FALSE,
 knitr::opts_knit$set(root.dir = getwd())
 
 options(scipen=999)
+
 ```
 
 \includepdf[pages=-]{RECURSOS-INVESTIGACION/CARATULA-TESIS/CARATULA-TESIS}

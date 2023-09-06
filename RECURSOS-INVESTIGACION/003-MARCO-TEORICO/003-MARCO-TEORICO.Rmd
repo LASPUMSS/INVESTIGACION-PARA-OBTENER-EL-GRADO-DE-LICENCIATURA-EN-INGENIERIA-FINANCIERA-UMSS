@@ -4,13 +4,13 @@
 source('RECURSOS-INVESTIGACION/R/plot-activation-function.R')
 ```
 
-# Marco teorico
+# Marco teórico
 
 ## Finanzas y el sistema financiero
 
-Las finanzas se entiende como "la ciencia y arte de administrar el dinero" sujetas a restricciones dadas por un contexto que es dado por el sistema financiero, en decir, el sistema financiero, "consiste en diversas instituciones y mercados que sirven a las empresas de negocios, los individuos y los gobiernos".[@FAF]
+Las finanzas se entiende como "la ciencia y arte de administrar el dinero" sujetas a restricciones dadas por un contexto que es dado por el sistema financiero, en decir, el sistema financiero, "consiste en diversas instituciones y mercados que sirven a las empresas de negocios, los individuos y los gobiernos". [@FAF]
 
-Entonces se afirma que el sistema financiero en general está formado por el conjunto de instituciones publicas y privadas, constituidas en mercados, cuyo fin principal es canalizar el ahorro que generan los ahorradores hacia los prestatarios, así como facilitar y otorgar seguridad al movimiento de dinero y al sistema de pagos. 
+Entonces se afirma que el sistema financiero en general está formado por el conjunto de instituciones públicas y privadas, constituidas en mercados, cuyo fin principal es canalizar el ahorro que generan los ahorradores hacia los prestatarios, así como facilitar y otorgar seguridad al movimiento de dinero y al sistema de pagos. 
 
 ### Entidades de intermediación financiera en Bolivia
 
@@ -18,7 +18,7 @@ Las definiciones presentadas a continuación están suscritas a la ley 393 - ley
 
 #### Bancos múltiples.
 
-Los bancos múltiples tendrán como objetivo la prestación de servicios financieros al publico en general, entendido como servicios financieros, aquellos servicios que tienen por objeto satisfacer las necesidades de las consumidoras y consumidores financieros.
+Los bancos múltiples tendrán como objetivo la prestación de servicios financieros al público en general, entendido como servicios financieros, aquellos servicios que tienen por objeto satisfacer las necesidades de las consumidoras y consumidores financieros.
 
 #### Bancos PYME
 
@@ -27,11 +27,11 @@ Los bancos PYME son aquellos que tienen como objetivo la prestación de servicio
 
 #### Entidades financieras de vivienda
 
-Las entidades financieras de vivienda es una sociedad que tiene por objeto prestar servicios de intermediación financiera con especialización en prestamos para adquisición de vivienda, proyectos de construcción de vivienda unifamiliar o multifamiliar, compra de terrenos, refacción, remodelación, ampliación y mejoramiento de viviendas individuales o propiedad horizontal y otorgamiento de microcredito para vivienda familiar y para infraestructura de vivienda productiva, así tambien operaciones de arrendamiento financiero habitacional.
+Las entidades financieras de vivienda es una sociedad que tiene por objeto prestar servicios de intermediación financiera con especialización en préstamos para adquisición de vivienda, proyectos de construcción de vivienda unifamiliar o multifamiliar, compra de terrenos, refacción, remodelación, ampliación y mejoramiento de viviendas individuales o propiedad horizontal y otorgamiento de microcrédito para vivienda familiar y para infraestructura de vivienda productiva, así también operaciones de arrendamiento financiero habitacional.
 
 #### Cooperativas de ahorro y crédito abiertas
 
-Las cooperativas de ahorro y crédito se constituyen como entidades especializadas de objeto único para la prestación de servicios de intermediación financiera, dirigidos a sus socios y al publico en general cunado corresponda.
+Las cooperativas de ahorro y crédito se constituyen como entidades especializadas de objeto único para la prestación de servicios de intermediación financiera, dirigidos a sus socios y al público en general cunado corresponda.
 
 #### Instituciones financieras de desarrollo
 
@@ -43,7 +43,7 @@ El banco de desarrollo productivo es una institución con participación mayorit
 
 ## Estados financieros
 
-En el campo de la ciencia económicas los estados financieros tiene como objeto reflejar la situación económica-financiera de una institución.
+En el campo de la ciencia económicas los estados financieros tienen como objeto reflejar la situación económica-financiera de una institución.
 
 En la página oficial de la Autoridad de Supervisión del Sistema Financiero (ASFI), "se define que los estados financieros constituyen una representación estructurada de la situación financiera y de las transacciones llevadas a cabo por la empresa. Su objetivo, con propósitos de información general, es suministrar información acerca de la situación y rendimiento financieros, así como de los flujos de efectivo que sea útil a una amplia variedad de usuarios al tomar sus decisiones económicas. Los estados financieros también muestran los resultados de la gestión que los administradores han efectuado con los recursos que se les han confiado". [@GLOSARIO_ASFI]
 
@@ -53,7 +53,7 @@ Entonces se afirma, que los estados financieros son un resumen del ejercicio eco
 
 El balance general se entiende como, "estado financiero que muestra, a una fecha determinada, el valor y la estructura del activo, pasivo y patrimonio de una empresa". [@GLOSARIO_ASFI] 
 
-Con una expresión equivalente se afirma que el balance general representa una fotografía sobre  el estado de de los bienes y derechos, respecto a las obligaciones con  propietarios e terceros de la institución en un determinado momento.
+Con una expresión equivalente se afirma que el balance general representa una fotografía sobre el estado de de los bienes y derechos, respecto a las obligaciones con  propietarios e terceros de la institución en un determinado momento.
 
 ### Estado de resultados
 
@@ -67,7 +67,7 @@ La evaluación financiera se entiende como un proceso de valoración de los resu
 
 ### Indicadores financieros 
 
-La teoría financiera indica que un indicador financiero tiene como objeto final medir una característica de la entidad estudiada, estos pueden ser los siguientes:
+La teoría financiera define a un indicador financiero como un instrumento que tiene por objeto final medir una característica de la entidad estudiada, estos pueden ser los siguientes:
 
 - Estructura de activos.
 - Estructura de pasivos.
@@ -83,7 +83,7 @@ Pero los indicadores financieros por si solos no pueden brindar información int
 
 ## Método CAMEL
 
-La metodología CAMEL evalúa la **solidez financiera** de las instituciones con base ha indicadores cuantitativos, contemplando cinco características: 
+La metodología CAMEL tiene por objeto evaluar la **solidez financiera** de las instituciones con base ha indicadores cuantitativos, contemplando cinco características: 
 
 - Capital adecuado (C).
 - Calidad del activo (A).
@@ -91,12 +91,13 @@ La metodología CAMEL evalúa la **solidez financiera** de las instituciones con
 - Rentabilidad (E).
 - Situación de liquidez (L).
 
-La **solidez financiera** de una institución debe entenderse como la capacidad que tiene dicha institución de hacer frente a las obligaciones que tiene con terceros y propietarios.
+Donde la **solidez financiera** de una institución debe entenderse como la capacidad que tiene dicha institución de hacer frente a las obligaciones que tiene con terceros y propietarios.
 
+\newpage
 La presente metodología se divide en siguientes pasos:
 
-- Calculo de indicadores que responden a los características antes mencionadas.
-- Definición de rangos y limites de los indicadores.
+- Calculo de indicadores que responden a las características antes mencionadas.
+- Definición de rangos y límites de los indicadores.
 - Definición de la ponderación, que responden a la solidez financiera de la institución.
 - Calificación CAMEL.
 
@@ -104,7 +105,7 @@ Los mismos que se describen a continuación:
 
 ### Calculo de indicadores
 
-A continuación se definen los indicadores que componen a la metodología CAMEL contenida en la presente investigación:
+A continuación, se definen los indicadores que componen a la metodología CAMEL contenida en la presente investigación:
 
 #### Capital
 
@@ -135,7 +136,7 @@ $$ \frac{ \text{Cartera En Mora - Previsión Cartera + Realizables} }{ \text{Pat
 
 ##### Coeficiente de cobertura patrimonial (CCP) 
 
-Este indicador mide o tiene por objeto responder si los activos descontando los cuentas contingentes cubren los el patrimonio de la misma.
+Este indicador mide o tiene por objeto responder si los activos descontando las cuentas contingentes cubren los el patrimonio de la misma.
 
 $$ \frac{ \text{Patrimonio} }{ \text{Activo - Contingente} } $$
 
@@ -145,19 +146,19 @@ Los indicadores de activos tienen por objeto de evaluar la composición de los a
 
 ##### Coeficiente de exposición de cartera (CEC) 
 
-El presente coeficiente determina que por ciento de lo créditos están expuestos a riesgo de ser incumplidos o cancelados.
+El presente coeficiente determina que por ciento de los créditos están expuestos a riesgo de ser incumplidos o cancelados.
 
 $$  \frac{ \text{Cartera En Mora} }{ \text{Cartera Bruta} } $$
 
 ##### Coeficiente de previsión de cartera (CPC) 
 
-El presente coeficiente mide o tiene por objeto responder en que tanto por ciento esta cubierta los créditos realizados por la institución.
+El presente coeficiente mide o tiene por objeto responder en que tanto por ciento está cubierta los créditos realizados por la institución.
 
 $$ \frac{ \text{Previsión} }{ \text{Cartera Bruta} } $$
 
 ##### Coeficiente de previsión de cartera en mora (CPCM)
 
-Este coeficiente mide o tiene por objeto responder en que tanto por ciento esta cubierta los créditos incobrables realizados por la institución.
+Este coeficiente mide o tiene por objeto responder en que tanto por ciento está cubierta los créditos incobrables realizados por la institución.
 
 $$ \frac{ \text{Previsión} }{ \text{Cartera En Mora} } $$
 
@@ -203,7 +204,7 @@ $$ \frac{ \text{Resultado Neto De La Gestión} }{ \text{Patrimonio} } $$
 
 #### Liquidez
 
-Los indicadores de liquidez tienen por objeto de evaluar la capacidad de las instituciones para hacer frente a sus obligaciones con terceros con sus activos mas líquidos.
+Los indicadores de liquidez tienen por objeto de evaluar la capacidad de las instituciones para hacer frente a sus obligaciones con terceros con sus activos más líquidos.
 
 ##### Coeficiente de capacidad de pago frente a pasivos (CCPP)
 
@@ -217,30 +218,30 @@ El coeficiente busca medir si la institución puede hacer frente a sus obligacio
 
 $$ \frac{ \text{Disponibles} }{ \text{Pasivos} } $$
 
-### Definición de rangos y limites de los indicadores
+### Definición de rangos y límites de los indicadores
 
-En esta sección de la metodología CAMEL se establecen rangos a los cuales le corresponde una calificación, sujeta a una probabilidad, es decir, aquellos resultados mejores pero menos probable reciben una mejor calificación y aquellos resultados peores y menos probables reciben una peor calificación. 
+En esta sección de la metodología CAMEL se establecen rangos a los cuales le corresponde una calificación, sujeta a una probabilidad, es decir, aquellos resultados mejores, pero menos probable reciben una mejor calificación y aquellos resultados peores y menos probables reciben una peor calificación. 
 
 \input{RECURSOS-INVESTIGACION/003-MARCO-TEORICO/tabla-ejemplo-tipo-calificacion-camel}
 
 ### Definición de la ponderación
 
-La ponderación de los elementos CAMEL son asignados de manera arbitraria pero sujeto a lineamientos económico-financieros el cual presenta presenta las siguiente forma:
+La ponderación de los elementos CAMEL son asignados de manera arbitraria, pero sujeto a lineamientos económico-financieros el cual presenta la siguiente forma:
 
 $$CAMEL = \text{30\%C + 30\%A + 10\%M + 15\%E + 15\%L}$$
 
-Donde la mayor ponderación esta concentrado en los indicadores de capital y activos ya que en ultimo termino son estos mismos con la que una institución financiera puede hacer frente a sus obligaciones con terceros, como también dando mayor ponderación a los indicadores de rendimiento y liquidez respecto a los indicadores de administración debido a la relación que guardan los mismos con el activo y el capital, es decir, el rendimiento tiene efectos sobre el capital y por el otro lado la liquidez tiene efectos sobre los activos.
+Donde la mayor ponderación está concentrado en los indicadores de capital y activos ya que en ultimo termino son estos mismos con la que una institución financiera puede hacer frente a sus obligaciones con terceros, como también dando mayor ponderación a los indicadores de rendimiento y liquidez respecto a los indicadores de administración debido a la relación que guardan los mismos con el activo y el capital, es decir, el rendimiento tiene efectos sobre el capital y por el otro lado la liquidez tiene efectos sobre los activos.
 
 ### Calificación CAMEL
 
-Dado los pasos anteriores la metodología CAMEL asigna una puntuación a la institución, y permitirá determinar que institución le corresponde mayor solidez financiera respecto a las otras instituciones.
+Dado los pasos anteriores la metodología CAMEL asigna una puntuación a la institución, y permitirá determinar que institución les corresponde mayor solidez financiera respecto a las otras instituciones.
 
 
 ## Pronósticos
 
 El termino de pronóstico de uso común, definido por la Real Academia Española (RAE) como la acción y efecto de pronosticar, la misma RAE define pronosticar como predecir algo en el futuro a partir de indicios. El pronóstico es el proceso de estimación en situaciones de incertidumbre, para los propósitos de esta investigación, un pronóstico es un evento asociado a una distribución de probabilidad.
 
-En consecuencia los pronósticos por si solos tampoco pueden brindar información integrada sobre la situación económica-financiera futura de la institución, en consecuencia a esta necesidad, se encuentra las metodologías de evaluación junto con la simulación de procesos estocásticos.
+Donde los pronósticos por si solos tampoco pueden brindar información integrada sobre la situación económica-financiera futura de la institución, en consecuencia como respuesta a esta necesidad, se encuentra las metodologías de evaluación junto con la simulación de procesos estocásticos.
 
 <!-- #################################################################  -->
 <!--                    REDES NEURONALES                                -->
@@ -250,19 +251,19 @@ En consecuencia los pronósticos por si solos tampoco pueden brindar informació
 
 ## Inteligencia artificial
 
-"En la literatura referente a la inteligencia artificial no existe consenso sobre lo que se entiende como inteligencia artificial, pero estas diferencias se engloban en dos ideas, donde la inteligencia artificial se refieren a procesos mentales y al razonamiento".[@IAUEM]
+"En la literatura referente a la inteligencia artificial no existe consenso sobre lo que se entiende como inteligencia artificial, pero estas diferencias se engloban en dos ideas, donde la inteligencia artificial se refiere a procesos mentales y al razonamiento". [@IAUEM]
 
-Ahora bien el campo de la inteligencia artificial es relativamente reciente, y cobra atención en la actualidad por su capacidad de resolver problemas que con anterioridad sus resultados se divisaban lejanos, como el pronóstico de fenómenos no lineales, procesamientos de lenguaje natural, generador de imágenes, clasificación de objetos e procesos estocásticos donde se encuentra la proyección de estados financieros. 
+Ahora bien, el campo de la inteligencia artificial es relativamente reciente, y cobra atención en la actualidad por su capacidad de resolver problemas que con anterioridad sus resultados se divisaban lejanos, como el pronóstico de fenómenos no lineales, procesamientos de lenguaje natural, generador de imágenes, clasificación de objetos e procesos estocásticos donde se encuentra la proyección de estados financieros. 
 
 ### Aprendizaje supervisado con redes neuronales
 
-El aprendizaje supervisado corresponde a la situación en que se tiene una variable de salida, ya sea cuantitativa o cualitativa, que se desea predecir basándose en un conjunto de características.[@IALAT]
+El aprendizaje supervisado corresponde a la situación en que se tiene una variable de salida, ya sea cuantitativa o cualitativa, que se desea predecir basándose en un conjunto de características. [@IALAT]
 
 **El aprendizaje supervisado es una rama del aprendizaje automático, son algoritmos que permiten aprender a la red neuronal mediante datos ejemplos que están compuesta por un vector de entrada que son las variables independientes, y otro vector denomina etiquetas, donde la red se encarga de encontrar las relaciones existentes entre las variables independientes, realizando cambios y adaptando el modelo por medio de variaciones sujetas a una función de coste.** 
 
 ### Aprendizaje no supervisado con redes neuronales
 
-El aprendizaje no supervisado, "corresponde a la situación en que existe un conjunto de datos que contienen diversas características de determinados individuos, sin que ninguna de ellas se considere una variable de salida que se desee predecir".[@IALAT]
+El aprendizaje no supervisado, "corresponde a la situación en que existe un conjunto de datos que contienen diversas características de determinados individuos, sin que ninguna de ellas se considere una variable de salida que se desee predecir". [@IALAT]
 
 Aprendizaje no supervisado es un método de aprendizaje automático donde la red neuronal se ajusta a las observaciones. Se distingue del aprendizaje supervisado por el hecho de que no hay un conocimiento a priori es decir etiquetas que sirvan como guía, en el aprendizaje no supervisado solo se cuenta con un conjunto de datos de objetos de entrada.
 
@@ -270,7 +271,7 @@ Aprendizaje no supervisado es un método de aprendizaje automático donde la red
 
 ## Redes neuronales artificiales
 
-Las Redes Neuronales "son un paradigma de aprendizaje y procesamiento automático inspirado en la forma en que funciona el cerebro para realizar las tareas de pensar y tomar decisiones (sistema nervioso)".[@IALAT]
+Las Redes Neuronales "son un paradigma de aprendizaje y procesamiento automático inspirado en la forma en que funciona el cerebro para realizar las tareas de pensar y tomar decisiones (sistema nervioso)". [@IALAT]
 
 Una red neuronal es un método del aprendizaje automático que enseña a las computadoras a procesar datos de una manera que está inspirada en la forma en que lo hace el cerebro humano, las redes neuronales artificiales es modelo computacional resultado de diversas aportaciones científicas, consiste en un conjunto de unidades llamadas neuronas artificiales.
 
@@ -303,9 +304,9 @@ Dado lo anterior expuesto una capa de una red neuronal se debe entender como la 
 
 ### Funciones de activación
 
-Las funciones de activación distorsionan de forma no lineal las salidas de las neuronas para así no colapsar la red, es decir, las funciones de activación permiten conectar capas neuronales, dentro las funciones de activación más conocidas se tiene:
+Las funciones de activación distorsionan de forma no lineal las salidas de las neuronas para así no colapsar la red, es decir, las funciones de activación permiten conectar capas neuronales, dentro las funciones de activación más conocidas se tienen:
 
-#### Función escalon
+#### Función escalón
 
 Esta función asigna el valor de 1 si la salida de la neurona supera cierto umbral y cero si no lo supera.
 
@@ -368,9 +369,9 @@ Los algoritmos de propagación hacia adelante y hacia atrás son los que dotan d
 
 #### Propagación hacia adelante
 
-Para hacer manifiesto el algoritmo de propagación hacia adelante se supone que la estructura de red, estará compuesta de de cuatro capas, es decir, la capa de entrada y salida junto a dos capas neuronales ocultas, dada esta estructura el algoritmo tendrá el siguiente comportamiento:
+Para hacer manifiesto el algoritmo de propagación hacia adelante se supone que la estructura de red, estará compuesta de cuatro capas, es decir, la capa de entrada y salida junto a dos capas neuronales ocultas, dada esta estructura el algoritmo tendrá el siguiente comportamiento:
 
-- Capa de entrada esta definida por:
+- Capa de entrada está definida por:
 
 $$ x = a^{(1)}$$
 
@@ -378,19 +379,19 @@ $$ x = a^{(1)}$$
 
 $$ z^{(2)} = W^{(1)}x + b^{(1)} $$
 
-- Antes de pasar los datos procesados en las neuronas de la primera capa oculta deben ser pasados por las funcioes de activación, para que no colapse la red: 
+- Antes de pasar los datos procesados en las neuronas de la primera capa oculta deben ser pasados por las funciones de activación, para que no colapse la red: 
 
 $$a^{(2)} = f(z^{(2)})$$
 
-- Nuevamente se procesara los datos de la capa de anterior:
+- Nuevamente se procesará los datos de la capa de anterior:
 
 $$ z^{(3)} = W^{(2)}a^{(2)} + b^{(2)} $$
 
-- Tambien nuevamente se envuelve los resultados en una función de activación antes de pasar a la capa de salida:
+- También nuevamente se envuelve los resultados en una función de activación antes de pasar a la capa de salida:
 
 $$a^{(3)} = f(z^{(3)})$$
 
-- Finalmente tendremos una salida, la cual sera evaluada si coincide con los datos esperados.
+- Finalmente tendremos una salida, la cual será evaluada si coincide con los datos esperados.
 
 $$ s = W^{(3)}a^{(3)} $$
 
@@ -398,7 +399,7 @@ $$ s = W^{(3)}a^{(3)} $$
 
 El algoritmo de propagación hacia atrás o "backpropagation" tiene como objeto dotar de aprendizaje a las redes neuronales minimizando la función de costo ajustando los pesos y sesgos de la red, el nivel de ajuste está determinado por los gradientes para cada neurona hasta llegar a la capa de entrada.
 
-Dada un función de costo:
+Dada una función de costo:
 
 $$ C = f(s,y) $$
 

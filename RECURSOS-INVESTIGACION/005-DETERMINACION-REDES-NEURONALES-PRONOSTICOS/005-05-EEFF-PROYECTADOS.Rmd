@@ -35,7 +35,8 @@ if (!('listResultPEF' %in% ls())) {
 
 ## Estados financieros proyectados
 
-En esta ultima sección se presenta los estados financieros observados respecto a sus proyecciones correspondientes para cada cuenta, es decir, balance general y estado de resultados del sistema financiero en su conjunto para la fecha del 31 de diciembre de la gestión 2022 expresado en bolivianos.
+En esta última sección se presenta los estados financieros observados respecto a sus proyecciones correspondientes para cada cuenta, es decir, balance general y estado de resultados del sistema financiero en su conjunto para la fecha del 31 de diciembre de la gestión 2022 expresado en bolivianos.
+
 
 ```{r}
 idsEEFF <- c('ACTIVO',
@@ -49,19 +50,19 @@ idsEEFF <- c('ACTIVO',
              'ACTIVO_CARTERA_CARTERA_VENCIDA',
              'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_VENCIDA',
              'ACTIVO_CARTERA_CARTERA_REESTRUCTURADA_VENCIDA',
-             'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_O_REESTRUCTURADA_VENCIDA',
+
              
              'ACTIVO_CARTERA_CARTERA_EJECUCION_TOTAL',
              'ACTIVO_CARTERA_CARTERA_EN_EJECUCION',
              'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_EJECUCION',
              'ACTIVO_CARTERA_CARTERA_REESTRUCTURADA_EN_EJECUCION',
-             'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_O_REESTRUCTURADA_EN_EJECUCION',
+
              
              'ACTIVO_CARTERA_CARTERA_VIGENTE_TOTAL',
              'ACTIVO_CARTERA_CARTERA_VIGENTE',
              'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_VIGENTE',
              'ACTIVO_CARTERA_CARTERA_REESTRUCTURADA_VIGENTE',
-             'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_O_REESTRUCTURADA_VIGENTE',
+
              
              'ACTIVO_CARTERA_PREVISION_PARA_INCOBRABILIDAD_DE_CARTERA',
              
@@ -89,8 +90,6 @@ idsEEFF <- c('ACTIVO',
              'PATRIMONIO_AJUSTES_AL_PATRIMONIO',
              'PATRIMONIO_RESERVAS',
              'PATRIMONIO_RESULTADOS_ACUMULADOS',
-             
-             'PATRIMONIO_PASIVO_PATRIMONIO',
              
              'CUENTAS_CONTINGENTES_DEUDORAS',
              'CUENTAS_CONTINGENTES_DEUDORAS_CUENTAS_DE_ORDEN_DEUDORAS')

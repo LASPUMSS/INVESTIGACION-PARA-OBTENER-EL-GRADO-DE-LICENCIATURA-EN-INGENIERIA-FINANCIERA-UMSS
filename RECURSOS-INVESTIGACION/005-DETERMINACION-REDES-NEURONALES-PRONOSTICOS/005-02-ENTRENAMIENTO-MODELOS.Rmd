@@ -1,6 +1,3 @@
----
-output: pdf_document
----
 
 ```{r}
 source('RECURSOS-INVESTIGACION/R/get-dat-basic-normalizada.R')
@@ -47,7 +44,7 @@ if (!('listResultPEF' %in% ls())) {
 
 ```
 
-## Entrenamiento de modelos, proyeciones y simulaciones
+## Entrenamiento de modelos, proyecciones y simulaciones
 
 Para una mayor ejemplificación de los modelos empleados en las diferentes cuentas se presenta el proceso de entrenamiento para la serie de tiempo correspondiente a la cuenta de resultado neto de la gestión.
 
@@ -62,7 +59,7 @@ resultadosMCO <- data.frame(VARIABLES=variables, BETAS=coef(listResultPEF[[id]]$
 renderTableBasic(resultadosMCO,captionTable = 'Tasas de cambio modelo clasico')
 ```
 
-Donde cada tasa de cambio esta sujeta a su interpretación, por ejemplo la tasa de cambio correspondiente a la tendencia nos indica que el resultado neto de gestión sufre una variación de `r format(resultadosMCO[2,2], scientific=FALSE)` Bs por cada mes, ahora bien respecto a las estaciones quiere decir por ejemplo que si la observación se encuentra en la estación 2 el resultado neto de gestión sufre una variación de `r format(resultadosMCO[3,2], scientific=FALSE)`.
+Donde cada tasa de cambio está sujeta a su interpretación, por ejemplo la tasa de cambio correspondiente a la tendencia nos indica que el resultado neto de gestión sufre una variación de `r format(resultadosMCO[2,2], scientific=FALSE)` Bs por cada mes, ahora bien respecto a las estaciones quiere decir por ejemplo que si la observación se encuentra en la estación 2 el resultado neto de gestión sufre una variación de `r format(resultadosMCO[3,2], scientific=FALSE)`.
 
 ### ARIMA
 
@@ -73,11 +70,11 @@ resultadosARIMA <- data.frame(t(coef(listResultPEF[[id]]$arimaModel)))
 renderTableBasic(resultadosARIMA,captionTable = 'Regresores y medias moviles del modeo ARIMA')
 ```
 
-Es decir, que el algoritmo de [@R-forecast] determino que el modelo ARIMA que minimiza el coeficiente de información de Akaike (AIC) esta definido por un autoregresor junto a una media móvil y un autoregresor estacional.
+Es decir, que el algoritmo de [@R-forecast] determino que el modelo ARIMA que minimiza el coeficiente de información de Akaike (AIC) está definido por un auto regresor junto a una media móvil y un auto regresor estacional.
 
 ### Redes neuronales
 
-Una vez entrenado el modelo de red neuronal para la cuenta correspondiente su estructura preentara la siguiente forma:
+Una vez entrenado el modelo de red neuronal para la cuenta correspondiente su estructura presentara la siguiente forma:
 
 ```{r, fig.cap='Arquitectura de red neuronal por la cuenta.'}
 library(devtools)
@@ -88,11 +85,11 @@ struct<-listResultPEF[[id]]$nnModel$model[[1]]$n
 plot.nnet(wts.in,struct=struct)
 ```
 
-Así también, dentro lo correspondiente al análisis de los pesos ajustados de una red neuronal estos no pueden ser interpretados mas que solo como una tasa de cambio.
+Así también, dentro lo correspondiente al análisis de los pesos ajustados de una red neuronal estos no pueden ser interpretados más que solo como una tasa de cambio.
 
 ### Eficiencia de los modelos en el entrenamiento
 
-Una vez terminado el entrenamiento de los modelos se realizara la evaluación de los mismos.
+Una vez terminado el entrenamiento de los modelos se realizará la evaluación de los mismos.
 
 ```{r}
 renderTableBasic( listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% transformTableAuxPef, 
@@ -101,18 +98,18 @@ renderTableBasic( listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% tra
 
 Es decir que los datos pronosticados del resultado neto de la gestión para el intervalo de tiempo correspondiente a los datos de entrenamiento se ajustan en `r listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% select(NN) %>% round(digits = 4) %>% pull() *100`,% `r listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% select(MCO) %>% round(digits = 4) %>% pull() *100`% y `r listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% select(ARIMA) %>% round(digits = 4) %>% pull() *100`% para los modelos correspondientes suscritos a la tabla anterior.
 
-### Eficiencia de los modelos en los pronosticos
+### Eficiencia de los modelos en los pronósticos
 
-Posteriormente se calcula el ajuste de las proyecciones respecto a los datos de prueba, los cuales son nuevos para el modelo y nos dan una idea de que si el modelo esta logrando generalizar los patrones contenidos en la serie de tiempo.
+Posteriormente se calcula el ajuste de las proyecciones respecto a los datos de prueba, los cuales son nuevos para el modelo y nos dan una idea de que si el modelo está logrando generalizar los patrones contenidos en la serie de tiempo.
 
 ```{r}
 renderTableBasic( listResumeModels$r2ForecastResum %>% filter(CUENTAS==id) %>% transformTableAuxPef,
                   captionTable = 'Ajuste R2 de proyecciones de modelos para resultado neto de la gestion')
 ```
 
-### Simulacion de proyeciones
+### Simulación de proyecciones
 
-Sobre los mismos modelos se realizan simulaciones sobre las proyecciones que son el resultado de la proyección promedio mas menos selección aleatoria de los errores o desviaciones, sobre los cuales se calcula su ajuste R2 donde dichas simulaciones nos muestra el rango de ajuste al que esta sujeto cada modelo para la cuenta de resultado neto de la gestión , los cuales pueden ser visualizados a través de histogramas.
+Sobre los mismos modelos se realizan simulaciones sobre las proyecciones que son el resultado de la proyección promedio más menos selección aleatoria de los errores o desviaciones, sobre los cuales se calcula su ajuste R2 donde dichas simulaciones muestran el rango de ajuste al que está sujeto cada modelo para la cuenta de resultado neto de la gestión, los cuales pueden ser visualizados a través de histogramas.
 
 ```{r, fig.cap='Ajuste R2 de los modelos para proyecciones simuladas por cuenta'}
 z <- data.frame(r2Model=listResultPEF[[id]]$nnModelSimulate$r2Model)

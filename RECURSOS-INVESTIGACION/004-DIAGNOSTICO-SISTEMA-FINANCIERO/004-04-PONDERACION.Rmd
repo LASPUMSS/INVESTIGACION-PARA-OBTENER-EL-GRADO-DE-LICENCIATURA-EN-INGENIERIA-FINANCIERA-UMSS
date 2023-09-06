@@ -1,6 +1,5 @@
 ## Ponderación de elementos CAMEL
 
-La ponderación de los elementos CAMEL son asignados siguiendo los lineamientos presentado en el marco teórico:
+La ponderación de los elementos CAMEL son asignados siguiendo los lineamientos presentados en el marco teórico:
 
 $$CAMEL = \text{30\%C + 30\%A + 10\%M + 15\%E + 15\%L}$$
-

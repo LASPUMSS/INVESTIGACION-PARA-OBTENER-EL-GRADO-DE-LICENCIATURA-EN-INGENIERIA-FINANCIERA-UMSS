@@ -1,7 +1,7 @@
 
 # Antecedentes
 
-Los antecedentes presentados a continuación cubren dos segmentos el campo de las finanzas y el campo de las redes neuronales, considerando también como convergen ambos en el tiempo.
+Los antecedentes presentados a continuación cubren dos segmentos el campo de las finanzas y el campo de las redes neuronales, considerando también como convergen ambos en el tiempo partiendo de lo general a lo especifico según corresponda.
 
 <!-- ANTECEDENTES FINANZAS -->
 
@@ -17,7 +17,7 @@ Así también en 1973 de la mano de la IASC (Internacional Accounting Standards 
 
 ## Redes neuronales
 
-Ahora por el lado del redes neuronales artificiales se nombran los siguientes antecedentes:
+Ahora por el lado de las redes neuronales artificiales se nombran los siguientes antecedentes:
 
 Como antecedentes generales, muestran que los inicios de la inteligencia artificial de manera formal se dieron en el año 1943 cuando se colocó la primera piedra angular sobre la que se basó lo que hoy se conoce como inteligencia artificial, de la mano de Warren McCulloch y Walter Pitts, con la presentación del primer modelo matemático de aprendizaje, donde por primera vez se dota a un modelo autónomo la capacidad de aprendizaje.
 
@@ -32,7 +32,7 @@ En 1969 se produjo un declive en las redes neuronales en consecuencia, de una pu
 
 Pero en 1985 John Hopfield, hizo que las redes neuronales cobraran nuevamente importancia con su libro "Computación neuronal de decisiones en problemas de optimización" donde presenta el algoritmo de retropropagación que reduce cantidad de cómputo en proceso de aprendizaje de las redes neuronales, dotando a esta de la capacidad de resolver problemas no lineales. También 1986 David E. Rumelhart y Geoffrey E. Hinton, mejoraron el algoritmo de aprendizaje de propagación hacia atrás, que permitieron recortar el tiempo aún más el proceso de aprendizaje con respecto a los modelos anteriores.
 
-Uno de los aportes más recientes vino por parte de la Universidad de Toronto y la empresa de Google en 2017 con la publicación del articulo titulado "Atención es todo lo que necesitas", con la presentación de la arquitectura denominada "transformes" que de la mano de las redes neuronales dotan de atención al modelo de inteligencia artificial.
+Uno de los aportes más recientes vino por parte de la Universidad de Toronto y la empresa de Google en 2017 con la publicación del artículo titulado "Atención es todo lo que necesitas", con la presentación de la arquitectura denominada "transformes" que de la mano de las redes neuronales dotan de atención al modelo de inteligencia artificial.
 
 Ahora bien como antecedentes específicos Bolivia no es un país que lleve adelante de investigación o desarrollos significativos sobre inteligencia artificial como un dato relevante según el reporte Government AI Readiness Index 2020 (Oxford Insights), Bolivia ocupa el puesto 122 de 172 países, y el 22 de 32 en la región de Latinoamérica y el Caribe.
 
@@ -40,5 +40,5 @@ Ahora bien como antecedentes específicos Bolivia no es un país que lleve adela
 
 ## Convergencia de finanzas y redes neuronales
 
-Concluyendo la sección el punto temporal la que se hace manifiesto que convergen el campo de las ciencias sociales y los modelos matemáticos-estadísticos fue traído de la mano de Francis Galton en 1886, quien acuño el términos de regresión en su articulo "Semejanza familiar en estatura", la hipótesis propuesta en este articulo fue contrastada por Karl Pearson dando lugar a la ley de regresión universal, desde este punto hasta la actualidad los métodos de regresión han evolucionado llegando a los métodos mas actuales y complejos como son las redes neuronales artificiales.
+Concluyendo la sección el punto temporal la que se hace manifiesto que convergen el campo de las ciencias sociales y los modelos matemáticos-estadísticos fue traído de la mano de Francis Galton en 1886, quien acuño el términos de regresión en su artículo "Semejanza familiar en estatura", la hipótesis propuesta en este artículo fue contrastada por Karl Pearson dando lugar a la ley de regresión universal, desde este punto hasta la actualidad los métodos de regresión han evolucionado llegando a los métodos más actuales y complejos como son las redes neuronales artificiales.
 
