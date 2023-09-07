@@ -1,5 +1,5 @@
 %----------------------------
-% Paquetes para kable_extra
+% PAQUETES PARA kable_extra
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{array}
@@ -15,6 +15,7 @@
 \usepackage{makecell}
 \usepackage{xcolor}
 % -----------------------
+% OTROS PAQUETES
 
 \usepackage{pdfpages} % Para insertar pdfs
 \usepackage[utf8]{inputenc}
@@ -22,13 +23,18 @@
 %\usepackage{graphicx}
 %\usepackage{copyrightbox}
 \usepackage{titlesec}
-
-\floatplacement{figure}{H}
-
+\usepackage{titletoc} % Modificar tabla de contenido
 \usepackage{multirow} % Para tablas
 \usepackage{rotating} % Para girar tablas
 \usepackage{caption} % editar formato captions
 
+%----------------------------
+\setcounter{secnumdepth}{6}
+\setcounter{tocdepth}{4}
+
+\floatplacement{figure}{H}
+
+\renewcommand{\baselinestretch}{1.5}
 
 \addto\captionsspanish{
 \renewcommand{\contentsname}{Indice capitular}
@@ -38,11 +44,44 @@
 \renewcommand{\tablename}{Tabla}
 }
 
-\renewcommand{\baselinestretch}{1.5}
+%----------------------------
+% Clases Nuevas y comandos
+\titleclass{\frontms}{page}[\section]
 
+\newcommand*\Sectionname{Capítulo}
+
+%----------------------------
+% Definir la profundidad de las clases
+\usepackage{hyperref}
+\makeatletter
+\def\toclevel@frontms{1}
+\def\toclevel@section{1}
+\def\toclevel@sectionsub{2}
+\def\toclevel@subsection{3}
+\def\toclevel@subsubsection{4}
+\makeatother
+
+% -----------------------
+% Formatos personalizados DOC
 \titleformat{\section}{\bfseries\Large}{Capitulo \thesection.}{0.5em}{\centering}
 
+% -----------------------
+% Formatos personalizados TOC
 
+\titlecontents*{section}
+    [0pt]
+    {\addvspace{2pc}\centering\bfseries}
+    {\Sectionname\ \thecontentslabel.\quad}
+    {}
+    {}
+    
+
+\titlecontents{frontms}
+    [0pt]
+    {\addvspace{-2pt}\bfseries}
+    {\normalsize}
+    {}
+    {\titlerule*[8pt]{.}\contentspage}
 
 %----------------------------
 % Editar size de los captions
@@ -57,4 +96,5 @@
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \fancyhead[R]{\thepage}
-%----------------------------
+
+

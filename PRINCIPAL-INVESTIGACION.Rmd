@@ -4,7 +4,6 @@ output:
         includes:
             in_header: assets/csl-bib-sty/styles.sty
         df_print: kable
-        toc_depth: 2
         number_sections: true
 geometry: "left=3cm,right=2cm,top=2cm,bottom=2cm"
 fontsize: 12pt
@@ -35,12 +34,21 @@ options(scipen=999)
 \clearpage
 \pagenumbering{roman}
 
+
+<!-- PREAMBULO -->
+\newpage
+```{r, child="RECURSOS-INVESTIGACION/000-PREAMBULO/000-PREAMBULO.Rmd"}
+
+```
+
+
 \newpage
 \tableofcontents
 \newpage
 \listoffigures
 \newpage
 \listoftables
+
 
 \clearpage
 \pagenumbering{arabic}
@@ -62,6 +70,7 @@ options(scipen=999)
 ```{r, child="RECURSOS-INVESTIGACION/003-MARCO-TEORICO/003-MARCO-TEORICO.Rmd"}
 
 ```
+
 
 <!-- DIAGNOSTICO SISTEMA FINANCIERO -->
 \newpage
@@ -92,3 +101,4 @@ options(scipen=999)
 ```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-ANEXOS.Rmd"}
 
 ```
+

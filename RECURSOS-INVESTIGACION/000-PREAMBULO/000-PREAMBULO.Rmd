@@ -3,17 +3,27 @@ output: pdf_document
 ---
 
 <!-- RESUMEN -->
+\newpage
+\section*{Resumen}
+\phantomsection\addcontentsline{toc}{frontms}{Resumen}
 
 
 <!-- ABSTRAC -->
+\newpage
+\section*{Abstrac}
+\phantomsection\addcontentsline{toc}{frontms}{Abstrac}
 
 
 <!-- AGRADECIMIENTOS -->
-
 
 <!-- DEDICATORIA -->
 
 
 <!-- INTRODUCCION -->
+
+\newpage
+\section*{Introducción}
+\phantomsection\addcontentsline{toc}{frontms}{Introducción}
+
 
 
