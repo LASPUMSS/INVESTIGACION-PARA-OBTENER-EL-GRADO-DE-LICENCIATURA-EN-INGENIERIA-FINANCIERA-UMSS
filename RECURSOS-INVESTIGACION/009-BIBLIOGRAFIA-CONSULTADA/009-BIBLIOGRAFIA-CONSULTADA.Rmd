@@ -1,5 +1,5 @@
 
 \section*{Bibliográfica consultada}
-\phantomsection\addcontentsline{toc}{frontms}{\protect\numberline{}Bibliográfica consultada}
+\phantomsection\addcontentsline{toc}{footerms}{Bibliográfica consultada}
 
 <div id="refs"></div>

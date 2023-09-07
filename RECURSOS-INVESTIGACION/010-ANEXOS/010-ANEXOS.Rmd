@@ -1,10 +1,6 @@
----
-output: pdf_document
----
-
 \vspace*{\fill}
 \section*{Anexos}
-\phantomsection\addcontentsline{toc}{frontms}{\protect\numberline{}Anexos}
+\phantomsection\addcontentsline{toc}{footerms}{Anexos}
 \vspace*{\fill}
 
 <!-- ############################################################### -->

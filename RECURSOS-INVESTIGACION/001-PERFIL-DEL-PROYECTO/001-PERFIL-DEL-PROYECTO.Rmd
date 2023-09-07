@@ -16,7 +16,7 @@ Una de las alternativas de tratamiento de esta información que ofrece el sistem
 
 ## Formulación del problema central
 
-¿Sera que, con la aplicación del método de redes neuronales se obtendrá información adecuada con mayor aproximación a la situación económica-financiera de la institución financiera analizada?
+¿Sera que, con la aplicación del método de redes neuronales se obtendrá información adecuada con mayor aproximación a la situación económica-financiera observada del sistema financiero en su conjunto?
 
 ## Justificación
 
@@ -59,7 +59,7 @@ Proporcionar información financiera adecuada con mayor aproximación a la situa
 
 ## Hipótesis
 
-Con la determinación de proyecciones de estados financieros por el método de redes neuronales, de entidades financieras de Bolivia, se logrará proyectar información con mayor aproximación a la situación económica-financiera observada de la institución correspondiente.
+Con la determinación de proyecciones de estados financieros por el método de redes neuronales, de entidades financieras de Bolivia, se logrará proyectar información con mayor aproximación a la situación económica-financiera observada del sistema financiero.
 
 ### Elementos o componentes
 
