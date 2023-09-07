@@ -4,11 +4,12 @@
 \section*{Resumen}
 \phantomsection\addcontentsline{toc}{frontms}{Resumen}
 
-La presente investigación parte de la idea de que la existencia de fenómenos no lineales en el campo de las ciencias económicas hace necesario explorar modelos alternativos que permitan encontrar patrones no sujetos al análisis subjetivo.
+La presente investigación parte de la idea de que la existencia de fenómenos no lineales en el campo de las ciencias económicas hace necesario explorar modelos alternativos que permitan encontrar patrones no sujetos al análisis convencional.
 
 Se busca responder la hipótesis de que si el modelo de redes neuronales artificiales adaptado a series de tiempo correspondiente a las cuentas de los estados financieros de las entidades financieras de Bolivia, obtiene mayor ajuste y captación de patrones que los modelos tradicionales como el modelo ARIMA.
 
 Los resultados arrojaron que el modelo de redes neuronales artificiales obtuvo mayor ajuste y mejor captación de patrones que modelos tradicionales que en consecuencia proporcionar información financiera adecuada con mayor aproximación a la situación económica-financiera observada.
+
 
 
 <!-- ABSTRACT -->
@@ -16,11 +17,12 @@ Los resultados arrojaron que el modelo de redes neuronales artificiales obtuvo m
 \section*{Abstract}
 \phantomsection\addcontentsline{toc}{frontms}{Abstract}
 
-This research is based on the idea that the existence of non-linear phenomena in the field of economic sciences makes it necessary to explore alternative models that allow finding patterns not subject to subjective analysis.
+This research stems from the idea that the existence of nonlinear phenomena in the field of economics calls for the exploration of alternative models that allow for the discovery of patterns not identify by conventional analysis. 
 
-It seeks to answer the hypothesis that if the artificial neural network model adapted to time series corresponding to the accounts of the financial statements of financial institutions in Bolivia, it obtains a better fit and capture of patterns than traditional models such as the ARIMA model.
+The aim is to test the hypothesis that if the artificial neural network model adapted to time series corresponding to the financial statements of financial institutions in Bolivia that it would provide a better fit and pattern recognition than traditional models like the ARIMA model.
 
-The results showed that the artificial neural network model obtained a better adjustment and better capture of patterns than traditional models that consequently provide adequate financial information with a greater approximation to the observed economic-financial situation.
+The results showed that the artificial neural network model achieved a better fit and superior pattern recognition when compared to traditional models that consequently providing more accurate financial information approximating the observed economic and financial situation.
+
 
 <!-- AGRADECIMIENTOS -->
 
