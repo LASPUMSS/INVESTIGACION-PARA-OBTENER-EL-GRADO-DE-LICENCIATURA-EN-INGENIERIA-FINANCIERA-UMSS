@@ -112,7 +112,7 @@ Se recurrirá a las fuentes de compilación de información bibliográfica refer
 
 - Recopilación de información basada en fuentes primarias, secundarias y terciarias.
 - Análisis de la información recopilada, con fines de depuración, selección, tabulación mediante lenguajes de programación R y Python orientado al análisis de datos, adecuando a la arquitectura de la red neuronal.
-- La investigación tendrá un repositorio en GitHub (https://github.com/LASPUMSS/INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS).
+- La investigación tendrá un repositorio en GitHub (https://github.com/LASPUMSS/PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS).
 
 
 
