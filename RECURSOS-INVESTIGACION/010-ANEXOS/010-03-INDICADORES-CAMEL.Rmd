@@ -37,7 +37,14 @@ datCamelCalificacionEntidad <- datCamelCalificacionEntidad %>% filter(FECHA>date
 
 \subsection*{Anexo 3 - Indicadores CAMEL calculados}
 
+A continuación se presenta las tablas resultantes de los calulos realizados para el diagnostico financieros por sectores.
+
 \subsubsection*{Capital}
+
+- Coeficiente de adecuación patrimonial (CAP)
+- Coeficiente de cobertura de cartera en mora (CCCM)
+- Coeficiente ácido de cobertura de cartera en mora (CACCM)
+- Coeficiente de cobertura patrimonial (CCP)
 
 ```{r}
 id <- 'indCap'
@@ -50,6 +57,11 @@ renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de capital CAMEL') %>%
 \newpage
 \subsubsection*{Activos}
 
+- Coeficiente de exposición de cartera (CEC)
+- Coeficiente de previsión de cartera (CPC)
+- Coeficiente de previsión de cartera en mora (CPCM)
+- Coeficiente de reposición de cartera (CRC)
+
 ```{r}
 id <- 'indAct'
 renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de activos CAMEL') %>% 
@@ -60,6 +72,11 @@ renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de activos CAMEL') %>%
 
 \newpage
 \subsubsection*{Administración y rentabilidad}
+
+- Coeficiente de cobertura gastos administrativos (CCGA) 
+- Coeficiente ácido de cobertura gastos administrativos (CACGA)
+- Coeficiente de rendimiento sobre activos (ROA) 
+- Coeficiente de rendimiento sobre patrimonio (ROE)
 
 ```{r}
 id1 <- 'indAdm'
@@ -73,6 +90,9 @@ renderTableCamelIndNorm2(id1, id2 , datCamelIndNorm, 'Indicadores de administrac
 \newpage
 \subsubsection*{Liquidez}
 
+- Coeficiente de capacidad de pago frente a pasivos (CCPP)
+- Coeficiente ácido de capacidad de pago frente a pasivos (CACPP) 
+ 
 ```{r}
 id <- 'indLq'
 renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de liquidez CAMEL') %>% 

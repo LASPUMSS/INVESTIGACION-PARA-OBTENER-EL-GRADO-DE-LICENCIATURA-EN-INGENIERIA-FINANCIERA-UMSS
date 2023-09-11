@@ -100,4 +100,3 @@ options(scipen=999)
 ```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-ANEXOS.Rmd"}
 
 ```
-

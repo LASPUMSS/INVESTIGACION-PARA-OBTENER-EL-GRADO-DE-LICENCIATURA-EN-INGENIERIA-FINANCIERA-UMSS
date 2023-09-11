@@ -1,6 +1,3 @@
----
-output: pdf_document
----
 
 ```{r}
 source('RECURSOS-INVESTIGACION/R/get-dat-basic-normalizada.R')
@@ -35,8 +32,11 @@ if (!('listResultPEF' %in% ls())) {
 
 ## Estados financieros proyectados
 
-En esta última sección se presenta los estados financieros observados respecto a sus proyecciones correspondientes para cada cuenta, es decir, balance general y estado de resultados del sistema financiero en su conjunto para la fecha del 31 de diciembre de la gestión 2022 expresado en bolivianos.
+En esta última sección se presenta los estados financieros observados respecto a sus proyecciones correspondientes para cada cuenta, es decir, balance general y estado de resultados del sistema financiero en su conjunto para la fecha del 31 de diciembre de la gestión 2022 expresado en bolivianos para los modelos antes presentados:
 
+- Redes neuronales artificiales (NN)
+- Modelo clásico de series de tiempo (MCO)
+- ARIMA
 
 ```{r}
 idsEEFF <- c('ACTIVO',
