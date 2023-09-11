@@ -27,6 +27,16 @@ datCamelCalificacionEntidadSinPoderar <-
 datCamelCalificacionEntidad <- 
     getDatCamelCalificacionEntidad(datCamelCalificacionIndicadores)
 
+#########################################################################
+
+dateFilter <- '2022-01-01'
+
+datCamelIndNorm <- datCamelIndNorm %>% filter(FECHA>dateFilter)
+
+datCamelCalificacionIndicadores <- datCamelCalificacionIndicadores %>% filter(FECHA>dateFilter)
+datCamelCalificacionEntidadSinPoderar <- datCamelCalificacionEntidadSinPoderar %>% filter(FECHA>dateFilter)
+datCamelCalificacionEntidad <- datCamelCalificacionEntidad %>% filter(FECHA>dateFilter)
+
 ```
 
 
@@ -39,7 +49,9 @@ datAux <- datCamelCalificacionEntidadSinPoderar[,c(-1,-9)]
 datAux$TIPO_DE_ENTIDAD <- gsub('_',' ', datAux$TIPO_DE_ENTIDAD)
 names(datAux) <- gsub('_',' ', names(datAux))
 
-renderTableBasic(datAux, 'Calificaciones CAMEL sin poderar')
+renderTableBasic(datAux, 'Calificaciones CAMEL sin poderar') %>% 
+    footnote(general = 'Las variables presentadas corresponden a los meses contenidos de la gestión 2022.',
+             general_title = 'NOTA: ' )
 ```
 
 
@@ -53,5 +65,7 @@ datAux <- datCamelCalificacionEntidad[,-1]
 datAux$TIPO_DE_ENTIDAD <- gsub('_',' ', datAux$TIPO_DE_ENTIDAD)
 names(datAux) <- gsub('_',' ', names(datAux))
 
-renderTableBasic(datAux, 'Calificación CAMEL ponderada')
+renderTableBasic(datAux, 'Calificación CAMEL ponderada') %>% 
+    footnote(general = 'Las variables presentadas corresponden a los meses contenidos de la gestión 2022.',
+             general_title = 'NOTA: ' )
 ```

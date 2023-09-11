@@ -23,6 +23,15 @@ datCamelCalificacionIndicadores <-
 datCamelCalificacionEntidad <- 
     getDatCamelCalificacionEntidad(datCamelCalificacionIndicadores)
 
+#########################################################################
+
+dateFilter <- '2022-01-01'
+
+datCamelIndNorm <- datCamelIndNorm %>% filter(FECHA>dateFilter)
+
+datCamelCalificacionIndicadores <- datCamelCalificacionIndicadores %>% filter(FECHA>dateFilter)
+datCamelCalificacionEntidad <- datCamelCalificacionEntidad %>% filter(FECHA>dateFilter)
+
 ```
 
 
@@ -32,7 +41,9 @@ datCamelCalificacionEntidad <-
 
 ```{r}
 id <- 'indCap'
-renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de capital CAMEL')
+renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de capital CAMEL') %>% 
+    footnote(general = 'Las variables presentadas corresponden a los meses contenidos de la gestión 2022.',
+             general_title = 'NOTA: ' )
 ```
 
 
@@ -41,7 +52,9 @@ renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de capital CAMEL')
 
 ```{r}
 id <- 'indAct'
-renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de activos CAMEL')
+renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de activos CAMEL') %>% 
+    footnote(general = 'Las variables presentadas corresponden a los meses contenidos de la gestión 2022.',
+             general_title = 'NOTA: ' )
 ```
 
 
@@ -51,7 +64,9 @@ renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de activos CAMEL')
 ```{r}
 id1 <- 'indAdm'
 id2 <- 'indBenf'
-renderTableCamelIndNorm2(id1, id2 , datCamelIndNorm, 'Indicadores de administración y rentabilidad CAMEL')
+renderTableCamelIndNorm2(id1, id2 , datCamelIndNorm, 'Indicadores de administración y rentabilidad CAMEL') %>% 
+    footnote(general = 'Las variables presentadas corresponden a los meses contenidos de la gestión 2022.',
+             general_title = 'NOTA: ' )
 ```
 
 
@@ -60,7 +75,9 @@ renderTableCamelIndNorm2(id1, id2 , datCamelIndNorm, 'Indicadores de administrac
 
 ```{r}
 id <- 'indLq'
-renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de liquidez CAMEL')
+renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de liquidez CAMEL') %>% 
+    footnote(general = 'Las variables presentadas corresponden a los meses contenidos de la gestión 2022.',
+             general_title = 'NOTA: ' )
 ```
 
 

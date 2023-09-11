@@ -33,7 +33,9 @@ names(datForRender) <- c('FECHA','TIPO DE ENTIDAD', 'C.VC.','C.E.', 'C.V.')
 
 captionTable <- 'Cartera vencida, en ejecución y vigente expresado en bolivianos utilizado en análisis CAMEL'
 renderTableBasic(datForRender, 
-                 captionTable = captionTable)
+                 captionTable = captionTable) %>% 
+    footnote(general = 'Las variables presentadas corresponden a los meses contenidos de la gestión 2022.',
+             general_title = 'NOTA: ' )
 ```
 
 
@@ -57,7 +59,7 @@ names(datForRender) <- c('FECHA','TIPO DE ENTIDAD', 'C.E.R.','C.V.R.','C.VC.R.')
 captionTable <- 'Cartera vencida reprogramada, en ejecución reprogramada y vigente reprogramada expresado en bolivianos utilizado en análisis CAMEL'
 renderTableBasic(datForRender, 
                  captionTable = captionTable) %>% 
-    footnote(general = 'Las variables presentadas corresponden los meses contenidos de la gestión 2022.',
+    footnote(general = 'Las variables presentadas corresponden a los meses contenidos de la gestión 2022.',
              general_title = 'NOTA: ' )
 ```
 
@@ -79,7 +81,7 @@ names(datForRender) <- c('FECHA','TIPO DE ENTIDAD', 'P.I.C.','PATRIMONIO', 'ACTI
 captionTable <- 'Previsión incobrabilidad de cartera, patrimonio y activo expresado en bolivianos utilizado en análisis CAMEL'
 renderTableBasic(datForRender, 
                  captionTable = captionTable) %>% 
-    footnote(general = 'Las variables presentadas corresponden los meses contenidos de la gestión 2022.',
+    footnote(general = 'Las variables presentadas corresponden a los meses contenidos de la gestión 2022.',
              general_title = 'NOTA: ' )
 ```
 
@@ -104,7 +106,7 @@ names(datForRender) <- c('FECHA','TIPO DE ENTIDAD', 'A.R.', 'A.C.','A.D.')
 captionTable <- 'Activo realizabe, contingente y disponible expresado en bolivianos utilizado en análisis CAMEL'
 renderTableBasic(datForRender, 
                  captionTable = captionTable) %>% 
-    footnote(general = 'Las variables presentadas corresponden los meses contenidos de la gestión 2022.',
+    footnote(general = 'Las variables presentadas corresponden a los meses contenidos de la gestión 2022.',
              general_title = 'NOTA: ' )
 ```
 
@@ -128,7 +130,7 @@ names(datForRender) <- c('FECHA','TIPO DE ENTIDAD', 'A.I.T.','PASIVO', 'G.A.')
 captionTable <- 'Activo de inversiones temporarias, pasivo y gastos administrativos expresado en bolivianos utilizado en análisis CAMEL'
 renderTableBasic(datForRender, 
                  captionTable = captionTable) %>% 
-    footnote(general = 'Las variables presentadas corresponden los meses contenidos de la gestión 2022.',
+    footnote(general = 'Las variables presentadas corresponden a los meses contenidos de la gestión 2022.',
              general_title = 'NOTA: ' )
 ```
 
@@ -152,6 +154,6 @@ names(datForRender) <- c('FECHA','TIPO DE ENTIDAD', 'IMPUESTOS' ,'R.O.','I.N.')
 captionTable <- 'Impuestos, resultado opertativo y neto expresado en bolivianos utilizado en análisis CAMEL'
 renderTableBasic(datForRender, 
                  captionTable = captionTable) %>% 
-    footnote(general = 'Las variables presentadas corresponden los meses contenidos de la gestión 2022.',
+    footnote(general = 'Las variables presentadas corresponden a los meses contenidos de la gestión 2022.',
              general_title = 'NOTA: ' )
 ```

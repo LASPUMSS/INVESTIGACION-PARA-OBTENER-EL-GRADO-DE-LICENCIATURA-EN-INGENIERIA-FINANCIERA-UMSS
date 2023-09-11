@@ -60,14 +60,19 @@
 
 % -----------------------
 % Formatos personalizados DOC
-\titleformat{\section}{\bfseries\Large}{Capitulo \thesection.}{0.5em}{\centering}
+\titleformat{\section}[block]
+            {\LARGE\bfseries}
+            {\Sectionname \thesection.\quad}
+            {0pt}
+            {\centering}
+
 
 % -----------------------
 % Formatos personalizados TOC
 
 \titlecontents*{section}
     [0pt]
-    {\addvspace{2pc}\centering\bfseries\normalsize}
+    {\addvspace{2pc}\centering\bfseries\large}
     {\Sectionname \thecontentslabel. \quad \MakeUppercase}
     {}
     {}
@@ -109,7 +114,7 @@
     
 \titlecontents{footerms}
     [0pt]
-    {\addvspace{2pc}\bfseries}
+    {\addvspace{2pc}\bfseries\large}
     {}
     {\MakeUppercase}
     {\titlerule*[8pt]{}\contentspage}
@@ -119,6 +124,7 @@
 
 \captionsetup[figure]{font=small,labelfont=bf}
 \captionsetup[table]{font=small,labelfont=bf}
+
 
 %----------------------------
 % Paginacion arriba-derecha

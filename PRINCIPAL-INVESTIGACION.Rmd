@@ -29,7 +29,7 @@ options(scipen=999)
 
 ```
 
-\includepdf[pages=-]{RECURSOS-INVESTIGACION/CARATULA-TESIS/CARATULA-TESIS}
+\includepdf[pages=-]{RECURSOS-INVESTIGACION/CARATULA/CARATULA}
 
 \clearpage
 \pagenumbering{roman}

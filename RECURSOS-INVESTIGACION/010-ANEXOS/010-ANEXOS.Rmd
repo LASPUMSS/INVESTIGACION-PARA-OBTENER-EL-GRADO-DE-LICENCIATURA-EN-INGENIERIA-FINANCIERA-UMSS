@@ -1,6 +1,6 @@
 \vspace*{\fill}
-\section*{Anexos}
-\phantomsection\addcontentsline{toc}{footerms}{Anexos}
+\section*{ANEXOS}
+\phantomsection\addcontentsline{toc}{footerms}{ANEXOS}
 \vspace*{\fill}
 
 <!-- ############################################################### -->

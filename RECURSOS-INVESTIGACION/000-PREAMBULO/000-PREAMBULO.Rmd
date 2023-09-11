@@ -1,8 +1,8 @@
 
 <!-- RESUMEN -->
 \newpage
-\section*{Resumen}
-\phantomsection\addcontentsline{toc}{frontms}{Resumen}
+\section*{RESUMEN}
+\phantomsection\addcontentsline{toc}{frontms}{RESUMEN}
 
 La presente investigación parte de la idea de que la existencia de fenómenos no lineales en el campo de las ciencias económicas hace necesario explorar modelos alternativos que permitan encontrar patrones no sujetos al análisis convencional.
 
@@ -14,8 +14,8 @@ Los resultados arrojaron que el modelo de redes neuronales artificiales obtuvo m
 
 <!-- ABSTRACT -->
 \newpage
-\section*{Abstract}
-\phantomsection\addcontentsline{toc}{frontms}{Abstract}
+\section*{ABSTRACT}
+\phantomsection\addcontentsline{toc}{frontms}{ABSTRACT}
 
 This research stems from the idea that the existence of nonlinear phenomena in the field of economics calls for the exploration of alternative models that allow for the discovery of patterns not identify by conventional analysis. 
 
@@ -32,8 +32,8 @@ The results showed that the artificial neural network model achieved a better fi
 <!-- INTRODUCCION -->
 
 \newpage
-\section*{Introducción}
-\phantomsection\addcontentsline{toc}{frontms}{Introducción}
+\section*{INTRODUCCIÓN}
+\phantomsection\addcontentsline{toc}{frontms}{INTRODUCCIÓN}
 
 La presente investigación tiene por objeto evaluar la capacidad de las redes neuronales para encontrar patrones que a su vez representen mayor ajuste entre los datos proyectados y observados, es decir, permitirá responder que si la aplicación del método de redes neuronales obtendrá información adecuada con mayor aproximación a la situación económica-financiera observada del sistema en su conjunto, siendo los estados financieros con frecuencia mensual de las entidades financieras de Bolivia la unidad de análisis.
 

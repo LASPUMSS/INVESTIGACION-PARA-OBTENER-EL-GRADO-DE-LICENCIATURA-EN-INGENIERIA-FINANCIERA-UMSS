@@ -4,7 +4,7 @@
 source('RECURSOS-INVESTIGACION/R/plot-activation-function.R')
 ```
 
-# Marco teórico
+# MARCO TEÓRICO
 
 En el presente capitulo se desarrollan los conceptos y teorías que son necesarios, que darán lugar el desarrollo de la investigación.
 

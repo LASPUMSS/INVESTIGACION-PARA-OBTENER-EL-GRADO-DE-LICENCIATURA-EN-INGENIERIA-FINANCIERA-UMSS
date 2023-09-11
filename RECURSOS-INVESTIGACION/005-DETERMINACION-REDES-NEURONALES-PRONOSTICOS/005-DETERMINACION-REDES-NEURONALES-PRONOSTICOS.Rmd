@@ -1,5 +1,5 @@
 
-# Determinación de pronósticos de estados financieros por redes neuronales artificiales
+# DETERMINACIÓN DE PRONÓSTICOS DE ESTADOS FINANCIEROS POR REDES NEURONALES ARTIFICIALES
 
 En el presente capitulo se buscará resolver objetivos planteados en el perfil de la investigación que son los siguientes:
 
