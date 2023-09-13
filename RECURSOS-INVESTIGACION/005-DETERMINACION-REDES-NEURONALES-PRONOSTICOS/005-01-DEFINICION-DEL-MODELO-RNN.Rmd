@@ -111,7 +111,6 @@ Entendiendo la tendencia como la tasa de cambio de la serie de tiempo respecto a
 
 $$Y_{t} = \beta_{0} + \beta_{1}{T_{t}} + \sum_{\substack{i=2\\j=2}}^{\substack{i=n\\ j=m}}{\beta_{i}{S_{j}}} $$
 
-\newpage
 Donde:
 
 - $Y_{t} =$ Representa el valor de la serie en el momento t.

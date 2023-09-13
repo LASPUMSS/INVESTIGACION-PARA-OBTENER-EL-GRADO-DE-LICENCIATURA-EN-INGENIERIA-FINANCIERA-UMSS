@@ -4,8 +4,9 @@
 En el presente capitulo se buscará resolver objetivos planteados en el perfil de la investigación que son los siguientes:
 
 - Definir la arquitectura y entrenamiento del modelo de red de neuronas artificiales.
-- Proyección y simulación de estados financieros.
-- Evaluación financiera sobre estados financieros proyectados.
+- Proyectar y simular los estados financieros.
+- Evaluar los datos proyectados-simulados respecto a los datos observados.
+
 
 Así también refutar o validar la hipótesis a la que se suscribe la presente investigación que propone lo siguiente:
 

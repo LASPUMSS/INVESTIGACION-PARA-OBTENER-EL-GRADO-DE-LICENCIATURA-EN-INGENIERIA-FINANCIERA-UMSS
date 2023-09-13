@@ -52,10 +52,10 @@ Proporcionar información financiera adecuada con mayor aproximación a la situa
 
 ### Específico 
 
-- Diagnostico de la situación actual del sistema financiero de Bolivia.
+- Diagnosticar la situación actual del sistema financiero de Bolivia.
 - Definir la arquitectura y entrenamiento del modelo de red de neuronas artificiales.
-- Proyección y simulación de estados financieros.
-- Evaluación financiera sobre estados financieros proyectados-simulados.
+- Proyectar y simular los estados financieros.
+- Evaluar los datos proyectados-simulados respecto a los datos observados.
 
 ## Hipótesis
 
@@ -65,7 +65,7 @@ Con la determinación de proyecciones de estados financieros por el método de r
 
 - Unidad de observación y análisis: Entidades financieras de Bolivia.
 - Variable independiente: Proyecciones de estados financieros por el método de redes neuronales.
-- Variable dependiente: Información con mayor aproximación a la situación económica-financiera observada de la institución correspondiente.
+- Variable dependiente: Información con mayor aproximación a la situación económica-financiera observada del sistema financiero.
 - Enlace lógico: Se logrará.
 
 
