@@ -9,7 +9,7 @@ Se efectuó el diagnóstico del sistema financiero de Bolivia por medio del mét
 
 Donde de acuerdo al diagnóstico realizado de la situación actual del sistema financiero de Bolivia se concluyó que las cooperativas, entidades financieras de vivienda y bancos múltiples como sector pueden hacer frente en promedio a sus obligaciones con terceros y que en contraposición los sectores instituciones financieras de desarrollo, bancos PYME y el banco de desarrollo productivo se ven expuestos por naturaleza de sus activos junto al giro de su negocio y deben revisar sus políticas de administración.
 
-Se recomienda a los bancos PYME, banco de desarrollo productivo y instituciones financieras de desarrollo mejorar los resultados obtenidos en los indicadores de capital y activos, es decir, deben aumentar su posición contabilizada en el patrimonio o reducir la cartera en mora modificando sus políticas de cobranza. En contraparte se recomienda a las cooperativas de ahorro y créditos mejorar sus resultados en los indicadores de administración, es decir, reducir los gastos de administración que no estén directamente vinculados con la generación de beneficios para la entidad.
+Por tanto, se recomienda a los bancos PYME, banco de desarrollo productivo y instituciones financieras de desarrollo mejorar los resultados obtenidos en los indicadores de capital y activos, es decir, deben aumentar su posición contabilizada en el patrimonio o reducir la cartera en mora modificando sus políticas de cobranza. En contraparte se recomienda a las cooperativas de ahorro y créditos mejorar sus resultados en los indicadores de administración, es decir, reducir los gastos de administración que no estén directamente vinculados con la generación de beneficios para la entidad.
 
 ## Conclusión y recomendación respecto a la definición de la red de neuronas artificiales
 
@@ -17,16 +17,19 @@ Se determinó la arquitectura y entrenamiento del modelo de red de neuronas dond
 
 Respecto a la arquitectura y entrenamiento del modelo de red de neuronas artificiales se concluye que este representa mayor esfuerzo computacional respecto a los otros modelos presentados, pero donde su capacidad de ajuste a los datos de la presente investigación fue mayor y a su vez la capacidad de encontrar patrones que le permitan generalizar la información contenida fue completamente mayor a la de los otros modelos.
 
-Así mismo, se recomienda que para mayor ajuste de pronósticos por parte de las redes neuronales se deben emplear arquitecturas más complejas atendiendo características como ser, tipo de entidad, estacionalidad mensual y otras características, pero siendo evidente que este tipo de arquitecturas requerirán mayor esfuerzo computacional.
+En este sentido se recomienda que para mayor ajuste de pronósticos por parte de las redes neuronales se deben emplear arquitecturas más complejas atendiendo características como ser, tipo de entidad, estacionalidad mensual y otras características, pero siendo evidente que este tipo de arquitecturas requerirán mayor esfuerzo computacional.
 
-## Conclusión respecto a la proyección y simulación de los estados financieros.
+## Conclusión y recomendación respecto a la proyección-simulación de los estados financieros.
 
 Se elaboró la proyección-simulación de los estados financieros para los modelos contenidos en la presente investigación (redes neuronales, modelo clásico de series de tiempo y ARIMA) que es el resultado de los coeficientes obtenidos respecto a sus datos de entrada, así también la simulación de dichos modelos está definida como la proyección promedio más los errores aleatorios obtenidos por el mismo. 
 
-## Conclusión respecto a la evaluación de los datos proyectados y simulados 
+Por tanto, se recomienda efectuar la proyección y simulación de estados financieros con frecuencia periódica definidos en intervalos mensuales que permita implementar políticas y así contrarrestar contingencias negativas sujetas al contexto del sistema financiero.
+
+## Conclusión y recomendación respecto a la evaluación de los datos proyectados-simulados 
 
 Se efectuó la evaluación de los datos proyectados-simulados midiendo el ajuste promedio de 100 simulaciones por cada cuenta respecto a los datos efectivamente observados o datos de prueba, así también se aplicó el método CAMEL sobre dichos datos proyectados-simulados lo cual permitió comparar los patrones contenidos en las diferentes series de tiempo capturados por los modelos.
 
+En este sentido se recomienda que los datos proyectados-simulados con intervalos mensuales deben ser evaluados no solo por su nivel de ajuste, si no así también por métodos que permitan visibilizar si estos contienen los patrones contenidos en los datos efectivamente observados.
 
 ## Conclusión y recomendación general
 

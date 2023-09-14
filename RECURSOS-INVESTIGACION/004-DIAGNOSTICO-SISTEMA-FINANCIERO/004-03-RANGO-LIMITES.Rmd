@@ -16,7 +16,7 @@ tableRefenceCamelCalificaciones <- getTableRefenceCamelCalificaciones2()
 tableRefenceCamelCalificacionesHard <- getTableRefenceCamelCalificaciones2(calificadorDuro = TRUE)
 ```
 
-## Definición de rangos y límites de los indicadores
+## Definición de rangos y límites de los indicadores CAMEL
 
 Los límites de los indicadores están definidos por la desviación estándar y el promedio de los datos históricos:
 

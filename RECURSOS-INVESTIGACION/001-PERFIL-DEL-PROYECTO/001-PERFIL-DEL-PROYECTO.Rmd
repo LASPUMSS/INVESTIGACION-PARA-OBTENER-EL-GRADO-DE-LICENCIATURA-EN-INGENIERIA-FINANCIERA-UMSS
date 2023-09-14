@@ -54,7 +54,7 @@ Proporcionar información financiera adecuada con mayor aproximación a la situa
 
 - Diagnosticar la situación actual del sistema financiero de Bolivia.
 - Definir la arquitectura y entrenamiento del modelo de red de neuronas artificiales.
-- Proyectar y simular los estados financieros.
+- Proyectar los estados financieros para su posterior simulación.
 - Evaluar los datos proyectados-simulados respecto a los datos observados.
 
 ## Hipótesis
