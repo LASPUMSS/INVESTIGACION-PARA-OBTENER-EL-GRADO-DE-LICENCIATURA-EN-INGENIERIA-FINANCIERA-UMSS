@@ -38,6 +38,8 @@ En esta última sección se presenta los estados financieros observados respecto
 - Modelo clásico de series de tiempo (MCO)
 - ARIMA
 
+### Balance general proyectado
+
 ```{r}
 idsEEFF <- c('ACTIVO',
              
@@ -133,6 +135,7 @@ renderTableBasic(datEEEFF_Forescat %>% select(DESCRIPCION, OBSERVADO, MCO, ARIMA
                  captionTable = 'Balance general observado respecto a proyecciones por MCO y ARIMA')
 ```
 
+### Estado de resultados proyectado
 
 ```{r}
 idsEEFF <- 
