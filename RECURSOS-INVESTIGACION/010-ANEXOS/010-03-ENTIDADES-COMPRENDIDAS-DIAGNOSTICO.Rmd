@@ -1,0 +1,127 @@
+
+```{r}
+# PAQUETES NECESARIOS
+require(glue)
+require(knitr)
+require(kableExtra)
+require(dplyr)
+
+# FUNCIONES NECESARIAS
+source('RECURSOS-INVESTIGACION/R/get-dat-basic-normalizada.R')
+source("RECURSOS-INVESTIGACION/R/get-dat-basic.R")
+source("RECURSOS-INVESTIGACION/R/get-dat-group.R")
+source("RECURSOS-INVESTIGACION/R/def-mod-entidades.R")
+source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
+source("RECURSOS-INVESTIGACION/R/handles.R")
+
+# VARIABLES GLOBALES DEL CAPITULO
+datBasic <- getDatEEFF()
+dat <- getDatEEFFNormalizada(by='TIPO_DE_ENTIDAD')
+entidadesCompModelo <- getEntidadesCompModelo(datBasic)
+datGroupBySector <- getDatEEFFByGroup(datBasic,by = 'TIPO_DE_ENTIDAD' )
+```
+
+\subsection*{Anexo 2 - Respuesta solicitud permiso uso de datos de entidades financiera de Bolivia publicado por la ASFI}
+
+\subsubsection*{Bancos múltiples}
+
+```{r}
+idTipoEntidad <- 'BANCOS_MULTIPLES'
+
+entidadesModelo <- 
+    entidadesCompModelo %>% 
+    filter(TIPO_DE_ENTIDAD==idTipoEntidad) %>%
+    select(SIGLA,ENTIDAD,DE,HASTA)
+```
+
+
+```{r bancos-multiples-datos}
+captionTable <- glue('{handle$toUpperFirstText(gsub("_"," ",idTipoEntidad))} contenidas en los datos')
+renderTableBasic(entidadesModelo,captionTable = captionTable)
+```
+
+\subsubsection*{Bancos PYME}
+
+```{r}
+idTipoEntidad <- 'BANCOS_PYME'
+entidadesModelo <- 
+    entidadesCompModelo %>% 
+    filter(TIPO_DE_ENTIDAD==idTipoEntidad) %>%
+    select(SIGLA,ENTIDAD,DE,HASTA)
+```
+
+
+```{r bancos-pyme-datos}
+captionTable <- glue('{gsub("pyme","PYME",handle$toUpperFirstText(gsub("_"," ",idTipoEntidad)))} contenidos en los datos')
+renderTableBasic(entidadesModelo,captionTable = captionTable)
+```
+
+\subsubsection*{Banco de desarrollo productivo}
+
+```{r}
+idTipoEntidad <- 'BANCOS_DE_DESARROLLO_PRODUCTIVO'
+entidadesModelo <- 
+    entidadesCompModelo %>% 
+    filter(TIPO_DE_ENTIDAD==idTipoEntidad) %>%
+    select(SIGLA,ENTIDAD,DE,HASTA)
+```
+
+
+```{r banco-desarrollo-productivo-datos}
+captionTable <- glue('{handle$toUpperFirstText(gsub("_"," ",idTipoEntidad))} contenidas en los datos')
+renderTableBasic(entidadesModelo,captionTable = captionTable)
+```
+
+
+\subsubsection*{Instituciones financieras de desarrollo}
+
+```{r}
+idTipoEntidad <- 'INSTITUCIONES_FINANCIERAS_DE_DESARROLLO'
+entidadesModelo <- 
+    entidadesCompModelo %>% 
+    filter(TIPO_DE_ENTIDAD==idTipoEntidad) %>%
+    select(SIGLA,ENTIDAD,DE,HASTA)
+```
+
+
+
+```{r intituciones-financieras-desarrollo-datos}
+captionTable <- glue('{handle$toUpperFirstText(gsub("_"," ",idTipoEntidad))} contenidas en los datos')
+renderTableBasic(entidadesModelo,captionTable = captionTable)
+```
+
+\subsubsection*{Entidades financieras de vivienda}
+
+```{r}
+idTipoEntidad <- 'ENTIDADES_FINANCIERAS_DE_VIVIENDA'
+entidadesModelo <- 
+    entidadesCompModelo %>% 
+    filter(TIPO_DE_ENTIDAD==idTipoEntidad) %>%
+    select(SIGLA,ENTIDAD,DE,HASTA)
+```
+
+El sector de `r tolower(gsub('_',' ',idTipoEntidad))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector está comprendido por `r nrow(entidadesModelo)` entidades (Ver tabla \@ref(tab:entidades-financieras-vivienda-datos)).
+
+
+```{r entidades-financieras-vivienda-datos}
+captionTable <- glue('{handle$toUpperFirstText(gsub("_"," ",idTipoEntidad))} contenidas en los datos')
+renderTableBasic(entidadesModelo,captionTable = captionTable) %>% 
+    footnote(general = 'NA indica que la razon social de la intitucion es deconocida',
+             general_title = 'NOTA: ' )
+```
+
+
+\subsubsection*{Cooperativas de ahorro y credito}
+
+```{r}
+idTipoEntidad <- 'COOPERATIVAS_DE_AHORRO_Y_CREDITO'
+entidadesModelo <- 
+    entidadesCompModelo %>% 
+    filter(TIPO_DE_ENTIDAD==idTipoEntidad) %>%
+    select(SIGLA,ENTIDAD,DE,HASTA)
+```
+
+```{r cooperativas-datos}
+captionTable <- glue('{handle$toUpperFirstText(gsub("_"," ",idTipoEntidad))} contenidas en los datos')
+renderTableBasic(entidadesModelo,captionTable = captionTable)
+```

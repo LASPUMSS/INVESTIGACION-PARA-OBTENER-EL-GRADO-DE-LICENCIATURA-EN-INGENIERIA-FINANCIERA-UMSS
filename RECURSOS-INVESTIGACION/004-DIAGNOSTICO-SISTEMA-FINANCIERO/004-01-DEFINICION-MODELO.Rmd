@@ -49,13 +49,7 @@ entidadesModelo <-
     select(SIGLA,ENTIDAD,DE,HASTA)
 ```
 
-El sector de `r tolower(gsub('_',' ',idTipoEntidad))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector esta comprendido por `r nrow(entidadesModelo)` entidades, que se presentan a continuación:
-
-
-```{r}
-captionTable <- glue('{handle$toUpperFirstText(gsub("_"," ",idTipoEntidad))} contenidas en los datos')
-renderTableBasic(entidadesModelo,captionTable = captionTable)
-```
+El sector de `r tolower(gsub('_',' ',idTipoEntidad))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector esta comprendido por `r nrow(entidadesModelo)` entidades (Ver tabla \@ref(tab:bancos-multiples-datos)).
 
 #### Bancos PYME
 
@@ -67,15 +61,9 @@ entidadesModelo <-
     select(SIGLA,ENTIDAD,DE,HASTA)
 ```
 
-El sector de `r gsub('pyme','PYME',tolower(gsub('_',' ',idTipoEntidad)))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector está comprendido por `r nrow(entidadesModelo)` entidades, que se presentan a continuación:
+El sector de `r gsub('pyme','PYME',tolower(gsub('_',' ',idTipoEntidad)))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector está comprendido por `r nrow(entidadesModelo)` entidades (Ver tabla \@ref(tab:bancos-pyme-datos)).
 
-
-```{r}
-captionTable <- glue('{gsub("pyme","PYME",handle$toUpperFirstText(gsub("_"," ",idTipoEntidad)))} contenidos en los datos')
-renderTableBasic(entidadesModelo,captionTable = captionTable)
-```
-
-#### Bancos de desarrollo productivo
+#### Banco de desarrollo productivo
 
 ```{r}
 idTipoEntidad <- 'BANCOS_DE_DESARROLLO_PRODUCTIVO'
@@ -85,14 +73,7 @@ entidadesModelo <-
     select(SIGLA,ENTIDAD,DE,HASTA)
 ```
 
-El sector de `r tolower(gsub('_',' ',idTipoEntidad))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector está comprendido por `r nrow(entidadesModelo)` entidades, que se presentan a continuación:
-
-
-```{r}
-captionTable <- glue('{handle$toUpperFirstText(gsub("_"," ",idTipoEntidad))} contenidas en los datos')
-renderTableBasic(entidadesModelo,captionTable = captionTable)
-```
-
+El sector de `r tolower(gsub('_',' ',idTipoEntidad))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector está comprendido por `r nrow(entidadesModelo)` entidades (Ver tabla \@ref(tab:banco-desarrollo-productivo-datos)).
 
 #### Instituciones financieras de desarrollo
 
@@ -104,13 +85,7 @@ entidadesModelo <-
     select(SIGLA,ENTIDAD,DE,HASTA)
 ```
 
-El sector de `r tolower(gsub('_',' ',idTipoEntidad))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector está comprendido por `r nrow(entidadesModelo)` entidades, que se presentan a continuación:
-
-
-```{r}
-captionTable <- glue('{handle$toUpperFirstText(gsub("_"," ",idTipoEntidad))} contenidas en los datos')
-renderTableBasic(entidadesModelo,captionTable = captionTable)
-```
+El sector de `r tolower(gsub('_',' ',idTipoEntidad))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector está comprendido por `r nrow(entidadesModelo)` entidades (Ver tabla \@ref(tab:intituciones-financieras-desarrollo-datos)).
 
 #### Entidades financieras de vivienda
 
@@ -122,15 +97,7 @@ entidadesModelo <-
     select(SIGLA,ENTIDAD,DE,HASTA)
 ```
 
-El sector de `r tolower(gsub('_',' ',idTipoEntidad))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector está comprendido por `r nrow(entidadesModelo)` entidades, que se presentan a continuación:
-
-
-```{r}
-captionTable <- glue('{handle$toUpperFirstText(gsub("_"," ",idTipoEntidad))} contenidas en los datos')
-renderTableBasic(entidadesModelo,captionTable = captionTable) %>% 
-    footnote(general = 'NA indica que la razon social de la intitucion es deconocida',
-             general_title = 'NOTA: ' )
-```
+El sector de `r tolower(gsub('_',' ',idTipoEntidad))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector está comprendido por `r nrow(entidadesModelo)` entidades (Ver tabla \@ref(tab:entidades-financieras-vivienda-datos)).
 
 #### Cooperativas
 
@@ -142,13 +109,7 @@ entidadesModelo <-
     select(SIGLA,ENTIDAD,DE,HASTA)
 ```
 
-El sector de `r tolower(gsub('_',' ',idTipoEntidad))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector está comprendido por `r nrow(entidadesModelo)` entidades, que se presentan a continuación:
-
-
-```{r}
-captionTable <- glue('{handle$toUpperFirstText(gsub("_"," ",idTipoEntidad))} contenidas en los datos')
-renderTableBasic(entidadesModelo,captionTable = captionTable)
-```
+El sector de `r tolower(gsub('_',' ',idTipoEntidad))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector está comprendido por `r nrow(entidadesModelo)` entidades (Ver tabla \@ref(tab:cooperativas-datos)).
 
 ### Variables comprendidas en el diagnóstico
 

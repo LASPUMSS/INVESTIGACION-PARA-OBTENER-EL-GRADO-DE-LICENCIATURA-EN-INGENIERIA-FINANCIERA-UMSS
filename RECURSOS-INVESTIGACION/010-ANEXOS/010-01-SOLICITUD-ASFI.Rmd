@@ -1,6 +1,3 @@
----
-output: pdf_document
----
 
 \subsection*{Anexo 1 - Carta solicitud permiso uso de datos de entidades financiera de Bolivia publicado por la ASFI}
 

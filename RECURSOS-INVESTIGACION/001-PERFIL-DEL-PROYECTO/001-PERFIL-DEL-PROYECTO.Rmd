@@ -11,6 +11,7 @@ Una de las alternativas de tratamiento de esta información que ofrece el sistem
 \centering
 \caption{Arbol de problemas}
 \includegraphics[width=15cm, height=10cm]{RECURSOS-INVESTIGACION/001-PERFIL-DEL-PROYECTO/arbol-de-problemas.png}
+\floatfoot{Fuente: Elaboración propia.}
 \end{figure}
 
 
@@ -27,7 +28,7 @@ En síntesis, el presente trabajo de investigación no pretende remplazar a otro
 
 ## Alcance y delimitación
 
-El presente trabajo de investigación se circunscribirá al estudio de las entidades de intermediación de servicios financieras de Bolivia, definidas en el artículo 151 de la ley 393. Con fines de obtener la información que coadyuve a generar la determinación de pronósticos mediante redes neuronales, como herramienta en la toma de decisiones a nivel gerencial y la evaluación de las mismas.
+El presente trabajo de investigación se circunscribe al estudio de las entidades de intermediación de servicios financieras de Bolivia, definidas en el artículo 151 de la ley 393. Con fines de obtener la información que coadyuve a generar la determinación de pronósticos mediante redes neuronales, como herramienta en la toma de decisiones a nivel gerencial y la evaluación de las mismas.
 
 En el diagnostico financiero las entidades financieras se agruparán por sectores:
 
@@ -38,9 +39,7 @@ En el diagnostico financiero las entidades financieras se agruparán por sectore
 - Instituciones financieras de desarrollo.
 - Bancos de desarrollo productivo.
 
-Para tener acceso a la información homogénea requerida en los pronósticos, los estados financieros se agruparán de forma tal que representan el sistema en su conjunto los cuales tienen un intervalo mensual obtenidos de las gestiones de 2014 a 2021, proyectando los periodos posteriores. 
-
-El tema elegido y propuesto, se realizará en un tiempo no mayor a diez meses, a partir de la aprobación y registro del plan de investigación presentado.
+Para tener acceso a la información homogénea requerida en los pronósticos, los estados financieros se agruparon de forma tal que representan el sistema en su conjunto los cuales tienen un intervalo mensual obtenidos de las gestiones de 2014 a 2021, proyectando los periodos posteriores. 
 
 ## Objetivos de la investigación
 
@@ -61,6 +60,7 @@ Proporcionar información financiera adecuada con mayor aproximación a la situa
 
 Con la determinación de proyecciones de estados financieros por el método de redes neuronales, de entidades financieras de Bolivia, se logrará proyectar información con mayor aproximación a la situación económica-financiera observada del sistema financiero.
 
+\newpage
 ### Elementos o componentes
 
 - Unidad de observación y análisis: Entidades financieras de Bolivia.
@@ -68,55 +68,47 @@ Con la determinación de proyecciones de estados financieros por el método de r
 - Variable dependiente: Información con mayor aproximación a la situación económica-financiera observada del sistema financiero.
 - Enlace lógico: Se logrará.
 
-
 ## Marco metodológico
 
 ### Tipo de investigación
 
-El tipo de investigación que se aplicará en el informe final será el descriptivo y analítico, donde se busca describir y estudiar la realidad presente de los hechos de las unidades de observación y análisis.
-
+El tipo de investigación que se aplico en el informe final fue descriptivo y analítico, donde se busco describir y estudiar la realidad presente de los hechos de las unidades de observación y análisis.
 
 ### Método de investigación
 
-Donde se aplicará un enfoque inductivo donde desde hechos particulares se llegará a conclusiones generales, que posteriormente puedan ser aplicadas en otras instituciones financieras de manera exitosa y beneficiar al sistema financiero con nuestra propuesta.
-También cabe especificar que los procedimientos a ser aplicados en el informe final, estarán orientados a los métodos inductivo, deductivo, analítico fundamentalmente.
-
+Se aplico un enfoque inductivo donde se partió desde hechos particulares llegando a conlusiones generales, que posteriormente puedan podrán ser aplicados en otras instituciones financieras de manera exitosa y beneficiar al sistema financiero con nuestra propuesta. También cabe especificar que los procedimientos aplicados en el informe final, están orientados a los métodos inductivo, deductivo, analítico fundamentalmente.
 
 ### Técnicas de investigación
 
-En primera instancia se realizará la identificación del problema de investigación que ya está establecida en el proyecto de grado, donde se identificará la arquitectura de la red neuronal, que está compuesta de las funciones de activación, y ajuste de los datos en formato de tablas. Posteriormente se realizará la etapa de recolección de datos e información del sistema financiero correspondiente a las fuentes secundarias. Para que en consecuencia con la obtención de la información se realizará el ordenamiento de dicha información recopilada para su procesamiento que permitirá dar un análisis concreto y preciso y a la vez realizar su sistematización para la obtención del diagnóstico.
+En primera instancia se realizo la identificación del problema de investigación que fue está establecido en el proyecto de grado, donde se identifico la arquitectura de la red neuronal, que está compuesta de las funciones de activación, y ajuste de los datos en formato de tablas. Posteriormente se realizo la recolección de datos e información del sistema financiero correspondiente a las fuentes secundarias.
 
+### Fuentes de información
 
-\input{RECURSOS-INVESTIGACION/001-PERFIL-DEL-PROYECTO/tabla-marco-metodico}
+Se recurrió a las siguientes fuentes de información:
 
+#### Fuentes primarias
 
-\newpage
-## Fuentes de información
-
-Se recurrirá a las fuentes de información siguientes:
-
-### Fuentes primarias
 Se recurrirá a la investigación y recopilación de datos relacionados al tema específico, mediante
 consultas a libros, revistas, textos digitales, apuntes de clases y otras de información histórica.
 
-### Fuentes secundarias
+#### Fuentes secundarias
+
 Se recurrirá a las fuentes de compilación de información bibliográfica referente al tema, tales como: 
 
-- Libros especializados. 
-- Leyes. 
-- Normas. 
-- Resoluciones. 
-- Glosarios. 
-- Páginas de Internet.
+- Libros especializados, definidos en la referencias bibliográficas. 
+- Leyes (Ley 393 de servicios financieros). 
+- Manuales (Manual y glosario de la ASFI). 
+- Páginas de Internet (Pagina oficial de la ASFI para la recolección de los estados financieros de los entidades financieras de Bolivia).
 
-### Técnica de recolección de la información
+#### Técnica de recolección de la información
 
 - Recopilación de información basada en fuentes primarias, secundarias y terciarias.
 - Análisis de la información recopilada, con fines de depuración, selección, tabulación mediante lenguajes de programación R y Python orientado al análisis de datos, adecuando a la arquitectura de la red neuronal.
 - La investigación tendrá un repositorio en GitHub (https://github.com/LASPUMSS/PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS).
 
 
-
+\newpage
+\input{RECURSOS-INVESTIGACION/001-PERFIL-DEL-PROYECTO/tabla-marco-metodico}
 
 
 

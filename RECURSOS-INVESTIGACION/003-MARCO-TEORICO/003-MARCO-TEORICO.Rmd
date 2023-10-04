@@ -472,7 +472,9 @@ Los algoritmos de propagación hacia adelante y hacia atrás son los que dotan d
 
 #### Propagación hacia adelante
 
-Para hacer manifiesto el algoritmo de propagación hacia adelante se supone que la estructura de red, estará compuesta de cuatro capas, es decir, la capa de entrada y salida junto a dos capas neuronales ocultas, dada esta estructura el algoritmo tendrá el siguiente comportamiento:
+La propagación hacia adelante se entiende como el proceso de "calcular una salida $y$ a partir de una entrada dada $x$ de acuerdo a sus parámetros $w$ [@IIOF, p.311]. 
+
+Para hacer manifiesto el algoritmo de propagación hacia adelante se propone un ejemplo continuación, donde se supone que la estructura de red ejemplo, estará compuesta de cuatro capas, es decir, la capa de entrada y salida junto a dos capas neuronales ocultas, dada esta estructura el algoritmo tendrá el siguiente comportamiento:
 
 - Capa de entrada está definida por:
 
@@ -523,7 +525,9 @@ s = W^{(3)}a^{(3)}
 
 #### Propagación hacia atrás
 
-El algoritmo de propagación hacia atrás o "backpropagation" tiene como objeto dotar de aprendizaje a las redes neuronales minimizando la función de costo ajustando los pesos y sesgos de la red, el nivel de ajuste está determinado por los gradientes para cada neurona hasta llegar a la capa de entrada.
+El algoritmo Backpropagation para redes multicapa es una generalización del algoritmo de mínimos cuadrados. Ambos algoritmos realizan su labor de actualización de pesos y ganancias con base en el error medio cuadrático. La red Backpropagation trabaja bajo aprendizaje supervisado y por tanto necesita un conjunto de instrucciones de entrenamiento que le describa cada salida y su valor de salida esperado [@IACAPI, p.9].
+
+Por lo tanto, el algoritmo de propagación hacia atrás o "backpropagation" tiene como objeto dotar de aprendizaje a las redes neuronales minimizando la función de costo ajustando los pesos y sesgos de la red, el nivel de ajuste está determinado por los gradientes para cada neurona hasta llegar a la capa de entrada.
 
 Dada una función de costo:
 
