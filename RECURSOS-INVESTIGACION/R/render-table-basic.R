@@ -27,7 +27,6 @@ renderTableBasic <- function(dat, captionTable='tabla', headerUpper=TRUE, fontSi
               digits = 6,
               format.args = list(big.mark = " ") ) %>%
         kable_styling(latex_options = c("hold_position", "repeat_header"),
-                      position = "center",
                       font_size = fontSize,
                       repeat_header_text = "(Continuación)")
     

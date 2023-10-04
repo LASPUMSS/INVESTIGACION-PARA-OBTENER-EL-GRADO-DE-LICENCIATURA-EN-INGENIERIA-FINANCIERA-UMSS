@@ -2,36 +2,32 @@
 % Editar size de los captions
 \usepackage{caption} % editar formato captions
 
-\captionsetup{margin=5pt} 
-
 \captionsetup[table]{
 font=normalsize,
 labelsep=newline,
 labelfont=bf,
-singlelinecheck=off,
-aboveskip=0pt
+singlelinecheck=off
 }
 
 \captionsetup[longtable]{
 font=normalsize,
 labelsep=newline,
 labelfont=bf,
-singlelinecheck=off,
-aboveskip=0pt
+singlelinecheck=off
 }
 
 \captionsetup[figure]{
 font=normalsize,
 labelsep=newline,
 labelfont=bf,
-singlelinecheck=off,
-aboveskip=0pt
+singlelinecheck=off
 }
 
 \usepackage{floatrow}
-\floatsetup[figure]{capposition=top}
-\floatsetup[table]{capposition=top}
-\floatsetup[longtable]{margins=centering}
+\floatsetup[figure]{capposition=top,captionskip=5pt}
+\floatsetup[table]{capposition=top,captionskip=5pt}
+\floatsetup[longtable]{margins=centering,captionskip=5pt}
+
 %----------------------------
 % PAQUETES PARA kable_extra
 \usepackage{booktabs}
@@ -177,3 +173,7 @@ aboveskip=0pt
 
 \setcounter{secnumdepth}{7}
 \setcounter{tocdepth}{5}
+
+\setlength{\intextsep}{12pt} % Vertical space above & below [h] floats
+\setlength{\textfloatsep}{12pt} % Vertical space below (above) [t] ([b]) floats
+\setlength{\floatsep}{50pt} % Vertical space below (above) [t] ([b]) floats

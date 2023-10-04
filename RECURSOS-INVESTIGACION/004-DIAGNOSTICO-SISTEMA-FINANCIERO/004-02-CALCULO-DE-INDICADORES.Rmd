@@ -43,14 +43,17 @@ listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas de
 
 Los indicadores de capital buscan responder o evaluar la capacidad del capital contable de los sectores financieros para hacer frente a sus obligaciones con terceros y propios, a continuación, se presentan los resultados de los mismos:
 
+```{=latex}
+\begin{figure}[h!]
+```
+
 ```{r, fig.height = 20, fig.width = 20, fig.cap='Indicadores de capital'}
 wrap_plots(listPlots, ncol = 1)
 ```
 
-```{r}
-listTablesRender %>% 
-    footnote(general_title = 'NOTA:',
-                              general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
+```{=latex}
+\textit{Fuente:} Elaboración propia.
+\end{figure}
 ```
 
 
@@ -115,6 +118,13 @@ El indicador está definido por la siguiente ecuación:
 $$ \frac{ \text{Patrimonio} }{ \text{Activo - Contingente} } $$
 
 El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
+
+
+```{r}
+listTablesRender %>% 
+    footnote(general_title = 'NOTA:',
+                              general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
+```
 
 
 \newpage

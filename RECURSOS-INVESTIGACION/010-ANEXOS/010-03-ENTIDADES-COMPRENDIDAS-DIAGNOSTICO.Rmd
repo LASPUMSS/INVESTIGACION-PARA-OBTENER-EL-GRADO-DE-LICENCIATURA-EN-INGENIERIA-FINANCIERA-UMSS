@@ -53,7 +53,6 @@ captionTable <- glue('{gsub("pyme","PYME",handle$toUpperFirstText(gsub("_"," ",i
 renderTableBasic(entidadesModelo,captionTable = captionTable)
 ```
 
-\newpage
 
 ```{r}
 idTipoEntidad <- 'BANCOS_DE_DESARROLLO_PRODUCTIVO'
@@ -68,6 +67,7 @@ captionTable <- glue('{handle$toUpperFirstText(gsub("_"," ",idTipoEntidad))} con
 renderTableBasic(entidadesModelo,captionTable = captionTable)
 ```
 
+\newpage
 
 ```{r}
 idTipoEntidad <- 'INSTITUCIONES_FINANCIERAS_DE_DESARROLLO'
@@ -98,7 +98,6 @@ renderTableBasic(entidadesModelo,captionTable = captionTable) %>%
              general_title = 'NOTA: ' )
 ```
 
-\newpage
 
 ```{r}
 idTipoEntidad <- 'COOPERATIVAS_DE_AHORRO_Y_CREDITO'

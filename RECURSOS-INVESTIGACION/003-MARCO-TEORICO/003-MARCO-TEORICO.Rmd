@@ -453,7 +453,7 @@ f(Z)_{j} = \frac{ e^{Z_{J}} }{ \sum_{k=1}^{K} e^{Z_{K}} }
 <!-- Gráficos de funciones activación -->
 
 ```{=latex}
-\begin{figure}[t]
+\begin{figure}[h!]
 ```
 
 ```{r mt-funciones-de-activacion, fig.cap='Funciones de activación', out.height='40%', out.width='100%'}

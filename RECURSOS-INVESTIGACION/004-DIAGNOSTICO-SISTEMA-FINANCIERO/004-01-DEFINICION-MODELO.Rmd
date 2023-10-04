@@ -231,7 +231,7 @@ Según la @MANUAL_CUENTAS_ASFI los gastos administrativos (designado por el cód
 
 #### Impuestos
 
-Según la @MANUAL_CUENTAS_ASFI los impuestos (designado por el código 455.00 en el manual de cuentas) registran los gastos devengados en el período por concepto de impuestos, asimismo los intereses y recargos originados por los mismos. El gasto por Impuesto al valor agregado que se registra en esta cuenta, es el que surge de aplicar la tasa del impuesto sobre ingresos presuntos, tales como el que proviene de tomar en anticrético un bien. 
+Según la @MANUAL_CUENTAS_ASFI los impuestos (designado por el código 455.00 en el manual de cuentas) registran los gastos devengados en el período por concepto de impuestos, asimismo los intereses y recargos originados por los mismos.
 
 #### Resultado operativo bruto (ROB)
 
