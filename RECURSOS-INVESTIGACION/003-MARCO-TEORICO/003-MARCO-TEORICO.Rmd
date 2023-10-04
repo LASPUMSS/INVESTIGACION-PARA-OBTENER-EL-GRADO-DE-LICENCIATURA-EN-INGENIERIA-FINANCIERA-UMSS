@@ -322,7 +322,7 @@ El aprendizaje supervisado es una rama del aprendizaje automático, son algoritm
 
 El aprendizaje no supervisado, "corresponde a la situación en que existe un conjunto de datos que contienen diversas características de determinados individuos, sin que ninguna de ellas se considere una variable de salida que se desee predecir". [@IALAT]
 
-Aprendizaje no supervisado es un método de aprendizaje automático donde la red neuronal se ajusta a las observaciones. Se distingue del aprendizaje supervisado por el hecho de que no hay un conocimiento a priori es decir etiquetas que sirvan como guía, en el aprendizaje no supervisado solo se cuenta con un conjunto de datos de objetos de entrada.
+Donde el aprendizaje no supervisado es un método de aprendizaje automático donde la red neuronal se ajusta a las observaciones. Se distingue del aprendizaje supervisado por el hecho de que no hay un conocimiento a priori es decir etiquetas que sirvan como guía, en el aprendizaje no supervisado solo se cuenta con un conjunto de datos de objetos de entrada.
 
 <!-- REDES NEURONALES ARTIFICIALES -->
 
@@ -330,7 +330,7 @@ Aprendizaje no supervisado es un método de aprendizaje automático donde la red
 
 Las Redes Neuronales "son un paradigma de aprendizaje y procesamiento automático inspirado en la forma en que funciona el cerebro para realizar las tareas de pensar y tomar decisiones (sistema nervioso)". [@IALAT]
 
-Una red neuronal es un método del aprendizaje automático que enseña a las computadoras a procesar datos de una manera que está inspirada en la forma en que lo hace el cerebro humano, las redes neuronales artificiales es modelo computacional resultado de diversas aportaciones científicas, consiste en un conjunto de unidades llamadas neuronas artificiales.
+Por lo tanto, una red neuronal es un método del aprendizaje automático que enseña a las computadoras a procesar datos de una manera que está inspirada en la forma en que lo hace el cerebro humano, las redes neuronales artificiales es modelo computacional resultado de diversas aportaciones científicas, consiste en un conjunto de unidades llamadas neuronas artificiales.
 
 ## Elementos de redes neuronales
 
@@ -338,7 +338,7 @@ Como todo sistema es el resultado de la interacción de elementos simples trabaj
 
 ### Neurona artificial
 
-La neurona es la unidad básica de procesamiento de una red neuronal de ahí el nombre, igual que su equivalente biológico una neurona artificial recibe estímulos externos y devuelve otro valor, esta es expresada matemáticamente como una función, donde la neurona realiza una suma ponderada con los datos de entrada.
+La neurona es la unidad básica de procesamiento de una red neuronal de ahí el nombre, igual que su equivalente biológico una neurona artificial recibe estímulos externos y devuelve otro valor, esta es expresada matemáticamente como una función, donde la neurona realiza una suma ponderada con los datos de entrada [@RNEP,p.3-6].
 
 Dado:
 
@@ -362,7 +362,7 @@ Y = Vector resultado de la suma ponderada.
 \newline
 W = Vector de los pesos las variables independientes.
 
-La arquitectura de la red neuronal corresponde a la manera en que esta ordena las neuronas, si las neuronas son colocadas de forma vertical, reciben los mismos datos de entrada y sus resultados de salida lo pasan a la siguiente capa, la última capa de una red neuronal se denominan capa de salida y las capas que estén entre la capa de salida y capa de entrada se denominas capas ocultas. Ahora bien, al ser cada neurona una suma ponderada esta equivaldría a una sola capa de la red, a esto se denomina colisión de la red neuronal, para resolver este problema se planteó los que se conoce como función de activación que es una función no lineal que distorsiona los resultados salientes de cada neurona.
+La arquitectura de la red neuronal corresponde a la manera en que esta ordena las neuronas, si las neuronas son colocadas de forma vertical, reciben los mismos datos de entrada y sus resultados de salida lo pasan a la siguiente capa, la última capa de una red neuronal se denominan capa de salida y las capas que estén entre la capa de salida y capa de entrada se denominas capas ocultas. Ahora bien, al ser cada neurona una suma ponderada esta equivaldría a una sola capa de la red, a esto se denomina colisión de la red neuronal, para resolver este problema se planteó los que se conoce como función de activación que es una función no lineal que distorsiona los resultados salientes de cada neurona [@RNEP,p.3-6].
 
 \begin{equation}
 A = f(Y)
@@ -373,7 +373,9 @@ Dado lo anterior expuesto una capa de una red neuronal se debe entender como la 
 
 ### Funciones de activación
 
-Las funciones de activación distorsionan de forma no lineal las salidas de las neuronas para así no colapsar la red, es decir, las funciones de activación permiten conectar capas neuronales, dentro las funciones de activación más conocidas se tienen:
+Los modelos de neuronas utilizados en redes neuronales artificiales combinan sus entradas usando pesos que modelan sus conexiones sinápticas y, a continuación, le aplican a la entrada neta de la neurona una función de activación o transferencia. La entrada neta de la neurona recoge el nivel de estímulo que la neurona recibe de sus entradas y es la función de activación la que determina cuál es la salida de la neurona [@IIOF, p.220].
+
+Es decir, las funciones de activación distorsionan de forma no lineal las salidas de las neuronas para así no colapsar la red, es decir, las funciones de activación permiten conectar capas neuronales, dentro las funciones de activación más conocidas se tienen:
 
 #### Función escalón
 
@@ -386,56 +388,83 @@ f(x) = max(0,x) = \left \{
   \\ 1 & Si & x \geq{0}
 \end{array}
 \right.
-(\#eq:mt-fe-rnn)
+(\#eq:mt-a-fe-rnn)
 \end{equation}
 
 #### Función sigmoide
 
 Esta función genera un en un rango de valores de salida que están entre cero y uno por lo que la salida es interpretada como una probabilidad. 
 
-$$ f(x) = \frac{1}{1+e^{-x}}$$
+\begin{equation}
+f(x) = \frac{1}{1+e^{-x}}
+(\#eq:mt-a-fs-rnn)
+\end{equation}
+
 
 #### Función tangente hiperbólica
 
 Esta función de activación llamada tangente hiperbólica tiene un rango de valores de salida entre -1 y 1.
 
-$$ f(x) = \frac{2}{1+e^{-2x}} - 1 $$
+\begin{equation}
+f(x) = \frac{2}{1+e^{-2x}} - 1
+(\#eq:mt-a-fh-rnn)
+\end{equation}
+
 
 #### Función Relu
 
 La función ReLU transforma los valores introducidos anulando los valores negativos y dejando los positivos.
 
-$$ f(x) = max(0,x) = \left \{
+\begin{equation}
+f(x) = max(0,x) = \left \{
 \begin{array}{rcl}
      0 & Si & x < 0
   \\ x & Si & x \geq{0}
 \end{array}
-\right. $$
+\right.
+(\#eq:mt-a-fr-rnn)
+\end{equation}
+
 
 #### Función Leaky ReLU
 
 La función Leaky ReLU transforma los valores introducidos multiplicando los negativos por un coeficiente rectificativo y dejando los positivos según entran.
 
-$$ f(x) = max(0,x) = \left \{
+\begin{equation}
+f(x) = max(0,x) = \left \{
 \begin{array}{rcl}
      0 & Si & x < 0
   \\ a*x & Si & x \geq{0}
 \end{array}
-\right. $$
+\right.
+(\#eq:mt-a-flr-rnn)
+\end{equation}
 
 #### Función Softmax
 
 La función Softmax transforma las salidas a una representación en forma de probabilidades, de tal manera que el sumatorio de todas las probabilidades de las salidas de 1.
 
-$$ f(Z)_{j} = \frac{ e^{Z_{J}} }{ \sum_{k=1}^{K} e^{Z_{K}} } $$
+\begin{equation}
+f(Z)_{j} = \frac{ e^{Z_{J}} }{ \sum_{k=1}^{K} e^{Z_{K}} } 
+(\#eq:mt-a-fsm-rnn)
+\end{equation}
+
 
 <!-- Gráficos de funciones activación -->
+
+```{=latex}
+\begin{figure}[t]
+```
 
 ```{r mt-funciones-de-activacion, fig.cap='Funciones de activación', out.height='40%', out.width='100%'}
 plotActFuntMarcTeor()
 ```
 
-ver la figura \@ref(fig:mt-funciones-de-activacion).
+```{=latex}
+\textit{Fuente:} Elaboración propia.
+\end{figure}
+```
+
 
 ### Propagación hacia adelante y hacia atrás
 
@@ -447,27 +476,50 @@ Para hacer manifiesto el algoritmo de propagación hacia adelante se supone que 
 
 - Capa de entrada está definida por:
 
-$$ x = a^{(1)}$$
+\begin{equation}
+x = a^{(1)}
+(\#eq:mt-p-a-rnn)
+\end{equation}
 
 - La primera capa oculta procesara los datos de la capa de entrada toma la siguiente forma:
 
-$$ z^{(2)} = W^{(1)}x + b^{(1)} $$
+\begin{equation}
+z^{(2)} = W^{(1)}x + b^{(1)} 
+(\#eq:mt-p-z-rnn)
+\end{equation}
+
 
 - Antes de pasar los datos procesados en las neuronas de la primera capa oculta deben ser pasados por las funciones de activación, para que no colapse la red: 
 
-$$a^{(2)} = f(z^{(2)})$$
+\begin{equation}
+a^{(2)} = f(z^{(2)})
+(\#eq:mt-p-za-rnn)
+\end{equation}
+
 
 - Nuevamente se procesará los datos de la capa de anterior:
 
-$$ z^{(3)} = W^{(2)}a^{(2)} + b^{(2)} $$
+\begin{equation}
+z^{(3)} = W^{(2)}a^{(2)} + b^{(2)} 
+(\#eq:mt-p-z3-rnn)
+\end{equation}
+
 
 - También nuevamente se envuelve los resultados en una función de activación antes de pasar a la capa de salida:
 
-$$a^{(3)} = f(z^{(3)})$$
+\begin{equation}
+a^{(3)} = f(z^{(3)})
+(\#eq:mt-p-a3-rnn)
+\end{equation}
+
 
 - Finalmente tendremos una salida, la cual será evaluada si coincide con los datos esperados.
 
-$$ s = W^{(3)}a^{(3)} $$
+\begin{equation}
+s = W^{(3)}a^{(3)} 
+(\#eq:mt-p-s-rnn)
+\end{equation}
+
 
 #### Propagación hacia atrás
 
@@ -475,13 +527,25 @@ El algoritmo de propagación hacia atrás o "backpropagation" tiene como objeto 
 
 Dada una función de costo:
 
-$$ C = f(s,y) $$
+\begin{equation}
+C = f(s,y) 
+(\#eq:mt-pat-rnn)
+\end{equation}
+
 
 Se calcula las derivadas parciales para cada neurona, para determinar que rutas que han generado menor error, hasta la capa de entrada:
 
-$$ \frac{ \partial{C} }{ \partial{x} }$$
+\begin{equation}
+\frac{ \partial{C} }{ \partial{x} }
+(\#eq:mt-pat-d-rnn)
+\end{equation}
+
 
 Para el logro de esta derivada se hace uso de un método matemático denominado "Chain Rule" o "método de la cadena", que permite determinar la derivada de una función compuesta defina por:
 
-$$ \frac{d}{dx} \left[ f(g(x)) \right] =f'(g(x))g'(x) $$
+\begin{equation}
+\frac{d}{dx} \left[ f(g(x)) \right] =f'(g(x))g'(x) 
+(\#eq:mt-pat2-d-rnn)
+\end{equation}
+
 
