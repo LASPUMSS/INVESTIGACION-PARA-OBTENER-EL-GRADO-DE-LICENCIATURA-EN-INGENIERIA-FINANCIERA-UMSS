@@ -1,6 +1,3 @@
----
-output: pdf_document
----
 
 <!-- FUNCIONES NECESARIAS -->
 ```{r}
@@ -13,7 +10,7 @@ datVariablesDiagnostico <- getDatVariablesDiagnostico(by = 'TIPO_DE_ENTIDAD',ges
 ```
 
 
-\subsection*{Anexo 5 - Variables utilizadas en el diagnostico CAMEL}
+\subsection*{Anexo 6 - Variables utilizadas en el diagnostico CAMEL}
 
 \subsubsection*{Cartera vencida, en ejecución y vigente expresado en bolivianos utilizado en análisis CAMEL}
 

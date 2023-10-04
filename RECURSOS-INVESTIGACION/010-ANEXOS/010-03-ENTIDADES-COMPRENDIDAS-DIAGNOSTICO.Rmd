@@ -21,9 +21,8 @@ entidadesCompModelo <- getEntidadesCompModelo(datBasic)
 datGroupBySector <- getDatEEFFByGroup(datBasic,by = 'TIPO_DE_ENTIDAD' )
 ```
 
-\subsection*{Anexo 2 - Respuesta solicitud permiso uso de datos de entidades financiera de Bolivia publicado por la ASFI}
+\subsection*{Anexo 3 - Entidades financieras comprendidas en el diagnostico financiero}
 
-\subsubsection*{Bancos múltiples}
 
 ```{r}
 idTipoEntidad <- 'BANCOS_MULTIPLES'
@@ -40,7 +39,6 @@ captionTable <- glue('{handle$toUpperFirstText(gsub("_"," ",idTipoEntidad))} con
 renderTableBasic(entidadesModelo,captionTable = captionTable)
 ```
 
-\subsubsection*{Bancos PYME}
 
 ```{r}
 idTipoEntidad <- 'BANCOS_PYME'
@@ -50,13 +48,12 @@ entidadesModelo <-
     select(SIGLA,ENTIDAD,DE,HASTA)
 ```
 
-
 ```{r bancos-pyme-datos}
 captionTable <- glue('{gsub("pyme","PYME",handle$toUpperFirstText(gsub("_"," ",idTipoEntidad)))} contenidos en los datos')
 renderTableBasic(entidadesModelo,captionTable = captionTable)
 ```
 
-\subsubsection*{Banco de desarrollo productivo}
+\newpage
 
 ```{r}
 idTipoEntidad <- 'BANCOS_DE_DESARROLLO_PRODUCTIVO'
@@ -66,14 +63,11 @@ entidadesModelo <-
     select(SIGLA,ENTIDAD,DE,HASTA)
 ```
 
-
 ```{r banco-desarrollo-productivo-datos}
 captionTable <- glue('{handle$toUpperFirstText(gsub("_"," ",idTipoEntidad))} contenidas en los datos')
 renderTableBasic(entidadesModelo,captionTable = captionTable)
 ```
 
-
-\subsubsection*{Instituciones financieras de desarrollo}
 
 ```{r}
 idTipoEntidad <- 'INSTITUCIONES_FINANCIERAS_DE_DESARROLLO'
@@ -83,14 +77,11 @@ entidadesModelo <-
     select(SIGLA,ENTIDAD,DE,HASTA)
 ```
 
-
-
 ```{r intituciones-financieras-desarrollo-datos}
 captionTable <- glue('{handle$toUpperFirstText(gsub("_"," ",idTipoEntidad))} contenidas en los datos')
 renderTableBasic(entidadesModelo,captionTable = captionTable)
 ```
 
-\subsubsection*{Entidades financieras de vivienda}
 
 ```{r}
 idTipoEntidad <- 'ENTIDADES_FINANCIERAS_DE_VIVIENDA'
@@ -100,9 +91,6 @@ entidadesModelo <-
     select(SIGLA,ENTIDAD,DE,HASTA)
 ```
 
-El sector de `r tolower(gsub('_',' ',idTipoEntidad))` representan `r sum(datGroupBySector$TIPO_DE_ENTIDAD==idTipoEntidad)` observaciones del total de los datos agrupados, dicho sector está comprendido por `r nrow(entidadesModelo)` entidades (Ver tabla \@ref(tab:entidades-financieras-vivienda-datos)).
-
-
 ```{r entidades-financieras-vivienda-datos}
 captionTable <- glue('{handle$toUpperFirstText(gsub("_"," ",idTipoEntidad))} contenidas en los datos')
 renderTableBasic(entidadesModelo,captionTable = captionTable) %>% 
@@ -110,8 +98,7 @@ renderTableBasic(entidadesModelo,captionTable = captionTable) %>%
              general_title = 'NOTA: ' )
 ```
 
-
-\subsubsection*{Cooperativas de ahorro y credito}
+\newpage
 
 ```{r}
 idTipoEntidad <- 'COOPERATIVAS_DE_AHORRO_Y_CREDITO'
