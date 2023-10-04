@@ -1,5 +1,0 @@
-
-\section*{BIBLIOGRÁFIA CONSULTADA}
-\phantomsection\addcontentsline{toc}{footerms}{BIBLIOGRÁFIA CONSULTADA}
-
-<div id="refs"></div>

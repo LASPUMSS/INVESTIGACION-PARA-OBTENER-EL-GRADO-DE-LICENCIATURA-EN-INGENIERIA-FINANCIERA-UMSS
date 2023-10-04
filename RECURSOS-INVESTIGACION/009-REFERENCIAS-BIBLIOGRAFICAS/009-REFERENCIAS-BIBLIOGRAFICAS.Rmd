@@ -1,0 +1,5 @@
+
+\section*{REFERENCIAS BIBLIOGRFICAS}
+\phantomsection\addcontentsline{toc}{footerms}{REFERENCIAS BIBLIOGRFICAS}
+
+<div id="refs"></div>

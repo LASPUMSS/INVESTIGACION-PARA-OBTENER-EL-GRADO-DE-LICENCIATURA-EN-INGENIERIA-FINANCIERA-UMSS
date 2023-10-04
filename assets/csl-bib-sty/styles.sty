@@ -1,4 +1,38 @@
 %----------------------------
+% Editar size de los captions
+\usepackage{caption} % editar formato captions
+
+\captionsetup{margin=5pt} 
+
+\captionsetup[table]{
+font=normalsize,
+labelsep=newline,
+labelfont=bf,
+singlelinecheck=off,
+aboveskip=0pt
+}
+
+\captionsetup[longtable]{
+font=normalsize,
+labelsep=newline,
+labelfont=bf,
+singlelinecheck=off,
+aboveskip=0pt
+}
+
+\captionsetup[figure]{
+font=normalsize,
+labelsep=newline,
+labelfont=bf,
+singlelinecheck=off,
+aboveskip=0pt
+}
+
+\usepackage{floatrow}
+\floatsetup[figure]{capposition=top}
+\floatsetup[table]{capposition=top}
+\floatsetup[longtable]{margins=centering}
+%----------------------------
 % PAQUETES PARA kable_extra
 \usepackage{booktabs}
 \usepackage{longtable}
@@ -26,7 +60,6 @@
 \usepackage{titletoc} % Modificar tabla de contenido
 \usepackage{multirow} % Para tablas
 \usepackage{rotating} % Para girar tablas
-\usepackage{caption} % editar formato captions
 
 %----------------------------
 \floatplacement{figure}{H}
@@ -72,7 +105,7 @@
 
 \titlecontents*{section}
     [0pt]
-    {\addvspace{2pc}\centering\bfseries\large}
+    {\addvspace{2pc}\centering\bfseries\normalsize}
     {\Sectionname \thecontentslabel. \quad \MakeUppercase}
     {}
     {}
@@ -118,12 +151,6 @@
     {}
     {\MakeUppercase}
     {\titlerule*[8pt]{}\contentspage}
-
-%----------------------------
-% Editar size de los captions
-
-\captionsetup[figure]{font=small,labelfont=bf}
-\captionsetup[table]{font=small,labelfont=bf}
 
 
 %----------------------------

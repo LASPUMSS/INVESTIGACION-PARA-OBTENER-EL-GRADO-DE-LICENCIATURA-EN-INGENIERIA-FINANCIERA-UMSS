@@ -9,8 +9,8 @@ Una de las alternativas de tratamiento de esta información que ofrece el sistem
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=15cm, height=10cm]{RECURSOS-INVESTIGACION/001-PERFIL-DEL-PROYECTO/arbol-de-problemas.png}
 \caption{Arbol de problemas}
+\includegraphics[width=15cm, height=10cm]{RECURSOS-INVESTIGACION/001-PERFIL-DEL-PROYECTO/arbol-de-problemas.png}
 \end{figure}
 
 
@@ -88,6 +88,7 @@ En primera instancia se realizará la identificación del problema de investigac
 
 
 \input{RECURSOS-INVESTIGACION/001-PERFIL-DEL-PROYECTO/tabla-marco-metodico}
+
 
 \newpage
 ## Fuentes de información

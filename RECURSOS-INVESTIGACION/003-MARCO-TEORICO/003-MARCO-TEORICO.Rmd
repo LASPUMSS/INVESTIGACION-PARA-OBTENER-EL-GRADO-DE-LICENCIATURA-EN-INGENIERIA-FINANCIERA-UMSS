@@ -10,46 +10,47 @@ En el presente capitulo se desarrollan los conceptos y teorías que son necesari
 
 ## Finanzas y el sistema financiero
 
-Las finanzas se entiende como "la ciencia y arte de administrar el dinero" sujetas a restricciones dadas por un contexto que es dado por el sistema financiero, en decir, el sistema financiero, "consiste en diversas instituciones y mercados que sirven a las empresas de negocios, los individuos y los gobiernos". [@FAF]
+Las finanzas se entienden como "la ciencia y arte de administrar el dinero" [@PDAF, p.3] subordinada a restricciones dadas por un contexto de un conjunto mayor definido como sistema financiero, donde, el sistema financiero, "consiste en diversas instituciones y mercados que sirven a las empresas de negocios, los individuos y los gobiernos" [@FAF, p.27].
 
-Entonces se afirma que el sistema financiero en general está formado por el conjunto de instituciones públicas y privadas, constituidas en mercados, cuyo fin principal es canalizar el ahorro que generan los ahorradores hacia los prestatarios, así como facilitar y otorgar seguridad al movimiento de dinero y al sistema de pagos. 
+Así mismo, se entiende como sistema financiero como el "conjunto de entidades financieras autorizadas, que prestan servicios financieros a la población en general", donde los servicios financieros están definidos como "servicios diversos que prestan las entidades financieras autorizadas, con el objeto de satisfacer las necesidades de las consumidoras y consumidores financieros" [@GLOSARIO_ASFI].
 
 ### Entidades de intermediación financiera en Bolivia
 
-Las definiciones presentadas a continuación están suscritas a la ley 393 - ley de servicios financieros [@ASFI393].
+Las definiciones presentadas a continuación están suscritas a la ley 393 - ley de servicios financieros atendiendo al objetivo o características reconocidas por el estado.
 
 #### Bancos múltiples.
 
-Los bancos múltiples tendrán como objetivo la prestación de servicios financieros al público en general, entendido como servicios financieros, aquellos servicios que tienen por objeto satisfacer las necesidades de las consumidoras y consumidores financieros.
+Los bancos múltiples tendrán como objetivo la prestación de servicios financieros al público en general, entendido como servicios financieros, aquellos servicios que tienen por objeto satisfacer las necesidades de las consumidoras y consumidores financieros [@LEY-393, {Art. 230}].
 
 #### Bancos PYME
 
-Los bancos PYME son aquellos que tienen como objetivo la prestación de servicios financieros especializados en el sector de las pequeñas y medianas empresas, sin restricción para la prestación de los mismos también a la microempresa.
+Los bancos PYME son aquellos que tienen como objetivo la prestación de servicios financieros especializados en el sector de las pequeñas y medianas empresas, sin restricción para la prestación de los mismos también a la microempresa [@LEY-393, {Art. 235}].
 
 
 #### Entidades financieras de vivienda
 
-Las entidades financieras de vivienda es una sociedad que tiene por objeto prestar servicios de intermediación financiera con especialización en préstamos para adquisición de vivienda, proyectos de construcción de vivienda unifamiliar o multifamiliar, compra de terrenos, refacción, remodelación, ampliación y mejoramiento de viviendas individuales o propiedad horizontal y otorgamiento de microcrédito para vivienda familiar y para infraestructura de vivienda productiva, así también operaciones de arrendamiento financiero habitacional.
+Las entidades financieras de vivienda son sociedades que tiene por objeto prestar servicios de intermediación financiera con especialización en préstamos para adquisición de vivienda, proyectos de construcción de vivienda unifamiliar o multifamiliar, compra de terrenos, refacción, remodelación, ampliación y mejoramiento de viviendas individuales o propiedad horizontal y otorgamiento de microcrédito para vivienda familiar y para infraestructura de vivienda productiva, así también operaciones de arrendamiento financiero habitacional [@LEY-393, {Art. 247}].
 
 #### Cooperativas de ahorro y crédito abiertas
 
-Las cooperativas de ahorro y crédito se constituyen como entidades especializadas de objeto único para la prestación de servicios de intermediación financiera, dirigidos a sus socios y al público en general cunado corresponda.
+Las cooperativas de ahorro y crédito se constituyen como entidades especializadas de objeto único para la prestación de servicios de intermediación financiera, dirigidos a sus socios y al público en general cunado corresponda [@LEY-393, {Art. 239}].
 
 #### Instituciones financieras de desarrollo
 
-La institución financiera de desarrollo es una organización jurídica propia creada con el objeto de prestar servicios financieros con un enfoque integral que incluye gestión social.
+La institución financiera de desarrollo es una organización sin fines de lucro, con personalidad jurídica propia, creada con el objeto de prestar servicios financieros con un enfoque integral que incluye gestión social, buscando incidir favorablemente en el progreso económico y social de personas y organizaciones, así como contribuir al desarrollo sostenible del pequeño productor [@LEY-393, {Art. 273}].
 
-#### Bancos de desarrollo productivo
+#### Banco de desarrollo productivo
 
-El banco de desarrollo productivo es una institución con participación mayoritaria del estado que realiza actividades de primer y segundo piso de fomento y de promoción del desarrollo del sector productivo.
+El banco de desarrollo productivo es una persona jurídica de derecho privado con fines públicos constituido bajo la tipología de una sociedad de economía mixta y que realizará actividades de primer y segundo piso de fomento y de promoción del desarrollo del sector productivo [@LEY-393, {Art. 176}].
+
 
 ## Estados financieros
 
-En el campo de la ciencia económicas los estados financieros tienen como objeto reflejar la situación económica-financiera de una institución.
+Los estados financieros se entienden como una representación estructurada de la situación financiera y de las transacciones llevadas a cabo por la empresa o entidad financiera. El objetivo de los estados financieros, con propósitos de información general, es suministrar información acerca de la situación y rendimiento financieros, así como de los flujos de efectivo, que sea útil a una amplia variedad de usuarios al tomar sus decisiones económicas [@GLOSARIO_ASFI].
 
-En la página oficial de la Autoridad de Supervisión del Sistema Financiero (ASFI), "se define que los estados financieros constituyen una representación estructurada de la situación financiera y de las transacciones llevadas a cabo por la empresa. Su objetivo, con propósitos de información general, es suministrar información acerca de la situación y rendimiento financieros, así como de los flujos de efectivo que sea útil a una amplia variedad de usuarios al tomar sus decisiones económicas. Los estados financieros también muestran los resultados de la gestión que los administradores han efectuado con los recursos que se les han confiado". [@GLOSARIO_ASFI]
+Así mismo, los estados financieros que son los medios principales con los que las compañías comunican información a los inversionistas, analistas y al resto de la comunidad empresarial [@PDAF, p.51].
 
-Entonces se afirma, que los estados financieros son un resumen del ejercicio económico de una empresa o institución, entendiendo al ejercicio económico como la suma de todas las actividades vinculadas al giro de la empresa en un intervalo de tiempo, dando información, sobre ingresos, egresos, pasivos, activos, es decir, los estados financieros son una fotografía de la empresa en un punto del tiempo.
+Por lo tanto se afirma, que los estados financieros son un resumen del ejercicio económico de una empresa o institución, entendiendo al ejercicio económico como la suma de todas las actividades vinculadas al giro de la empresa en un intervalo de tiempo, dando información, sobre ingresos, egresos, pasivos, activos, es decir, los estados financieros son una fotografía de la empresa en un punto del tiempo.
 
 ### Balance general
 
@@ -67,9 +68,11 @@ Es decir, el estado de resultados muestra la conclusión en términos monetarios
 
 La evaluación financiera se entiende como un proceso de valoración de los resultados de actividades económica-financieras de las instituciones.
 
-### Indicadores financieros 
+### Indicadores financieros o razones financieras
 
-La teoría financiera define a un indicador financiero como un instrumento que tiene por objeto final medir una característica de la entidad estudiada, estos pueden ser los siguientes:
+Los ratios financieros, también llamados razones financieras, son cocientes que permiten comparar la situación financiera de la empresa con valores óptimos o promedios del sector [@ECONOMIPEDIA-INDICADORES-FINANCIEROS].
+
+Es decir, un indicador financiero es un instrumento que tiene por objeto final medir una característica de la entidad estudiada, estos pueden ser los siguientes:
 
 - Estructura de activos.
 - Estructura de pasivos.
@@ -82,10 +85,12 @@ La teoría financiera define a un indicador financiero como un instrumento que t
 
 Pero los indicadores financieros por si solos no pueden brindar información integrada sobre la situación económica-financiera de una institución en consecuencia a esta necesidad, se encuentra las metodologías de evaluación como ser la metodología CAMEL y PERLAS.
 
-
 ## Método CAMEL
 
-La metodología CAMEL tiene por objeto evaluar la **solidez financiera** de las instituciones con base ha indicadores cuantitativos, contemplando cinco características: 
+La solidez financiera informa sobre el estado corriente de salud y solidez de todo el sector de las instituciones financieras de un país y de los sectores de empresas y hogares que conforman la clientela de las instituciones financieras [@ISF-FMI].
+
+\newpage
+Donde la metodología CAMEL tiene por objeto evaluar la **solidez financiera** de las instituciones con base ha indicadores cuantitativos, contemplando cinco características: 
 
 - Capital adecuado (C).
 - Calidad del activo (A).
@@ -93,21 +98,18 @@ La metodología CAMEL tiene por objeto evaluar la **solidez financiera** de las 
 - Rentabilidad (E).
 - Situación de liquidez (L).
 
-Donde la **solidez financiera** de una institución debe entenderse como la capacidad que tiene dicha institución de hacer frente a las obligaciones que tiene con terceros y propietarios.
+Es decir, la **solidez financiera** de una institución debe entenderse como la capacidad que tiene dicha institución de hacer frente a las obligaciones que tiene con terceros y propietarios.
 
-\newpage
-La presente metodología se divide en siguientes pasos:
+La presente metodología se divide en siguientes pasos expuestos por @CALIFICACION-CAMEL:
 
 - Calculo de indicadores que responden a las características antes mencionadas.
 - Definición de rangos y límites de los indicadores.
 - Definición de la ponderación, que responden a la solidez financiera de la institución.
 - Calificación CAMEL.
 
-Los mismos que se describen a continuación:
-
 ### Calculo de indicadores
 
-A continuación, se definen los indicadores que componen a la metodología CAMEL contenida en la presente investigación:
+A continuación, se definen los indicadores que componen a la metodología CAMEL, en función de los elementos que la componen definidos por la @MANUAL_CUENTAS_ASFI en su manual de cuentas y la formulas expuestas por @RATIOS-CAMEL:
 
 #### Capital
 
@@ -119,29 +121,38 @@ Está definido cómo la relación porcentual entre el capital regulatorio y los 
 
 ##### Coeficiente de cobertura de cartera en mora (CCCM)
 
-Este indicador mide o tiene objeto responder si el patrimonio de la institución cubre en tanto por ciento:
+Este indicador definido en la ecuación \@ref(eq:mt-cccm) mide o tiene objeto responder si el patrimonio de la institución cubre en tanto por ciento:
 
 - Los créditos cuyo capital, cuotas de amortización o intereses no hayan sido cancelados íntegramente a la entidad hasta los 30 días contados desde la fecha de vencimiento. 
 - Los créditos por los cuales la entidad ha iniciado las acciones judiciales para el cobro.
 - Descontando la previsión por incobrabilidad de créditos.
 
-$$ \frac{ \text{Cartera En Mora - Previsión Cartera} }{\text{Patrimonio}}$$
+\begin{equation}
+\text{CCCM} = \frac{ \text{Cartera En Mora - Previsión Cartera} }{\text{Patrimonio}}
+(\#eq:mt-cccm)
+\end{equation}
 
 ##### Coeficiente acido de cobertura de cartera en mora (CACCM)
 
-Este indicador mide o tiene objeto responder si el patrimonio de la institución cubre en tanto por ciento:
+El indicador definido en la ecuación \@ref(eq:mt-caccm) mide o tiene objeto responder si el patrimonio de la institución cubre en tanto por ciento:
 
 - Los créditos cuyo capital, cuotas de amortización o intereses no hayan sido cancelados íntegramente a la entidad hasta los 30 días contados desde la fecha de vencimiento. 
 - Los créditos por los cuales la entidad ha iniciado las acciones judiciales para el cobro.
 - Descontando la previsión por incobrabilidad de créditos y adjuntando bienes realizables.
 
-$$ \frac{ \text{Cartera En Mora - Previsión Cartera + Realizables} }{ \text{Patrimonio} } $$
+\begin{equation}
+\text{CACCM} = \frac{ \text{Cartera En Mora - Previsión Cartera + Realizables} }{ \text{Patrimonio} } 
+(\#eq:mt-caccm)
+\end{equation}
 
 ##### Coeficiente de cobertura patrimonial (CCP) 
 
-Este indicador mide o tiene por objeto responder si los activos descontando las cuentas contingentes cubren los el patrimonio de la misma.
+Este indicador definido en la ecuación \@ref(eq:mt-ccp) mide o tiene por objeto responder si los activos descontando las cuentas contingentes cubren los el patrimonio de la misma.
 
-$$ \frac{ \text{Patrimonio} }{ \text{Activo - Contingente} } $$
+\begin{equation}
+\text{CCP} = \frac{ \text{Patrimonio} }{ \text{Activo - Contingente} }
+(\#eq:mt-ccp)
+\end{equation}
 
 #### Activo
 
@@ -149,27 +160,42 @@ Los indicadores de activos tienen por objeto de evaluar la composición de los a
 
 ##### Coeficiente de exposición de cartera (CEC) 
 
-El presente coeficiente determina que por ciento de los créditos están expuestos a riesgo de ser incumplidos o cancelados.
+El presente coeficiente definido en la ecuación \@ref(eq:mt-cec) determina que por ciento de los créditos están expuestos a riesgo de ser incumplidos o cancelados.
 
-$$  \frac{ \text{Cartera En Mora} }{ \text{Cartera Bruta} } $$
+\begin{equation}
+\text{CEC} = \frac{ \text{Cartera En Mora} }{ \text{Cartera Bruta} } 
+(\#eq:mt-cec)
+\end{equation}
 
 ##### Coeficiente de previsión de cartera (CPC) 
 
-El presente coeficiente mide o tiene por objeto responder en que tanto por ciento está cubierta los créditos realizados por la institución.
+El presente coeficiente definido en la ecuación \@ref(eq:mt-cpc) mide o tiene por objeto responder en que tanto por ciento está cubierta los créditos realizados por la institución.
 
-$$ \frac{ \text{Previsión} }{ \text{Cartera Bruta} } $$
+\begin{equation}
+\text{CPC} = \frac{ \text{Previsión} }{ \text{Cartera Bruta} } 
+(\#eq:mt-cpc)
+\end{equation}
+
 
 ##### Coeficiente de previsión de cartera en mora (CPCM)
 
-Este coeficiente mide o tiene por objeto responder en que tanto por ciento está cubierta los créditos incobrables realizados por la institución.
+Este coeficiente definido en la ecuación \@ref(eq:mt-cpcm) mide o tiene por objeto responder en que tanto por ciento está cubierta los créditos incobrables realizados por la institución.
 
-$$ \frac{ \text{Previsión} }{ \text{Cartera En Mora} } $$
+\begin{equation}
+\text{CPCM} = \frac{ \text{Previsión} }{ \text{Cartera En Mora} } 
+(\#eq:mt-cpcm)
+\end{equation}
+
 
 ##### Coeficiente de reposición de cartera (CRC)
 
-Dicho coeficiente tiene por objeto medir en que tanto por ciento alcanzan los créditos re programados.
+Dicho coeficiente definido en la ecuación \@ref(eq:mt-crc) tiene por objeto medir en que tanto por ciento alcanzan los créditos re programados.
 
-$$ \frac{ \text{Cartera Reprogramada Total} }{ \text{Cartera Bruta} } $$
+\begin{equation}
+\text{CRC} = \frac{ \text{Cartera Reprogramada Total} }{ \text{Cartera Bruta} } 
+(\#eq:mt-crc)
+\end{equation}
+
 
 #### Administración
 
@@ -177,16 +203,23 @@ Los indicadores de administración tienen por objeto evaluar como las institucio
 
 ##### Coeficiente de cobertura gastos administrativos (CCGA)
 
-El coeficiente mide si los activos de la institución pueden hacer frente a los gastos administrativos de la institución.
+El coeficiente definido en la ecuación \@ref(eq:mt-ccga) mide si los activos de la institución pueden hacer frente a los gastos administrativos de la institución.
 
-$$ \frac{ \text{Gastos Administración} }{ \text{Activos + Contingentes} } $$
+\begin{equation}
+\text{CCGA} = \frac{ \text{Gastos Administración} }{ \text{Activos + Contingentes} } 
+(\#eq:mt-ccga)
+\end{equation}
 
 
 ##### Coeficiente acido de cobertura patrimonial (CACGA) 
 
-Este coeficiente mide si los ingresos brutos pueden hacer frente a los gastos administrativos de la institución.
+Este coeficiente definido en la ecuación \@ref(eq:mt-cacga) mide si los ingresos brutos pueden hacer frente a los gastos administrativos de la institución.
 
-$$ \frac{ \text{Gastos Administración - Impuestos} }{ \text{Resultado Operativo Bruto} } $$
+\begin{equation}
+\text{CACGA} = \frac{ \text{Gastos Administración - Impuestos} }{ \text{Resultado Operativo Bruto} }
+(\#eq:mt-cacga)
+\end{equation}
+
 
 #### Beneficios
 
@@ -194,16 +227,22 @@ Los indicadores de beneficios tienen por objeto de evaluar el rendimiento o gene
 
 ##### Coeficiente de rendimiento sobre activos (ROA)
 
-El presente coeficiente determina el rendimiento en tanto por uno, los beneficios que han generado los activos.
+El presente coeficiente definido en la ecuación \@ref(eq:mt-roa) determina el rendimiento en tanto por uno, los beneficios que han generado los activos.
 
-$$ \frac{ \text{Resultado Neto De La Gestión} }{ \text{Activo + Contingente} } $$
-
+\begin{equation}
+\text{ROA} = \frac{ \text{Resultado Neto De La Gestión} }{ \text{Activo + Contingente} } 
+(\#eq:mt-roa)
+\end{equation}
 
 ##### Coeficiente de rendimiento sobre patrimonio (ROE)
 
-Este coeficiente determina el rendimiento en tanto por uno, los beneficios que ha generado el patrimonio.
+Este coeficiente definido en la ecuación \@ref(eq:mt-roe) determina el rendimiento en tanto por uno, los beneficios que ha generado el patrimonio.
 
-$$ \frac{ \text{Resultado Neto De La Gestión} }{ \text{Patrimonio} } $$
+\begin{equation}
+\text{ROE} = \frac{ \text{Resultado Neto De La Gestión} }{ \text{Patrimonio} } 
+(\#eq:mt-roe)
+\end{equation}
+
 
 #### Liquidez
 
@@ -211,38 +250,53 @@ Los indicadores de liquidez tienen por objeto de evaluar la capacidad de las ins
 
 ##### Coeficiente de capacidad de pago frente a pasivos (CCPP)
 
-El coeficiente busca medir si la institución puede hacer frente a sus obligaciones con los activos disponibles y inversiones temporales.
+El coeficiente definido en la ecuación \@ref(eq:mt-ccpp) busca medir si la institución puede hacer frente a sus obligaciones con los activos disponibles y inversiones temporales.
 
-$$ \frac{ \text{Disponibles + Inversiones Temporarias} }{ \text{Pasivos} } $$
+\begin{equation}
+\text{CCPP} = \frac{ \text{Disponibles + Inversiones Temporarias} }{ \text{Pasivos} }
+(\#eq:mt-ccpp)
+\end{equation}
+
 
 ##### Coeficiente acido de capacidad de pago frente a pasivos (CACPP) 
 
-El coeficiente busca medir si la institución puede hacer frente a sus obligaciones con los activos disponibles.
+El coeficiente definido en la ecuación \@ref(eq:mt-cacpp) busca medir si la institución puede hacer frente a sus obligaciones con los activos disponibles.
 
-$$ \frac{ \text{Disponibles} }{ \text{Pasivos} } $$
+\begin{equation}
+\text{CACPP} = \frac{ \text{Disponibles} }{ \text{Pasivos} } 
+(\#eq:mt-cacpp)
+\end{equation}
 
 ### Definición de rangos y límites de los indicadores
 
-En esta sección de la metodología CAMEL se establecen rangos a los cuales le corresponde una calificación, sujeta a una probabilidad, es decir, aquellos resultados mejores, pero menos probable reciben una mejor calificación y aquellos resultados peores y menos probables reciben una peor calificación. 
+En esta sección de la metodología CAMEL se establecen rangos a los cuales le corresponde una calificación, sujeta a una probabilidad [@TENDENCIAS-CAMEL], es decir, aquellos resultados mejores, pero menos probable se los posiciona en L1 dando una mejor calificación y aquellos resultados peores y menos probables se los posiciona en L5 recibiendo una peor calificación, es decir, los límites de los indicadores están definidos por la desviación estándar y el promedio de los datos históricos:
 
-\input{RECURSOS-INVESTIGACION/003-MARCO-TEORICO/tabla-ejemplo-tipo-calificacion-camel}
+- L3 $\bar{X}$
+- L2 y L4 $\bar{X} \pm \sqrt{\sigma^2}$
+- L1 y L5 $\bar{X} \pm 2\sqrt{\sigma^2}$
+
 
 ### Definición de la ponderación
 
-La ponderación de los elementos CAMEL son asignados de manera arbitraria, pero sujeto a lineamientos económico-financieros el cual presenta la siguiente forma:
+La ponderación de los elementos CAMEL son asignados de manera arbitraria, pero sujeto a lineamientos económico-financieros [@PONDERACION-CAMEL], el cual presenta la siguiente forma:
 
-$$CAMEL = \text{30\%C + 30\%A + 10\%M + 15\%E + 15\%L}$$
+\begin{equation}
+\text{CAMEL} =  \text{30\%C + 30\%A + 10\%M + 15\%E + 15\%L}
+(\#eq:mt-cacpp)
+\end{equation}
 
 Donde la mayor ponderación está concentrado en los indicadores de capital y activos ya que en ultimo termino son estos mismos con la que una institución financiera puede hacer frente a sus obligaciones con terceros, como también dando mayor ponderación a los indicadores de rendimiento y liquidez respecto a los indicadores de administración debido a la relación que guardan los mismos con el activo y el capital, es decir, el rendimiento tiene efectos sobre el capital y por el otro lado la liquidez tiene efectos sobre los activos.
 
 ### Calificación CAMEL
 
-Dado los pasos anteriores la metodología CAMEL asigna una puntuación a la institución, y permitirá determinar que institución les corresponde mayor solidez financiera respecto a las otras instituciones.
+Dado los pasos anteriores la metodología CAMEL asigna una puntuación a la institución, y permitirá determinar que institución les corresponde mayor solidez financiera respecto a las otras instituciones [@CALIFICACION-CAMEL], permitiendo asignar una categoría de solidez financiera (Ver tabla \@ref(tab:calificacion-camel-marco-teorico)).
 
+
+\input{RECURSOS-INVESTIGACION/003-MARCO-TEORICO/tabla-ejemplo-tipo-calificacion-camel}
 
 ## Pronósticos
 
-El termino de pronóstico de uso común, definido por la Real Academia Española (RAE) como la acción y efecto de pronosticar, la misma RAE define pronosticar como predecir algo en el futuro a partir de indicios. El pronóstico es el proceso de estimación en situaciones de incertidumbre, para los propósitos de esta investigación, un pronóstico es un evento asociado a una distribución de probabilidad.
+El termino de pronóstico definido como "la acción y efecto de pronosticar" [@RAE], así mismo pronosticar es definido como "predecir algo en el futuro a partir de indicios" [@RAE], es decir, el pronóstico es el proceso de estimación en situaciones de incertidumbre, para los propósitos de esta investigación, un pronóstico es un evento asociado a una distribución de probabilidad.
 
 Donde los pronósticos por si solos tampoco pueden brindar información integrada sobre la situación económica-financiera futura de la institución, en consecuencia como respuesta a esta necesidad, se encuentra las metodologías de evaluación junto con la simulación de procesos estocásticos.
 
@@ -262,7 +316,7 @@ Ahora bien, el campo de la inteligencia artificial es relativamente reciente, y 
 
 El aprendizaje supervisado corresponde a la situación en que se tiene una variable de salida, ya sea cuantitativa o cualitativa, que se desea predecir basándose en un conjunto de características. [@IALAT]
 
-**El aprendizaje supervisado es una rama del aprendizaje automático, son algoritmos que permiten aprender a la red neuronal mediante datos ejemplos que están compuesta por un vector de entrada que son las variables independientes, y otro vector denomina etiquetas, donde la red se encarga de encontrar las relaciones existentes entre las variables independientes, realizando cambios y adaptando el modelo por medio de variaciones sujetas a una función de coste.** 
+El aprendizaje supervisado es una rama del aprendizaje automático, son algoritmos que permiten aprender a la red neuronal mediante datos ejemplos que están compuesta por un vector de entrada que son las variables independientes, y otro vector denomina etiquetas, donde la red se encarga de encontrar las relaciones existentes entre las variables independientes, realizando cambios y adaptando el modelo por medio de variaciones sujetas a una función de coste. 
 
 ### Aprendizaje no supervisado con redes neuronales
 
@@ -288,9 +342,18 @@ La neurona es la unidad básica de procesamiento de una red neuronal de ahí el 
 
 Dado:
 
-$$ X = \left( x_{1},x_{2},x_{3},...,x_{n} \right) $$
+\begin{equation}
+X = \left( x_{1},x_{2},x_{3},...,x_{n} \right) 
+(\#eq:mt-x-rnn)
+\end{equation}
+
 Se tiene:
-$$ Y = f(X) = \sum_{i=1}^{n}{w_{i}x_{i}}  = \sum{WX}  $$
+
+\begin{equation}
+Y = f(X) = \sum_{i=1}^{n}{w_{i}x_{i}}  = \sum{WX} 
+(\#eq:mt-y-rnn)
+\end{equation}
+
 Donde:
 \newline
 X = Vector de los datos de entrada.
@@ -301,7 +364,10 @@ W = Vector de los pesos las variables independientes.
 
 La arquitectura de la red neuronal corresponde a la manera en que esta ordena las neuronas, si las neuronas son colocadas de forma vertical, reciben los mismos datos de entrada y sus resultados de salida lo pasan a la siguiente capa, la última capa de una red neuronal se denominan capa de salida y las capas que estén entre la capa de salida y capa de entrada se denominas capas ocultas. Ahora bien, al ser cada neurona una suma ponderada esta equivaldría a una sola capa de la red, a esto se denomina colisión de la red neuronal, para resolver este problema se planteó los que se conoce como función de activación que es una función no lineal que distorsiona los resultados salientes de cada neurona.
 
-$$A = f(Y)$$
+\begin{equation}
+A = f(Y)
+(\#eq:mt-a-rnn)
+\end{equation}
 
 Dado lo anterior expuesto una capa de una red neuronal se debe entender como la agrupación neuronas.
 
@@ -313,12 +379,15 @@ Las funciones de activación distorsionan de forma no lineal las salidas de las 
 
 Esta función asigna el valor de 1 si la salida de la neurona supera cierto umbral y cero si no lo supera.
 
-$$ f(x) = max(0,x) = \left \{
+\begin{equation}
+f(x) = max(0,x) = \left \{
 \begin{array}{rcl}
      0 & Si & x < 0
   \\ 1 & Si & x \geq{0}
 \end{array}
-\right. $$
+\right.
+(\#eq:mt-fe-rnn)
+\end{equation}
 
 #### Función sigmoide
 
@@ -362,9 +431,11 @@ $$ f(Z)_{j} = \frac{ e^{Z_{J}} }{ \sum_{k=1}^{K} e^{Z_{K}} } $$
 
 <!-- Gráficos de funciones activación -->
 
-```{r, fig.cap='Funciones de activación', out.height='40%', out.width='100%'}
+```{r mt-funciones-de-activacion, fig.cap='Funciones de activación', out.height='40%', out.width='100%'}
 plotActFuntMarcTeor()
 ```
+
+ver la figura \@ref(fig:mt-funciones-de-activacion).
 
 ### Propagación hacia adelante y hacia atrás
 

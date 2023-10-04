@@ -1,6 +1,7 @@
 ---
 output: 
-    pdf_document:
+    bookdown::pdf_document2:
+        toc: no
         includes:
             in_header: assets/csl-bib-sty/styles.sty
         df_print: kable
@@ -9,7 +10,8 @@ geometry: "left=3cm,right=2cm,top=2cm,bottom=2cm"
 fontsize: 12pt
 csl: assets/csl-bib-sty/apa.csl
 bibliography: [assets/csl-bib-sty/references_inv_books.bib, 
-               assets/csl-bib-sty/references_inv_manuals.bib ]
+               assets/csl-bib-sty/references_inv_manuals.bib,
+               assets/csl-bib-sty/references_inv_web.bib]
 nocite: '@*'
 ---
 
@@ -65,40 +67,17 @@ options(scipen=999)
 
 ```
 
-<!-- MARCO TEORICO -->
+<!-- MARCO TEÓRICO -->
 \newpage
 ```{r, child="RECURSOS-INVESTIGACION/003-MARCO-TEORICO/003-MARCO-TEORICO.Rmd"}
 
 ```
 
 
-<!-- DIAGNOSTICO SISTEMA FINANCIERO -->
-\newpage
-```{r, child="RECURSOS-INVESTIGACION/004-DIAGNOSTICO-SISTEMA-FINANCIERO/004-DIAGNOSTICO-SISTEMA-FINANCIERO.Rmd"}
-
-```
-
-<!-- DETERMINACION REDES NEURONALES-PRONOSTICOS -->
-\newpage
-```{r, child="RECURSOS-INVESTIGACION/005-DETERMINACION-REDES-NEURONALES-PRONOSTICOS/005-DETERMINACION-REDES-NEURONALES-PRONOSTICOS.Rmd"}
-
-```
-
-<!-- CONCLUSIONES Y RECOMENDACIONES -->
-\newpage
-```{r, child="RECURSOS-INVESTIGACION/006-CONCLUSIONES-RECOMENDACIONES/006-CONCLUSIONES-RECOMENDACIONES.Rmd"}
-
-```
-
 <!-- BIBLIOGRAFIA CONSULTADA -->
 \newpage
-```{r, child="RECURSOS-INVESTIGACION/009-BIBLIOGRAFIA-CONSULTADA/009-BIBLIOGRAFIA-CONSULTADA.Rmd"}
+```{r, child="RECURSOS-INVESTIGACION/009-REFERENCIAS-BIBLIOGRAFICAS/009-REFERENCIAS-BIBLIOGRAFICAS.Rmd"}
 
 ```
 
-<!-- ANEXOS -->
-\newpage
-```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-ANEXOS.Rmd"}
-
-```
 

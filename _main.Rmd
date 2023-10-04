@@ -1,0 +1,207 @@
+---
+output: 
+    pdf_document2:
+        includes:
+            in_header: assets/csl-bib-sty/styles.sty
+        df_print: kable
+        number_sections: true
+geometry: "left=3cm,right=2cm,top=2cm,bottom=2cm"
+fontsize: 12pt
+csl: assets/csl-bib-sty/apa.csl
+bibliography: [assets/csl-bib-sty/references_inv_books.bib, 
+               assets/csl-bib-sty/references_inv_manuals.bib ]
+nocite: '@*'
+---
+
+<!-- Configuración CHUNKS -->
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE,
+                      fig.align='center',
+                      out.height='60%',
+                      out.width='100%')
+
+knitr::opts_knit$set(root.dir = getwd())
+
+options(scipen=999)
+
+```
+
+\includepdf[pages=-]{RECURSOS-INVESTIGACION/CARATULA/CARATULA}
+
+\clearpage
+\pagenumbering{roman}
+
+
+<!-- PREAMBULO -->
+\newpage
+```{r, child="RECURSOS-INVESTIGACION/000-PREAMBULO/000-PREAMBULO.Rmd"}
+
+```
+
+
+\newpage
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+
+
+\clearpage
+\pagenumbering{arabic}
+
+<!-- PERFIL DEL PROYECTO -->
+\newpage
+```{r, child="RECURSOS-INVESTIGACION/001-PERFIL-DEL-PROYECTO/001-PERFIL-DEL-PROYECTO.Rmd"}
+
+```
+
+<!-- ANTECEDENTES -->
+\newpage
+```{r, child="RECURSOS-INVESTIGACION/002-ANTECEDENTES/002-ANTECEDENTES.Rmd"}
+
+```
+
+<!-- MARCO TEORICO -->
+\newpage
+```{r, child="RECURSOS-INVESTIGACION/003-MARCO-TEORICO/003-MARCO-TEORICO.Rmd"}
+
+```
+
+
+
+<!-- BIBLIOGRAFIA CONSULTADA -->
+\newpage
+```{r, child="RECURSOS-INVESTIGACION/009-BIBLIOGRAFIA-CONSULTADA/009-BIBLIOGRAFIA-CONSULTADA.Rmd"}
+
+```
+
+
+
+<!--chapter:end:PRINCIPAL-INVESTIGACION.Rmd-->
+
+---
+output: 
+    pdf_document:
+        includes:
+            in_header: assets/csl-bib-sty/styles_perfil.sty
+        df_print: kable
+        toc_depth: 2
+        number_sections: true
+geometry: "left=3cm,right=2cm,top=2cm,bottom=2cm"
+fontsize: 12pt
+bibliography: assets/csl-bib-sty/references_perfil.bib
+csl: assets/csl-bib-sty/apa.csl
+nocite: '@*'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\includepdf[pages=-]{RECURSOS-PLAN-DE-INVESTIGACION/CARATULA-PLAN-DE-INVESTIGACION/CARATULA-PLAN-DE-INVESTIGACION}
+
+\setcounter{tocdepth}{2}
+
+\tableofcontents
+
+\newpage
+\listoffigures
+
+\newpage
+\listoftables
+
+<!--ANTECEDENTES-->
+\newpage
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/002-ANTECEDENTES/002-ANTECEDENTES.Rmd"}
+
+```
+
+
+<!-- PLANTEAMIENTO DEL PROBLEMA -->
+
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/003-PLANTEAMIENTO-DEL-PROBLEMA/003-PLANTEAMIENTO-DEL-PROBLEMA.Rmd"}
+
+```
+
+<!-- FORMULACION DEL PROBLEMA -->
+
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/004-FORMULACION-DEL-PROBLEMA-CENTRAL/004-FORMULACION-DEL-PROBLEMA-CENTRAL.Rmd"}
+
+```
+
+<!-- JUSTIFICACION -->
+
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/005-JUSTIFICACION/005-JUSTIFICACION.Rmd"}
+
+```
+
+<!-- ALCANCE Y DELIMITACION -->
+
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/006-ALCANCE-Y-DELIMITACION/006-ALCANCE-Y-DELIMITACION.Rmd"}
+
+```
+
+<!-- OBJETIVOS DE LA INVESTIGACION -->
+
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/007-OBJETIVOS-DE-LA-INVESTIGACION/007-OBJETIVOS-DE-LA-INVESTIGACION.Rmd"}
+
+```
+
+<!-- MARCO TEORICO -->
+
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/008-MARCO-TEORICO/008-MARCO-TEORICO.Rmd"}
+
+```
+
+<!-- HIPOTESIS -->
+
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/009-HIPOTESIS/009-HIPOTESIS.Rmd"}
+
+```
+
+<!-- MARCO METODICO -->
+
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/010-MARCO-METODICO/010-MARCO-METODICO.Rmd"}
+
+```
+
+\newpage
+<!-- FUENTES DE INFORMACION -->
+
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/011-FUENTES-DE-INFORMACION/011-FUENTES-DE-INFORMACION.Rmd"}
+
+```
+
+<!-- ESTRUCTURA CAPITULAR TENTATIVO -->
+\newpage
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/012-ESTRUCTURA-CAPITULAR-TENTATIVO/012-ESTRUCTURA-CAPITULAR-TENTATIVO.Rmd"}
+
+```
+
+<!-- CRONOGRAMA DEL TRABAJO DE INVESTIGACION -->
+\newpage
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/013-CRONOGRAMA-DEL-TRABAJO-DE-INVESTIGACION/013-CRONOGRAMA-DEL-TRABAJO-DE-INVESTIGACION.Rmd"}
+
+```
+
+<!-- ANEXOS -->
+\newpage
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/014-ANEXOS/014-ANEXOS.Rmd"}
+
+```
+
+<!-- BIBLIOGRAFIA A SER CONSULTADA -->
+\newpage
+```{r, child="RECURSOS-PLAN-DE-INVESTIGACION/015-BIBLIOGRAFIA-A-SER-CONSULTADA/015-BIBLIOGRAFIA-A-SER-CONSULTADA.Rmd"}
+
+```
+
+
+
+
+<!--chapter:end:PRINCIPAL-PLAN-DE-INVESTIGACION.Rmd-->
+
