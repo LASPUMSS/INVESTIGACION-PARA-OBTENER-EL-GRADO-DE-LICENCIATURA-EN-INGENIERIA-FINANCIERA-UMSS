@@ -26,6 +26,7 @@ Los límites de los indicadores están definidos por la desviación estándar y 
 
 Es decir, L1 representa un escenario poco probable, pero beneficio para el sector y por el otro lado L5 representa un escenario poco probable pero perjudicial para el sector, dejando a L3 como el escenario más probable por ser el promedio.
 
+\vspace*{5pt}
 
 ```{r}
 renderTableCamelRangosLimites(datCamelRangosLimites)
