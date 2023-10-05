@@ -461,7 +461,7 @@ plotActFuntMarcTeor()
 ```
 
 ```{=latex}
-\textit{Fuente:} Elaboración propia.
+\floatfoot{Fuente: Elaboración propia.}
 \end{figure}
 ```
 

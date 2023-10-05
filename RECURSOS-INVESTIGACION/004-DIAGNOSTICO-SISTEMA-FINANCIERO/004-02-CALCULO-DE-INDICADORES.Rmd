@@ -53,10 +53,11 @@ wrap_plots(listPlots, ncol = 1)
 ```
 
 ```{=latex}
-\textit{Fuente:} Elaboración propia.
+\floatfoot{Fuente: Elaboración propia.}
 \end{figure}
 ```
 
+\vspace*{15pt}
 ```{r}
 listTablesRender %>% 
     footnote(general_title = 'NOTA:',
@@ -163,10 +164,11 @@ wrap_plots(listPlots, ncol = 1)
 ```
 
 ```{=latex}
-\textit{Fuente:} Elaboración propia.
+\floatfoot{Fuente: Elaboración propia.}
 \end{figure}
 ```
 
+\vspace*{15pt}
 ```{r}
 listTablesRender %>% 
     footnote(general_title = 'NOTA:',
@@ -276,11 +278,11 @@ wrap_plots(listPlots, ncol = 1)
 ```
 
 ```{=latex}
-\textit{Fuente:} Elaboración propia.
+\floatfoot{Fuente: Elaboración propia.}
 \end{figure}
 ```
 
-
+\vspace*{15pt}
 ```{r}
 listTablesRender %>% 
     footnote(general_title = 'NOTA:',
@@ -351,10 +353,11 @@ wrap_plots(listPlots, ncol = 1)
 ```
 
 ```{=latex}
-\textit{Fuente:} Elaboración propia.
+\floatfoot{Fuente: Elaboración propia.}
 \end{figure}
 ```
 
+\vspace*{15pt}
 ```{r}
 listTablesRender %>% 
     footnote(general_title = 'NOTA:',
@@ -427,10 +430,11 @@ wrap_plots(listPlots, ncol = 1)
 ```
 
 ```{=latex}
-\textit{Fuente:} Elaboración propia.
+\floatfoot{Fuente: Elaboración propia.}
 \end{figure}
 ```
 
+\vspace*{15pt}
 ```{r}
 listTablesRender %>% 
     footnote(general_title = 'NOTA:',

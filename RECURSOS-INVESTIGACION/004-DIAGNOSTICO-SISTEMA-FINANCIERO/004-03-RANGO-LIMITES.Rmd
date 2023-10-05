@@ -26,8 +26,7 @@ Los límites de los indicadores están definidos por la desviación estándar y 
 
 Es decir, L1 representa un escenario poco probable, pero beneficio para el sector y por el otro lado L5 representa un escenario poco probable pero perjudicial para el sector, dejando a L3 como el escenario más probable por ser el promedio.
 
-\vspace*{5pt}
-
+\vspace*{15pt}
 ```{r}
 renderTableCamelRangosLimites(datCamelRangosLimites)
 ```
@@ -36,6 +35,7 @@ renderTableCamelRangosLimites(datCamelRangosLimites)
 
 Los rangos CAMEL flexibles presume el escenario más favorable a la hora de calificar los resultados de los indicadores, es decir, si un indicador esta entre dos limites por ejemplo **L1** y **L2** se le da la calificación de 1.
 
+\vspace*{15pt}
 ```{r}
 renderTableBasic(tableRefenceCamelCalificaciones, 
                  captionTable = 'Rangos de calificación CAMEL flexibles')
@@ -45,6 +45,7 @@ renderTableBasic(tableRefenceCamelCalificaciones,
 
 Los rangos CAMEL estrictos presume el escenario menos favorable a la hora de calificar los resultados de los indicadores, es decir, si un indicador esta entre dos limites por ejemplo **L1** y **L2** se le da la calificación de 2.
 
+\vspace*{15pt}
 ```{r}
 renderTableBasic(tableRefenceCamelCalificacionesHard, 
                  captionTable = 'Rangos de calificación CAMEL estrictos')
