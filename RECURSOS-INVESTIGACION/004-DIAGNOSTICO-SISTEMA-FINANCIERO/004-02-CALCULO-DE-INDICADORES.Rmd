@@ -25,7 +25,7 @@ datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
 
 ## Calculo de indicadores
 
-En la presente sección se tiene por objeto presentar los indicadores que evaluarán las diferentes características de los sectores financieros que harán manifiesto si dicho sector tiene la capacidad de hacer frente a sus obligaciones.
+En la presente sección se presentan los indicadores que evalúan las diferentes características de los sectores financieros por medio de los mismos que harán manifiesto si dicho sector tiene la capacidad de hacer frente a sus obligaciones.
 
 \newpage
 ### Indicadores de capital
@@ -34,7 +34,7 @@ En la presente sección se tiene por objeto presentar los indicadores que evalua
 <!-- #####################  INDICADORES DE CAPITAL         -->
 <!-- ##################################################### -->
 
-```{r}
+```{r df-indicadores-capital-tabla}
 ids <- c('indCap_CAP','indCap_CCCM','indCap_CACCM','indCap_CCP')
 listResult <- getListStatsOverviewInd(ids, datCamelIndNorm, datIdsNamesCamelInds)
 listPlots <- getListPlotsInd(listResult)
@@ -42,13 +42,13 @@ listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas de
 
 ```
 
-Los indicadores de capital buscan responder o evaluar la capacidad del capital contable de los sectores financieros para hacer frente a sus obligaciones con terceros y propios, a continuación, se presentan los resultados de los mismos:
+Los indicadores de capital buscan responder o evaluar la capacidad de los sectores financieros para hacer frente a sus obligaciones con terceros y propios por medio su capital contable, se presenta la evolución de los mismos atravez del tiempo en forma de series de tiempo (Ver figura \@ref(fig:df-indicadores-capital)).
 
 ```{=latex}
 \begin{figure}[h!]
 ```
 
-```{r, fig.height = 20, fig.width = 20, fig.cap='Indicadores de capital'}
+```{r df-indicadores-capital, fig.height = 20, fig.width = 20, fig.cap='Indicadores de capital'}
 wrap_plots(listPlots, ncol = 1)
 ```
 
@@ -65,78 +65,85 @@ listTablesRender %>%
 ```
 
 
-#### Coeficiente de adecuación patrimonial (CAP)
+#### Coeficiente de adecuación patrimonial (CAP) {#DF-CAP}
 
 ```{r}
 id <- 'indCap_CAP'
 nameIndById <- listResult[[id]][['nameIndById']]
 nameEntBestPromedio <- listResult[[id]][['nameEntBestPromedio']]
 bestPromedio <- listResult[[id]][['bestPromedio']]
-
+nameEntBestTendencia <- listResult[[id]][['nameEntBestTendencia']]
+bestTendencia <- listResult[[id]][['bestTendencia']]
 ```
 
-El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(round(bestPromedio*100,2), scientific=FALSE)`%, lo cual indica que el capital regulatorio de las `r str_to_lower(nameEntBestPromedio)` cubre en promedio el `r format(round(bestPromedio*100,2), scientific=FALSE)`% de los activos y contingentes ponderados en función de factores de riesgo.
+El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(round(bestPromedio*100,2), scientific=FALSE)`% (Ver tabla \@ref(tab:df-indicadores-capital-tabla)), lo cual indica que el capital regulatorio de las `r str_to_lower(nameEntBestPromedio)` cubre en promedio el `r format(round(bestPromedio*100,2), scientific=FALSE)`% de los activos y contingentes ponderados en función de factores de riesgo, así también, el sector `r str_to_lower(nameEntBestTendencia)` posee la mejor tendencia mensual del indicador, es decir, el sector en promedio mensualmente incrementa en `r format(round(bestTendencia*100,2), scientific=FALSE)`% en el `r str_to_lower(nameIndById)`, dando al sector mayor capacidad de hacer frente a sus obligaciones.
 
-#### Coeficiente de cobertura de cartera en mora (CCCM)
+#### Coeficiente de cobertura de cartera en mora (CCCM)  {#DF-CCCM}
 
 ```{r}
 id <- 'indCap_CCCM'
 nameIndById <- listResult[[id]][['nameIndById']]
 nameEntBestPromedio <- listResult[[id]][['nameEntBestPromedio']]
 bestPromedio <- listResult[[id]][['bestPromedio']]
-
+nameEntBestTendencia <- listResult[[id]][['nameEntBestTendencia']]
+bestTendencia <- listResult[[id]][['bestTendencia']]
 ```
 
-El indicador está definido por la siguiente ecuación:
+El indicador está definido por la ecuación \@ref(eq:df-cccm) expresado en tanto por ciento, que buscar responder si el patrimonio del sector posee la capacidad de cubrir la diferencia la cartera en mora y la previsión de cartera, entendiendo esta diferencia en dos sentidos:
+
+- Si la diferencia es positiva, indica que la cantidad de créditos medido en bolivianos cuyo capital, cuotas de amortización o intereses no hayan sido cancelados íntegramente a la entidad hasta los 30 días contados desde la fecha de vencimiento, es superior al previsión por incobrabilidad de créditos realizada por el sector, lo cual seria un aspecto negativo para su solidez financiera.
+- Si la diferencia es negativa, indica que la previsión por incobrabilidad de créditos realizada por el sector es superior a la cartera en mora, entendiendo la diferencia como la cantidad de créditos que el sector preveía su incobrabilidad pero que si fueron cancelados o son parte de cartera vigente, lo cual seria un aspecto positivo para su solidez financiera.
 
 \begin{equation}
-\text{CCCM} = \frac{ \text{Cartera En Mora - Previsión Cartera} }{\text{Patrimonio}}
+\text{CCCM} = \frac{ \text{Cartera En Mora - Previsión Cartera} }{\text{Patrimonio}} * \text{100}
 (\#eq:df-cccm)
 \end{equation}
 
-El mejor resultado para este indicador esta dado por aquel que sea lo más bajo posible lo cual mostraría que el patrimonio del sector puede cubrir en su totalidad la cartera en mora, donde la tabla da como promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`, ahora bien el hecho que los promedios para los diferentes sectores sea negativo indica que los mismos hacen una previsión superior a la cartera en mora lo cual es favorable para su solidez financiera, así también el promedio de sus indicadores se menores a 1 indica que el patrimonio puede hacer frente las obligaciones que se puedan generar por cubrir la cartera en mora.
+El mejor resultado para este indicador esta dado por aquel que sea lo más bajo posible lo cual mostraría que el patrimonio del sector puede cubrir en su totalidad la cartera en mora o mayor eficiencia en la gestión de cartera, donde el promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(round(bestPromedio*100,2), scientific=FALSE)`% (Ver tabla \@ref(tab:df-indicadores-capital-tabla)), es decir, la previsión realizada por el sector cubre la cartera en mora y que los créditos que se preveía su incobrabilidad que fueron cancelados o son parte de cartera vigente representan el `r format(round(bestPromedio*100*(-1),2), scientific=FALSE)`% del patrimonio.
 
 
-#### Coeficiente acido de cobertura de cartera en mora (CACCM)
+#### Coeficiente acido de cobertura de cartera en mora (CACCM) {#DF-CACCM}
 
 ```{r}
 id <- 'indCap_CACCM'
 nameIndById <- listResult[[id]][['nameIndById']]
 nameEntBestPromedio <- listResult[[id]][['nameEntBestPromedio']]
 bestPromedio <- listResult[[id]][['bestPromedio']]
-
+nameEntBestTendencia <- listResult[[id]][['nameEntBestTendencia']]
+bestTendencia <- listResult[[id]][['bestTendencia']]
 ```
 
-El indicador está definido por la siguiente ecuación:
+El indicador está definido por la ecuación \@ref(eq:df-caccm) expresado en tanto por ciento, dicho indicador guarda relación con el indicador CCCM (Ver sección \@ref(DF-CCCM)), agregando el elemento de activos realizables que representan los bienes recibidos en recuperación de créditos y bienes adquiridos o construidos para la venta.
 
 \begin{equation}
-\text{CACCM} = \frac{ \text{Cartera En Mora - Previsión Cartera + Realizables} }{ \text{Patrimonio} } 
+\text{CACCM} = \frac{ \text{Cartera En Mora + Realizables  - Previsión Cartera} }{ \text{Patrimonio} } * \text{100}
 (\#eq:df-caccm)
 \end{equation}
 
+El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(round(bestPromedio*100,2), scientific=FALSE)`% (Ver tabla \@ref(tab:df-indicadores-capital-tabla)), es decir, la previsión cubre la cartera en mora junto con los activos realizables y que los créditos que se preveía su incobrabilidad que fueron cancelados junto con los activos realizables representan el `r format(round(bestPromedio*100*(-1),2), scientific=FALSE)`% del patrimonio.
 
-El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`, una vez más se hace presente que la previsión cubre la cartera en mora más realizables que vienen siendo en mayoría activos producto de la recuperación de créditos incumplidos con la entidad.
 
-#### Coeficiente de cobertura patrimonial (CCP)
+#### Coeficiente de cobertura patrimonial (CCP) {#DF-CCP}
 
 ```{r}
 id <- 'indCap_CCP'
 nameIndById <- listResult[[id]][['nameIndById']]
 nameEntBestPromedio <- listResult[[id]][['nameEntBestPromedio']]
 bestPromedio <- listResult[[id]][['bestPromedio']]
-
+nameEntBestTendencia <- listResult[[id]][['nameEntBestTendencia']]
+bestTendencia <- listResult[[id]][['bestTendencia']]
 ```
 
-
-El indicador está definido por la siguiente ecuación:
+El indicador está definido por la ecuación \@ref(eq:df-ccp) expresado en tanto por ciento, busca responder en que porcentaje el activo menos contingente esta respaldado por el patrimonio del sector.
 
 \begin{equation}
-\text{CCP} = \frac{ \text{Patrimonio} }{ \text{Activo - Contingente} }
+\text{CCP} = \frac{ \text{Patrimonio} }{ \text{Activo - Contingente} } * \text{100}
 (\#eq:df-ccp)
 \end{equation}
 
-El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`.
+El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(round(bestPromedio*100,2), scientific=FALSE)`% (Ver tabla \@ref(tab:df-indicadores-capital-tabla)), es decir, que el `r format(round(bestPromedio*100,2), scientific=FALSE)`% del activo esta respaldo por el patrimonio o que el patrimonio representa el `r format(round(bestPromedio*100,2), scientific=FALSE)`%  del activo.
 
+Así también, el sector `r str_to_lower(nameEntBestTendencia)` posee la mejor tendencia mensual del indicador, es decir, el sector en promedio mensualmente incrementa en `r format(round(bestTendencia*100,2), scientific=FALSE)`% en el `r str_to_lower(nameIndById)`, dando al sector mayor capacidad de hacer frente a sus obligaciones.
 
 \newpage
 ### Indicadores de activos
@@ -145,9 +152,9 @@ El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tie
 <!-- #####################  INDICADORES DE ACTIVOS         -->
 <!-- ##################################################### -->
 
-Los indicadores de activos tienen por objeto de evaluar la composición de los activos de los respectivos sectores financieros los cuales junto al patrimonio permiten hacer frente a sus obligaciones, los cuales son los siguientes:
+Los indicadores de activos tienen por objeto de evaluar la composición de los activos de los respectivos sectores financieros los cuales junto al patrimonio permiten hacer frente a sus obligaciones (Ver figura \@ref(fig:df-indicadores-activos)).
 
-```{r}
+```{r df-indicadores-activos-tabla}
 ids <- c('indAct_CEC','indAct_CPC','indAct_CPCM','indAct_CRC')
 listResult <- getListStatsOverviewInd(ids, datCamelIndNorm, datIdsNamesCamelInds)
 listPlots <- getListPlotsInd(listResult)
@@ -159,7 +166,7 @@ listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas de
 \begin{figure}[h!]
 ```
 
-```{r, fig.height = 20, fig.width = 20, fig.cap='Indicadores de activos'}
+```{r df-indicadores-activos, fig.height = 20, fig.width = 20, fig.cap='Indicadores de activos'}
 wrap_plots(listPlots, ncol = 1)
 ```
 
@@ -175,24 +182,25 @@ listTablesRender %>%
                               general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
 ```
 
-#### Coeficiente de exposición de cartera (CEC)
+#### Coeficiente de exposición de cartera (CEC) {#DF-CEC}
 
 ```{r}
 id <- 'indAct_CEC'
 nameIndById <- listResult[[id]][['nameIndById']]
 nameEntBestPromedio <- listResult[[id]][['nameEntBestPromedio']]
 bestPromedio <- listResult[[id]][['bestPromedio']]
-
+nameEntBestTendencia <- listResult[[id]][['nameEntBestTendencia']]
+bestTendencia <- listResult[[id]][['bestTendencia']]
 ```
 
-El indicador busca mostrar en que proporción la cartera total o bruta está expuesta a impago, dicho indicador está definido por la siguiente ecuación:
+El indicador busca mostrar en que proporción la cartera total o bruta está expuesta a impago, dicho indicador está definido por la ecuación \@ref(eq:df-cec) expresado en tanto por ciento.
 
 \begin{equation}
-\text{CEC} = \frac{ \text{Cartera En Mora} }{ \text{Cartera Bruta} } 
+\text{CEC} = \frac{ \text{Cartera En Mora} }{ \text{Cartera Bruta} } * \text{100}
 (\#eq:df-cec)
 \end{equation}
 
-Donde el promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`, es decir, que el `r format(round(bestPromedio*100,2), scientific=FALSE)`% de la cartera bruta o total tiene riesgo de impago siendo este menor respecto a los otros sectores.
+Donde el promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(round(bestPromedio*100,2), scientific=FALSE)`%  (Ver tabla \@ref(tab:df-indicadores-activos-tabla)), es decir, que el `r format(round(bestPromedio*100,2), scientific=FALSE)`% de la cartera bruta o total tiene riesgo de impago siendo este menor respecto a los otros sectores. Por otro lado, el sector `r str_to_lower(nameEntBestTendencia)` posee la mejor tendencia mensual del indicador, es decir, el sector en promedio mensualmente varia en `r format(round(bestTendencia*100,2), scientific=FALSE)`% en el `r str_to_lower(nameIndById)`, lo cual es resultado de disminución de la relación de cartera en mora respecto a cartera bruta dando lugar a mejor expectativa sobre la administración de cartera.
 
 #### Coeficiente de previsión de cartera (CPC)
 
@@ -201,17 +209,20 @@ id <- 'indAct_CPC'
 nameIndById <- listResult[[id]][['nameIndById']]
 nameEntBestPromedio <- listResult[[id]][['nameEntBestPromedio']]
 bestPromedio <- listResult[[id]][['bestPromedio']]
-
+nameEntBestTendencia <- listResult[[id]][['nameEntBestTendencia']]
+bestTendencia <- listResult[[id]][['bestTendencia']]
 ```
 
-El indicador busca mostrar en que proporción la cartera total o bruta podría ser susceptible de impago bajo el criterio de prevención, dicho indicador está definido por la siguiente ecuación:
+El indicador busca mostrar en que proporción la cartera total o bruta podría ser susceptible de impago bajo el criterio de prevención, dicho indicador está definido por la ecuación \@ref(eq:df-cpc) expresado en tanto por ciento.
 
 \begin{equation}
-\text{CPC} = \frac{ \text{Previsión} }{ \text{Cartera Bruta} } 
+\text{CPC} = \frac{ \text{Previsión} }{ \text{Cartera Bruta} } * \text{100}
 (\#eq:df-cpc)
 \end{equation}
 
-Donde el promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`, es decir, el sector supone que el `r format(round(bestPromedio*100,2), scientific=FALSE)`% de la cartera bruta o total sera sujeto de impago, teniendo en cuenta que dicho indicador sera tomado como valido si y solo si la prevención sea menor al impago efectivamente observado.
+Donde el promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(round(bestPromedio*100,2), scientific=FALSE)`% (Ver tabla \@ref(tab:df-indicadores-activos-tabla)), es decir, el sector supone que el `r format(round(bestPromedio*100,2), scientific=FALSE)`% de la cartera bruta o total sera sujeto de impago, teniendo en cuenta que dicho indicador sera tomado como valido si y solo si la prevención sea menor al impago efectivamente observado. 
+
+Así también, el sector `r str_to_lower(nameEntBestTendencia)` posee la mejor tendencia mensual del indicador, es decir, el sector en promedio mensualmente incrementa en `r format(round(bestTendencia*100,2), scientific=FALSE)`% en el `r str_to_lower(nameIndById)`.
 
 #### Coeficiente de previsión de cartera en mora (CPCM)
 
@@ -220,18 +231,21 @@ id <- 'indAct_CPCM'
 nameIndById <- listResult[[id]][['nameIndById']]
 nameEntBestPromedio <- listResult[[id]][['nameEntBestPromedio']]
 bestPromedio <- listResult[[id]][['bestPromedio']]
-
+nameEntBestTendencia <- listResult[[id]][['nameEntBestTendencia']]
+bestTendencia <- listResult[[id]][['bestTendencia']]
 ```
 
-El indicador tiene por objeto mostrar si las previsiones realizadas por los sectores llegan a cubrir en su totalidad la cartera en mora que son susceptibles a impago, dicho indicador está definido por la siguiente ecuación:
+El indicador tiene por objeto mostrar si las previsiones realizadas por los sectores llegan a cubrir en su totalidad la cartera en mora que son susceptibles a impago, dicho indicador está definido por la ecuación \@ref(eq:df-cpcm) expresado en tanto por ciento.
 
 \begin{equation}
-\text{CPCM} = \frac{ \text{Previsión} }{ \text{Cartera En Mora} } 
+\text{CPCM} = \frac{ \text{Previsión} }{ \text{Cartera En Mora} } * \text{100}
 (\#eq:df-cpcm)
 \end{equation}
 
 
-El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`, es decir, que el sector de `r str_to_lower(nameEntBestPromedio)` realiza un previsión que cubre hasta en `r format(round(bestPromedio,0), scientific=FALSE)` la cartera en mora, teniendo en cuenta que el resultado del indicador puede ser considerarse como favorable cuando este supera a 1.
+El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(round(bestPromedio,2), scientific=FALSE)` veces (Ver tabla \@ref(tab:df-indicadores-activos-tabla)), es decir, que el sector de `r str_to_lower(nameEntBestPromedio)` realiza un previsión que cubre hasta en `r format(round(bestPromedio,0), scientific=FALSE)` veces la cartera en mora, teniendo en cuenta que el resultado del indicador puede ser considerarse como favorable cuando este supera a 1. 
+
+Por otro lado, el sector `r str_to_lower(nameEntBestTendencia)` posee la mejor tendencia mensual del indicador, es decir, el sector en promedio mensualmente varia en `r format(round(bestTendencia*100,2), scientific=FALSE)`% en el `r str_to_lower(nameIndById)`, resultando en un incremento en la prevención.
 
 #### Coeficiente de reposición de cartera (CRC)
 
@@ -240,17 +254,20 @@ id <- 'indAct_CRC'
 nameIndById <- listResult[[id]][['nameIndById']]
 nameEntBestPromedio <- listResult[[id]][['nameEntBestPromedio']]
 bestPromedio <- listResult[[id]][['bestPromedio']]
-
+nameEntBestTendencia <- listResult[[id]][['nameEntBestTendencia']]
+bestTendencia <- listResult[[id]][['bestTendencia']]
 ```
 
-El indicador muestra que porcentaje de la cartera total fueron reprogramados, dicho indicador está definido por la siguiente ecuación:
+El indicador muestra que porcentaje de la cartera total fueron reprogramados, dicho indicador está definido por la ecuación \@ref(eq:df-crc) expresado en tanto por ciento.
 
 \begin{equation}
-\text{CRC} = \frac{ \text{Cartera Reprogramada Total} }{ \text{Cartera Bruta} } 
+\text{CRC} = \frac{ \text{Cartera Reprogramada Total} }{ \text{Cartera Bruta} } * \text{100}
 (\#eq:df-crc)
 \end{equation}
 
-Donde el promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`, es decir, el `r format(round(bestPromedio*100,2), scientific=FALSE)`% de la cartera bruta o total es sujeta a reprogramación, tomando en cuenta que dicho promedio sufre un sesgo fruto por la pandemia covid-19 que produjo un incremento considerado en la reprogramación de cartera en las gestiones 2020 y 2021.
+Donde el promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(round(bestPromedio*100,2), scientific=FALSE)`% (Ver tabla \@ref(tab:df-indicadores-activos-tabla)), es decir, el `r format(round(bestPromedio*100,2), scientific=FALSE)`% de la cartera bruta o total es sujeta a reprogramación, tomando en cuenta que dicho promedio sufre un sesgo fruto por la pandemia covid-19 que produjo un incremento considerado en la reprogramación de cartera en las gestiones 2020 y 2021 (Ver figura \@ref(fig:df-indicadores-activos)).
+
+Por otro lado, el sector `r str_to_lower(nameEntBestTendencia)` posee la mejor tendencia mensual del indicador, es decir, el sector en promedio mensualmente varia en `r format(round(bestTendencia*100,2), scientific=FALSE)`% en el `r str_to_lower(nameIndById)`, este tendencia puede ser tomada como validad si y solo va acompañado de una disminución o de cartera en mora.
 
 \newpage
 ### Indicadores de administración
@@ -261,7 +278,7 @@ Donde el promedio más favorable en el `r str_to_lower(nameIndById)` a través d
 
 Los indicadores de administración tienen por objeto evaluar como las instituciones gestionan sus gastos administrativos, los cuales se presenta a continuación:
 
-```{r}
+```{r df-indicadores-administracion-tabla}
 ids <- c('indAdm_CCGA','indAdm_CACGA')
 listResult <- getListStatsOverviewInd(ids, datCamelIndNorm, datIdsNamesCamelInds)
 listPlots <- getListPlotsInd(listResult)
@@ -273,7 +290,7 @@ listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas de
 \begin{figure}[h!]
 ```
 
-```{r, fig.height = 20, fig.width = 20, fig.cap='Indicadores de administración'}
+```{r df-indicadores-administracion, fig.height = 20, fig.width = 20, fig.cap='Indicadores de administración'}
 wrap_plots(listPlots, ncol = 1)
 ```
 
@@ -296,7 +313,8 @@ id <- 'indAdm_CCGA'
 nameIndById <- listResult[[id]][['nameIndById']]
 nameEntBestPromedio <- listResult[[id]][['nameEntBestPromedio']]
 bestPromedio <- listResult[[id]][['bestPromedio']]
-
+nameEntBestTendencia <- listResult[[id]][['nameEntBestTendencia']]
+bestTendencia <- listResult[[id]][['bestTendencia']]
 ```
 
 El indicador busca mostrar la representación de los gastos administrativos respecto a los activos más contingentes, dicho indicador está definido por la siguiente ecuación:
@@ -306,7 +324,7 @@ El indicador busca mostrar la representación de los gastos administrativos resp
 (\#eq:df-ccga)
 \end{equation}
 
-Donde el promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`, teniendo la consideración que la tendencia de dicho indicador del sector es positiva que de mantenerse en el largo plazo mostraría una mala gestión de los gastos administrativos.
+Donde el promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`  (Ver tabla \@ref(tab:df-indicadores-administracion-tabla)), teniendo la consideración que la tendencia de dicho indicador del sector es positiva que de mantenerse en el largo plazo mostraría una mala gestión de los gastos administrativos.
 
 #### Coeficiente acido de cobertura gastos administrativos (CACGA)
 
@@ -315,7 +333,8 @@ id <- 'indAdm_CACGA'
 nameIndById <- listResult[[id]][['nameIndById']]
 nameEntBestPromedio <- listResult[[id]][['nameEntBestPromedio']]
 bestPromedio <- listResult[[id]][['bestPromedio']]
-
+nameEntBestTendencia <- listResult[[id]][['nameEntBestTendencia']]
+bestTendencia <- listResult[[id]][['bestTendencia']]
 ```
 
 El indicador busca mostrar si los gastos administrativos menos impuestos se encuentran contenidos por el resultado operativo bruto, dicho indicador está definido por la siguiente ecuación:
@@ -336,7 +355,7 @@ Dando lugar al promedio más favorable en el `r str_to_lower(nameIndById)` a tra
 
 Los indicadores de beneficios tienen por objeto de evaluar el rendimiento o generación de valor de las instituciones o sectores financieros, los cuales se presentan a continuación:
 
-```{r}
+```{r df-indicadores-beneficios-tabla}
 ids <- c('indBenf_ROA','indBenf_ROE')
 listResult <- getListStatsOverviewInd(ids, datCamelIndNorm, datIdsNamesCamelInds)
 listPlots <- getListPlotsInd(listResult)
@@ -348,7 +367,7 @@ listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas de
 \begin{figure}[h!]
 ```
 
-```{r, fig.height = 20, fig.width = 20, fig.cap='Indicadores de beneficios'}
+```{r df-indicadores-beneficios, fig.height = 20, fig.width = 20, fig.cap='Indicadores de beneficios'}
 wrap_plots(listPlots, ncol = 1)
 ```
 
@@ -371,7 +390,8 @@ id <- 'indBenf_ROA'
 nameIndById <- listResult[[id]][['nameIndById']]
 nameEntBestPromedio <- listResult[[id]][['nameEntBestPromedio']]
 bestPromedio <- listResult[[id]][['bestPromedio']]
-
+nameEntBestTendencia <- listResult[[id]][['nameEntBestTendencia']]
+bestTendencia <- listResult[[id]][['bestTendencia']]
 ```
 
 El indicador está definido por la siguiente ecuación:
@@ -382,7 +402,7 @@ El indicador está definido por la siguiente ecuación:
 \end{equation}
 
 
-El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`, lo cual quiere decir que si consideramos al activo como elemento necesario para generar valor el sector de `r str_to_lower(nameEntBestPromedio)` pudo generar valor hasta en un `r format(round(bestPromedio*100,2), scientific=FALSE)`% mensual promedio sobre los activos.
+El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`, lo cual quiere decir que si consideramos al activo como elemento necesario para generar valor el sector de `r str_to_lower(nameEntBestPromedio)` pudo generar valor hasta en un `r format(round(bestPromedio*100,2), scientific=FALSE)`%  (Ver tabla \@ref(tab:df-indicadores-beneficios-tabla)) mensual promedio sobre los activos.
 
 #### Coeficiente de rendimiento sobre patrimonio (ROE)
 
@@ -391,7 +411,8 @@ id <- 'indBenf_ROE'
 nameIndById <- listResult[[id]][['nameIndById']]
 nameEntBestPromedio <- listResult[[id]][['nameEntBestPromedio']]
 bestPromedio <- listResult[[id]][['bestPromedio']]
-
+nameEntBestTendencia <- listResult[[id]][['nameEntBestTendencia']]
+bestTendencia <- listResult[[id]][['bestTendencia']]
 ```
 
 El indicador está definido por la siguiente ecuación:
@@ -408,12 +429,12 @@ El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiem
 ### Indicadores de liquidez
 
 <!-- ##################################################### -->
-<!-- ###############  INDICADORES DE BENEFICIOS            -->
+<!-- ###############  INDICADORES DE LIQUIDEZ           -->
 <!-- ##################################################### -->
 
 Los indicadores de liquidez tienen por objeto de evaluar la capacidad de las instituciones para hacer frente a sus obligaciones con terceros con sus activos más líquidos, a continuación, se presentan los indicadores de liquidez:
 
-```{r}
+```{r df-indicadores-liquidos-tabla}
 ids <- c('indLq_CCPP','indLq_CACPP')
 listResult <- getListStatsOverviewInd(ids, datCamelIndNorm, datIdsNamesCamelInds)
 listPlots <- getListPlotsInd(listResult)
@@ -425,7 +446,7 @@ listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas de
 \begin{figure}[h!]
 ```
 
-```{r, fig.height = 20, fig.width = 20, fig.cap='Indicadores de liquidez'}
+```{r df-indicadores-liquidos, fig.height = 20, fig.width = 20, fig.cap='Indicadores de liquidez'}
 wrap_plots(listPlots, ncol = 1)
 ```
 
@@ -448,7 +469,8 @@ id <- 'indLq_CCPP'
 nameIndById <- listResult[[id]][['nameIndById']]
 nameEntBestPromedio <- listResult[[id]][['nameEntBestPromedio']]
 bestPromedio <- listResult[[id]][['bestPromedio']]
-
+nameEntBestTendencia <- listResult[[id]][['nameEntBestTendencia']]
+bestTendencia <- listResult[[id]][['bestTendencia']]
 ```
 
 El indicador está definido por la siguiente ecuación:
@@ -459,7 +481,7 @@ El indicador está definido por la siguiente ecuación:
 \end{equation}
 
 
-El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`, es decir que el sector de `r str_to_lower(nameEntBestPromedio)` puede hacer frente a sus obligaciones con terceros en menos de 30 días hasta un  `r format(round(bestPromedio*100,2), scientific=FALSE)`% de su totalidad.
+El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`, es decir que el sector de `r str_to_lower(nameEntBestPromedio)` puede hacer frente a sus obligaciones con terceros en menos de 30 días hasta un  `r format(round(bestPromedio*100,2), scientific=FALSE)`% (Ver tabla \@ref(tab:df-indicadores-liquidos-tabla))de su totalidad.
 
 #### Coeficiente acido de capacidad de pago frente a pasivos (CACPP)
 
@@ -468,7 +490,8 @@ id <- 'indLq_CACPP'
 nameIndById <- listResult[[id]][['nameIndById']]
 nameEntBestPromedio <- listResult[[id]][['nameEntBestPromedio']]
 bestPromedio <- listResult[[id]][['bestPromedio']]
-
+nameEntBestTendencia <- listResult[[id]][['nameEntBestTendencia']]
+bestTendencia <- listResult[[id]][['bestTendencia']]
 ```
 
 El indicador está definido por la siguiente ecuación:

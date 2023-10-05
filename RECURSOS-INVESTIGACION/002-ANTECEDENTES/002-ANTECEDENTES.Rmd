@@ -1,11 +1,11 @@
 
-# ANTECEDENTES
+# ANTECEDENTES  {#ANTECEDENTES}
 
 Los antecedentes presentados a continuación cubren dos segmentos el campo de las finanzas y el campo de las redes neuronales, considerando también como convergen ambos en el tiempo partiendo de lo general a lo especifico según corresponda.
 
 <!-- ANTECEDENTES FINANZAS -->
 
-## Finanzas
+## Finanzas  {#MT-FINANZAS}
 
 La finanzas como ciencia es el resultado de la contribución de varios individuos en diferentes puntos de tiempo y también como consecuencia de otras ciencias sociales, siendo la ciencias contables y administrativas las bases de la misma, las ciencias contable dotando la materia prima y las administrativas los métodos, con este contexto presentamos los antecedentes financieros generales:
 

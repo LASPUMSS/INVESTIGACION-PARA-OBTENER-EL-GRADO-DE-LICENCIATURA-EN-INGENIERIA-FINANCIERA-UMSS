@@ -49,9 +49,9 @@ datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
 
 La sección de resultados CAMEL del sistema financiero de Bolivia presenta la información consecuente del diagnóstico de la solidez financiera de los sectores financieros contenidos en la misma que está sujeta a los indicadores, rangos y ponderaciones antes presentados.
 
-A continuación, se presentan los resultados CAMEL con rangos flexibles sin ponderar agrupados por tipo de indicador se presentan a continuación:
+A continuación, se presentan los resultados CAMEL con rangos flexibles sin ponderar agrupados por tipo de indicador se presentan a continuación (ver tabla \@ref(tab:df-camel-rangos-flexibles-tabla)) (Ver tabla \@ref(tab:df-camel-rangos-estrictos-tabla)):
 
-```{r}
+```{r df-camel-rangos-flexibles-tabla}
 ids <- c('C','A','M','E','L')
 listResult <- getListStatsOverviewInd(ids, 
                                       datCamelCalificacionEntidadSinPoderar, 
@@ -65,7 +65,7 @@ listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas C-
 \begin{figure}[h!]
 ```
 
-```{r, fig.height = 20, fig.width = 20, fig.cap='Resultados C-A-M-E-L con rangos flexibles sin ponderar'}
+```{r df-camel-rangos-flexibles, fig.height = 20, fig.width = 20, fig.cap='Resultados C-A-M-E-L con rangos flexibles sin ponderar'}
 wrap_plots(listPlots, ncol = 1)
 ```
 
@@ -84,7 +84,7 @@ listTablesRender %>%
 \newpage
 Así también los resultados CAMEL con rangos estrictos sin ponderar agrupados por tipo de indicador se presentan a continuación:
 
-```{r}
+```{r df-camel-rangos-estrictos-tabla}
 ids <- c('C','A','M','E','L')
 listResult <- getListStatsOverviewInd(ids, 
                                       datCamelCalificacionEntidadSinPoderarHard, 
@@ -98,7 +98,7 @@ listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas C-
 \begin{figure}[h!]
 ```
 
-```{r, fig.height = 20, fig.width = 20, fig.cap='Resultados C-A-M-E-L con rangos extrictos sin ponderar'}
+```{r df-camel-rangos-estrictos, fig.height = 20, fig.width = 20, fig.cap='Resultados C-A-M-E-L con rangos extrictos sin ponderar'}
 wrap_plots(listPlots, ncol = 1)
 ```
 
@@ -133,7 +133,7 @@ Finalmente como último elemento tenemos los indicadores de liquidez donde tenem
 \newpage
 ### Calificación CAMEL
 
-La calificación CAMEL bajo la metodología presentada es la que da respuesta sobre el estado de la solidez financiera de los sectores que conforman el sistema financiero de Bolivia, la misma contiene dentro de si las calificaciones ponderadas asignadas a los resultados de los diferentes indicadores, donde 1 indica un sector solvente en todos aspectos y 5 corresponde a serios problemas de solidez, así también una tendencia negativa se traduce en un incremento de la solidez financiera.
+La calificación CAMEL bajo la metodología presentada es la que da respuesta sobre el estado de la solidez financiera de los sectores que conforman el sistema financiero de Bolivia, la misma contiene dentro de si las calificaciones ponderadas asignadas a los resultados de los diferentes indicadores, donde 1 indica un sector solvente en todos aspectos y 5 corresponde a serios problemas de solidez, así también una tendencia negativa se traduce en un incremento de la solidez financiera (ver tabla \@ref(tab:df-camel-calificacion-final-tabla)).
 
 ```{r}
 datAuxCAMEL <- 
@@ -144,7 +144,7 @@ datAuxCAMEL <-
 ```
 
 
-```{r}
+```{r df-camel-calificacion-final-tabla}
 ids <- c('CAMEL_FLEXIBLE','CAMEL_ESTRICTO')
 listResult <- getListStatsOverviewInd(ids, datAuxCAMEL, datIdsNamesCamelInds,TRUE)
 listPlots <- getListPlotsInd(listResult)
@@ -155,7 +155,7 @@ listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas CA
 \begin{figure}[h!]
 ```
 
-```{r, fig.height = 20, fig.width = 20, fig.cap='Resultados CAMEL'}
+```{r df-camel-calificacion-final, fig.height = 20, fig.width = 20, fig.cap='Resultados CAMEL'}
 wrap_plots(listPlots, ncol = 1)
 ```
 

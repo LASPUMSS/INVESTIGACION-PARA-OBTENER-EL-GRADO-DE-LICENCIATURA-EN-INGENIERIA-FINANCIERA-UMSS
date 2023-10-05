@@ -22,17 +22,55 @@ getListStatsOverviewInd <- function(ids, datCamelIndNorm, datIdsNamesCamelInds,r
             pull()
         datTrendInd <- 
             getDatTrendStatsOverviewInd(id, datCamelIndNorm, roundInd ,idsDecreasing)
+        
         nameEntBestPromedio <- 
             datTrendInd %>% 
             select(TIPO_DE_ENTIDAD) %>% 
-            slice(1) %>% 
+            slice(1L) %>% 
             pull()
         bestPromedio <- 
             datTrendInd %>% 
             select(PROMEDIO) %>% 
-            slice(1) %>% 
+            slice(1L)  %>% 
             pull()
         p <- plotIndCamel(id, datCamelIndNorm)
+        
+        
+        if (idsDecreasing) {
+    
+            nameEntBestTendencia <- 
+                datTrendInd %>% 
+                arrange(desc(TENDENCIA)) %>% 
+                select(TIPO_DE_ENTIDAD) %>% 
+                slice(1L) %>% 
+                pull()
+            
+            bestTendencia <- 
+                datTrendInd %>% 
+                arrange(desc(TENDENCIA)) %>% 
+                select(TENDENCIA) %>% 
+                slice(1L) %>% 
+                pull()
+            
+        }else{
+            
+            nameEntBestTendencia <- 
+                datTrendInd %>% 
+                arrange(TENDENCIA) %>% 
+                select(TIPO_DE_ENTIDAD) %>% 
+                slice(1L) %>% 
+                pull()
+            
+            bestTendencia <- 
+                datTrendInd %>% 
+                arrange(TENDENCIA) %>% 
+                select(TENDENCIA) %>% 
+                slice(1L) %>% 
+                pull()
+        }
+        
+        
+        
         
         listResult[[id]] <- 
             list(id=id,
@@ -41,6 +79,8 @@ getListStatsOverviewInd <- function(ids, datCamelIndNorm, datIdsNamesCamelInds,r
                  datTrendInd=datTrendInd,
                  nameEntBestPromedio=nameEntBestPromedio,
                  bestPromedio=bestPromedio,
+                 nameEntBestTendencia=nameEntBestTendencia,
+                 bestTendencia=bestTendencia,
                  p=p)
     }
     
