@@ -124,12 +124,14 @@ datEEEFF_Forescat$NN <- as.numeric(datEEEFF_Forescat$NN)
 ```
 
 
+\vspace*{15pt}
 ```{r}
 renderTableBasic(datEEEFF_Forescat %>% select(DESCRIPCION, OBSERVADO, NN) %>% transformTableAuxPef2, 
                  captionTable = 'Balance general observado respecto a proyecciones por redes neuronales')
 
 ```
 
+\vspace*{15pt}
 ```{r}
 renderTableBasic(datEEEFF_Forescat %>% select(DESCRIPCION, OBSERVADO, MCO, ARIMA) %>% transformTableAuxPef2, 
                  captionTable = 'Balance general observado respecto a proyecciones por MCO y ARIMA')
@@ -200,13 +202,14 @@ datEEEFF_Forescat$ARIMA <- as.numeric(datEEEFF_Forescat$ARIMA)
 datEEEFF_Forescat$NN <- as.numeric(datEEEFF_Forescat$NN)
 ```
 
-
+\vspace*{15pt}
 ```{r}
 renderTableBasic(datEEEFF_Forescat %>% select(DESCRIPCION, OBSERVADO, NN) %>% transformTableAuxPef2, 
                  captionTable = 'Estado de resultados observado respecto a proyecciones por redes neuronales')
 
 ```
 
+\vspace*{15pt}
 ```{r}
 renderTableBasic(datEEEFF_Forescat %>% select(DESCRIPCION, OBSERVADO, MCO, ARIMA) %>% transformTableAuxPef2, 
                  captionTable = 'Estado de resultados observado respecto a proyecciones por MCO y ARIMA',

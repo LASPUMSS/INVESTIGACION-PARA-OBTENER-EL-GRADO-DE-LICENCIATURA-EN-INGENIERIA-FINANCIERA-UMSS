@@ -1,6 +1,6 @@
 ## Ponderación de elementos CAMEL
 
-La ponderación de los elementos CAMEL son asignados siguiendo los lineamientos presentados en el marco teórico:
+La ponderación de los elementos CAMEL son asignados siguiendo los lineamientos presentados en el marco teórico (Ver sección \@ref(MT-DEFINICION-PONDERACION-CAMEL)), dando mayor peso a los indicadores de capital y activos, seguido de los indicadores de beneficios y liquidez, dejando en ultimo termino los indicadores de administración (Ver ecuación \@ref(eq:df-camel)).
 
 \begin{equation}
 CAMEL = \text{30\%C + 30\%A + 10\%M + 15\%E + 15\%L}

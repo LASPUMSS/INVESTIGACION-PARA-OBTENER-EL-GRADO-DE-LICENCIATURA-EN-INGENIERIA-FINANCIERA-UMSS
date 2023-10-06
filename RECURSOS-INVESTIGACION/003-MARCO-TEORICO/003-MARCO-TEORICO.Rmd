@@ -276,7 +276,7 @@ En esta sección de la metodología CAMEL se establecen rangos a los cuales le c
 - L1 y L5 $\bar{X} \pm 2\sqrt{\sigma^2}$
 
 
-### Definición de la ponderación
+### Definición de la ponderación {#MT-DEFINICION-PONDERACION-CAMEL}
 
 La ponderación de los elementos CAMEL son asignados de manera arbitraria, pero sujeto a lineamientos económico-financieros [@PONDERACION-CAMEL], el cual presenta la siguiente forma:
 

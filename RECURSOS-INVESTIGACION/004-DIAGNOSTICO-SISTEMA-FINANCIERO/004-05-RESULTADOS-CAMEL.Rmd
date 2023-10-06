@@ -49,7 +49,10 @@ datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
 
 La sección de resultados CAMEL del sistema financiero de Bolivia presenta la información consecuente del diagnóstico de la solidez financiera de los sectores financieros contenidos en la misma que está sujeta a los indicadores, rangos y ponderaciones antes presentados.
 
-A continuación, se presentan los resultados CAMEL con rangos flexibles sin ponderar agrupados por tipo de indicador se presentan a continuación:
+- Se presentan los resultados CAMEL con rangos flexibles sin ponderar agrupados por tipo de indicador (Ver figura \@ref(fig:df-camel-rangos-flexibles) y tabla \@ref(tab:df-camel-rangos-flexibles-tabla)).
+- Así también, se presentan los resultados CAMEL con rangos estrictos sin ponderar agrupados por tipo de indicador (Ver figura \@ref(fig:df-camel-rangos-estrictos) y tabla \@ref(tab:df-camel-rangos-estrictos-tabla)).
+
+Ahora bien, ya sea los resultados CAMEL con rangos flexibles o estrictos ambos nos permiten ver qué tipo de políticas son aplicadas por estos sectores a la hora de administrar sus recursos de capital, activos, liquidez y recursos humanos, y como estos dan los resultados obtenidos contenidos en los indicadores de beneficios.
 
 ```{r df-camel-rangos-flexibles-tabla}
 ids <- c('C','A','M','E','L')
@@ -61,6 +64,8 @@ listPlots <- getListPlotsInd(listResult, scaleOne = FALSE,numDigScale = 0.01)
 listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas C-A-M-E-L con rangos flexibles sin ponderar', 6)
 ```
 
+\newpage
+\vspace*{\fill}
 ```{=latex}
 \begin{figure}[h!]
 ```
@@ -73,17 +78,19 @@ wrap_plots(listPlots, ncol = 1)
 \floatfoot{Fuente: Elaboración propia.}
 \end{figure}
 ```
+\vspace*{\fill}
 
-\vspace*{15pt}
+\newpage
+\vspace*{\fill}
 ```{r}
 listTablesRender %>% 
     footnote(general_title = 'NOTA:',
                               general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
 ```
+\vspace*{\fill}
 
 \newpage
-Así también los resultados CAMEL con rangos estrictos sin ponderar agrupados por tipo de indicador se presentan a continuación:
-
+\vspace*{\fill}
 ```{r df-camel-rangos-estrictos-tabla}
 ids <- c('C','A','M','E','L')
 listResult <- getListStatsOverviewInd(ids, 
@@ -94,6 +101,7 @@ listPlots <- getListPlotsInd(listResult)
 listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas C-A-M-E-L con rangos estrictos sin ponderar', 6)
 ```
 
+\vspace*{\fill}
 ```{=latex}
 \begin{figure}[h!]
 ```
@@ -106,34 +114,36 @@ wrap_plots(listPlots, ncol = 1)
 \floatfoot{Fuente: Elaboración propia.}
 \end{figure}
 ```
+\vspace*{\fill}
 
 \newpage
-\vspace*{15pt}
+\vspace*{\fill}
 ```{r}
 listTablesRender %>% 
     footnote(general_title = 'NOTA:',
                               general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
 ```
+\vspace*{\fill}
+
+\newpage
 
 
-Ahora bien, ya sea los resultados CAMEL con rangos flexibles o estrictos ambos nos permiten ver qué tipo de políticas son aplicadas por estos sectores a la hora de administrar sus recursos de capital, activos, liquidez y recursos humanos, y como estos dan los resultados obtenidos contenidos en los indicadores de beneficios.
+En primer término en lo concerniente al capital (Ver sección \@ref(DF-INDICADORES-CAPITAL)) se tiene mejor valorados a las entidades financieras de vivienda, cooperativas e instituciones financieras de desarrollo a la hora de administrar sus recursos de capital lo cual se ve reflejado en los indicadores de coeficiente de adecuación patrimonial (CAP) y cobertura patrimonial (CCP), que el caso específico de las entidades financieras de vivienda es el resultado de la naturaleza o contexto del negocio del sector que por la ley 393 están limitados a solo otorgar créditos con destino al de vivienda o relacionado a la vivienda, que también tanto entidades financieras de vivienda y cooperativas están limitados a su vez a no realizar operaciones de alto riesgo en mercados especulativos tomando, por otro lado las entidades financieras de desarrollo son instituciones sin fines de lucro que no tienen los intensivos para asumir riesgos a fin de alcanzar mejores rendimientos y contraposición tenemos en los últimos lugares a los bancos múltiples, bancos PYME y al banco de desarrollo productivo son instituciones que si pueden otorgar créditos de diversos tipos y a su vez pueden participar en mercados especulativos bajo ciertos límites de riesgo.
 
-En primer término en lo concerniente al capital se tiene mejor valorados a las entidades financieras de vivienda, cooperativas e instituciones financieras de desarrollo a la hora de administrar sus recursos de capital lo cual se ve reflejado en los indicadores de coeficiente de adecuación patrimonial (CAP) y cobertura patrimonial (CCP), que el caso específico de las entidades financieras de vivienda es el resultado de la naturaleza o contexto del negocio del sector que por la ley 393 están limitados a solo otorgar créditos con destino al de vivienda o relacionado a la vivienda, que también tanto entidades financieras de vivienda y cooperativas están limitados a su vez a no realizar operaciones de alto riesgo en mercados especulativos tomando, por otro lado las entidades financieras de desarrollo son instituciones sin fines de lucro que no tienen los intensivos para asumir riesgos a fin de alcanzar mejores rendimientos y contraposición tenemos en los últimos lugares a los bancos múltiples, bancos PYME y al banco de desarrollo productivo son instituciones que si pueden otorgar créditos de diversos tipos y a su vez pueden participar en mercados especulativos bajo ciertos límites de riesgo.
+En segundo término, los indicadores de activos (Ver sección \@ref(DF-INDICADORES-ACTIVOS)) confirman la naturaleza de los mismos siguiendo lo mostrado por los indicadores de capital, colocando a las cooperativas y entidades financieras de vivienda en los primeros lugares ya que al ser sus activos correspondientes a la composición de sus carteras de menor riesgo pueden ser previstos y cubiertos en su totalidad.
 
-En segundo término, los indicadores de activos confirman la naturaleza de los mismos siguiendo lo mostrado por los indicadores de capital, colocando a las cooperativas y entidades financieras de vivienda en los primeros lugares ya que al ser sus activos correspondientes a la composición de sus carteras de menor riesgo pueden ser previstos y cubiertos en su totalidad.
+En tercer termino los bancos múltiples administran mejor sus gastos en recursos humanos, debido a la envergadura de los procesos que manejan los mismos las funciones respecto los servicios humanos requeridos se encuentra complementa mente definidos que junto a una sociedad con conocimientos cada vez más especializados le permite disponer de más profesionales a sueldos competitivos (Ver sección \@ref(DF-INDICADORES-ADMINISTRACION)).
 
-En tercer termino los bancos múltiples administran mejor sus gastos en recursos humanos, debido a la envergadura de los procesos que manejan los mismos las funciones respecto los servicios humanos requeridos se encuentra complementa mente definidos que junto a una sociedad con conocimientos cada vez más especializados le permite disponer de más profesionales a sueldos competitivos.
-
-En cuarto termino se tiene a las entidades financiera de vivienda y bancos múltiples, teniendo en cuenta los siguiente: 
+En cuarto termino se tiene a las entidades financiera de vivienda y bancos múltiples (Ver sección \@ref(DF-INDICADORES-BENEFICIOS)), teniendo en cuenta los siguiente: 
 
 - Si seguimos un criterio de rendimiento sobre activos las entidades financieras de vivienda son mejores
 - Si seguimos un criterio de rendimiento sobre el patrimonio los bancos múltiples son mejores.
 
-Finalmente como último elemento tenemos los indicadores de liquidez donde tenemos en los primeros lugares a las cooperativas, bancos múltiples donde la naturaleza del negocio de los mismos donde una de sus actividades más usuales es la de resguardar en forma de ahorros o cuentas corrientes el dinero del público en general, lo cual en consecuencia hace necesario disponer de un margen de efectivo suficiente que cubra necesidades de liquidez de sus clientes y en contraposición las instituciones financieras de desarrollo y el banco de desarrollo productivo no se enfocan en brindar estos servicios así que es previsible que ocupen estos lugares en los indicadores de liquidez.
+Finalmente como último elemento tenemos los indicadores de liquidez (Ver sección \@ref(DF-INDICADORES-LIQUIDEZ)) donde tenemos en los primeros lugares a las cooperativas, bancos múltiples donde la naturaleza del negocio de los mismos donde una de sus actividades más usuales es la de resguardar en forma de ahorros o cuentas corrientes el dinero del público en general, lo cual en consecuencia hace necesario disponer de un margen de efectivo suficiente que cubra necesidades de liquidez de sus clientes y en contraposición las instituciones financieras de desarrollo y el banco de desarrollo productivo no se enfocan en brindar estos servicios así que es previsible que ocupen estos lugares en los indicadores de liquidez.
 
 ### Calificación CAMEL
 
-La calificación CAMEL bajo la metodología presentada es la que da respuesta sobre el estado de la solidez financiera de los sectores que conforman el sistema financiero de Bolivia, la misma contiene dentro de si las calificaciones ponderadas asignadas a los resultados de los diferentes indicadores, donde 1 indica un sector solvente en todos aspectos y 5 corresponde a serios problemas de solidez, así también una tendencia negativa se traduce en un incremento de la solidez financiera (ver tabla \@ref(tab:df-camel-calificacion-final-tabla)).
+La calificación CAMEL bajo la metodología presentada es la que da respuesta sobre el estado de la solidez financiera de los sectores que conforman el sistema financiero de Bolivia, la misma contiene dentro de si las calificaciones ponderadas asignadas a los resultados de los diferentes indicadores, donde 1 indica un sector solvente en todos aspectos y 5 corresponde a serios problemas de solidez, así también una tendencia negativa se traduce en un incremento de la solidez financiera (Ver tabla \@ref(tab:df-camel-calificacion-final-tabla) y figura \@ref(fig:df-camel-calificacion-final)).
 
 ```{r}
 datAuxCAMEL <- 
@@ -150,31 +160,6 @@ listResult <- getListStatsOverviewInd(ids, datAuxCAMEL, datIdsNamesCamelInds,TRU
 listPlots <- getListPlotsInd(listResult)
 listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas CAMEL', 6)
 ```
-
-
-
-<!-- RESULTADOS CAMEL FLEXIBLES -->
-
-```{r}
-nameIndById <- listResult$CAMEL_FLEXIBLE$nameIndById
-nameEntBestPromedio <- listResult$CAMEL_FLEXIBLE$nameEntBestPromedio
-bestPromedio <- listResult$CAMEL_FLEXIBLE$bestPromedio
-```
-
-En primer lugar el promedio más favorable en el `r nameIndById` que presume el escenario más favorable a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`, es decir que la solidez financiera del sector es `r tableRefenceCamelCalificaciones %>% filter(RAITING==bestPromedio) %>% select(DESCRIPCION) %>% pull() %>% tolower()` lo que en consecuencia indica que el sector es `r tableRefenceCamelCalificaciones %>% filter(RAITING==bestPromedio) %>% select(SIGNIFICADO) %>% pull() %>% tolower()`, lo cual podría dar lugar al seguir manteniendo las políticas actuales pero teniendo que cuenta que la tendencia del indicador CAMEL para todos los sectores es positiva lo cual indica que la insolidez financiera va creciendo mes con mes.
-
-
-<!-- RESULTADOS CAMEL ESTRITOS -->
-
-```{r}
-nameIndById <- listResult$CAMEL_ESTRICTO$nameIndById
-nameEntBestPromedio <- listResult$CAMEL_ESTRICTO$nameEntBestPromedio
-bestPromedio <- listResult$CAMEL_ESTRICTO$bestPromedio
-```
-
-Ahora bien en contraposición el promedio más favorable en el `r nameIndById` que presume el escenario menos favorable a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`, es decir que la solidez financiera del sector es `r tableRefenceCamelCalificaciones %>% filter(RAITING==bestPromedio) %>% select(DESCRIPCION) %>% pull() %>% tolower()` lo que en consecuencia indica que el sector tiene `r tableRefenceCamelCalificaciones %>% filter(RAITING==bestPromedio) %>% select(SIGNIFICADO) %>% pull() %>% tolower()`, por otro lado bajo el mismo criterio los bancos PYME, el banco de desarrollo productivo y entidades financieras de vivienda deben corregir sus políticas actuales.
-
-Finalizando el presente diagnostico ya sea por CAMEL por rangos estrictos o rangos flexibles podemos afirmar que los sectores conformados por las cooperativas, entidades financieras de vivienda y bancos múltiples como sector pueden hacer frente en promedio sus obligaciones con terceros. 
 
 \vspace*{15pt}
 ```{r}
@@ -198,3 +183,27 @@ wrap_plots(listPlots, ncol = 1)
 \end{figure}
 ```
 \vspace*{\fill}
+
+<!-- RESULTADOS CAMEL FLEXIBLES -->
+
+```{r}
+nameIndById <- listResult$CAMEL_FLEXIBLE$nameIndById
+nameEntBestPromedio <- listResult$CAMEL_FLEXIBLE$nameEntBestPromedio
+bestPromedio <- listResult$CAMEL_FLEXIBLE$bestPromedio
+```
+
+\newpage
+En primer lugar el promedio más favorable en el `r nameIndById` que presume el escenario más favorable a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`, es decir que la solidez financiera del sector es `r tableRefenceCamelCalificaciones %>% filter(RAITING==bestPromedio) %>% select(DESCRIPCION) %>% pull() %>% tolower()` lo que en consecuencia indica que el sector es `r tableRefenceCamelCalificaciones %>% filter(RAITING==bestPromedio) %>% select(SIGNIFICADO) %>% pull() %>% tolower()`, lo cual podría dar lugar al seguir manteniendo las políticas actuales pero teniendo que cuenta que la tendencia del indicador CAMEL para todos los sectores es positiva lo cual indica que la insolidez financiera va creciendo mes con mes.
+
+<!-- RESULTADOS CAMEL ESTRITOS -->
+
+```{r}
+nameIndById <- listResult$CAMEL_ESTRICTO$nameIndById
+nameEntBestPromedio <- listResult$CAMEL_ESTRICTO$nameEntBestPromedio
+bestPromedio <- listResult$CAMEL_ESTRICTO$bestPromedio
+```
+
+Ahora bien en contraposición el promedio más favorable en el `r nameIndById` que presume el escenario menos favorable a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`, es decir que la solidez financiera del sector es `r tableRefenceCamelCalificaciones %>% filter(RAITING==bestPromedio) %>% select(DESCRIPCION) %>% pull() %>% tolower()` lo que en consecuencia indica que el sector tiene `r tableRefenceCamelCalificaciones %>% filter(RAITING==bestPromedio) %>% select(SIGNIFICADO) %>% pull() %>% tolower()`, por otro lado bajo el mismo criterio los bancos PYME, el banco de desarrollo productivo y entidades financieras de vivienda deben corregir sus políticas actuales.
+
+Finalizando el presente diagnostico ya sea por CAMEL por rangos estrictos o rangos flexibles podemos afirmar que los sectores conformados por las cooperativas, entidades financieras de vivienda y bancos múltiples como sector pueden hacer frente en promedio sus obligaciones con terceros. 
+

@@ -49,7 +49,7 @@ if (!('listResultPEF' %in% ls())) {
 
 Como tercer método de evaluación de los modelos se realiza una valuación CAMEL sobre las series de tiempo proyectadas, donde el presente método de evaluación se justifica ya que el fin último de cualquier pronostico o proyección de un modelo es revelar al analista una situación futura, entonces al aplicar la metodología CAMEL a las proyecciones realizadas por los modelos permitirá confirmar o negar si estos siguen la tendencia general de las series de tiempo efectivamente observadas.
 
-
+\vspace*{15pt}
 ```{r}
 
 renderTableBasic(camelTestModels, 

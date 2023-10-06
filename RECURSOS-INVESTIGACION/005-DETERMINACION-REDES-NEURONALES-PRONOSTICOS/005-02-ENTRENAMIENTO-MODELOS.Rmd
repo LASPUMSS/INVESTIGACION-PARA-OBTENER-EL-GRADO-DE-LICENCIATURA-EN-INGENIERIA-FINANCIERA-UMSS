@@ -56,29 +56,23 @@ Una vez concluida en el entrenamiento de este tipo de modelo se obtendrá los co
 variables <- c('Intercepto','Tendencia','Estacion 2','Estacion 3','Estacion 4','Estacion 5','Estacion 6','Estacion 7','Estacion 8','Estacion 9','Estacion 10','Estacion 11','Estacion 12')
 
 resultadosMCO <- data.frame(VARIABLES=variables, BETAS=coef(listResultPEF[[id]]$mcoModel), row.names = NULL)
+
+```
+
+\vspace*{15pt}
+```{r}
 renderTableBasic(resultadosMCO,captionTable = 'Tasas de cambio modelo clasico')
 ```
 
 Donde cada tasa de cambio está sujeta a su interpretación, por ejemplo la tasa de cambio correspondiente a la tendencia nos indica que el resultado neto de gestión sufre una variación de `r format(resultadosMCO[2,2], scientific=FALSE)` Bs por cada mes, ahora bien respecto a las estaciones quiere decir por ejemplo que si la observación se encuentra en la estación 2 el resultado neto de gestión sufre una variación de `r format(resultadosMCO[3,2], scientific=FALSE)`.
-
-### ARIMA
-
-El modelo ARIMA obtenido sujeto a las especificaciones dadas es el siguiente:
-
-```{r}
-resultadosARIMA <- data.frame(t(coef(listResultPEF[[id]]$arimaModel)))
-renderTableBasic(resultadosARIMA,captionTable = 'Regresores y medias moviles del modeo ARIMA')
-```
-
-Es decir, que el algoritmo de [@R-forecast] determino que el modelo ARIMA que minimiza el coeficiente de información de Akaike (AIC) está definido por un auto regresor junto a una media móvil y un auto regresor estacional.
 
 ### Redes neuronales
 
 Una vez entrenado el modelo de red neuronal para la cuenta correspondiente su estructura presentara la siguiente forma:
 
 ```{r, fig.cap='Arquitectura de red neuronal por la cuenta.'}
-library(devtools)
-source_url('https://gist.githubusercontent.com/fawda123/7471137/raw/466c1474d0a505ff044412703516c34f1a4684a5/nnet_plot_update.r')
+#library(devtools)
+downloader::source_url('https://gist.githubusercontent.com/fawda123/7471137/raw/466c1474d0a505ff044412703516c34f1a4684a5/nnet_plot_update.r',prompt = F)
 
 wts.in<-listResultPEF[[id]]$nnModel$model[[1]]$wts
 struct<-listResultPEF[[id]]$nnModel$model[[1]]$n
@@ -87,10 +81,27 @@ plot.nnet(wts.in,struct=struct)
 
 Así también, dentro lo correspondiente al análisis de los pesos ajustados de una red neuronal estos no pueden ser interpretados más que solo como una tasa de cambio.
 
+\newpage
+### ARIMA
+
+El modelo ARIMA obtenido sujeto a las especificaciones dadas es el siguiente:
+
+```{r}
+resultadosARIMA <- data.frame(t(coef(listResultPEF[[id]]$arimaModel)))
+```
+
+\vspace*{15pt}
+```{r}
+renderTableBasic(resultadosARIMA,captionTable = 'Regresores y medias moviles del modeo ARIMA')
+```
+
+Es decir, que el algoritmo de [@R-forecast] determino que el modelo ARIMA que minimiza el coeficiente de información de Akaike (AIC) está definido por un auto regresor junto a una media móvil y un auto regresor estacional.
+
 ### Eficiencia de los modelos en el entrenamiento
 
 Una vez terminado el entrenamiento de los modelos se realizará la evaluación de los mismos.
 
+\vspace*{15pt}
 ```{r}
 renderTableBasic( listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% transformTableAuxPef, 
                   captionTable = 'Ajuste R2 de los modelos para resultado neto de la gestion')
@@ -102,6 +113,7 @@ Es decir que los datos pronosticados del resultado neto de la gestión para el i
 
 Posteriormente se calcula el ajuste de las proyecciones respecto a los datos de prueba, los cuales son nuevos para el modelo y nos dan una idea de que si el modelo está logrando generalizar los patrones contenidos en la serie de tiempo.
 
+\vspace*{15pt}
 ```{r}
 renderTableBasic( listResumeModels$r2ForecastResum %>% filter(CUENTAS==id) %>% transformTableAuxPef,
                   captionTable = 'Ajuste R2 de proyecciones de modelos para resultado neto de la gestion')

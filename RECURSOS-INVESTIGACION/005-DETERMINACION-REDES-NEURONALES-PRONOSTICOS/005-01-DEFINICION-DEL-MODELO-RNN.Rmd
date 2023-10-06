@@ -52,12 +52,6 @@ Los pronósticos realizados en el presente capítulo estarán sujetos a las espe
 
 Los datos a ser modelados están definidos como series de tiempo (cada serie de tiempo representa una cuenta de los estados financieros) de `r nrow(datTotalSistema)` observaciones cada una, las cuales agrupan a todas las entidades del sistema financiero de Bolivia, presentadas en el capítulo anterior.
 
-Así mismo los datos se dividen en dos grupos:
-
-- Datos de entrenamiento.
-- Datos para realizar pruebas.
-
-Donde los datos de entrenamiento serán utilizados para adaptar los modelos y los datos de pruebas buscarán contrastar el ajuste de los pronósticos de los modelos respecto a la misma.
 
 ```{r, fig.height = 10, fig.width = 20, fig.cap='Agrupamiento de los datos de las series de tiempo.'}
 autoplot(listResultPEF[[id]]$tsDatTrain,series = 'Datos de entrenamiento') +
@@ -74,6 +68,14 @@ autoplot(listResultPEF[[id]]$tsDatTrain,series = 'Datos de entrenamiento') +
           axis.text.x = element_text(size=24))
     
 ```
+
+\newpage
+Así mismo los datos se dividen en dos grupos:
+
+- Datos de entrenamiento.
+- Datos para realizar pruebas.
+
+Donde los datos de entrenamiento serán utilizados para adaptar los modelos y los datos de pruebas buscarán contrastar el ajuste de los pronósticos de los modelos respecto a la misma.
 
 ### Modelos 
 
@@ -105,11 +107,19 @@ Las especificaciones del algoritmo utilizado corresponden al paquete "forecast" 
 
 El modelo clásico de series de tiempo define a la misma como la suma de dos elementos:
 
-$$ \text{Serie De Tiempo} = \text{ Tendencia + Estacionalidad} $$
+\begin{equation}
+\text{Serie De Tiempo} = \text{ Tendencia + Estacionalidad}
+(\#eq:drnn-st)
+\end{equation}
+
 
 Entendiendo la tendencia como la tasa de cambio de la serie de tiempo respecto al tiempo y las estacionalidades como tasas de cambio correspondientes a variables dicótomas, es decir, solo pueden asumir valores de 0 o 1 cuando la observación se encuentre en la estacionalidad dada, así mismo el modelo presentado asume una estacionalidad de 12 periodos que en consecuencia la ecuación antes mencionada toma la siguiente forma:
 
-$$Y_{t} = \beta_{0} + \beta_{1}{T_{t}} + \sum_{\substack{i=2\\j=2}}^{\substack{i=n\\ j=m}}{\beta_{i}{S_{j}}} $$
+\begin{equation}
+Y_{t} = \beta_{0} + \beta_{1}{T_{t}} + \sum_{\substack{i=2\\j=2}}^{\substack{i=n\\ j=m}}{\beta_{i}{S_{j}}}
+(\#eq:drnn-stY)
+\end{equation}
+
 
 Donde:
 
@@ -120,7 +130,6 @@ Donde:
 
 Así mismo, el método a usar para ajustar los pesos en $\beta_{i}$ sera el de mínimos cuadrados ordinarios (MCO).
 
-
 #### Modelo ARIMA
 
 <!-- https://github.com/cran/forecast/blob/878f06ca38ae78337c242c034bc814eb38df9be9/R/newarima2.R -->
@@ -129,15 +138,24 @@ Los modelos ARIMA (AutoRegressive Integrated Moving Average) es el resultado de 
 
 Los modelos auto regresivos están definidos por:
 
-$$y_{t} = c + \phi_{1}y_{t-1} + \phi_{2}y_{t-2} + \dots + \phi_{p}y_{t-p} + \varepsilon_{t}$$
+\begin{equation}
+y_{t} = c + \phi_{1}y_{t-1} + \phi_{2}y_{t-2} + \dots + \phi_{p}y_{t-p} + \varepsilon_{t}
+(\#eq:drnn-stYarima)
+\end{equation}
 
 Y los modelos de promedios móviles están definidos por:
 
-$$y_{t} = c + \varepsilon_t + \theta_{1}\varepsilon_{t-1} + \theta_{2}\varepsilon_{t-2} + \dots + \theta_{q}\varepsilon_{t-q}$$
+\begin{equation}
+y_{t} = c + \varepsilon_t + \theta_{1}\varepsilon_{t-1} + \theta_{2}\varepsilon_{t-2} + \dots + \theta_{q}\varepsilon_{t-q}
+(\#eq:drnn-stYarima2)
+\end{equation}
 
 Donde la integración de ambos modelos da lugar al modelo ARIMA, que se puede definir como:
 
-$$ y_{t} = c + \phi_{1}y_{t-1} + \cdots + \phi_{p}y_{t-p} + \theta_{1}\varepsilon_{t-1} + \cdots + \theta_{q}\varepsilon_{t-q} + \varepsilon_{t} $$
+\begin{equation}
+y_{t} = c + \phi_{1}y_{t-1} + \cdots + \phi_{p}y_{t-p} + \theta_{1}\varepsilon_{t-1} + \cdots + \theta_{q}\varepsilon_{t-q} + \varepsilon_{t} 
+(\#eq:drnn-stYarima3)
+\end{equation}
 
 Donde las especificaciones del algoritmo utilizado para el presente modelo corresponden al paquete "forecast" del repositorio publico CRAN [@R-forecast].
 
@@ -153,7 +171,11 @@ Donde se realizará una evaluación CAMEL sobre los datos proyectados para visua
 
 Así también, el ajuste de los modelos está determinado por el estadístico R2 que se define como:
 
-$$ R2 = \left ( \frac{ \sum{[(x_{i}-\bar{x})-(y_{i}-\bar{y})]} } { \sqrt{ \sum{(x_{i}-\bar{x})^{2}} * \sum{(y_{i}-\bar{y})^{2}} } }  \right )^{2} $$
+\begin{equation}
+R2 = \left ( \frac{ \sum{[(x_{i}-\bar{x})-(y_{i}-\bar{y})]} } { \sqrt{ \sum{(x_{i}-\bar{x})^{2}} * \sum{(y_{i}-\bar{y})^{2}} } }  \right )^{2}
+(\#eq:drnn-ajusteR2)
+\end{equation}
+
 
 Donde el presente estadístico puede ser aplicado antes y después del entrenamiento:
 

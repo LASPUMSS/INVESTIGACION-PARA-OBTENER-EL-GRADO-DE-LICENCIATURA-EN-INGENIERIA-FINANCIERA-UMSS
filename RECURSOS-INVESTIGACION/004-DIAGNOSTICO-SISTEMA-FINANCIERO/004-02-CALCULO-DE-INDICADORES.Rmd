@@ -28,7 +28,7 @@ datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
 En la presente sección se presentan los indicadores que evalúan las diferentes características de los sectores financieros por medio de los mismos que harán manifiesto si dicho sector tiene la capacidad de hacer frente a sus obligaciones.
 
 \newpage
-### Indicadores de capital
+### Indicadores de capital {#DF-INDICADORES-CAPITAL}
 
 <!-- ##################################################### -->
 <!-- #####################  INDICADORES DE CAPITAL         -->
@@ -145,7 +145,7 @@ El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tie
 
 Así también, el sector `r str_to_lower(nameEntBestTendencia)` posee la mejor tendencia mensual del indicador, es decir, el sector en promedio mensualmente incrementa en `r format(round(bestTendencia*100,2), scientific=FALSE)`% en el `r str_to_lower(nameIndById)`, dando al sector mayor capacidad de hacer frente a sus obligaciones.
 
-### Indicadores de activos
+### Indicadores de activos {#DF-INDICADORES-ACTIVOS}
 
 <!-- ##################################################### -->
 <!-- #####################  INDICADORES DE ACTIVOS         -->
@@ -273,7 +273,7 @@ Donde el promedio más favorable en el `r str_to_lower(nameIndById)` a través d
 Por otro lado, el sector `r str_to_lower(nameEntBestTendencia)` posee la mejor tendencia mensual del indicador, es decir, el sector en promedio mensualmente varia en `r format(round(bestTendencia*100,2), scientific=FALSE)`% en el `r str_to_lower(nameIndById)`, este tendencia puede ser tomada como validad si y solo va acompañado de una disminución o de cartera en mora.
 
 
-### Indicadores de administración
+### Indicadores de administración {#DF-INDICADORES-ADMINISTRACION}
 
 <!-- ##################################################### -->
 <!-- ###############  INDICADORES DE ADMINISTRACION        -->
@@ -356,7 +356,7 @@ El indicador busca mostrar si los gastos administrativos menos impuestos se encu
 
 Dando lugar al promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo, está dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(round(bestPromedio*100,2), scientific=FALSE)`% (Ver tabla \@ref(tab:df-indicadores-administracion-tabla)), el cual ser inferior a 1 indica que los gastos administrativos menos impuesto se encuentran cubierto por el resultado operativo bruto. 
 
-### Indicadores de beneficios
+### Indicadores de beneficios {#DF-INDICADORES-BENEFICIOS}
 
 <!-- ##################################################### -->
 <!-- ###############  INDICADORES DE BENEFICIOS       -->
@@ -437,7 +437,7 @@ El indicador está definido por la ecuación \@ref(eq:df-roe) expresado en tanto
 
 El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(round(bestPromedio*100,2), scientific=FALSE)`% (Ver tabla \@ref(tab:df-indicadores-beneficios-tabla)), es decir, que por cada unidad contenida en el patrimonio el sector género o creo riqueza para sus propietarios del `r format(round(bestPromedio*100,2), scientific=FALSE)`% mensual promedio.
 
-### Indicadores de liquidez
+### Indicadores de liquidez {#DF-INDICADORES-LIQUIDEZ}
 
 <!-- ##################################################### -->
 <!-- ###############  INDICADORES DE LIQUIDEZ           -->
