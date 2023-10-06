@@ -145,7 +145,6 @@ El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tie
 
 Así también, el sector `r str_to_lower(nameEntBestTendencia)` posee la mejor tendencia mensual del indicador, es decir, el sector en promedio mensualmente incrementa en `r format(round(bestTendencia*100,2), scientific=FALSE)`% en el `r str_to_lower(nameIndById)`, dando al sector mayor capacidad de hacer frente a sus obligaciones.
 
-\newpage
 ### Indicadores de activos
 
 <!-- ##################################################### -->
@@ -162,6 +161,8 @@ listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas de
 
 ```
 
+\newpage
+\vspace*{\fill}
 ```{=latex}
 \begin{figure}[h!]
 ```
@@ -174,7 +175,9 @@ wrap_plots(listPlots, ncol = 1)
 \floatfoot{Fuente: Elaboración propia.}
 \end{figure}
 ```
+\vspace*{\fill}
 
+\newpage
 \vspace*{15pt}
 ```{r}
 listTablesRender %>% 
@@ -269,14 +272,15 @@ Donde el promedio más favorable en el `r str_to_lower(nameIndById)` a través d
 
 Por otro lado, el sector `r str_to_lower(nameEntBestTendencia)` posee la mejor tendencia mensual del indicador, es decir, el sector en promedio mensualmente varia en `r format(round(bestTendencia*100,2), scientific=FALSE)`% en el `r str_to_lower(nameIndById)`, este tendencia puede ser tomada como validad si y solo va acompañado de una disminución o de cartera en mora.
 
-\newpage
+
 ### Indicadores de administración
 
 <!-- ##################################################### -->
 <!-- ###############  INDICADORES DE ADMINISTRACION        -->
 <!-- ##################################################### -->
 
-Los indicadores de administración tienen por objeto evaluar como las instituciones gestionan sus gastos administrativos, los cuales se presenta a continuación:
+Los indicadores de administración tienen por objeto evaluar como los sectores financieros correspondientes gestionan sus gastos administrativos, es decir, buscan evaluar la capacidad de hacer frente a dichos gastos administrativos (Ver figura \@ref(fig:df-indicadores-administracion)).
+
 
 ```{r df-indicadores-administracion-tabla}
 ids <- c('indAdm_CCGA','indAdm_CACGA')
@@ -286,6 +290,8 @@ listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas de
 
 ```
 
+\newpage
+\vspace*{\fill}
 ```{=latex}
 \begin{figure}[h!]
 ```
@@ -298,7 +304,9 @@ wrap_plots(listPlots, ncol = 1)
 \floatfoot{Fuente: Elaboración propia.}
 \end{figure}
 ```
+\vspace*{\fill}
 
+\newpage
 \vspace*{15pt}
 ```{r}
 listTablesRender %>% 
@@ -317,14 +325,16 @@ nameEntBestTendencia <- listResult[[id]][['nameEntBestTendencia']]
 bestTendencia <- listResult[[id]][['bestTendencia']]
 ```
 
-El indicador busca mostrar la representación de los gastos administrativos respecto a los activos más contingentes, dicho indicador está definido por la siguiente ecuación:
+El indicador busca mostrar la representación de los gastos administrativos respecto a los activos más contingentes, dicho indicador está definido por la ecuación \@ref(eq:df-ccga) expresado en tanto por ciento.
 
 \begin{equation}
-\text{CCGA} = \frac{ \text{Gastos Administración} }{ \text{Activos + Contingentes} } 
+\text{CCGA} = \frac{ \text{Gastos Administración} }{ \text{Activos + Contingentes} } * \text{100}
 (\#eq:df-ccga)
 \end{equation}
 
-Donde el promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`  (Ver tabla \@ref(tab:df-indicadores-administracion-tabla)), teniendo la consideración que la tendencia de dicho indicador del sector es positiva que de mantenerse en el largo plazo mostraría una mala gestión de los gastos administrativos.
+Donde el promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(round(bestPromedio*100,2), scientific=FALSE)`% (Ver tabla \@ref(tab:df-indicadores-administracion-tabla)), teniendo la consideración que la tendencia de dicho indicador del sector es positiva que de mantenerse en el largo plazo mostraría una mala gestión de los gastos administrativos.
+
+Por otro lado, el sector `r str_to_lower(nameEntBestTendencia)` posee la mejor tendencia mensual del indicador, es decir, el sector en promedio mensualmente varia en `r format(round(bestTendencia*100,2), scientific=FALSE)`% en el `r str_to_lower(nameIndById)`
 
 #### Coeficiente acido de cobertura gastos administrativos (CACGA)
 
@@ -337,23 +347,22 @@ nameEntBestTendencia <- listResult[[id]][['nameEntBestTendencia']]
 bestTendencia <- listResult[[id]][['bestTendencia']]
 ```
 
-El indicador busca mostrar si los gastos administrativos menos impuestos se encuentran contenidos por el resultado operativo bruto, dicho indicador está definido por la siguiente ecuación:
+El indicador busca mostrar si los gastos administrativos menos impuestos se encuentran contenidos por el resultado operativo bruto, dicho indicador está definido por la ecuación \@ref(eq:df-cacga) expresado en tanto por ciento.
 
 \begin{equation}
-\text{CACGA} = \frac{ \text{Gastos Administración - Impuestos} }{ \text{Resultado Operativo Bruto} }
+\text{CACGA} = \frac{ \text{Gastos Administración - Impuestos} }{ \text{Resultado Operativo Bruto} } * \text{100}
 (\#eq:df-cacga)
 \end{equation}
 
-Dando lugar al promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo, está dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`, el cual ser inferior a 1 indica que los gastos adminitrativos menos impuesto se encuentran cubierto por el resultado operativo bruto.
+Dando lugar al promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo, está dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(round(bestPromedio*100,2), scientific=FALSE)`% (Ver tabla \@ref(tab:df-indicadores-administracion-tabla)), el cual ser inferior a 1 indica que los gastos administrativos menos impuesto se encuentran cubierto por el resultado operativo bruto. 
 
-\newpage
 ### Indicadores de beneficios
 
 <!-- ##################################################### -->
 <!-- ###############  INDICADORES DE BENEFICIOS       -->
 <!-- ##################################################### -->
 
-Los indicadores de beneficios tienen por objeto de evaluar el rendimiento o generación de valor de las instituciones o sectores financieros, los cuales se presentan a continuación:
+Los indicadores de beneficios tienen por objeto evaluar el rendimiento o generación de valor por parte de los sectores financieros (Ver figura \@ref(fig:df-indicadores-beneficios)).
 
 ```{r df-indicadores-beneficios-tabla}
 ids <- c('indBenf_ROA','indBenf_ROE')
@@ -363,6 +372,15 @@ listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas de
 
 ```
 
+\vspace*{15pt}
+```{r}
+listTablesRender %>% 
+    footnote(general_title = 'NOTA:',
+                              general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
+```
+
+\newpage
+\vspace*{\fill}
 ```{=latex}
 \begin{figure}[h!]
 ```
@@ -375,13 +393,8 @@ wrap_plots(listPlots, ncol = 1)
 \floatfoot{Fuente: Elaboración propia.}
 \end{figure}
 ```
+\vspace*{\fill}
 
-\vspace*{15pt}
-```{r}
-listTablesRender %>% 
-    footnote(general_title = 'NOTA:',
-                              general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
-```
 
 #### Coeficiente de rendimiento sobre activos (ROA)
 
@@ -394,15 +407,15 @@ nameEntBestTendencia <- listResult[[id]][['nameEntBestTendencia']]
 bestTendencia <- listResult[[id]][['bestTendencia']]
 ```
 
-El indicador está definido por la siguiente ecuación:
+El indicador está definido por la ecuación \@ref(eq:df-roa) expresado en tanto por ciento.
 
 \begin{equation}
-\text{ROA} = \frac{ \text{Resultado Neto De La Gestión} }{ \text{Activo + Contingente} } 
+\text{ROA} = \frac{ \text{Resultado Neto De La Gestión} }{ \text{Activo + Contingente} } * \text{100}
 (\#eq:df-roa)
 \end{equation}
 
 
-El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`, lo cual quiere decir que si consideramos al activo como elemento necesario para generar valor el sector de `r str_to_lower(nameEntBestPromedio)` pudo generar valor hasta en un `r format(round(bestPromedio*100,2), scientific=FALSE)`%  (Ver tabla \@ref(tab:df-indicadores-beneficios-tabla)) mensual promedio sobre los activos.
+El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(round(bestPromedio*100,2), scientific=FALSE)`% (Ver tabla \@ref(tab:df-indicadores-beneficios-tabla)), lo cual quiere decir que si consideramos al activo como elemento necesario para generar valor el sector de `r str_to_lower(nameEntBestPromedio)` pudo generar valor hasta en un `r format(round(bestPromedio*100,2), scientific=FALSE)`% mensual promedio sobre los activos.
 
 #### Coeficiente de rendimiento sobre patrimonio (ROE)
 
@@ -415,24 +428,22 @@ nameEntBestTendencia <- listResult[[id]][['nameEntBestTendencia']]
 bestTendencia <- listResult[[id]][['bestTendencia']]
 ```
 
-El indicador está definido por la siguiente ecuación:
+El indicador está definido por la ecuación \@ref(eq:df-roe) expresado en tanto por ciento.
 
 \begin{equation}
-\text{ROE} = \frac{ \text{Resultado Neto De La Gestión} }{ \text{Patrimonio} } 
+\text{ROE} = \frac{ \text{Resultado Neto De La Gestión} }{ \text{Patrimonio} } * \text{100}
 (\#eq:df-roe)
 \end{equation}
 
-El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`, es decir, que por cada unidad contenida en el patrimonio el sector género o creo riqueza para sus propietarios del `r format(round(bestPromedio*100,2), scientific=FALSE)`% mensual promedio.
+El promedio mas favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(round(bestPromedio*100,2), scientific=FALSE)`% (Ver tabla \@ref(tab:df-indicadores-beneficios-tabla)), es decir, que por cada unidad contenida en el patrimonio el sector género o creo riqueza para sus propietarios del `r format(round(bestPromedio*100,2), scientific=FALSE)`% mensual promedio.
 
-
-\newpage
 ### Indicadores de liquidez
 
 <!-- ##################################################### -->
 <!-- ###############  INDICADORES DE LIQUIDEZ           -->
 <!-- ##################################################### -->
 
-Los indicadores de liquidez tienen por objeto de evaluar la capacidad de las instituciones para hacer frente a sus obligaciones con terceros con sus activos más líquidos, a continuación, se presentan los indicadores de liquidez:
+Los indicadores de liquidez tienen por objeto de evaluar la capacidad de las instituciones para hacer frente a sus obligaciones con terceros con sus activos más líquidos (Ver figura \@ref(fig:df-indicadores-liquidos))
 
 ```{r df-indicadores-liquidos-tabla}
 ids <- c('indLq_CCPP','indLq_CACPP')
@@ -442,25 +453,13 @@ listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas de
 
 ```
 
-```{=latex}
-\begin{figure}[h!]
-```
-
-```{r df-indicadores-liquidos, fig.height = 20, fig.width = 20, fig.cap='Indicadores de liquidez'}
-wrap_plots(listPlots, ncol = 1)
-```
-
-```{=latex}
-\floatfoot{Fuente: Elaboración propia.}
-\end{figure}
-```
-
 \vspace*{15pt}
 ```{r}
 listTablesRender %>% 
     footnote(general_title = 'NOTA:',
                               general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
 ```
+
 
 #### Coeficiente de capacidad de pago frente a pasivos (CCPP)
 
@@ -473,15 +472,15 @@ nameEntBestTendencia <- listResult[[id]][['nameEntBestTendencia']]
 bestTendencia <- listResult[[id]][['bestTendencia']]
 ```
 
-El indicador está definido por la siguiente ecuación:
+El indicador está definido por la ecuación \@ref(eq:df-ccpp) expresado en tanto por ciento.
 
 \begin{equation}
-\text{CCPP} = \frac{ \text{Disponibles + Inversiones Temporarias} }{ \text{Pasivos} }
+\text{CCPP} = \frac{ \text{Disponibles + Inversiones Temporarias} }{ \text{Pasivos} } * \text{100}
 (\#eq:df-ccpp)
 \end{equation}
 
 
-El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`, es decir que el sector de `r str_to_lower(nameEntBestPromedio)` puede hacer frente a sus obligaciones con terceros en menos de 30 días hasta un  `r format(round(bestPromedio*100,2), scientific=FALSE)`% (Ver tabla \@ref(tab:df-indicadores-liquidos-tabla))de su totalidad.
+El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(round(bestPromedio*100,2), scientific=FALSE)`% (Ver tabla \@ref(tab:df-indicadores-liquidos-tabla)), es decir que el sector de `r str_to_lower(nameEntBestPromedio)` puede hacer frente a sus obligaciones con terceros en menos de 30 días hasta un  `r format(round(bestPromedio*100,2), scientific=FALSE)`% de su totalidad.
 
 #### Coeficiente acido de capacidad de pago frente a pasivos (CACPP)
 
@@ -494,12 +493,27 @@ nameEntBestTendencia <- listResult[[id]][['nameEntBestTendencia']]
 bestTendencia <- listResult[[id]][['bestTendencia']]
 ```
 
-El indicador está definido por la siguiente ecuación:
+El indicador está definido por la ecuación \@ref(eq:df-cacpp) expresado en tanto por ciento.
 
 \begin{equation}
-\text{CACPP} = \frac{ \text{Disponibles} }{ \text{Pasivos} } 
+\text{CACPP} = \frac{ \text{Disponibles} }{ \text{Pasivos} } * \text{100} 
 (\#eq:df-cacpp)
 \end{equation}
 
-El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(bestPromedio, scientific=FALSE)`, que es lo mismo decir que el sector de `r str_to_lower(nameEntBestPromedio)` puede hacer frente a sus obligaciones con terceros con sus activos más líquidos de disposición inmediata hasta un  `r format(round(bestPromedio*100,2), scientific=FALSE)`% del total de las obligaciones.
+El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo esta dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(round(bestPromedio*100,2), scientific=FALSE)`% (Ver tabla \@ref(tab:df-indicadores-liquidos-tabla)), que es lo mismo decir que el sector de `r str_to_lower(nameEntBestPromedio)` puede hacer frente a sus obligaciones con terceros con sus activos más líquidos de disposición inmediata hasta un  `r format(round(bestPromedio*100,2), scientific=FALSE)`% del total de las obligaciones.
 
+\newpage
+\vspace*{\fill}
+```{=latex}
+\begin{figure}[h!]
+```
+
+```{r df-indicadores-liquidos, fig.height = 20, fig.width = 20, fig.cap='Indicadores de liquidez'}
+wrap_plots(listPlots, ncol = 1)
+```
+
+```{=latex}
+\floatfoot{Fuente: Elaboración propia.}
+\end{figure}
+```
+\vspace*{\fill}

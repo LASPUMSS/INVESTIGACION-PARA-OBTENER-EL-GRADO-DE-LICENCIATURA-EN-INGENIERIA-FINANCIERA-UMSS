@@ -49,7 +49,7 @@ datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
 
 La sección de resultados CAMEL del sistema financiero de Bolivia presenta la información consecuente del diagnóstico de la solidez financiera de los sectores financieros contenidos en la misma que está sujeta a los indicadores, rangos y ponderaciones antes presentados.
 
-A continuación, se presentan los resultados CAMEL con rangos flexibles sin ponderar agrupados por tipo de indicador se presentan a continuación (ver tabla \@ref(tab:df-camel-rangos-flexibles-tabla)) (Ver tabla \@ref(tab:df-camel-rangos-estrictos-tabla)):
+A continuación, se presentan los resultados CAMEL con rangos flexibles sin ponderar agrupados por tipo de indicador se presentan a continuación:
 
 ```{r df-camel-rangos-flexibles-tabla}
 ids <- c('C','A','M','E','L')
@@ -107,12 +107,14 @@ wrap_plots(listPlots, ncol = 1)
 \end{figure}
 ```
 
+\newpage
 \vspace*{15pt}
 ```{r}
 listTablesRender %>% 
     footnote(general_title = 'NOTA:',
                               general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
 ```
+
 
 Ahora bien, ya sea los resultados CAMEL con rangos flexibles o estrictos ambos nos permiten ver qué tipo de políticas son aplicadas por estos sectores a la hora de administrar sus recursos de capital, activos, liquidez y recursos humanos, y como estos dan los resultados obtenidos contenidos en los indicadores de beneficios.
 
@@ -129,8 +131,6 @@ En cuarto termino se tiene a las entidades financiera de vivienda y bancos múlt
 
 Finalmente como último elemento tenemos los indicadores de liquidez donde tenemos en los primeros lugares a las cooperativas, bancos múltiples donde la naturaleza del negocio de los mismos donde una de sus actividades más usuales es la de resguardar en forma de ahorros o cuentas corrientes el dinero del público en general, lo cual en consecuencia hace necesario disponer de un margen de efectivo suficiente que cubra necesidades de liquidez de sus clientes y en contraposición las instituciones financieras de desarrollo y el banco de desarrollo productivo no se enfocan en brindar estos servicios así que es previsible que ocupen estos lugares en los indicadores de liquidez.
 
-
-\newpage
 ### Calificación CAMEL
 
 La calificación CAMEL bajo la metodología presentada es la que da respuesta sobre el estado de la solidez financiera de los sectores que conforman el sistema financiero de Bolivia, la misma contiene dentro de si las calificaciones ponderadas asignadas a los resultados de los diferentes indicadores, donde 1 indica un sector solvente en todos aspectos y 5 corresponde a serios problemas de solidez, así también una tendencia negativa se traduce en un incremento de la solidez financiera (ver tabla \@ref(tab:df-camel-calificacion-final-tabla)).
@@ -151,25 +151,7 @@ listPlots <- getListPlotsInd(listResult)
 listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas CAMEL', 6)
 ```
 
-```{=latex}
-\begin{figure}[h!]
-```
 
-```{r df-camel-calificacion-final, fig.height = 20, fig.width = 20, fig.cap='Resultados CAMEL'}
-wrap_plots(listPlots, ncol = 1)
-```
-
-```{=latex}
-\floatfoot{Fuente: Elaboración propia.}
-\end{figure}
-```
-
-\vspace*{15pt}
-```{r}
-listTablesRender %>% 
-    footnote(general_title = 'NOTA:',
-                              general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
-```
 
 <!-- RESULTADOS CAMEL FLEXIBLES -->
 
@@ -194,3 +176,25 @@ Ahora bien en contraposición el promedio más favorable en el `r nameIndById` q
 
 Finalizando el presente diagnostico ya sea por CAMEL por rangos estrictos o rangos flexibles podemos afirmar que los sectores conformados por las cooperativas, entidades financieras de vivienda y bancos múltiples como sector pueden hacer frente en promedio sus obligaciones con terceros. 
 
+\vspace*{15pt}
+```{r}
+listTablesRender %>% 
+    footnote(general_title = 'NOTA:',
+                              general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
+```
+
+\newpage
+\vspace*{\fill}
+```{=latex}
+\begin{figure}[h!]
+```
+
+```{r df-camel-calificacion-final, fig.height = 20, fig.width = 20, fig.cap='Resultados CAMEL'}
+wrap_plots(listPlots, ncol = 1)
+```
+
+```{=latex}
+\floatfoot{Fuente: Elaboración propia.}
+\end{figure}
+```
+\vspace*{\fill}

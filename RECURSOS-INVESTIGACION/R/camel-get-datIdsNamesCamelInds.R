@@ -40,7 +40,7 @@ getDatIdsNamesCamelIndicadores <- function() {
                     'Coeficiente de reposición de cartera',
                       
                     'Coeficiente de cobertura gastos administrativos',
-                    'Coeficiente acido de cobertura patrimonial',
+                    'Coeficiente acido de cobertura gastos administrativos',
                       
                     'Coeficiente de rendimiento sobre activos',
                     'Coeficiente de rendimiento sobre patrimonio',

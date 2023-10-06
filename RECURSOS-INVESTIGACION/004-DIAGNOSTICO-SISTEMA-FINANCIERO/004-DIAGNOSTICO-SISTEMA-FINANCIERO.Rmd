@@ -18,7 +18,6 @@ La metodología aplicada para realizar el diagnóstico de los sectores financier
 
 ```
 
-\newpage
 <!-- PONDERACIÓN ELEMENTOS CAMEL -->
 ```{r, child="RECURSOS-INVESTIGACION/004-DIAGNOSTICO-SISTEMA-FINANCIERO/004-04-PONDERACION.Rmd"}
 

@@ -31,6 +31,7 @@ Es decir, L1 representa un escenario poco probable, pero beneficio para el secto
 renderTableCamelRangosLimites(datCamelRangosLimites)
 ```
 
+
 ### Rangos CAMEL flexibles
 
 Los rangos CAMEL flexibles presume el escenario más favorable a la hora de calificar los resultados de los indicadores, es decir, si un indicador esta entre dos limites por ejemplo **L1** y **L2** se le da la calificación de 1 (Ver tabla \@ref(tab:df-rangos-limites-camel-flexibles)).
