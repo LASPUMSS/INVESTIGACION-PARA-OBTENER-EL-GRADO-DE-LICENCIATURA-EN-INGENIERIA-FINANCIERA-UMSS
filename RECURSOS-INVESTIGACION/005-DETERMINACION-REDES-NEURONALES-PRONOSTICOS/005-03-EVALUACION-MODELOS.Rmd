@@ -56,6 +56,7 @@ renderTableBasic(listResumeModels$r2ModelsResum %>% transformTableAuxPef,
                  fontSize = 6)
 ```
 
+\newpage
 Donde el ajuste promedio por modelo se tiene los siguiente:
 
 \vspace*{15pt}
@@ -79,6 +80,7 @@ renderTableBasic(listResumeModels$r2ForecastResum %>% transformTableAuxPef,
     footnote(general = 'NaN indica que uno de los series de tiempo es 0 en todos sus elementos, donde el R2 devuelve una indeterminación.',
              general_title = 'NOTA: ' )
 ```
+
 
 Donde el ajuste promedio de las proyecciones por modelo se tiene los siguiente:
 

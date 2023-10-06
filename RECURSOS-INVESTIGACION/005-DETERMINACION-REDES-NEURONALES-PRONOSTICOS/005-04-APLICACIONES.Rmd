@@ -90,7 +90,7 @@ p2 <-
 p1+p2
 ```
 
-
+\newpage
 Donde se observa que la tendencia promedio en la calificación CAMEL de los pronósticos realizados por las distintas redes neuronales es de `r mean(trendCamelRNN)` y la desviación estándar de `r mean(sdCamelRNN)`, así mismos se observa que la tendencia de los datos de prueba y de las proyecciones de las redes neuronales van en un mismo sentido contradiciendo la tendencia de los otros modelos, dando lugar a las siguiente situaciones:
 
 - Los datos efectivamente observados y los pronósticos de las redes neuronales indica que la insolidez financiera del sistema financiero Boliviano aumentaría, lo cual podría dar a correcciones o modificaciones a políticas aplicadas.

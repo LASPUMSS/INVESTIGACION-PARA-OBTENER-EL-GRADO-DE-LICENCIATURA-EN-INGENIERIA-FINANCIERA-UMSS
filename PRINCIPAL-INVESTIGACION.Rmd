@@ -73,6 +73,11 @@ options(scipen=999)
 
 ```
 
+<!-- DIAGNOSTICO SISTEMA FINANCIERO -->
+\newpage
+```{r, child="RECURSOS-INVESTIGACION/004-DIAGNOSTICO-SISTEMA-FINANCIERO/004-DIAGNOSTICO-SISTEMA-FINANCIERO.Rmd"}
+
+```
 
 <!-- DETERMINACION REDES NEURONALES-PRONOSTICOS -->
 \newpage
@@ -92,5 +97,9 @@ options(scipen=999)
 
 ```
 
+<!-- ANEXOS -->
+\newpage
+```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-ANEXOS.Rmd"}
 
+```
 

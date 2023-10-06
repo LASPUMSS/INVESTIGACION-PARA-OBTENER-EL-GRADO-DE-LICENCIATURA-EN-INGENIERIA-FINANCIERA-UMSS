@@ -136,6 +136,7 @@ p3 <- z %>% ggplot(aes(x=r2Model)) + geom_histogram() + ggtitle('ARIMA') + xlab(
 p1/p2/p3
 ```
 
+\newpage
 Para las diferentes series de tiempo se realizara `r length(listResultPEF[[id]]$nnModelSimulate$r2Model)` simulaciones para dar con el ajuste promedio del modelo, ahora bien en la siguientes apartado se presentara los resultados obtenidos para cada serie de tiempo sujeta al proceso presentado en esta sección.
 
 

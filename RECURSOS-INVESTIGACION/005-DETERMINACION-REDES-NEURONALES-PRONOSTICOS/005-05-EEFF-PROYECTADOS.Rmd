@@ -38,6 +38,7 @@ En esta última sección se presenta los estados financieros observados respecto
 - Modelo clásico de series de tiempo (MCO)
 - ARIMA
 
+\newpage
 ### Balance general proyectado
 
 ```{r}
