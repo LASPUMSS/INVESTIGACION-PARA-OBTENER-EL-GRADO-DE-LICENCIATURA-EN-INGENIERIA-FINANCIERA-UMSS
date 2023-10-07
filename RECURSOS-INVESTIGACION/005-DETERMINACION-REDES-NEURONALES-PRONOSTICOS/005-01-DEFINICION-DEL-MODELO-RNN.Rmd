@@ -52,6 +52,9 @@ Los pronósticos realizados en el presente capítulo estarán sujetos a las espe
 
 Los datos a ser modelados están definidos como series de tiempo (cada serie de tiempo representa una cuenta de los estados financieros) de `r nrow(datTotalSistema)` observaciones cada una, las cuales agrupan a todas las entidades del sistema financiero de Bolivia, presentadas en el capítulo anterior.
 
+```{=latex}
+\begin{figure}[h!]
+```
 
 ```{r, fig.height = 10, fig.width = 20, fig.cap='Agrupamiento de los datos de las series de tiempo.'}
 autoplot(listResultPEF[[id]]$tsDatTrain,series = 'Datos de entrenamiento') +
@@ -67,6 +70,11 @@ autoplot(listResultPEF[[id]]$tsDatTrain,series = 'Datos de entrenamiento') +
           axis.text.y=element_text(size=24),
           axis.text.x = element_text(size=24))
     
+```
+
+```{=latex}
+\floatfoot{Fuente: Elaboración propia.}
+\end{figure}
 ```
 
 \newpage

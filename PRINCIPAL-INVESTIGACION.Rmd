@@ -61,12 +61,6 @@ options(scipen=999)
 
 ```
 
-<!-- ANTECEDENTES -->
-\newpage
-```{r, child="RECURSOS-INVESTIGACION/002-ANTECEDENTES/002-ANTECEDENTES.Rmd"}
-
-```
-
 <!-- MARCO TEÓRICO -->
 \newpage
 ```{r, child="RECURSOS-INVESTIGACION/003-MARCO-TEORICO/003-MARCO-TEORICO.Rmd"}
@@ -102,4 +96,3 @@ options(scipen=999)
 ```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-ANEXOS.Rmd"}
 
 ```
-

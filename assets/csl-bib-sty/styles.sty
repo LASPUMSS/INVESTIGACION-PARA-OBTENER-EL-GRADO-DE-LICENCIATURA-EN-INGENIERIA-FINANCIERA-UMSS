@@ -93,12 +93,13 @@ singlelinecheck=off
 % -----------------------
 % Formatos personalizados DOC
 \titleformat{\section}[block]
-            {\Large\bfseries}
+            {\normalsize\bfseries}
             {\Sectionname \thesection.\quad}
             {0pt}
             {\centering}
-
-
+            
+\titleformat*{\subsection}{\normalsize\bfseries\MakeUppercase}
+          
 % -----------------------
 % Formatos personalizados TOC
 
@@ -146,7 +147,7 @@ singlelinecheck=off
     
 \titlecontents{footerms}
     [0pt]
-    {\addvspace{2pc}\bfseries\large}
+    {\addvspace{2pc}\bfseries\normalsize}
     {}
     {\MakeUppercase}
     {\titlerule*[8pt]{}\contentspage}

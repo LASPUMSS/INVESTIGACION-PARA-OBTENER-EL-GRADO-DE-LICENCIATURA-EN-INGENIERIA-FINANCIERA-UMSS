@@ -63,6 +63,10 @@ renderTableBasic(camelTestModels,
 
 Hacer notar que debido a la naturaleza de la arquitectura y funcionamiento de las redes neuronales en el paso inicial los pesos en las neuronas que dotan de la capacidad de aprendizaje a la red toman valores aleatorios lo que en consecuencia cuando estos se re-entrenan no darán los mismos pronósticos, dada esta situación se realizó `r length(trendCamelRNN)` entrenamientos para cada serie de tiempo con sus respectivos pronósticos y sobre los cuales se aplicó la metodología CAMEL dando lugar a las siguientes tendencias:
 
+```{=latex}
+\begin{figure}[h!]
+```
+
 ```{r, fig.height = 10, fig.width = 20, fig.cap='Historgrama de diferentes redes neuronales entrenadas.'}
 
 p1 <- 
@@ -88,6 +92,11 @@ p2 <-
         axis.text.x=element_text(size=24))
 
 p1+p2
+```
+
+```{=latex}
+\floatfoot{Fuente: Elaboración propia.}
+\end{figure}
 ```
 
 \newpage

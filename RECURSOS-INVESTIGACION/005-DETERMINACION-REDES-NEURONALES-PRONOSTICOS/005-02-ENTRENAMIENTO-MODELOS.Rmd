@@ -70,6 +70,10 @@ Donde cada tasa de cambio está sujeta a su interpretación, por ejemplo la tasa
 
 Una vez entrenado el modelo de red neuronal para la cuenta correspondiente su estructura presentara la siguiente forma:
 
+```{=latex}
+\begin{figure}[h!]
+```
+
 ```{r, fig.cap='Arquitectura de red neuronal por la cuenta.'}
 #library(devtools)
 downloader::source_url('https://gist.githubusercontent.com/fawda123/7471137/raw/466c1474d0a505ff044412703516c34f1a4684a5/nnet_plot_update.r',prompt = F)
@@ -77,6 +81,11 @@ downloader::source_url('https://gist.githubusercontent.com/fawda123/7471137/raw/
 wts.in<-listResultPEF[[id]]$nnModel$model[[1]]$wts
 struct<-listResultPEF[[id]]$nnModel$model[[1]]$n
 plot.nnet(wts.in,struct=struct)
+```
+
+```{=latex}
+\floatfoot{Fuente: Elaboración propia.}
+\end{figure}
 ```
 
 Así también, dentro lo correspondiente al análisis de los pesos ajustados de una red neuronal estos no pueden ser interpretados más que solo como una tasa de cambio.
@@ -123,7 +132,15 @@ renderTableBasic( listResumeModels$r2ForecastResum %>% filter(CUENTAS==id) %>% t
 
 Sobre los mismos modelos se realizan simulaciones sobre las proyecciones que son el resultado de la proyección promedio más menos selección aleatoria de los errores o desviaciones, sobre los cuales se calcula su ajuste R2 donde dichas simulaciones muestran el rango de ajuste al que está sujeto cada modelo para la cuenta de resultado neto de la gestión, los cuales pueden ser visualizados a través de histogramas.
 
-```{r, fig.cap='Ajuste R2 de los modelos para proyecciones simuladas por cuenta'}
+Para las diferentes series de tiempo se realizara `r length(listResultPEF[[id]]$nnModelSimulate$r2Model)` simulaciones para dar con el ajuste promedio del modelo, ahora bien en la siguientes apartado se presentara los resultados obtenidos para cada serie de tiempo sujeta al proceso presentado en esta sección.
+
+\newpage
+\vspace*{\fill}
+```{=latex}
+\begin{figure}[h!]
+```
+
+```{r, fig.height = 15, fig.width = 15, fig.cap='Ajuste R2 de los modelos para proyecciones simuladas por cuenta'}
 z <- data.frame(r2Model=listResultPEF[[id]]$nnModelSimulate$r2Model)
 p1 <- z %>% ggplot(aes(x=r2Model)) + geom_histogram() + ggtitle('NN') + xlab('') + ylab('')
 
@@ -136,8 +153,12 @@ p3 <- z %>% ggplot(aes(x=r2Model)) + geom_histogram() + ggtitle('ARIMA') + xlab(
 p1/p2/p3
 ```
 
-\newpage
-Para las diferentes series de tiempo se realizara `r length(listResultPEF[[id]]$nnModelSimulate$r2Model)` simulaciones para dar con el ajuste promedio del modelo, ahora bien en la siguientes apartado se presentara los resultados obtenidos para cada serie de tiempo sujeta al proceso presentado en esta sección.
+```{=latex}
+\floatfoot{Fuente: Elaboración propia.}
+\end{figure}
+```
+
+\vspace*{\fill}
 
 
 
