@@ -1,0 +1,9 @@
+
+\newpage
+\section*{INTRODUCCIÓN}
+\phantomsection\addcontentsline{toc}{frontms}{INTRODUCCIÓN}
+\thispagestyle{empty}
+La presente investigación tiene por objeto evaluar la capacidad de las redes neuronales para encontrar patrones que a su vez representen mayor ajuste entre los datos proyectados y observados, es decir, permitirá responder que si la aplicación del método de redes neuronales obtendrá información adecuada con mayor aproximación a la situación económica-financiera observada del sistema en su conjunto, siendo los estados financieros con frecuencia mensual de las entidades financieras de Bolivia la unidad de análisis.
+
+Así también, se realizó el diagnóstico de la solidez financiera del sistema financiero de Bolivia agrupados por sectores que representan a las diferentes entidades financieras registradas mediante la puesta en marcha de la metodología CAMEL, donde dicha metodología también nos permitirá evaluar los datos proyectados por los diferentes modelos y si estos se ajustan mejor a los patrones de los datos efectivamente observados correspondiente al mismo intervalo de tiempo, es decir, que el presente investigación exigirá la aplicación de los conocimientos aprendidos durante la formación profesional.
+

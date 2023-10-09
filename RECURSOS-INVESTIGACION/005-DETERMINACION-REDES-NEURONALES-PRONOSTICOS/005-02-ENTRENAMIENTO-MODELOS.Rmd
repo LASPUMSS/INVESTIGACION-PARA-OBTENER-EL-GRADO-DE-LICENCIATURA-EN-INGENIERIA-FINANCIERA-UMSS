@@ -116,7 +116,7 @@ renderTableBasic( listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% tra
                   captionTable = 'Ajuste R2 de los modelos para resultado neto de la gestion')
 ```
 
-Es decir que los datos pronosticados del resultado neto de la gestión para el intervalo de tiempo correspondiente a los datos de entrenamiento se ajustan en `r listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% select(NN) %>% round(digits = 4) %>% pull() *100`,% `r listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% select(MCO) %>% round(digits = 4) %>% pull() *100`% y `r listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% select(ARIMA) %>% round(digits = 4) %>% pull() *100`% para los modelos correspondientes suscritos a la tabla anterior.
+Es decir que los datos pronosticados del resultado neto de la gestión para el intervalo de tiempo correspondiente a los datos de entrenamiento se ajustan en `r listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% select(NN) %>% round(digits = 4) %>% pull() *100`%, `r listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% select(MCO) %>% round(digits = 4) %>% pull() *100`% y `r listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% select(ARIMA) %>% round(digits = 4) %>% pull() *100`% para los modelos correspondientes suscritos a la tabla anterior.
 
 ### Eficiencia de los modelos en los pronósticos
 
@@ -130,27 +130,49 @@ renderTableBasic( listResumeModels$r2ForecastResum %>% filter(CUENTAS==id) %>% t
 
 ### Simulación de proyecciones
 
-Sobre los mismos modelos se realizan simulaciones sobre las proyecciones que son el resultado de la proyección promedio más menos selección aleatoria de los errores o desviaciones, sobre los cuales se calcula su ajuste R2 donde dichas simulaciones muestran el rango de ajuste al que está sujeto cada modelo para la cuenta de resultado neto de la gestión, los cuales pueden ser visualizados a través de histogramas.
+Sobre los mismos modelos se realizan simulaciones sobre las proyecciones que son el resultado de la proyección promedio más menos selección aleatoria de los errores o desviaciones, sobre los cuales se calcula su ajuste R2 donde dichas simulaciones muestran el rango de ajuste al que está sujeto cada modelo para la cuenta de resultado neto de la gestión, los cuales pueden ser visualizados a través de histogramas (Ver figura \@ref(fig:simulacion-modelos-proyecciones)).
 
 Para las diferentes series de tiempo se realizara `r length(listResultPEF[[id]]$nnModelSimulate$r2Model)` simulaciones para dar con el ajuste promedio del modelo, ahora bien en la siguientes apartado se presentara los resultados obtenidos para cada serie de tiempo sujeta al proceso presentado en esta sección.
 
-\newpage
-\vspace*{\fill}
+
 ```{=latex}
 \begin{figure}[h!]
 ```
 
-```{r, fig.height = 15, fig.width = 15, fig.cap='Ajuste R2 de los modelos para proyecciones simuladas por cuenta'}
+```{r simulacion-modelos-proyecciones, fig.height = 10, fig.width = 20, fig.cap='Ajuste R2 de los modelos para proyecciones simuladas por cuenta'}
 z <- data.frame(r2Model=listResultPEF[[id]]$nnModelSimulate$r2Model)
-p1 <- z %>% ggplot(aes(x=r2Model)) + geom_histogram() + ggtitle('NN') + xlab('') + ylab('')
+p1 <- 
+    z %>% 
+    ggplot(aes(x=r2Model)) + 
+    geom_histogram() + 
+    ggtitle('NN') + 
+    xlab('') + 
+    ylab('') + 
+    coord_fixed(ratio = 1/10, xlim = c(0.5, 1))
 
 z <- data.frame(r2Model=listResultPEF[[id]]$mcoModelSimulate$r2Model)
-p2 <- z %>% ggplot(aes(x=r2Model)) + geom_histogram() + ggtitle('MCO') + xlab('') + ylab('')
+p2 <- 
+    z %>% 
+    ggplot(aes(x=r2Model)) + 
+    geom_histogram() + 
+    ggtitle('MCO') + 
+    xlab('') + 
+    ylab('') + 
+    coord_fixed(ratio = 1/10, xlim = c(0.5, 1))
+
 
 z <- data.frame(r2Model=listResultPEF[[id]]$arimaModelSimulate$r2Model)
-p3 <- z %>% ggplot(aes(x=r2Model)) + geom_histogram() + ggtitle('ARIMA') + xlab('R2') + ylab('')
+p3 <- 
+    z %>% 
+    ggplot(aes(x=r2Model)) + 
+    geom_histogram() + 
+    ggtitle('ARIMA') + 
+    xlab('R2') + 
+    ylab('') + 
+    coord_fixed(ratio = 1/10, xlim = c(0.5, 1))
 
-p1/p2/p3
+
+p1+p2+p3
 ```
 
 ```{=latex}
@@ -158,7 +180,6 @@ p1/p2/p3
 \end{figure}
 ```
 
-\vspace*{\fill}
 
 
 

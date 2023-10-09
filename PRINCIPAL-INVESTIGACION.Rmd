@@ -36,13 +36,11 @@ options(scipen=999)
 \clearpage
 \pagenumbering{roman}
 
-
 <!-- PREAMBULO -->
 \newpage
 ```{r, child="RECURSOS-INVESTIGACION/000-PREAMBULO/000-PREAMBULO.Rmd"}
 
 ```
-
 
 \newpage
 \tableofcontents
@@ -51,6 +49,11 @@ options(scipen=999)
 \newpage
 \listoftables
 
+<!-- PREAMBULO -->
+\newpage
+```{r, child="RECURSOS-INVESTIGACION/000-PREAMBULO/000-INTRODUCCION.Rmd"}
+
+```
 
 \clearpage
 \pagenumbering{arabic}

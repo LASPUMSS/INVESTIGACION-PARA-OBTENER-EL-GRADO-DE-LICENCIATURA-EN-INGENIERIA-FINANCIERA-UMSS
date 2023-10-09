@@ -1,8 +1,6 @@
 
 # CONCLUSIONES Y RECOMENDACIONES
 
-Con base al trabajo realizado se plantea las conclusiones y recomendaciones en base a los objetivos específicos e hipótesis de la investigación, que son los siguientes:
-
 ## Conclusión y recomendación respecto al diagnóstico financiero realizado
 
 Se efectuó el diagnóstico del sistema financiero de Bolivia por medio del método CAMEL el cual evalúa el criterio de solidez financiera donde dicho método fue adaptado a series de tiempo que representan las cuentas individuales de los estados financieros publicados por la ASFI los cuales tienen un intervalo mensual desde 2014 al 2022, los cuales a su vez fueron agrupados por sectores financieros.
@@ -27,7 +25,7 @@ Por tanto, se recomienda efectuar la proyección y simulación de estados financ
 
 ## Conclusión y recomendación respecto a la evaluación de los datos proyectados-simulados 
 
-Se efectuó la evaluación de los datos proyectados-simulados midiendo el ajuste promedio de 100 simulaciones por cada cuenta respecto a los datos efectivamente observados o datos de prueba, así también se aplicó el método CAMEL sobre dichos datos proyectados-simulados lo cual permitió comparar los patrones contenidos en las diferentes series de tiempo capturados por los modelos.
+Se efectuó la evaluación de los datos proyectados-simulados midiendo el ajuste promedio de 100 simulaciones por cada cuenta respecto a los datos efectivamente observados o datos de prueba, así también se aplicó el método CAMEL sobre dichos datos proyectados-simulados lo cual permitió comparar los patrones contenidos en las diferentes series de tiempo.
 
 En este sentido se recomienda que los datos proyectados-simulados con intervalos mensuales deben ser evaluados no solo por su nivel de ajuste, si no así también por métodos que permitan visibilizar si estos contienen los patrones contenidos en los datos efectivamente observados.
 

@@ -50,7 +50,7 @@ Los pronósticos realizados en el presente capítulo estarán sujetos a las espe
 
 ### Series de tiempo
 
-Los datos a ser modelados están definidos como series de tiempo (cada serie de tiempo representa una cuenta de los estados financieros) de `r nrow(datTotalSistema)` observaciones cada una, las cuales agrupan a todas las entidades del sistema financiero de Bolivia, presentadas en el capítulo anterior.
+Los datos a ser modelados están definidos como series de tiempo (cada serie de tiempo representa una cuenta de los estados financieros) de `r nrow(datTotalSistema)` observaciones cada una, las cuales agrupan a todas las entidades del sistema financiero de Bolivia, presentados en el capítulo anterior.
 
 ```{=latex}
 \begin{figure}[h!]
@@ -78,12 +78,12 @@ autoplot(listResultPEF[[id]]$tsDatTrain,series = 'Datos de entrenamiento') +
 ```
 
 \newpage
-Así mismo los datos se dividen en dos grupos:
+Así mismo, los datos se dividen en dos grupos:
 
 - Datos de entrenamiento.
 - Datos para realizar pruebas.
 
-Donde los datos de entrenamiento serán utilizados para adaptar los modelos y los datos de pruebas buscarán contrastar el ajuste de los pronósticos de los modelos respecto a la misma.
+Donde los datos de entrenamiento fueron utilizados para adaptar los modelos y los datos de pruebas buscarán contrastar el ajuste de los pronósticos de los modelos respecto a la misma.
 
 ### Modelos 
 
@@ -93,7 +93,7 @@ Los modelos empleados para realizar las proyecciones son los siguientes:
 - Modelo clásico de series de tiempo (MCO)
 - ARIMA
 
-Los cuales estarán sujetos a las arquitecturas o especificaciones que se mencionan a continuación.
+Los cuales están sujetos a las arquitecturas o especificaciones que se mencionan a continuación.
 
 #### Redes neuronales (NN)
 
@@ -113,7 +113,7 @@ Las especificaciones del algoritmo utilizado corresponden al paquete "forecast" 
 
 <!-- https://github.com/cran/forecast/blob/master/R/lm.R -->
 
-El modelo clásico de series de tiempo define a la misma como la suma de dos elementos:
+El modelo clásico de series de tiempo se define a si misma como la suma de dos elementos:
 
 \begin{equation}
 \text{Serie De Tiempo} = \text{ Tendencia + Estacionalidad}
@@ -121,7 +121,7 @@ El modelo clásico de series de tiempo define a la misma como la suma de dos ele
 \end{equation}
 
 
-Entendiendo la tendencia como la tasa de cambio de la serie de tiempo respecto al tiempo y las estacionalidades como tasas de cambio correspondientes a variables dicótomas, es decir, solo pueden asumir valores de 0 o 1 cuando la observación se encuentre en la estacionalidad dada, así mismo el modelo presentado asume una estacionalidad de 12 periodos que en consecuencia la ecuación antes mencionada toma la siguiente forma:
+Entendiendo la tendencia como la tasa de cambio de la serie de tiempo respecto al tiempo y las estacionalidades como tasas de cambio correspondientes a variables dicótomas, es decir, solo pueden asumir valores de 0 o 1 cuando la observación se encuentre en la estacionalidad dada, así mismo el modelo presentado asume una estacionalidad de 12 periodos que en consecuencia la ecuación \@ref(eq:drnn-st) toma la siguiente forma:
 
 \begin{equation}
 Y_{t} = \beta_{0} + \beta_{1}{T_{t}} + \sum_{\substack{i=2\\j=2}}^{\substack{i=n\\ j=m}}{\beta_{i}{S_{j}}}
@@ -151,7 +151,7 @@ y_{t} = c + \phi_{1}y_{t-1} + \phi_{2}y_{t-2} + \dots + \phi_{p}y_{t-p} + \varep
 (\#eq:drnn-stYarima)
 \end{equation}
 
-Y los modelos de promedios móviles están definidos por:
+En contraposición, los modelos de promedios móviles están definidos por:
 
 \begin{equation}
 y_{t} = c + \varepsilon_t + \theta_{1}\varepsilon_{t-1} + \theta_{2}\varepsilon_{t-2} + \dots + \theta_{q}\varepsilon_{t-q}
@@ -170,12 +170,12 @@ Donde las especificaciones del algoritmo utilizado para el presente modelo corre
 
 ### Evaluación de modelos
 
-Una vez finalizado el entrenamiento de los modelos para las diferentes series de tiempo se evaluará la validez o consistencia de los mismos siguiendo dos criterios:
+Una vez finalizado el entrenamiento de los modelos para las diferentes series de tiempo se evalúo la validez o consistencia de los mismos siguiendo dos criterios:
 
 - Ajuste del modelo.
 - Capacidad de generalización del modelo.
 
-Donde se realizará una evaluación CAMEL sobre los datos proyectados para visualizar la capacidad de generalización de los modelos, es decir, si los datos proyectados siguen la misma tendencia que los datos efectivamente observados.
+Donde se realizo la evaluación CAMEL sobre los datos proyectados para visualizar la capacidad de generalización de los modelos, es decir, si los datos proyectados siguen la misma tendencia que los datos efectivamente observados.
 
 Así también, el ajuste de los modelos está determinado por el estadístico R2 que se define como:
 
@@ -184,17 +184,16 @@ R2 = \left ( \frac{ \sum{[(x_{i}-\bar{x})-(y_{i}-\bar{y})]} } { \sqrt{ \sum{(x_{
 (\#eq:drnn-ajusteR2)
 \end{equation}
 
-
-Donde el presente estadístico puede ser aplicado antes y después del entrenamiento:
+\newpage
+Donde el presente estadístico puede fue aplicado bajo dos criterios:
 
 #### R2 sobre datos de entrenamiento
 
-Representa el ajuste existente entre los datos observados en el entrenamiento respecto a los datos pronosticados para los mismos intervalos de tiempo.
+Representa el ajuste existente entre los datos observados en el entrenamiento respecto a los datos pronosticados o ajustados para los mismos intervalos de tiempo.
 
 #### R2 sobre datos de prueba
 
 Representa el ajuste entre los datos observados para realizar pruebas respecto los datos proyectados por el modelo para los mismos intervalos de tiempo.
-
 
 ### Variables comprendidas
 
@@ -218,5 +217,6 @@ Las variables comprendidas que corresponden a las cuentas representadas en forma
 - Resultado neto de la gestión
 - Coeficiente de adecuación patrimonial
 
+\newpage
 Debiendo aclarar que el coeficiente de adecuación patrimonial no es una cuenta del manual de cuentas de ASFI, pero se realiza sus pronósticos al ser necesario para la evaluación de los modelos por la metodología CAMEL.
 

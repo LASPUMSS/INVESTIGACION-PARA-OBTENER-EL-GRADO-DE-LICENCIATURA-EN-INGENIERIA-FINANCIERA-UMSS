@@ -61,13 +61,21 @@ renderTableBasic(camelTestModels,
                         'ARIMA'))
 ```
 
-Hacer notar que debido a la naturaleza de la arquitectura y funcionamiento de las redes neuronales en el paso inicial los pesos en las neuronas que dotan de la capacidad de aprendizaje a la red toman valores aleatorios lo que en consecuencia cuando estos se re-entrenan no darán los mismos pronósticos, dada esta situación se realizó `r length(trendCamelRNN)` entrenamientos para cada serie de tiempo con sus respectivos pronósticos y sobre los cuales se aplicó la metodología CAMEL dando lugar a las siguientes tendencias:
+Hacer notar que debido a la naturaleza de la arquitectura y funcionamiento de las redes neuronales en el paso inicial los pesos en las neuronas que dotan de la capacidad de aprendizaje a la red toman valores aleatorios lo que en consecuencia cuando estos se re-entrenan no darán los mismos pronósticos, dada esta situación se realizó `r length(trendCamelRNN)` entrenamientos para cada serie de tiempo con sus respectivos pronósticos y sobre los cuales se aplicó la metodología CAMEL.
+
+Donde se observa que la tendencia promedio (Ver figura \@ref(fig:histograms-aplicacion-rnn)) en la calificación CAMEL de los pronósticos realizados por las distintas redes neuronales es de `r mean(trendCamelRNN)` y la desviación estándar de `r mean(sdCamelRNN)`, así mismos se observa que la tendencia de los datos de prueba y de las proyecciones de las redes neuronales van en un mismo sentido contradiciendo la tendencia de los otros modelos, dando lugar a las siguiente situaciones:
+
+- Los datos efectivamente observados y los pronósticos de las redes neuronales indica que la insolidez financiera del sistema financiero Boliviano aumentaría, lo cual podría dar a correcciones o modificaciones a políticas aplicadas.
+
+- En contra parte los otros dos modelos presumen que la solidez financiera iría en aumento lo cual se contradice con los datos efectivamente observados lo podría dar lugar a mantener políticas viciadas o mal ejecutadas.
+
+Teniendo en cuenta los antes expuesto podemos afirmar que las redes neuronales pueden encontrar patrones no sujetos al análisis subjetivo en las series de tiempo lo que da lugar a mejores pronósticos de los mismos respecto a los otros modelos.
 
 ```{=latex}
 \begin{figure}[h!]
 ```
 
-```{r, fig.height = 10, fig.width = 20, fig.cap='Historgrama de diferentes redes neuronales entrenadas.'}
+```{r histograms-aplicacion-rnn, fig.height = 10, fig.width = 20, fig.cap='Historgrama de diferentes redes neuronales entrenadas.'}
 
 p1 <- 
     data.frame(trendCamelRNN=trendCamelRNN) %>% 
@@ -91,20 +99,11 @@ p2 <-
         axis.text.y=element_text(size=24),
         axis.text.x=element_text(size=24))
 
-p1+p2
+p1/p2
 ```
 
 ```{=latex}
 \floatfoot{Fuente: Elaboración propia.}
 \end{figure}
 ```
-
-\newpage
-Donde se observa que la tendencia promedio en la calificación CAMEL de los pronósticos realizados por las distintas redes neuronales es de `r mean(trendCamelRNN)` y la desviación estándar de `r mean(sdCamelRNN)`, así mismos se observa que la tendencia de los datos de prueba y de las proyecciones de las redes neuronales van en un mismo sentido contradiciendo la tendencia de los otros modelos, dando lugar a las siguiente situaciones:
-
-- Los datos efectivamente observados y los pronósticos de las redes neuronales indica que la insolidez financiera del sistema financiero Boliviano aumentaría, lo cual podría dar a correcciones o modificaciones a políticas aplicadas.
-
-- En contra parte los otros dos modelos presumen que la solidez financiera iría en aumento lo cual se contradice con los datos efectivamente observados lo podría dar lugar a mantener políticas viciadas o mal ejecutadas.
-
-Teniendo en cuenta los antes expuesto podemos afirmar que las redes neuronales pueden encontrar patrones no sujetos al análisis subjetivo en las series de tiempo lo que da lugar a mejores pronósticos de los mismos respecto a los otros modelos.
 
