@@ -1,5 +1,6 @@
 \vspace*{\fill}
 \section*{ANEXOS}
+\thispagestyle{empty}
 \phantomsection\addcontentsline{toc}{footerms}{ANEXOS}
 \vspace*{\fill}
 
