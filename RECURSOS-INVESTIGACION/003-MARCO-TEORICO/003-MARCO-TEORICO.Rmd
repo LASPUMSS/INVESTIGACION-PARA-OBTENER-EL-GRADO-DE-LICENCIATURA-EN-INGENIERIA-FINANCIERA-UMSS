@@ -6,7 +6,7 @@ source('RECURSOS-INVESTIGACION/R/plot-activation-function.R')
 
 # MARCO TEÓRICO
 
-En el presente capitulo se desarrollan los conceptos y teorías que son necesarios, que darán lugar el desarrollo de la investigación.
+En el presente capitulo se desarrollan los conceptos y teorías necesarios, que darán lugar el desarrollo de la investigación.
 
 ## Finanzas y el sistema financiero
 
@@ -56,7 +56,7 @@ Por lo tanto se afirma, que los estados financieros son un resumen del ejercicio
 
 El balance general se entiende como, "estado financiero que muestra, a una fecha determinada, el valor y la estructura del activo, pasivo y patrimonio de una empresa". [@GLOSARIO_ASFI] 
 
-Con una expresión equivalente se afirma que el balance general representa una fotografía sobre el estado de de los bienes y derechos, respecto a las obligaciones con  propietarios e terceros de la institución en un determinado momento.
+Con una expresión equivalente se afirma que el balance general representa una fotografía sobre el estado de los bienes y derechos, respecto a las obligaciones con  propietarios y terceros de la institución en un determinado momento.
 
 ### Estado de resultados
 
@@ -81,7 +81,7 @@ Es decir, un indicador financiero es un instrumento que tiene por objeto final m
 - Liquidez.
 - Rentabilidad.
 - Ingresos y gastos financieros.
-- Eficacia administrativas.
+- Eficacia administrativa.
 
 Pero los indicadores financieros por si solos no pueden brindar información integrada sobre la situación económica-financiera de una institución en consecuencia a esta necesidad, se encuentra las metodologías de evaluación como ser la metodología CAMEL y PERLAS.
 
@@ -90,7 +90,7 @@ Pero los indicadores financieros por si solos no pueden brindar información int
 La solidez financiera informa sobre el estado corriente de salud y solidez de todo el sector de las instituciones financieras de un país y de los sectores de empresas y hogares que conforman la clientela de las instituciones financieras [@ISF-FMI].
 
 \newpage
-Donde la metodología CAMEL tiene por objeto evaluar la **solidez financiera** de las instituciones con base ha indicadores cuantitativos, contemplando cinco características: 
+Donde la metodología CAMEL tiene por objeto evaluar la **solidez financiera** de las instituciones con base en indicadores cuantitativos, contemplando cinco características: 
 
 - Capital adecuado (C).
 - Calidad del activo (A).
@@ -102,14 +102,14 @@ Es decir, la **solidez financiera** de una institución debe entenderse como la 
 
 La presente metodología se divide en siguientes pasos expuestos por @CALIFICACION-CAMEL:
 
-- Calculo de indicadores que responden a las características antes mencionadas.
+- Cálculo de indicadores que responden a las características antes mencionadas.
 - Definición de rangos y límites de los indicadores.
 - Definición de la ponderación, que responden a la solidez financiera de la institución.
 - Calificación CAMEL.
 
-### Calculo de indicadores
+### Cálculo de indicadores
 
-A continuación, se definen los indicadores que componen a la metodología CAMEL, en función de los elementos que la componen definidos por la @MANUAL_CUENTAS_ASFI en su manual de cuentas y la formulas expuestas por @RATIOS-CAMEL:
+A continuación, se definen los indicadores que componen a la metodología CAMEL, en función de los elementos que la componen definidos por la @MANUAL_CUENTAS_ASFI en su manual de cuentas y la fórmulas expuestas por @RATIOS-CAMEL:
 
 #### Capital
 
@@ -121,7 +121,7 @@ Está definido cómo la relación porcentual entre el capital regulatorio y los 
 
 ##### Coeficiente de cobertura de cartera en mora (CCCM)
 
-Este indicador definido en la ecuación \@ref(eq:mt-cccm) mide o tiene objeto responder si el patrimonio de la institución cubre en tanto por ciento:
+Este indicador definido en la ecuación \@ref(eq:mt-cccm) mide o tiene por objeto responder si el patrimonio de la institución cubre en tanto por ciento:
 
 - Los créditos cuyo capital, cuotas de amortización o intereses no hayan sido cancelados íntegramente a la entidad hasta los 30 días contados desde la fecha de vencimiento. 
 - Los créditos por los cuales la entidad ha iniciado las acciones judiciales para el cobro.
@@ -132,9 +132,9 @@ Este indicador definido en la ecuación \@ref(eq:mt-cccm) mide o tiene objeto re
 (\#eq:mt-cccm)
 \end{equation}
 
-##### Coeficiente acido de cobertura de cartera en mora (CACCM)
+##### Coeficiente ácido de cobertura de cartera en mora (CACCM)
 
-El indicador definido en la ecuación \@ref(eq:mt-caccm) mide o tiene objeto responder si el patrimonio de la institución cubre en tanto por ciento:
+El indicador definido en la ecuación \@ref(eq:mt-caccm) mide o tiene por objeto responder si el patrimonio de la institución cubre en tanto por ciento:
 
 - Los créditos cuyo capital, cuotas de amortización o intereses no hayan sido cancelados íntegramente a la entidad hasta los 30 días contados desde la fecha de vencimiento. 
 - Los créditos por los cuales la entidad ha iniciado las acciones judiciales para el cobro.
@@ -147,7 +147,7 @@ El indicador definido en la ecuación \@ref(eq:mt-caccm) mide o tiene objeto res
 
 ##### Coeficiente de cobertura patrimonial (CCP) 
 
-Este indicador definido en la ecuación \@ref(eq:mt-ccp) mide o tiene por objeto responder si los activos descontando las cuentas contingentes cubren los el patrimonio de la misma.
+Este indicador definido en la ecuación \@ref(eq:mt-ccp) mide o tiene por objeto responder si los activos descontando las cuentas contingentes cubren el patrimonio de la misma.
 
 \begin{equation}
 \text{CCP} = \frac{ \text{Patrimonio} }{ \text{Activo - Contingente} }
@@ -211,7 +211,7 @@ El coeficiente definido en la ecuación \@ref(eq:mt-ccga) mide si los activos de
 \end{equation}
 
 
-##### Coeficiente acido de cobertura patrimonial (CACGA) 
+##### Coeficiente ácido de cobertura patrimonial (CACGA) 
 
 Este coeficiente definido en la ecuación \@ref(eq:mt-cacga) mide si los ingresos brutos pueden hacer frente a los gastos administrativos de la institución.
 
@@ -258,7 +258,7 @@ El coeficiente definido en la ecuación \@ref(eq:mt-ccpp) busca medir si la inst
 \end{equation}
 
 
-##### Coeficiente acido de capacidad de pago frente a pasivos (CACPP) 
+##### Coeficiente ácido de capacidad de pago frente a pasivos (CACPP) 
 
 El coeficiente definido en la ecuación \@ref(eq:mt-cacpp) busca medir si la institución puede hacer frente a sus obligaciones con los activos disponibles.
 
@@ -285,7 +285,7 @@ La ponderación de los elementos CAMEL son asignados de manera arbitraria, pero 
 (\#eq:mt-cacpp)
 \end{equation}
 
-Donde la mayor ponderación está concentrado en los indicadores de capital y activos ya que en ultimo termino son estos mismos con la que una institución financiera puede hacer frente a sus obligaciones con terceros, como también dando mayor ponderación a los indicadores de rendimiento y liquidez respecto a los indicadores de administración debido a la relación que guardan los mismos con el activo y el capital, es decir, el rendimiento tiene efectos sobre el capital y por el otro lado la liquidez tiene efectos sobre los activos.
+Donde la mayor ponderación está concentrado en los indicadores de capital y activos ya que en último termino son estos mismos con la que una institución financiera puede hacer frente a sus obligaciones con terceros, como también dando mayor ponderación a los indicadores de rendimiento y liquidez respecto a los indicadores de administración debido a la relación que guardan los mismos con el activo y el capital, es decir, el rendimiento tiene efectos sobre el capital y por el otro lado la liquidez tiene efectos sobre los activos.
 
 ### Calificación CAMEL
 
@@ -296,7 +296,7 @@ Dado los pasos anteriores la metodología CAMEL asigna una puntuación a la inst
 
 ## Pronósticos
 
-El termino de pronóstico definido como "la acción y efecto de pronosticar" [@RAE], así mismo pronosticar es definido como "predecir algo en el futuro a partir de indicios" [@RAE], es decir, el pronóstico es el proceso de estimación en situaciones de incertidumbre, para los propósitos de esta investigación, un pronóstico es un evento asociado a una distribución de probabilidad.
+El término de pronóstico definido como "la acción y efecto de pronosticar" [@RAE], así mismo pronosticar es definido como "predecir algo en el futuro a partir de indicios" [@RAE], es decir, el pronóstico es el proceso de estimación en situaciones de incertidumbre, para los propósitos de esta investigación, un pronóstico es un evento asociado a una distribución de probabilidad.
 
 Donde los pronósticos por si solos tampoco pueden brindar información integrada sobre la situación económica-financiera futura de la institución, en consecuencia como respuesta a esta necesidad, se encuentra las metodologías de evaluación junto con la simulación de procesos estocásticos.
 
@@ -316,13 +316,13 @@ Ahora bien, el campo de la inteligencia artificial es relativamente reciente, y 
 
 El aprendizaje supervisado corresponde a la situación en que se tiene una variable de salida, ya sea cuantitativa o cualitativa, que se desea predecir basándose en un conjunto de características. [@IALAT]
 
-El aprendizaje supervisado es una rama del aprendizaje automático, son algoritmos que permiten aprender a la red neuronal mediante datos ejemplos que están compuesta por un vector de entrada que son las variables independientes, y otro vector denomina etiquetas, donde la red se encarga de encontrar las relaciones existentes entre las variables independientes, realizando cambios y adaptando el modelo por medio de variaciones sujetas a una función de coste. 
+El aprendizaje supervisado es una rama del aprendizaje automático, son algoritmos que permiten aprender a la red neuronal mediante, datos ejemplos que están compuestas por un vector de entrada que son las variables independientes, y otro vector denominado etiquetas, donde la red se encarga de encontrar las relaciones existentes entre las variables independientes, realizando cambios y adaptando el modelo por medio de variaciones sujetas a una función de coste. 
 
 ### Aprendizaje no supervisado con redes neuronales
 
 El aprendizaje no supervisado, "corresponde a la situación en que existe un conjunto de datos que contienen diversas características de determinados individuos, sin que ninguna de ellas se considere una variable de salida que se desee predecir". [@IALAT]
 
-Donde el aprendizaje no supervisado es un método de aprendizaje automático donde la red neuronal se ajusta a las observaciones. Se distingue del aprendizaje supervisado por el hecho de que no hay un conocimiento a priori es decir etiquetas que sirvan como guía, en el aprendizaje no supervisado solo se cuenta con un conjunto de datos de objetos de entrada.
+Donde el aprendizaje no supervisado es un método de aprendizaje automático donde la red neuronal se ajusta a las observaciones. Se distingue del aprendizaje supervisado por el hecho de que no hay un conocimiento a priori, es decir, etiquetas que sirvan como guía, en el aprendizaje no supervisado solo se cuenta con un conjunto de datos de objetos de entrada.
 
 <!-- REDES NEURONALES ARTIFICIALES -->
 
@@ -369,7 +369,7 @@ A = f(Y)
 (\#eq:mt-a-rnn)
 \end{equation}
 
-Dado lo anterior expuesto una capa de una red neuronal se debe entender como la agrupación neuronas.
+Dado lo anterior expuesto una capa de una red neuronal se debe entender como la agrupación de neuronas.
 
 ### Funciones de activación
 
@@ -483,7 +483,7 @@ x = a^{(1)}
 (\#eq:mt-p-a-rnn)
 \end{equation}
 
-- La primera capa oculta procesara los datos de la capa de entrada toma la siguiente forma:
+- La primera capa oculta procesará los datos de la capa de entrada toma la siguiente forma:
 
 \begin{equation}
 z^{(2)} = W^{(1)}x + b^{(1)} 

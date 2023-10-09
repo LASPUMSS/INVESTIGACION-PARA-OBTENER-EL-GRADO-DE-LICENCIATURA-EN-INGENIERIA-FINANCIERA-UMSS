@@ -8,7 +8,7 @@ La presente investigación parte de la idea de que la existencia de fenómenos n
 
 Se busca responder la hipótesis de que si el modelo de redes neuronales artificiales adaptado a series de tiempo correspondiente a las cuentas de los estados financieros de las entidades financieras de Bolivia, obtiene mayor ajuste y captación de patrones que los modelos tradicionales como el modelo ARIMA.
 
-Los resultados arrojaron que el modelo de redes neuronales artificiales obtuvo mayor ajuste y mejor captación de patrones que modelos tradicionales que en consecuencia proporcionar información financiera adecuada con mayor aproximación a la situación económica-financiera observada.
+Los resultados arrojaron que el modelo de redes neuronales artificiales obtuvo mayor ajuste y mejor captación de patrones que modelos tradicionales, que en consecuencia proporcionaron información financiera adecuada con mayor aproximación a la situación económica-financiera observada.
 
 
 

@@ -3,7 +3,7 @@
 
 ## Planteamiento del problema
 
-En un mundo cada vez más globalizado, y siendo el entorno financiero uno de los sectores que más ha sido impactado por la integración económica multilateral, que ha implicado su incremento en complejidad, donde los agentes económicos son expuestos a una inmensa cantidad de información sobre productos y/o servicios financieros, lo que puede dar lugar a oportunidades de incrementar rendimientos, sin dejar de lado el riesgo de perdidas consecuencia de la complejidad del mismo.
+En un mundo cada vez más globalizado, y siendo el entorno financiero uno de los sectores que más ha sido impactado por la integración económica multilateral, que ha implicado su incremento en complejidad, donde los agentes económicos son expuestos a una inmensa cantidad de información sobre productos y/o servicios financieros, lo que puede dar lugar a oportunidades de incrementar rendimientos, sin dejar de lado el riesgo de perdidas como consecuencia de la complejidad del mismo.
 
 Una de las alternativas de tratamiento de esta información que ofrece el sistema financiero, y que es el objeto de estudio en esta investigación que se propone, es la aplicación de redes neuronales artificiales para la proyección de estados financieros, la cual se encarga de encontrar la relación existente en las variables introducidas al modelo que no pueden ser visibles al análisis subjetivo económico-financiero, dando lugar a la necesidad de evaluar dicha información por herramientas de igual complejidad.
 
@@ -17,7 +17,7 @@ Una de las alternativas de tratamiento de esta información que ofrece el sistem
 
 ## Formulación del problema central
 
-¿Sera que, con la aplicación del método de redes neuronales se obtendrá información adecuada con mayor aproximación a la situación económica-financiera observada del sistema financiero en su conjunto?
+¿Será que, con la aplicación del método de redes neuronales se obtendrá información adecuada con mayor aproximación a la situación económica-financiera observada del sistema financiero en su conjunto?
 
 ## Justificación
 
@@ -28,9 +28,9 @@ En síntesis, el presente trabajo de investigación no pretende remplazar a otro
 
 ## Alcance y delimitación
 
-El presente trabajo de investigación se circunscribe al estudio de las entidades de intermediación de servicios financieras de Bolivia, definidas en el artículo 151 de la ley 393. Con fines de obtener la información que coadyuve a generar la determinación de pronósticos mediante redes neuronales, como herramienta en la toma de decisiones a nivel gerencial y la evaluación de las mismas.
+El presente trabajo de investigación se circunscribe al estudio de las entidades de intermediación de servicios financieros de Bolivia, definidos en el artículo 151 de la ley 393. Con fines de obtener la información que coadyuve a generar la determinación de pronósticos mediante redes neuronales, como herramienta en la toma de decisiones a nivel gerencial y la evaluación de las mismas.
 
-En el diagnostico financiero las entidades financieras se agruparán por sectores:
+En el diagnóstico financiero las entidades financieras se agruparán por sectores:
 
 - Bancos múltiples.
 - Bancos PYME.
@@ -76,11 +76,11 @@ El tipo de investigación que se aplico en el informe final fue descriptivo y an
 
 ### Método de investigación
 
-Se aplico un enfoque inductivo donde se partió desde hechos particulares llegando a conlusiones generales, que posteriormente puedan podrán ser aplicados en otras instituciones financieras de manera exitosa y beneficiar al sistema financiero con nuestra propuesta. También cabe especificar que los procedimientos aplicados en el informe final, están orientados a los métodos inductivo, deductivo, analítico fundamentalmente.
+Se aplicó un enfoque inductivo donde se partió desde hechos particulares llegando a conclusiones generales, que posteriormente podrán ser aplicados en otras instituciones financieras de manera exitosa y beneficiar al sistema financiero con nuestra propuesta. También cabe especificar que los procedimientos aplicados en el informe final, están orientados a los métodos inductivo, deductivo y analítico fundamentalmente.
 
 ### Técnicas de investigación
 
-En primera instancia se realizo la identificación del problema de investigación que fue está establecido en el proyecto de grado, donde se identifico la arquitectura de la red neuronal, que está compuesta de las funciones de activación, y ajuste de los datos en formato de tablas. Posteriormente se realizo la recolección de datos e información del sistema financiero correspondiente a las fuentes secundarias.
+En primera instancia se realizó la identificación del problema de investigación que fue establecido en el proyecto de grado, donde se identificó la arquitectura de la red neuronal, que está compuesta de las funciones de activación, y ajuste de los datos en formato de tablas. Posteriormente se realizó la recolección de datos e información del sistema financiero correspondiente a las fuentes secundarias.
 
 ### Fuentes de información
 
