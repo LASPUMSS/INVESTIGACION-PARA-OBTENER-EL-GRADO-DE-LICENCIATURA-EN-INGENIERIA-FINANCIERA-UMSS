@@ -1,0 +1,56 @@
+---
+title: "Determinacion diferencial del modelo arima empleado en la investigación (estacionariedad)"
+output: pdf_document
+date: "2023-10-09"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE,
+                      fig.align='center',
+                      out.height='60%',
+                      out.width='100%')
+
+knitr::opts_knit$set(root.dir = getwd())
+```
+
+## Determinacion del n diferecial
+
+- Utiliza una prueba de raíz unitaria para determinar el número de diferencias necesarias para que las series de tiempo se vuelvan estacionarias.
+- El test utilizado es el denominado Kwiatkowski-Phillips-Schmidt-Shin (KPSS)
+
+```{r}
+source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
+source("RECURSOS-INVESTIGACION/R/pef-aux-render-table.R")
+require(fpp2)
+require(dplyr)
+
+listResultPEF <- readRDS(file ='FUENTES-DE-DATOS/DATA/listResultPEF.rds')
+
+CUENTA <- sapply(listResultPEF, FUN = function(cuenta){
+    cuenta[['nameAccount']]
+})
+
+DIFERENCIAL <- sapply(listResultPEF, FUN = function(cuenta){
+    arimaModel <- cuenta[['arimaModel']]
+    arimaNdiff <- arimaorder(arimaModel)['d']
+    arimaNdiff
+})
+
+
+datResult <- data.frame(CUENTA=CUENTA, DIFERENCIAL=DIFERENCIAL, row.names = NULL) %>% transformTableAuxPef()
+```
+
+Dando como resultado los siguientes diferenciales para cada cuenta entrenadas con el modelo arima.
+
+```{r}
+renderTableBasic(datResult) 
+```
+
+
+\newpage
+## Links
+
+- Link del algoritmo de funcion arima utilizado (https://github.com/robjhyndman/forecast/blob/8805b88313f9610e9c388fe1ab24e2c4adca1d42/R/newarima2.R#L95)
+- Link del algoritmo de determinación del numero de diferenciales (https://github.com/robjhyndman/forecast/blob/master/man/ndiffs.Rd)
