@@ -21,10 +21,14 @@ if (!('listResultPEF' %in% ls())) {
     
     ids <- getVariablesForModelsForecast()
     
-    listResultPEF <- getListFittedAndSimulateModels(datTotalSistema,ids)
+    if (!file.exists('FUENTES-DE-DATOS/DATA/listResultPEF.rds')) {
+        listResultPEF <- getListFittedAndSimulateModels(datTotalSistema,ids)
+    }else{
+        listResultPEF <- readRDS(file ='FUENTES-DE-DATOS/DATA/listResultPEF.rds')
+    }
+    
     listResumeModels <- getListResumeSummaryModels(listResultPEF)
     listDatsForTestCamels <- getDatsForTestCamels(listResultPEF,datTotalSistema,12,TRUE)
-    
     
     originalCamelTest <- getCamelTestForecast(listDatsForTestCamels$datCuentas)
     nnCamelTest <- getCamelTestForecast(listDatsForTestCamels$nnDataForecastCuentas)
@@ -146,9 +150,14 @@ p1 <-
     ggplot(aes(x=r2Model)) + 
     geom_histogram() + 
     ggtitle('NN') + 
-    xlab('') + 
+    xlab('R2') + 
     ylab('') + 
-    coord_fixed(ratio = 1/10, xlim = c(0.5, 1))
+    theme(plot.title = element_text(size=24),
+          axis.title.x=element_text(size=15),
+          axis.title.y = element_text(size=30),
+          axis.text.y=element_text(size=15),
+          axis.text.x = element_text(size=15)) +
+    coord_fixed(ratio = 1/20, xlim = c(0.5, 1))
 
 z <- data.frame(r2Model=listResultPEF[[id]]$mcoModelSimulate$r2Model)
 p2 <- 
@@ -156,9 +165,14 @@ p2 <-
     ggplot(aes(x=r2Model)) + 
     geom_histogram() + 
     ggtitle('MCO') + 
-    xlab('') + 
+    xlab('R2') + 
     ylab('') + 
-    coord_fixed(ratio = 1/10, xlim = c(0.5, 1))
+    theme(plot.title = element_text(size=24),
+          axis.title.x=element_text(size=15),
+          axis.title.y = element_text(size=30),
+          axis.text.y=element_text(size=15),
+          axis.text.x = element_text(size=15)) +
+    coord_fixed(ratio = 1/20, xlim = c(0.5, 1))
 
 
 z <- data.frame(r2Model=listResultPEF[[id]]$arimaModelSimulate$r2Model)
@@ -169,7 +183,12 @@ p3 <-
     ggtitle('ARIMA') + 
     xlab('R2') + 
     ylab('') + 
-    coord_fixed(ratio = 1/10, xlim = c(0.5, 1))
+    theme(plot.title = element_text(size=24),
+          axis.title.x=element_text(size=15),
+          axis.title.y = element_text(size=30),
+          axis.text.y=element_text(size=15),
+          axis.text.x = element_text(size=15)) +
+    coord_fixed(ratio = 1/20, xlim = c(0.5, 1))
 
 
 p1+p2+p3

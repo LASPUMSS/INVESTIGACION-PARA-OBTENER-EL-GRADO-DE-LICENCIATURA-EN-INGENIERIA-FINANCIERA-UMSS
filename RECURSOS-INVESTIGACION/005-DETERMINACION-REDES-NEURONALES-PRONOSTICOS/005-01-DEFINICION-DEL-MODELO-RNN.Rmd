@@ -21,7 +21,12 @@ if (!('listResultPEF' %in% ls())) {
     
     ids <- getVariablesForModelsForecast()
     
-    listResultPEF <- getListFittedAndSimulateModels(datTotalSistema,ids)
+    if (!file.exists('FUENTES-DE-DATOS/DATA/listResultPEF.rds')) {
+        listResultPEF <- getListFittedAndSimulateModels(datTotalSistema,ids)
+    }else{
+        listResultPEF <- readRDS(file ='FUENTES-DE-DATOS/DATA/listResultPEF.rds')
+    }
+    
     listResumeModels <- getListResumeSummaryModels(listResultPEF)
     listDatsForTestCamels <- getDatsForTestCamels(listResultPEF,datTotalSistema,12,TRUE)
     
