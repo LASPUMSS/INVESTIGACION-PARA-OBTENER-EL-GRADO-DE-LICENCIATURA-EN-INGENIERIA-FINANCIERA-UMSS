@@ -35,7 +35,7 @@ getListFittedAndSimulateModels <- function(dat=NULL, ids=NULL, n_simulaicones=10
         
         nnModel <- nnetar(tsDatTrain)
         mcoModel <- tslm(tsDatTrain~trend+season)
-        arimaModel <- auto.arima(tsDatTrain, test = 'adf')
+        arimaModel <- auto.arima(tsDatTrain)
         
         # Ajuste de modelos
         r2mcoModel <- fittedTsModels(mcoModel,tsDatTrain)
