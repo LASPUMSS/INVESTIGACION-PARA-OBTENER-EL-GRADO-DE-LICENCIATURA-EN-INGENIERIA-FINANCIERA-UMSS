@@ -4,4 +4,3 @@
 
 sapply( list.files('assets/utils', full.names=TRUE, pattern='\\.[rR]$'), source )
 
-
