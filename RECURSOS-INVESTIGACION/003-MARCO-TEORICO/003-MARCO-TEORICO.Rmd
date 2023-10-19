@@ -89,7 +89,7 @@ Pero los indicadores financieros por si solos no pueden brindar información int
 
 La solidez financiera informa sobre el estado corriente de salud y solidez de todo el sector de las instituciones financieras de un país y de los sectores de empresas y hogares que conforman la clientela de las instituciones financieras [@ISF-FMI].
 
-\newpage
+
 Donde la metodología CAMEL tiene por objeto evaluar la **solidez financiera** de las instituciones con base en indicadores cuantitativos, contemplando cinco características: 
 
 - Capital adecuado (C).
@@ -294,18 +294,6 @@ Dado los pasos anteriores la metodología CAMEL asigna una puntuación a la inst
 
 \input{RECURSOS-INVESTIGACION/003-MARCO-TEORICO/tabla-ejemplo-tipo-calificacion-camel}
 
-## Pronósticos
-
-El término de pronóstico definido como "la acción y efecto de pronosticar" [@RAE], así mismo pronosticar es definido como "predecir algo en el futuro a partir de indicios" [@RAE], es decir, el pronóstico es el proceso de estimación en situaciones de incertidumbre, para los propósitos de esta investigación, un pronóstico es un evento asociado a una distribución de probabilidad.
-
-Donde los pronósticos por si solos tampoco pueden brindar información integrada sobre la situación económica-financiera futura de la institución, en consecuencia como respuesta a esta necesidad, se encuentra las metodologías de evaluación junto con la simulación de procesos estocásticos.
-
-<!-- #################################################################  -->
-<!--                    REDES NEURONALES                                -->
-<!-- #################################################################  -->
-
-<!-- INTELIGENCIA ARTIFICIAL -->
-
 ## Inteligencia artificial
 
 "En la literatura referente a la inteligencia artificial no existe consenso sobre lo que se entiende como inteligencia artificial, pero estas diferencias se engloban en dos ideas, donde la inteligencia artificial se refiere a procesos mentales y al razonamiento". [@IAUEM]
@@ -451,12 +439,13 @@ f(Z)_{j} = \frac{ e^{Z_{J}} }{ \sum_{k=1}^{K} e^{Z_{K}} }
 
 
 <!-- Gráficos de funciones activación -->
-
+\newpage
+\vspace*{\fill}
 ```{=latex}
 \begin{figure}[h!]
 ```
 
-```{r mt-funciones-de-activacion, fig.cap='Funciones de activación', out.height='40%', out.width='100%'}
+```{r mt-funciones-de-activacion, fig.cap='Funciones de activación', fig.height = 30, fig.width = 20}
 plotActFuntMarcTeor()
 ```
 
@@ -464,8 +453,9 @@ plotActFuntMarcTeor()
 \floatfoot{Fuente: Elaboración propia.}
 \end{figure}
 ```
+\vspace*{\fill}
 
-
+\newpage
 ### Propagación hacia adelante y hacia atrás
 
 Los algoritmos de propagación hacia adelante y hacia atrás son los que dotan de inicialización - aprendizaje a la red neuronal.
@@ -552,4 +542,87 @@ Para el logro de esta derivada se hace uso de un método matemático denominado 
 (\#eq:mt-pat2-d-rnn)
 \end{equation}
 
+## Pronósticos
+
+El término de pronóstico definido como "la acción y efecto de pronosticar" [@RAE], así mismo pronosticar es definido como "predecir algo en el futuro a partir de indicios" [@RAE], es decir, el pronóstico es el proceso de estimación en situaciones de incertidumbre, para los propósitos de esta investigación, un pronóstico es un evento asociado a una distribución de probabilidad.
+
+Donde los pronósticos por si solos tampoco pueden brindar información integrada sobre la situación económica-financiera futura de la institución, en consecuencia como respuesta a esta necesidad, se encuentra las metodologías de evaluación junto con la simulación de procesos estocásticos.
+
+Ahora bien, los modelos alternativos empleados en contraposición de las redes neuronales para realizar las proyecciones son los siguientes:
+
+- Modelo autorregresivo integrado de media móvil (ARIMA)
+- Modelo clásico de series de tiempo (MCO)
+
+### Modelo autorregresivo integrado de media móvil (ARIMA)
+
+<!-- https://github.com/cran/forecast/blob/878f06ca38ae78337c242c034bc814eb38df9be9/R/newarima2.R -->
+
+Los modelos ARIMA (AutoRegressive Integrated Moving Average) es el resultado de la combinación de dos modelos que son los modelos auto regresivos y modelos de media móvil [@R-forecast-book,{Capítulo 8}].
+
+Los modelos auto regresivos están definidos por:
+
+\begin{equation}
+y_{t} = c + \phi_{1}y_{t-1} + \phi_{2}y_{t-2} + \dots + \phi_{p}y_{t-p} + \varepsilon_{t}
+(\#eq:drnn-stYarima)
+\end{equation}
+
+En contraposición, el modelo de promedios móviles están definidos por:
+
+\begin{equation}
+y_{t} = c + \varepsilon_t + \theta_{1}\varepsilon_{t-1} + \theta_{2}\varepsilon_{t-2} + \dots + \theta_{q}\varepsilon_{t-q}
+(\#eq:drnn-stYarima2)
+\end{equation}
+
+Por lo tanto, la integración de ambos modelos da lugar al modelo ARIMA que se define como:
+
+\begin{equation}
+y_{t} = c + \phi_{1}y_{t-1} + \cdots + \phi_{p}y_{t-p} + \theta_{1}\varepsilon_{t-1} + \cdots + \theta_{q}\varepsilon_{t-q} + \varepsilon_{t} 
+(\#eq:drnn-stYarima3)
+\end{equation}
+
+Donde:
+
+- $Y_{t} =$ Representa el valor de la serie en el momento t.
+- $c =$ Representa la constante del modelo.
+- $\phi_{i} =$ Representa el coeficiente de cambio para la variable respectiva.
+- $\varepsilon_{t} =$ Representa el error del valor ajustado respecto al observados en el momento $t$.
+
+
+Así mismo, las especificaciones del algoritmo utilizado para el presente modelo corresponden al paquete "forecast" del repositorio publico CRAN [@R-forecast].
+
+<!-- #################################################################  -->
+<!--                    REDES NEURONALES                                -->
+<!-- #################################################################  -->
+
+<!-- INTELIGENCIA ARTIFICIAL -->
+
+### Modelo clásico de series de tiempo (MCO)
+
+<!-- https://github.com/cran/forecast/blob/master/R/lm.R -->
+
+El modelo clásico de series de tiempo se define a si misma como la suma de dos elementos:
+
+\begin{equation}
+\text{Serie De Tiempo} = \text{ Tendencia + Estacionalidad}
+(\#eq:drnn-st)
+\end{equation}
+
+La variable "tendencia" es una serie temporal simple y "estacionalidad" es un factor que indica la estación (por ejemplo, el mes o el trimestre dependiendo de la frecuencia de los datos) [@R-forecast].
+
+Entendiendo la tendencia como la tasa de cambio de la serie de tiempo respecto al tiempo y las estacionalidades como tasas de cambio correspondientes a variables dicótomas, es decir, solo pueden asumir valores de 0 o 1 cuando la observación se encuentre en la estacionalidad dada, así mismo el modelo presentado asume una estacionalidad de 12 periodos que en consecuencia la ecuación \@ref(eq:drnn-st) toma la forma de la ecuación \@ref(eq:drnn-stY).
+
+\begin{equation}
+Y_{t} = \beta_{0} + \beta_{1}{T_{t}} + \sum_{\substack{i=2\\j=2}}^{\substack{i=n\\ j=m}}{\beta_{i}{S_{j}}}
+(\#eq:drnn-stY)
+\end{equation}
+
+
+Donde:
+
+- $Y_{t} =$ Representa el valor de la serie en el momento t.
+- $T =$ Representa el tiempo.
+- $S_{i} =$ Representa la estacionalidad de serie dividiéndola en 12 por los meses contenidos en un año.
+- $\beta_{i} =$ Representa la tasa de cambio, es decir, el efecto de la variable sobre la serie de tiempo.
+
+Así también, el método a usar para ajustar los pesos en $\beta_{i}$ sera el de mínimos cuadrados ordinarios (MCO).
 

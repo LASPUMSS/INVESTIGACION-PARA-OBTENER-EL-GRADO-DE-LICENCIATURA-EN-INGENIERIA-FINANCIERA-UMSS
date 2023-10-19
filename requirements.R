@@ -14,5 +14,4 @@ if (length(pkgs_v)>=1) {
 lapply(pkgs_v2, require, character.only = TRUE)
 
 
-
 rm(list = c('pkgs','pkgs_v','pkgs_v2'))

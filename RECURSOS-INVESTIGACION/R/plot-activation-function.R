@@ -19,7 +19,13 @@ plotActFuntMarcTeor <- function() {
         geom_line() + 
         xlab('X') + 
         ylab('Y') +
-        ggtitle('Función escalonada')
+        ggtitle('Función escalonada') + 
+        theme(plot.title = element_text(size=50),
+              axis.title.x=element_text(size=50),
+              axis.title.y = element_text(size=50),
+              axis.text.y=element_text(size=50),
+              axis.text.x = element_text(size=50),
+              plot.margin = unit(c(1,1,1,1), "cm"))
     
     ######################################################
     ### Función de activación sigmoide
@@ -35,7 +41,13 @@ plotActFuntMarcTeor <- function() {
         geom_line() + 
         xlab('X') + 
         ylab('Y') + 
-        ggtitle('Función sigmoide')
+        ggtitle('Función sigmoide') + 
+        theme(plot.title = element_text(size=50),
+              axis.title.x=element_text(size=50),
+              axis.title.y = element_text(size=50),
+              axis.text.y=element_text(size=50),
+              axis.text.x = element_text(size=50),
+              plot.margin = unit(c(1,1,1,1), "cm"))
     
     
     ######################################################
@@ -52,7 +64,13 @@ plotActFuntMarcTeor <- function() {
         geom_line() + 
         xlab('X') + 
         ylab('Y') + 
-        ggtitle('Función tangente hiperbolica')
+        ggtitle('Función tangente hip.') + 
+        theme(plot.title = element_text(size=50),
+              axis.title.x=element_text(size=50),
+              axis.title.y = element_text(size=50),
+              axis.text.y=element_text(size=50),
+              axis.text.x = element_text(size=50),
+              plot.margin = unit(c(1,1,1,1), "cm"))
     
     ######################################################
     ### Función de activación ReLU – Rectified Lineal Unit
@@ -69,7 +87,13 @@ plotActFuntMarcTeor <- function() {
         geom_line() + 
         xlab('X') + 
         ylab('Y') +
-        ggtitle('Función ReLu')
+        ggtitle('Función ReLu') + 
+        theme(plot.title = element_text(size=50),
+              axis.title.x=element_text(size=50),
+              axis.title.y = element_text(size=50),
+              axis.text.y=element_text(size=50),
+              axis.text.x = element_text(size=50),
+              plot.margin = unit(c(1,1,1,1), "cm"))
     
     ######################################################
     ### Función de activación Leaky ReLU 
@@ -86,7 +110,13 @@ plotActFuntMarcTeor <- function() {
         geom_line() + 
         xlab('X') + 
         ylab('Y') +
-        ggtitle('Función Leaky relu')
+        ggtitle('Función Leaky relu') + 
+        theme(plot.title = element_text(size=50),
+              axis.title.x=element_text(size=50),
+              axis.title.y = element_text(size=50),
+              axis.text.y=element_text(size=50),
+              axis.text.x = element_text(size=50),
+              plot.margin = unit(c(1,1,1,1), "cm"))
     
     ######################################################
     ### Función de activación Softmax
@@ -112,7 +142,13 @@ plotActFuntMarcTeor <- function() {
         geom_line() + 
         xlab('X') + 
         ylab('Y') +
-        ggtitle('Función Softmax')
+        ggtitle('Función Softmax') + 
+        theme(plot.title = element_text(size=50),
+              axis.title.x=element_text(size=50),
+              axis.title.y = element_text(size=50),
+              axis.text.y=element_text(size=50),
+              axis.text.x = element_text(size=50),
+              plot.margin = unit(c(1,1,1,1), "cm"))
     
     ######################################################
     ### GRAFICO UNIDO

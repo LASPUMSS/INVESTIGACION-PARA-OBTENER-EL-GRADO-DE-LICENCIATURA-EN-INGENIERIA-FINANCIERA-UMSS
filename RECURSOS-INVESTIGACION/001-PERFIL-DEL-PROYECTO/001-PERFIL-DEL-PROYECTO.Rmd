@@ -53,7 +53,7 @@ Proporcionar información financiera adecuada con mayor aproximación a la situa
 
 - Diagnosticar la situación actual del sistema financiero de Bolivia.
 - Definir la arquitectura y entrenamiento del modelo de red de neuronas artificiales.
-- Proyectar los estados financieros para su posterior simulación.
+- Proyectar los estados financieros.
 - Evaluar los datos proyectados-simulados respecto a los datos observados.
 
 ## Hipótesis
@@ -76,7 +76,7 @@ El tipo de investigación que se aplico en el informe final fue descriptivo y an
 
 ### Método de investigación
 
-Se aplicó un enfoque inductivo donde se partió desde hechos particulares llegando a conclusiones generales, que posteriormente podrán ser aplicados en otras instituciones financieras de manera exitosa y beneficiar al sistema financiero con nuestra propuesta. También cabe especificar que los procedimientos aplicados en el informe final, están orientados a los métodos inductivo, deductivo y analítico fundamentalmente.
+Se aplicó un enfoque inductivo donde se partió desde hechos particulares llegando a conclusiones generales, que posteriormente podrán ser aplicados en otras instituciones financieras de manera exitosa y beneficiar al sistema financiero con nuestra propuesta. También cabe especificar que los procedimientos aplicados en el informe final, está orientado al método deductivo y analítico fundamentalmente.
 
 ### Técnicas de investigación
 
@@ -89,7 +89,7 @@ Se recurrió a las siguientes fuentes de información:
 #### Fuentes primarias
 
 Se recurrirá a la investigación y recopilación de datos relacionados al tema específico, mediante
-consultas a libros, revistas, textos digitales, apuntes de clases y otras de información histórica.
+consultas a libros, estados financieros y otros.
 
 #### Fuentes secundarias
 
