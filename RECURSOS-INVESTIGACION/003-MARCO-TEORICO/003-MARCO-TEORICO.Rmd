@@ -542,16 +542,16 @@ Para el logro de esta derivada se hace uso de un método matemático denominado 
 (\#eq:mt-pat2-d-rnn)
 \end{equation}
 
-## Pronósticos
+## Pronósticos y evaluación
 
-El término de pronóstico definido como "la acción y efecto de pronosticar" [@RAE], así mismo pronosticar es definido como "predecir algo en el futuro a partir de indicios" [@RAE], es decir, el pronóstico es el proceso de estimación en situaciones de incertidumbre, para los propósitos de esta investigación, un pronóstico es un evento asociado a una distribución de probabilidad.
+El término de pronóstico definido como "la acción y efecto de pronosticar" [@RAE], así mismo pronosticar es definido como "predecir algo en el futuro a partir de indicios" [@RAE], es decir, "el (los) valor(es) futuro(s) de la variable dependiente $Y$, o de pronóstico, con base en el (los) valor(es) futuro(s) conocido(s) o esperado(s) de la variable explicativa, o predictora, $X$" [@ECONOMETRIA-GUJARATI, p.8]
 
-Donde los pronósticos por si solos tampoco pueden brindar información integrada sobre la situación económica-financiera futura de la institución, en consecuencia como respuesta a esta necesidad, se encuentra las metodologías de evaluación junto con la simulación de procesos estocásticos.
+Por lo tanto, el pronóstico es el proceso de estimación en situaciones de incertidumbre, para los propósitos de esta investigación, un pronóstico es un evento o resultado en el futuro asociado a una distribución de probabilidad.
 
-Ahora bien, los modelos alternativos empleados en contraposición de las redes neuronales para realizar las proyecciones son los siguientes:
+Ahora bien, con el fin de evaluar la eficiencia de los pronosticos del modelo de redes neuronales propuesto se emplearan a la par del mismo, modelos alternativos que se presentan a continuación:
 
-- Modelo autorregresivo integrado de media móvil (ARIMA)
-- Modelo clásico de series de tiempo (MCO)
+- Modelo autorregresivo integrado de media móvil (ARIMA).
+- Modelo clásico de series de tiempo (MCO).
 
 ### Modelo autorregresivo integrado de media móvil (ARIMA)
 
@@ -588,7 +588,7 @@ Donde:
 - $\varepsilon_{t} =$ Representa el error del valor ajustado respecto al observados en el momento $t$.
 
 
-Así mismo, las especificaciones del algoritmo utilizado para el presente modelo corresponden al paquete "forecast" del repositorio publico CRAN [@R-forecast].
+Así mismo, las especificaciones del algoritmo utilizado para el presente modelo corresponden al paquete "forecast" del repositorio publico CRAN [@R-forecast], donde los paquetes o librerías en el campo de análisis de datos son colecciones de funciones diseñadas para atender problemas en especifico.
 
 <!-- #################################################################  -->
 <!--                    REDES NEURONALES                                -->
@@ -626,3 +626,17 @@ Donde:
 
 Así también, el método a usar para ajustar los pesos en $\beta_{i}$ sera el de mínimos cuadrados ordinarios (MCO).
 
+### Evaluación de modelos
+
+Una vez finalizado el entrenamiento de los modelos para las diferentes series de tiempo se evalúo la validez o consistencia de los mismos siguiendo dos criterios:
+
+- Ajuste del modelo (R2).
+- Capacidad de generalización del modelo.
+
+Donde, "el coeficiente de determinación es la proporción de la varianza total de la variable explicada por la regresión. El coeficiente de determinación, también llamado R cuadrado, refleja la bondad del ajuste de un modelo a la variable que pretender explicar" [@COEFICIENTE-DE-DETERMINACION], así mismo teniendo en cuenta que "el problema del coeficiente de determinación, y razón por el cual surge el coeficiente de determinación ajustado, radica en que no penaliza la inclusión de variables explicativas no significativas" [@COEFICIENTE-DE-DETERMINACION].
+
+El problema del coeficiente de determinación también es conocido como sobreajuste, donde dicho "sobreajuste puede hacer que el modelo sea menos útil para trabajar con datos nuevos, como los que se encontrará cuando empecemos a utilizarlo, en otras palabras, generalizará peor" [@IIOF, p.82].
+
+Es decir, un modelo con R2 cercado a uno (mayor ajuste) no necesariamente dará como resultado proyecciones mas cercanas a las efectivamente observadas, por lo tanto una practica habitual en el campo de análisis de datos es segmentar los datos de entrenamiento y de prueba, aplicando el el criterio de R2 sobre los datos proyectados-simulados.
+
+Así también, el ajuste promedio (R2) de las proyecciones por si solos no pueden brindar información integrada sobre la capacidad de los modelos de generalizar situación económica-financiera proyectada del sistema financiero, en consecuencia como respuesta a esta necesidad, se realizo la evaluación CAMEL sobre los datos proyectados-simulados para visualizar la capacidad de generalización de los mismos, es decir, si los datos proyectados siguen la misma tendencia que los datos efectivamente observados.
