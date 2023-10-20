@@ -553,7 +553,7 @@ Ahora bien, con el fin de evaluar la eficiencia de los pronosticos del modelo de
 - Modelo autorregresivo integrado de media móvil (ARIMA).
 - Modelo clásico de series de tiempo (MCO).
 
-### Modelo autorregresivo integrado de media móvil (ARIMA)
+### Modelo autorregresivo integrado de media móvil (ARIMA) {#MT-ARIMAST}
 
 <!-- https://github.com/cran/forecast/blob/878f06ca38ae78337c242c034bc814eb38df9be9/R/newarima2.R -->
 
@@ -563,21 +563,21 @@ Los modelos auto regresivos están definidos por:
 
 \begin{equation}
 y_{t} = c + \phi_{1}y_{t-1} + \phi_{2}y_{t-2} + \dots + \phi_{p}y_{t-p} + \varepsilon_{t}
-(\#eq:drnn-stYarima)
+(\#eq:mt-stYarima)
 \end{equation}
 
 En contraposición, el modelo de promedios móviles están definidos por:
 
 \begin{equation}
 y_{t} = c + \varepsilon_t + \theta_{1}\varepsilon_{t-1} + \theta_{2}\varepsilon_{t-2} + \dots + \theta_{q}\varepsilon_{t-q}
-(\#eq:drnn-stYarima2)
+(\#eq:mt-stYarima2)
 \end{equation}
 
 Por lo tanto, la integración de ambos modelos da lugar al modelo ARIMA que se define como:
 
 \begin{equation}
 y_{t} = c + \phi_{1}y_{t-1} + \cdots + \phi_{p}y_{t-p} + \theta_{1}\varepsilon_{t-1} + \cdots + \theta_{q}\varepsilon_{t-q} + \varepsilon_{t} 
-(\#eq:drnn-stYarima3)
+(\#eq:mt-stYarima3)
 \end{equation}
 
 Donde:
@@ -596,7 +596,7 @@ Así mismo, las especificaciones del algoritmo utilizado para el presente modelo
 
 <!-- INTELIGENCIA ARTIFICIAL -->
 
-### Modelo clásico de series de tiempo (MCO)
+### Modelo clásico de series de tiempo (MCO) {#MT-MCST-MCO}
 
 <!-- https://github.com/cran/forecast/blob/master/R/lm.R -->
 
@@ -604,16 +604,16 @@ El modelo clásico de series de tiempo se define a si misma como la suma de dos 
 
 \begin{equation}
 \text{Serie De Tiempo} = \text{ Tendencia + Estacionalidad}
-(\#eq:drnn-st)
+(\#eq:mt-st)
 \end{equation}
 
 La variable "tendencia" es una serie temporal simple y "estacionalidad" es un factor que indica la estación (por ejemplo, el mes o el trimestre dependiendo de la frecuencia de los datos) [@R-forecast].
 
-Entendiendo la tendencia como la tasa de cambio de la serie de tiempo respecto al tiempo y las estacionalidades como tasas de cambio correspondientes a variables dicótomas, es decir, solo pueden asumir valores de 0 o 1 cuando la observación se encuentre en la estacionalidad dada, así mismo el modelo presentado asume una estacionalidad de 12 periodos que en consecuencia la ecuación \@ref(eq:drnn-st) toma la forma de la ecuación \@ref(eq:drnn-stY).
+Entendiendo la tendencia como la tasa de cambio de la serie de tiempo respecto al tiempo y las estacionalidades como tasas de cambio correspondientes a variables dicótomas, es decir, solo pueden asumir valores de 0 o 1 cuando la observación se encuentre en la estacionalidad dada, así mismo el modelo presentado asume una estacionalidad de 12 periodos que en consecuencia la ecuación \@ref(eq:mt-st) toma la forma de la ecuación \@ref(eq:mt-stY).
 
 \begin{equation}
 Y_{t} = \beta_{0} + \beta_{1}{T_{t}} + \sum_{\substack{i=2\\j=2}}^{\substack{i=n\\ j=m}}{\beta_{i}{S_{j}}}
-(\#eq:drnn-stY)
+(\#eq:mt-stY)
 \end{equation}
 
 

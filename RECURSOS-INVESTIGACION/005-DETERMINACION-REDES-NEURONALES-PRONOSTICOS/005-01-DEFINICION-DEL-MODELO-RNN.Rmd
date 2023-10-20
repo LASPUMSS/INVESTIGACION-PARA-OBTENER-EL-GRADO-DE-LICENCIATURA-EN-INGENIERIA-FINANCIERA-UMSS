@@ -94,45 +94,22 @@ Donde los datos de entrenamiento fueron utilizados para adaptar los modelos y lo
 
 Los modelos empleados para realizar las proyecciones son los siguientes:
 
-- Redes neuronales artificiales (NN)
 - Modelo clásico de series de tiempo (MCO)
-- ARIMA
+- Modelo autorregresivo integrado de media móvil (ARIMA)
+- Redes neuronales artificiales (NN)
 
 Los cuales están sujetos a las arquitecturas o especificaciones que se mencionan a continuación.
-
-#### Redes neuronales (NN)
-
-<!-- https://github.com/cran/forecast/blob/master/R/nnetar.R -->
-
-La arquitectura de una rede neuronal hace referencia al número de capas, neuronas y funciones de activación que se aplicaran, estas mismas pueden ser asignadas de forma arbitraria donde el uso de muchas capas y neuronas causaran un sobre ajuste del modelo, y usar muy pocas hará que el modelo no pueda generalizar la información contenida en las series de tiempo, en consecuencia las redes neuronales que se emplearan en la presente investigación estarán sujetos a las siguientes lineamientos que determinan su arquitectura:
-
-- El número de neuronas de entrada está definido por el criterio de información de Akaike (AIC).
-- El número de capas ocultas serán igual a 1, con el mismo número de neuronas que la capa de entrada.
-- La función de activación de aplicar será la función sigmoide.
-- El algoritmo esta desarrollado en el lenguaje de programación R.
-
-Las especificaciones del algoritmo utilizado corresponden al paquete "forecast" del repositorio publico CRAN [@R-forecast].
-
 
 #### Modelo clásico de series de tiempo (MCO)
 
 <!-- https://github.com/cran/forecast/blob/master/R/lm.R -->
 
-El modelo clásico de series de tiempo se define a si misma como la suma de dos elementos:
-
-\begin{equation}
-\text{Serie De Tiempo} = \text{ Tendencia + Estacionalidad}
-(\#eq:drnn-st)
-\end{equation}
-
-
-Entendiendo la tendencia como la tasa de cambio de la serie de tiempo respecto al tiempo y las estacionalidades como tasas de cambio correspondientes a variables dicótomas, es decir, solo pueden asumir valores de 0 o 1 cuando la observación se encuentre en la estacionalidad dada, así mismo el modelo presentado asume una estacionalidad de 12 periodos que en consecuencia la ecuación \@ref(eq:drnn-st) toma la siguiente forma:
+El modelo clásico de series (Ver sección \@ref(MT-MCST-MCO)) definido como la suma de sus elementos:
 
 \begin{equation}
 Y_{t} = \beta_{0} + \beta_{1}{T_{t}} + \sum_{\substack{i=2\\j=2}}^{\substack{i=n\\ j=m}}{\beta_{i}{S_{j}}}
 (\#eq:drnn-stY)
 \end{equation}
-
 
 Donde:
 
@@ -141,37 +118,67 @@ Donde:
 - $S_{i} =$ Representa la estacionalidad de serie dividiéndola en 12 por los meses contenidos en un año.
 - $\beta_{i} =$ Representa la tasa de cambio, es decir, el efecto de la variable sobre la serie de tiempo.
 
-Así mismo, el método a usar para ajustar los pesos en $\beta_{i}$ sera el de mínimos cuadrados ordinarios (MCO).
+Así también, el algoritmo empleado en la presente investigación correspondiente a este modelo esta contenido en el paquete "forecast" [@R-forecast], donde le mismo esta sujeto a las siguientes características:
 
-#### Modelo ARIMA
+- Los pesos de las variables "$\beta_{i}$" se ajusta por el método de mínimos cuadrados ordinarios (Ver anexos).
+- La variable $T$ representa una serie temporal simple, definida por una sucesión finita.
+
+\begin{equation}
+a_{n} = n
+(\#eq:drnn-an)
+\end{equation}
+
+- La variable $S_{i}$ representa variables dicótomicas (solo asumen valores de 0 y 1), es decir, si a la variable $Y$ posicionada en el momento $t$ correspondiente a la estación $S_{i}$, el valor de $Y_{t}$ varia en $\beta_{i}$, donde se tiene como estaciones a los meses contenidos en una gestión (Ver tabla \@ref(tab:estacionesEjemploMCO)).
+
+\vspace*{15pt}
+```{r estacionesEjemploMCO}
+estacionesEjemploMCO <- 
+    data.frame(ESTACIONES=
+                   c("S2","S3","S4","S5","S6","S7","S8","S9","S10","S11","S12"),
+               MES=c("Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"))
+
+estacionesEjemploMCO %>% renderTableBasic(captionTable = 'Estaciones modelo clasico de series de tiempo.')
+```
+
+Donde $S_{1}$ correspondiente al mes de enero no se incluye para evitar la multicolinealidad en las variables independientes, y se entiende que $S_{1}$ esta activo cuando las demás estaciones asumen el valor de 0.
+
+
+#### Modelo autorregresivo integrado de media móvil (ARIMA)
 
 <!-- https://github.com/cran/forecast/blob/878f06ca38ae78337c242c034bc814eb38df9be9/R/newarima2.R -->
 
-Los modelos ARIMA (AutoRegressive Integrated Moving Average) es el resultado de la combinación de dos modelos que son los modelos auto regresivos y modelos de media móvil.
-
-Los modelos auto regresivos están definidos por:
-
-\begin{equation}
-y_{t} = c + \phi_{1}y_{t-1} + \phi_{2}y_{t-2} + \dots + \phi_{p}y_{t-p} + \varepsilon_{t}
-(\#eq:drnn-stYarima)
-\end{equation}
-
-En contraposición, los modelos de promedios móviles están definidos por:
-
-\begin{equation}
-y_{t} = c + \varepsilon_t + \theta_{1}\varepsilon_{t-1} + \theta_{2}\varepsilon_{t-2} + \dots + \theta_{q}\varepsilon_{t-q}
-(\#eq:drnn-stYarima2)
-\end{equation}
-
-Donde la integración de ambos modelos da lugar al modelo ARIMA, que se puede definir como:
+Los modelos ARIMA (AutoRegressive Integrated Moving Average) es el resultado de la combinación de dos modelos que son los modelos auto regresivos y modelos de media móvil (Ver sección \@ref(MT-ARIMAST)) definido como:
 
 \begin{equation}
 y_{t} = c + \phi_{1}y_{t-1} + \cdots + \phi_{p}y_{t-p} + \theta_{1}\varepsilon_{t-1} + \cdots + \theta_{q}\varepsilon_{t-q} + \varepsilon_{t} 
 (\#eq:drnn-stYarima3)
 \end{equation}
 
-Donde las especificaciones del algoritmo utilizado para el presente modelo corresponden al paquete "forecast" del repositorio publico CRAN [@R-forecast].
+Donde:
 
+- $Y_{t} =$ Representa el valor de la serie en el momento t.
+- $c =$ Representa la constante del modelo.
+- $\phi_{i} =$ Representa el coeficiente de cambio para la variable respectiva.
+- $\varepsilon_{t} =$ Representa el error del valor ajustado respecto al observados en el momento $t$.
+
+
+Así mismo, el algoritmo empleado en la presente investigación correspondiente al metodo ARIMA esta contenido en el paquete "forecast" [@R-forecast] donde la misma esta sujeta a las siguientes características:
+
+- El método para determinar el numero de diferencias, para volver estacionaria la serie temporal es la denominada Kwiatkowski-Phillips-Schmidt-Shin (KPSS).
+- El numero de regresores y medias móviles es determinado como la combinación de los mismos que permitan minimizar el criterio de información de Akaike corregido (Ver anexos).
+
+
+#### Redes neuronales (NN)
+
+<!-- https://github.com/cran/forecast/blob/master/R/nnetar.R -->
+
+La arquitectura de una rede neuronal hace referencia al número de capas, neuronas y funciones de activación que se aplicaran, estas mismas pueden ser asignadas de forma arbitraria donde el uso de muchas capas y neuronas causaran un sobre ajuste del modelo, y usar muy pocas hará que el modelo no pueda generalizar la información contenida en las series de tiempo, en consecuencia las redes neuronales que se emplearan en la presente investigación estarán sujetos a las siguientes lineamientos que determinan su arquitectura:
+
+- El número de neuronas de entrada está definido por las diferencias determinada por el metodo Kwiatkowski-Phillips-Schmidt-Shin (KPSS), que representan resagos de sobre la serie de tiempo.
+- El número de capas ocultas serán igual a 1, con el doble de neuronas que la capa de entrada.
+- La función de activación de aplicar será la función sigmoide.
+
+Las especificaciones del algoritmo utilizado corresponden al paquete "forecast" del repositorio publico CRAN [@R-forecast].
 
 ### Evaluación de modelos
 
