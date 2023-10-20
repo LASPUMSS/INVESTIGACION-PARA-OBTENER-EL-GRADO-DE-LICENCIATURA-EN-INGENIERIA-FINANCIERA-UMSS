@@ -1,0 +1,2 @@
+
+\subsection*{Anexo 5 - Kwiatkowski-Phillips-Schmidt-Shin}

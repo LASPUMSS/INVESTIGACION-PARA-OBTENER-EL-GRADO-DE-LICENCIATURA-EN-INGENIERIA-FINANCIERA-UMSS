@@ -70,6 +70,7 @@ renderTableBasic(resultadosMCO,captionTable = 'Tasas de cambio modelo clasico')
 
 Donde cada tasa de cambio está sujeta a su interpretación, por ejemplo la tasa de cambio correspondiente a la tendencia nos indica que el resultado neto de gestión sufre una variación de `r format(resultadosMCO[2,2], scientific=FALSE)` Bs por cada mes, ahora bien respecto a las estaciones quiere decir por ejemplo que si la observación se encuentra en la estación 2 el resultado neto de gestión sufre una variación de `r format(resultadosMCO[3,2], scientific=FALSE)`.
 
+\newpage
 ### Redes neuronales
 
 Una vez entrenado el modelo de red neuronal para la cuenta correspondiente su estructura presentara la siguiente forma:
@@ -92,7 +93,7 @@ plot.nnet(wts.in,struct=struct)
 \end{figure}
 ```
 
-Así también, dentro lo correspondiente al análisis de los pesos ajustados de una red neuronal estos no pueden ser interpretados más que solo como una tasa de cambio.
+Donde X1 y X2 representan los datos de entrada, X1 representa una serie de tiempo con un resago de 1 y X2 igualmente representa una serie de tiempo con un resago estacional, siguiendo la capa oculta esta compuesta con el mismo numero de neuronal que la capa de entrada, así también, dentro lo correspondiente al análisis de los pesos ajustados de una red neuronal estos no pueden ser interpretados más que solo como una tasa de cambio.
 
 \newpage
 ### ARIMA

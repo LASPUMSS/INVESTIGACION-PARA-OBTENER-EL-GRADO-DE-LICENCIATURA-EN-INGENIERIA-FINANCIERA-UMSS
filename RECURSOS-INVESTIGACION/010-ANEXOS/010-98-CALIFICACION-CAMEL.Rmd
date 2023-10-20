@@ -37,7 +37,7 @@ datCamelCalificacionEntidad <- datCamelCalificacionEntidad %>% filter(FECHA>date
 ```
 
 
-\subsection*{Anexo 6 - Calificaciones CAMEL}
+\subsection*{Anexo 8 - Calificaciones CAMEL}
 
 \subsubsection*{Calificaciones CAMEL sin ponderar}
 

@@ -173,7 +173,17 @@ Así mismo, el algoritmo empleado en la presente investigación correspondiente 
 
 La arquitectura de una rede neuronal hace referencia al número de capas, neuronas y funciones de activación que se aplicaran, estas mismas pueden ser asignadas de forma arbitraria donde el uso de muchas capas y neuronas causaran un sobre ajuste del modelo, y usar muy pocas hará que el modelo no pueda generalizar la información contenida en las series de tiempo, en consecuencia las redes neuronales que se emplearan en la presente investigación estarán sujetos a las siguientes lineamientos que determinan su arquitectura:
 
-- El número de neuronas de entrada esta definido por dos elementos un serie de resago estacional y series con un resaho maximo que satisfaga el criterio de información de Akaike corregido (Ver anexos).
+$$NN(p,P,s, a)$$
+Donde:
+
+- $p =$ Representa el numero de resagos para serie de entrada.
+- $P =$ Representa el numero de resagos estacional para serie de entrada.
+- $s =$ Representa el numero de neuronas en la capa oculta.
+- $a =$ Representa función de activación.
+
+Así también: 
+
+- $p$ elegido usando AIC del modelo lineal autoregresivo.
 - El número de capas ocultas serán igual a 1, con el mismo numero de neuronas que la capa de entrada.
 - La función de activación de aplicar será la función sigmoide.
 
@@ -185,6 +195,11 @@ Una vez finalizado el entrenamiento de los modelos para las diferentes series de
 
 - Ajuste del modelo (R2).
 - Capacidad de generalización del modelo.
+
+\begin{equation}
+R2 = \left ( \frac{ \sum{[(x_{i}-\bar{x})-(y_{i}-\bar{y})]} } { \sqrt{ \sum{(x_{i}-\bar{x})^{2}} * \sum{(y_{i}-\bar{y})^{2}} } }  \right )^{2}
+(\#eq:pef-ajusteR2)
+\end{equation}
 
 Donde el presente estadístico (R2) fue aplicado bajo dos lineamientos:
 

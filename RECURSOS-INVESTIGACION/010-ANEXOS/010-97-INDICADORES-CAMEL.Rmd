@@ -32,7 +32,7 @@ datCamelCalificacionEntidad <- datCamelCalificacionEntidad %>% filter(FECHA>date
 ```
 
 
-\subsection*{Anexo 5 - Indicadores CAMEL calculados}
+\subsection*{Anexo 7 - Indicadores CAMEL calculados}
 
 A continuación se presenta las tablas resultantes de los calulos realizados para el diagnostico financieros por sectores.
 
