@@ -167,37 +167,26 @@ Así mismo, el algoritmo empleado en la presente investigación correspondiente 
 - El método para determinar el numero de diferencias, para volver estacionaria la serie temporal es la denominada Kwiatkowski-Phillips-Schmidt-Shin (KPSS).
 - El numero de regresores y medias móviles es determinado como la combinación de los mismos que permitan minimizar el criterio de información de Akaike corregido (Ver anexos).
 
-
 #### Redes neuronales (NN)
 
 <!-- https://github.com/cran/forecast/blob/master/R/nnetar.R -->
 
 La arquitectura de una rede neuronal hace referencia al número de capas, neuronas y funciones de activación que se aplicaran, estas mismas pueden ser asignadas de forma arbitraria donde el uso de muchas capas y neuronas causaran un sobre ajuste del modelo, y usar muy pocas hará que el modelo no pueda generalizar la información contenida en las series de tiempo, en consecuencia las redes neuronales que se emplearan en la presente investigación estarán sujetos a las siguientes lineamientos que determinan su arquitectura:
 
-- El número de neuronas de entrada está definido por las diferencias determinada por el metodo Kwiatkowski-Phillips-Schmidt-Shin (KPSS), que representan resagos de sobre la serie de tiempo.
-- El número de capas ocultas serán igual a 1, con el doble de neuronas que la capa de entrada.
+- El número de neuronas de entrada esta definido por dos elementos un serie de resago estacional y series con un resaho maximo que satisfaga el criterio de información de Akaike corregido (Ver anexos).
+- El número de capas ocultas serán igual a 1, con el mismo numero de neuronas que la capa de entrada.
 - La función de activación de aplicar será la función sigmoide.
 
 Las especificaciones del algoritmo utilizado corresponden al paquete "forecast" del repositorio publico CRAN [@R-forecast].
 
 ### Evaluación de modelos
 
-Una vez finalizado el entrenamiento de los modelos para las diferentes series de tiempo se evalúo la validez o consistencia de los mismos siguiendo dos criterios:
+Una vez finalizado el entrenamiento de los modelos para las diferentes series de tiempo se evalúo la validez o consistencia de los mismos siguiendo dos criterios (Ver sección \@ref(MT-EVALUACION-MODELOS)):
 
-- Ajuste del modelo.
+- Ajuste del modelo (R2).
 - Capacidad de generalización del modelo.
 
-Donde se realizo la evaluación CAMEL sobre los datos proyectados para visualizar la capacidad de generalización de los modelos, es decir, si los datos proyectados siguen la misma tendencia que los datos efectivamente observados.
-
-Así también, el ajuste de los modelos está determinado por el estadístico R2 que se define como:
-
-\begin{equation}
-R2 = \left ( \frac{ \sum{[(x_{i}-\bar{x})-(y_{i}-\bar{y})]} } { \sqrt{ \sum{(x_{i}-\bar{x})^{2}} * \sum{(y_{i}-\bar{y})^{2}} } }  \right )^{2}
-(\#eq:drnn-ajusteR2)
-\end{equation}
-
-\newpage
-Donde el presente estadístico puede fue aplicado bajo dos criterios:
+Donde el presente estadístico (R2) fue aplicado bajo dos lineamientos:
 
 #### R2 sobre datos de entrenamiento
 
@@ -229,6 +218,5 @@ Las variables comprendidas que corresponden a las cuentas representadas en forma
 - Resultado neto de la gestión
 - Coeficiente de adecuación patrimonial
 
-\newpage
 Debiendo aclarar que el coeficiente de adecuación patrimonial no es una cuenta del manual de cuentas de ASFI, pero se realiza sus pronósticos al ser necesario para la evaluación de los modelos por la metodología CAMEL.
 

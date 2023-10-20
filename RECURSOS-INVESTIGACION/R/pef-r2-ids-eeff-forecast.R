@@ -33,7 +33,9 @@ getListFittedAndSimulateModels <- function(dat=NULL, ids=NULL, n_simulaicones=10
         tsDatTrain <- getTsFromDat2(id,datTrain)
         tsDatTest <- getTsFromDat2(id,datTest)
         
-        nnModel <- nnetar(tsDatTrain, p = ndiffs(tsDatTrain), P = 0, size = frequency(tsDatTrain))
+        pps <- ifelse( ndiffs(tsDatTrain)>0, ndiffs(tsDatTrain),1)
+            
+        nnModel <- nnetar(tsDatTrain)
         mcoModel <- tslm(tsDatTrain~trend+season)
         arimaModel <- auto.arima(tsDatTrain)
         
