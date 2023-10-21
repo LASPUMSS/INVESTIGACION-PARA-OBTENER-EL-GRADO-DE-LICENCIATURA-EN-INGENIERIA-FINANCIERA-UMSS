@@ -30,8 +30,9 @@ options(scipen=999)
 
 
 ```{r}
-child_docs <- list.files('entidades', full.names=TRUE) 
-child_docs <- paste0('RECURSOS-INVESTIGACION/NOTAS/entrenamiento-rnn-por-entidad/',child_docs)
+child_docs <- 
+    paste0('RECURSOS-INVESTIGACION/NOTAS/entrenamiento-rnn-por-entidad/entidades/',
+           list.files('RECURSOS-INVESTIGACION/NOTAS/entrenamiento-rnn-por-entidad/entidades'))
 
 ```
 
