@@ -55,4 +55,6 @@ createTrendsCamelRnnModels <- function(n=2) {
     
 }
 
+
 createTrendsCamelRnnModels(n=100)
+

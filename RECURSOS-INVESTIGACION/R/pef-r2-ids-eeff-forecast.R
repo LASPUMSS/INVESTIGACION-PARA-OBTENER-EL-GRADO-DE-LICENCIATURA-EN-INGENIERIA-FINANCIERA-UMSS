@@ -1,4 +1,4 @@
-getListFittedAndSimulateModels <- function(dat=NULL, ids=NULL, n_simulaicones=100L, n_proyeciones=12L ) {
+getListFittedAndSimulateModels <- function(dat=NULL, ids=NULL, n_simulaicones=100L, n_proyeciones=12L , printEnt=FALSE) {
     
     source('RECURSOS-INVESTIGACION/R/pef-simulate-ts-models.R')
     source('RECURSOS-INVESTIGACION/R/pef-fitted-ts-models.R')
@@ -28,7 +28,8 @@ getListFittedAndSimulateModels <- function(dat=NULL, ids=NULL, n_simulaicones=10
     listResult <- list()
     
     for (id in ids) {
-        cat(paste0('\n',id))
+        
+        if (printEnt) {cat(paste0('\n',id))}
         
         tsDatTrain <- getTsFromDat2(id,datTrain)
         tsDatTest <- getTsFromDat2(id,datTest)

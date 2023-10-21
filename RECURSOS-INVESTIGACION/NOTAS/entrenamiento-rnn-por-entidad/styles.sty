@@ -1,0 +1,179 @@
+%----------------------------
+% Editar size de los captions
+\usepackage{caption} % editar formato captions
+
+\captionsetup[table]{
+font=normalsize,
+labelsep=newline,
+labelfont=bf,
+singlelinecheck=off
+}
+
+\captionsetup[longtable]{
+font=normalsize,
+labelsep=newline,
+labelfont=bf,
+singlelinecheck=off
+}
+
+\captionsetup[figure]{
+font=normalsize,
+labelsep=newline,
+labelfont=bf,
+singlelinecheck=off
+}
+
+\usepackage{floatrow}
+\floatsetup[figure]{capposition=top,captionskip=5pt}
+\floatsetup[table]{capposition=top,captionskip=5pt}
+\floatsetup[longtable]{margins=centering,captionskip=5pt}
+
+% \setlength{\intextsep}{20pt} % Vertical space above & below [h] floats
+% \setlength{\textfloatsep}{20pt} % Vertical space below (above) [t] ([b]) floats
+% \setlength{\floatsep}{20pt} % Vertical space below (above) [t] ([b]) floats
+%----------------------------
+% PAQUETES PARA kable_extra
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+% -----------------------
+% OTROS PAQUETES
+
+\usepackage{pdfpages} % Para insertar pdfs
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+%\usepackage{graphicx}
+%\usepackage{copyrightbox}
+\usepackage{titlesec}
+\usepackage{titletoc} % Modificar tabla de contenido
+\usepackage{multirow} % Para tablas
+\usepackage{rotating} % Para girar tablas
+
+%----------------------------
+\floatplacement{figure}{H}
+
+\renewcommand{\baselinestretch}{1.5}
+
+\addto\captionsspanish{
+\renewcommand{\contentsname}{INDICE CAPITULAR}
+\renewcommand{\listfigurename}{LISTA DE FIGURAS}
+\renewcommand{\listtablename}{LISTA DE TABLAS}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\tablename}{Tabla}
+}
+
+%----------------------------
+% Clases Nuevas y comandos
+\titleclass{\frontms}{page}[\section]
+\newcounter{frontms}
+\renewcommand{\thefrontms}{\Alph{frontms}}
+\newcommand{\frontmsname}{Frontms}
+\titlespacing{\frontms}{0pt}{0pt}{0pt}
+
+\titleclass{\footerms}{page}[\section]
+\newcounter{footerms}
+\renewcommand{\thefooterms}{\Alph{footerms}}
+\newcommand{\footermsname}{Footerms}
+\titlespacing{\footerms}{0pt}{0pt}{0pt}
+
+
+\newcommand*\Sectionname{CAPÍTULO }
+
+% -----------------------
+% Formatos personalizados DOC
+\titleformat{\section}[block]
+            {\normalsize\bfseries}
+            {\Sectionname \thesection.\quad}
+            {0pt}
+            {\centering}
+            
+\titleformat*{\subsection}{\normalsize\bfseries\MakeUppercase}
+          
+% -----------------------
+% Formatos personalizados TOC
+
+\titlecontents*{section}
+    [0pt]
+    {\addvspace{1pc}\centering\bfseries\normalsize}
+    {\Sectionname \thecontentslabel. \quad \MakeUppercase}
+    {}
+    {}
+    
+\titlecontents{subsection}
+    [0pt]
+    {\addvspace{0.3pc}\bfseries\hspace{2em}\normalsize}
+    {\contentslabel{2em}\MakeUppercase}
+    {\hspace*{0em}}
+    {\titlerule*[8pt]{.}\contentspage}
+
+\titlecontents{subsubsection}
+    [0pt]
+    {\hspace{3em}\normalsize}
+    {\contentslabel{3em}}
+    {\hspace*{0em}}
+    {\titlerule*[8pt]{.}\contentspage}
+    
+\titlecontents{paragraph}
+    [0pt]
+    {}
+    {}
+    {}
+    {}
+    
+\titlecontents{subparagraph}
+    [0pt]
+    {}
+    {}
+    {}
+    {}
+    
+\titlecontents{frontms}
+    [0pt]
+    {\addvspace{-2pt}\bfseries}
+    {\normalsize}
+    {}
+    {\titlerule*[8pt]{.}\contentspage}
+    
+\titlecontents{footerms}
+    [0pt]
+    {\addvspace{1pc}\bfseries\normalsize}
+    {}
+    {\MakeUppercase}
+    {\titlerule*[8pt]{}\contentspage}
+
+
+%----------------------------
+% Paginacion arriba-derecha
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[R]{\thepage}
+
+
+%----------------------------
+% Definir la profundidad de las clases
+\usepackage{hyperref}
+\makeatletter
+\def\toclevel@section{1}
+\def\toclevel@frontms{1}
+\def\toclevel@footerms{1}
+\def\toclevel@subsection{2}
+\def\toclevel@subsubsection{3}
+\def\toclevel@paragraph{4}
+\def\toclevel@subparagraph{5}
+\makeatother
+
+\setcounter{secnumdepth}{7}
+\setcounter{tocdepth}{5}
