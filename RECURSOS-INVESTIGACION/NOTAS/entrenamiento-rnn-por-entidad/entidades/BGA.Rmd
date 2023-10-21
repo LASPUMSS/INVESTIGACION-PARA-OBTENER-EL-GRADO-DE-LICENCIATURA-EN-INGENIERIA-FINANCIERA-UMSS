@@ -1,0 +1,334 @@
+```{r, results='hide'}
+source('RECURSOS-INVESTIGACION/R/get-dat-basic-normalizada.R')
+source('RECURSOS-INVESTIGACION/R/pef-r2-ids-eeff-forecast.R')
+source('RECURSOS-INVESTIGACION/R/pef-list-summary-resumen.R')
+source('RECURSOS-INVESTIGACION/R/pef-get-dats-for-forescat.R')
+source('RECURSOS-INVESTIGACION/R/pef-get-ids-for-models.R')
+source("RECURSOS-INVESTIGACION/R/pef-get-camel-test.R")
+source("RECURSOS-INVESTIGACION/R/pef-aux-render-table.R")
+source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
+
+require(kableExtra)
+require(patchwork)
+require(ggplot2)
+require(dplyr)
+require(fpp2)
+
+entidad <-  gsub('.Rmd','', knitr::current_input())
+
+datTotalSistema <- 
+    getDatEEFFNormalizada(by = 'ENTIDAD') %>% 
+    filter(TIPO_DE_ENTIDAD==entidad)
+    
+ids <- getVariablesForModelsForecast()
+    
+if (!file.exists(paste0('FUENTES-DE-DATOS/DATA/listResultPEF_', entidad, '.rds'))) {
+    listResultPEF <- getListFittedAndSimulateModels(datTotalSistema,ids)
+}else{
+    listResultPEF <- readRDS(file =paste0('FUENTES-DE-DATOS/DATA/listResultPEF_', entidad, '.rds'))
+}
+
+listResumeModels <- getListResumeSummaryModels(listResultPEF)
+listDatsForTestCamels <- getDatsForTestCamels(listResultPEF,datTotalSistema,12,TRUE)
+    
+originalCamelTest <- getCamelTestForecast(listDatsForTestCamels$datCuentas)
+nnCamelTest <- getCamelTestForecast(listDatsForTestCamels$nnDataForecastCuentas)
+mcoCamelTest <- getCamelTestForecast(listDatsForTestCamels$mcoDataForecastCuentas)
+arimaCamelTest <- getCamelTestForecast(listDatsForTestCamels$arimaDataForecastCuentas)
+    
+camelTestModels <- bind_rows(originalCamelTest,
+                                 nnCamelTest,
+                                 mcoCamelTest,
+                                 arimaCamelTest)
+    
+trendCamelRNN <- readRDS(file =paste0("FUENTES-DE-DATOS/DATA/trendCamelRNN_",entidad,".rds"))
+sdCamelRNN <- readRDS(file =paste0("FUENTES-DE-DATOS/DATA/sdCamelRNN_",entidad,".rds"))
+
+```
+
+\newpage
+# `r entidad`
+
+## Evaluación de datos ajustados de modelos
+
+En esta sección se presentan el nivel de ajuste de los modelos para las distintas series de tiempo observadas respecto a las series de tiempo pronosticadas por los modelos:
+
+\vspace*{15pt}
+```{r}
+renderTableBasic(listResumeModels$r2ModelsResum %>% transformTableAuxPef, 
+                 captionTable = 'Ajuste R2 por cuentas',
+                 fontSize = 6)
+```
+
+Donde el ajuste promedio por modelo se tiene los siguiente:
+
+\vspace*{15pt}
+```{r}
+renderTableBasic(listResumeModels$r2ModelsResumMean, 
+                 captionTable = 'Ajuste R2 por modelos',
+                 fontSize = 6)
+```
+
+
+## Evaluación de datos proyectados de modelos
+
+Ahora bien, se presenta el nivel de ajuste de las proyecciones de los modelos respecto a las series de tiempo de prueba, las cuales no fueron incluidas en el entrenamiento de los mismos.
+
+\vspace*{15pt}
+```{r}
+renderTableBasic(listResumeModels$r2ForecastResum %>% transformTableAuxPef, 
+                 captionTable = 'Ajuste R2 de proyecciones por cuentas',
+                 fontSize = 6) %>% 
+    footnote(general = 'NaN indica que uno de los series de tiempo es 0 en todos sus elementos, donde el R2 devuelve una indeterminación.',
+             general_title = 'NOTA: ' )
+```
+
+
+Donde el ajuste promedio de las proyecciones por modelo se tiene los siguiente:
+
+\vspace*{15pt}
+```{r}
+renderTableBasic(listResumeModels$r2ForecastResumMean,
+                 captionTable = 'Ajuste R2 de proyecciones por modelo',
+                 fontSize = 6)
+```
+
+\newpage
+## Aplicación de metodología CAMEL sobre datos proyectados
+
+Se realizó `r length(trendCamelRNN)` entrenamientos para cada serie de tiempo con sus respectivos pronósticos y sobre los cuales se aplicó la metodología CAMEL.
+
+\vspace*{15pt}
+```{r}
+
+renderTableBasic(camelTestModels, 
+                 captionTable = 'Aplicacion de metodologia CAMEL a proyecciones realizadas',
+                 fontSize = 8) %>% 
+    pack_rows(index = c('DATOS ORIGINALES',
+                        'REDES NEURONALES',
+                        'MCO',
+                        'ARIMA'))
+```
+
+Donde se observa que la tendencia promedio en la calificación CAMEL de los pronósticos realizados por las distintas redes neuronales es de `r mean(trendCamelRNN)` y la desviación estándar de `r mean(sdCamelRNN)`.
+
+\newpage
+\vspace*{\fill}
+```{r, fig.height = 10, fig.width = 20, fig.cap='Historgrama de diferentes redes neuronales entrenadas.'}
+
+p1 <- 
+    data.frame(trendCamelRNN=trendCamelRNN) %>% 
+    ggplot(aes(x=trendCamelRNN)) + 
+    geom_histogram() + 
+    xlab('Tendencia') + 
+    ylab('') +
+    theme(
+        axis.title.x=element_text(size=30),
+        axis.text.y=element_text(size=24),
+        axis.text.x=element_text(size=24))
+
+p2 <- 
+    data.frame(sdCamelRNN=sdCamelRNN) %>% 
+    ggplot(aes(x=sdCamelRNN)) + 
+    geom_histogram() + 
+    xlab('Desviación estandar') + 
+    ylab('')+
+    theme(
+        axis.title.x=element_text(size=30),
+        axis.text.y=element_text(size=24),
+        axis.text.x=element_text(size=24))
+
+p1/p2
+```
+\vspace*{\fill}
+
+\newpage
+## Estados financieros proyectados
+
+En esta última sección se presenta los estados financieros observados respecto a sus proyecciones correspondientes para cada cuenta, es decir, balance general y estado de resultados del sistema financiero en su conjunto para la fecha del 31 de diciembre de la gestión 2022 expresado en bolivianos para los modelos antes presentados:
+
+- Redes neuronales artificiales (NN)
+- Modelo clásico de series de tiempo (MCO)
+- ARIMA
+
+#### Balance general proyectado
+
+```{r}
+idsEEFF <- c('ACTIVO',
+             
+             'ACTIVO_DISPONIBILIDADES',
+             'ACTIVO_INVERSIONES_TEMPORARIAS',
+             
+             'ACTIVO_CARTERA',
+             
+             'ACTIVO_CARTERA_CARTERA_VENCIDA_TOTAL',
+             'ACTIVO_CARTERA_CARTERA_VENCIDA',
+             'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_VENCIDA',
+             'ACTIVO_CARTERA_CARTERA_REESTRUCTURADA_VENCIDA',
+
+             
+             'ACTIVO_CARTERA_CARTERA_EJECUCION_TOTAL',
+             'ACTIVO_CARTERA_CARTERA_EN_EJECUCION',
+             'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_EJECUCION',
+             'ACTIVO_CARTERA_CARTERA_REESTRUCTURADA_EN_EJECUCION',
+
+             
+             'ACTIVO_CARTERA_CARTERA_VIGENTE_TOTAL',
+             'ACTIVO_CARTERA_CARTERA_VIGENTE',
+             'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_VIGENTE',
+             'ACTIVO_CARTERA_CARTERA_REESTRUCTURADA_VIGENTE',
+
+             
+             'ACTIVO_CARTERA_PREVISION_PARA_INCOBRABILIDAD_DE_CARTERA',
+             
+             'ACTIVO_OTRAS_CUENTAS_POR_COBRAR',
+             'ACTIVO_BIENES_REALIZABLES',
+             'ACTIVO_INVERSIONES_PERMANENTES',
+             'ACTIVO_BIENES_DE_USO',
+             'ACTIVO_OTROS_ACTIVOS',
+             'ACTIVO_FIDEICOMISOS_CONSTITUIDOS',
+             
+             'PASIVO',
+             
+             'PASIVO_OBLIGACIONES_CON_EL_PUBLICO',
+             'PASIVO_OBLIGACIONES_CON_INSTITUCIONES_FISCALES',
+             'PASIVO_OBLIGACIONES_CON_EMPRESAS_PUBLICAS',
+             'PASIVO_OBLIGACIONES_CON_BANCOS_Y_ENTIDADES_DE_FINANCIAMIENTO',
+             'PASIVO_OTRAS_CUENTAS_POR_PAGAR',
+             'PASIVO_PREVISIONES',
+             'PASIVO_VALORES_EN_CIRCULACION',
+             'PASIVO_OBLIGACIONES_SUBORDINADAS',
+             
+             'PATRIMONIO',
+             'PATRIMONIO_CAPITAL_SOCIAL',
+             'PATRIMONIO_APORTES_NO_CAPITALIZADOS',
+             'PATRIMONIO_AJUSTES_AL_PATRIMONIO',
+             'PATRIMONIO_RESERVAS',
+             'PATRIMONIO_RESULTADOS_ACUMULADOS',
+             
+             'CUENTAS_CONTINGENTES_DEUDORAS',
+             'CUENTAS_CONTINGENTES_DEUDORAS_CUENTAS_DE_ORDEN_DEUDORAS')
+
+datAccounts <- listDatsForTestCamels$datCuentas %>% tail(n = 1) %>% select(any_of(idsEEFF)) 
+originalData <- cbind(names(datAccounts), t(datAccounts)) %>% data.frame(row.names = NULL)
+names(originalData) <- c('DESCRIPCION','OBSERVADO')
+
+datAccounts <- listDatsForTestCamels$mcoDataForecastCuentas %>% tail(n = 1) %>% select(any_of(idsEEFF)) 
+mcoForecasData <- cbind(names(datAccounts), t(datAccounts)) %>% data.frame(row.names = NULL)
+names(mcoForecasData) <- c('DESCRIPCION','MCO')
+
+datAccounts <- listDatsForTestCamels$arimaDataForecastCuentas %>% tail(n = 1) %>% select(any_of(idsEEFF))  
+arimaForecasData <- cbind(names(datAccounts), t(datAccounts)) %>% data.frame(row.names = NULL)
+names(arimaForecasData) <- c('DESCRIPCION','ARIMA')
+
+datAccounts <- listDatsForTestCamels$nnDataForecastCuentas %>% tail(n = 1) %>% select(any_of(idsEEFF)) 
+nnForecasData <- cbind(names(datAccounts), t(datAccounts)) %>% data.frame(row.names = NULL)
+names(nnForecasData) <- c('DESCRIPCION','NN')
+
+datEEEFF_Forescat <- 
+    left_join(originalData, mcoForecasData, by='DESCRIPCION') %>%
+    left_join(., arimaForecasData, by='DESCRIPCION')  %>%
+    left_join(., nnForecasData, by='DESCRIPCION') 
+
+datEEEFF_Forescat$OBSERVADO <- as.numeric(datEEEFF_Forescat$OBSERVADO)
+datEEEFF_Forescat$MCO <- as.numeric(datEEEFF_Forescat$MCO)
+datEEEFF_Forescat$ARIMA <- as.numeric(datEEEFF_Forescat$ARIMA)
+datEEEFF_Forescat$NN <- as.numeric(datEEEFF_Forescat$NN)
+```
+
+
+\vspace*{15pt}
+```{r}
+renderTableBasic(datEEEFF_Forescat %>% select(DESCRIPCION, OBSERVADO, NN) %>% transformTableAuxPef2, 
+                 captionTable = 'Balance general observado respecto a proyecciones por redes neuronales')
+
+```
+
+\vspace*{30pt}
+```{r}
+renderTableBasic(datEEEFF_Forescat %>% select(DESCRIPCION, OBSERVADO, MCO, ARIMA) %>% transformTableAuxPef2, 
+                 captionTable = 'Balance general observado respecto a proyecciones por MCO y ARIMA')
+```
+
+\newpage
+### Estado de resultados proyectado
+
+```{r}
+idsEEFF <- 
+    c( 'INGRESOS_FINANCIEROS',
+       'GASTOS_FINANCIEROS',
+       'RESULTADO_FINANCIERO_BRUTO',
+             
+       'OTROS_INGRESOS_OPERATIVOS',
+       'OTROS_GASTOS_OPERATIVOS',
+       'RESULTADO_DE_OPERACION_BRUTO',
+             
+       'EERR_S2_RESULTADO_DE_OPERACION_DESPUES_DE_INCOBRABLES',
+             
+       'EERR_S2_GASTOS_DE_ADMINISTRACION',
+       'EERR_S2_GASTOS_DE_PERSONAL',
+       'EERR_S2_SERVICIOS_CONTRATADOS',
+       'EERR_S2_SEGUROS',
+       'EERR_S2_COMUNICACIONES_Y_TRASLADOS',
+       'EERR_S2_IMPUESTOS',
+       'EERR_S2_MANTENIMIENTO_Y_REPARACIONES',
+       'EERR_S2_DEPRECIACION_Y_DESVALORIZACION_DE_BIENES_DE_USO',
+       'EERR_S2_AMORTIZACION_DE_CARGOS_DIFERIDOS_Y_ACTIVOS_INTANGIBLES',
+       'EERR_S2_OTROS_GASTOS_DE_ADMINISTRACION',
+             
+       'EERR_S2_RESULTADO_DE_OPERACION_NETO',
+             
+       'EERR_S2_RESULTADO_DESPUES_DE_AJUSTE_POR_DIFERENCIA_DE_CAMBIO_Y_MANTENIMIENTO_DE_VALOR',
+       'EERR_S2_RESPECTO_INGRESOS_GASTOS_EXTRAORDINARIOS',
+       'EERR_S2_RESULTADO_NETO_DEL_EJERCICIO_ANTES_DE_AJUSTES_DE_GESTIONES_ANTERIORES',
+       'EERR_S2_RESPECTO_INGRESOS_GASTOS_DE_GESTIONES_ANTERIORES',
+       'EERR_S2_RESULTADO_ANTES_DE_IMPUESTOS_Y_AJUSTE_CONTABLE_POR_EFECTO_DE_INFLACION',
+       'EERR_S2_RESPECTO_AJUSTE_CONTABLE_POR_EFECTO_DE_LA_INFLACION',
+       'EERR_S2_RESULTADO_ANTES_DE_IMPUESTOS',
+       'EERR_S2_IMPUESTO_SOBRE_LAS_UTILIDADES_DE_LAS_EMPRESAS',
+             
+       'EERR_S2_RESULTADO_NETO_DE_LA_GESTION')
+
+datAccounts <- listDatsForTestCamels$datCuentas %>% tail(n = 1) %>% select(any_of(idsEEFF)) 
+originalData <- cbind(names(datAccounts), t(datAccounts)) %>% data.frame(row.names = NULL)
+names(originalData) <- c('DESCRIPCION','OBSERVADO')
+
+datAccounts <- listDatsForTestCamels$mcoDataForecastCuentas %>% tail(n = 1) %>% select(any_of(idsEEFF)) 
+mcoForecasData <- cbind(names(datAccounts), t(datAccounts)) %>% data.frame(row.names = NULL)
+names(mcoForecasData) <- c('DESCRIPCION','MCO')
+
+datAccounts <- listDatsForTestCamels$arimaDataForecastCuentas %>% tail(n = 1) %>% select(any_of(idsEEFF))  
+arimaForecasData <- cbind(names(datAccounts), t(datAccounts)) %>% data.frame(row.names = NULL)
+names(arimaForecasData) <- c('DESCRIPCION','ARIMA')
+
+datAccounts <- listDatsForTestCamels$nnDataForecastCuentas %>% tail(n = 1) %>% select(any_of(idsEEFF)) 
+nnForecasData <- cbind(names(datAccounts), t(datAccounts)) %>% data.frame(row.names = NULL)
+names(nnForecasData) <- c('DESCRIPCION','NN')
+
+datEEEFF_Forescat <- 
+    left_join(originalData, mcoForecasData, by='DESCRIPCION') %>%
+    left_join(., arimaForecasData, by='DESCRIPCION')  %>%
+    left_join(., nnForecasData, by='DESCRIPCION') 
+
+datEEEFF_Forescat$OBSERVADO <- as.numeric(datEEEFF_Forescat$OBSERVADO)
+datEEEFF_Forescat$MCO <- as.numeric(datEEEFF_Forescat$MCO)
+datEEEFF_Forescat$ARIMA <- as.numeric(datEEEFF_Forescat$ARIMA)
+datEEEFF_Forescat$NN <- as.numeric(datEEEFF_Forescat$NN)
+```
+
+\vspace*{15pt}
+```{r}
+renderTableBasic(datEEEFF_Forescat %>% select(DESCRIPCION, OBSERVADO, NN) %>% transformTableAuxPef2, 
+                 captionTable = 'Estado de resultados observado respecto a proyecciones por redes neuronales')
+
+```
+
+\newpage
+\vspace*{30pt}
+```{r}
+renderTableBasic(datEEEFF_Forescat %>% select(DESCRIPCION, OBSERVADO, MCO, ARIMA) %>% transformTableAuxPef2, 
+                 captionTable = 'Estado de resultados observado respecto a proyecciones por MCO y ARIMA',
+                 fontSize = 6)
+```
+
+

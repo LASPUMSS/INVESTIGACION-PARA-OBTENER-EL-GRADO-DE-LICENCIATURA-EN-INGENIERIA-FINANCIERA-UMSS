@@ -1,127 +1,83 @@
 %----------------------------
-% Editar size de los captions
-\usepackage{caption} % editar formato captions
+% Caracteristicas generales
+\usepackage{geometry}
+\geometry{a4paper,total={216mm,279mm},left=35mm, right=25mm, top=25mm, bottom=25mm}
 
-\captionsetup[table]{
-font=normalsize,
-labelsep=newline,
-labelfont=bf,
-singlelinecheck=off
-}
+\usepackage{setspace}
+\setstretch{2}
 
-\captionsetup[longtable]{
-font=normalsize,
-labelsep=newline,
-labelfont=bf,
-singlelinecheck=off
-}
-
-\captionsetup[figure]{
-font=normalsize,
-labelsep=newline,
-labelfont=bf,
-singlelinecheck=off
-}
-
-\usepackage{floatrow}
-\floatsetup[figure]{capposition=top,captionskip=5pt}
-\floatsetup[table]{capposition=top,captionskip=5pt}
-\floatsetup[longtable]{margins=centering,captionskip=5pt}
-
-% \setlength{\intextsep}{20pt} % Vertical space above & below [h] floats
-% \setlength{\textfloatsep}{20pt} % Vertical space below (above) [t] ([b]) floats
-% \setlength{\floatsep}{20pt} % Vertical space below (above) [t] ([b]) floats
-%----------------------------
-% PAQUETES PARA kable_extra
-\usepackage{booktabs}
-\usepackage{longtable}
-\usepackage{array}
-\usepackage{multirow}
-\usepackage{wrapfig}
-\usepackage{float}
-\usepackage{colortbl}
-\usepackage{pdflscape}
-\usepackage{tabu}
-\usepackage{threeparttable}
-\usepackage{threeparttablex}
-\usepackage[normalem]{ulem}
-\usepackage{makecell}
-\usepackage{xcolor}
-% -----------------------
-% OTROS PAQUETES
-
-\usepackage{pdfpages} % Para insertar pdfs
+% ###################################################
+\usepackage{pdfpages} % Insertar Pdfs
 \usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
-%\usepackage{graphicx}
-%\usepackage{copyrightbox}
-\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+\usepackage[spanish.lcroman]{babel} % Modificar titulos
+
+\usepackage[explicit]{titlesec} % Modificar titulos
 \usepackage{titletoc} % Modificar tabla de contenido
+
 \usepackage{multirow} % Para tablas
 \usepackage{rotating} % Para girar tablas
 
-%----------------------------
-\floatplacement{figure}{H}
+\usepackage{lscape}
+\usepackage{longtable}
 
-\renewcommand{\baselinestretch}{1.5}
+\usepackage{caption}
 
+% Paginacion arriba-derecha
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[R]{\thepage}
+
+% profundidad toc
+\setcounter{tocdepth}{4}
+
+% Con spanish babel
 \addto\captionsspanish{
 \renewcommand{\contentsname}{INDICE CAPITULAR}
-\renewcommand{\listfigurename}{LISTA DE FIGURAS}
-\renewcommand{\listtablename}{LISTA DE TABLAS}
-\renewcommand{\figurename}{Figura}
-\renewcommand{\tablename}{Tabla}
+\renewcommand{\listfigurename}{LISTA DE GRAFICOS}
+\renewcommand{\listtablename}{LISTA DE CUADROS}
+\renewcommand{\figurename}{Gráfico}
+\renewcommand{\tablename}{Cuadro}
 }
-
 %----------------------------
-% Clases Nuevas y comandos
+
+% Con titlesec - title toc
+
+% Secciones antes de los capitulos
 \titleclass{\frontms}{page}[\section]
 \newcounter{frontms}
-\renewcommand{\thefrontms}{\Alph{frontms}}
-\newcommand{\frontmsname}{Frontms}
+\renewcommand{\thefrontms}{\alph{frontms}}
+\newcommand{\frontmsname}{FMs}
 \titlespacing{\frontms}{0pt}{0pt}{0pt}
 
-\titleclass{\footerms}{page}[\section]
-\newcounter{footerms}
-\renewcommand{\thefooterms}{\Alph{footerms}}
-\newcommand{\footermsname}{Footerms}
-\titlespacing{\footerms}{0pt}{0pt}{0pt}
+\newcommand*\Sectionname{CAPITULO}
 
-
-\newcommand*\Sectionname{CAPÍTULO }
-
-% -----------------------
-% Formatos personalizados DOC
-\titleformat{\section}[block]
-            {\normalsize\bfseries}
-            {\Sectionname \thesection.\quad}
-            {0pt}
-            {\centering}
-            
-\titleformat*{\subsection}{\normalsize\bfseries\MakeUppercase}
-          
-% -----------------------
-% Formatos personalizados TOC
+\titleformat{\frontms}[display]{\centering\large\bfseries}{}{}{\huge}
+\titleformat{\frontmss}[display]{\centering\large\bfseries}{}{}{\huge}
+\titleformat{\section}{\centering\bfseries}{\Sectionname\ \thesection.\quad}{0pt}{#1}
+\titleformat{\subsection}[hang]{\bfseries}{\thesubsection. \quad}{0pt}{#1}
 
 \titlecontents*{section}
     [0pt]
-    {\addvspace{1pc}\centering\bfseries\normalsize}
-    {\Sectionname \thecontentslabel. \quad \MakeUppercase}
+    {\addvspace{2pc}\centering\bfseries}
+    {\Sectionname\ \thecontentslabel.\quad}
     {}
     {}
-    
+
 \titlecontents{subsection}
     [0pt]
-    {\addvspace{0.3pc}\bfseries\hspace{2em}\normalsize}
+    {\bfseries\hspace{1.5em}}
     {\contentslabel{2em}\MakeUppercase}
-    {\hspace*{0em}}
+    {\hspace*{-2em}}
     {\titlerule*[8pt]{.}\contentspage}
-
+    
 \titlecontents{subsubsection}
     [0pt]
-    {\hspace{3em}\normalsize}
-    {\contentslabel{3em}}
-    {\hspace*{0em}}
+    {\hspace{1.5em}}
+    {\contentslabel{2em}\hspace{1em}}
+    {}
     {\titlerule*[8pt]{.}\contentspage}
     
 \titlecontents{paragraph}
@@ -130,37 +86,20 @@ singlelinecheck=off
     {}
     {}
     {}
-    
-\titlecontents{subparagraph}
-    [0pt]
-    {}
-    {}
-    {}
-    {}
-    
+
+
 \titlecontents{frontms}
     [0pt]
     {\addvspace{-2pt}\bfseries}
-    {\normalsize}
+    {\large}
     {}
     {\titlerule*[8pt]{.}\contentspage}
     
-\titlecontents{footerms}
-    [0pt]
-    {\addvspace{1pc}\bfseries\normalsize}
-    {}
-    {\MakeUppercase}
-    {\titlerule*[8pt]{}\contentspage}
-
-
 %----------------------------
-% Paginacion arriba-derecha
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\renewcommand{\headrulewidth}{0pt}
-\fancyhead[R]{\thepage}
+% Editar size de los captions
 
+\captionsetup[figure]{font=small,labelfont=bf}
+\captionsetup[table]{font=small,labelfont=bf}
 
 %----------------------------
 % Definir la profundidad de las clases
@@ -168,12 +107,7 @@ singlelinecheck=off
 \makeatletter
 \def\toclevel@section{1}
 \def\toclevel@frontms{1}
-\def\toclevel@footerms{1}
 \def\toclevel@subsection{2}
 \def\toclevel@subsubsection{3}
 \def\toclevel@paragraph{4}
-\def\toclevel@subparagraph{5}
 \makeatother
-
-\setcounter{secnumdepth}{7}
-\setcounter{tocdepth}{5}

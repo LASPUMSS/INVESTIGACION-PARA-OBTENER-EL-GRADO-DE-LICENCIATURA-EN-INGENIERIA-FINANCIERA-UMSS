@@ -1,30 +1,4 @@
----
-output: 
-    pdf_document:
-        toc: no
-        includes:
-            in_header: styles.sty
-        df_print: kable
-        number_sections: true
----
-
-<!-- Configuración CHUNKS -->
-```{r setup, include=FALSE}
-
-knitr::opts_chunk$set(echo = FALSE,
-                      message = FALSE,
-                      warning = FALSE,
-                      fig.align='center',
-                      out.height='60%',
-                      out.width='100%')
-
-knitr::opts_knit$set(root.dir = getwd())
-
-options(scipen=999)
-
-```
-
-```{r}
+```{r, results='hide'}
 source('RECURSOS-INVESTIGACION/R/get-dat-basic-normalizada.R')
 source('RECURSOS-INVESTIGACION/R/pef-r2-ids-eeff-forecast.R')
 source('RECURSOS-INVESTIGACION/R/pef-list-summary-resumen.R')
@@ -40,7 +14,7 @@ require(ggplot2)
 require(dplyr)
 require(fpp2)
 
-entidad <- 'BME'
+entidad <-  gsub('.Rmd','', knitr::current_input())
 
 datTotalSistema <- 
     getDatEEFFNormalizada(by = 'ENTIDAD') %>% 
@@ -72,6 +46,7 @@ sdCamelRNN <- readRDS(file =paste0("FUENTES-DE-DATOS/DATA/sdCamelRNN_",entidad,"
 
 ```
 
+\newpage
 # `r entidad`
 
 ## Evaluación de datos ajustados de modelos
@@ -108,7 +83,7 @@ renderTableBasic(listResumeModels$r2ForecastResum %>% transformTableAuxPef,
              general_title = 'NOTA: ' )
 ```
 
-\newpage
+
 Donde el ajuste promedio de las proyecciones por modelo se tiene los siguiente:
 
 \vspace*{15pt}
@@ -118,7 +93,7 @@ renderTableBasic(listResumeModels$r2ForecastResumMean,
                  fontSize = 6)
 ```
 
-
+\newpage
 ## Aplicación de metodología CAMEL sobre datos proyectados
 
 Se realizó `r length(trendCamelRNN)` entrenamientos para cada serie de tiempo con sus respectivos pronósticos y sobre los cuales se aplicó la metodología CAMEL.
@@ -139,7 +114,7 @@ Donde se observa que la tendencia promedio en la calificación CAMEL de los pron
 
 \newpage
 \vspace*{\fill}
-```{r histograms-aplicacion-rnn, fig.height = 10, fig.width = 20, fig.cap='Historgrama de diferentes redes neuronales entrenadas.'}
+```{r, fig.height = 10, fig.width = 20, fig.cap='Historgrama de diferentes redes neuronales entrenadas.'}
 
 p1 <- 
     data.frame(trendCamelRNN=trendCamelRNN) %>% 
@@ -176,7 +151,7 @@ En esta última sección se presenta los estados financieros observados respecto
 - Modelo clásico de series de tiempo (MCO)
 - ARIMA
 
-### Balance general proyectado
+#### Balance general proyectado
 
 ```{r}
 idsEEFF <- c('ACTIVO',
