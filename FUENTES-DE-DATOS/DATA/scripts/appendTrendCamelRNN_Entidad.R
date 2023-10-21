@@ -67,6 +67,6 @@ siglasEntidades <- c('BCR','BEC','BFO','BFS','BGA','BIE','BIS','BME','BNA','BNB'
 
 for (ent in siglasEntidades){
     cat(paste0('\n', ent))
-    createTrendsCamelRnnModelsByEntidad(n=50, entidad = ent)
+    createTrendsCamelRnnModelsByEntidad(n=10, entidad = ent)
 }
 
