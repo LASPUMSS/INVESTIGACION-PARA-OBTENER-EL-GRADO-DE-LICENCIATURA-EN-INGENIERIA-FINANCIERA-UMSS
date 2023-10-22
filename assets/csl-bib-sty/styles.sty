@@ -1,3 +1,7 @@
+\renewcommand{\normalsize}{\fontsize{12pt}{12pt}\selectfont} 
+\renewcommand{\large}{\fontsize{12pt}{12pt}\selectfont} 
+\linespread{1.5} %regulate line spacing
+
 %----------------------------
 % Editar size de los captions
 \usepackage{caption} % editar formato captions
@@ -93,12 +97,12 @@ singlelinecheck=off
 % -----------------------
 % Formatos personalizados DOC
 \titleformat{\section}[block]
-            {\normalsize\bfseries}
+            {\large\bfseries}
             {\Sectionname \thesection.\quad}
             {0pt}
             {\centering}
             
-\titleformat*{\subsection}{\normalsize\bfseries\MakeUppercase}
+\titleformat*{\subsection}{\large\bfseries\MakeUppercase}
           
 % -----------------------
 % Formatos personalizados TOC
@@ -112,14 +116,14 @@ singlelinecheck=off
     
 \titlecontents{subsection}
     [0pt]
-    {\addvspace{0.3pc}\bfseries\hspace{2em}\normalsize}
+    {\addvspace{0.3pc}\bfseries\hspace{2em}\large}
     {\contentslabel{2em}\MakeUppercase}
     {\hspace*{0em}}
     {\titlerule*[8pt]{.}\contentspage}
 
 \titlecontents{subsubsection}
     [0pt]
-    {\hspace{3em}\normalsize}
+    {\hspace{3em}\large}
     {\contentslabel{3em}}
     {\hspace*{0em}}
     {\titlerule*[8pt]{.}\contentspage}
@@ -147,7 +151,7 @@ singlelinecheck=off
     
 \titlecontents{footerms}
     [0pt]
-    {\addvspace{1pc}\bfseries\normalsize}
+    {\addvspace{1pc}\bfseries\large}
     {}
     {\MakeUppercase}
     {\titlerule*[8pt]{}\contentspage}
