@@ -6,7 +6,8 @@ output:
             in_header: assets/csl-bib-sty/styles.sty
         df_print: kable
         number_sections: true
-geometry: "left=3cm,right=2cm,top=2cm,bottom=2cm"
+geometry: "left=3.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm"
+mainfont: Times New Roman
 fontsize: 12pt
 csl: assets/csl-bib-sty/apa.csl
 bibliography: [assets/csl-bib-sty/references_inv_books.bib, 
