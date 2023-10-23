@@ -1,2 +1,2 @@
 
-\subsection*{Anexo 5 - Kwiatkowski-Phillips-Schmidt-Shin}
+\anexosms{Kwiatkowski-Phillips-Schmidt-Shin}

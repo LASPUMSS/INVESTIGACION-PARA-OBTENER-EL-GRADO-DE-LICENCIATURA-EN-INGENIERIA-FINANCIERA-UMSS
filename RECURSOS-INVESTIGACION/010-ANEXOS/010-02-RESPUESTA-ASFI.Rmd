@@ -1,5 +1,5 @@
 
-\subsection*{Anexo 2 - Respuesta solicitud permiso uso de datos de entidades financiera de Bolivia publicado por la ASFI}
+\anexosms{Respuesta a solicitud uso de datos ASFI}
 
 \begin{figure}[h!]
 \centering

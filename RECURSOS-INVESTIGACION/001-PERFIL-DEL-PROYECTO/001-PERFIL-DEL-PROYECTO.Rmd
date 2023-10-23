@@ -107,7 +107,6 @@ Se recurrirá a las fuentes de compilación de información bibliográfica refer
 - La investigación tendrá un repositorio en GitHub (https://github.com/LASPUMSS/PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS).
 
 
-\newpage
 \input{RECURSOS-INVESTIGACION/001-PERFIL-DEL-PROYECTO/tabla-marco-metodico}
 
 

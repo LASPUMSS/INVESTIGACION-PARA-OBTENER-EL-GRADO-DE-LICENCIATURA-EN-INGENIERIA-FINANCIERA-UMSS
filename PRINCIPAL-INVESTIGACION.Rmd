@@ -37,14 +37,21 @@ options(scipen=999)
 \clearpage
 \pagenumbering{roman}
 
+```{=latex}
+\startcontents[mainsections]
+```
 <!-- PREAMBULO -->
 \newpage
 ```{r, child="RECURSOS-INVESTIGACION/000-PREAMBULO/000-PREAMBULO.Rmd"}
 
 ```
 
+
+```{=latex}
 \newpage
-\tableofcontents
+\printcontents[mainsections]{}{1}{\section*{INDICE CAPITULAR}}
+```
+
 \newpage
 \listoffigures
 \newpage
@@ -71,6 +78,17 @@ options(scipen=999)
 
 ```
 
+<!-- DIAGNOSTICO SISTEMA FINANCIERO -->
+\newpage
+```{r, child="RECURSOS-INVESTIGACION/004-DIAGNOSTICO-SISTEMA-FINANCIERO/004-DIAGNOSTICO-SISTEMA-FINANCIERO.Rmd"}
+
+```
+
+<!-- DETERMINACION REDES NEURONALES-PRONOSTICOS -->
+\newpage
+```{r, child="RECURSOS-INVESTIGACION/005-DETERMINACION-REDES-NEURONALES-PRONOSTICOS/005-DETERMINACION-REDES-NEURONALES-PRONOSTICOS.Rmd"}
+
+```
 
 <!-- CONCLUSIONES Y RECOMENDACIONES -->
 \newpage
@@ -84,4 +102,17 @@ options(scipen=999)
 
 ```
 
+<!-- ANEXOS TITULO-->
+\newpage
+\phantomsection\addcontentsline{toc}{footerms}{ANEXOS}
 
+```{=latex}
+\stopcontents[mainsections]
+```
+
+
+<!-- ANEXOS CONTENIDO-->
+\newpage
+```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-ANEXOS.Rmd"}
+
+```

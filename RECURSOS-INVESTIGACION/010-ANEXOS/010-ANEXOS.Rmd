@@ -1,8 +1,18 @@
+```{=latex}
+\startcontents[anexosections]
+```
+
+<!-- ANEXOS -->
+\newpage
 \vspace*{\fill}
 \section*{ANEXOS}
 \thispagestyle{empty}
-\phantomsection\addcontentsline{toc}{footerms}{ANEXOS}
 \vspace*{\fill}
+
+```{=latex}
+\newpage
+\printcontents[anexosections]{}{1}{\section*{INDICE ANEXOS}}
+```
 
 <!-- ############################################################### -->
 <!-- ###################### ANEXO 1 #################################-->
@@ -54,6 +64,7 @@
 ```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-96-ENTIDADES-COMPRENDIDAS-DIAGNOSTICO.Rmd"}
 
 ```
+
 <!-- ############################################################### -->
 <!-- ###################### ANEXO  #################################-->
 <!-- ############################################################### -->
@@ -80,4 +91,8 @@
 \newpage
 ```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-99-VARIABLES-CAMEL.Rmd"}
 
+```
+
+```{=latex}
+\stopcontents[anexosections]
 ```

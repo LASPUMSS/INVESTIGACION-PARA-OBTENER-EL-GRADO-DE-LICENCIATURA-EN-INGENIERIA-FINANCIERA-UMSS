@@ -1,5 +1,5 @@
 
-\subsection*{Anexo 3 - Finanzas, redes neuronales y su convergencia}
+\anexosms{Finanzas, redes neuronales y su convergencia}
 
 Los antecedentes presentados a continuación cubren dos segmentos el campo de las finanzas y el campo de las redes neuronales, considerando también como convergen ambos en el tiempo partiendo de lo general a lo especifico según corresponda.
 

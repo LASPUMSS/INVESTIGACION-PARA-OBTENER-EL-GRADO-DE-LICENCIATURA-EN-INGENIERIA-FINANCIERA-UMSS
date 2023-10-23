@@ -1,2 +1,2 @@
 
-\subsection*{Anexo 4 - Método de minimos cuadrados ordinarios}
+\anexosms{Método de minimos cuadrados ordinarios}

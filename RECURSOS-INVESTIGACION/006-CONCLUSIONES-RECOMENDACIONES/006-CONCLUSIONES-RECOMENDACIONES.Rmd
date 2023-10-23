@@ -37,4 +37,3 @@ La hipótesis planteada en la presente investigación sugería que:
 
 Donde posteriormente a través de la evaluación de ajuste con los datos de entrenamiento y de prueba las redes neuronales presentaron un mayor ajuste promedio y en la prueba de la evaluación financiera sobre datos proyectados el modelo de redes neuronales fue el único en lograr generalizar los patrones contenidos en las series de tiempo, teniendo en cuenta dichos resultados se concluye que la hipótesis se encuentra contrastada y tomada como valida, así también, se recomienda que el contraste de la hipótesis solo puede ser considerado como valido para los datos contenidos en la presente investigación.
 
-

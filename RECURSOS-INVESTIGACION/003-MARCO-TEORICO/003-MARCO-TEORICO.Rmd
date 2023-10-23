@@ -48,9 +48,7 @@ El banco de desarrollo productivo es una persona jurídica de derecho privado co
 
 Los estados financieros se entienden como una representación estructurada de la situación financiera y de las transacciones llevadas a cabo por la empresa o entidad financiera. El objetivo de los estados financieros, con propósitos de información general, es suministrar información acerca de la situación y rendimiento financieros, así como de los flujos de efectivo, que sea útil a una amplia variedad de usuarios al tomar sus decisiones económicas [@GLOSARIO_ASFI].
 
-Así mismo, los estados financieros que son los medios principales con los que las compañías comunican información a los inversionistas, analistas y al resto de la comunidad empresarial [@PDAF, p.51].
-
-Por lo tanto se afirma, que los estados financieros son un resumen del ejercicio económico de una empresa o institución, entendiendo al ejercicio económico como la suma de todas las actividades vinculadas al giro de la empresa en un intervalo de tiempo, dando información, sobre ingresos, egresos, pasivos, activos, es decir, los estados financieros son una fotografía de la empresa en un punto del tiempo.
+Así mismo, los estados financieros que son los medios principales con los que las compañías comunican información a los inversionistas, analistas y al resto de la comunidad empresarial [@PDAF, p.51]. Por lo tanto se afirma, que los estados financieros son un resumen del ejercicio económico de una empresa o institución, entendiendo al ejercicio económico como la suma de todas las actividades vinculadas al giro de la empresa en un intervalo de tiempo, dando información, sobre ingresos, egresos, pasivos, activos, es decir, los estados financieros son una fotografía de la empresa en un punto del tiempo.
 
 ### Balance general
 
@@ -100,7 +98,7 @@ Donde la metodología CAMEL tiene por objeto evaluar la **solidez financiera** d
 
 Es decir, la **solidez financiera** de una institución debe entenderse como la capacidad que tiene dicha institución de hacer frente a las obligaciones que tiene con terceros y propietarios.
 
-La presente metodología se divide en siguientes pasos expuestos por @CALIFICACION-CAMEL:
+La presente metodología se divide en siguientes pasos expuestos por @CALIFICACION-CAMEL.
 
 - Cálculo de indicadores que responden a las características antes mencionadas.
 - Definición de rangos y límites de los indicadores.
@@ -580,6 +578,7 @@ y_{t} = c + \phi_{1}y_{t-1} + \cdots + \phi_{p}y_{t-p} + \theta_{1}\varepsilon_{
 (\#eq:mt-stYarima3)
 \end{equation}
 
+\newpage
 Donde:
 
 - $Y_{t} =$ Representa el valor de la serie en el momento t.
