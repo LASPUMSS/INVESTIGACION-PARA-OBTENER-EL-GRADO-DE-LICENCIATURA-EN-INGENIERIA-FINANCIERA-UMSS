@@ -150,7 +150,7 @@ Las inversiones temporarias (designado por el código 120.00 en el manual de cue
 
 #### Pasivos
 
-Los pasivos (designado por el código 200.00 en el manual de cuentas) según la @MANUAL_CUENTAS_ASFI se agrupan las cuentas representativas de las obligaciones directas de la entidad la que comprenden:
+Los pasivos (designado por el código 200.00 en el manual de cuentas) según la @MANUAL_CUENTAS_ASFI se agrupan las cuentas representativas de las obligaciones directas de la entidad, que se listan a continuación.
 
 - Las obligaciones con el público.
 - Las obligaciones con instituciones fiscales.
@@ -179,13 +179,7 @@ Así también, la cartera en ejecución (designado por el código 134.00 en el m
 
 #### Cartera Bruta
 
-La variable de cartera bruta está compuesta por tres elementos del manual de cuentas:
-
-- Cartera vigente 
-- Cartera vencida 
-- Cartera en ejecución
-
-Donde según la @MANUAL_CUENTAS_ASFI la cartera vencida y en ejecución fueron descritas anteriormente sumando una cuenta, quedando la cartera vigente (designado por el código 131.00 en el manual de cuentas), en está cuenta se registran los créditos que tienen sus amortizaciones de capital e intereses al día conforme al plan de pagos establecido en el contrato de crédito, y aquellos que se encuentran con un atraso en sus pagos de hasta 30 días, a partir de la fecha de incumplimiento del cronograma original de pagos.
+La variable de cartera bruta está compuesta por tres elementos del manual de cuentas (Cartera vigente, cartera vencida y cartera en ejecución), donde según la @MANUAL_CUENTAS_ASFI la cartera vencida y en ejecución fueron descritas anteriormente sumando una cuenta, quedando la cartera vigente (designado por el código 131.00 en el manual de cuentas), en está cuenta se registran los créditos que tienen sus amortizaciones de capital e intereses al día conforme al plan de pagos establecido en el contrato de crédito, y aquellos que se encuentran con un atraso en sus pagos de hasta 30 días, a partir de la fecha de incumplimiento del cronograma original de pagos.
 
 #### Cartera reprogramada total
 
@@ -204,6 +198,17 @@ También la cartera en ejecución reprogramada (designado por el código 137.00 
 #### Previsión de cartera
 
 La previsión de cartera (designado por el código 139.00 en el manual de cuentas) según la @MANUAL_CUENTAS_ASFI en está cuenta se registra el importe que se estima para cubrir los riesgos de pérdidas por incobrabilidad de préstamos, de acuerdo con lo dispuesto en el Libro 3°, Título II de la Recopilación de Normas para Servicios Financieros y en la descripción del grupo Cartera. 
+
+- Previsión específica para incobrabilidad de cartera vigente
+- Previsión específica para incobrabilidad de cartera vencida
+- Previsión específica para incobrabilidad de cartera en ejecución
+- Previsión específica para incobrabilidad de cartera vigente reprogramada o reestructurada
+- Previsión específica para incobrabilidad de cartera vencida reprogramada o reestructurada
+- Previsión específica para incobrabilidad de cartera en ejecución reprogramada o reestructurada
+- Previsión genérica para incobrabilidad de cartera por factores de riesgo adicional
+- Previsión genérica para incobrabilidad de cartera por otros riesgos
+- Previsión específica adicional
+
 
 #### Contingente
 
@@ -231,16 +236,21 @@ Según la @MANUAL_CUENTAS_ASFI los gastos administrativos (designado por el cód
 
 #### Impuestos
 
-Según la @MANUAL_CUENTAS_ASFI los impuestos (designado por el código 455.00 en el manual de cuentas) registran los gastos devengados en el período por concepto de impuestos, así mismo los intereses y recargos originados por los mismos.
+Según la @MANUAL_CUENTAS_ASFI los impuestos (designado por el código 455.00 en el manual de cuentas) registran los gastos devengados en el período por concepto de impuestos, así mismo los intereses y recargos originados por los mismos. El gasto por Impuesto al valor agregado que se registra en esta cuenta, es el que surge de aplicar la tasa del impuesto sobre ingresos presuntos, tales como el que proviene de tomar en anticrético un bien. 
 
 #### Resultado operativo bruto (ROB)
 
 Esta variable de resultado operativo bruto está definida por la siguiente ecuación:
 
 \begin{equation}
-R.O.B. = \text{Ingresos Fin.} - \text{Gastos Financieros} \pm \text{Otros (Ingresos/Gastos) Operativos}
+R.O.B. = \text{IF} - \text{GF} \pm \text{Otros (Ingresos/Gastos) Operativos}
 (\#eq:df-rob)
 \end{equation}
+
+Donde:
+
+- $IF =$ Ingresos financieros
+- $GF =$ Gatos financieros
 
 
 #### Resultado neto de la gestión (RNG)
@@ -248,11 +258,14 @@ R.O.B. = \text{Ingresos Fin.} - \text{Gastos Financieros} \pm \text{Otros (Ingre
 Esta variable de resultado neto de la gestión está definida por la siguiente ecuación:
 
 \begin{equation}
-R.N.G. = \text{Resultado Operativo Bruto} \pm \text{Otros (Ingresos/Gastos) Extr.} - \text{IUE}
+R.N.G. = \text{ROB} \pm \text{Otros (Ingresos/Gastos) Extraordinarios} - \text{IUE}
 (\#eq:df-rng)
 \end{equation}
 
+Donde:
 
+- $ROB =$ Resultado Operativo Bruto
+- $IUE =$ Impuesto a las utilidades de las empresas
 
 
 

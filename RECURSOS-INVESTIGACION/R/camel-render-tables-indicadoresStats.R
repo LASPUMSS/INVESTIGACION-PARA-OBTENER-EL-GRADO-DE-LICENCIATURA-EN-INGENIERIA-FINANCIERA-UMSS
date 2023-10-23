@@ -1,4 +1,4 @@
-renderListTablesInd <- function(listResult ,captionTable, c) {
+renderListTablesInd <- function(listResult ,captionTable, c, fontSize=8) {
     
     
     require(dplyr)
@@ -13,6 +13,7 @@ renderListTablesInd <- function(listResult ,captionTable, c) {
         
         id <- listResult[[i]][['id']]
         datTrendInd <- listResult[[i]][['datTrendInd']]
+        datTrendInd <- datTrendInd %>% select(-c(MINIMO, MAXIMO))
         
         datTrendIndTotal <-  bind_rows(datTrendIndTotal,datTrendInd)
     }
@@ -27,7 +28,7 @@ renderListTablesInd <- function(listResult ,captionTable, c) {
             caption =captionTable) %>% 
         row_spec(0,bold=TRUE) %>% 
         kable_styling(latex_options = c("hold_position", "repeat_header"),
-                      font_size = 6,
+                      font_size = fontSize,
                       repeat_header_text = "(Continuación)")
     
     

@@ -61,7 +61,7 @@ listResult <- getListStatsOverviewInd(ids,
                                       datIdsNamesCamelInds,
                                       TRUE)
 listPlots <- getListPlotsInd(listResult, scaleOne = FALSE,numDigScale = 0.01)
-listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas C-A-M-E-L con rangos flexibles sin ponderar', 6)
+listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas C-A-M-E-L con rangos flexibles sin ponderar', 6, 7)
 ```
 
 \newpage
@@ -98,7 +98,7 @@ listResult <- getListStatsOverviewInd(ids,
                                       datIdsNamesCamelInds,
                                       TRUE)
 listPlots <- getListPlotsInd(listResult)
-listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas C-A-M-E-L con rangos estrictos sin ponderar', 6)
+listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas C-A-M-E-L con rangos estrictos sin ponderar', 6, 7)
 ```
 
 \vspace*{\fill}
