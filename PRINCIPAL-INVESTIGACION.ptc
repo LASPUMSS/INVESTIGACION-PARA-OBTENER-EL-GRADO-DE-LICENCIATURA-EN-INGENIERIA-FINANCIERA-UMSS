@@ -2,7 +2,7 @@
 \ttl@starttoc {mainsections@1}
 \contentsline {frontms}{RESUMEN}{\es@scroman {i}}{section*.1}%
 \contentsline {frontms}{ABSTRACT}{\es@scroman {ii}}{section*.2}%
-\contentsline {frontms}{INTRODUCCIÓN}{\es@scroman {viii}}{section*.3}%
+\contentsline {frontms}{INTRODUCCIÓN}{\es@scroman {xi}}{section*.3}%
 \contentsline {section}{\numberline {1}PERFIL DE LA INVESTIGACIÓN}{1}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Planteamiento del problema}{1}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Formulación del problema central}{2}{subsection.1.2}%
@@ -79,22 +79,102 @@
 \contentsline {subsubsection}{\numberline {2.8.1}Modelo autorregresivo integrado de media móvil (ARIMA)}{22}{subsubsection.2.8.1}%
 \contentsline {subsubsection}{\numberline {2.8.2}Modelo clásico de series de tiempo (MCO)}{23}{subsubsection.2.8.2}%
 \contentsline {subsubsection}{\numberline {2.8.3}Evaluación de modelos}{24}{subsubsection.2.8.3}%
-\contentsline {section}{\numberline {3}CONCLUSIONES Y RECOMENDACIONES}{26}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Conclusión y recomendación respecto al diagnóstico financiero realizado}{26}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Conclusión y recomendación respecto a la definición de la red de neuronas artificiales}{26}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Conclusión y recomendación respecto a la proyección-simulación de los estados financieros.}{27}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Conclusión y recomendación respecto a la evaluación de los datos proyectados-simulados}{27}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Conclusión y recomendación general}{28}{subsection.3.5}%
-\contentsline {footerms}{REFERENCIAS BIBLIOGRFICAS}{29}{section*.9}%
-\contentsline {footerms}{ANEXOS}{31}{section*.10}%
+\contentsline {section}{\numberline {3}DIAGNÓSTICO POR SECTORES DEL SISTEMA FINANCIERO DE BOLIVIA}{26}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Precisiones del diagnóstico financiero presentado}{26}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Entidades financieras comprendidas por el diagnostico}{26}{subsubsection.3.1.1}%
+\contentsline {paragraph}{\numberline {3.1.1.1}Bancos múltiples}{26}{paragraph.3.1.1.1}%
+\contentsline {paragraph}{\numberline {3.1.1.2}Bancos PYME}{27}{paragraph.3.1.1.2}%
+\contentsline {paragraph}{\numberline {3.1.1.3}Banco de desarrollo productivo}{27}{paragraph.3.1.1.3}%
+\contentsline {paragraph}{\numberline {3.1.1.4}Instituciones financieras de desarrollo}{27}{paragraph.3.1.1.4}%
+\contentsline {paragraph}{\numberline {3.1.1.5}Entidades financieras de vivienda}{27}{paragraph.3.1.1.5}%
+\contentsline {paragraph}{\numberline {3.1.1.6}Cooperativas}{27}{paragraph.3.1.1.6}%
+\contentsline {subsubsection}{\numberline {3.1.2}Variables comprendidas en el diagnóstico}{27}{subsubsection.3.1.2}%
+\contentsline {paragraph}{\numberline {3.1.2.1}Activo}{27}{paragraph.3.1.2.1}%
+\contentsline {paragraph}{\numberline {3.1.2.2}Disponibles}{28}{paragraph.3.1.2.2}%
+\contentsline {paragraph}{\numberline {3.1.2.3}Realizables}{28}{paragraph.3.1.2.3}%
+\contentsline {paragraph}{\numberline {3.1.2.4}Inversiones temporarias}{28}{paragraph.3.1.2.4}%
+\contentsline {paragraph}{\numberline {3.1.2.5}Pasivos}{28}{paragraph.3.1.2.5}%
+\contentsline {paragraph}{\numberline {3.1.2.6}Patrimonio}{29}{paragraph.3.1.2.6}%
+\contentsline {paragraph}{\numberline {3.1.2.7}Cartera en mora}{29}{paragraph.3.1.2.7}%
+\contentsline {paragraph}{\numberline {3.1.2.8}Cartera Bruta}{29}{paragraph.3.1.2.8}%
+\contentsline {paragraph}{\numberline {3.1.2.9}Cartera reprogramada total}{30}{paragraph.3.1.2.9}%
+\contentsline {paragraph}{\numberline {3.1.2.10}Previsión de cartera}{30}{paragraph.3.1.2.10}%
+\contentsline {paragraph}{\numberline {3.1.2.11}Contingente}{31}{paragraph.3.1.2.11}%
+\contentsline {paragraph}{\numberline {3.1.2.12}Gastos administrativos}{31}{paragraph.3.1.2.12}%
+\contentsline {paragraph}{\numberline {3.1.2.13}Impuestos}{32}{paragraph.3.1.2.13}%
+\contentsline {paragraph}{\numberline {3.1.2.14}Resultado operativo bruto (ROB)}{32}{paragraph.3.1.2.14}%
+\contentsline {paragraph}{\numberline {3.1.2.15}Resultado neto de la gestión (RNG)}{32}{paragraph.3.1.2.15}%
+\contentsline {subsection}{\numberline {3.2}Cálculo de indicadores}{32}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Indicadores de capital}{33}{subsubsection.3.2.1}%
+\contentsline {paragraph}{\numberline {3.2.1.1}Coeficiente de adecuación patrimonial (CAP)}{34}{paragraph.3.2.1.1}%
+\contentsline {paragraph}{\numberline {3.2.1.2}Coeficiente de cobertura de cartera en mora (CCCM)}{35}{paragraph.3.2.1.2}%
+\contentsline {paragraph}{\numberline {3.2.1.3}Coeficiente ácido de cobertura de cartera en mora (CACCM)}{35}{paragraph.3.2.1.3}%
+\contentsline {paragraph}{\numberline {3.2.1.4}Coeficiente de cobertura patrimonial (CCP)}{36}{paragraph.3.2.1.4}%
+\contentsline {subsubsection}{\numberline {3.2.2}Indicadores de activos}{36}{subsubsection.3.2.2}%
+\contentsline {paragraph}{\numberline {3.2.2.1}Coeficiente de exposición de cartera (CEC)}{38}{paragraph.3.2.2.1}%
+\contentsline {paragraph}{\numberline {3.2.2.2}Coeficiente de previsión de cartera (CPC)}{39}{paragraph.3.2.2.2}%
+\contentsline {paragraph}{\numberline {3.2.2.3}Coeficiente de previsión de cartera en mora (CPCM)}{39}{paragraph.3.2.2.3}%
+\contentsline {paragraph}{\numberline {3.2.2.4}Coeficiente de reposición de cartera (CRC)}{40}{paragraph.3.2.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.3}Indicadores de administración}{40}{subsubsection.3.2.3}%
+\contentsline {paragraph}{\numberline {3.2.3.1}Coeficiente de cobertura gastos administrativos (CCGA)}{42}{paragraph.3.2.3.1}%
+\contentsline {paragraph}{\numberline {3.2.3.2}Coeficiente ácido de cobertura gastos administrativos (CACGA)}{43}{paragraph.3.2.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.4}Indicadores de beneficios}{43}{subsubsection.3.2.4}%
+\contentsline {paragraph}{\numberline {3.2.4.1}Coeficiente de rendimiento sobre activos (ROA)}{45}{paragraph.3.2.4.1}%
+\contentsline {paragraph}{\numberline {3.2.4.2}Coeficiente de rendimiento sobre patrimonio (ROE)}{45}{paragraph.3.2.4.2}%
+\contentsline {subsubsection}{\numberline {3.2.5}Indicadores de liquidez}{45}{subsubsection.3.2.5}%
+\contentsline {paragraph}{\numberline {3.2.5.1}Coeficiente de capacidad de pago frente a pasivos (CCPP)}{46}{paragraph.3.2.5.1}%
+\contentsline {paragraph}{\numberline {3.2.5.2}Coeficiente ácido de capacidad de pago frente a pasivos (CACPP)}{46}{paragraph.3.2.5.2}%
+\contentsline {subsection}{\numberline {3.3}Definición de rangos y límites de los indicadores CAMEL}{48}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Rangos CAMEL flexibles}{49}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Rangos CAMEL estrictos}{49}{subsubsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.4}Ponderación de elementos CAMEL}{50}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Resultados CAMEL del sistema financiero}{50}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Calificación CAMEL}{56}{subsubsection.3.5.1}%
+\contentsline {section}{\numberline {4}PRONÓSTICO DE ESTADOS FINANCIEROS POR REDES NEURONALES ARTIFICIALES}{59}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Precisiones de los pronósticos de estados financieros}{59}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Series de tiempo}{59}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Modelos}{60}{subsubsection.4.1.2}%
+\contentsline {paragraph}{\numberline {4.1.2.1}Modelo clásico de series de tiempo (MCO)}{60}{paragraph.4.1.2.1}%
+\contentsline {paragraph}{\numberline {4.1.2.2}Modelo autorregresivo integrado de media móvil (ARIMA)}{62}{paragraph.4.1.2.2}%
+\contentsline {paragraph}{\numberline {4.1.2.3}Redes neuronales (NN)}{62}{paragraph.4.1.2.3}%
+\contentsline {subsubsection}{\numberline {4.1.3}Evaluación de modelos}{63}{subsubsection.4.1.3}%
+\contentsline {paragraph}{\numberline {4.1.3.1}R2 sobre datos de entrenamiento}{64}{paragraph.4.1.3.1}%
+\contentsline {paragraph}{\numberline {4.1.3.2}R2 sobre datos de prueba}{64}{paragraph.4.1.3.2}%
+\contentsline {paragraph}{\numberline {4.1.3.3}Capacidad de generalización del modelo}{64}{paragraph.4.1.3.3}%
+\contentsline {subsubsection}{\numberline {4.1.4}Variables comprendidas}{64}{subsubsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.2}Entrenamiento de modelos, proyecciones y simulaciones}{65}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Modelo clásico de series de tiempo}{65}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Redes neuronales}{66}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}ARIMA}{67}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.4}Eficiencia de los modelos en el entrenamiento}{67}{subsubsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.5}Eficiencia de los modelos en los pronósticos}{68}{subsubsection.4.2.5}%
+\contentsline {subsubsection}{\numberline {4.2.6}Simulación de proyecciones}{68}{subsubsection.4.2.6}%
+\contentsline {subsection}{\numberline {4.3}Evaluación de datos ajustados de modelos}{69}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Evaluación de datos proyectados de modelos}{71}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Aplicación de metodología CAMEL sobre datos proyectados}{74}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Estados financieros proyectados}{76}{subsection.4.6}%
+\contentsline {subsubsection}{\numberline {4.6.1}Balance general proyectado}{76}{subsubsection.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.6.2}Estado de resultados proyectado}{80}{subsubsection.4.6.2}%
+\contentsline {section}{\numberline {5}CONCLUSIONES Y RECOMENDACIONES}{91}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Conclusión y recomendación respecto al diagnóstico financiero realizado}{91}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Conclusión y recomendación respecto a la definición de la red de neuronas artificiales}{91}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Conclusión y recomendación respecto a la proyección-simulación de los estados financieros.}{92}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Conclusión y recomendación respecto a la evaluación de los datos proyectados-simulados}{92}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Conclusión y recomendación general}{93}{subsection.5.5}%
+\contentsline {footerms}{REFERENCIAS BIBLIOGRFICAS}{94}{section*.51}%
+\contentsline {footerms}{ANEXOS}{96}{section*.52}%
 \ttl@stoptoc {mainsections@1}
 \ttl@starttoc {anexosections@1}
-\contentsline {anexosms}{\numberline {A}Carta solicitud permiso uso de datos ASFI}{33}{anexosms.1}%
-\contentsline {anexosms}{\numberline {B}Respuesta a solicitud uso de datos ASFI}{34}{anexosms.2}%
-\contentsline {anexosms}{\numberline {C}Finanzas, redes neuronales y su convergencia}{35}{anexosms.3}%
-\contentsline {anexosms}{\numberline {D}Método de minimos cuadrados ordinarios}{38}{anexosms.4}%
-\contentsline {anexosms}{\numberline {E}Kwiatkowski-Phillips-Schmidt-Shin}{40}{anexosms.5}%
-\contentsline {anexosms}{\numberline {F}Algoritmo de Broyden-Fletcher-Goldfarb-Shanno}{41}{anexosms.6}%
-\contentsline {anexosms}{\numberline {G}Criterio de información de Akaike corregidoo}{43}{anexosms.7}%
+\contentsline {anexosms}{\numberline {A}Carta solicitud permiso uso de datos ASFI}{98}{anexosms.1}%
+\contentsline {anexosms}{\numberline {B}Respuesta a solicitud uso de datos ASFI}{99}{anexosms.2}%
+\contentsline {anexosms}{\numberline {C}Finanzas, redes neuronales y su convergencia}{100}{anexosms.3}%
+\contentsline {anexosms}{\numberline {D}Método de minimos cuadrados ordinarios}{103}{anexosms.4}%
+\contentsline {anexosms}{\numberline {E}Kwiatkowski-Phillips-Schmidt-Shin}{105}{anexosms.5}%
+\contentsline {anexosms}{\numberline {F}Algoritmo de Broyden-Fletcher-Goldfarb-Shanno}{106}{anexosms.6}%
+\contentsline {anexosms}{\numberline {G}Criterio de información de Akaike corregidoo}{108}{anexosms.7}%
+\contentsline {anexosms}{\numberline {H}Entidades financieras comprendidas en el diagnostico}{109}{anexosms.8}%
+\contentsline {anexosms}{\numberline {I}Indicadores CAMEL calculados}{112}{anexosms.9}%
+\contentsline {anexosms}{\numberline {J}Calificaciones CAMEL}{123}{anexosms.10}%
+\contentsline {anexosms}{\numberline {K}Variables utilizadas en el diagnostico CAMEL}{129}{anexosms.11}%
 \ttl@stoptoc {anexosections@1}
 \contentsfinish 
