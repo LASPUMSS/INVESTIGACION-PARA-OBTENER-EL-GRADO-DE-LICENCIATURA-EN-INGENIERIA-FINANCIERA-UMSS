@@ -1,0 +1,74 @@
+```{r}
+source('RECURSOS-INVESTIGACION/R/get-dat-basic-normalizada.R')
+source('RECURSOS-INVESTIGACION/R/pef-r2-ids-eeff-forecast.R')
+source('RECURSOS-INVESTIGACION/R/pef-list-summary-resumen.R')
+source('RECURSOS-INVESTIGACION/R/pef-get-dats-for-forescat.R')
+source('RECURSOS-INVESTIGACION/R/pef-get-ids-for-models.R')
+source("RECURSOS-INVESTIGACION/R/pef-get-camel-test.R")
+source("RECURSOS-INVESTIGACION/R/pef-aux-render-table.R")
+source("RECURSOS-INVESTIGACION/R/pef-aux-render-plot.R")
+source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
+
+require(kableExtra)
+require(patchwork)
+require(ggplot2)
+require(dplyr)
+require(fpp2)
+
+
+
+if (!('listResultPEF' %in% ls())) {
+    
+    datTotalSistema <- getDatEEFFNormalizada(by = 'TOTAL_SISTEMA')
+    
+    ids <- getVariablesForModelsForecast()
+    
+    if (!file.exists('FUENTES-DE-DATOS/DATA/listResultPEF.rds')) {
+        listResultPEF <- getListFittedAndSimulateModels(datTotalSistema,ids)
+    }else{
+        listResultPEF <- readRDS(file ='FUENTES-DE-DATOS/DATA/listResultPEF.rds')
+    }
+    
+}
+
+```
+
+\anexosms{Graficos de proyecciones de modelos por cuenta} \label{ANEXO-GRAFICOS-PROYECCIONES-MODELOS} 
+
+<!-- ############################################################### -->
+<!-- ###################### ACTIVO_DISPONIBILIDADES 
+<!-- ############################################################### -->
+
+```{r}
+cuenta <- 'ACTIVO_DISPONIBILIDADES'
+labelCuenta <- converCuentasBasicPef(cuenta)
+```
+
+\vspace*{\fill}
+```{=latex}
+\begin{figure}[h!]
+```
+
+```{r, fig.height = 20, fig.width = 20, fig.cap = paste0('Proyecciones MCO, ARIMA y NN para la serie de tiempo contenida en la cuenta ', tolower(labelCuenta))}
+transformPlotAuxPef(listResultPEF, cuenta, labelCuenta)
+```
+
+```{=latex}
+\floatfoot{Fuente: Elaboración propia.}
+\end{figure}
+```
+\vspace*{\fill}
+
+<!-- ############################################################### -->
+<!-- ###################### DEMAS GRAFICOS
+<!-- ############################################################### -->
+
+```{r}
+child_docs <- 
+    paste0('RECURSOS-INVESTIGACION/010-ANEXOS/GRAFICOS-PROYECCIONES-POR-CUENTA/',
+           list.files('RECURSOS-INVESTIGACION/010-ANEXOS/GRAFICOS-PROYECCIONES-POR-CUENTA/'))
+
+```
+
+```{r, child = child_docs}
+```

@@ -77,7 +77,15 @@
 <!-- ###################### ANEXO   #################################-->
 <!-- ############################################################### -->
 \newpage
-```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-96-ENTIDADES-COMPRENDIDAS-DIAGNOSTICO.Rmd"}
+```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-40-ENTIDADES-COMPRENDIDAS-DIAGNOSTICO.Rmd"}
+
+```
+
+<!-- ############################################################### -->
+<!-- ###################### ANEXO   #################################-->
+<!-- ############################################################### -->
+\newpage
+```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-45-PROYECIONES-MODELOS.Rmd"}
 
 ```
 
@@ -86,7 +94,7 @@
 <!-- ############################################################### -->
 
 \newpage
-```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-97-INDICADORES-CAMEL.Rmd"}
+```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-50-INDICADORES-CAMEL.Rmd"}
 
 ```
 
@@ -95,7 +103,7 @@
 <!-- ############################################################### -->
 
 \newpage
-```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-98-CALIFICACION-CAMEL.Rmd"}
+```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-60-CALIFICACION-CAMEL.Rmd"}
 
 ```
 
@@ -105,7 +113,7 @@
 <!-- ############################################################### -->
 
 \newpage
-```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-99-VARIABLES-CAMEL.Rmd"}
+```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-70-VARIABLES-CAMEL.Rmd"}
 
 ```
 

@@ -52,6 +52,8 @@ Así también, los gráficos de las cuentas principales de los estados financier
 - Proyecciones del modelo NN.
 - Proyecciones del modelo ARIMA.
 
+Las cuentas no presentadas en esta sección se localizan en el anexo \@ref(ANEXO-GRAFICOS-PROYECCIONES-MODELOS).
+
 ### Balance general proyectado
 
 ```{r}
