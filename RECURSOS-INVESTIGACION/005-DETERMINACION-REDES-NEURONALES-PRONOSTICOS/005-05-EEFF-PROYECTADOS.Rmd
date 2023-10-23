@@ -7,6 +7,7 @@ source('RECURSOS-INVESTIGACION/R/pef-get-dats-for-forescat.R')
 source('RECURSOS-INVESTIGACION/R/pef-get-ids-for-models.R')
 source("RECURSOS-INVESTIGACION/R/pef-get-camel-test.R")
 source("RECURSOS-INVESTIGACION/R/pef-aux-render-table.R")
+source("RECURSOS-INVESTIGACION/R/pef-aux-render-plot.R")
 source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
 
 require(kableExtra)
@@ -43,7 +44,14 @@ En esta última sección se presenta los estados financieros observados respecto
 - Modelo clásico de series de tiempo (MCO)
 - ARIMA
 
-\newpage
+Así también, los gráficos de las cuentas principales de los estados financieros cubriendo:
+
+- Datos de entrenamiento.
+- Datos efectivamente observados.
+- Proyecciones del modelo MCO.
+- Proyecciones del modelo NN.
+- Proyecciones del modelo ARIMA.
+
 ### Balance general proyectado
 
 ```{r}
@@ -224,3 +232,230 @@ renderTableBasic(datEEEFF_Forescat %>% select(DESCRIPCION, OBSERVADO, MCO, ARIMA
                  fontSize = 6)
 ```
 
+
+<!-- ############################################################### -->
+<!-- ###################### ACTIVO 
+<!-- ############################################################### -->
+
+```{r}
+cuenta <- 'ACTIVO'
+labelCuenta <- converCuentasBasicPef(cuenta)
+```
+
+\newpage
+\vspace*{\fill}
+```{=latex}
+\begin{figure}[h!]
+```
+
+```{r, fig.height = 20, fig.width = 20, fig.cap = paste0('Proyecciones MCO, ARIMA y NN para la cuenta ', tolower(labelCuenta))}
+transformPlotAuxPef(listResultPEF, cuenta, labelCuenta)
+```
+
+```{=latex}
+\floatfoot{Fuente: Elaboración propia.}
+\end{figure}
+```
+\vspace*{\fill}
+
+<!-- ############################################################### -->
+<!-- ###################### PASIVO 
+<!-- ############################################################### -->
+
+```{r}
+cuenta <- 'PASIVO'
+labelCuenta <- converCuentasBasicPef(cuenta)
+```
+
+\newpage
+\vspace*{\fill}
+```{=latex}
+\begin{figure}[h!]
+```
+
+```{r, fig.height = 20, fig.width = 20, fig.cap = paste0('Proyecciones MCO, ARIMA y NN para la cuenta ', tolower(labelCuenta))}
+transformPlotAuxPef(listResultPEF, cuenta, labelCuenta)
+```
+
+```{=latex}
+\floatfoot{Fuente: Elaboración propia.}
+\end{figure}
+```
+\vspace*{\fill}
+
+<!-- ############################################################### -->
+<!-- ###################### PATRIMONIO 
+<!-- ############################################################### -->
+
+```{r}
+cuenta <- 'PATRIMONIO'
+labelCuenta <- converCuentasBasicPef(cuenta)
+```
+
+\newpage
+\vspace*{\fill}
+```{=latex}
+\begin{figure}[h!]
+```
+
+```{r, fig.height = 20, fig.width = 20, fig.cap = paste0('Proyecciones MCO, ARIMA y NN para la cuenta ', tolower(labelCuenta))}
+transformPlotAuxPef(listResultPEF, cuenta, labelCuenta)
+```
+
+```{=latex}
+\floatfoot{Fuente: Elaboración propia.}
+\end{figure}
+```
+\vspace*{\fill}
+
+<!-- ############################################################### -->
+<!-- ###################### INGRESOS_FINANCIEROS 
+<!-- ############################################################### -->
+
+```{r}
+cuenta <- 'INGRESOS_FINANCIEROS'
+labelCuenta <- converCuentasBasicPef(cuenta)
+```
+
+\newpage
+\vspace*{\fill}
+```{=latex}
+\begin{figure}[h!]
+```
+
+```{r, fig.height = 20, fig.width = 20, fig.cap = paste0('Proyecciones MCO, ARIMA y NN para la cuenta ', tolower(labelCuenta))}
+transformPlotAuxPef(listResultPEF, cuenta, labelCuenta)
+```
+
+```{=latex}
+\floatfoot{Fuente: Elaboración propia.}
+\end{figure}
+```
+\vspace*{\fill}
+
+<!-- ############################################################### -->
+<!-- ###################### GASTOS_FINANCIEROS 
+<!-- ############################################################### -->
+
+```{r}
+cuenta <- 'GASTOS_FINANCIEROS'
+labelCuenta <- converCuentasBasicPef(cuenta)
+```
+
+\newpage
+\vspace*{\fill}
+```{=latex}
+\begin{figure}[h!]
+```
+
+```{r, fig.height = 20, fig.width = 20, fig.cap = paste0('Proyecciones MCO, ARIMA y NN para la cuenta ', tolower(labelCuenta))}
+transformPlotAuxPef(listResultPEF, cuenta, labelCuenta)
+```
+
+```{=latex}
+\floatfoot{Fuente: Elaboración propia.}
+\end{figure}
+```
+\vspace*{\fill}
+
+
+<!-- ############################################################### -->
+<!-- ###################### RESULTADO_FINANCIERO_BRUTO 
+<!-- ############################################################### -->
+
+```{r}
+cuenta <- 'RESULTADO_FINANCIERO_BRUTO'
+labelCuenta <- converCuentasBasicPef(cuenta)
+```
+
+\newpage
+\vspace*{\fill}
+```{=latex}
+\begin{figure}[h!]
+```
+
+```{r, fig.height = 20, fig.width = 20, fig.cap = paste0('Proyecciones MCO, ARIMA y NN para la cuenta ', tolower(labelCuenta))}
+transformPlotAuxPef(listResultPEF, cuenta, labelCuenta)
+```
+
+```{=latex}
+\floatfoot{Fuente: Elaboración propia.}
+\end{figure}
+```
+\vspace*{\fill}
+
+<!-- ############################################################### -->
+<!-- ###################### RESULTADO_DE_OPERACION_BRUTO 
+<!-- ############################################################### -->
+
+```{r}
+cuenta <- 'RESULTADO_DE_OPERACION_BRUTO'
+labelCuenta <- converCuentasBasicPef(cuenta)
+```
+
+\newpage
+\vspace*{\fill}
+```{=latex}
+\begin{figure}[h!]
+```
+
+```{r, fig.height = 20, fig.width = 20, fig.cap = paste0('Proyecciones MCO, ARIMA y NN para la cuenta ', tolower(labelCuenta))}
+transformPlotAuxPef(listResultPEF, cuenta, labelCuenta)
+```
+
+```{=latex}
+\floatfoot{Fuente: Elaboración propia.}
+\end{figure}
+```
+\vspace*{\fill}
+
+
+<!-- ############################################################### -->
+<!-- ###################### EERR_S2_RESULTADO_DE_OPERACION_NETO 
+<!-- ############################################################### -->
+
+```{r}
+cuenta <- 'EERR_S2_RESULTADO_DE_OPERACION_NETO'
+labelCuenta <- converCuentasBasicPef(cuenta)
+```
+
+\newpage
+\vspace*{\fill}
+```{=latex}
+\begin{figure}[h!]
+```
+
+```{r, fig.height = 20, fig.width = 20, fig.cap = paste0('Proyecciones MCO, ARIMA y NN para la cuenta ', tolower(labelCuenta))}
+transformPlotAuxPef(listResultPEF, cuenta, labelCuenta)
+```
+
+```{=latex}
+\floatfoot{Fuente: Elaboración propia.}
+\end{figure}
+```
+\vspace*{\fill}
+
+<!-- ############################################################### -->
+<!-- ###################### EERR_S2_RESULTADO_NETO_DE_LA_GESTION 
+<!-- ############################################################### -->
+
+```{r}
+cuenta <- 'EERR_S2_RESULTADO_NETO_DE_LA_GESTION'
+labelCuenta <- converCuentasBasicPef(cuenta)
+```
+
+\newpage
+\vspace*{\fill}
+```{=latex}
+\begin{figure}[h!]
+```
+
+```{r, fig.height = 20, fig.width = 20, fig.cap = paste0('Proyecciones MCO, ARIMA y NN para la cuenta ', tolower(labelCuenta))}
+transformPlotAuxPef(listResultPEF, cuenta, labelCuenta)
+```
+
+```{=latex}
+\floatfoot{Fuente: Elaboración propia.}
+\end{figure}
+```
+\vspace*{\fill}

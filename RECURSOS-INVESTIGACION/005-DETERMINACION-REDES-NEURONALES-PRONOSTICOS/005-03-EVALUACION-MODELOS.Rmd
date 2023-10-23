@@ -61,7 +61,7 @@ renderTableBasic(listResumeModels$r2ModelsResum %>% transformTableAuxPef,
                  fontSize = 6)
 ```
 
-\newpage
+
 Donde el ajuste promedio por modelo se tiene los siguiente:
 
 \vspace*{15pt}
@@ -71,7 +71,7 @@ renderTableBasic(listResumeModels$r2ModelsResumMean,
                  fontSize = 6)
 ```
 
-Dejando a las redes neuronales como el mejor modelo bajo el presente método de evaluación al tener mayor ajuste promedio para las diferentes series de tiempo.
+Dejando a las redes neuronales como el mejor modelo bajo el presente método de evaluación al tener mayor ajuste promedio respecto a los otros modelos para las diferentes series de tiempo, teniendo en cuenta que la diferencia con le modelo ARIMA es pequeña, así que la evaluación no es completamente concluyente.
 
 ## Evaluación de datos proyectados de modelos
 

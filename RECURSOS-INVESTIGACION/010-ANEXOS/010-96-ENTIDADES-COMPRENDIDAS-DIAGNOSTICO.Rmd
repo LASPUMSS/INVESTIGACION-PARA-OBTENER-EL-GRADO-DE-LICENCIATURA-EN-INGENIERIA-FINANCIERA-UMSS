@@ -21,7 +21,7 @@ entidadesCompModelo <- getEntidadesCompModelo(datBasic)
 datGroupBySector <- getDatEEFFByGroup(datBasic,by = 'TIPO_DE_ENTIDAD' )
 ```
 
-\anexosms{Entidades financieras comprendidas en el diagnostico}
+\anexosms{Entidades financieras comprendidas en el diagnostico} \label{ANEXO-ENTIDADES-DIAGNOSTICO} 
 
 
 ```{r}

@@ -51,11 +51,11 @@ if (!('listResultPEF' %in% ls())) {
 
 ## Precisiones de los pronósticos de estados financieros
 
-Los pronósticos realizados en el presente capítulo estarán sujetos a las especificaciones dadas a continuación.
+Los pronósticos realizados en el presente capítulo están sujetos a las especificaciones dadas a continuación.
 
 ### Series de tiempo
 
-Los datos a ser modelados están definidos como series de tiempo (cada serie de tiempo representa una cuenta de los estados financieros) de `r nrow(datTotalSistema)` observaciones cada una, las cuales agrupan a todas las entidades del sistema financiero de Bolivia, presentados en el capítulo anterior.
+Los datos a ser modelados están definidos como series de tiempo con frecuencia mensual (cada serie de tiempo representa una cuenta de los estados financieros) de `r nrow(datTotalSistema)` observaciones cada una, las cuales agrupan a todas las entidades del sistema financiero de Bolivia, presentados en el capítulo anterior.
 
 ```{=latex}
 \begin{figure}[h!]
@@ -83,12 +83,12 @@ autoplot(listResultPEF[[id]]$tsDatTrain,series = 'Datos de entrenamiento') +
 ```
 
 \newpage
-Así mismo, los datos se dividen en dos grupos:
+Así mismo, los datos o series de tiempo se dividen en dos grupos:
 
-- Datos de entrenamiento.
-- Datos para realizar pruebas.
+- Datos o series de tiempo de entrenamiento.
+- Datos o series de tiempo para realizar pruebas.
 
-Donde los datos de entrenamiento fueron utilizados para adaptar los modelos y los datos de pruebas buscarán contrastar el ajuste de los pronósticos de los modelos respecto a la misma.
+Donde los datos de entrenamiento fueron utilizados para adaptar-entrenar los modelos y los datos de pruebas buscarán contrastar el ajuste de los pronósticos correspondiente a cada modelo, respecto a las series de tiempo efectivamente observados.
 
 ### Modelos 
 
@@ -100,7 +100,7 @@ Los modelos empleados para realizar las proyecciones son los siguientes:
 
 Los cuales están sujetos a las arquitecturas o especificaciones que se mencionan a continuación.
 
-#### Modelo clásico de series de tiempo (MCO)
+#### Modelo clásico de series de tiempo (MCO) {#DRNN-MCST}
 
 <!-- https://github.com/cran/forecast/blob/master/R/lm.R -->
 
@@ -115,20 +115,20 @@ Donde:
 
 - $Y_{t} =$ Representa el valor de la serie en el momento t.
 - $T =$ Representa el tiempo.
-- $S_{i} =$ Representa la estacionalidad de serie dividiéndola en 12 por los meses contenidos en un año.
+- $S_{i} =$ Representa la estacionalidad de serie de tiempo, correspondiente a los 12 meses contenidos en un año.
 - $\beta_{i} =$ Representa la tasa de cambio, es decir, el efecto de la variable sobre la serie de tiempo.
 
-Así también, el algoritmo empleado en la presente investigación correspondiente a este modelo esta contenido en el paquete "forecast" [@R-forecast], donde le mismo esta sujeto a las siguientes características:
+Así también, el algoritmo correspondiente al modelo clásico de series de tiempo empleado en la presente investigación forma parte de la colección de funciones del paquete "forecast" desarrollado por @R-forecast, el cual esta sujeto a las siguientes características:
 
-- Los pesos de las variables "$\beta_{i}$" se ajusta por el método de mínimos cuadrados ordinarios (Ver anexos).
+- Los pesos de las variables "$\beta_{i}$" se ajusta por el método de mínimos cuadrados ordinarios (Ver Anexo \@ref(ANEXO-MCO)).
 - La variable $T$ representa una serie temporal simple, definida por una sucesión finita.
 
 \begin{equation}
-a_{n} = n
+T = a_{n} = n
 (\#eq:drnn-an)
 \end{equation}
 
-- La variable $S_{i}$ representa variables dicótomicas (solo asumen valores de 0 y 1), es decir, si a la variable $Y$ posicionada en el momento $t$ correspondiente a la estación $S_{i}$, el valor de $Y_{t}$ varia en $\beta_{i}$, donde se tiene como estaciones a los meses contenidos en una gestión (Ver tabla \@ref(tab:estacionesEjemploMCO)).
+- La variable $S_{i}$ representa variables dicótomicas (solo asumen valores de 0 y 1), es decir, si a la variable $Y$ posicionada en el momento $t$ correspondiente a la estación $S_{i}$, $S_{i}$ asume el valor de 1 generando una variación de $\beta_{i}$ en el valor de $Y_{t}$, donde se tiene como estaciones a los meses contenidos en una gestión (Ver tabla \@ref(tab:estacionesEjemploMCO)).
 
 \vspace*{15pt}
 ```{r estacionesEjemploMCO}
@@ -143,7 +143,7 @@ estacionesEjemploMCO %>% renderTableBasic(captionTable = 'Estaciones modelo clas
 Donde $S_{1}$ correspondiente al mes de enero no se incluye para evitar la multicolinealidad en las variables independientes, y se entiende que $S_{1}$ esta activo cuando las demás estaciones asumen el valor de 0.
 
 
-#### Modelo autorregresivo integrado de media móvil (ARIMA)
+#### Modelo autorregresivo integrado de media móvil (ARIMA) {#DRNN-MODELO-ARIMA-ALGORITMO}
 
 <!-- https://github.com/cran/forecast/blob/878f06ca38ae78337c242c034bc814eb38df9be9/R/newarima2.R -->
 
@@ -161,19 +161,23 @@ Donde:
 - $\phi_{i} =$ Representa el coeficiente de cambio para la variable respectiva.
 - $\varepsilon_{t} =$ Representa el error del valor ajustado respecto al observados en el momento $t$.
 
+Así mismo, el algoritmo correspondiente al modelo autorregresivo integrado de media móvil (ARIMA) empleado en la presente investigación forma parte de la colección de funciones del paquete "forecast" desarrollado por @R-forecast, donde la misma esta sujeta a las siguientes características:
 
-Así mismo, el algoritmo empleado en la presente investigación correspondiente al metodo ARIMA esta contenido en el paquete "forecast" [@R-forecast] donde la misma esta sujeta a las siguientes características:
+- El método de optimización es el algoritmo Broyden-Fletcher-Goldfarb-Shanno (Ver Anexo \@ref(ANEXO-BFGS)).
+- El método para determinar el numero de diferencias, para volver estacionaria la serie temporal es la denominada Kwiatkowski-Phillips-Schmidt-Shin (Ver Anexo \@ref(ANEXO-KPSS)).
+- El numero de regresores y medias móviles es determinado como la combinación de los mismos que permitan minimizar el criterio de información de Akaike corregido (Ver Anexo \@ref(ANEXO-AICC)).
 
-- El método para determinar el numero de diferencias, para volver estacionaria la serie temporal es la denominada Kwiatkowski-Phillips-Schmidt-Shin (KPSS).
-- El numero de regresores y medias móviles es determinado como la combinación de los mismos que permitan minimizar el criterio de información de Akaike corregido (Ver anexos).
-
-#### Redes neuronales (NN)
+#### Redes neuronales (NN) {#DRNN-MODELO-NN-ALGORITMO}
 
 <!-- https://github.com/cran/forecast/blob/master/R/nnetar.R -->
 
-La arquitectura de una rede neuronal hace referencia al número de capas, neuronas y funciones de activación que se aplicaran, estas mismas pueden ser asignadas de forma arbitraria donde el uso de muchas capas y neuronas causaran un sobre ajuste del modelo, y usar muy pocas hará que el modelo no pueda generalizar la información contenida en las series de tiempo, en consecuencia las redes neuronales que se emplearan en la presente investigación estarán sujetos a las siguientes lineamientos que determinan su arquitectura:
+La arquitectura de una rede neuronal hace referencia al número de capas, neuronas y funciones de activación que se aplicaran, estas mismas pueden ser asignadas de forma arbitraria donde el uso de muchas capas y neuronas causaran un sobre ajuste del modelo, y usar muy pocas hará que el modelo no pueda generalizar la información contenida en las series de tiempo, dicha arquitectura puede definirse como una función presentada en la ecuación \@ref(eq:drnn-fnnr).
 
-$$NN(p,P,s, a)$$
+\begin{equation}
+NN = f(p,P,s, a)
+(\#eq:drnn-fnnr)
+\end{equation}
+
 Donde:
 
 - $p =$ Representa el numero de resagos para serie de entrada.
@@ -181,13 +185,12 @@ Donde:
 - $s =$ Representa el numero de neuronas en la capa oculta.
 - $a =$ Representa función de activación.
 
-Así también: 
+Así mismo, el algoritmo correspondiente al modelo redes neuronales (NN) empleado en la presente investigación forma parte de la colección de funciones del paquete "forecast" desarrollado por @R-forecast, donde la misma esta sujeta a las siguientes características:
 
-- $p$ elegido usando AIC del modelo lineal autoregresivo.
+- El numero de resagos para serie de entrada es determinado, usando AIC del modelo lineal autoregresivo.
+- El numero de resagos estacional para serie de entrada es igual a 1.
 - El número de capas ocultas serán igual a 1, con el mismo numero de neuronas que la capa de entrada.
-- La función de activación de aplicar será la función sigmoide.
-
-Las especificaciones del algoritmo utilizado corresponden al paquete "forecast" del repositorio publico CRAN [@R-forecast].
+- La función de activación de aplicar será la sigmoide.
 
 ### Evaluación de modelos
 
@@ -201,17 +204,22 @@ R2 = \left ( \frac{ \sum{[(x_{i}-\bar{x})-(y_{i}-\bar{y})]} } { \sqrt{ \sum{(x_{
 (\#eq:pef-ajusteR2)
 \end{equation}
 
-Donde el presente estadístico (R2) fue aplicado bajo dos lineamientos:
+\newpage
+Donde dichos criterios fueron ejecutados de la siguiente forma:
 
-#### R2 sobre datos de entrenamiento
+#### R2 sobre datos de entrenamiento {#DRNN-DEFINICION-EVALUACION-R2-ENTRENAMIENTO}
 
 Representa el ajuste existente entre los datos observados en el entrenamiento respecto a los datos pronosticados o ajustados para los mismos intervalos de tiempo.
 
-#### R2 sobre datos de prueba
+#### R2 sobre datos de prueba {#DRNN-DEFINICION-EVALUACION-R2-PRONOSTICO}
 
 Representa el ajuste entre los datos observados para realizar pruebas respecto los datos proyectados por el modelo para los mismos intervalos de tiempo.
 
-### Variables comprendidas
+#### Capacidad de generalización del modelo {#DRNN-DEFINICION-EVALUACION-CAMEL}
+
+Representa la aplicación de la metodología CAMEL sobre los datos de prueba y proyecciones correspondientes a cada modelo, verificando la tendencia de los mismos.
+
+### Variables comprendidas {#DRNN-VARIABLES}
 
 Las variables comprendidas que corresponden a las cuentas representadas en forma de series de tiempo para los pronósticos son las mismas definidas en el capítulo anterior:
 

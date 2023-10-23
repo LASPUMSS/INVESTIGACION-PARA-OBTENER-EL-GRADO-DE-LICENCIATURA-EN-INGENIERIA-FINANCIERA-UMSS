@@ -1,0 +1,3 @@
+
+\anexosms{Algoritmo de Broyden-Fletcher-Goldfarb-Shanno (BFGS)} \label{ANEXO-BFGS} 
+

@@ -1,2 +1,2 @@
 
-\anexosms{Método de minimos cuadrados ordinarios}
+\anexosms{Método de minimos cuadrados ordinarios (MCO)} \label{ANEXO-MCO} 

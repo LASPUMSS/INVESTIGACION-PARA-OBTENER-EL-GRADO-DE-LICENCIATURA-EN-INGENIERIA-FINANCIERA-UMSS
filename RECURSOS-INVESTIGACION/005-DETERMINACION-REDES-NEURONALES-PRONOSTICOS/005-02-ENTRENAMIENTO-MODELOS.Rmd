@@ -54,7 +54,7 @@ Para una mayor ejemplificación de los modelos empleados en las diferentes cuent
 
 ### Modelo clásico de series de tiempo 
 
-Una vez concluida en el entrenamiento de este tipo de modelo se obtendrá los coeficientes o tasas de cambio para las diferentes variables contenidas en el modelo.
+Una vez concluida el entrenamiento del modelo clásico de series de tiempo se obtuvo los coeficientes o tasas de cambio para las diferentes variables contenidas en el modelo (Ver sección \@ref(DRNN-MCST)) presentadas en la tabla \@ref(tab:drnn-tabla-resutado-ejemplo-mcst) .
 
 ```{r}
 variables <- c('Intercepto','Tendencia','Estacion 2','Estacion 3','Estacion 4','Estacion 5','Estacion 6','Estacion 7','Estacion 8','Estacion 9','Estacion 10','Estacion 11','Estacion 12')
@@ -64,22 +64,26 @@ resultadosMCO <- data.frame(VARIABLES=variables, BETAS=coef(listResultPEF[[id]]$
 ```
 
 \vspace*{15pt}
-```{r}
+```{r drnn-tabla-resutado-ejemplo-mcst}
 renderTableBasic(resultadosMCO,captionTable = 'Tasas de cambio modelo clasico')
 ```
 
 Donde cada tasa de cambio está sujeta a su interpretación, por ejemplo la tasa de cambio correspondiente a la tendencia nos indica que el resultado neto de gestión sufre una variación de `r format(resultadosMCO[2,2], scientific=FALSE)` Bs por cada mes, ahora bien respecto a las estaciones quiere decir por ejemplo que si la observación se encuentra en la estación 2 el resultado neto de gestión sufre una variación de `r format(resultadosMCO[3,2], scientific=FALSE)`.
 
-\newpage
 ### Redes neuronales
 
 Una vez entrenado el modelo de red neuronal para la cuenta correspondiente su estructura presentara la siguiente forma:
+
+\begin{equation}
+NN = f(p,P,s, a) = f(1,1,2,sigmoide)
+(\#eq:drnn-fnnr-ejemplo-cuenta)
+\end{equation}
 
 ```{=latex}
 \begin{figure}[h!]
 ```
 
-```{r, fig.cap='Arquitectura de red neuronal por la cuenta.'}
+```{r drnn-arquitectura-ejemplo-cuenta-figura, fig.cap='Arquitectura de red neuronal por la cuenta.'}
 #library(devtools)
 downloader::source_url('https://gist.githubusercontent.com/fawda123/7471137/raw/466c1474d0a505ff044412703516c34f1a4684a5/nnet_plot_update.r',prompt = F)
 
@@ -93,12 +97,12 @@ plot.nnet(wts.in,struct=struct)
 \end{figure}
 ```
 
-Donde X1 y X2 representan los datos de entrada, X1 representa una serie de tiempo con un resago de 1 y X2 igualmente representa una serie de tiempo con un resago estacional, siguiendo la capa oculta esta compuesta con el mismo numero de neuronal que la capa de entrada, así también, dentro lo correspondiente al análisis de los pesos ajustados de una red neuronal estos no pueden ser interpretados más que solo como una tasa de cambio.
+Donde la ecuación \@ref(eq:drnn-fnnr-ejemplo-cuenta) y figura \@ref(fig:drnn-arquitectura-ejemplo-cuenta-figura)
+indican que el numero de rezagos para serie de entrada es de 1 (Ver sección \@ref(DRNN-MODELO-NN-ALGORITMO)), juntamente con un serie de tiempo con rezago estacional de 1, es decir, X1 y X2 representan los datos de entrada siendo X1 la representación de una serie de tiempo con un rezago de 1 y X2 igualmente representa una serie de tiempo con un rezago estacional de 1, continuando con la capa oculta que esta compuesta con el mismo numero de neuronas que la capa de entrada, finalizando con la capa de salida contenida por una sola neurona, así también, aclarar que dentro lo correspondiente al análisis de los pesos ajustados de una red neuronal estos no pueden ser interpretados más que solo como una tasa de cambio.
 
-\newpage
 ### ARIMA
 
-El modelo ARIMA obtenido sujeto a las especificaciones dadas es el siguiente:
+El modelo ARIMA obtenido sujeto a las especificaciones dadas (Ver sección \@ref(DRNN-MODELO-ARIMA-ALGORITMO)) es el siguiente:
 
 ```{r}
 resultadosARIMA <- data.frame(t(coef(listResultPEF[[id]]$arimaModel)))
@@ -109,11 +113,11 @@ resultadosARIMA <- data.frame(t(coef(listResultPEF[[id]]$arimaModel)))
 renderTableBasic(resultadosARIMA,captionTable = 'Regresores y medias moviles del modeo ARIMA')
 ```
 
-Es decir, que el algoritmo de [@R-forecast] determino que el modelo ARIMA que minimiza el coeficiente de información de Akaike (AIC) está definido por un auto regresor junto a una media móvil y un auto regresor estacional.
+Es decir, que el algoritmo de @R-forecast determino que el modelo ARIMA que minimiza el coeficiente de información de Akaike (AIC) está definido por un auto regresor con rezago 1, una media móvil de rezago y un auto regresor con rezago estacional de 1, para la serie de tiempo que contiene la cuenta del resultado neto de la gestión.
 
 ### Eficiencia de los modelos en el entrenamiento
 
-Una vez terminado el entrenamiento de los modelos se realizará la evaluación de los mismos.
+Una vez terminado el entrenamiento de los modelos se realizará la evaluación de los mismos, empezando midiendo el ajuste de los mismos respecto a los datos de entrenamiento (Ver sección \@ref(DRNN-DEFINICION-EVALUACION-R2-ENTRENAMIENTO)).
 
 \vspace*{15pt}
 ```{r}
@@ -121,11 +125,11 @@ renderTableBasic( listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% tra
                   captionTable = 'Ajuste R2 de los modelos para resultado neto de la gestion')
 ```
 
-Es decir que los datos pronosticados del resultado neto de la gestión para el intervalo de tiempo correspondiente a los datos de entrenamiento se ajustan en `r listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% select(NN) %>% round(digits = 4) %>% pull() *100`%, `r listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% select(MCO) %>% round(digits = 4) %>% pull() *100`% y `r listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% select(ARIMA) %>% round(digits = 4) %>% pull() *100`% para los modelos correspondientes suscritos a la tabla anterior.
+Es decir, que los datos pronosticados del resultado neto de la gestión para el intervalo de tiempo correspondiente a los datos de entrenamiento se ajustan en `r listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% select(NN) %>% round(digits = 4) %>% pull() *100`%, `r listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% select(MCO) %>% round(digits = 4) %>% pull() *100`% y `r listResumeModels$r2ModelsResum %>% filter(CUENTAS==id) %>% select(ARIMA) %>% round(digits = 4) %>% pull() *100`% para los modelos correspondientes suscritos a la tabla anterior.
 
 ### Eficiencia de los modelos en los pronósticos
 
-Posteriormente se calcula el ajuste de las proyecciones respecto a los datos de prueba, los cuales son nuevos para el modelo y nos dan una idea de que si el modelo está logrando generalizar los patrones contenidos en la serie de tiempo.
+Posteriormente se calcula el ajuste de las proyecciones respecto a los datos de prueba, los cuales son nuevos para el modelo y nos dan una idea de que si el modelo está logrando generalizar los patrones contenidos en la serie de tiempo (Ver sección \@ref(DRNN-DEFINICION-EVALUACION-R2-PRONOSTICO)).
 
 \vspace*{15pt}
 ```{r}
@@ -133,13 +137,15 @@ renderTableBasic( listResumeModels$r2ForecastResum %>% filter(CUENTAS==id) %>% t
                   captionTable = 'Ajuste R2 de proyecciones de modelos para resultado neto de la gestion')
 ```
 
+Ahora bien, para poder evaluar la capacidad de generalización de los modelos (Ver sección \@ref(DRNN-DEFINICION-EVALUACION-CAMEL)) es necesario las proyección del resto de cuentas definidas en la sección \@ref(DRNN-VARIABLES), así que la presentación de esta evaluación se reserva para las secciones que vienen a continuación.
+
 ### Simulación de proyecciones
 
 Sobre los mismos modelos se realizan simulaciones sobre las proyecciones que son el resultado de la proyección promedio más menos selección aleatoria de los errores o desviaciones, sobre los cuales se calcula su ajuste R2 donde dichas simulaciones muestran el rango de ajuste al que está sujeto cada modelo para la cuenta de resultado neto de la gestión, los cuales pueden ser visualizados a través de histogramas (Ver figura \@ref(fig:simulacion-modelos-proyecciones)).
 
 Para las diferentes series de tiempo se realizara `r length(listResultPEF[[id]]$nnModelSimulate$r2Model)` simulaciones para dar con el ajuste promedio del modelo, ahora bien en la siguientes apartado se presentara los resultados obtenidos para cada serie de tiempo sujeta al proceso presentado en esta sección.
 
-
+\newpage
 ```{=latex}
 \begin{figure}[h!]
 ```
@@ -152,13 +158,7 @@ p1 <-
     geom_histogram() + 
     ggtitle('NN') + 
     xlab('R2') + 
-    ylab('') + 
-    theme(plot.title = element_text(size=24),
-          axis.title.x=element_text(size=15),
-          axis.title.y = element_text(size=30),
-          axis.text.y=element_text(size=15),
-          axis.text.x = element_text(size=15)) +
-    coord_fixed(ratio = 1/20, xlim = c(0.5, 1))
+    ylab('') 
 
 z <- data.frame(r2Model=listResultPEF[[id]]$mcoModelSimulate$r2Model)
 p2 <- 
@@ -167,14 +167,7 @@ p2 <-
     geom_histogram() + 
     ggtitle('MCO') + 
     xlab('R2') + 
-    ylab('') + 
-    theme(plot.title = element_text(size=24),
-          axis.title.x=element_text(size=15),
-          axis.title.y = element_text(size=30),
-          axis.text.y=element_text(size=15),
-          axis.text.x = element_text(size=15)) +
-    coord_fixed(ratio = 1/20, xlim = c(0.5, 1))
-
+    ylab('') 
 
 z <- data.frame(r2Model=listResultPEF[[id]]$arimaModelSimulate$r2Model)
 p3 <- 
@@ -183,16 +176,9 @@ p3 <-
     geom_histogram() + 
     ggtitle('ARIMA') + 
     xlab('R2') + 
-    ylab('') + 
-    theme(plot.title = element_text(size=24),
-          axis.title.x=element_text(size=15),
-          axis.title.y = element_text(size=30),
-          axis.text.y=element_text(size=15),
-          axis.text.x = element_text(size=15)) +
-    coord_fixed(ratio = 1/20, xlim = c(0.5, 1))
+    ylab('') 
 
-
-p1+p2+p3
+p1/p2/p3
 ```
 
 ```{=latex}

@@ -1,0 +1,3 @@
+
+\anexosms{Criterio de información de Akaike corregidoo (AICC)} \label{ANEXO-AICC} 
+
