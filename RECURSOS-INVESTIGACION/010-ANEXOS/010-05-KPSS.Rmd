@@ -1,2 +1,2 @@
 
-\anexosms{Kwiatkowski-Phillips-Schmidt-Shin (KPSS)} \label{ANEXO-KPSS} 
+\anexosms{Kwiatkowski-Phillips-Schmidt-Shin} \label{ANEXO-KPSS} 
