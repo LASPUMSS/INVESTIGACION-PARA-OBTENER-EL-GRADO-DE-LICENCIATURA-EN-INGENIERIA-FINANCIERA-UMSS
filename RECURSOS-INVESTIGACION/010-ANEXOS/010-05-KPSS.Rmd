@@ -1,2 +1,22 @@
 
 \anexosms{Kwiatkowski-Phillips-Schmidt-Shin} \label{ANEXO-KPSS} 
+
+El presente anexo correponde a @KPSS-ANEXO, donde define la prueba Kwiatkowski-Phillips-Schmidt-Shin (KPSS) como aquella que determina si una serie de tiempo es estacionaria alrededor de una tendencia media o lineal, o si no es estacionaria debido a una raíz unitaria. Una serie temporal estacionaria es aquella en la que las propiedades estadísticas, como la media y la varianza, son constantes a lo largo del tiempo.
+
+- La hipótesis nula de la prueba es que los datos son estacionarios.
+- La hipótesis alternativa para la prueba es que los datos no son estacionarios.
+
+La prueba KPSS se basa en la regresión lineal, divide una serie en tres partes: 
+
+- Una tendencia determinista ($\beta t$). 
+- Una caminata aleatoria ($r_{t}$)
+- Un error estacionario ($e$), 
+
+Es decir, se tiene la ecuación de regresión:
+
+\begin{equation}
+X_{t} =r_{t} + \beta t + e
+(\#eq:kpss-y)
+\end{equation}
+
+Si los datos son estacionarios, tendrán un elemento fijo para una intersección o la serie será estacionaria alrededor de un nivel fijo. La prueba utiliza OLS para encontrar la ecuación, que difiere ligeramente dependiendo de si desea probar la estacionariedad de nivel o la estacionariedad de tendencia. Se utiliza una versión simplificada, sin el componente de tendencia temporal, para probar la estacionariedad del nivel.Los datos normalmente se transforman logarítmicamente antes de ejecutar la prueba KPSS, para convertir cualquier tendencia exponencial en lineal.

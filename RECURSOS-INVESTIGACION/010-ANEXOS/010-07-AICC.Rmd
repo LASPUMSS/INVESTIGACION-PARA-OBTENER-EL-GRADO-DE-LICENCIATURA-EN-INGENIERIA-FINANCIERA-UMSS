@@ -1,3 +1,34 @@
 
 \anexosms{Criterio de información de Akaike corregidoo} \label{ANEXO-AICC} 
 
+El presente anexo corresponde a @R-forecast-book, donde se presenta un método estrechamente relacionado con medida de la capacidad predictiva de un modelo, es el Criterio de Información de Akaike (AIC), que definimos como:
+
+\begin{equation}
+\text{ AIC } = T\log\left(\frac{\text{SSE}}{T}\right) + 2(k+2)
+(\#eq:anx-aicc)
+\end{equation}
+
+Donde:
+
+- $T =$ es el número de observaciones utilizadas para la estimación. 
+- $k =$ es el número de predictores en el modelo. 
+
+Diferentes paquetes informáticos utilizan definiciones ligeramente diferentes para el AIC, aunque todos deberían conducir a la selección del mismo modelo. El $k + 2$ parte de la ecuación ocurre porque hay $k + 2$ parámetros en el modelo: 
+
+- El $k$ coeficientes para los predictores, el intercepto y la varianza de los residuales. 
+
+La idea aquí es penalizar el ajuste del modelo (SSE) con la cantidad de parámetros que deben estimarse.
+
+\begin{equation}
+\text{SSE} = \sum_{t=1}^T e_{t}^2
+(\#eq:anx-aicc-sse)
+\end{equation}
+
+El modelo con el valor mínimo del AIC suele ser el mejor modelo para realizar pronósticos. Para valores grandes de $T$, minimizar el AIC equivale a minimizar el valor de validación cruzada.
+
+Ahora bien, para valores pequeños de $T$, el AIC tiende a seleccionar demasiados predictores, por lo que se ha desarrollado una versión del AIC con corrección de sesgos.
+
+\begin{equation}
+\text{AIC}_{\text{c}} = \text{AIC} + \frac{2(k+2)(k+3)}{T-k-3}
+(\#eq:anx-aicc-corregido)
+\end{equation}

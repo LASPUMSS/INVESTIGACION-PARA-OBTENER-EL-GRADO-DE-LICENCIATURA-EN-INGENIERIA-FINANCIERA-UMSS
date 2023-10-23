@@ -1,2 +1,83 @@
 
 \anexosms{Método de minimos cuadrados ordinarios} \label{ANEXO-MCO} 
+
+Lo expuesto en el presente anexo corresponde a @MCO-FERNANDO-ECONOMETRIA, donde se parte de la función de regresión muestral, donde la variables $Y_{i}$ depende de los estimadores $\hat{\beta_{k}}$ multiplicado por cada variable contenidas en el modelo $X_{ki}$, mas los residuos $\hat{\mu_{i}}$.
+
+\begin{equation}
+\hat{Y_{i}} = \hat{\beta_{1}} + \hat{\beta_{2}} X_{2i} + \hat{\beta_{3}} X_{3i} + \dots +  + \hat{\beta_{k}} X_{ki} + \hat{\mu_{i}}
+(\#eq:anx-y)
+\end{equation}
+
+La ecuación \@ref(eq:anx-y) puede ser reescrita en forma matricial, tomando la siguiente forma:
+
+\begin{equation}
+y = X \hat{\beta} + \hat{\mu}
+(\#eq:anx-y-matriz)
+\end{equation}
+
+Donde el objetivo del método de mínimos cuadrados ordinarios busca determinar los coeficiente $\hat{\beta}$ sujeto a la siguiente restricción:
+
+\begin{equation}
+Min_{\hat{\beta_{1}}, \hat{\beta_{2}}, \dots, \hat{\beta_{k}}} = \left[ \sum_{i=1}^{n}{\mu_{i}^{2}} \right]
+(\#eq:anx-mco-opt)
+\end{equation}
+
+
+Despejando el vector de errores $\hat{\mu}$ en la ecuación \@ref(eq:anx-mco-opt) se tiene:
+
+\begin{equation}
+\hat{\mu}= Y - X \hat{\beta}
+(\#eq:anx-mco-u-despejado)
+\end{equation}
+
+
+Donde la suma residual de cuadrado corresponde a:
+
+\begin{equation}
+{\hat{\mu}}^{'}\hat{\mu} = (Y - X \hat{\beta})^{'}(Y - X \hat{\beta}) = (Y^{'} - {X}^{'} {\hat{\beta}}^{'})(Y - X \hat{\beta})
+(\#eq:anx-mco-src)
+\end{equation}
+
+Teniendo como forma final la ecuación \@ref(eq:anx-mco-src):
+
+\begin{equation}
+{\hat{\mu}}^{'}\hat{\mu} = Y^{'}Y - Y^{'}X\hat{\beta} - {\hat{\beta}}^{'}X^{'}Y + {\hat{\beta}}^{'}X^{'}X\hat{\beta} = Y^{'}Y - 2{\hat{\beta}}^{'}X^{'}Y + {\hat{\beta}}^{'}X^{'}X\hat{\beta}
+(\#eq:anx-mco-src-despejado)
+\end{equation}
+
+
+Para minimizar la suma cuadrática de perturbaciones respecto a $\beta$, igualamos a $0$ la derivada de la expresión anterior respecto a los coeficientes  $\beta$.
+
+\begin{equation}
+\frac{\partial{{\hat{\mu}}^{'}\hat{\mu}}}{\partial\hat{\beta}} =  \frac{\partial{(y^{'}Y - 2{\hat{\beta}}^{'}X^{'}Y + {\hat{\beta}}^{'}X^{'}X\hat{\beta})}}{\partial\hat{\beta}} = -2X^{'}Y + 2X^{'}X\hat{\beta} = 0
+(\#eq:anx-mco-src-derivado)
+\end{equation}
+
+\newpage
+Entonces:
+
+\begin{equation}
+X^{'}X\hat{\beta}=X^{'}Y
+(\#eq:anx-mco-src-derivado-despejado)
+\end{equation}
+
+Pre-multiplicando por $(X'X)^{-1}$ se tiene:
+
+\begin{equation}
+(X'X)^{-1} (X'X)\hat{\beta}=(X'X)^{-1}X'Y 
+(\#eq:anx-mco-src-derivado-despejado-2)
+\end{equation}
+
+Dando lugar a coeficientes $\beta$ por mínimos cuadrados ordinarios se define como:
+
+\begin{equation}
+\hat{\beta}=(X'X)^{-1}X'Y
+(\#eq:anx-mco-beta-matriz)
+\end{equation}
+
+El cual cumple el criterio de minimizar en la ecuación \@ref(eq:anx-mco-opt).
+
+
+
+
+

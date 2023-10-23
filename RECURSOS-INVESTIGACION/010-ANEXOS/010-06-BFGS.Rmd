@@ -1,3 +1,63 @@
 
 \anexosms{Algoritmo de Broyden-Fletcher-Goldfarb-Shanno} \label{ANEXO-BFGS} 
 
+Lo expuesto en el presente anexo corresponde a @BFGS-ANEXO,done se afirma que en matemáticas, el método Broyden-Fletcher-Goldfarb-Shanno (BFGS) es un método para resolver un problema de optimización no lineal sin restricciones. El método BFGS es una solución que se utiliza a menudo cuando se desea un algoritmo con direcciones de descenso.
+
+La idea principal de este método es evitar la construcción explícita de la matriz hessiana y, en cambio, construir una aproximación de la inversa de la segunda derivada de la función a minimizar, analizando los diferentes gradientes sucesivos. 
+
+Esta aproximación de las derivadas de la función conduce a un método cuasi-Newton (una variante del método de Newton) para encontrar el mínimo en el espacio de parámetros.
+
+La matriz de Hesse no necesita ser recalculado en cada iteración del algoritmo. Sin embargo, el método supone que la función puede aproximarse localmente mediante una expansión cuadrática limitada alrededor del óptimo.
+
+El objetivo es reducir al mínimo, con y una función diferenciable valor real.
+
+\begin{equation}
+f(x)x \in  \mathbb{R}^{n}f
+(\#eq:bfgs-1)
+\end{equation}
+
+La búsqueda de la dirección de descenso en la etapa viene dada por la solución de la siguiente ecuación, equivalente a la ecuación de Newton:
+
+\begin{equation}
+B_{K} P_{k} = - \bigtriangledown f(x_{k})
+(\#eq:bfgs-2)
+\end{equation}
+
+Donde es una aproximación de la matriz de Hesse en el paso, y es el gradiente de evaluado en:
+
+\begin{equation}
+B_{k}k\bigtriangledown f(x_{k})fx_{k}
+(\#eq:bfgs-3)
+\end{equation}
+
+A continuación, se utiliza una búsqueda lineal en la dirección para encontrar el siguiente punto:
+
+\begin{equation}
+P_{k}x_{k+1}
+(\#eq:bfgs-4)
+\end{equation}
+
+En lugar de imponer el cálculo como la matriz hessiana en el punto, la hessiana aproximada en la iteración se actualiza agregando dos matrices:
+
+\begin{equation}
+B_{k+1} = B_{k} + U_{k} + V_{k}
+(\#eq:bfgs-5)
+\end{equation}
+
+Donde y son matrices simétricas de rango 1 pero tienen bases diferentes. Una matriz es simétrica de rango 1 si y solo si se puede escribir en la forma, donde es una matriz de columna y un escalar.
+
+De manera equivalente, y producir una matriz de actualización de ranking 2 que sea robusta con respecto a problemas de escala que a menudo penalizan los métodos de gradiente (como el método Broyden, el análogo multidimensional del método secante ). Las condiciones impuestas para la actualización son:
+
+\begin{equation}
+B_{k+1}(x_{k+1}-x_{k}) = \bigtriangledown f(x_{k+1}) - \bigtriangledown f(x_{k}) 
+(\#eq:bfgs-6)
+\end{equation}
+
+Es decir, a partir de un valor inicial y una matriz hessiana aproximada, se repiten las siguientes iteraciones hasta que convergen a la solución $X_{0}B_{0}x$.
+
+1. Encuentra la solución: $P_{k}B_{K}P_{K} = -\bigtriangledown f(x_{k})$
+2. Realice una búsqueda lineal para encontrar el tono óptimo en la dirección que se encuentra en la Parte 1 y luego actualice.
+3. $y_{k} = \bigtriangledown f(x_{k+1}) - \bigtriangledown f(x_{k})$
+4. $B_{k+1} = B_{k} + (y_{k}y_{k}^{T})/(y_{k}^{T}s_{k}) - (B_{k}s_{k}s_{k}^{T}B_{k})/(s_{k}^{T}B_{k}s_{k})$
+
+La función es la función que se debe minimizar. La convergencia se puede probar calculando la norma de gradiente. En la práctica, se puede inicializar cuando la primera iteración será equivalente a la del algoritmo de gradiente , pero las otras iteraciones lo afinarán cada vez más gracias a la aproximación hessiana. Podemos calcular el intervalo de confianza de la solución a partir de la inversa de la matriz hessiana final.
