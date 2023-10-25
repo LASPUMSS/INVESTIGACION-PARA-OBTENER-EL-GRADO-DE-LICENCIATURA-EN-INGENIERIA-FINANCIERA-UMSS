@@ -17,7 +17,7 @@ Respecto a la arquitectura y entrenamiento del modelo de red de neuronas artific
 
 En este sentido se recomienda que para mayor ajuste de pronósticos por parte de las redes neuronales se deben emplear arquitecturas más complejas atendiendo características como ser, tipo de entidad, estacionalidad mensual y otras características, pero siendo evidente que este tipo de arquitecturas requerirán mayor esfuerzo computacional.
 
-## Conclusión y recomendación respecto a la proyección-simulación de los estados financieros.
+## Conclusión y recomendación respecto a la proyección de los estados financieros
 
 Se elaboró la proyección-simulación de los estados financieros para los modelos contenidos en la presente investigación (redes neuronales, modelo clásico de series de tiempo y ARIMA) que es el resultado de los coeficientes obtenidos respecto a sus datos de entrada, así también la simulación de dichos modelos está definida como la proyección promedio más los errores aleatorios obtenidos por el mismo. 
 

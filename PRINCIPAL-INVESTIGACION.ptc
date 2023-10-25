@@ -158,7 +158,7 @@
 \contentsline {section}{\numberline {5}CONCLUSIONES Y RECOMENDACIONES}{91}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Conclusión y recomendación respecto al diagnóstico financiero realizado}{91}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Conclusión y recomendación respecto a la definición de la red de neuronas artificiales}{91}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Conclusión y recomendación respecto a la proyección-simulación de los estados financieros.}{92}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.3}Conclusión y recomendación respecto a la proyección de los estados financieros}{92}{subsection.5.3}%
 \contentsline {subsection}{\numberline {5.4}Conclusión y recomendación respecto a la evaluación de los datos proyectados-simulados}{92}{subsection.5.4}%
 \contentsline {subsection}{\numberline {5.5}Conclusión y recomendación general}{93}{subsection.5.5}%
 \contentsline {footerms}{REFERENCIAS BIBLIOGRFICAS}{94}{section*.51}%
@@ -167,15 +167,15 @@
 \ttl@starttoc {anexosections@1}
 \contentsline {anexosms}{\numberline {A}Carta solicitud permiso uso de datos ASFI}{98}{anexosms.1}%
 \contentsline {anexosms}{\numberline {B}Respuesta a solicitud uso de datos ASFI}{99}{anexosms.2}%
-\contentsline {anexosms}{\numberline {C}Finanzas, redes neuronales y su convergencia}{100}{anexosms.3}%
-\contentsline {anexosms}{\numberline {D}Método de minimos cuadrados ordinarios}{103}{anexosms.4}%
-\contentsline {anexosms}{\numberline {E}Kwiatkowski-Phillips-Schmidt-Shin}{105}{anexosms.5}%
-\contentsline {anexosms}{\numberline {F}Algoritmo de Broyden-Fletcher-Goldfarb-Shanno}{106}{anexosms.6}%
-\contentsline {anexosms}{\numberline {G}Criterio de información de Akaike corregidoo}{108}{anexosms.7}%
-\contentsline {anexosms}{\numberline {H}Entidades financieras comprendidas en el diagnostico}{109}{anexosms.8}%
-\contentsline {anexosms}{\numberline {I}Graficos de proyecciones de modelos por cuenta}{112}{anexosms.9}%
-\contentsline {anexosms}{\numberline {J}Indicadores CAMEL calculados}{174}{anexosms.10}%
-\contentsline {anexosms}{\numberline {K}Calificaciones CAMEL}{185}{anexosms.11}%
-\contentsline {anexosms}{\numberline {L}Variables utilizadas en el diagnostico CAMEL}{191}{anexosms.12}%
+\contentsline {anexosms}{\numberline {C}Finanzas y redes neuronales}{100}{anexosms.3}%
+\contentsline {anexosms}{\numberline {D}Método de minimos cuadrados ordinarios}{102}{anexosms.4}%
+\contentsline {anexosms}{\numberline {E}Kwiatkowski-Phillips-Schmidt-Shin}{104}{anexosms.5}%
+\contentsline {anexosms}{\numberline {F}Algoritmo de Broyden-Fletcher-Goldfarb-Shanno}{105}{anexosms.6}%
+\contentsline {anexosms}{\numberline {G}Criterio de información de Akaike corregidoo}{107}{anexosms.7}%
+\contentsline {anexosms}{\numberline {H}Entidades financieras comprendidas en el diagnostico}{108}{anexosms.8}%
+\contentsline {anexosms}{\numberline {I}Graficos de proyecciones de modelos por cuenta}{111}{anexosms.9}%
+\contentsline {anexosms}{\numberline {J}Indicadores CAMEL calculados}{173}{anexosms.10}%
+\contentsline {anexosms}{\numberline {K}Calificaciones CAMEL}{184}{anexosms.11}%
+\contentsline {anexosms}{\numberline {L}Variables utilizadas en el diagnostico CAMEL}{190}{anexosms.12}%
 \ttl@stoptoc {anexosections@1}
 \contentsfinish 

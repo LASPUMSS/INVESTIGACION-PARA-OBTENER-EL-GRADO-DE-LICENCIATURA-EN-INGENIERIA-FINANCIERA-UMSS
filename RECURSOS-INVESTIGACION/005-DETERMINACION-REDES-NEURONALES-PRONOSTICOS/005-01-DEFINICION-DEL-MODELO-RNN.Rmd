@@ -180,15 +180,15 @@ NN = f(p,P,s, a)
 
 Donde:
 
-- $p =$ Representa el numero de resagos para serie de entrada.
-- $P =$ Representa el numero de resagos estacional para serie de entrada.
+- $p =$ Representa el numero de rezagos para serie de entrada.
+- $P =$ Representa el numero de rezagos estacional para serie de entrada.
 - $s =$ Representa el numero de neuronas en la capa oculta.
 - $a =$ Representa función de activación.
 
 Así mismo, el algoritmo correspondiente al modelo redes neuronales (NN) empleado en la presente investigación forma parte de la colección de funciones del paquete "forecast" desarrollado por @R-forecast, donde la misma esta sujeta a las siguientes características:
 
-- El numero de resagos para serie de entrada es determinado, usando AIC del modelo lineal autoregresivo.
-- El numero de resagos estacional para serie de entrada es igual a 1.
+- El numero de rezagos para serie de entrada es determinado, usando AIC del modelo lineal autoregresivo.
+- El numero de rezagos estacional para serie de entrada es igual a 1.
 - El número de capas ocultas serán igual a 1, con el mismo numero de neuronas que la capa de entrada.
 - La función de activación de aplicar será la sigmoide.
 
