@@ -2,3 +2,15 @@
     margin-left: 200px;
     margin-right: 200px;
 }
+.header-presentacion {
+    display:flex;
+    justify-content: space-between;
+}
+
+.header-title-proyecto {
+    text-align: center;
+    font-weight:bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
