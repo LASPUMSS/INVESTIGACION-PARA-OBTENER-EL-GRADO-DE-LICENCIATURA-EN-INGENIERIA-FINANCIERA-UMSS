@@ -13,7 +13,7 @@ getVariablesForCAMEL <- function(x, dat=NULL, by='TIPO_DE_ENTIDAD') {
     
     if (x=='cap') {
         
-        result <- dat$COEFICIENTE_DE_ADECUACION_PATRIMONIAL
+        result <- ifelse(dat$COEFICIENTE_DE_ADECUACION_PATRIMONIAL==0, NA, dat$COEFICIENTE_DE_ADECUACION_PATRIMONIAL)
         
     } else if(x=='cartVnc'){
         

@@ -5,6 +5,9 @@
 
 
 
+
+### Indicadores de capital
+
 <!-- ##################################################### -->
 <!-- #####################  INDICADORES DE CAPITAL         -->
 <!-- ##################################################### -->
@@ -12,10 +15,7 @@
 
 
 
-<div class="figure" style="text-align: center">
-<img src="figure/unnamed-chunk-3-1.png" alt="plot of chunk unnamed-chunk-3" width="100%" height="60%" />
-<p class="caption">plot of chunk unnamed-chunk-3</p>
-</div>
+<img src="figure/unnamed-chunk-3-1.png" width="100%" height="60%" style="display: block; margin: auto;" />
 
 
 <table class="table" style="font-size: 8px; margin-left: auto; margin-right: auto;">

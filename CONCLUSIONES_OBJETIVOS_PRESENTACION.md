@@ -1,0 +1,10 @@
+
+# CONCLUSIONES Y RECOMENDACIONES
+
+- Conclusión y recomendación respecto al diagnóstico financiero realizado
+- Conclusión y recomendación respecto a la definición de la red de neuronas artificiales
+- Conclusión y recomendación respecto a la proyección de los estados financieros
+- Conclusión y recomendación respecto a la evaluación de los datos proyectados-simulados 
+
+
+

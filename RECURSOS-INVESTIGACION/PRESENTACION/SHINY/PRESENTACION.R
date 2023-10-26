@@ -12,35 +12,51 @@ library(shiny)
 # Define UI for application that draws a histogram
 ui <- fluidPage(
     
+    includeCSS("RECURSOS-INVESTIGACION/PRESENTACION/SHINY/assets/css/style.css"),
+    
     # Application title
     titlePanel("Proyección de estados financieros por el método de redes neuronales artificiales aplicable al sector financiero de Bolivia"),
 
     # Sidebar with a slider input for number of bins 
-    sidebarLayout(
-        sidebarPanel(
-            sliderInput("bins",
-                        "Number of bins:",
-                        min = 1,
-                        max = 50,
-                        value = 30)
-        ),
-
-        # Show a plot of the generated distribution
-        mainPanel(
-            uiOutput("mark")
-        )
+    navbarPage("",
+               tabPanel("PERFIL"),
+               tabPanel("MARCO TEORICO"),
+               navbarMenu("DIAGNOSTICO FINANCIERO",
+                          tabPanel("PRECISIONES DEL DIAGNOSTICO"),
+                          tabPanel("CALCULO DE INDICADORES", uiOutput("diagnosticoCalculoIndicadoes"))
+               ),
+               tabPanel("PRONOSTICO DE ESTADOS FINANCIEROS POR NN"),
+               navbarMenu("CONCLUSIONES Y RECOMENDACIONES",
+                          tabPanel("OBJETIVOS", uiOutput("conclusionesObjetivos")),
+                          tabPanel("GENERAL", uiOutput("conclusionesGeneral"))
+               ),
     )
 )
 
 # Define server logic required to draw a histogram
 server <- function(input, output) {
-
-    output$mark <- renderUI({
-        HTML(markdown::markdownToHTML(knitr::knit("RECURSOS-INVESTIGACION/PRESENTACION/SHINY/02-CALCULO-INDICADORES.Rmd", quiet = TRUE), fragment.only=TRUE))
+    
+    
+    # DIAGNOSTICO
+    output$diagnosticoCalculoIndicadoes <- renderUI({
+        HTML(markdown::markdownToHTML(knitr::knit("RECURSOS-INVESTIGACION/PRESENTACION/SHINY/DIAGNOSTICO/02-CALCULO-INDICADORES_PRESENTACION.Rmd", quiet = TRUE), fragment.only=TRUE))
         
     })
+    
+    
+    # CONCLUSIONES
+    output$conclusionesObjetivos <- renderUI({
+        HTML(markdown::markdownToHTML(knitr::knit("RECURSOS-INVESTIGACION/PRESENTACION/SHINY/CONCLUSIONES/CONCLUSIONES_OBJETIVOS_PRESENTACION.Rmd", quiet = TRUE), fragment.only=TRUE))
+        
+    })
+    
+    output$conclusionesGeneral <- renderUI({
+        HTML(markdown::markdownToHTML(knitr::knit("RECURSOS-INVESTIGACION/PRESENTACION/SHINY/CONCLUSIONES/CONCLUSIONES_GENERAL_PRESENTACION.Rmd", quiet = TRUE), fragment.only=TRUE))
+        
+    })
+    
 }
 
 # Run the application 
-shinyApp(ui = ui, server = server)
+shinyApp(ui = ui, server = server,)
 
