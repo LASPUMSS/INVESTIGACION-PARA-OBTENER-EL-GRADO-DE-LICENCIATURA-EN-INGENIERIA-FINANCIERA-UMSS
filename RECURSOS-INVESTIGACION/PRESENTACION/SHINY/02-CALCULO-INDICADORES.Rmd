@@ -1,0 +1,63 @@
+<!-- Configuración CHUNKS -->
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE,
+                      fig.align='center',
+                      out.height='60%',
+                      out.width='100%')
+
+knitr::opts_knit$set(root.dir = "E:/PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS")
+
+options(scipen=999)
+
+```
+
+
+```{r}
+source('RECURSOS-INVESTIGACION/R/camel-get-datCamelIndicadores.R')
+source('RECURSOS-INVESTIGACION/R/camel-getListStatsIndicadores.R')
+source('RECURSOS-INVESTIGACION/R/camel-getListPlotsIndicadores.R')
+source('RECURSOS-INVESTIGACION/R/camel-get-datIdsNamesCamelInds.R')
+source("RECURSOS-INVESTIGACION/R/camel-render-tables-indicadoresStats.R")
+source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
+source("RECURSOS-INVESTIGACION/R/handles.R")
+
+require(dplyr)
+require(stringr)
+require(glue)
+require(ggplot2)
+require(patchwork)
+require(knitr)
+require(kableExtra)
+
+if (!('dat' %in% ls())) {dat <- NULL}
+
+datCamelIndNorm <- getDatCamelIndicadores(dat=dat, by='TIPO_DE_ENTIDAD')
+datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
+
+```
+
+
+<!-- ##################################################### -->
+<!-- #####################  INDICADORES DE CAPITAL         -->
+<!-- ##################################################### -->
+
+```{r}
+ids <- c('indCap_CAP','indCap_CCCM','indCap_CACCM','indCap_CCP')
+listResult <- getListStatsOverviewInd(ids, datCamelIndNorm, datIdsNamesCamelInds)
+listPlots <- getListPlotsInd(listResult)
+listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadísticas de indicadores de capital', 6)
+
+```
+
+
+```{r, fig.height = 20, fig.width = 20}
+wrap_plots(listPlots, ncol = 1)
+```
+
+
+```{r}
+listTablesRender
+```
