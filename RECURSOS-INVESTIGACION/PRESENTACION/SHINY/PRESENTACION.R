@@ -31,7 +31,17 @@ ui <- fluidPage(
     
     # Sidebar with a slider input for number of bins 
     navbarPage("",
+               
+               ####################################################################
+               # INICIO UI
+               ####################################################################
+               
                tabPanel("INICIO",uiOutput("inicio")),
+               
+               ####################################################################
+               # PERFIL UI
+               ####################################################################
+               
                navbarMenu("PERFIL ",
                           tabPanel("PLANTEAMIENTO DEL PROBLEMA"),
                           tabPanel("FORMULACIÓN DEL PROBLEMA CENTRAL"),
@@ -42,26 +52,75 @@ ui <- fluidPage(
                           tabPanel("MARCO METODOLÓGICO")
                ),
                
+               ####################################################################
+               # MARCO TEORICO UI
+               ####################################################################
+               
                tabPanel("MARCO TEORICO"),
+               
+               ####################################################################
+               # DIAGNOSTICO UI
+               ####################################################################
                
                navbarMenu("DIAGNOSTICO FINANCIERO",
                           tabPanel("PRECISIONES DEL DIAGNOSTICO"),
-                          tabPanel("CALCULO DE INDICADORES", uiOutput("diagnosticoCalculoIndicadoes")),
+                          tabPanel("CALCULO DE INDICADORES",
+                                   tabsetPanel(
+                                       tabPanel("CAPITAL (C)", uiOutput("diagnosticoCalculoIndicadoresCapital")),
+                                       tabPanel("ACTIVOS (A)", uiOutput("diagnosticoCalculoIndicadoresActivos")),
+                                       tabPanel("ADMINISTRACION (M)", uiOutput("diagnosticoCalculoIndicadoresAdmin")),
+                                       tabPanel("BENEFICIOS (E)", uiOutput("diagnosticoCalculoIndicadoresBeneficios")),
+                                       tabPanel("LIQUIDEZ (L)", uiOutput("diagnosticoCalculoIndicadoresLiquidez"))
+                                   )),
                           tabPanel("DEFINICIÓN DE RANGOS Y LÍMITES DE LOS INDICADORES CAMEL"),
                           tabPanel("PONDERACIÓN DE ELEMENTOS CAMEL"),
                           tabPanel("RESULTADOS CAMEL DEL SISTEMA FINANCIERO",uiOutput("diagnosticoResultadosCamel"))
                ),
                
+               ####################################################################
+               # PROYECCIONES UI
+               ####################################################################
+               
                navbarMenu("PROYECCION DE ESTADOS FINANCIEROS",
-                          tabPanel("PRECISIONES DE LOS PRONÓSTICOS DE ESTADOS FINANCIEROS", uiOutput("proyeccionesPrecisiones")),
-                          tabPanel("ENTRENAMIENTO DE MODELOS, PROYECCIONES Y SIMULACIONES"),
-                          tabPanel("EVALUACIÓN DE DATOS AJUSTADOS DE MODELOS", uiOutput("proyeccionesEvaluarModelos")),
-                          tabPanel("APLICACIÓN DE METODOLOGÍA CAMEL SOBRE DATOS PROYECTADOS", uiOutput("proyeccionesAplicacionCamel"))
+                          tabPanel("PRECISIONES DE LOS PRONÓSTICOS DE ESTADOS FINANCIEROS", 
+                                   tabsetPanel(
+                                       tabPanel("SERIES DE TIEMPO", uiOutput("proyeccionesPrecisionesSeriesTiempo")),
+                                       tabPanel("MODELOS - EVALUACION", uiOutput("proyeccionesPrecisionesModelosEvaluacion")),
+                                       tabPanel("VARIABLES COMPRENDIDAS", uiOutput("proyeccionesPrecisionesVariablesComprendidas"))
+                                   )),
+                          tabPanel("ENTRENAMIENTO DE MODELOS, PROYECCIONES Y SIMULACIONES",
+                                   tabsetPanel(
+                                       tabPanel("MODELO CLASICO", uiOutput("proyeccionesEntrenamientoEjemploMCO")),
+                                       tabPanel("ARIMA", uiOutput("proyeccionesEntrenamientoEjemploARIMA")),
+                                       tabPanel("NN", uiOutput("proyeccionesEntrenamientoEjemploNN")),
+                                       tabPanel("EFICIENCIA", uiOutput("proyeccionesEntrenamientoEjemploEficiencia")),
+                                       tabPanel("SIMULACION", uiOutput("proyeccionesEntrenamientoEjemploSimulacion"))
+                                   )),
+                          tabPanel("EVALUACIÓN DE DATOS AJUSTADOS DE MODELOS", 
+                                   tabsetPanel(
+                                       tabPanel("AJUSTE MODELOS", uiOutput("proyeccionesEvaluarModelosAjusteModelos")),
+                                       tabPanel("AJUSTE MODELOS RESUMIDO", uiOutput("proyeccionesEvaluarModelosAjusteModelosResumido")),
+                                       tabPanel("AJUSTE PROYECCIONES", uiOutput("proyeccionesEvaluarModelosAjusteProyecciones")),
+                                       tabPanel("AJUSTE PROYECCIONES RESUMIDO", uiOutput("proyeccionesEvaluarModelosAjusteProyeccionesResumido"))
+                                   )),
+                          tabPanel("APLICACIÓN DE METODOLOGÍA CAMEL SOBRE DATOS PROYECTADOS", 
+                                   tabsetPanel(
+                                       tabPanel("CAMEL SOBRE DATOS PROYECTADOS", uiOutput("proyeccionesAplicacionCamel")),
+                                       tabPanel("HISTOGRAMA DE TENDENCIA Y DESVIACION (NN) ", uiOutput("proyeccionesAplicacionCamelHistograma"))
+                                   ))
                ),
                
+               ####################################################################
+               # CONCLUSIONES UI
+               ####################################################################
+               
                navbarMenu("CONCLUSIONES Y RECOMENDACIONES",
-                          tabPanel("CONCLUSIÓN OBJETIVOS", uiOutput("conclusionesObjetivos")),
-                          tabPanel("CONCLUSIÓN GENERAL", uiOutput("conclusionesGeneral"))
+                          tabPanel('AQUI',
+                                    tabsetPanel(
+                                        tabPanel("CONCLUSIONES OBJETIVOS", uiOutput("conclusionesObjetivos")),
+                                        tabPanel("CONCLUSION GENERAL", uiOutput("conclusionesGeneral"))
+                                        ))
+                          
                ),
     )
 )
@@ -70,43 +129,138 @@ ui <- fluidPage(
 server <- function(input, output) {
     
     rootMainDir <- 'RECURSOS-INVESTIGACION/PRESENTACION/SHINY/'
-    
+    ####################################################################
     # INICIO
+    ####################################################################
     
     output$inicio <- renderUI({
         rootDirFile <- "INICIO/INICIO.Rmd"
         HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
     })
     
+    ####################################################################
     # DIAGNOSTICO
+    ####################################################################
     
-    output$diagnosticoCalculoIndicadoes <- renderUI({
-        rootDirFile <- "DIAGNOSTICO/02-CALCULO-INDICADORES_PRESENTACION.Rmd"
+    # CALCULO INDICADORES
+    
+    output$diagnosticoCalculoIndicadoresCapital <- renderUI({
+        rootDirFile <- "DIAGNOSTICO/02-01-CI_CAPTIAL.Rmd"
         HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
     })
     
+    output$diagnosticoCalculoIndicadoresActivos <- renderUI({
+        rootDirFile <- "DIAGNOSTICO/02-02-CI_ACTIVOS.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$diagnosticoCalculoIndicadoresAdmin <- renderUI({
+        rootDirFile <- "DIAGNOSTICO/02-03_CI_ADMINISTRACION.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$diagnosticoCalculoIndicadoresBeneficios <- renderUI({
+        rootDirFile <- "DIAGNOSTICO/02-04-BENEFICIOS.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$diagnosticoCalculoIndicadoresLiquidez <- renderUI({
+        rootDirFile <- "DIAGNOSTICO/02-05-CI_LIQUIDEZ.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    # RESULTADOS CAMEL
     output$diagnosticoResultadosCamel <- renderUI({
         rootDirFile <- "DIAGNOSTICO/05-RESULTADOS-CAMEL.Rmd"
         HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
     })
     
+    ####################################################################
     # PROYECCIONES
-    output$proyeccionesPrecisiones <- renderUI({
-        rootDirFile <- "PROYECCIONES/01-DEFINICION-DEL-MODELO-RNN.Rmd"
+    ####################################################################
+    
+    # DEFINICION PROYECCIONES
+    
+    output$proyeccionesPrecisionesSeriesTiempo <- renderUI({
+        rootDirFile <- "PROYECCIONES/01-01-SERIES-DE-TIEMPO.Rmd"
         HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
     })
     
-    output$proyeccionesEvaluarModelos <- renderUI({
-        rootDirFile <- "PROYECCIONES/03-EVALUACION-MODELOS.Rmd"
+    output$proyeccionesPrecisionesModelosEvaluacion <- renderUI({
+        rootDirFile <- "PROYECCIONES/01-02-MODELOS-EVALUACION.Rmd"
         HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
     })
+    
+    output$proyeccionesPrecisionesVariablesComprendidas <- renderUI({
+        rootDirFile <- "PROYECCIONES/01-03-VARIABLES-COMPRENDIDAS.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    # ENTRENAMIENTO EJEMPLO
+    
+    output$proyeccionesEntrenamientoEjemploMCO <- renderUI({
+        rootDirFile <- "PROYECCIONES/02-01-MODELO-CLASICO.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$proyeccionesEntrenamientoEjemploARIMA <- renderUI({
+        rootDirFile <- "PROYECCIONES/02-02-ARIMA.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$proyeccionesEntrenamientoEjemploNN <- renderUI({
+        rootDirFile <- "PROYECCIONES/02-03-NN.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$proyeccionesEntrenamientoEjemploEficiencia <- renderUI({
+        rootDirFile <- "PROYECCIONES/02-04-EFICIENCIA.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$proyeccionesEntrenamientoEjemploSimulacion <- renderUI({
+        rootDirFile <- "PROYECCIONES/02-05-SIMULACION.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    # EVALUACION MODELOS POR R2
+    
+    output$proyeccionesEvaluarModelosAjusteModelos <- renderUI({
+        rootDirFile <- "PROYECCIONES/03-01-AJUSTE-MODELOS.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$proyeccionesEvaluarModelosAjusteModelosResumido <- renderUI({
+        rootDirFile <- "PROYECCIONES/03-02-AJUSTE-MODELOS-RESUMIDO.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$proyeccionesEvaluarModelosAjusteProyecciones <- renderUI({
+        rootDirFile <- "PROYECCIONES/03-03-AJUSTE-PROYECCIONES.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$proyeccionesEvaluarModelosAjusteProyeccionesResumido <- renderUI({
+        rootDirFile <- "PROYECCIONES/03-04-AJUSTE-PROYECCIONES-RESUMIDO.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    # APLICACION CAMEL SOBRE PROYECCIONES
     
     output$proyeccionesAplicacionCamel <- renderUI({
-        rootDirFile <- "PROYECCIONES/04-APLICACIONES.Rmd"
+        rootDirFile <- "PROYECCIONES/04-01-APLICACION-CAMEL.Rmd"
         HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
     })
     
+    output$proyeccionesAplicacionCamelHistograma <- renderUI({
+        rootDirFile <- "PROYECCIONES/04-02-HISTOGRAMA-NN-CAMEL.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    ####################################################################
     # CONCLUSIONES
+    ####################################################################
+    
     output$conclusionesObjetivos <- renderUI({
         rootDirFile <- "CONCLUSIONES/CONCLUSIONES_OBJETIVOS_PRESENTACION.Rmd"
         HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
