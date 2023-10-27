@@ -31,7 +31,8 @@ ui <- fluidPage(
     
     # Sidebar with a slider input for number of bins 
     navbarPage("",
-               navbarMenu("PERFIL DE INVESTIGACION",
+               tabPanel("INICIO",uiOutput("inicio")),
+               navbarMenu("PERFIL ",
                           tabPanel("PLANTEAMIENTO DEL PROBLEMA"),
                           tabPanel("FORMULACIÓN DEL PROBLEMA CENTRAL"),
                           tabPanel("JUSTIFICACIÓN"),
@@ -48,15 +49,14 @@ ui <- fluidPage(
                           tabPanel("CALCULO DE INDICADORES", uiOutput("diagnosticoCalculoIndicadoes")),
                           tabPanel("DEFINICIÓN DE RANGOS Y LÍMITES DE LOS INDICADORES CAMEL"),
                           tabPanel("PONDERACIÓN DE ELEMENTOS CAMEL"),
-                          tabPanel("RESULTADOS CAMEL DEL SISTEMA FINANCIERO")
+                          tabPanel("RESULTADOS CAMEL DEL SISTEMA FINANCIERO",uiOutput("diagnosticoResultadosCamel"))
                ),
                
                navbarMenu("PROYECCION DE ESTADOS FINANCIEROS",
-                          tabPanel("PRECISIONES DE LOS PRONÓSTICOS DE ESTADOS FINANCIEROS"),
+                          tabPanel("PRECISIONES DE LOS PRONÓSTICOS DE ESTADOS FINANCIEROS", uiOutput("proyeccionesPrecisiones")),
                           tabPanel("ENTRENAMIENTO DE MODELOS, PROYECCIONES Y SIMULACIONES"),
-                          tabPanel("EVALUACIÓN DE DATOS AJUSTADOS DE MODELOS"),
-                          tabPanel("EVALUACIÓN DE DATOS PROYECTADOS DE MODELOS"),
-                          tabPanel("APLICACIÓN DE METODOLOGÍA CAMEL SOBRE DATOS PROYECTADOS")
+                          tabPanel("EVALUACIÓN DE DATOS AJUSTADOS DE MODELOS", uiOutput("proyeccionesEvaluarModelos")),
+                          tabPanel("APLICACIÓN DE METODOLOGÍA CAMEL SOBRE DATOS PROYECTADOS", uiOutput("proyeccionesAplicacionCamel"))
                ),
                
                navbarMenu("CONCLUSIONES Y RECOMENDACIONES",
@@ -71,7 +71,12 @@ server <- function(input, output) {
     
     rootMainDir <- 'RECURSOS-INVESTIGACION/PRESENTACION/SHINY/'
     
-    # DIAGNOSTICO
+    # INICIO
+    
+    output$inicio <- renderUI({
+        rootDirFile <- "INICIO/INICIO.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
     
     # DIAGNOSTICO
     
@@ -80,6 +85,26 @@ server <- function(input, output) {
         HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
     })
     
+    output$diagnosticoResultadosCamel <- renderUI({
+        rootDirFile <- "DIAGNOSTICO/05-RESULTADOS-CAMEL.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    # PROYECCIONES
+    output$proyeccionesPrecisiones <- renderUI({
+        rootDirFile <- "PROYECCIONES/01-DEFINICION-DEL-MODELO-RNN.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$proyeccionesEvaluarModelos <- renderUI({
+        rootDirFile <- "PROYECCIONES/03-EVALUACION-MODELOS.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$proyeccionesAplicacionCamel <- renderUI({
+        rootDirFile <- "PROYECCIONES/04-APLICACIONES.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
     
     # CONCLUSIONES
     output$conclusionesObjetivos <- renderUI({

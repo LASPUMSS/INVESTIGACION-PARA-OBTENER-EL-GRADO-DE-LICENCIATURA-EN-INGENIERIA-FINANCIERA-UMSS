@@ -1,0 +1,134 @@
+<!-- Configuración CHUNKS -->
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE,
+                      fig.align='center',
+                      out.height='60%',
+                      out.width='100%')
+
+setwd('../../../..')
+knitr::opts_knit$set(root.dir = getwd())
+
+options(scipen=999)
+
+```
+
+```{r}
+source('RECURSOS-INVESTIGACION/R/get-dat-basic-normalizada.R')
+source('RECURSOS-INVESTIGACION/R/pef-r2-ids-eeff-forecast.R')
+source('RECURSOS-INVESTIGACION/R/pef-list-summary-resumen.R')
+source('RECURSOS-INVESTIGACION/R/pef-get-dats-for-forescat.R')
+source('RECURSOS-INVESTIGACION/R/pef-get-ids-for-models.R')
+source("RECURSOS-INVESTIGACION/R/pef-get-camel-test.R")
+source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
+
+require(kableExtra)
+require(patchwork)
+require(ggplot2)
+require(scales)
+require(dplyr)
+require(fpp2)
+
+if (!('listResultPEF' %in% ls())) {
+    
+    rootFile_datTotalSistema <- 'FUENTES-DE-DATOS/DATA/datTotalSistema.rds' 
+    if (file.exists(rootFile_datTotalSistema)){datTotalSistema <- readRDS(rootFile_datTotalSistema)}
+    if (!file.exists(rootFile_datTotalSistema)){datTotalSistema <- getDatEEFFNormalizada(by = 'TOTAL_SISTEMA')}
+    
+    
+    ids <- getVariablesForModelsForecast()
+    
+    if (!file.exists('FUENTES-DE-DATOS/DATA/listResultPEF.rds')) {
+        listResultPEF <- getListFittedAndSimulateModels(datTotalSistema,ids)
+    }else{
+        listResultPEF <- readRDS(file ='FUENTES-DE-DATOS/DATA/listResultPEF.rds')
+    }
+    
+    listResumeModels <- getListResumeSummaryModels(listResultPEF)
+    listDatsForTestCamels <- getDatsForTestCamels(listResultPEF,datTotalSistema,12,TRUE)
+    
+    
+    originalCamelTest <- getCamelTestForecast(listDatsForTestCamels$datCuentas)
+    nnCamelTest <- getCamelTestForecast(listDatsForTestCamels$nnDataForecastCuentas)
+    mcoCamelTest <- getCamelTestForecast(listDatsForTestCamels$mcoDataForecastCuentas)
+    arimaCamelTest <- getCamelTestForecast(listDatsForTestCamels$arimaDataForecastCuentas)
+    
+    camelTestModels <- bind_rows(originalCamelTest,
+                                 nnCamelTest,
+                                 mcoCamelTest,
+                                 arimaCamelTest)
+    
+    id <- 'EERR_S2_RESULTADO_NETO_DE_LA_GESTION'
+    
+    trendCamelRNN <- readRDS(file ='FUENTES-DE-DATOS/DATA/trendCamelRNN.rds')
+    sdCamelRNN <- readRDS(file ='FUENTES-DE-DATOS/DATA/sdCamelRNN.rds')
+}
+
+```
+
+<!-- Precisiones de los pronósticos de estados financieros -->
+
+### Series de tiempo
+
+```{r, fig.height = 10, fig.width = 20, fig.cap='Agrupamiento de los datos de las series de tiempo.'}
+autoplot(listResultPEF[[id]]$tsDatTrain,series = 'Datos de entrenamiento') +
+    autolayer(listResultPEF[[id]]$tsDatTest,series = 'Datos para realizar pruebas') +
+    ylab('RESULTADO NETO DE LA GESTION') +
+    xlab('TIEMPO') +
+    guides(color=guide_legend(ncol=2, title="")) +
+    theme(legend.position="bottom",
+          legend.text = element_text(size=24),
+          legend.key.size = unit(2, 'cm'),
+          axis.title.x=element_text(size=24), 
+          axis.title.y = element_text(size=30),
+          axis.text.y=element_text(size=24),
+          axis.text.x = element_text(size=24))
+    
+```
+
+
+### Modelos 
+
+Los modelos empleados para realizar las proyecciones son los siguientes:
+
+- Modelo clásico de series de tiempo (MCO)
+- Modelo autorregresivo integrado de media móvil (ARIMA)
+- Redes neuronales artificiales (NN)
+
+### Evaluación de modelos
+
+Una vez finalizado el entrenamiento de los modelos para las diferentes series de tiempo se evalúo la validez o consistencia de los mismos siguiendo dos criterios:
+
+- Ajuste del modelo (R2).
+- Capacidad de generalización del modelo.
+
+Donde dichos criterios fueron ejecutados de la siguiente forma:
+
+- R2 sobre datos de entrenamiento 
+- R2 sobre datos de prueba
+
+### Variables comprendidas {#DRNN-VARIABLES}
+
+- Activo
+- Disponibilidades
+- Inversiones temporarias
+- Cartera vigente, vencida y en ejecución
+- Cartera reprogramada vigente, vencida y en ejecución
+- Cartera reestructurada vigente, vencida y en ejecución
+- Previsión de incobrabilidad de cartera
+- Bienes realizables
+- Cuentas contingentes deudoras
+- Pasivo
+- Patrimonio
+- Ingresos
+- Gastos de administración
+- Impuestos
+- Resultado operativo bruto
+- Resultado neto de la gestión
+- Coeficiente de adecuación patrimonial
+
+Debiendo aclarar que el coeficiente de adecuación patrimonial no es una cuenta del manual de cuentas de ASFI, pero se realiza sus pronósticos al ser necesario para la evaluación de los modelos por la metodología CAMEL.
+

@@ -9,8 +9,8 @@ knitr::opts_chunk$set(echo = FALSE,
                       out.height='60%',
                       out.width='100%')
 
-rootDir <- "E:/PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS"
-knitr::opts_knit$set(root.dir = rootDir)
+setwd('../../../..')
+knitr::opts_knit$set(root.dir = getwd())
 
 options(scipen=999)
 

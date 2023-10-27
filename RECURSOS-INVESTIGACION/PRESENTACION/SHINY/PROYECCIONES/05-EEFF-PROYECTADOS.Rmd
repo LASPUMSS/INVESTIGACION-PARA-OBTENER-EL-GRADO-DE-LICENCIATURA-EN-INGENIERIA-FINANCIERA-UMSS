@@ -1,0 +1,463 @@
+
+```{r}
+source('RECURSOS-INVESTIGACION/R/get-dat-basic-normalizada.R')
+source('RECURSOS-INVESTIGACION/R/pef-r2-ids-eeff-forecast.R')
+source('RECURSOS-INVESTIGACION/R/pef-list-summary-resumen.R')
+source('RECURSOS-INVESTIGACION/R/pef-get-dats-for-forescat.R')
+source('RECURSOS-INVESTIGACION/R/pef-get-ids-for-models.R')
+source("RECURSOS-INVESTIGACION/R/pef-get-camel-test.R")
+source("RECURSOS-INVESTIGACION/R/pef-aux-render-table.R")
+source("RECURSOS-INVESTIGACION/R/pef-aux-render-plot.R")
+source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
+
+require(kableExtra)
+require(patchwork)
+require(ggplot2)
+require(dplyr)
+require(fpp2)
+
+
+
+if (!('listResultPEF' %in% ls())) {
+    
+    datTotalSistema <- getDatEEFFNormalizada(by = 'TOTAL_SISTEMA')
+    
+    ids <- getVariablesForModelsForecast()
+    
+    if (!file.exists('FUENTES-DE-DATOS/DATA/listResultPEF.rds')) {
+        listResultPEF <- getListFittedAndSimulateModels(datTotalSistema,ids)
+    }else{
+        listResultPEF <- readRDS(file ='FUENTES-DE-DATOS/DATA/listResultPEF.rds')
+    }
+    
+    listDatsForTestCamels <- getDatsForTestCamels(listResultPEF,datTotalSistema,12,TRUE)
+
+}
+
+```
+
+## Estados financieros proyectados
+
+En esta última sección se presenta los estados financieros observados respecto a sus proyecciones correspondientes para cada cuenta, es decir, balance general y estado de resultados del sistema financiero en su conjunto para la fecha del 31 de diciembre de la gestión 2022 expresado en bolivianos para los modelos antes presentados:
+
+- Redes neuronales artificiales (NN)
+- Modelo clásico de series de tiempo (MCO)
+- ARIMA
+
+Así también, los gráficos de las cuentas principales de los estados financieros cubriendo:
+
+- Datos de entrenamiento.
+- Datos efectivamente observados.
+- Proyecciones del modelo MCO.
+- Proyecciones del modelo NN.
+- Proyecciones del modelo ARIMA.
+
+Las cuentas no presentadas en esta sección se localizan en el anexo \@ref(ANEXO-GRAFICOS-PROYECCIONES-MODELOS).
+
+### Balance general proyectado
+
+```{r}
+idsEEFF <- c('ACTIVO',
+             
+             'ACTIVO_DISPONIBILIDADES',
+             'ACTIVO_INVERSIONES_TEMPORARIAS',
+             
+             'ACTIVO_CARTERA',
+             
+             'ACTIVO_CARTERA_CARTERA_VENCIDA_TOTAL',
+             'ACTIVO_CARTERA_CARTERA_VENCIDA',
+             'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_VENCIDA',
+             'ACTIVO_CARTERA_CARTERA_REESTRUCTURADA_VENCIDA',
+
+             
+             'ACTIVO_CARTERA_CARTERA_EJECUCION_TOTAL',
+             'ACTIVO_CARTERA_CARTERA_EN_EJECUCION',
+             'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_EJECUCION',
+             'ACTIVO_CARTERA_CARTERA_REESTRUCTURADA_EN_EJECUCION',
+
+             
+             'ACTIVO_CARTERA_CARTERA_VIGENTE_TOTAL',
+             'ACTIVO_CARTERA_CARTERA_VIGENTE',
+             'ACTIVO_CARTERA_CARTERA_REPROGRAMADA_VIGENTE',
+             'ACTIVO_CARTERA_CARTERA_REESTRUCTURADA_VIGENTE',
+
+             
+             'ACTIVO_CARTERA_PREVISION_PARA_INCOBRABILIDAD_DE_CARTERA',
+             
+             'ACTIVO_OTRAS_CUENTAS_POR_COBRAR',
+             'ACTIVO_BIENES_REALIZABLES',
+             'ACTIVO_INVERSIONES_PERMANENTES',
+             'ACTIVO_BIENES_DE_USO',
+             'ACTIVO_OTROS_ACTIVOS',
+             'ACTIVO_FIDEICOMISOS_CONSTITUIDOS',
+             
+             'PASIVO',
+             
+             'PASIVO_OBLIGACIONES_CON_EL_PUBLICO',
+             'PASIVO_OBLIGACIONES_CON_INSTITUCIONES_FISCALES',
+             'PASIVO_OBLIGACIONES_CON_EMPRESAS_PUBLICAS',
+             'PASIVO_OBLIGACIONES_CON_BANCOS_Y_ENTIDADES_DE_FINANCIAMIENTO',
+             'PASIVO_OTRAS_CUENTAS_POR_PAGAR',
+             'PASIVO_PREVISIONES',
+             'PASIVO_VALORES_EN_CIRCULACION',
+             'PASIVO_OBLIGACIONES_SUBORDINADAS',
+             
+             'PATRIMONIO',
+             'PATRIMONIO_CAPITAL_SOCIAL',
+             'PATRIMONIO_APORTES_NO_CAPITALIZADOS',
+             'PATRIMONIO_AJUSTES_AL_PATRIMONIO',
+             'PATRIMONIO_RESERVAS',
+             'PATRIMONIO_RESULTADOS_ACUMULADOS',
+             
+             'CUENTAS_CONTINGENTES_DEUDORAS',
+             'CUENTAS_CONTINGENTES_DEUDORAS_CUENTAS_DE_ORDEN_DEUDORAS')
+
+datAccounts <- listDatsForTestCamels$datCuentas %>% tail(n = 1) %>% select(any_of(idsEEFF)) 
+originalData <- cbind(names(datAccounts), t(datAccounts)) %>% data.frame(row.names = NULL)
+names(originalData) <- c('DESCRIPCION','OBSERVADO')
+
+datAccounts <- listDatsForTestCamels$mcoDataForecastCuentas %>% tail(n = 1) %>% select(any_of(idsEEFF)) 
+mcoForecasData <- cbind(names(datAccounts), t(datAccounts)) %>% data.frame(row.names = NULL)
+names(mcoForecasData) <- c('DESCRIPCION','MCO')
+
+datAccounts <- listDatsForTestCamels$arimaDataForecastCuentas %>% tail(n = 1) %>% select(any_of(idsEEFF))  
+arimaForecasData <- cbind(names(datAccounts), t(datAccounts)) %>% data.frame(row.names = NULL)
+names(arimaForecasData) <- c('DESCRIPCION','ARIMA')
+
+datAccounts <- listDatsForTestCamels$nnDataForecastCuentas %>% tail(n = 1) %>% select(any_of(idsEEFF)) 
+nnForecasData <- cbind(names(datAccounts), t(datAccounts)) %>% data.frame(row.names = NULL)
+names(nnForecasData) <- c('DESCRIPCION','NN')
+
+datEEEFF_Forescat <- 
+    left_join(originalData, mcoForecasData, by='DESCRIPCION') %>%
+    left_join(., arimaForecasData, by='DESCRIPCION')  %>%
+    left_join(., nnForecasData, by='DESCRIPCION') 
+
+datEEEFF_Forescat$OBSERVADO <- as.numeric(datEEEFF_Forescat$OBSERVADO)
+datEEEFF_Forescat$MCO <- as.numeric(datEEEFF_Forescat$MCO)
+datEEEFF_Forescat$ARIMA <- as.numeric(datEEEFF_Forescat$ARIMA)
+datEEEFF_Forescat$NN <- as.numeric(datEEEFF_Forescat$NN)
+```
+
+
+\vspace*{15pt}
+```{r}
+renderTableBasic(datEEEFF_Forescat %>% select(DESCRIPCION, OBSERVADO, NN) %>% transformTableAuxPef2, 
+                 captionTable = 'Balance general observado respecto a proyecciones por redes neuronales')
+
+```
+
+\newpage
+```{r}
+renderTableBasic(datEEEFF_Forescat %>% select(DESCRIPCION, OBSERVADO, MCO, ARIMA) %>% transformTableAuxPef2, 
+                 captionTable = 'Balance general observado respecto a proyecciones por MCO y ARIMA')
+```
+
+\newpage
+### Estado de resultados proyectado
+
+```{r}
+idsEEFF <- 
+    c( 'INGRESOS_FINANCIEROS',
+       'GASTOS_FINANCIEROS',
+       'RESULTADO_FINANCIERO_BRUTO',
+             
+       'OTROS_INGRESOS_OPERATIVOS',
+       'OTROS_GASTOS_OPERATIVOS',
+       'RESULTADO_DE_OPERACION_BRUTO',
+             
+       'EERR_S2_RESULTADO_DE_OPERACION_DESPUES_DE_INCOBRABLES',
+             
+       'EERR_S2_GASTOS_DE_ADMINISTRACION',
+       'EERR_S2_GASTOS_DE_PERSONAL',
+       'EERR_S2_SERVICIOS_CONTRATADOS',
+       'EERR_S2_SEGUROS',
+       'EERR_S2_COMUNICACIONES_Y_TRASLADOS',
+       'EERR_S2_IMPUESTOS',
+       'EERR_S2_MANTENIMIENTO_Y_REPARACIONES',
+       'EERR_S2_DEPRECIACION_Y_DESVALORIZACION_DE_BIENES_DE_USO',
+       'EERR_S2_AMORTIZACION_DE_CARGOS_DIFERIDOS_Y_ACTIVOS_INTANGIBLES',
+       'EERR_S2_OTROS_GASTOS_DE_ADMINISTRACION',
+             
+       'EERR_S2_RESULTADO_DE_OPERACION_NETO',
+             
+       'EERR_S2_RESULTADO_DESPUES_DE_AJUSTE_POR_DIFERENCIA_DE_CAMBIO_Y_MANTENIMIENTO_DE_VALOR',
+       'EERR_S2_RESPECTO_INGRESOS_GASTOS_EXTRAORDINARIOS',
+       'EERR_S2_RESULTADO_NETO_DEL_EJERCICIO_ANTES_DE_AJUSTES_DE_GESTIONES_ANTERIORES',
+       'EERR_S2_RESPECTO_INGRESOS_GASTOS_DE_GESTIONES_ANTERIORES',
+       'EERR_S2_RESULTADO_ANTES_DE_IMPUESTOS_Y_AJUSTE_CONTABLE_POR_EFECTO_DE_INFLACION',
+       'EERR_S2_RESPECTO_AJUSTE_CONTABLE_POR_EFECTO_DE_LA_INFLACION',
+       'EERR_S2_RESULTADO_ANTES_DE_IMPUESTOS',
+       'EERR_S2_IMPUESTO_SOBRE_LAS_UTILIDADES_DE_LAS_EMPRESAS',
+             
+       'EERR_S2_RESULTADO_NETO_DE_LA_GESTION')
+
+datAccounts <- listDatsForTestCamels$datCuentas %>% tail(n = 1) %>% select(any_of(idsEEFF)) 
+originalData <- cbind(names(datAccounts), t(datAccounts)) %>% data.frame(row.names = NULL)
+names(originalData) <- c('DESCRIPCION','OBSERVADO')
+
+datAccounts <- listDatsForTestCamels$mcoDataForecastCuentas %>% tail(n = 1) %>% select(any_of(idsEEFF)) 
+mcoForecasData <- cbind(names(datAccounts), t(datAccounts)) %>% data.frame(row.names = NULL)
+names(mcoForecasData) <- c('DESCRIPCION','MCO')
+
+datAccounts <- listDatsForTestCamels$arimaDataForecastCuentas %>% tail(n = 1) %>% select(any_of(idsEEFF))  
+arimaForecasData <- cbind(names(datAccounts), t(datAccounts)) %>% data.frame(row.names = NULL)
+names(arimaForecasData) <- c('DESCRIPCION','ARIMA')
+
+datAccounts <- listDatsForTestCamels$nnDataForecastCuentas %>% tail(n = 1) %>% select(any_of(idsEEFF)) 
+nnForecasData <- cbind(names(datAccounts), t(datAccounts)) %>% data.frame(row.names = NULL)
+names(nnForecasData) <- c('DESCRIPCION','NN')
+
+datEEEFF_Forescat <- 
+    left_join(originalData, mcoForecasData, by='DESCRIPCION') %>%
+    left_join(., arimaForecasData, by='DESCRIPCION')  %>%
+    left_join(., nnForecasData, by='DESCRIPCION') 
+
+datEEEFF_Forescat$OBSERVADO <- as.numeric(datEEEFF_Forescat$OBSERVADO)
+datEEEFF_Forescat$MCO <- as.numeric(datEEEFF_Forescat$MCO)
+datEEEFF_Forescat$ARIMA <- as.numeric(datEEEFF_Forescat$ARIMA)
+datEEEFF_Forescat$NN <- as.numeric(datEEEFF_Forescat$NN)
+```
+
+\vspace*{15pt}
+```{r}
+renderTableBasic(datEEEFF_Forescat %>% select(DESCRIPCION, OBSERVADO, NN) %>% transformTableAuxPef2, 
+                 captionTable = 'Estado de resultados observado respecto a proyecciones por redes neuronales')
+
+```
+
+\newpage
+\vspace*{30pt}
+```{r}
+renderTableBasic(datEEEFF_Forescat %>% select(DESCRIPCION, OBSERVADO, MCO, ARIMA) %>% transformTableAuxPef2, 
+                 captionTable = 'Estado de resultados observado respecto a proyecciones por MCO y ARIMA',
+                 fontSize = 6)
+```
+
+
+<!-- ############################################################### -->
+<!-- ###################### ACTIVO 
+<!-- ############################################################### -->
+
+```{r}
+cuenta <- 'ACTIVO'
+labelCuenta <- converCuentasBasicPef(cuenta)
+```
+
+\newpage
+\vspace*{\fill}
+```{=latex}
+\begin{figure}[h!]
+```
+
+```{r, fig.height = 20, fig.width = 20, fig.cap = paste0('Proyecciones MCO, ARIMA y NN para la serie de tiempo contenida en la cuenta ', tolower(labelCuenta))}
+transformPlotAuxPef(listResultPEF, cuenta, labelCuenta)
+```
+
+```{=latex}
+\floatfoot{Fuente: Elaboración propia.}
+\end{figure}
+```
+\vspace*{\fill}
+
+<!-- ############################################################### -->
+<!-- ###################### PASIVO 
+<!-- ############################################################### -->
+
+```{r}
+cuenta <- 'PASIVO'
+labelCuenta <- converCuentasBasicPef(cuenta)
+```
+
+\newpage
+\vspace*{\fill}
+```{=latex}
+\begin{figure}[h!]
+```
+
+```{r, fig.height = 20, fig.width = 20, fig.cap = paste0('Proyecciones MCO, ARIMA y NN para la serie de tiempo contenida en la cuenta ', tolower(labelCuenta))}
+transformPlotAuxPef(listResultPEF, cuenta, labelCuenta)
+```
+
+```{=latex}
+\floatfoot{Fuente: Elaboración propia.}
+\end{figure}
+```
+\vspace*{\fill}
+
+<!-- ############################################################### -->
+<!-- ###################### PATRIMONIO 
+<!-- ############################################################### -->
+
+```{r}
+cuenta <- 'PATRIMONIO'
+labelCuenta <- converCuentasBasicPef(cuenta)
+```
+
+\newpage
+\vspace*{\fill}
+```{=latex}
+\begin{figure}[h!]
+```
+
+```{r, fig.height = 20, fig.width = 20, fig.cap = paste0('Proyecciones MCO, ARIMA y NN para la serie de tiempo contenida en la cuenta ', tolower(labelCuenta))}
+transformPlotAuxPef(listResultPEF, cuenta, labelCuenta)
+```
+
+```{=latex}
+\floatfoot{Fuente: Elaboración propia.}
+\end{figure}
+```
+\vspace*{\fill}
+
+<!-- ############################################################### -->
+<!-- ###################### INGRESOS_FINANCIEROS 
+<!-- ############################################################### -->
+
+```{r}
+cuenta <- 'INGRESOS_FINANCIEROS'
+labelCuenta <- converCuentasBasicPef(cuenta)
+```
+
+\newpage
+\vspace*{\fill}
+```{=latex}
+\begin{figure}[h!]
+```
+
+```{r, fig.height = 20, fig.width = 20, fig.cap = paste0('Proyecciones MCO, ARIMA y NN para la serie de tiempo contenida en la cuenta ', tolower(labelCuenta))}
+transformPlotAuxPef(listResultPEF, cuenta, labelCuenta)
+```
+
+```{=latex}
+\floatfoot{Fuente: Elaboración propia.}
+\end{figure}
+```
+\vspace*{\fill}
+
+<!-- ############################################################### -->
+<!-- ###################### GASTOS_FINANCIEROS 
+<!-- ############################################################### -->
+
+```{r}
+cuenta <- 'GASTOS_FINANCIEROS'
+labelCuenta <- converCuentasBasicPef(cuenta)
+```
+
+\newpage
+\vspace*{\fill}
+```{=latex}
+\begin{figure}[h!]
+```
+
+```{r, fig.height = 20, fig.width = 20, fig.cap = paste0('Proyecciones MCO, ARIMA y NN para la serie de tiempo contenida en la cuenta ', tolower(labelCuenta))}
+transformPlotAuxPef(listResultPEF, cuenta, labelCuenta)
+```
+
+```{=latex}
+\floatfoot{Fuente: Elaboración propia.}
+\end{figure}
+```
+\vspace*{\fill}
+
+
+<!-- ############################################################### -->
+<!-- ###################### RESULTADO_FINANCIERO_BRUTO 
+<!-- ############################################################### -->
+
+```{r}
+cuenta <- 'RESULTADO_FINANCIERO_BRUTO'
+labelCuenta <- converCuentasBasicPef(cuenta)
+```
+
+\newpage
+\vspace*{\fill}
+```{=latex}
+\begin{figure}[h!]
+```
+
+```{r, fig.height = 20, fig.width = 20, fig.cap = paste0('Proyecciones MCO, ARIMA y NN para la serie de tiempo contenida en la cuenta ', tolower(labelCuenta))}
+transformPlotAuxPef(listResultPEF, cuenta, labelCuenta)
+```
+
+```{=latex}
+\floatfoot{Fuente: Elaboración propia.}
+\end{figure}
+```
+\vspace*{\fill}
+
+<!-- ############################################################### -->
+<!-- ###################### RESULTADO_DE_OPERACION_BRUTO 
+<!-- ############################################################### -->
+
+```{r}
+cuenta <- 'RESULTADO_DE_OPERACION_BRUTO'
+labelCuenta <- converCuentasBasicPef(cuenta)
+```
+
+\newpage
+\vspace*{\fill}
+```{=latex}
+\begin{figure}[h!]
+```
+
+```{r, fig.height = 20, fig.width = 20, fig.cap = paste0('Proyecciones MCO, ARIMA y NN para la serie de tiempo contenida en la cuenta ', tolower(labelCuenta))}
+transformPlotAuxPef(listResultPEF, cuenta, labelCuenta)
+```
+
+```{=latex}
+\floatfoot{Fuente: Elaboración propia.}
+\end{figure}
+```
+\vspace*{\fill}
+
+
+<!-- ############################################################### -->
+<!-- ###################### EERR_S2_RESULTADO_DE_OPERACION_NETO 
+<!-- ############################################################### -->
+
+```{r}
+cuenta <- 'EERR_S2_RESULTADO_DE_OPERACION_NETO'
+labelCuenta <- converCuentasBasicPef(cuenta)
+```
+
+\newpage
+\vspace*{\fill}
+```{=latex}
+\begin{figure}[h!]
+```
+
+```{r, fig.height = 20, fig.width = 20, fig.cap = paste0('Proyecciones MCO, ARIMA y NN para la serie de tiempo contenida en la cuenta ', tolower(labelCuenta))}
+transformPlotAuxPef(listResultPEF, cuenta, labelCuenta)
+```
+
+```{=latex}
+\floatfoot{Fuente: Elaboración propia.}
+\end{figure}
+```
+\vspace*{\fill}
+
+<!-- ############################################################### -->
+<!-- ###################### EERR_S2_RESULTADO_NETO_DE_LA_GESTION 
+<!-- ############################################################### -->
+
+```{r}
+cuenta <- 'EERR_S2_RESULTADO_NETO_DE_LA_GESTION'
+labelCuenta <- converCuentasBasicPef(cuenta)
+```
+
+\newpage
+\vspace*{\fill}
+```{=latex}
+\begin{figure}[h!]
+```
+
+```{r, fig.height = 20, fig.width = 20, fig.cap = paste0('Proyecciones MCO, ARIMA y NN para la serie de tiempo contenida en la cuenta ', tolower(labelCuenta))}
+transformPlotAuxPef(listResultPEF, cuenta, labelCuenta)
+```
+
+```{=latex}
+\floatfoot{Fuente: Elaboración propia.}
+\end{figure}
+```
+\vspace*{\fill}

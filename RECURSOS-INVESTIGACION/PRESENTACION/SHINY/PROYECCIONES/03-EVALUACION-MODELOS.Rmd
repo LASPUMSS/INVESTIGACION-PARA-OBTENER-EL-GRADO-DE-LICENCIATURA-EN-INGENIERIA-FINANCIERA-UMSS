@@ -1,0 +1,96 @@
+<!-- Configuración CHUNKS -->
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE,
+                      fig.align='center',
+                      out.height='60%',
+                      out.width='100%')
+
+setwd('../../../..')
+knitr::opts_knit$set(root.dir = getwd())
+
+options(scipen=999)
+
+```
+
+```{r}
+source('RECURSOS-INVESTIGACION/R/get-dat-basic-normalizada.R')
+source('RECURSOS-INVESTIGACION/R/pef-r2-ids-eeff-forecast.R')
+source('RECURSOS-INVESTIGACION/R/pef-list-summary-resumen.R')
+source('RECURSOS-INVESTIGACION/R/pef-get-dats-for-forescat.R')
+source('RECURSOS-INVESTIGACION/R/pef-get-ids-for-models.R')
+source("RECURSOS-INVESTIGACION/R/pef-get-camel-test.R")
+source("RECURSOS-INVESTIGACION/R/pef-aux-render-table.R")
+source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
+
+require(kableExtra)
+require(patchwork)
+require(ggplot2)
+require(dplyr)
+require(fpp2)
+
+if (!('listResultPEF' %in% ls())) {
+    
+    rootFile_datTotalSistema <- 'FUENTES-DE-DATOS/DATA/datTotalSistema.rds' 
+    if (file.exists(rootFile_datTotalSistema)){datTotalSistema <- readRDS(rootFile_datTotalSistema)}
+    if (!file.exists(rootFile_datTotalSistema)){datTotalSistema <- getDatEEFFNormalizada(by = 'TOTAL_SISTEMA')}
+    
+    ids <- getVariablesForModelsForecast()
+    
+    if (!file.exists('FUENTES-DE-DATOS/DATA/listResultPEF.rds')) {
+        listResultPEF <- getListFittedAndSimulateModels(datTotalSistema,ids)
+    }else{
+        listResultPEF <- readRDS(file ='FUENTES-DE-DATOS/DATA/listResultPEF.rds')
+    }
+    
+    listResumeModels <- getListResumeSummaryModels(listResultPEF)
+    listDatsForTestCamels <- getDatsForTestCamels(listResultPEF,datTotalSistema,12,TRUE)
+    
+    
+    originalCamelTest <- getCamelTestForecast(listDatsForTestCamels$datCuentas)
+    nnCamelTest <- getCamelTestForecast(listDatsForTestCamels$nnDataForecastCuentas)
+    mcoCamelTest <- getCamelTestForecast(listDatsForTestCamels$mcoDataForecastCuentas)
+    arimaCamelTest <- getCamelTestForecast(listDatsForTestCamels$arimaDataForecastCuentas)
+    
+    camelTestModels <- bind_rows(originalCamelTest,
+                                 nnCamelTest,
+                                 mcoCamelTest,
+                                 arimaCamelTest)
+    
+    id <- 'EERR_S2_RESULTADO_NETO_DE_LA_GESTION'
+    
+    trendCamelRNN <- readRDS(file ='FUENTES-DE-DATOS/DATA/trendCamelRNN.rds')
+    sdCamelRNN <- readRDS(file ='FUENTES-DE-DATOS/DATA/sdCamelRNN.rds')
+}
+
+```
+
+
+## Evaluación de datos ajustados de modelos
+
+Donde el ajuste promedio por modelo se tiene los siguiente:
+
+```{r}
+names(listResumeModels$r2ModelsResumMean) <- c('MODELOS', 'R2 PROMEDIO')
+listResumeModels$r2ModelsResumMean %>% 
+    kable()  %>%
+    kable_styling(bootstrap_options = "striped", full_width = FALSE, position="center")
+```
+
+
+## Evaluación de datos proyectados de modelos
+
+Donde el ajuste promedio de las proyecciones por modelo se tiene los siguiente:
+
+```{r}
+names(listResumeModels$r2ForecastResumMean) <- c('MODELOS', 'R2 PROMEDIO')
+listResumeModels$r2ForecastResumMean %>% 
+    kable()  %>%
+    kable_styling(bootstrap_options = "striped", full_width = FALSE, position="center")
+```
+
+
+

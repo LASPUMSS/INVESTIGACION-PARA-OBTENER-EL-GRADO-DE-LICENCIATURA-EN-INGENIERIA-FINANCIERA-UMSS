@@ -9,16 +9,18 @@ knitr::opts_chunk$set(echo = FALSE,
                       out.height='60%',
                       out.width='100%')
 
-rootDir <- "E:/PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS"
-knitr::opts_knit$set(root.dir = rootDir)
+setwd('../../../..')
+knitr::opts_knit$set(root.dir = getwd())
 
 options(scipen=999)
 
 ```
 
-
-## Calculo de indicadores
-
-```{r, child="RECURSOS-INVESTIGACION/PRESENTACION/SHINY/DIAGNOSTICO/02-CALCULO-INDICADORES_PRESENTACION.Rmd"}
-
+```{r, fig.height = 10, fig.width = 10, fig.cap="A caption"}
+knitr::include_graphics("RECURSOS-INVESTIGACION/PRESENTACION/SHINY/INICIO/PROYECTO-PORTADA.png")
 ```
+
+
+
+
+
