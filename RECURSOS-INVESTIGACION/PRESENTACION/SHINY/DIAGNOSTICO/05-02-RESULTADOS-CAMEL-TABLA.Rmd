@@ -1,0 +1,88 @@
+<!-- Configuración CHUNKS -->
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE,
+                      fig.align='center',
+                      out.height='60%',
+                      out.width='100%')
+
+setwd('../../../..')
+knitr::opts_knit$set(root.dir = getwd())
+
+options(scipen=999)
+
+```
+
+```{r}
+source('RECURSOS-INVESTIGACION/R/camel-get-datCamelIndicadores.R')
+source('RECURSOS-INVESTIGACION/R/camel-get-limites-rangos.R')
+source("RECURSOS-INVESTIGACION/R/camel-get-tabla-referencia-calificaciones.R")
+source('RECURSOS-INVESTIGACION/R/camel-calificacion-indicadores.R')
+source('RECURSOS-INVESTIGACION/R/camel-calificacion-entidad.R')
+source('RECURSOS-INVESTIGACION/R/camel-getListStatsIndicadores.R')
+source('RECURSOS-INVESTIGACION/R/camel-getListPlotsIndicadores.R')
+source('RECURSOS-INVESTIGACION/R/camel-get-datIdsNamesCamelInds.R')
+source("RECURSOS-INVESTIGACION/R/camel-render-tables-indicadoresStats.R")
+source('RECURSOS-INVESTIGACION/R/camel-tendencia-stats-overview.R')
+source('RECURSOS-INVESTIGACION/R/camel-plot-functions.R')
+source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
+
+require(stringr)
+require(ggplot2)
+require(patchwork)
+require(knitr)
+require(kableExtra)
+require(dplyr)
+
+if (!('dat' %in% ls())) {dat <- NULL}
+
+rootFile_datCamelIndNorm <- 'FUENTES-DE-DATOS/DATA/datCamelIndNorm_TipoDeEntidad.rds' 
+if (file.exists(rootFile_datCamelIndNorm)){datCamelIndNorm <- readRDS(rootFile_datCamelIndNorm)}
+if (!file.exists(rootFile_datCamelIndNorm)){datCamelIndNorm <- getDatCamelIndicadores(dat=dat, by='TIPO_DE_ENTIDAD')}
+
+datCamelRangosLimites <- getDatCamelRangosLimites(datCamelIndNorm)
+
+datCamelCalificacionIndicadores <- 
+    getDatCamelCalificacionIndicadores(datCamelIndNorm,datCamelRangosLimites)
+datCamelCalificacionIndicadoresHard <- 
+    getDatCamelCalificacionIndicadores(datCamelIndNorm,datCamelRangosLimites,
+                                       calificacionDuro = TRUE)
+
+datCamelCalificacionEntidadSinPoderar <- 
+    getDatCamelCalificacionEntidad(datCamelCalificacionIndicadores, FALSE)
+datCamelCalificacionEntidadSinPoderarHard <- 
+    getDatCamelCalificacionEntidad(datCamelCalificacionIndicadoresHard, FALSE)
+
+datCamelCalificacionEntidad <- 
+    getDatCamelCalificacionEntidad(datCamelCalificacionIndicadores)
+datCamelCalificacionEntidadHard <- 
+    getDatCamelCalificacionEntidad(datCamelCalificacionIndicadoresHard)
+
+tableRefenceCamelCalificaciones <- getTableRefenceCamelCalificaciones()
+datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
+
+```
+
+
+```{r}
+datAuxCAMEL <- 
+    datCamelCalificacionEntidad %>% 
+    select(ID,TIPO_DE_ENTIDAD,FECHA) %>% 
+    mutate(CAMEL_FLEXIBLE=datCamelCalificacionEntidad$CAMEL,
+           CAMEL_ESTRICTO=datCamelCalificacionEntidadHard$CAMEL)
+```
+
+```{r df-camel-calificacion-final-tabla}
+ids <- c('CAMEL_FLEXIBLE','CAMEL_ESTRICTO')
+listResult <- getListStatsOverviewInd(ids, datAuxCAMEL, datIdsNamesCamelInds,TRUE)
+listPlots <- getListPlotsInd(listResult)
+listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas CAMEL', 6)
+```
+
+```{r}
+listTablesRender
+```
+

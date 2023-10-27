@@ -66,7 +66,6 @@ datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
 
 ```
 
-## Resultados CAMEL del sistema financiero
 
 ```{r}
 datAuxCAMEL <- 
@@ -86,6 +85,4 @@ listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadisticas CA
 ```{r df-camel-calificacion-final, fig.height = 20, fig.width = 20, fig.cap=''}
 wrap_plots(listPlots, ncol = 1)
 ```
-
-
 

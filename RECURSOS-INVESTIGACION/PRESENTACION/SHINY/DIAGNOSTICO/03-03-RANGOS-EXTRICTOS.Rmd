@@ -1,0 +1,46 @@
+<!-- Configuración CHUNKS -->
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE,
+                      fig.align='center',
+                      out.height='60%',
+                      out.width='100%')
+
+setwd('../../../..')
+knitr::opts_knit$set(root.dir = getwd())
+
+options(scipen=999)
+
+```
+
+```{r}
+source('RECURSOS-INVESTIGACION/R/camel-get-datCamelIndicadores.R')
+source('RECURSOS-INVESTIGACION/R/camel-get-limites-rangos.R')
+source("RECURSOS-INVESTIGACION/R/camel-get-tabla-referencia-calificaciones.R")
+source("RECURSOS-INVESTIGACION/R/camel-render-table-rangos-limites.R")
+source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
+
+
+if (!('dat' %in% ls())) {dat <- NULL}
+
+rootFile_datCamelIndNorm <- 'FUENTES-DE-DATOS/DATA/datCamelIndNorm_TipoDeEntidad.rds' 
+if (file.exists(rootFile_datCamelIndNorm)){datCamelIndNorm <- readRDS(rootFile_datCamelIndNorm)}
+if (!file.exists(rootFile_datCamelIndNorm)){datCamelIndNorm <- getDatCamelIndicadores(dat=dat, by='TIPO_DE_ENTIDAD')}
+
+datCamelRangosLimites <- getDatCamelRangosLimites(datCamelIndNorm)
+
+tableRefenceCamelCalificaciones <- getTableRefenceCamelCalificaciones2()
+
+tableRefenceCamelCalificacionesHard <- getTableRefenceCamelCalificaciones2(calificadorDuro = TRUE)
+```
+
+<!-- ### Rangos CAMEL estrictos -->
+
+```{r df-rangos-limites-camel-estrictos}
+tableRefenceCamelCalificacionesHard %>% 
+    kable()  %>%
+    kable_styling(bootstrap_options = "striped", full_width = FALSE, position="center")
+```

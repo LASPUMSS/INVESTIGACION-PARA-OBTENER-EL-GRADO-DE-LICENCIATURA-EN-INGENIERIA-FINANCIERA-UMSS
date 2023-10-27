@@ -16,10 +16,19 @@ options(scipen=999)
 
 ```
 
-```{r, fig.height = 10, fig.width = 10, fig.cap=""}
-knitr::include_graphics("RECURSOS-INVESTIGACION/PRESENTACION/SHINY/INICIO/PROYECTO-PORTADA.png")
-```
 
+
+## Marco metodológico
+
+- Tipo de investigación
+- Método de investigación
+- Técnicas de investigación
+
+## Fuentes de información
+
+- Fuentes primarias
+- Fuentes secundarias
+- Técnica de recolección de la información
 
 
 

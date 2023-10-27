@@ -43,13 +43,34 @@ ui <- fluidPage(
                ####################################################################
                
                navbarMenu("PERFIL ",
-                          tabPanel("PLANTEAMIENTO DEL PROBLEMA"),
-                          tabPanel("FORMULACIÓN DEL PROBLEMA CENTRAL"),
-                          tabPanel("JUSTIFICACIÓN"),
-                          tabPanel("ALCANCE Y DELIMITACIÓN"),
-                          tabPanel("OBJETIVOS DE LA INVESTIGACIÓN"),
-                          tabPanel("HIPÓTESIS"),
-                          tabPanel("MARCO METODOLÓGICO")
+                          tabPanel("PLANTEAMIENTO DEL PROBLEMA",
+                                   tabsetPanel(
+                                       tabPanel("UMSS", uiOutput("perfilPlanteamientoProblema"))
+                                   )),
+                          tabPanel("FORMULACIÓN DEL PROBLEMA CENTRAL",
+                                   tabsetPanel(
+                                       tabPanel("UMSS", uiOutput("perfilProblemaCentral"))
+                                   )),
+                          tabPanel("JUSTIFICACIÓN",
+                                   tabsetPanel(
+                                       tabPanel("UMSS", uiOutput("perfilJustificacion"))
+                                   )),
+                          tabPanel("ALCANCE Y DELIMITACIÓN",
+                                   tabsetPanel(
+                                       tabPanel("UMSS", uiOutput("perfilAlcance"))
+                                   )),
+                          tabPanel("OBJETIVOS DE LA INVESTIGACIÓN",
+                                   tabsetPanel(
+                                       tabPanel("UMSS", uiOutput("perfilObjetivos"))
+                                   )),
+                          tabPanel("HIPÓTESIS",
+                                   tabsetPanel(
+                                       tabPanel("UMSS", uiOutput("perfilHipotesis"))
+                                   )),
+                          tabPanel("MARCO METODOLÓGICO",
+                                   tabsetPanel(
+                                       tabPanel("UMSS", uiOutput("perfilMetodologia"))
+                                   ))
                ),
                
                ####################################################################
@@ -63,7 +84,11 @@ ui <- fluidPage(
                ####################################################################
                
                navbarMenu("DIAGNOSTICO FINANCIERO",
-                          tabPanel("PRECISIONES DEL DIAGNOSTICO"),
+                          tabPanel("PRECISIONES DEL DIAGNOSTICO", 
+                                   tabsetPanel(
+                                       tabPanel("ENTIDADES FIANCIERAS COMPRENDIDAS", uiOutput("diagnosticoPresicionesEntidadesFinancieras")),
+                                       tabPanel("VARIABLES COMPRENDIDAS", uiOutput("diagnosticoPresicionesVariablesComprendidas"))
+                                   )),
                           tabPanel("CALCULO DE INDICADORES",
                                    tabsetPanel(
                                        tabPanel("CAPITAL (C)", uiOutput("diagnosticoCalculoIndicadoresCapital")),
@@ -72,9 +97,18 @@ ui <- fluidPage(
                                        tabPanel("BENEFICIOS (E)", uiOutput("diagnosticoCalculoIndicadoresBeneficios")),
                                        tabPanel("LIQUIDEZ (L)", uiOutput("diagnosticoCalculoIndicadoresLiquidez"))
                                    )),
-                          tabPanel("DEFINICIÓN DE RANGOS Y LÍMITES DE LOS INDICADORES CAMEL"),
-                          tabPanel("PONDERACIÓN DE ELEMENTOS CAMEL"),
-                          tabPanel("RESULTADOS CAMEL DEL SISTEMA FINANCIERO",uiOutput("diagnosticoResultadosCamel"))
+                          tabPanel("DEFINICIÓN DE RANGOS Y LÍMITES DE LOS INDICADORES CAMEL", 
+                                   tabsetPanel(
+                                       tabPanel("LIMITES INDICADORES CAMEL", uiOutput("diagnosticoRangosLimites")),
+                                       tabPanel("RANGOS FLEXIBLES", uiOutput("diagnosticoRangosLimitesFlexibles")),
+                                       tabPanel("RANGOS ESTRICTOS", uiOutput("diagnosticoRangosLimitesEstrictos"))
+                                   )),
+                          tabPanel("PONDERACIÓN DE ELEMENTOS CAMEL", uiOutput("diagnosticoPonderacion")),
+                          tabPanel("RESULTADOS CAMEL DEL SISTEMA FINANCIERO",
+                                   tabsetPanel(
+                                       tabPanel("GRAFICO", uiOutput("diagnosticoResultadosCamelGrafico")),
+                                       tabPanel("TABLA RESUMEN", uiOutput("diagnosticoResultadosCamelTabla"))
+                                   ))
                ),
                
                ####################################################################
@@ -139,8 +173,64 @@ server <- function(input, output) {
     })
     
     ####################################################################
+    # PERFIL
+    ####################################################################
+    
+    output$perfilPlanteamientoProblema <- renderUI({
+        rootDirFile <- "PERFIL/01-01-PLANTEAMIENTO-PROBLEMA.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$perfilProblemaCentral <- renderUI({
+        rootDirFile <- "PERFIL/01-02-PROBLEMA-CENTRAL.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$perfilJustificacion <- renderUI({
+        rootDirFile <- "PERFIL/01-03-JUSTIFICACION.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$perfilAlcance <- renderUI({
+        rootDirFile <- "PERFIL/01-04-ALCANCE-DELIMITACION.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$perfilObjetivos <- renderUI({
+        rootDirFile <- "PERFIL/01-05-OBJETIVOS-INVESTIGACION.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$perfilHipotesis <- renderUI({
+        rootDirFile <- "PERFIL/01-06-HIPOTESIS.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$perfilMetodologia <- renderUI({
+        rootDirFile <- "PERFIL/01-07-MARCO-METODOLOGICO.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    ####################################################################
+    # MARCO TEORICO
+    ####################################################################
+    
+    ####################################################################
     # DIAGNOSTICO
     ####################################################################
+    
+    # PRESICIONES DIAGNOSTICO
+    
+    output$diagnosticoPresicionesEntidadesFinancieras <- renderUI({
+        rootDirFile <- "DIAGNOSTICO/01-01-ENTIDADES-FINANCIERAS.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$diagnosticoPresicionesVariablesComprendidas <- renderUI({
+        rootDirFile <- "DIAGNOSTICO/01-02-VARIABLES-COMPRENDIDAS.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
     
     # CALCULO INDICADORES
     
@@ -169,9 +259,36 @@ server <- function(input, output) {
         HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
     })
     
+    # RANGOS Y LIMITES
+    
+    output$diagnosticoRangosLimites <- renderUI({
+        rootDirFile <- "DIAGNOSTICO/03-01-LIMITES.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$diagnosticoRangosLimitesFlexibles <- renderUI({
+        rootDirFile <- "DIAGNOSTICO/03-02-RANGOS-FLEXIBLES.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    output$diagnosticoRangosLimitesEstrictos <- renderUI({
+        rootDirFile <- "DIAGNOSTICO/03-03-RANGOS-EXTRICTOS.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    # PONDERACION
+    
+    output$diagnosticoPonderacion <- renderUI({
+        rootDirFile <- "DIAGNOSTICO/04-PONDERACION.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
     # RESULTADOS CAMEL
-    output$diagnosticoResultadosCamel <- renderUI({
-        rootDirFile <- "DIAGNOSTICO/05-RESULTADOS-CAMEL.Rmd"
+    output$diagnosticoResultadosCamelGrafico <- renderUI({
+        rootDirFile <- "DIAGNOSTICO/05-01-RESULTADOS-CAMEL-GRAFICO.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    output$diagnosticoResultadosCamelTabla <- renderUI({
+        rootDirFile <- "DIAGNOSTICO/05-02-RESULTADOS-CAMEL-TABLA.Rmd"
         HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
     })
     

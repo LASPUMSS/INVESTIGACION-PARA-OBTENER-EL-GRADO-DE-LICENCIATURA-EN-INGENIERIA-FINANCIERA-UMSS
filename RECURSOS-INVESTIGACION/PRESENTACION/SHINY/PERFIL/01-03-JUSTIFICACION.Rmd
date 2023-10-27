@@ -1,0 +1,6 @@
+## Justificación
+
+Observando la importancia de las proyecciones para la toma de decisiones, y la capacidad de las redes neuronales de encontrar patrones no visibles al análisis subjetivo, este tipo de modelos podrán dotar de mayor información a agentes internos y externos del sector financiero de donde y como hacer colocaciones o inversiones sobre el dinero que administran.
+
+En síntesis, el presente trabajo de investigación no pretende remplazar a otros modelos existentes para la toma de decisiones, por el contrario, ser tomado como una alternativa para el modelado de fenómenos no lineales en el campo de las finanzas. 
+

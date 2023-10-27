@@ -16,11 +16,8 @@ options(scipen=999)
 
 ```
 
+<!-- ## Planteamiento del problema -->
+
 ```{r, fig.height = 10, fig.width = 10, fig.cap=""}
-knitr::include_graphics("RECURSOS-INVESTIGACION/PRESENTACION/SHINY/INICIO/PROYECTO-PORTADA.png")
+knitr::include_graphics("RECURSOS-INVESTIGACION/PRESENTACION/SHINY/PERFIL/arbol-de-problemas.png")
 ```
-
-
-
-
-

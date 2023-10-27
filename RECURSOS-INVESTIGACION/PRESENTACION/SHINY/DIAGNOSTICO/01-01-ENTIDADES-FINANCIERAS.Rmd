@@ -1,0 +1,144 @@
+<!-- Configuración CHUNKS -->
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE,
+                      fig.align='center',
+                      out.height='60%',
+                      out.width='100%')
+
+setwd('../../../..')
+knitr::opts_knit$set(root.dir = getwd())
+
+options(scipen=999)
+
+```
+
+```{r}
+# PAQUETES NECESARIOS
+require(glue)
+require(knitr)
+require(kableExtra)
+require(dplyr)
+
+# FUNCIONES NECESARIAS
+source('RECURSOS-INVESTIGACION/R/get-dat-basic-normalizada.R')
+source("RECURSOS-INVESTIGACION/R/get-dat-basic.R")
+source("RECURSOS-INVESTIGACION/R/get-dat-group.R")
+source("RECURSOS-INVESTIGACION/R/def-mod-entidades.R")
+source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
+source("RECURSOS-INVESTIGACION/R/handles.R")
+
+# VARIABLES GLOBALES DEL CAPITULO
+rootFile_datBasic <- 'FUENTES-DE-DATOS/DATA/datBasic.rds' 
+if (file.exists(rootFile_datBasic)){datBasic <- readRDS(rootFile_datBasic)}
+if (!file.exists(rootFile_datBasic)){datBasic <- getDatEEFF()}
+
+# VARIABLES GLOBALES DEL CAPITULO
+rootFile_dat <- 'FUENTES-DE-DATOS/DATA/dat.rds' 
+if (file.exists(rootFile_dat)){dat <- readRDS(rootFile_dat)}
+if (!file.exists(rootFile_dat)){dat <- getDatEEFFNormalizada(by='TIPO_DE_ENTIDAD')}
+
+entidadesCompModelo <- getEntidadesCompModelo(datBasic)
+datGroupBySector <- getDatEEFFByGroup(datBasic,by = 'TIPO_DE_ENTIDAD' )
+```
+
+### Entidades financieras comprendidas por el diagnostico
+
+- Bancos múltiples
+- Bancos PYME.
+- Bancos de desarrollo productivo.
+- Instituciones financieras de desarrollo.
+- Entidades financieras de vivienda.
+- Cooperativas.
+
+Una vez agrupados los datos por sectores los mismos dan un total de `r nrow(datGroupBySector)` observaciones.
+
+#### Bancos múltiples
+
+```{r}
+idTipoEntidad <- 'BANCOS_MULTIPLES'
+
+entidadesModelo <- 
+    entidadesCompModelo %>% 
+    filter(TIPO_DE_ENTIDAD==idTipoEntidad) %>%
+    select(SIGLA,ENTIDAD,DE,HASTA)
+
+entidadesModelo %>% 
+    kable()  %>%
+    kable_styling(bootstrap_options = "striped", full_width = FALSE, position="center",font_size = 9)
+```
+
+#### Bancos PYME
+
+```{r}
+idTipoEntidad <- 'BANCOS_PYME'
+entidadesModelo <- 
+    entidadesCompModelo %>% 
+    filter(TIPO_DE_ENTIDAD==idTipoEntidad) %>%
+    select(SIGLA,ENTIDAD,DE,HASTA)
+
+entidadesModelo %>% 
+    kable()  %>%
+    kable_styling(bootstrap_options = "striped", full_width = FALSE, position="center",font_size = 9)
+```
+
+#### Banco de desarrollo productivo
+
+```{r}
+idTipoEntidad <- 'BANCOS_DE_DESARROLLO_PRODUCTIVO'
+entidadesModelo <- 
+    entidadesCompModelo %>% 
+    filter(TIPO_DE_ENTIDAD==idTipoEntidad) %>%
+    select(SIGLA,ENTIDAD,DE,HASTA)
+
+entidadesModelo %>% 
+    kable()  %>%
+    kable_styling(bootstrap_options = "striped", full_width = FALSE, position="center",font_size = 9)
+```
+
+#### Instituciones financieras de desarrollo
+
+```{r}
+idTipoEntidad <- 'INSTITUCIONES_FINANCIERAS_DE_DESARROLLO'
+entidadesModelo <- 
+    entidadesCompModelo %>% 
+    filter(TIPO_DE_ENTIDAD==idTipoEntidad) %>%
+    select(SIGLA,ENTIDAD,DE,HASTA)
+
+entidadesModelo %>% 
+    kable()  %>%
+    kable_styling(bootstrap_options = "striped", full_width = FALSE, position="center",font_size = 9)
+```
+
+
+#### Entidades financieras de vivienda
+
+```{r}
+idTipoEntidad <- 'ENTIDADES_FINANCIERAS_DE_VIVIENDA'
+entidadesModelo <- 
+    entidadesCompModelo %>% 
+    filter(TIPO_DE_ENTIDAD==idTipoEntidad) %>%
+    select(SIGLA,ENTIDAD,DE,HASTA)
+
+entidadesModelo %>% 
+    kable()  %>%
+    kable_styling(bootstrap_options = "striped", full_width = FALSE, position="center",font_size = 9)
+```
+
+#### Cooperativas
+
+```{r}
+idTipoEntidad <- 'COOPERATIVAS_DE_AHORRO_Y_CREDITO'
+entidadesModelo <- 
+    entidadesCompModelo %>% 
+    filter(TIPO_DE_ENTIDAD==idTipoEntidad) %>%
+    select(SIGLA,ENTIDAD,DE,HASTA)
+
+entidadesModelo %>% 
+    kable()  %>%
+    kable_styling(bootstrap_options = "striped", full_width = FALSE, position="center",font_size = 8)
+```
+

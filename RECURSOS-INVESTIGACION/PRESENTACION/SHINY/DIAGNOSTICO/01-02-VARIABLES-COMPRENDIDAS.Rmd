@@ -1,0 +1,67 @@
+<!-- Configuración CHUNKS -->
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE,
+                      fig.align='center',
+                      out.height='60%',
+                      out.width='100%')
+
+setwd('../../../..')
+knitr::opts_knit$set(root.dir = getwd())
+
+options(scipen=999)
+
+```
+
+```{r}
+# PAQUETES NECESARIOS
+require(glue)
+require(knitr)
+require(kableExtra)
+require(dplyr)
+
+# FUNCIONES NECESARIAS
+source('RECURSOS-INVESTIGACION/R/get-dat-basic-normalizada.R')
+source("RECURSOS-INVESTIGACION/R/get-dat-basic.R")
+source("RECURSOS-INVESTIGACION/R/get-dat-group.R")
+source("RECURSOS-INVESTIGACION/R/def-mod-entidades.R")
+source("RECURSOS-INVESTIGACION/R/render-table-basic.R")
+source("RECURSOS-INVESTIGACION/R/handles.R")
+
+# VARIABLES GLOBALES DEL CAPITULO
+rootFile_datBasic <- 'FUENTES-DE-DATOS/DATA/datBasic.rds' 
+if (file.exists(rootFile_datBasic)){datBasic <- readRDS(rootFile_datBasic)}
+if (!file.exists(rootFile_datBasic)){datBasic <- getDatEEFF()}
+
+# VARIABLES GLOBALES DEL CAPITULO
+rootFile_dat <- 'FUENTES-DE-DATOS/DATA/dat.rds' 
+if (file.exists(rootFile_dat)){dat <- readRDS(rootFile_dat)}
+if (!file.exists(rootFile_dat)){dat <- getDatEEFFNormalizada(by='TIPO_DE_ENTIDAD')}
+
+entidadesCompModelo <- getEntidadesCompModelo(datBasic)
+datGroupBySector <- getDatEEFFByGroup(datBasic,by = 'TIPO_DE_ENTIDAD' )
+```
+
+### Variables comprendidas en el diagnóstico
+
+Las variables comprendidas en el modelo del diagnóstico están sujetas al manual de cuentas para entidades financieras, definidas por la autoridad de supervisión del sistema financiero (ASFI).
+
+- Activo
+- Disponibles
+- Realizables
+- Inversiones temporarias
+- Pasivos
+- Patrimonio
+- Cartera en mora
+- Cartera Bruta
+- Cartera reprogramada total
+- Previsión de cartera
+- Contingente
+- Gastos administrativos
+- Impuestos
+- Resultado operativo bruto (ROB)
+- Resultado neto de la gestión (RNG)
+
