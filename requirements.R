@@ -1,6 +1,6 @@
 # LIBRERIAS NECESARIAS
 pkgs <-  data.frame(utils::installed.packages())[,'Package']
-pkgs_v <- c('fpp2', 'dplyr', 'openxlsx','rmarkdown','ggplot2','kableExtra','patchwork','scales','glue')
+pkgs_v <- c('fpp2', 'dplyr', 'openxlsx','rmarkdown','ggplot2','kableExtra','patchwork','scales','glue', 'shiny','kableExtra','knitr')
 pkgs_v2 <- pkgs_v
 pkgs_v <- pkgs_v[!(pkgs_v %in% pkgs)]
 
