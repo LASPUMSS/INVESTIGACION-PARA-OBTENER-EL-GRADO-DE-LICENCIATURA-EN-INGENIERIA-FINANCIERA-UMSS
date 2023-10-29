@@ -33,10 +33,6 @@ require(patchwork)
 require(knitr)
 require(kableExtra)
 
-library(gridExtra)
-library(grid)
-library(cowplot) 
-
 if (!('dat' %in% ls())) {dat <- NULL}
 
 rootFile_datCamelIndNorm <- 'FUENTES-DE-DATOS/DATA/datCamelIndNorm_TipoDeEntidad.rds' 
