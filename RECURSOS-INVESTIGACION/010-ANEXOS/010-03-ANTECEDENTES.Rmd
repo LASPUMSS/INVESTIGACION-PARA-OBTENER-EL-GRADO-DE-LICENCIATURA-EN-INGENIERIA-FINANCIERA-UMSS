@@ -4,7 +4,7 @@
 Los antecedentes presentados a continuación cubren dos segmentos el campo de las finanzas y el campo de las redes neuronales.
 
 <!-- ANTECEDENTES FINANZAS -->
-\subsubsection*{Finanzas}
+### Finanzas
 
 La finanzas como ciencia es el resultado de la contribución de varios individuos en diferentes puntos de tiempo y también como consecuencia de otras ciencias sociales, siendo la ciencias contables y administrativas las bases de la misma, las ciencias contable dotando la materia prima y las administrativas los métodos, con este contexto presentamos los antecedentes financieros generales:
 
@@ -13,8 +13,7 @@ En 1494 en Venecia el Fray Luca Pacioli en su obra "Summa" presento un análisis
 Así también en 1973 de la mano de la IASC (Internacional Accounting Standards Committee) emite las normas internacionales de contabilidad (NIC), la institución mantuvo su nombre hasta el año 2001 y fue cambiado por IASB (International Accounting Standards Board), donde las normas internacionales de contabilidad se fueron ampliando y elaborando interpretaciones.
 
 <!-- ANTECEDENTES REDES NEURONALES -->
-\subsubsection*{Redes neuronales}
-
+### Redes neuronales
 
 Como antecedentes generales, muestran que los inicios de la inteligencia artificial de manera formal se dieron en el año 1943 cuando se colocó la primera piedra angular sobre la que se basó lo que hoy se conoce como inteligencia artificial, de la mano de Warren McCulloch y Walter Pitts, con la presentación del primer modelo matemático de aprendizaje, donde por primera vez se dota a un modelo autónomo la capacidad de aprendizaje.
 

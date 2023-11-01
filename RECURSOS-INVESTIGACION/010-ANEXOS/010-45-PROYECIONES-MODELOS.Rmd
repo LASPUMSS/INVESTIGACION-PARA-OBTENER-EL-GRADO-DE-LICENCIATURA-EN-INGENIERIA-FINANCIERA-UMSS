@@ -14,6 +14,7 @@ require(patchwork)
 require(ggplot2)
 require(dplyr)
 require(fpp2)
+require(stringr)
 
 
 
@@ -42,7 +43,10 @@ if (!('listResultPEF' %in% ls())) {
 ```{r}
 cuenta <- 'ACTIVO_DISPONIBILIDADES'
 labelCuenta <- converCuentasBasicPef(cuenta)
+
 ```
+
+\phantomsection\addcontentsline{toc}{subsubsection}{`r str_to_title(labelCuenta)`}
 
 \vspace*{\fill}
 ```{=latex}

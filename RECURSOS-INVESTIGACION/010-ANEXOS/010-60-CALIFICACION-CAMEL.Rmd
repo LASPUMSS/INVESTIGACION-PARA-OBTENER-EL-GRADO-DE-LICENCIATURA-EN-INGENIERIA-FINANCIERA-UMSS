@@ -39,7 +39,7 @@ datCamelCalificacionEntidad <- datCamelCalificacionEntidad %>% filter(FECHA>date
 
 \anexosms{Calificaciones CAMEL}
 
-\subsubsection*{Calificaciones CAMEL sin ponderar}
+\subsubsection{Calificaciones CAMEL sin ponderar}
 
 - Capital (C)
 - Activos (A)
@@ -61,7 +61,7 @@ renderTableBasic(datAux, 'Calificaciones CAMEL sin poderar') %>%
 
 
 \newpage
-\subsubsection*{Calificación CAMEL ponderada}
+\subsubsection{Calificación CAMEL ponderada}
 
 - Capital (C)
 - Activos (A)

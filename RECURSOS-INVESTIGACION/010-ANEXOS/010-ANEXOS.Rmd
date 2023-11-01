@@ -11,6 +11,8 @@
 
 ```{=latex}
 \newpage
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
 \printcontents[anexosections]{}{1}{\section*{INDICE ANEXOS}}
 ```
 
@@ -106,7 +108,6 @@
 ```{r, child="RECURSOS-INVESTIGACION/010-ANEXOS/010-60-CALIFICACION-CAMEL.Rmd"}
 
 ```
-
 
 <!-- ############################################################### -->
 <!-- ###################### ANEXO  #################################-->

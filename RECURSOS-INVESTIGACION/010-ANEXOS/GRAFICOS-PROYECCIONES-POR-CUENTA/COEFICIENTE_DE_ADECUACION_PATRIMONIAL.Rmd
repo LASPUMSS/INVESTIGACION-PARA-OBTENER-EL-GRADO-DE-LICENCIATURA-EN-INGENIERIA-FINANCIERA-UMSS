@@ -45,6 +45,8 @@ labelCuenta <- converCuentasBasicPef(cuenta)
 ```
 
 \newpage
+\phantomsection\addcontentsline{toc}{subsubsection}{`r str_to_title(labelCuenta)`}
+
 \vspace*{\fill}
 ```{=latex}
 \begin{figure}[h!]

@@ -23,6 +23,7 @@ datGroupBySector <- getDatEEFFByGroup(datBasic,by = 'TIPO_DE_ENTIDAD' )
 
 \anexosms{Entidades financieras comprendidas en el diagnostico} \label{ANEXO-ENTIDADES-DIAGNOSTICO} 
 
+\phantomsection\addcontentsline{toc}{subsubsection}{Bancos múltiples}
 
 ```{r}
 idTipoEntidad <- 'BANCOS_MULTIPLES'
@@ -33,12 +34,13 @@ entidadesModelo <-
     select(SIGLA,ENTIDAD,DE,HASTA)
 ```
 
-
 ```{r bancos-multiples-datos}
 captionTable <- glue('{handle$toUpperFirstText(gsub("_"," ",idTipoEntidad))} contenidas en los datos')
 renderTableBasic(entidadesModelo,captionTable = captionTable)
 ```
 
+
+\phantomsection\addcontentsline{toc}{subsubsection}{Bancos PYME}
 
 ```{r}
 idTipoEntidad <- 'BANCOS_PYME'
@@ -53,6 +55,7 @@ captionTable <- glue('{gsub("pyme","PYME",handle$toUpperFirstText(gsub("_"," ",i
 renderTableBasic(entidadesModelo,captionTable = captionTable)
 ```
 
+\phantomsection\addcontentsline{toc}{subsubsection}{Bancos de desarrollo productivo}
 
 ```{r}
 idTipoEntidad <- 'BANCOS_DE_DESARROLLO_PRODUCTIVO'
@@ -68,6 +71,7 @@ renderTableBasic(entidadesModelo,captionTable = captionTable)
 ```
 
 \newpage
+\phantomsection\addcontentsline{toc}{subsubsection}{Instituciones financieras de desarrollo}
 
 ```{r}
 idTipoEntidad <- 'INSTITUCIONES_FINANCIERAS_DE_DESARROLLO'
@@ -82,6 +86,7 @@ captionTable <- glue('{handle$toUpperFirstText(gsub("_"," ",idTipoEntidad))} con
 renderTableBasic(entidadesModelo,captionTable = captionTable)
 ```
 
+\phantomsection\addcontentsline{toc}{subsubsection}{Entidades financieras de vivienda}
 
 ```{r}
 idTipoEntidad <- 'ENTIDADES_FINANCIERAS_DE_VIVIENDA'
@@ -98,6 +103,7 @@ renderTableBasic(entidadesModelo,captionTable = captionTable) %>%
              general_title = 'NOTA: ' )
 ```
 
+\phantomsection\addcontentsline{toc}{subsubsection}{Cooperativas de ahorro y credito}
 
 ```{r}
 idTipoEntidad <- 'COOPERATIVAS_DE_AHORRO_Y_CREDITO'

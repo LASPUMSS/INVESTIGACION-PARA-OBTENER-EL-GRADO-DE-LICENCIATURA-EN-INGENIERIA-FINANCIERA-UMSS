@@ -11,7 +11,7 @@ Lo expuesto en el presente anexo corresponde a @MCO-FERNANDO-ECONOMETRIA, donde 
 La ecuación \@ref(eq:anx-y) puede ser reescrita en forma matricial, tomando la siguiente forma:
 
 \begin{equation}
-y = X \hat{\beta} + \hat{\mu}
+Y = X \hat{\beta} + \hat{\mu}
 (\#eq:anx-y-matriz)
 \end{equation}
 
@@ -23,7 +23,7 @@ Min_{\hat{\beta_{1}}, \hat{\beta_{2}}, \dots, \hat{\beta_{k}}} = \left[ \sum_{i=
 \end{equation}
 
 
-Despejando el vector de errores $\hat{\mu}$ en la ecuación \@ref(eq:anx-mco-opt) se tiene:
+Despejando el vector de errores $\hat{\mu}$ en la ecuación \@ref(eq:anx-y-matriz) se tiene:
 
 \begin{equation}
 \hat{\mu}= Y - X \hat{\beta}
@@ -76,8 +76,3 @@ Dando lugar a coeficientes $\beta$ por mínimos cuadrados ordinarios se define c
 \end{equation}
 
 El cual cumple el criterio de minimizar en la ecuación \@ref(eq:anx-mco-opt).
-
-
-
-
-

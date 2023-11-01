@@ -12,7 +12,7 @@ datVariablesDiagnostico <- getDatVariablesDiagnostico(by = 'TIPO_DE_ENTIDAD',ges
 
 \anexosms{Variables utilizadas en el diagnostico CAMEL}
 
-\subsubsection*{Cartera vencida, en ejecución y vigente expresado en bolivianos utilizado en análisis CAMEL}
+\subsubsection{Cartera vencida, en ejecución y vigente expresado en bolivianos utilizado en análisis CAMEL}
 
 - C.VC. = Cartera vencida
 - C.E. = Cartera en ejecución
@@ -38,7 +38,7 @@ renderTableBasic(datForRender,
 
 
 \newpage
-\subsubsection*{Cartera vencida reprogramada, en ejecución reprogramada y vigente reprogramada expresado en bolivianos utilizado en análisis CAMEL}
+\subsubsection{Cartera vencida reprogramada, en ejecución reprogramada y vigente reprogramada expresado en bolivianos utilizado en análisis CAMEL}
 
 - C.VC.R. = Cartera vencida reprogramada
 - C.E.R. = Cartera en ejecución reprogramada
@@ -63,7 +63,7 @@ renderTableBasic(datForRender,
 ```
 
 \newpage
-\subsubsection*{Previsión incobrabilidad de cartera, patrimonio y activo expresado en bolivianos utilizado en análisis CAMEL}
+\subsubsection{Previsión incobrabilidad de cartera, patrimonio y activo expresado en bolivianos utilizado en análisis CAMEL}
 
 - P.I.C. = Previsión para incobrabilidad de cartera
 
@@ -87,7 +87,7 @@ renderTableBasic(datForRender,
 
 
 \newpage
-\subsubsection*{Activo realizabe, contingente y disponible expresado en bolivianos utilizado en análisis CAMEL}
+\subsubsection{Activo realizabe, contingente y disponible expresado en bolivianos utilizado en análisis CAMEL}
 
 - A.R. = Activo realizable
 - A.C. = Activo contingente
@@ -113,7 +113,7 @@ renderTableBasic(datForRender,
 
 
 \newpage
-\subsubsection*{Activo de inversiones temporarias, pasivo y gastos administrativos expresado en bolivianos utilizado en análisis CAMEL}
+\subsubsection{Activo de inversiones temporarias, pasivo y gastos administrativos expresado en bolivianos utilizado en análisis CAMEL}
 
 - A.I.T. = Activo de inversiones temporarias
 - G.A. = Gastos administrativos
@@ -138,7 +138,7 @@ renderTableBasic(datForRender,
 
 
 \newpage
-\subsubsection*{Impuestos, resultado opertativo y neto expresado en bolivianos utilizado en análisis CAMEL}
+\subsubsection{Impuestos, resultado opertativo y neto expresado en bolivianos utilizado en análisis CAMEL}
 
 - R.O. = Resultado Operativo
 - I.N. = Ingreso Neto

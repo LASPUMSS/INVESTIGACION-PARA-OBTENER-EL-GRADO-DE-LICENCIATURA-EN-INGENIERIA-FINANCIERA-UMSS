@@ -36,7 +36,7 @@ datCamelCalificacionEntidad <- datCamelCalificacionEntidad %>% filter(FECHA>date
 
 A continuación se presenta las tablas resultantes de los calulos realizados para el diagnostico financieros por sectores.
 
-\subsubsection*{Capital}
+\subsubsection{Capital}
 
 - Coeficiente de adecuación patrimonial (CAP)
 - Coeficiente de cobertura de cartera en mora (CCCM)
@@ -52,7 +52,7 @@ renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de capital CAMEL') %>%
 
 
 \newpage
-\subsubsection*{Activos}
+\subsubsection{Activos}
 
 - Coeficiente de exposición de cartera (CEC)
 - Coeficiente de previsión de cartera (CPC)
@@ -68,7 +68,7 @@ renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de activos CAMEL') %>%
 
 
 \newpage
-\subsubsection*{Administración y rentabilidad}
+\subsubsection{Administración y rentabilidad}
 
 - Coeficiente de cobertura gastos administrativos (CCGA) 
 - Coeficiente ácido de cobertura gastos administrativos (CACGA)
@@ -85,7 +85,7 @@ renderTableCamelIndNorm2(id1, id2 , datCamelIndNorm, 'Indicadores de administrac
 
 
 \newpage
-\subsubsection*{Liquidez}
+\subsubsection{Liquidez}
 
 - Coeficiente de capacidad de pago frente a pasivos (CCPP)
 - Coeficiente ácido de capacidad de pago frente a pasivos (CACPP) 
