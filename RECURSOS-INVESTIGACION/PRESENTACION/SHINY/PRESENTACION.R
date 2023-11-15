@@ -436,4 +436,3 @@ shinyApp(ui = ui, server = server)
 filesMD_RM <- list.files('.')[grepl("\\.md", list.files('.'))]
 filesMD_RM <- filesMD_RM[!(filesMD_RM %in% "README.md")]
 file.remove(filesMD_RM)
-
