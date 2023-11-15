@@ -1,5 +1,6 @@
+<div style="text-align: center;">
 
-## Objetivos de la investigación
+## OBJETIVOS DE LA INVESTIGACIÓN
 
 Entre los objetivos propuestos para viabilizar el tema de investigación y la realización del informe final, se describen los siguientes:
 
@@ -9,8 +10,9 @@ Proporcionar información financiera adecuada con mayor aproximación a la situa
 
 ### Específico 
 
+</div>
+
 - Diagnosticar la situación actual del sistema financiero de Bolivia.
 - Definir la arquitectura y entrenamiento del modelo de red de neuronas artificiales.
 - Proyectar los estados financieros.
 - Evaluar los datos proyectados-simulados respecto a los datos observados.
-

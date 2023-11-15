@@ -16,7 +16,9 @@ options(scipen=999)
 
 ```
 
-```{r, fig.height = 10, fig.width = 10, fig.cap=""}
+<br>
+
+```{r, out.width="60%", out.height="60%", fig.cap=""}
 knitr::include_graphics("RECURSOS-INVESTIGACION/PRESENTACION/SHINY/INICIO/PROYECTO-PORTADA.png")
 ```
 

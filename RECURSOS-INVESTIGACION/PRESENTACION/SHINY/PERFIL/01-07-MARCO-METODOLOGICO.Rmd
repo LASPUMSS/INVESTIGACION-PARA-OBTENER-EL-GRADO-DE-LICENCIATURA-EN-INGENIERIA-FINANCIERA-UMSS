@@ -17,14 +17,25 @@ options(scipen=999)
 ```
 
 
+<div style="text-align: center;">
+<br><br>
 
-## Marco metodológico
+## MARCO METODOLÓGICO
+
+<br>
+</div>
 
 - Tipo de investigación
 - Método de investigación
 - Técnicas de investigación
 
-## Fuentes de información
+<div style="text-align: center;">
+<br><br>
+
+## FUENTES DE INFORMACIÓN
+
+<br>
+</div>
 
 - Fuentes primarias
 - Fuentes secundarias

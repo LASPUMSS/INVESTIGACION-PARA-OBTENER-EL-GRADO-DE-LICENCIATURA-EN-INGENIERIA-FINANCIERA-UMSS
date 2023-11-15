@@ -9,6 +9,9 @@
 
 library(shiny)
 
+# Agregar ruta de imagenes
+addResourcePath(prefix = "imgResources", directoryPath = "RECURSOS-INVESTIGACION/PRESENTACION/SHINY/assets/img")
+
 # Define UI for application that draws a histogram
 ui <- fluidPage(
     
@@ -17,7 +20,7 @@ ui <- fluidPage(
     # Application title
     tags$div(class="header-presentacion", checked=TRUE,
              tags$div(class="header-logo-umss", checked=TRUE,
-                      tags$img(src='https://drive.google.com/uc?export=view&id=1NoTXxCel5n3nbP1xrPLowXDz__3hC-zs', width='100px',height='100px')
+                      tags$img(src='imgResources/logo-umss.jpg', width='100px',height='100px')
              ),
              tags$div(class="header-title-proyecto", checked=TRUE,
    
@@ -25,7 +28,7 @@ ui <- fluidPage(
              ),
              tags$div(class="header-logo-fce", checked=TRUE,
                       
-                      tags$img(src='https://drive.google.com/uc?export=view&id=1NSE4R6ae1MQpFtBdos5-R-NWTSDXYPpA', width='100px',height='100px')
+                      tags$img(src='imgResources/logo-fce.jpg', width='100px',height='100px')
              )
     ),
     
@@ -171,8 +174,8 @@ ui <- fluidPage(
                navbarMenu("CONCLUSIONES Y RECOMENDACIONES",
                           tabPanel('AQUI',
                                     tabsetPanel(
-                                        tabPanel("CONCLUSIONES OBJETIVOS", uiOutput("conclusionesObjetivos")),
-                                        tabPanel("CONCLUSION GENERAL", uiOutput("conclusionesGeneral"))
+                                        tabPanel("CONCLUSION GENERAL", uiOutput("conclusionesGeneral")),
+                                        tabPanel("CONCLUSIONES OBJETIVOS", uiOutput("conclusionesObjetivos"))
                                         ))
                           
                ),

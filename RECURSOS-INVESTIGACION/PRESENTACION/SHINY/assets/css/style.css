@@ -5,6 +5,7 @@
 .header-presentacion {
     display:flex;
     justify-content: space-between;
+    margin-top: 15px;
 }
 
 .header-title-proyecto {

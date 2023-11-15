@@ -1,16 +1,8 @@
+<br><br><br><br><br><br>
 
-## Alcance y delimitación
+<div style="text-align: center;">
 
-El presente trabajo de investigación se circunscribe al estudio de las entidades de intermediación de servicios financieros de Bolivia, definidos en el artículo 151 de la ley 393. Con fines de obtener la información que coadyuve a generar la determinación de pronósticos mediante redes neuronales, como herramienta en la toma de decisiones a nivel gerencial y la evaluación de las mismas.
+## ALCANCE Y DELIMITACIÓN
 
-En el diagnóstico financiero las entidades financieras se agruparán por sectores:
 
-- Bancos múltiples.
-- Bancos PYME.
-- Entidades financieras de vivienda.
-- Cooperativas de ahorro y crédito abiertas.
-- Instituciones financieras de desarrollo.
-- Bancos de desarrollo productivo.
-
-Para tener acceso a la información homogénea requerida en los pronósticos, los estados financieros se agruparon de forma tal que representan el sistema en su conjunto los cuales tienen un intervalo mensual obtenidos de las gestiones de 2014 a 2021, proyectando los periodos posteriores. 
-
+</div>

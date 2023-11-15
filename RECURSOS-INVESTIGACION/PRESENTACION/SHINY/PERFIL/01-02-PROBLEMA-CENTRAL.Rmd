@@ -1,4 +1,11 @@
+<br><br>
 
-## Formulación del problema central
+<div style="text-align: center;">
+
+## FORMULACIÓN DEL PROBLEMA CENTRAL
+
+<br><br>
 
 ¿Será que, con la aplicación del método de redes neuronales se obtendrá información adecuada con mayor aproximación a la situación económica-financiera observada del sistema financiero en su conjunto?
+
+</div>
