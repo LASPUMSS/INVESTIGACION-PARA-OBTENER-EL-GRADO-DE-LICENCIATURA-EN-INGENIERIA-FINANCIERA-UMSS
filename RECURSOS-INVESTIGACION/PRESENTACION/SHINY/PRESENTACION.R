@@ -76,8 +76,28 @@ ui <- fluidPage(
                ####################################################################
                # MARCO TEORICO UI
                ####################################################################
-               
-               tabPanel("MARCO TEORICO"),
+    
+               navbarMenu("MARCO TEORICO",
+                          
+                          # FINANZAS - EVALUACION FINANCIERA
+                          tabPanel("FINANZAS - EVALUACION FINANCIERA",
+                                   tabsetPanel(
+                                       tabPanel("UMSS", uiOutput("marcoTeoricoFinanzasEvaluacion_Intro"))
+                                       )),
+                          
+                          # REDES NEURONALES
+                          tabPanel("REDES NEURONALES",
+                                   tabsetPanel(
+                                       tabPanel("UMSS", uiOutput("marcoTeoricoRedesNeuronales_Intro"))
+                                   )),
+                          
+                          # PROYECCION - EVALUACION
+                          tabPanel("PROYECCION - SIMULACIONES",
+                                   tabsetPanel(
+                                       tabPanel("UMSS", uiOutput("marcoTeoricoPronosticosEvaluacion_Intro"))
+                                   ))
+                          
+                          ),
                
                ####################################################################
                # DIAGNOSTICO UI
@@ -214,6 +234,24 @@ server <- function(input, output) {
     ####################################################################
     # MARCO TEORICO
     ####################################################################
+    
+    # FINANZAS - EVALUACION FINANCIERA
+    output$marcoTeoricoFinanzasEvaluacion_Intro <- renderUI({
+        rootDirFile <- "MARCO-TEORICO/02-01-01-FINANZAS-EVALUACION-FINANCIERA-INTRO.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    # REDES NEURONALES
+    output$marcoTeoricoRedesNeuronales_Intro <- renderUI({
+        rootDirFile <- "MARCO-TEORICO/02-02-01-REDES-NEURONALES-INTRO.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    # REDES NEURONALES
+    output$marcoTeoricoPronosticosEvaluacion_Intro <- renderUI({
+        rootDirFile <- "MARCO-TEORICO/02-03-01-PRONOSTICOS-EVALUACION-INTRO.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
     
     ####################################################################
     # DIAGNOSTICO
@@ -391,5 +429,5 @@ server <- function(input, output) {
 }
 
 # Run the application 
-shinyApp(ui = ui, server = server,)
+shinyApp(ui = ui, server = server)
 

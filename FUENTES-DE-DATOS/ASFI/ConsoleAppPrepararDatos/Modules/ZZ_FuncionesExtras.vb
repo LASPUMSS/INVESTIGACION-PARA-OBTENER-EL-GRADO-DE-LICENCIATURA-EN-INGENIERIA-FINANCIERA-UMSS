@@ -131,6 +131,114 @@ Module ZZ_FuncionesExtras
     End Function
 
     ''' <summary>
+    ''' <para>Esta función devuelve la hoja donde se encuentra la copia EEFF.</para>
+    ''' <para>Primero elimina las hojas BBDD y BBDD_MOD si existen.</para>
+    ''' <para>Segundo busca la hoja que conitne los EEFF, usando como patron la celda el valor de activo.</para>
+    ''' <para>Tercero copia y devuelve dicha hoja con los EEFF's copiados.</para>
+    ''' </summary>
+    ''' <param name="ExcelWkBook">Libro de excel donde se encuentra los EEFF.</param>
+    ''' <param name="txt">El texto que se utilizara como patron para encontrar la hoja con los EEFF.</param>
+    Public Function hojaDeDatosV2(ExcelWkBook As Excel.Workbook, txt As String, txtNamesSheet As Object) As Excel.Worksheet
+        Dim strEval As String
+        Dim nombreHojaDatos As String = "xxxxxxxxxxxxxxx"
+        Dim done As Boolean
+        Dim ExcelWkSheet As Excel.Worksheet = Nothing
+
+        Dim rowIn As Integer = 1
+        Dim rowFn As Long = 5000
+        Dim colIn As Integer = 1
+        Dim colFn As Long = 50
+
+        Dim verfEncotrarHojaPorNombre As Boolean = False
+
+        'VERIFICAR SI LA BBDD EXISTE Y CREAR OTRA NUEVA
+        Try
+            ExcelWkBook.Sheets("BBDD").Delete()
+            registroEjecucion000_00("Se elimino la hoja BBDD para crear una nueva...")
+        Catch ex As Exception
+            registroEjecucion000_00("El libro BBDD no existe, asi que se creara uno...")
+        End Try
+
+        'VERIFICAR SI LA BBDD_MOD EXISTE Y CREAR OTRA NUEVA
+        Try
+            ExcelWkBook.Sheets("BBDD_MOD").Delete()
+            registroEjecucion000_00("Se elimino la hoja BBDD_MOD para crear una nueva...")
+        Catch ex As Exception
+            registroEjecucion000_00("El libro BBDD_MOD no existe, pero en esta seccion no implica un problema")
+        End Try
+
+        'ENCONTRAR Y COPIAR LA HOJA DE DATOS
+        For Each item In txtNamesSheet
+
+            Try
+                ExcelWkSheet = ExcelWkBook.Sheets(item)
+
+                nombreHojaDatos = ExcelWkSheet.Name
+                ExcelWkSheet.Select()
+                ExcelWkSheet.Copy(After:=ExcelWkBook.Sheets(ExcelWkBook.Sheets.Count))
+
+                verfEncotrarHojaPorNombre = True
+                registroEjecucion000_00($"Se encontro hoja datos por {nombreHojaDatos}")
+                Try
+                    ExcelWkBook.Sheets(ExcelWkBook.Sheets.Count).Name = "BBDD"
+                Catch ex As Exception
+                    registroEjecucion000_00("No se encontro la copia")
+                End Try
+
+                If verfEncotrarHojaPorNombre Then Exit For
+
+            Catch ex As Exception
+                registroEjecucion000_00($"No se encontro por {item}")
+            End Try
+
+
+        Next item
+
+
+        If verfEncotrarHojaPorNombre = False Then
+
+            registroEjecucion000_00("Se realiza la busqueda exhaustiva.....")
+
+            For i = 1 To ExcelWkBook.Sheets.Count
+                If TypeName(ExcelWkBook.Sheets(i)) = "Worksheet" Then
+                    ExcelWkSheet = ExcelWkBook.Sheets(i)
+
+                    For Each celda As Excel.Range In ExcelWkBook.Sheets(i).Range(ExcelWkSheet.Cells(rowIn, colIn),
+                                                                                 ExcelWkSheet.Cells(rowFn, colFn))
+
+                        strEval = If(CStr(celda.Value) <> "", QuitarEspAcen(CStr(celda.Value)), "")
+                        If strEval = txt Then
+                            nombreHojaDatos = ExcelWkSheet.Name
+                            ExcelWkSheet.Select()
+                            ExcelWkSheet.Copy(After:=ExcelWkBook.Sheets(ExcelWkBook.Sheets.Count))
+                            done = True
+                            registroEjecucion000_00($"Se encontro hoja datos por exhaustivo {nombreHojaDatos}")
+                            Exit For
+                        End If
+                    Next
+                    If done Then Exit For
+                End If
+            Next
+
+            'ENCONTRAR LA COPIA DE LA HOJA DE DATOS
+            Try
+                ExcelWkBook.Sheets(ExcelWkBook.Sheets.Count).Name = "BBDD"
+                registroEjecucion000_00("Se encontro la copia de hoja datos BBDD")
+            Catch ex As Exception
+                registroEjecucion000_00("No se encontro la copia")
+            End Try
+
+        End If
+
+        'COPIA DE LA HOJA DE DATOS
+        ExcelWkSheet = ExcelWkBook.Sheets(ExcelWkBook.Sheets.Count)
+
+        Return ExcelWkSheet
+
+    End Function
+
+
+    ''' <summary>
     ''' <para>Esta función devuelve un celda donde se encuentra el titulo del primer entidad financiera.</para>
     ''' </summary>
     ''' <param name="ExcelWkSheet"> Hoja excel "BBDD" que contiene el EEFF</param>

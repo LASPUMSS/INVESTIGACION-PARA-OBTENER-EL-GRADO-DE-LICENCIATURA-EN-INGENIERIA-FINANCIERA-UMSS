@@ -391,7 +391,12 @@ Module BB_ProcedimientosEdicionHojas
         Dim tipoEntidadStr(5) As String
         Dim ExcelWkSheet As Excel.Worksheet
         Dim CelTiBn As Excel.Range
+        Dim txtNamesSheet(3) As String
 
+        txtNamesSheet(0) = "Bancos Multiples"
+        txtNamesSheet(1) = "Bancos Múltiples"
+        txtNamesSheet(2) = "Cooperativas"
+        txtNamesSheet(3) = "Bancos Pymes"
 
         tipoEntidadStr(0) = "BANCOS_MULTIPLES"
         tipoEntidadStr(1) = "BANCOS_PYME"
@@ -401,7 +406,7 @@ Module BB_ProcedimientosEdicionHojas
         tipoEntidadStr(5) = "ENTIDADES_FINANCIERAS_DE_VIVIENDA"
 
         'ENCONTRAR CELAS QUE SE USARAN DE REFERENCIA
-        ExcelWkSheet = hojaDeDatos(ExcelWkBook, "ACTIVO")
+        ExcelWkSheet = hojaDeDatosV2(ExcelWkBook, "ACTIVO", txtNamesSheet)
 
         'COPIAR Y PEGAR FORMULAS DE SUMAS
         CelTiBn = celdaTiBn(ExcelWkSheet, "ACTIVO", 3)

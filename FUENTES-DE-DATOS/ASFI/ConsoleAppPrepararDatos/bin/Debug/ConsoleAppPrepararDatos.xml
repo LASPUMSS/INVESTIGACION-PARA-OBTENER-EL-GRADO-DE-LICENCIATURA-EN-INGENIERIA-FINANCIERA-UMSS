@@ -55,6 +55,16 @@ ConsoleAppPrepararDatos
  <param name="ExcelWkBook">Libro de excel donde se encuentra los EEFF.</param>
  <param name="txt">El texto que se utilizara como patron para encontrar la hoja con los EEFF.</param>
 </member>
+<member name="M:ConsoleAppPrepararDatos.ZZ_FuncionesExtras.hojaDeDatosV2(Microsoft.Office.Interop.Excel.Workbook,System.String,System.Object)">
+ <summary>
+ <para>Esta función devuelve la hoja donde se encuentra la copia EEFF.</para>
+ <para>Primero elimina las hojas BBDD y BBDD_MOD si existen.</para>
+ <para>Segundo busca la hoja que conitne los EEFF, usando como patron la celda el valor de activo.</para>
+ <para>Tercero copia y devuelve dicha hoja con los EEFF's copiados.</para>
+ </summary>
+ <param name="ExcelWkBook">Libro de excel donde se encuentra los EEFF.</param>
+ <param name="txt">El texto que se utilizara como patron para encontrar la hoja con los EEFF.</param>
+</member>
 <member name="M:ConsoleAppPrepararDatos.ZZ_FuncionesExtras.celdaTiBn(Microsoft.Office.Interop.Excel.Worksheet,System.String,System.Int64)">
  <summary>
  <para>Esta función devuelve un celda donde se encuentra el titulo del primer entidad financiera.</para>

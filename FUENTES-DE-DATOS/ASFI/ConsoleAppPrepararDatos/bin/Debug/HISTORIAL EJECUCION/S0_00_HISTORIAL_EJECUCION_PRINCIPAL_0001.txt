@@ -3,6 +3,1041 @@
 ¿DESEA EJECUTAR LA EDICION DE LAS HOJAS?
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
+¿Deseas ejecutar la seccion de estados financieros?
+¿Deseas ejecutar la seccion de indicadores financieros?
+¿Deseas ejecutar la seccion de captaciones?
+¿Deseas ejecutar la seccion de colocaciones?
+¿Deseas ejecutar la seccion de operaciones interbancarias?
+¿Deseas ejecutar la seccion de estados financieros desagregados?
+####################################################################################
+SE EJECUTARA LA SECCION: ESTADOS FINANCIEROS DESAGREGADOS
+####################################################################################
+###############################################################################
+Hola que tal, empecemos con las hojas de calculo de E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug...
+Directorio raiz: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+###############################################################################
+¿Deseas ejecutar la gestion 2014 de Estados Financieros Desagregados?
+¿Deseas ejecutar la gestion 2015 de Estados Financieros Desagregados?
+¿Deseas ejecutar la gestion 2016 de Estados Financieros Desagregados?
+¿Deseas ejecutar la gestion 2017 de Estados Financieros Desagregados?
+¿Deseas ejecutar la gestion 2018 de Estados Financieros Desagregados?
+¿Deseas ejecutar la gestion 2019 de Estados Financieros Desagregados?
+¿Deseas ejecutar la gestion 2020 de Estados Financieros Desagregados?
+¿Deseas ejecutar la gestion 2021 de Estados Financieros Desagregados?
+¿Deseas ejecutar la gestion 2022 de Estados Financieros Desagregados?
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\01\Desagregados0122\202201_BMU_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+Se encontro hoja datos por Bancos Múltiples
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1952, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: BNB
+Total Filas: 1951
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\01\Desagregados0122\202201_BPY_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+Se encontro hoja datos por Bancos Pymes
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1952, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: PEF
+Total Filas: 1951
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\01\Desagregados0122\202201_BDR_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo Bcos Des Prod
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1952, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: BDR
+Total Filas: 1951
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\01\Desagregados0122\202201_IFD_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo IFD´s
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1952, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: ICI
+Total Filas: 1951
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\01\Desagregados0122\202201_COO_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+Se encontro hoja datos por Cooperativas
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1952, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: CJN
+Total Filas: 1951
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\01\Desagregados0122\202201_EFV_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo Ent. Finan. Vivienda
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1952, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: VL1
+Total Filas: 1951
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\02\Desagregados0222\202202_BMU_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+Se encontro hoja datos por Bancos Múltiples
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1953, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: BNB
+Total Filas: 1952
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\02\Desagregados0222\202202_BPY_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+Se encontro hoja datos por Bancos Pymes
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1953, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: PEF
+Total Filas: 1952
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\02\Desagregados0222\202202_BDR_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo Bcos Des Prod
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1953, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: BDR
+Total Filas: 1952
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\02\Desagregados0222\202202_IFD_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo IFD´s
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1953, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: ICI
+Total Filas: 1952
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\02\Desagregados0222\202202_COO_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+Se encontro hoja datos por Cooperativas
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1953, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: CJN
+Total Filas: 1952
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\02\Desagregados0222\202202_EFV_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo Ent. Finan. Vivienda
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1953, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: VL1
+Total Filas: 1952
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\03\Desagregados0322\202203_BMU_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+Se encontro hoja datos por Bancos Múltiples
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1953, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: BNB
+Total Filas: 1952
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\03\Desagregados0322\202203_BPY_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+Se encontro hoja datos por Bancos Pymes
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1953, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: PEF
+Total Filas: 1952
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\03\Desagregados0322\202203_BDR_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo Bcos Des Prod
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1953, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: BDR
+Total Filas: 1952
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\03\Desagregados0322\202203_IFD_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo IFD´s
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1953, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: ICI
+Total Filas: 1952
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\03\Desagregados0322\202203_COO_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+Se encontro hoja datos por Cooperativas
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1953, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: CJN
+Total Filas: 1952
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\03\Desagregados0322\202203_EFV_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo Ent. Finan. Vivienda
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1953, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: VL1
+Total Filas: 1952
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\04\Desagregados0422\202204_BMU_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+Se encontro hoja datos por Bancos Múltiples
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1955, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: BNB
+Total Filas: 1954
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\04\Desagregados0422\202204_BPY_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+Se encontro hoja datos por Bancos Pymes
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1955, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: PEF
+Total Filas: 1954
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\04\Desagregados0422\202204_BDR_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo Bcos Des Prod
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1955, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: BDR
+Total Filas: 1954
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\04\Desagregados0422\202204_IFD_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo IFD´s
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1955, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: ICI
+Total Filas: 1954
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\04\Desagregados0422\202204_COO_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+Se encontro hoja datos por Cooperativas
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1955, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: CJN
+Total Filas: 1954
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\04\Desagregados0422\202204_EFV_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo Ent. Finan. Vivienda
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1955, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: VL1
+Total Filas: 1954
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\05\Desagregados0522\202205_BMU_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+Se encontro hoja datos por Bancos Múltiples
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1955, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: BNB
+Total Filas: 1954
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\05\Desagregados0522\202205_BPY_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+Se encontro hoja datos por Bancos Pymes
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1955, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: PEF
+Total Filas: 1954
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\05\Desagregados0522\202205_BDR_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo Bcos Des Prod
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1955, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: BDR
+Total Filas: 1954
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\05\Desagregados0522\202205_IFD_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo IFD´s
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1955, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: ICI
+Total Filas: 1954
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\05\Desagregados0522\202205_COO_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+Se encontro hoja datos por Cooperativas
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1955, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: CJN
+Total Filas: 1954
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\05\Desagregados0522\202205_EFV_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo Ent. Finan. Vivienda
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1955, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: VL1
+Total Filas: 1954
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\06\Desagregados0622\202206_BMU_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+Se encontro hoja datos por Bancos Múltiples
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1957, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: BNB
+Total Filas: 1956
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\06\Desagregados0622\202206_BPY_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+Se encontro hoja datos por Bancos Pymes
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1957, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: PEF
+Total Filas: 1956
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\06\Desagregados0622\202206_BDR_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo Bcos Des Prod
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1957, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: BDR
+Total Filas: 1956
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\06\Desagregados0622\202206_IFD_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo IFD´s
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1957, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: ICI
+Total Filas: 1956
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\06\Desagregados0622\202206_COO_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+Se encontro hoja datos por Cooperativas
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1957, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: CJN
+Total Filas: 1956
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\06\Desagregados0622\202206_EFV_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo Ent. Finan. Vivienda
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1957, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: VL1
+Total Filas: 1956
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\07\Desagregados0722\202207_BMU_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+Se encontro hoja datos por Bancos Múltiples
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1961, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: BNB
+Total Filas: 1960
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\07\Desagregados0722\202207_BPY_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+Se encontro hoja datos por Bancos Pymes
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1961, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: PEF
+Total Filas: 1960
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\07\Desagregados0722\202207_BDR_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo Bcos Des Prod
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1961, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: BDR
+Total Filas: 1960
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\07\Desagregados0722\202207_IFD_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo IFD´s
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1961, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: ICI
+Total Filas: 1960
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\07\Desagregados0722\202207_COO_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+Se encontro hoja datos por Cooperativas
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1961, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: CJN
+Total Filas: 1960
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\07\Desagregados0722\202207_EFV_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo Ent. Finan. Vivienda
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1961, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: VL1
+Total Filas: 1960
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\08\Desagregados0822\202208_BMU_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+Se encontro hoja datos por Bancos Múltiples
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: BNB
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\08\Desagregados0822\202208_BPY_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+Se encontro hoja datos por Bancos Pymes
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: PEF
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\08\Desagregados0822\202208_BDR_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo Bcos Des Prod
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: BDR
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\08\Desagregados0822\202208_IFD_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo IFD´s
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: ICI
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\08\Desagregados0822\202208_COO_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+Se encontro hoja datos por Cooperativas
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: CJN
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\08\Desagregados0822\202208_EFV_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo Ent. Finan. Vivienda
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: VL1
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\09\Desagregados0922\202209_BMU_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+Se encontro hoja datos por Bancos Múltiples
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: BNB
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\09\Desagregados0922\202209_BPY_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+Se encontro hoja datos por Bancos Pymes
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: PEF
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\09\Desagregados0922\202209_BDR_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo Bcos Des Prod
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: BDR
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\09\Desagregados0922\202209_IFD_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo IFD´s
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: ICI
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\09\Desagregados0922\202209_COO_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+Se encontro hoja datos por Cooperativas
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: CJN
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\09\Desagregados0922\202209_EFV_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo Ent. Finan. Vivienda
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: VL1
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\10\Desagregados1022\202210_BMU_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+Se encontro hoja datos por Bancos Múltiples
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: BNB
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\10\Desagregados1022\202210_BPY_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+Se encontro hoja datos por Bancos Pymes
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: PEF
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\10\Desagregados1022\202210_BDR_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo Bcos Des Prod
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: BDR
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\10\Desagregados1022\202210_IFD_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo IFD´s
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: ICI
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\10\Desagregados1022\202210_COO_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+Se encontro hoja datos por Cooperativas
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: CJN
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\10\Desagregados1022\202210_EFV_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo Ent. Finan. Vivienda
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: VL1
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\11\Desagregados1122\202211_BMU_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+Se encontro hoja datos por Bancos Múltiples
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: BNB
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\11\Desagregados1122\202211_BPY_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+Se encontro hoja datos por Bancos Pymes
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: PEF
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\11\Desagregados1122\202211_BDR_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo Bcos Des Prod
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: BDR
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\11\Desagregados1122\202211_IFD_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo IFD´s
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: ICI
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\11\Desagregados1122\202211_COO_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+Se encontro hoja datos por Cooperativas
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: CJN
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\11\Desagregados1122\202211_EFV_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo Ent. Finan. Vivienda
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: VL1
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\12\Desagregados1222\202212_BMU_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+Se encontro hoja datos por Bancos Múltiples
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: BNB
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\12\Desagregados1222\202212_BPY_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+Se encontro hoja datos por Bancos Pymes
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: PEF
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\12\Desagregados1222\202212_BDR_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo Bcos Des Prod
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: BDR
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\12\Desagregados1222\202212_IFD_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo IFD´s
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: ICI
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\12\Desagregados1222\202212_COO_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+Se encontro hoja datos por Cooperativas
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: CJN
+Total Filas: 1962
+-------------------------------------------
+El directorio a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
+El directorio excel a trabajar: E:\PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2022\12\Desagregados1222\202212_EFV_EstadosFinancierosDesagregados.xls
+El libro BBDD no existe, asi que se creara uno...
+El libro BBDD_MOD no existe, pero en esta seccion no implica un problema
+No se encontro por Bancos Multiples
+No se encontro por Bancos Múltiples
+No se encontro por Cooperativas
+No se encontro por Bancos Pymes
+Se realiza la busqueda exhaustiva.....
+Se encontro hoja datos por exhaustivo Ent. Finan. Vivienda
+Se encontro la copia de hoja datos BBDD
+Celda Inicial: 3, Value: ACTIVO
+Celda Final: 1963, Value: RESULTADO NETO DEL EJERCICIO                                                    
+CelTiBn: 2, Value: VL1
+Total Filas: 1962
+-------------------------------------------
+¿Deseas ejecutar la gestion 2023 de Estados Financieros Desagregados?
+###############################################################################
+Se acabo con los archivos de Estados Financieros Desagregados
+###############################################################################
+¿Deseas ejecutar la seccion de agencias, sucursales y numero de empleados?
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
 ¿ESTADOS DESEA EJECUTAR LA ENUMERACION DE LOS CAMPOS DE LOS ESTADOS?
@@ -13,215 +1048,6 @@
 ¿DESEA EJECUTAR AGREGAR CAMPOS?
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
-¿Deseas ejecutar la seccion de estados financieros?
-¿Deseas ejecutar la seccion de indicadores financieros?
-####################################################################################
-SE EJECUTARA LA SECCION: INDICADORES FINANCIEROS
-####################################################################################
-¿Deseas ejecutar la seccion de indicadores financieros - Calificacion de cartera?
-¿Deseas ejecutar la seccion de indicadores financieros - indicadores financieros?
-###############################################################################
-Hola que tal, empecemos con las hojas de calculo de E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug...
-Directorio raiz: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
-###############################################################################
-¿Deseas ejecutar la gestion 2014 de Indicadores Financieros?
-El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
-El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\01\Nobancos0114\201401_COO_IndicadoresFinancieros.xls
-Fecha EEFF: 2014 / 1
-El libro BBDD_MOD no existe, asi que se creara uno...
-La hoja con los datos es: BBDD (2)
-Ultima fila: 9
--------------------------------------------
-El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
-El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\02\Nobancos0214\201402_COO_IndicadoresFinancieros.xls
-Fecha EEFF: 2014 / 2
-El libro BBDD_MOD no existe, asi que se creara uno...
-La hoja con los datos es: BBDD (2)
-Ultima fila: 9
--------------------------------------------
-El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
-El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\03\Nobancos0314\201403_COO_IndicadoresFinancieros.xls
-Fecha EEFF: 2014 / 3
-El libro BBDD_MOD no existe, asi que se creara uno...
-La hoja con los datos es: BBDD (2)
-Ultima fila: 9
--------------------------------------------
-El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
-El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\04\Nobancos0414\201404_COO_IndicadoresFinancieros.xls
-Fecha EEFF: 2014 / 4
-El libro BBDD_MOD no existe, asi que se creara uno...
-La hoja con los datos es: BBDD (2)
-Ultima fila: 9
--------------------------------------------
-El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
-El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\05\Nobancos0514\201405_COO_IndicadoresFinancieros.xls
-Fecha EEFF: 2014 / 5
-El libro BBDD_MOD no existe, asi que se creara uno...
-La hoja con los datos es: BBDD (2)
-Ultima fila: 9
--------------------------------------------
-El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
-El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\06\Nobancos0614\201406_COO_IndicadoresFinancieros.xls
-Fecha EEFF: 2014 / 6
-El libro BBDD_MOD no existe, asi que se creara uno...
-La hoja con los datos es: BBDD (2)
-Ultima fila: 9
--------------------------------------------
-El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
-El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\07\BcosMultiples0714\201407_BMU_IndicadoresFinancieros.xls
-Fecha EEFF: 2014 / 7
-El libro BBDD_MOD no existe, asi que se creara uno...
-La hoja con los datos es: BBDD (2)
-Ultima fila: 9
--------------------------------------------
-El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
-El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\07\BcosPYME0714\201407_BPY_IndicadoresFinancieros.xls
-Fecha EEFF: 2014 / 7
-El libro BBDD_MOD no existe, asi que se creara uno...
-La hoja con los datos es: BBDD (2)
-Ultima fila: 9
--------------------------------------------
-El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
-El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\07\Nobancos0714\201407_COO_IndicadoresFinancieros.xls
-Fecha EEFF: 2014 / 7
-El libro BBDD_MOD no existe, asi que se creara uno...
-La hoja con los datos es: BBDD (2)
-Ultima fila: 9
--------------------------------------------
-El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
-El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\08\BcosMultiples0814\201408_BMU_IndicadoresFinancieros.xls
-Fecha EEFF: 2014 / 8
-El libro BBDD_MOD no existe, asi que se creara uno...
-La hoja con los datos es: BBDD (2)
-Ultima fila: 9
--------------------------------------------
-El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
-El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\08\BcosPYME0814\201408_BPY_IndicadoresFinancieros.xls
-Fecha EEFF: 2014 / 8
-El libro BBDD_MOD no existe, asi que se creara uno...
-La hoja con los datos es: BBDD (2)
-Ultima fila: 9
--------------------------------------------
-El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
-El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\08\Nobancos0814\201408_COO_IndicadoresFinancieros.xls
-Fecha EEFF: 2014 / 8
-El libro BBDD_MOD no existe, asi que se creara uno...
-La hoja con los datos es: BBDD (2)
-Ultima fila: 9
--------------------------------------------
-El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
-El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\09\BcosMultiples0914\201409_BMU_IndicadoresFinancieros.xls
-Fecha EEFF: 2014 / 9
-El libro BBDD_MOD no existe, asi que se creara uno...
-La hoja con los datos es: BBDD (2)
-Ultima fila: 9
--------------------------------------------
-El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
-El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\09\BcosPYME0914\201409_BPY_IndicadoresFinancieros.xls
-Fecha EEFF: 2014 / 9
-El libro BBDD_MOD no existe, asi que se creara uno...
-La hoja con los datos es: BBDD (2)
-Ultima fila: 9
--------------------------------------------
-El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
-El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\09\Nobancos0914\201409_COO_IndicadoresFinancieros.xls
-Fecha EEFF: 2014 / 9
-El libro BBDD_MOD no existe, asi que se creara uno...
-La hoja con los datos es: BBDD (2)
-Ultima fila: 9
--------------------------------------------
-El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
-El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\10\BcosMultiples1014\201410_BMU_IndicadoresFinancieros.xls
-Fecha EEFF: 2014 / 10
-El libro BBDD_MOD no existe, asi que se creara uno...
-La hoja con los datos es: BBDD (2)
-Ultima fila: 9
--------------------------------------------
-El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
-El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\10\BcosPYME1014\201410_BPY_IndicadoresFinancieros.xls
-Fecha EEFF: 2014 / 10
-El libro BBDD_MOD no existe, asi que se creara uno...
-La hoja con los datos es: BBDD (2)
-Ultima fila: 9
--------------------------------------------
-El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
-El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\10\Nobancos1014\201410_COO_IndicadoresFinancieros.xls
-Fecha EEFF: 2014 / 10
-El libro BBDD_MOD no existe, asi que se creara uno...
-La hoja con los datos es: BBDD (2)
-Ultima fila: 9
--------------------------------------------
-El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
-El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\11\BcosMultiples1114\201411_BMU_IndicadoresFinancieros.xls
-Fecha EEFF: 2014 / 11
-El libro BBDD_MOD no existe, asi que se creara uno...
-La hoja con los datos es: BBDD (2)
-Ultima fila: 9
--------------------------------------------
-El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
-El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\11\BcosPYME1114\201411_BPY_IndicadoresFinancieros.xls
-Fecha EEFF: 2014 / 11
-El libro BBDD_MOD no existe, asi que se creara uno...
-La hoja con los datos es: BBDD (2)
-Ultima fila: 9
--------------------------------------------
-El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
-El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\11\Nobancos1114\201411_COO_IndicadoresFinancieros.xls
-Fecha EEFF: 2014 / 11
-El libro BBDD_MOD no existe, asi que se creara uno...
-La hoja con los datos es: BBDD (2)
-Ultima fila: 9
--------------------------------------------
-El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
-El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\12\BcosMultiples1214\201412_BMU_IndicadoresFinancieros.xls
-Fecha EEFF: 2014 / 12
-El libro BBDD_MOD no existe, asi que se creara uno...
-La hoja con los datos es: BBDD (2)
-Ultima fila: 9
--------------------------------------------
-El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
-El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\12\BcosPYME1214\201412_BPY_IndicadoresFinancieros.xls
-Fecha EEFF: 2014 / 12
-El libro BBDD_MOD no existe, asi que se creara uno...
-La hoja con los datos es: BBDD (2)
-Ultima fila: 9
--------------------------------------------
-El directorio a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug
-El directorio excel a trabajar: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\12\Nobancos1214\201412_COO_IndicadoresFinancieros.xls
-Fecha EEFF: 2014 / 12
-El libro BBDD_MOD no existe, asi que se creara uno...
-###############################################################################
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-RUTA ERROR: E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\bin\Debug\DATOS\scbm\2014\12\Nobancos1214\201412_COO_IndicadoresFinancieros.xls
-Fecha EEFF: 2014 / 12
-ERROR ENCONTRADO: System.Runtime.InteropServices.COMException
-DESCRIPCION: El índice no es válido. (Excepción de HRESULT: 0x8002000B (DISP_E_BADINDEX))
-STACK_TRACE:    en Microsoft.Office.Interop.Excel.Sheets.get__Default(Object Index)
-   en ConsoleAppPrepararDatos.ZZ_FuncionesExtras.hojaConCamposAgregados(Workbook ExcelWkBook) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\ZZ_FuncionesExtras.vb:línea 24
-   en ConsoleAppPrepararDatos.EE_IgualarCamposHojas.cargarCamposIndicadoresFinancieros(Workbook ExcelWkBook) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\EE_IgualarCamposHojas.vb:línea 148
-   en ConsoleAppPrepararDatos.EE_IgualarCamposHojas.igualarCamposEstados(Workbook ExcelWkBook, String categoriaEstado) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\EE_IgualarCamposHojas.vb:línea 13
-   en ConsoleAppPrepararDatos.CC_ProcedimientosPatrones.editarArchivosPorPatron01(Application ExcelApp, Int64 gestionIn, Int64 gestionFn, String categoriaHojas, Boolean unirHojas, Boolean enumerar, Boolean igualarCampos) en E:\INVESTIGACION-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS\FUENTES-DE-DATOS\ASFI\ConsoleAppPrepararDatos\Modules\CC_ProcedimientosPatrones.vb:línea 131
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-###############################################################################
--------------------------------------------
-¿Deseas ejecutar la gestion 2015 de Indicadores Financieros?
-¿Deseas ejecutar la gestion 2016 de Indicadores Financieros?
-¿Deseas ejecutar la gestion 2017 de Indicadores Financieros?
-¿Deseas ejecutar la gestion 2018 de Indicadores Financieros?
-¿Deseas ejecutar la gestion 2019 de Indicadores Financieros?
-¿Deseas ejecutar la gestion 2020 de Indicadores Financieros?
-¿Deseas ejecutar la gestion 2021 de Indicadores Financieros?
-¿Deseas ejecutar la gestion 2022 de Indicadores Financieros?
-¿Deseas ejecutar la gestion 2023 de Indicadores Financieros?
-###############################################################################
-Se acabo con los archivos de Indicadores Financieros
-###############################################################################
-¿Deseas ejecutar la seccion de indicadores financieros - ponderacion de activos?
-¿Deseas ejecutar la seccion de captaciones?
-¿Deseas ejecutar la seccion de colocaciones?
-¿Deseas ejecutar la seccion de operaciones interbancarias?
-¿Deseas ejecutar la seccion de estados financieros desagregados?
-¿Deseas ejecutar la seccion de agencias, sucursales y numero de empleados?
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
 ¿DESEA EJECUTAR LA UNION DE LAS HOJAS?

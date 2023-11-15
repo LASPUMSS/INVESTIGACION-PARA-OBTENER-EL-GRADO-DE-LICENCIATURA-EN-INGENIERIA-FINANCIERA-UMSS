@@ -1,5 +1,7 @@
 ﻿Imports Microsoft.Office.Interop
 Imports System.IO
+
+' EN ESTE MODULO SE GUARDAN LOS PROCEDIMIENTOS PRINCIPALES PARA: EDITAR, ENUMERAR, AGREGAR(NORMALIZAR) Y UNIR HOJAS.
 Module AA_ProcedimientosPrincipales
 
     Public Sub procedimientosEdicion(ExcelApp As Excel.Application, gestionIncial As Long, gestionActual As Long)
