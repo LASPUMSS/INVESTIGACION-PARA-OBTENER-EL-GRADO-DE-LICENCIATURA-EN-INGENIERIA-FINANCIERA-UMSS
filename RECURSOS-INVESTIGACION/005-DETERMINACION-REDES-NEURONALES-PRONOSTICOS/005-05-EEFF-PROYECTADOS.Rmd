@@ -150,7 +150,7 @@ renderTableBasic(datEEEFF_Forescat %>% select(DESCRIPCION, OBSERVADO, NN) %>% tr
 \newpage
 ```{r}
 renderTableBasic(datEEEFF_Forescat %>% select(DESCRIPCION, OBSERVADO, MCO, ARIMA) %>% transformTableAuxPef2, 
-                 captionTable = 'Balance general observado respecto a proyecciones por MCO y ARIMA')
+                 captionTable = 'Balance general observado respecto a proyecciones por MCO y ARIMA', fontSize = 7)
 ```
 
 \newpage
@@ -231,7 +231,7 @@ renderTableBasic(datEEEFF_Forescat %>% select(DESCRIPCION, OBSERVADO, NN) %>% tr
 ```{r}
 renderTableBasic(datEEEFF_Forescat %>% select(DESCRIPCION, OBSERVADO, MCO, ARIMA) %>% transformTableAuxPef2, 
                  captionTable = 'Estado de resultados observado respecto a proyecciones por MCO y ARIMA',
-                 fontSize = 6)
+                 fontSize = 7)
 ```
 
 

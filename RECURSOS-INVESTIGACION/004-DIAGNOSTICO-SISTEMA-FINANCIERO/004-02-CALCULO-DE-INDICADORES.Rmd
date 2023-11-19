@@ -27,7 +27,6 @@ datIdsNamesCamelInds <- getDatIdsNamesCamelIndicadores()
 
 En la presente sección se presentan los indicadores que evalúan las diferentes características de los sectores financieros por medio de los mismos que harán manifiesto si dicho sector tiene la capacidad de hacer frente a sus obligaciones.
 
-\newpage
 ### Indicadores de capital {#DF-INDICADORES-CAPITAL}
 
 <!-- ##################################################### -->
@@ -44,6 +43,8 @@ listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadísticas d
 
 Los indicadores de capital buscan responder o evaluar la capacidad de los sectores financieros para hacer frente a sus obligaciones con terceros y propios por medio su capital contable, se presenta la evolución de los mismos atravez del tiempo en forma de series de tiempo (Ver figura \@ref(fig:df-indicadores-capital)).
 
+\newpage
+\vspace*{\fill}
 ```{=latex}
 \begin{figure}[h!]
 ```
@@ -56,15 +57,18 @@ wrap_plots(listPlots, ncol = 1)
 \floatfoot{Fuente: Elaboración propia.}
 \end{figure}
 ```
+\vspace*{\fill}
 
-\vspace*{15pt}
+\newpage
+\vspace*{\fill}
 ```{r}
 listTablesRender %>% 
     footnote(general_title = 'NOTA:',
                               general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
 ```
+\vspace*{\fill}
 
-
+\newpage
 #### Coeficiente de adecuación patrimonial (CAP) {#DF-CAP}
 
 ```{r}
@@ -141,9 +145,7 @@ El indicador está definido por la ecuación \@ref(eq:df-ccp) expresado en tanto
 (\#eq:df-ccp)
 \end{equation}
 
-El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo está dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(round(bestPromedio*100,2), scientific=FALSE)`% (Ver tabla \@ref(tab:df-indicadores-capital-tabla)), es decir, que el `r format(round(bestPromedio*100,2), scientific=FALSE)`% del activo está respaldado por el patrimonio o que el patrimonio representa el `r format(round(bestPromedio*100,2), scientific=FALSE)`%  del activo.
-
-Así también, el sector `r str_to_lower(nameEntBestTendencia)` posee la mejor tendencia mensual del indicador, es decir, el sector en promedio mensualmente incrementa en `r format(round(bestTendencia*100,2), scientific=FALSE)`% en el `r str_to_lower(nameIndById)`, dando al sector mayor capacidad de hacer frente a sus obligaciones.
+El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo está dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(round(bestPromedio*100,2), scientific=FALSE)`% (Ver tabla \@ref(tab:df-indicadores-capital-tabla)), es decir, que el `r format(round(bestPromedio*100,2), scientific=FALSE)`% del activo está respaldado por el patrimonio o que el patrimonio representa el `r format(round(bestPromedio*100,2), scientific=FALSE)`%  del activo. Así también, el sector `r str_to_lower(nameEntBestTendencia)` posee la mejor tendencia mensual del indicador, es decir, el sector en promedio mensualmente incrementa en `r format(round(bestTendencia*100,2), scientific=FALSE)`% en el `r str_to_lower(nameIndById)`.
 
 ### Indicadores de activos {#DF-INDICADORES-ACTIVOS}
 
@@ -161,8 +163,7 @@ listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadísticas d
 
 ```
 
-\newpage
-\vspace*{\fill}
+
 ```{=latex}
 \begin{figure}[h!]
 ```
@@ -175,16 +176,18 @@ wrap_plots(listPlots, ncol = 1)
 \floatfoot{Fuente: Elaboración propia.}
 \end{figure}
 ```
-\vspace*{\fill}
+
 
 \newpage
-\vspace*{15pt}
+\vspace*{\fill}
 ```{r}
 listTablesRender %>% 
     footnote(general_title = 'NOTA:',
                               general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
 ```
+\vspace*{\fill}
 
+\newpage
 #### Coeficiente de exposición de cartera (CEC) {#DF-CEC}
 
 ```{r}
@@ -268,7 +271,7 @@ El indicador muestra que porcentaje de la cartera total fueron reprogramados, di
 (\#eq:df-crc)
 \end{equation}
 
-Donde el promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo está dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(round(bestPromedio*100,2), scientific=FALSE)`% (Ver tabla \@ref(tab:df-indicadores-activos-tabla)), es decir, el `r format(round(bestPromedio*100,2), scientific=FALSE)`% de la cartera bruta o total es sujeta a reprogramación, tomando en cuenta que dicho promedio sufre un sesgo fruto por la pandemia covid-19 que produjo un incremento considerado en la reprogramación de cartera en las gestiones 2020 y 2021 (Ver figura \@ref(fig:df-indicadores-activos)).
+Donde el promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo está dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(round(bestPromedio*100,2), scientific=FALSE)`% (Ver tabla \@ref(tab:df-indicadores-activos-tabla)), es decir, el `r format(round(bestPromedio*100,2), scientific=FALSE)`% de la cartera bruta o total es sujeta a reprogramación, tomando en cuenta que dicho promedio sufre un sesgo fruto por la pandemia covid-19 que produjo un incremento considerado en la reprogramación de cartera en las gestiones 2020 y 2021 (Ver figura \@ref(fig:df-indicadores-activos)). 
 
 Por otro lado, el sector `r str_to_lower(nameEntBestTendencia)` posee la mejor tendencia mensual del indicador, es decir, el sector en promedio mensualmente varia en `r format(round(bestTendencia*100,2), scientific=FALSE)`% en el `r str_to_lower(nameIndById)`, esta tendencia puede ser tomada como validad si y solo si va acompañado de una disminución de cartera en mora.
 
@@ -290,6 +293,13 @@ listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadísticas d
 
 ```
 
+\vspace*{15pt}
+```{r}
+listTablesRender %>% 
+    footnote(general_title = 'NOTA:',
+                              general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
+```
+
 \newpage
 \vspace*{\fill}
 ```{=latex}
@@ -307,13 +317,6 @@ wrap_plots(listPlots, ncol = 1)
 \vspace*{\fill}
 
 \newpage
-\vspace*{15pt}
-```{r}
-listTablesRender %>% 
-    footnote(general_title = 'NOTA:',
-                              general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
-```
-
 #### Coeficiente de cobertura gastos administrativos (CCGA)
 
 ```{r}
@@ -372,13 +375,6 @@ listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadísticas d
 
 ```
 
-\vspace*{15pt}
-```{r}
-listTablesRender %>% 
-    footnote(general_title = 'NOTA:',
-                              general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
-```
-
 \newpage
 \vspace*{\fill}
 ```{=latex}
@@ -395,6 +391,13 @@ wrap_plots(listPlots, ncol = 1)
 ```
 \vspace*{\fill}
 
+\newpage
+\vspace*{15pt}
+```{r}
+listTablesRender %>% 
+    footnote(general_title = 'NOTA:',
+                              general = 'Los sectores en la tabla fueron ordenados en función del más al menos favorable dado su indicador promedio.')
+```
 
 #### Coeficiente de rendimiento sobre activos (ROA)
 

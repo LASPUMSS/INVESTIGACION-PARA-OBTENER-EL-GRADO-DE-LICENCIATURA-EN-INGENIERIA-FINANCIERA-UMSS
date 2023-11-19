@@ -141,6 +141,7 @@ En cuarto termino se tiene a las entidades financiera de vivienda y bancos múlt
 
 Finalmente como último elemento tenemos los indicadores de liquidez (Ver sección \@ref(DF-INDICADORES-LIQUIDEZ)) donde tenemos en los primeros lugares a las cooperativas, bancos múltiples donde la naturaleza del negocio de los mismos donde una de sus actividades más usuales es la de resguardar en forma de ahorros o cuentas corrientes el dinero del público en general, lo cual en consecuencia hace necesario disponer de un margen de efectivo suficiente que cubra necesidades de liquidez de sus clientes y en contraposición las instituciones financieras de desarrollo y el banco de desarrollo productivo no se enfocan en brindar estos servicios así que es previsible que ocupen estos lugares en los indicadores de liquidez.
 
+\newpage
 ### Calificación CAMEL
 
 La calificación CAMEL bajo la metodología presentada es la que da respuesta sobre el estado de la solidez financiera de los sectores que conforman el sistema financiero de Bolivia, la misma contiene dentro de si las calificaciones ponderadas asignadas a los resultados de los diferentes indicadores, donde 1 indica un sector solvente en todos aspectos y 5 corresponde a serios problemas de solidez, así también una tendencia negativa se traduce en un incremento de la solidez financiera (Ver tabla \@ref(tab:df-camel-calificacion-final-tabla) y figura \@ref(fig:df-camel-calificacion-final)).

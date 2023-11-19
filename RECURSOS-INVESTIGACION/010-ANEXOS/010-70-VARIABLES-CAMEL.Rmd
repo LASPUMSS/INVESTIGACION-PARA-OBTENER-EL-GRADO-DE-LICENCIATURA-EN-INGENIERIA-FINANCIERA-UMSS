@@ -18,6 +18,7 @@ datVariablesDiagnostico <- getDatVariablesDiagnostico(by = 'TIPO_DE_ENTIDAD',ges
 - C.E. = Cartera en ejecución
 - C.V. = Cartera vigente
 
+\vspace*{30pt}
 ```{r}
 datForRender <- datVariablesDiagnostico %>% 
     select(FECHA,
@@ -44,6 +45,7 @@ renderTableBasic(datForRender,
 - C.E.R. = Cartera en ejecución reprogramada
 - C.V.R. = Cartera vigente reprogramada
 
+\vspace*{30pt}
 ```{r}
 datForRender <- datVariablesDiagnostico %>% 
     select(FECHA,
@@ -67,6 +69,7 @@ renderTableBasic(datForRender,
 
 - P.I.C. = Previsión para incobrabilidad de cartera
 
+\vspace*{30pt}
 ```{r}
 datForRender <- datVariablesDiagnostico %>% 
     select(FECHA,
@@ -93,6 +96,7 @@ renderTableBasic(datForRender,
 - A.C. = Activo contingente
 - A.D. = Activo disponible
 
+\vspace*{30pt}
 ```{r}
 datForRender <- datVariablesDiagnostico %>% 
     select(FECHA,
@@ -118,6 +122,7 @@ renderTableBasic(datForRender,
 - A.I.T. = Activo de inversiones temporarias
 - G.A. = Gastos administrativos
 
+\vspace*{30pt}
 ```{r}
 datForRender <- datVariablesDiagnostico %>% 
     select(FECHA,
@@ -143,6 +148,7 @@ renderTableBasic(datForRender,
 - R.O. = Resultado Operativo
 - I.N. = Ingreso Neto
 
+\vspace*{30pt}
 ```{r}
 datForRender <- datVariablesDiagnostico %>% 
     select(FECHA,

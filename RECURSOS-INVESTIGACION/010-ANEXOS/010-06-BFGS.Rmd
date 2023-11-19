@@ -30,7 +30,7 @@ B_{k}k\bigtriangledown f(x_{k})fx_{k}
 (\#eq:bfgs-3)
 \end{equation}
 
-A continuación, se utiliza una búsqueda lineal en la dirección para encontrar el siguiente punto:
+A continuación, se utiliza una búsqueda lineal en la dirección para encontrar el siguiente punto.
 
 \begin{equation}
 P_{k}x_{k+1}

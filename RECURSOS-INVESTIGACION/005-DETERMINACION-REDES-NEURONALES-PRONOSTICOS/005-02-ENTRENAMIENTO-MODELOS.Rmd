@@ -47,7 +47,7 @@ if (!('listResultPEF' %in% ls())) {
 }
 
 ```
-
+\newpage
 ## Entrenamiento de modelos, proyecciones y simulaciones
 
 Para una mayor ejemplificación de los modelos empleados en las diferentes cuentas se presenta el proceso de entrenamiento para la serie de tiempo correspondiente a la cuenta de resultado neto de la gestión.

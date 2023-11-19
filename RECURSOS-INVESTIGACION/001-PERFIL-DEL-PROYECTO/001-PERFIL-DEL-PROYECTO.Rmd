@@ -10,7 +10,7 @@ Una de las alternativas de tratamiento de esta información que ofrece el sistem
 \begin{figure}[h!]
 \centering
 \caption{Arbol de problemas}
-\includegraphics[width=15cm, height=10cm]{RECURSOS-INVESTIGACION/001-PERFIL-DEL-PROYECTO/arbol-de-problemas.png}
+\includegraphics[width=15cm, height=8cm]{RECURSOS-INVESTIGACION/001-PERFIL-DEL-PROYECTO/arbol-de-problemas.png}
 \floatfoot{Fuente: Elaboración propia.}
 \end{figure}
 
@@ -67,7 +67,6 @@ Con la determinación de proyecciones de estados financieros por el método de r
 - Enlace lógico: Se logrará.
 - Variable dependiente: Información con mayor aproximación a la situación económica-financiera observada del sistema financiero.
 
-\newpage
 ## Marco metodológico
 
 ### Tipo de investigación
@@ -104,7 +103,7 @@ Se recurrió a las fuentes de compilación de información bibliográfica refere
 - Análisis de la información recopilada, con fines de depuración, selección, tabulación mediante lenguajes de programación VBA, Python y R orientado al análisis de datos, adecuando a la arquitectura de la red neuronal.
 - La investigación esta alojada un repositorio en GitHub (https://github.com/LASPUMSS/PROYECTO-DE-GRADO-PARA-OBTENER-EL-GRADO-DE-LICENCIATURA-EN-INGENIERIA-FINANCIERA-UMSS).
 
-
+\newpage
 \input{RECURSOS-INVESTIGACION/001-PERFIL-DEL-PROYECTO/tabla-marco-metodico}
 
 

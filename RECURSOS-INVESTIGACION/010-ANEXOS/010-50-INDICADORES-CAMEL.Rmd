@@ -36,13 +36,14 @@ datCamelCalificacionEntidad <- datCamelCalificacionEntidad %>% filter(FECHA>date
 
 A continuación se presenta las tablas resultantes de los calulos realizados para el diagnostico financieros por sectores.
 
-\subsubsection{Capital}
+\subsubsection{Indicadores de capital}
 
 - Coeficiente de adecuación patrimonial (CAP)
 - Coeficiente de cobertura de cartera en mora (CCCM)
 - Coeficiente ácido de cobertura de cartera en mora (CACCM)
 - Coeficiente de cobertura patrimonial (CCP)
 
+\vspace*{30pt}
 ```{r}
 id <- 'indCap'
 renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de capital CAMEL') %>% 
@@ -52,13 +53,14 @@ renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de capital CAMEL') %>%
 
 
 \newpage
-\subsubsection{Activos}
+\subsubsection{Indicadores de activos}
 
 - Coeficiente de exposición de cartera (CEC)
 - Coeficiente de previsión de cartera (CPC)
 - Coeficiente de previsión de cartera en mora (CPCM)
 - Coeficiente de reposición de cartera (CRC)
 
+\vspace*{30pt}
 ```{r}
 id <- 'indAct'
 renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de activos CAMEL') %>% 
@@ -68,13 +70,14 @@ renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de activos CAMEL') %>%
 
 
 \newpage
-\subsubsection{Administración y rentabilidad}
+\subsubsection{Indicadores de administración y rentabilidad}
 
 - Coeficiente de cobertura gastos administrativos (CCGA) 
 - Coeficiente ácido de cobertura gastos administrativos (CACGA)
 - Coeficiente de rendimiento sobre activos (ROA) 
 - Coeficiente de rendimiento sobre patrimonio (ROE)
 
+\vspace*{30pt}
 ```{r}
 id1 <- 'indAdm'
 id2 <- 'indBenf'
@@ -85,11 +88,11 @@ renderTableCamelIndNorm2(id1, id2 , datCamelIndNorm, 'Indicadores de administrac
 
 
 \newpage
-\subsubsection{Liquidez}
+\subsubsection{Indicadores de liquidez}
 
 - Coeficiente de capacidad de pago frente a pasivos (CCPP)
 - Coeficiente ácido de capacidad de pago frente a pasivos (CACPP) 
- 
+
 ```{r}
 id <- 'indLq'
 renderTableCamelIndNorm(id, datCamelIndNorm, 'Indicadores de liquidez CAMEL') %>% 

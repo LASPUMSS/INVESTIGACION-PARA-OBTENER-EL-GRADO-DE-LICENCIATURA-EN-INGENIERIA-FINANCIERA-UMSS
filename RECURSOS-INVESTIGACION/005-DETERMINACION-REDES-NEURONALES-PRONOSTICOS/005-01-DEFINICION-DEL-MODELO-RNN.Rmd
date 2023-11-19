@@ -61,7 +61,7 @@ Los datos a ser modelados están definidos como series de tiempo con frecuencia 
 \begin{figure}[h!]
 ```
 
-```{r, fig.height = 10, fig.width = 20, fig.cap='Agrupamiento de los datos de las series de tiempo.'}
+```{r, fig.height = 8, fig.width = 15, fig.cap='Agrupamiento de los datos de las series de tiempo.'}
 autoplot(listResultPEF[[id]]$tsDatTrain,series = 'Datos de entrenamiento') +
     autolayer(listResultPEF[[id]]$tsDatTest,series = 'Datos para realizar pruebas') +
     ylab('RESULTADO NETO DE LA GESTION') +
@@ -71,7 +71,7 @@ autoplot(listResultPEF[[id]]$tsDatTrain,series = 'Datos de entrenamiento') +
           legend.text = element_text(size=24),
           legend.key.size = unit(2, 'cm'),
           axis.title.x=element_text(size=24), 
-          axis.title.y = element_text(size=30),
+          axis.title.y = element_text(size=24),
           axis.text.y=element_text(size=24),
           axis.text.x = element_text(size=24))
     
@@ -194,7 +194,7 @@ Así mismo, el algoritmo correspondiente al modelo redes neuronales (NN) emplead
 
 ### Evaluación de modelos
 
-Una vez finalizado el entrenamiento de los modelos para las diferentes series de tiempo se evalúo la validez o consistencia de los mismos siguiendo dos criterios (Ver sección \@ref(MT-EVALUACION-MODELOS)):
+Una vez finalizado el entrenamiento de los modelos para las diferentes series de tiempo se evalúo la validez o consistencia de los mismos siguiendo dos criterios (Ver sección \@ref(MT-EVALUACION-MODELOS)) los cuales son presentados a continuación.
 
 - Ajuste del modelo (R2).
 - Capacidad de generalización del modelo.
@@ -204,7 +204,6 @@ R2 = \left ( \frac{ \sum{[(x_{i}-\bar{x})-(y_{i}-\bar{y})]} } { \sqrt{ \sum{(x_{
 (\#eq:pef-ajusteR2)
 \end{equation}
 
-\newpage
 Donde dichos criterios fueron ejecutados de la siguiente forma:
 
 #### R2 sobre datos de entrenamiento {#DRNN-DEFINICION-EVALUACION-R2-ENTRENAMIENTO}

@@ -1,6 +1,9 @@
-\renewcommand{\normalsize}{\fontsize{12pt}{12pt}\selectfont} 
+\renewcommand{\normalsize}{\fontsize{12pt}{12pt}\selectfont}
 \renewcommand{\large}{\fontsize{12pt}{12pt}\selectfont} 
 \linespread{1.5} %regulate line spacing
+\usepackage[fontsize=12pt]{scrextend}
+\usepackage{newtxtext,newtxmath}
+
 %----------------------------
 % Paginacion arriba-derecha
 \usepackage{fancyhdr}
@@ -111,18 +114,18 @@ singlelinecheck=off
 % -----------------------
 % Formatos personalizados DOC
 \titleformat{\section}[block]
-            {\large\bfseries}
+            {\normalsize\bfseries}
             {\Sectionname \thesection.\quad}
             {0pt}
             {\centering}
             
 \titleformat{\anexosms}[block]
-            {\large\bfseries}
+            {\normalsize\bfseries}
             {\Anexosmsname \theanexosms.\quad}
             {0pt}
             {\MakeUppercase}
             
-\titleformat*{\subsection}{\large\bfseries\MakeUppercase}
+\titleformat*{\subsection}{\normalsize\bfseries\MakeUppercase}
 
 % -----------------------
 % Formatos personalizados TOC
@@ -136,14 +139,14 @@ singlelinecheck=off
     
 \titlecontents{subsection}
     [0pt]
-    {\addvspace{0.3pc}\bfseries\hspace{2em}\large}
+    {\addvspace{0.3pc}\bfseries\hspace{2em}\normalsize}
     {\contentslabel{2em}\MakeUppercase}
     {\hspace*{0em}}
     {\titlerule*[8pt]{.}\contentspage}
 
 \titlecontents{subsubsection}
     [0pt]
-    {\hspace{3em}\large}
+    {\hspace{3em}\normalsize}
     {\contentslabel{3em}}
     {\hspace*{0em}}
     {\titlerule*[8pt]{.}\contentspage}
@@ -171,14 +174,14 @@ singlelinecheck=off
     
 \titlecontents{footerms}
     [0pt]
-    {\addvspace{1pc}\bfseries\large}
+    {\addvspace{1pc}\bfseries\normalsize}
     {}
     {\MakeUppercase}
     {\titlerule*[8pt]{}\contentspage}
 
 \titlecontents{anexosms}
     [0pt]
-    {\addvspace{0.3pc}\hspace{2em}\large}
+    {\addvspace{0.3pc}\hspace{2em}\normalsize}
     {\contentslabel{2em}\MakeUppercase}
     {\hspace*{0em}}
     {\titlerule*[8pt]{.}\contentspage}
@@ -199,3 +202,23 @@ singlelinecheck=off
 
 \setcounter{secnumdepth}{8}
 \setcounter{tocdepth}{6}
+
+%----------------------------
+% Agregar label figura y tabla
+
+\titlecontents{table}
+[0pt]                                               % left margin
+{\addvspace{0.1pc}}%                         % above code (e.g vertical space)
+{\contentsmargin{0pt}Tabla~\thecontentslabel.\enspace\normalsize}
+{\contentsmargin{0pt}\normalsize}                        % unnumbered entry format
+{\titlerule*[.5pc]{.}\contentspage}                 % filler-page format (e.g dots)
+[\addvspace{0.1pc}]   
+
+
+\titlecontents{figure}
+[0pt]                                               % left margin
+{\addvspace{0.1pc}}%                         % above code (e.g vertical space)
+{\contentsmargin{0pt}Figura~\thecontentslabel.\enspace\normalsize}
+{\contentsmargin{0pt}\normalsize}                        % unnumbered entry format
+{\titlerule*[.5pc]{.}\contentspage}                 % filler-page format (e.g dots)
+[\addvspace{0.1pc}]  

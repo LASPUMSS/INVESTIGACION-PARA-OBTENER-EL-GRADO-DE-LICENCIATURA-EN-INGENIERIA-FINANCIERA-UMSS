@@ -14,9 +14,10 @@ seccionesDesc = ["EstadosFinancieros","IndicadoresFinancieros","Captaciones","Co
 SEPARADOR = "#################################################################################"
 directorio = os.getcwd()
 print(SEPARADOR)
+print(directorio)
 print("REGISTRO DE EJECUCION")
 print(SEPARADOR)
-ubDrive = f"{directorio}\chromedriver.exe"
+ubDrive = f"{directorio}\chrome-win64\chrome.exe"
 ubDatos = f"{directorio}\DATOS"
 rutaDatos = f"{ubDatos}\*.zip"
 print(ubDrive)
@@ -27,9 +28,10 @@ class usando_unittest(unittest.TestCase):
 	def setUp(self):
 		chromeOptions=Options() 
 		chromeOptions.add_experimental_option("prefs", {
-   		"download.default_directory" : ubDatos,
+   		"download.default_directory" : ubDatos
 		})
-		self.driver = webdriver.Chrome(executable_path=r"%s" %ubDrive, chrome_options=chromeOptions)
+		self.driver = webdriver.Chrome(options=chromeOptions)
+		#self.driver = webdriver.Chrome(executable_path=r"%s" %ubDrive, chrome_options=chromeOptions)
 
 	def verificarArchvioExiste(self, idxEnt, idxSecDesc, numArchivo, gestion, mes, name):
 
@@ -87,11 +89,15 @@ class usando_unittest(unittest.TestCase):
 		driver = self.driver
 		driver.get(urlEnt)
 		time.sleep(10)
-		driver.switch_to.frame(driver.find_element_by_xpath("/html/body/div/div/div[2]/main/div[2]/iframe"))
+		driver.switch_to.frame(driver.find_element("xpath", '/html/body/div/div/div[2]/main/div[2]/iframe'))
+		#driver.switch_to.frame(driver.find_element_by_xpath("/html/body/div/div/div[2]/main/div[2]/iframe"))
+		
+    
 		time.sleep(3)
 
 		for Mes in mesesGestion:
-			gestion = driver.find_element_by_name("Anio")
+			#gestion = driver.find_element_by_name("Anio")
+			gestion= driver.find_element("name", 'Anio')
 			dropdown01 = Select(gestion)
 			dropdown01.select_by_visible_text(str(Gestion))
 			time.sleep(2)
@@ -99,12 +105,14 @@ class usando_unittest(unittest.TestCase):
 			print(str(Gestion))
 			print(Mes)
 
-			mes = driver.find_element_by_name("Mes")
+			#mes = driver.find_element_by_name("Mes")
+			mes = driver.find_element("name", 'Mes')
 			dropdown02 = Select(mes)
 			dropdown02.select_by_visible_text(Mes)
 			time.sleep(2)
 
-			btnAceptar = driver.find_element_by_xpath("/html/body/form/p/table/tbody/tr/td[5]/input")
+			#btnAceptar = driver.find_element_by_xpath("/html/body/form/p/table/tbody/tr/td[5]/input")
+			btnAceptar = driver.find_element("xpath", '/html/body/form/p/table/tbody/tr/td[5]/input')
 			btnAceptar.click()
 			time.sleep(3)
 
@@ -118,7 +126,8 @@ class usando_unittest(unittest.TestCase):
 				for a in range(In,Fn,Stp):
 					try:
 						xpahtDesc = "/html/body/table/tbody/tr/td/table/tbody/tr[1]/td/table[" + str(Seccion) + "]/tbody/tr/td[2]/table/tbody/tr/td[2]/a[" + str(a) + "]"
-						estFin = driver.find_element_by_xpath(xpahtDesc)
+						#estFin = driver.find_element_by_xpath(xpahtDesc)
+						estFin = driver.find_element("xpath", xpahtDesc)
 						nombreArchivo = str(estFin.get_attribute("href")).replace("https://appweb.asfi.gob.bo/boletines_if","")
 						nombreArchivo = nombreArchivo.replace(f"/{Gestion}/{mesAux}/","")
 
@@ -133,7 +142,7 @@ class usando_unittest(unittest.TestCase):
 						pass
 
 	def test_usando_toggle(self):
-		gestionInc = 2022
+		gestionInc = 2020
 		gestionFn = 2022 + 1
 
 		for urlEnt in urlEntidades:
