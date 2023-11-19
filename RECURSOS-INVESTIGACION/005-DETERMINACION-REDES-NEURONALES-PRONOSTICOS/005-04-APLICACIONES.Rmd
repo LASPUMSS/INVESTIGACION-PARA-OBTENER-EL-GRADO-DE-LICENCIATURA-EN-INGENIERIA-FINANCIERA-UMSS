@@ -80,7 +80,7 @@ Teniendo en cuenta los antes expuesto podemos afirmar que las redes neuronales p
 \begin{figure}[h!]
 ```
 
-```{r histograms-aplicacion-rnn, fig.height = 10, fig.width = 20, fig.cap='Historgrama de diferentes redes neuronales entrenadas.'}
+```{r histograms-aplicacion-rnn, fig.height = 6, fig.width = 15, fig.cap='Historgrama de diferentes redes neuronales entrenadas.'}
 
 p1 <- 
     data.frame(trendCamelRNN=trendCamelRNN) %>% 
@@ -104,7 +104,7 @@ p2 <-
         axis.text.y=element_text(size=24),
         axis.text.x=element_text(size=24))
 
-p1/p2
+p1+p2
 ```
 
 ```{=latex}

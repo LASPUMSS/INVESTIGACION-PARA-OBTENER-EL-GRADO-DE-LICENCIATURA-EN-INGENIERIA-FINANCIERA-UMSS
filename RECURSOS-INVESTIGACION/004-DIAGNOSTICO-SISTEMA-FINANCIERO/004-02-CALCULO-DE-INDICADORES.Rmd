@@ -284,6 +284,8 @@ Por otro lado, el sector `r str_to_lower(nameEntBestTendencia)` posee la mejor t
 
 Los indicadores de administración tienen por objeto evaluar como los sectores financieros correspondientes gestionan sus gastos administrativos, es decir, buscan evaluar la capacidad de hacer frente a dichos gastos administrativos (Ver figura \@ref(fig:df-indicadores-administracion)).
 
+Donde por la naturaleza de los propios indicadores de administración, se entienden como mejores cuando mas cercano a cero estén, es decir, que los sectores correspondientes gestionan mejor sus gastos administrativos cuando su relación es menor respecto a los activos o respecto al resultado operativo bruto. 
+
 
 ```{r df-indicadores-administracion-tabla}
 ids <- c('indAdm_CCGA','indAdm_CACGA')
@@ -471,6 +473,8 @@ id <- 'indLq_CCPP'
 nameIndById <- listResult[[id]][['nameIndById']]
 nameEntBestPromedio <- listResult[[id]][['nameEntBestPromedio']]
 bestPromedio <- listResult[[id]][['bestPromedio']]
+bestPromedio_Tendencia <- listResult[[id]][['datTrendInd']][1,2]
+
 nameEntBestTendencia <- listResult[[id]][['nameEntBestTendencia']]
 bestTendencia <- listResult[[id]][['bestTendencia']]
 ```
@@ -485,6 +489,8 @@ El indicador está definido por la ecuación \@ref(eq:df-ccpp) expresado en tant
 
 El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo está dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(round(bestPromedio*100,2), scientific=FALSE)`% (Ver tabla \@ref(tab:df-indicadores-liquidos-tabla)), es decir que el sector de `r str_to_lower(nameEntBestPromedio)` puede hacer frente a sus obligaciones con terceros en menos de 30 días hasta un  `r format(round(bestPromedio*100,2), scientific=FALSE)`% de su totalidad.
 
+Así también, hacer notar que la tendencia del indicador de el `r str_to_lower(nameIndById)` es negativo, el decir, que el sector de `r str_to_lower(nameEntBestPromedio)` disminuye en `r format(round(bestPromedio_Tendencia*100,2), scientific=FALSE)`%  mensualmente su capacidad de hacer frente a sus obligaciones con terceros en menos de 30 días.
+
 #### Coeficiente ácido de capacidad de pago frente a pasivos (CACPP)
 
 ```{r}
@@ -492,6 +498,8 @@ id <- 'indLq_CACPP'
 nameIndById <- listResult[[id]][['nameIndById']]
 nameEntBestPromedio <- listResult[[id]][['nameEntBestPromedio']]
 bestPromedio <- listResult[[id]][['bestPromedio']]
+bestPromedio_Tendencia <- listResult[[id]][['datTrendInd']][1,2]
+
 nameEntBestTendencia <- listResult[[id]][['nameEntBestTendencia']]
 bestTendencia <- listResult[[id]][['bestTendencia']]
 ```
@@ -504,6 +512,8 @@ El indicador está definido por la ecuación \@ref(eq:df-cacpp) expresado en tan
 \end{equation}
 
 El promedio más favorable en el `r str_to_lower(nameIndById)` a través del tiempo está dado en el sector de `r str_to_lower(nameEntBestPromedio)` con un promedio de `r format(round(bestPromedio*100,2), scientific=FALSE)`% (Ver tabla \@ref(tab:df-indicadores-liquidos-tabla)), que es lo mismo decir que el sector de `r str_to_lower(nameEntBestPromedio)` puede hacer frente a sus obligaciones con terceros con sus activos más líquidos de disposición inmediata hasta un  `r format(round(bestPromedio*100,2), scientific=FALSE)`% del total de las obligaciones.
+
+Así también, hacer notar que la tendencia del indicador de el `r str_to_lower(nameIndById)` es negativo, el decir, que el sector de `r str_to_lower(nameEntBestPromedio)` disminuye en `r format(round(bestPromedio_Tendencia*100,4), scientific=FALSE)`%  mensualmente su capacidad de hacer frente a sus obligaciones con terceros con sus activos más líquidos de disposición inmediata.
 
 \newpage
 \vspace*{\fill}

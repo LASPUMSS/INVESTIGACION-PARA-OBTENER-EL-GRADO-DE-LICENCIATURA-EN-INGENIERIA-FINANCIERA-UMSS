@@ -199,25 +199,40 @@ Una vez finalizado el entrenamiento de los modelos para las diferentes series de
 - Ajuste del modelo (R2).
 - Capacidad de generalización del modelo.
 
+#### Ajuste del modelo (R2)
+
+El ajuste de los datos producidos por un modelo son medidos por el coeficiente de determinación:
+
 \begin{equation}
 R2 = \left ( \frac{ \sum{[(x_{i}-\bar{x})-(y_{i}-\bar{y})]} } { \sqrt{ \sum{(x_{i}-\bar{x})^{2}} * \sum{(y_{i}-\bar{y})^{2}} } }  \right )^{2}
 (\#eq:pef-ajusteR2)
 \end{equation}
 
-Donde dichos criterios fueron ejecutados de la siguiente forma:
+Donde dichos criterio fue ejecutado de la siguiente forma:
 
-#### R2 sobre datos de entrenamiento {#DRNN-DEFINICION-EVALUACION-R2-ENTRENAMIENTO}
+##### R2 sobre datos de entrenamiento (train) {#DRNN-DEFINICION-EVALUACION-R2-ENTRENAMIENTO}
 
 Representa el ajuste existente entre los datos observados en el entrenamiento respecto a los datos pronosticados o ajustados para los mismos intervalos de tiempo.
 
-#### R2 sobre datos de prueba {#DRNN-DEFINICION-EVALUACION-R2-PRONOSTICO}
+\begin{equation}
+R2 = \left ( \frac{ \sum{[(x(train)_{i}-\overline{x(train)})-(y(train)_{i}-\overline{y(train)})]} } { \sqrt{ \sum{(x(train)_{i}-\overline{x(train)})^{2}} * \sum{(y(train)_{i}-\overline{y(train)})^{2}} } }  \right )^{2}
+(\#eq:pef-ajusteR2-train)
+\end{equation}
+
+##### R2 sobre datos de prueba (test) {#DRNN-DEFINICION-EVALUACION-R2-PRONOSTICO}
 
 Representa el ajuste entre los datos observados para realizar pruebas respecto los datos proyectados por el modelo para los mismos intervalos de tiempo.
 
+\begin{equation}
+R2 = \left ( \frac{ \sum{[(x(test)_{i}-\overline{x(test)})-(y(test)_{i}-\overline{y(test)})]} } { \sqrt{ \sum{(x(test)_{i}-\overline{x(test)})^{2}} * \sum{(y(test)_{i}-\overline{y(test)})^{2}} } }  \right )^{2}
+(\#eq:pef-ajusteR2-test)
+\end{equation}
+
 #### Capacidad de generalización del modelo {#DRNN-DEFINICION-EVALUACION-CAMEL}
 
-Representa la aplicación de la metodología CAMEL sobre los datos de prueba y proyecciones correspondientes a cada modelo, verificando la tendencia de los mismos.
+Representa la aplicación de la metodología CAMEL sobre los datos de prueba y proyecciones correspondientes a cada modelo, verificando si la tendencia de los modelos presentados (NN, MCO y ARIMA) siguen la misma tendencia de los datos efectivamente observados.
 
+\newpage
 ### Variables comprendidas {#DRNN-VARIABLES}
 
 Las variables comprendidas que corresponden a las cuentas representadas en forma de series de tiempo para los pronósticos son las mismas definidas en el capítulo anterior:
@@ -232,7 +247,12 @@ Las variables comprendidas que corresponden a las cuentas representadas en forma
 - Bienes realizables
 - Cuentas contingentes deudoras
 - Pasivo
+- Obligaciones con el público
+- Obligaciones con instituciones fiscales
+- Obligaciones con empresas publicas
 - Patrimonio
+- Capital social
+- Reservas
 - Ingresos
 - Gastos de administración
 - Impuestos

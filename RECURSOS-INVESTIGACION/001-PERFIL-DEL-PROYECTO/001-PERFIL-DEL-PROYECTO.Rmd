@@ -10,7 +10,7 @@ Una de las alternativas de tratamiento de esta información que ofrece el sistem
 \begin{figure}[h!]
 \centering
 \caption{Arbol de problemas}
-\includegraphics[width=15cm, height=8cm]{RECURSOS-INVESTIGACION/001-PERFIL-DEL-PROYECTO/arbol-de-problemas.png}
+\includegraphics[width=15cm, height=7.5cm]{RECURSOS-INVESTIGACION/001-PERFIL-DEL-PROYECTO/arbol-de-problemas.png}
 \floatfoot{Fuente: Elaboración propia.}
 \end{figure}
 
@@ -39,7 +39,10 @@ En el diagnóstico financiero las entidades financieras se agruparán por sector
 - Instituciones financieras de desarrollo.
 - Bancos de desarrollo productivo.
 
-Para tener acceso a la información homogénea requerida en los pronósticos, los estados financieros se agruparon de forma tal que representan el sistema en su conjunto los cuales tienen un intervalo mensual obtenidos de las gestiones de 2014 a 2021, proyectando los periodos posteriores. 
+Para tener acceso a la información homogénea requerida en los pronósticos, los estados financieros se agruparon de forma tal que representan el sistema en su conjunto los cuales tienen un intervalo mensual obtenidos de las gestiones de 2014 a 2021, proyectando los periodos posteriores, así también, los estados financieros de los sectores antes mencionados corresponden a los siguientes:
+
+- Balance general.
+- Estado de resultados.
 
 ## Objetivos de la investigación
 
