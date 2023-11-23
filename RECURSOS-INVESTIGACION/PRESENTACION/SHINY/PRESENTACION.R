@@ -79,7 +79,7 @@ ui <- fluidPage(
                                        tabPanel("UMSS", uiOutput("marcoTeoricoFinanzasEvaluacion_Intro")),
                                        tabPanel("FINANZAS", uiOutput("marcoTeoricoFinanzasEvaluacion_Finanzas")),
                                        tabPanel("EVALUACION FINANCIERA", uiOutput("marcoTeoricoFinanzasEvaluacion_EvalFin")),
-                                       tabPanel("CAMEL", uiOutput("marcoTeoricoFinanzasEvaluacion_Camel"))
+                                       tabPanel("METODOLOGIA CAMEL", uiOutput("marcoTeoricoFinanzasEvaluacion_Camel"))
                                        )),
                           
                           # REDES NEURONALES
