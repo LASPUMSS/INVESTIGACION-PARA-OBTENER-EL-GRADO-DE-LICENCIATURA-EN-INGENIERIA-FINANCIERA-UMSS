@@ -16,10 +16,16 @@ options(scipen=999)
 
 ```
 
-<br><br><br><br><br><br>
+<br><br>
 
 <div style="text-align: center;">
 
 ## Regresiones
+
+```{r, out.width="100%", out.height="70%", fig.cap=""}
+knitr::include_graphics("RECURSOS-INVESTIGACION/PRESENTACION/SHINY/MARCO-TEORICO/img/regresion.webp")
+```
+
+
 
 </div>

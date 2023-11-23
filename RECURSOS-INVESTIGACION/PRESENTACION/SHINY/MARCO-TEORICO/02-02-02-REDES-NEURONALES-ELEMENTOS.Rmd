@@ -16,7 +16,7 @@ options(scipen=999)
 
 ```
 
-<br><br><br><br><br><br>
+<br><br>
 
 <div style="text-align: center;">
 
@@ -24,3 +24,8 @@ options(scipen=999)
 
 
 </div>
+
+- Neuronas
+- Funciones de activación
+- Propagación hacia adelante
+- Propagación hacia atras
