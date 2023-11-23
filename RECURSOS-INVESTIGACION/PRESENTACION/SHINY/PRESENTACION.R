@@ -23,6 +23,15 @@ ui <- fluidPage(
              )
     ),
     
+    tags$head( 
+        tags$script(type="text/x-mathjax-config", HTML(
+            "MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});"
+        )),
+        tags$script(type="text/javascript",
+                    src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML")
+              ),
+    
+   #<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/core.min.js" integrity="sha512-Vj8DsxZwse5LgmhPlIXhSr/+mwl8OajbZVCr4mX/TcDjwU1ijG6A15cnyRXqZd2mUOQqRk4YbQdc7XhvedWqMg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     # Sidebar with a slider input for number of bins 
     navbarPage("",
                
@@ -98,7 +107,7 @@ ui <- fluidPage(
                                    tabsetPanel(
                                        tabPanel("UMSS", uiOutput("marcoTeoricoPronosticosEvaluacion_Intro")),
                                        tabPanel("PRONOSTICO - AJUSTE", uiOutput("marcoTeoricoPronosticosEvaluacion_PronAjuste")),
-                                       tabPanel("Generalizacion", uiOutput("marcoTeoricoPronosticosEvaluacion_Generalizacion")),
+                                       tabPanel("GENERALIZACION", uiOutput("marcoTeoricoPronosticosEvaluacion_Generalizacion")),
                                        tabPanel("MCO", uiOutput("marcoTeoricoPronosticosEvaluacion_MCO")),
                                        tabPanel("ARIMA", uiOutput("marcoTeoricoPronosticosEvaluacion_ARIMA"))
                                    ))

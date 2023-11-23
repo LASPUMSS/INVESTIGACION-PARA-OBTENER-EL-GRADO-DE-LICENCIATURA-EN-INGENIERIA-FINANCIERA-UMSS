@@ -1,8 +1,29 @@
-<br><br><br><br><br><br>
+<!-- Configuración CHUNKS -->
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE,
+                      fig.align='center',
+                      out.height='60%',
+                      out.width='100%')
+
+setwd('../../../..')
+knitr::opts_knit$set(root.dir = getwd())
+
+options(scipen=999)
+
+```
+
+<br><br>
 
 <div style="text-align: center;">
 
-## Modelo clasico de series de tiempo
+## MODELO CLASICO DE SERIES DE TIEMPO
 
-$$Y_{t} = \beta_{0} + \beta_{1}{T_{t}} + \sum_{\substack{i=2\\j=2}}^{\substack{i=n\\ j=m}}{\beta_{i}{S_{j}}}$$
+```{r, out.width="100%", out.height="70%", fig.cap=""}
+knitr::include_graphics("RECURSOS-INVESTIGACION/PRESENTACION/SHINY/MARCO-TEORICO/img/mco-model.jpg")
+```
+
 </div>

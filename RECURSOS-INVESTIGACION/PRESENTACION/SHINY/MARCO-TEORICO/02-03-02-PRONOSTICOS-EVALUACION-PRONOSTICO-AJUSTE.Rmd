@@ -1,7 +1,29 @@
-<br><br><br><br><br><br>
+<!-- Configuración CHUNKS -->
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE,
+                      fig.align='center',
+                      out.height='60%',
+                      out.width='100%')
+
+setwd('../../../..')
+knitr::opts_knit$set(root.dir = getwd())
+
+options(scipen=999)
+
+```
+
+<br><br>
 
 <div style="text-align: center;">
 
-## Pronosticos y Ajustes
+## AJUSTE
+
+```{r, out.width="100%", out.height="100%", fig.cap=""}
+knitr::include_graphics("RECURSOS-INVESTIGACION/PRESENTACION/SHINY/MARCO-TEORICO/img/ajuste-r2.jpg")
+```
 
 </div>
