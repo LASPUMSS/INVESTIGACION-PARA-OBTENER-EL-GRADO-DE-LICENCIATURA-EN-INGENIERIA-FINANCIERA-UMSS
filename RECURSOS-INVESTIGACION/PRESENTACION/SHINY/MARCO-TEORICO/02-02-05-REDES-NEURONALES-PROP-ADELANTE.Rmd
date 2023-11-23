@@ -20,7 +20,7 @@ options(scipen=999)
 
 <div style="text-align: center;">
 
-# **REDES NEURONALES**
+## Propagación hacia delante
 
 
 </div>

@@ -1,12 +1,3 @@
-#
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
-
 library(shiny)
 
 # Agregar ruta de imagenes
@@ -85,19 +76,31 @@ ui <- fluidPage(
                           # FINANZAS - EVALUACION FINANCIERA
                           tabPanel("FINANZAS - EVALUACION FINANCIERA",
                                    tabsetPanel(
-                                       tabPanel("UMSS", uiOutput("marcoTeoricoFinanzasEvaluacion_Intro"))
+                                       tabPanel("UMSS", uiOutput("marcoTeoricoFinanzasEvaluacion_Intro")),
+                                       tabPanel("FINANZAS", uiOutput("marcoTeoricoFinanzasEvaluacion_Finanzas")),
+                                       tabPanel("EVALUACION FINANCIERA", uiOutput("marcoTeoricoFinanzasEvaluacion_EvalFin")),
+                                       tabPanel("CAMEL", uiOutput("marcoTeoricoFinanzasEvaluacion_Camel"))
                                        )),
                           
                           # REDES NEURONALES
                           tabPanel("REDES NEURONALES",
                                    tabsetPanel(
-                                       tabPanel("UMSS", uiOutput("marcoTeoricoRedesNeuronales_Intro"))
+                                       tabPanel("UMSS", uiOutput("marcoTeoricoRedesNeuronales_Intro")),
+                                       tabPanel("ELEMENTOS", uiOutput("marcoTeoricoRedesNeuronales_Elementos")),
+                                       tabPanel("REGRESION", uiOutput("marcoTeoricoRedesNeuronales_Regresion")),
+                                       tabPanel("COLAPSO", uiOutput("marcoTeoricoRedesNeuronales_Colapso")),
+                                       tabPanel("PROP. ADELANTE", uiOutput("marcoTeoricoRedesNeuronales_PropAdelante")),
+                                       tabPanel("PROP. ATRAS", uiOutput("marcoTeoricoRedesNeuronales_PropAtras"))
                                    )),
                           
                           # PROYECCION - EVALUACION
                           tabPanel("PROYECCION - SIMULACIONES",
                                    tabsetPanel(
-                                       tabPanel("UMSS", uiOutput("marcoTeoricoPronosticosEvaluacion_Intro"))
+                                       tabPanel("UMSS", uiOutput("marcoTeoricoPronosticosEvaluacion_Intro")),
+                                       tabPanel("PRONOSTICO - AJUSTE", uiOutput("marcoTeoricoPronosticosEvaluacion_PronAjuste")),
+                                       tabPanel("Generalizacion", uiOutput("marcoTeoricoPronosticosEvaluacion_Generalizacion")),
+                                       tabPanel("MCO", uiOutput("marcoTeoricoPronosticosEvaluacion_MCO")),
+                                       tabPanel("ARIMA", uiOutput("marcoTeoricoPronosticosEvaluacion_ARIMA"))
                                    ))
                           
                           ),
@@ -238,21 +241,81 @@ server <- function(input, output) {
     # MARCO TEORICO
     ####################################################################
     
-    # FINANZAS - EVALUACION FINANCIERA
+    # MARCO TEORICO - FINANZAS - EVALUACION FINANCIERA
     output$marcoTeoricoFinanzasEvaluacion_Intro <- renderUI({
         rootDirFile <- "MARCO-TEORICO/02-01-01-FINANZAS-EVALUACION-FINANCIERA-INTRO.Rmd"
         HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
     })
     
-    # REDES NEURONALES
+    output$marcoTeoricoFinanzasEvaluacion_Finanzas <- renderUI({
+        rootDirFile <- "MARCO-TEORICO/02-01-02-FINANZAS-EVALUACION-FINANCIERA-FINANZAS.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$marcoTeoricoFinanzasEvaluacion_EvalFin <- renderUI({
+        rootDirFile <- "MARCO-TEORICO/02-01-03-FINANZAS-EVALUACION-FINANCIERA-EVAL-FIN.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$marcoTeoricoFinanzasEvaluacion_Camel <- renderUI({
+        rootDirFile <- "MARCO-TEORICO/02-01-04-FINANZAS-EVALUACION-FINANCIERA-CAMEL.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    # MARCO TEORICO - REDES NEURONALES
     output$marcoTeoricoRedesNeuronales_Intro <- renderUI({
         rootDirFile <- "MARCO-TEORICO/02-02-01-REDES-NEURONALES-INTRO.Rmd"
         HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
     })
     
-    # REDES NEURONALES
+    output$marcoTeoricoRedesNeuronales_Elementos <- renderUI({
+        rootDirFile <- "MARCO-TEORICO/02-02-02-REDES-NEURONALES-ELEMENTOS.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$marcoTeoricoRedesNeuronales_Regresion <- renderUI({
+        rootDirFile <- "MARCO-TEORICO/02-02-03-REDES-NEURONALES-REGRESION.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$marcoTeoricoRedesNeuronales_Colapso <- renderUI({
+        rootDirFile <- "MARCO-TEORICO/02-02-04-REDES-NEURONALES-COLAPSO-RED.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$marcoTeoricoRedesNeuronales_PropAdelante <- renderUI({
+        rootDirFile <- "MARCO-TEORICO/02-02-05-REDES-NEURONALES-PROP-ADELANTE.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$marcoTeoricoRedesNeuronales_PropAtras <- renderUI({
+        rootDirFile <- "MARCO-TEORICO/02-02-06-REDES-NEURONALES-PROP-ATRAS.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    # MARCO TEORICO - EVALUACION
     output$marcoTeoricoPronosticosEvaluacion_Intro <- renderUI({
         rootDirFile <- "MARCO-TEORICO/02-03-01-PRONOSTICOS-EVALUACION-INTRO.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$marcoTeoricoPronosticosEvaluacion_PronAjuste <- renderUI({
+        rootDirFile <- "MARCO-TEORICO/02-03-02-PRONOSTICOS-EVALUACION-PRONOSTICO-AJUSTE.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$marcoTeoricoPronosticosEvaluacion_Generalizacion <- renderUI({
+        rootDirFile <- "MARCO-TEORICO/02-03-03-PRONOSTICOS-EVALUACION-GENERALIZACION.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$marcoTeoricoPronosticosEvaluacion_MCO <- renderUI({
+        rootDirFile <- "MARCO-TEORICO/02-03-04-PRONOSTICOS-EVALUACION-MCO.Rmd"
+        HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
+    })
+    
+    output$marcoTeoricoPronosticosEvaluacion_ARIMA <- renderUI({
+        rootDirFile <- "MARCO-TEORICO/02-03-05-PRONOSTICOS-EVALUACION-ARIMA.Rmd"
         HTML(markdown::markdownToHTML(knitr::knit(paste0(rootMainDir,rootDirFile), quiet = TRUE), fragment.only=TRUE))
     })
     
