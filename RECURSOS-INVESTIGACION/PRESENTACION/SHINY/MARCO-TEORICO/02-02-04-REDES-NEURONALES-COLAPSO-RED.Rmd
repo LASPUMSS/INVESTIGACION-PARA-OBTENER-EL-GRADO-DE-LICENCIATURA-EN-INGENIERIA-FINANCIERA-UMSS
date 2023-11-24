@@ -20,9 +20,7 @@ options(scipen=999)
 
 <div style="text-align: center;">
 
-## FUNCIONES ACTIVACION
-
-```{r, out.width="100%", out.height="70%", fig.cap=""}
+```{r, out.width="80%", out.height="80%", fig.cap=""}
 knitr::include_graphics("RECURSOS-INVESTIGACION/PRESENTACION/SHINY/MARCO-TEORICO/img/funciones-de-activacion.png")
 ```
 

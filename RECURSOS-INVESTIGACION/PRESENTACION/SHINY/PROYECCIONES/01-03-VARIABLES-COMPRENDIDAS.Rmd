@@ -71,25 +71,28 @@ if (!('listResultPEF' %in% ls())) {
 
 <!-- Precisiones de los pronósticos de estados financieros -->
 
+<div style="text-align: center;">
+
 <!-- ### Variables comprendidas {#DRNN-VARIABLES} -->
 
-- Activo
-- Disponibilidades
-- Inversiones temporarias
-- Cartera vigente, vencida y en ejecución
-- Cartera reprogramada vigente, vencida y en ejecución
-- Cartera reestructurada vigente, vencida y en ejecución
-- Previsión de incobrabilidad de cartera
-- Bienes realizables
-- Cuentas contingentes deudoras
-- Pasivo
-- Patrimonio
-- Ingresos
-- Gastos de administración
-- Impuestos
-- Resultado operativo bruto
-- Resultado neto de la gestión
-- Coeficiente de adecuación patrimonial
+Activo<br>
+Disponibilidades<br>
+Inversiones temporarias<br>
+Cartera vigente, vencida y en ejecución<br>
+Cartera reprogramada vigente, vencida y en ejecución<br>
+Cartera reestructurada vigente, vencida y en ejecución<br>
+Previsión de incobrabilidad de cartera<br>
+Bienes realizables<br>
+Cuentas contingentes deudoras<br>
+Pasivo<br>
+Patrimonio<br>
+Ingresos<br>
+Gastos de administración<br>
+Impuestos<br>
+Resultado operativo bruto<br>
+Resultado neto de la gestión<br>
+Coeficiente de adecuación patrimonial<br>
 
 Debiendo aclarar que el coeficiente de adecuación patrimonial no es una cuenta del manual de cuentas de ASFI, pero se realiza sus pronósticos al ser necesario para la evaluación de los modelos por la metodología CAMEL.
 
+</div>

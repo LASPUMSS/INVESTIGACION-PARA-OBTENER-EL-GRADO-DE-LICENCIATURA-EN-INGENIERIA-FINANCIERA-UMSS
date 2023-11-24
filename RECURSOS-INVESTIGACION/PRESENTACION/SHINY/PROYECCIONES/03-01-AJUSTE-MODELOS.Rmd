@@ -68,8 +68,11 @@ if (!('listResultPEF' %in% ls())) {
 
 ```
 
+<br>
 
-## Evaluación de datos ajustados
+<div style="text-align: center;">
+
+## EVALUACIÓN DE DATOS AJUSTADOS
 
 ```{r}
 listResumeModels$r2ModelsResum %>% 
@@ -77,3 +80,5 @@ listResumeModels$r2ModelsResum %>%
     kable()  %>%
     kable_styling(bootstrap_options = "striped", full_width = FALSE, position="center")
 ```
+
+</div>

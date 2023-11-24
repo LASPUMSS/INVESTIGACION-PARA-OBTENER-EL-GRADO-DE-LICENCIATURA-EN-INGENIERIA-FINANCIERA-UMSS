@@ -67,7 +67,9 @@ if (!('listResultPEF' %in% ls())) {
 
 ```
 
-### Redes neuronales
+<div style="text-align: center;">
+
+### MODELO DE REDES NEURONALES
 
 ```{r, fig.cap=''}
 #library(devtools)
@@ -86,3 +88,5 @@ autoplot(forecast(listResultPEF[[id]]$nnModel, h = 12),
          ylab='RESULTADO NETO DE LA GESTION', 
          xlab='')
 ```
+
+</div>

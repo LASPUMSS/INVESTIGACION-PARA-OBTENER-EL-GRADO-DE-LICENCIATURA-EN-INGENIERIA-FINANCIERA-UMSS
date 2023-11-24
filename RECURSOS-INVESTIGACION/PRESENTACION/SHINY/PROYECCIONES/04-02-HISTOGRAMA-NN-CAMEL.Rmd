@@ -67,6 +67,7 @@ if (!('listResultPEF' %in% ls())) {
 
 ```
 
+<br><br><br><br>
 
 ```{r, fig.height = 10, fig.width = 20, fig.cap=''}
 

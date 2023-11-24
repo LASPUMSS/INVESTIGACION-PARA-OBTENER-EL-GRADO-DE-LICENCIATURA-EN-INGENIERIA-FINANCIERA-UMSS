@@ -67,8 +67,11 @@ if (!('listResultPEF' %in% ls())) {
 
 ```
 
+<div style="text-align: center;">
 
-### Eficiencia de los modelos en el entrenamiento
+<br><br>
+
+### EFICIENCIA DE LOS MODELOS EN EL ENTRENAMIENTO
 
 ```{r}
 listResumeModels$r2ModelsResum %>% 
@@ -80,7 +83,7 @@ listResumeModels$r2ModelsResum %>%
 ```
 
 
-### Eficiencia de los modelos en los pronósticos
+### EFICIENCIA DE LOS MODELOS EN LOS PRONOSTICOS
 
 ```{r}
 listResumeModels$r2ForecastResum %>% 
@@ -89,6 +92,9 @@ listResumeModels$r2ForecastResum %>%
     kable()  %>%
     kable_styling(bootstrap_options = "striped", full_width = FALSE, position="center")
 ```
+
+
+<br><br><br><br><br>
 
 ```{r, fig.cap=''}
 autoplot(listResultPEF[[id]]$tsDatTrain, 
@@ -121,3 +127,4 @@ autoplot(listResultPEF[[id]]$tsDatTrain,
          series='NN')
 ```
 
+</div>

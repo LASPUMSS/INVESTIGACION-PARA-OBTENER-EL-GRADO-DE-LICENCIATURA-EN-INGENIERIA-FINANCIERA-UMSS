@@ -20,12 +20,11 @@ options(scipen=999)
 
 <div style="text-align: center;">
 
-## Elementos de redes neuronales
+## ELEMENTOS DE REDES NEURONALES
 
+Neuronas<br>
+Funciones de activación<br>
+Propagación hacia adelante<br>
+Propagación hacia atrás<br>
 
 </div>
-
-- Neuronas
-- Funciones de activación
-- Propagación hacia adelante
-- Propagación hacia atras

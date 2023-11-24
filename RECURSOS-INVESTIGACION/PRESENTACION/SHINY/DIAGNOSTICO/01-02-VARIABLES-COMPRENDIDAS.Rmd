@@ -45,23 +45,26 @@ entidadesCompModelo <- getEntidadesCompModelo(datBasic)
 datGroupBySector <- getDatEEFFByGroup(datBasic,by = 'TIPO_DE_ENTIDAD' )
 ```
 
+<div style="text-align: center;">
+
 ### Variables comprendidas en el diagnóstico
 
 Las variables comprendidas en el modelo del diagnóstico están sujetas al manual de cuentas para entidades financieras, definidas por la autoridad de supervisión del sistema financiero (ASFI).
 
-- Activo
-- Disponibles
-- Realizables
-- Inversiones temporarias
-- Pasivos
-- Patrimonio
-- Cartera en mora
-- Cartera Bruta
-- Cartera reprogramada total
-- Previsión de cartera
-- Contingente
-- Gastos administrativos
-- Impuestos
-- Resultado operativo bruto (ROB)
-- Resultado neto de la gestión (RNG)
+Activo<br>
+Disponibles<br>
+Realizables<br>
+Inversiones temporarias<br>
+Pasivos<br>
+Patrimonio<br>
+Cartera en mora<br>
+Cartera Bruta<br>
+Cartera reprogramada total<br>
+Previsión de cartera<br>
+Contingente<br>
+Gastos administrativos<br>
+Impuestos<br>
+Resultado operativo bruto (ROB)<br>
+Resultado neto de la gestión (RNG)<br>
 
+</div>

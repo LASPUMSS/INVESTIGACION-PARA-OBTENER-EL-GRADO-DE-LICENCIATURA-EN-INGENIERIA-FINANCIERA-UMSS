@@ -38,6 +38,7 @@ tableRefenceCamelCalificacionesHard <- getTableRefenceCamelCalificaciones2(calif
 ```
 
 <!-- ### Rangos CAMEL flexibles -->
+<br><br><br><br>
 
 ```{r}
 tableRefenceCamelCalificaciones  %>% 

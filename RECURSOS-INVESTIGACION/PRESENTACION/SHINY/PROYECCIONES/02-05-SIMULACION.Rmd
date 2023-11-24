@@ -67,8 +67,11 @@ if (!('listResultPEF' %in% ls())) {
 
 ```
 
+<div style="text-align: center;">
 
-### Simulación de proyecciones
+<br><br>
+
+### SIMULACION DE PROYECCIONES
 
 ```{r simulacion-modelos-proyecciones, fig.height = 10, fig.width = 20, fig.cap='Ajuste R2 de los modelos para proyecciones simuladas por cuenta'}
 z <- data.frame(r2Model=listResultPEF[[id]]$nnModelSimulate$r2Model)
@@ -100,3 +103,5 @@ p3 <-
 
 p1/p2/p3
 ```
+
+</div>

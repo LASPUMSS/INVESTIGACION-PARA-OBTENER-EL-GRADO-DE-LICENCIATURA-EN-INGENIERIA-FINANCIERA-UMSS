@@ -38,6 +38,7 @@ tableRefenceCamelCalificacionesHard <- getTableRefenceCamelCalificaciones2(calif
 ```
 
 <!-- ### Rangos CAMEL estrictos -->
+<br><br><br><br>
 
 ```{r df-rangos-limites-camel-estrictos}
 tableRefenceCamelCalificacionesHard %>% 

@@ -67,8 +67,10 @@ if (!('listResultPEF' %in% ls())) {
 
 ```
 
+<div style="text-align: center;">
 
-### Modelo clásico de series de tiempo 
+
+### MODELO CLASICO DE SERIES DE TIEMPO
 
 ```{r}
 variables <- c('Intercepto','Tendencia','Estacion 2','Estacion 3','Estacion 4','Estacion 5','Estacion 6','Estacion 7','Estacion 8','Estacion 9','Estacion 10','Estacion 11','Estacion 12')
@@ -92,3 +94,4 @@ autoplot(forecast(listResultPEF[[id]]$mcoModel, h = 12),
          xlab='')
 ```
 
+</div>

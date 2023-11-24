@@ -68,8 +68,11 @@ if (!('listResultPEF' %in% ls())) {
 
 ```
 
+<br><br>
 
-## Evaluación de datos proyectados de modelos
+<div style="text-align: center;">
+
+## EVALUACIÓN DE DATOS PROYECTADOS DE MODELOS
 
 Donde el ajuste promedio de las proyecciones por modelo se tiene los siguiente:
 
@@ -80,5 +83,5 @@ listResumeModels$r2ForecastResumMean %>%
     kable_styling(bootstrap_options = "striped", full_width = FALSE, position="center")
 ```
 
-
+</div>
 

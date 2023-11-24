@@ -16,13 +16,18 @@ options(scipen=999)
 
 ```
 
-## Ponderación de elementos CAMEL
+<br><br><br>
+
+<div style="text-align: center;">
+
+## PONDERACION DE ELEMENTOS CAMEL
 
 La ponderación de los elementos CAMEL son asignados siguiendo los lineamientos presentados en el marco teórico, dando mayor peso a los indicadores de capital y activos, seguido de los indicadores de beneficios y liquidez, dejando en último término los indicadores de administración.
 
-- Capital (30%)
-- Activos (30%)
-- Administración (10%)
-- Beneficios (15%)
-- Liquidez (15%)
+Capital (30%)<br>
+Activos (30%)<br>
+Administración (10%)<br>
+Beneficios (15%)<br>
+Liquidez (15%)<br>
 
+</div>

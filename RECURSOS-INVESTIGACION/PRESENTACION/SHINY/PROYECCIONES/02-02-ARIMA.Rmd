@@ -67,7 +67,9 @@ if (!('listResultPEF' %in% ls())) {
 
 ```
 
-### ARIMA
+<div style="text-align: center;">
+
+### MODELO ARIMA
 
 ```{r}
 resultadosARIMA <- data.frame(t(coef(listResultPEF[[id]]$arimaModel)))
@@ -85,3 +87,5 @@ autoplot(forecast(listResultPEF[[id]]$arimaModel, h = 12),
          ylab='RESULTADO NETO DE LA GESTION', 
          xlab='')
 ```
+
+</div>

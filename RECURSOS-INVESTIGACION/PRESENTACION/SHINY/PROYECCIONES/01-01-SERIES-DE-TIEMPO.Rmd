@@ -72,8 +72,9 @@ if (!('listResultPEF' %in% ls())) {
 <!-- Precisiones de los pronósticos de estados financieros -->
 
 <!--  ### Series de tiempo -->
+<br><br>
 
-```{r, fig.height = 10, fig.width = 20, fig.cap=''}
+```{r, fig.height = 20, fig.width = 30, fig.cap=''}
 autoplot(listResultPEF[[id]]$tsDatTrain,series = 'Datos de entrenamiento') +
     autolayer(listResultPEF[[id]]$tsDatTest,series = 'Datos para realizar pruebas') +
     ylab('RESULTADO NETO DE LA GESTION') +

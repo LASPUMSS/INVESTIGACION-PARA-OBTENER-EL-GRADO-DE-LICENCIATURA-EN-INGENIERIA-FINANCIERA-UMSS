@@ -45,16 +45,19 @@ entidadesCompModelo <- getEntidadesCompModelo(datBasic)
 datGroupBySector <- getDatEEFFByGroup(datBasic,by = 'TIPO_DE_ENTIDAD' )
 ```
 
+<div style="text-align: center;">
+
 ### Entidades financieras comprendidas por el diagnostico
 
-- Bancos múltiples
-- Bancos PYME.
-- Bancos de desarrollo productivo.
-- Instituciones financieras de desarrollo.
-- Entidades financieras de vivienda.
-- Cooperativas.
+Bancos múltiples<br>
+Bancos PYME<br>
+Bancos de desarrollo productivo<br>
+Instituciones financieras de desarrollo<br>
+Entidades financieras de vivienda<br>
+Cooperativas<br>
 
 Una vez agrupados los datos por sectores los mismos dan un total de `r nrow(datGroupBySector)` observaciones.
+
 
 #### Bancos múltiples
 
@@ -142,3 +145,4 @@ entidadesModelo %>%
     kable_styling(bootstrap_options = "striped", full_width = FALSE, position="center",font_size = 8)
 ```
 
+</div>

@@ -16,13 +16,12 @@ options(scipen=999)
 
 ```
 
-<br><br>
+<br><br><br><br><br><br>
 
 <div style="text-align: center;">
 
-## AJUSTE
 
-```{r, out.width="100%", out.height="100%", fig.cap=""}
+```{r, out.width="120%", out.height="120%", fig.cap=""}
 knitr::include_graphics("RECURSOS-INVESTIGACION/PRESENTACION/SHINY/MARCO-TEORICO/img/ajuste-r2.jpg")
 ```
 

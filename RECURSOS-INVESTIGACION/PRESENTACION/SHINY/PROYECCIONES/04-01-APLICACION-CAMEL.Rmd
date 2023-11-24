@@ -68,6 +68,7 @@ if (!('listResultPEF' %in% ls())) {
 ```
 
 <!-- Aplicación de metodología CAMEL sobre datos proyectados  -->
+<br><br>
 
 ```{r}
 

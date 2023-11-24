@@ -54,11 +54,13 @@ listTablesRender <- renderListTablesInd(listResult, 'Tendencia y estadísticas d
 
 ```
 
+<br>
 
 ```{r, fig.height = 20, fig.width = 20, fig.cap=''}
 wrap_plots(listPlots, ncol = 1)
 ```
 
+<br><br><br>
 
 ```{r}
 listTablesRender

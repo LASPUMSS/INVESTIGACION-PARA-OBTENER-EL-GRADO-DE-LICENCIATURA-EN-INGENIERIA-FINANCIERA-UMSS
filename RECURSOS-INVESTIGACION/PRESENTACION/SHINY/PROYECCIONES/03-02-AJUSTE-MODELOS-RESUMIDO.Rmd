@@ -68,8 +68,11 @@ if (!('listResultPEF' %in% ls())) {
 
 ```
 
+<br><br>
 
-## Evaluación de datos ajustados de modelos
+<div style="text-align: center;">
+
+## EVALUACIÓN DE DATOS AJUSTADOS DE MODELOS
 
 Donde el ajuste promedio por modelo se tiene los siguiente:
 
@@ -80,3 +83,4 @@ listResumeModels$r2ModelsResumMean %>%
     kable_styling(bootstrap_options = "striped", full_width = FALSE, position="center")
 ```
 
+</div>

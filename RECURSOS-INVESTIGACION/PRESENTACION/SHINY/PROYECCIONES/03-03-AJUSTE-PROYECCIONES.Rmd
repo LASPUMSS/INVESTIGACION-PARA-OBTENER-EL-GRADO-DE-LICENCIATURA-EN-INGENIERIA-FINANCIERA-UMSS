@@ -68,9 +68,11 @@ if (!('listResultPEF' %in% ls())) {
 
 ```
 
+<br>
 
+<div style="text-align: center;">
 
-## Evaluación de datos proyectados 
+## EVALUACIÓN DE DATOS PROYECTADOS
 
 ```{r}
 listResumeModels$r2ForecastResum %>% 
@@ -78,3 +80,5 @@ listResumeModels$r2ForecastResum %>%
     kable()  %>%
     kable_styling(bootstrap_options = "striped", full_width = FALSE, position="center")
 ```
+
+</div>
