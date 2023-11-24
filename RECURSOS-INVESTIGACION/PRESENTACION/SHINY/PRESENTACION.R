@@ -3,7 +3,7 @@ library(shiny)
 # Agregar ruta de imagenes
 addResourcePath(prefix = "imgResources", directoryPath = "RECURSOS-INVESTIGACION/PRESENTACION/SHINY/assets/img")
 
-# Define UI for application that draws a histogram
+# Define UI for application
 ui <- fluidPage(
     
     includeCSS("RECURSOS-INVESTIGACION/PRESENTACION/SHINY/assets/css/style.css"),
