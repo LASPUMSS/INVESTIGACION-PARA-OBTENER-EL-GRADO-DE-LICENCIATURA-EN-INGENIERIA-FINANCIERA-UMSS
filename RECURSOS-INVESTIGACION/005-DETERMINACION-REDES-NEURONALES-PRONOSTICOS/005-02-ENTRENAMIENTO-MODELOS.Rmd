@@ -47,6 +47,7 @@ if (!('listResultPEF' %in% ls())) {
 }
 
 ```
+
 \newpage
 ## Entrenamiento de modelos, proyecciones y simulaciones
 

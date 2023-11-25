@@ -1,9 +1,0 @@
-## Diagnostico financiero
-
-<!-- ##################################################### -->
-<!-- #####################  CALCULO DE INDICADORES         -->
-<!-- ##################################################### -->
-
-```{r, child="RECURSOS-INVESTIGACION/PRESENTACION/DIAGNOSTICO-FINANCIERO/02-CALCULO-INDICADORES.Rmd"}
-
-```
