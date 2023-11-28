@@ -1,3 +1,3 @@
 # PRESENTACIÓN SHINY DE LA INVESTIGACIÓN REALIZADA
 
-![](imagen-readme.jpg)
+![](assets/img/imagen-readme.jpg)
