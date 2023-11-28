@@ -1,0 +1,3 @@
+# PRESENTACIÓN SHINY DE LA INVESTIGACIÓN REALIZADA
+
+![](assets/img/logo-umss.jpg)
