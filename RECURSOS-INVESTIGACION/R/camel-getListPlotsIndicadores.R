@@ -43,3 +43,4 @@ getListPlotsInd <- function(listResult, scaleOne=FALSE, numDigScale=NULL) {
     
     return(listPlots)
 }
+
