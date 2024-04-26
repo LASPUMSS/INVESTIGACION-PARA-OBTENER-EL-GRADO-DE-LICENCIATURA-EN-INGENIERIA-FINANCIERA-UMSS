@@ -5,6 +5,8 @@
 
 # IGNORAR ARCHIVOS DEL TIPO
 *.zip
+*.xlsx
+*.csv
 
 # IGNORAR CARPETAS
 scbm/
